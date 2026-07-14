@@ -5,5 +5,5 @@ node_modules
 .vercel
 npm-debug.log*
 .DS_Store
-
 *.tsbuildinfo
+/data/claims.json
