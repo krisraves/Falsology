@@ -14,9 +14,12 @@ export type ClaimMedia = {
   youtubeId?: string;
   startSeconds?: number;
   endSeconds?: number;
+  sourceDurationSeconds?: number;
   url?: string;
   label?: string;
   mimeType?: string;
+  verifiedAt?: string;
+  verificationMethod?: string;
 };
 
 export type Claim = {
