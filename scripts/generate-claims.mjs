@@ -5,11 +5,11 @@ import { gunzipSync } from "node:zlib";
 const partsDir = resolve("data/claims-parts");
 const target = resolve("data/claims.json");
 const partNames = readdirSync(partsDir)
-  .filter((name) => /^part\d+$/.test(name))
+  .filter((name) => /^part\d+[a-z]?$/.test(name))
   .sort();
 
-if (partNames.length !== 6) {
-  throw new Error(`Expected 6 claim-data parts, found ${partNames.length}.`);
+if (partNames.length !== 7) {
+  throw new Error(`Expected 7 claim-data parts, found ${partNames.length}.`);
 }
 
 const encoded = partNames
