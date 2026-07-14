@@ -1,0 +1,8 @@
+{
+  "npmCi": 0,
+  "generateClaims": 1,
+  "validateClaims": 1,
+  "lint": 1,
+  "typecheck": 1,
+  "build": 1
+}
