@@ -26,10 +26,11 @@ export const claims: Claim[] = [
     editorialBoundary:
       "This verdict concerns the ordinary factual meaning of the televised denial, not every disputed legal element of the impeachment proceedings.",
     media: {
-      type: "youtube",
-      youtubeId: "ajJMQG4Bmxo",
-      url: "https://www.youtube.com/watch?v=ajJMQG4Bmxo",
-      label: "AP Archive footage of Clinton's televised denial",
+      type: "video",
+      url: "https://upload.wikimedia.org/wikipedia/commons/6/60/Bill_Clinton%27s_Response_to_the_Lewinsky_Allegations_%28January_26%2C_1998%29.webm",
+      mimeType: "video/webm",
+      startSeconds: 380,
+      label: "Public-domain Miller Center archive",
     },
     sources: [
       {
@@ -74,12 +75,9 @@ export const claims: Claim[] = [
     editorialBoundary:
       "The verdict is limited to Armstrong's categorical claim that he never doped; his later public admission and the adjudicated record directly contradict it.",
     media: {
-      type: "youtube",
-      youtubeId: "fshoz6cnKPY",
-      startSeconds: 320,
-      endSeconds: 352,
-      url: "https://www.youtube.com/watch?v=fshoz6cnKPY&t=320s",
-      label: "Armstrong repeats his categorical doping denial",
+      type: "external",
+      url: "https://www.usada.org/wp-content/uploads/ReasonedDecision.pdf",
+      label: "Open the official Armstrong case record",
     },
     sources: [
       {
@@ -118,15 +116,13 @@ export const claims: Claim[] = [
       "Nicotine is highly addictive. The executives framed their answers as personal beliefs, but the scientific record and their companies' own research contradicted the message delivered to Congress.",
     context:
       "Seven major tobacco-company leaders testified together before a House subcommittee. The image of all seven raising their hands became a defining example of coordinated corporate denial.",
-    transcript:
-      "I believe nicotine is not addictive.",
+    transcript: "I believe nicotine is not addictive.",
     editorialBoundary:
       "This verdict concerns the factual message conveyed by the testimony, while noting that the speakers used the phrase 'I believe.'",
     media: {
-      type: "youtube",
-      youtubeId: "jQUNk5meJHs",
-      url: "https://www.youtube.com/watch?v=jQUNk5meJHs",
-      label: "Seven tobacco executives testify before Congress",
+      type: "external",
+      url: "https://senate.ucsf.edu/tobacco-ceo-statement-congress-1994",
+      label: "Open the archived congressional testimony",
     },
     sources: [
       {
@@ -165,15 +161,13 @@ export const claims: Claim[] = [
       "The EPA found that certain Volkswagen diesel vehicles emitted nitrogen oxides at levels far above legal limits during normal operation. Volkswagen pleaded guilty to conspiracy, obstruction and import-related crimes.",
     context:
       "The 'clean diesel' campaign positioned diesel technology as both efficient and environmentally responsible. The defeat-device scheme made laboratory results look substantially cleaner than real-world emissions.",
-    transcript:
-      "Clean diesel. It's like really clean diesel.",
+    transcript: "Clean diesel. It's like really clean diesel.",
     editorialBoundary:
       "The verdict applies to affected diesel models and the environmental performance implied by the campaign, not every Volkswagen vehicle.",
     media: {
-      type: "youtube",
-      youtubeId: "c9lTGnvHMTw",
-      url: "https://www.youtube.com/watch?v=c9lTGnvHMTw",
-      label: "Volkswagen Group clean-diesel advertising",
+      type: "external",
+      url: "https://www.epa.gov/vw/learn-about-volkswagen-violations",
+      label: "Open the EPA Volkswagen case archive",
     },
     sources: [
       {
@@ -217,10 +211,9 @@ export const claims: Claim[] = [
     editorialBoundary:
       "The verdict concerns the sweeping performance claims used to market Theranos, not the fact that a limited number of tests could sometimes be performed on small samples.",
     media: {
-      type: "youtube",
-      youtubeId: "9B_oJMQk754",
-      url: "https://www.youtube.com/watch?v=9B_oJMQk754",
-      label: "Elizabeth Holmes presents Theranos at TEDMED",
+      type: "external",
+      url: "https://www.sec.gov/newsroom/press-releases/2018-41",
+      label: "Open the SEC Theranos case archive",
     },
     sources: [
       {
@@ -259,8 +252,7 @@ export const claims: Claim[] = [
       "Within days, FTX filed for bankruptcy. A federal jury later convicted Bankman-Fried of fraud and conspiracy, and the sentencing court imposed a 25-year prison term.",
     context:
       "The statement was posted while customers were rushing to withdraw funds and questions about FTX's balance sheet were spreading. The post was later deleted.",
-    transcript:
-      "FTX is fine. Assets are fine.",
+    transcript: "FTX is fine. Assets are fine.",
     editorialBoundary:
       "The verdict addresses the factual assurance that the exchange and customer assets were fine at that moment, not every statement in the surrounding thread.",
     media: {
@@ -351,15 +343,13 @@ export const claims: Claim[] = [
       "The broadcast did confuse a limited number of listeners. Newspapers, which competed with radio for advertising, amplified the story into a national panic narrative that outgrew the available evidence.",
     context:
       "The program included station identifications and was heard by a smaller audience than later accounts implied. The myth became a durable lesson about media influence even though the popular version overstated what happened.",
-    transcript:
-      "Ladies and gentlemen, I have a grave announcement to make...",
+    transcript: "Ladies and gentlemen, I have a grave announcement to make...",
     editorialBoundary:
       "This verdict does not claim nobody panicked; it rejects the sweeping nationwide-mass-panic version of the story.",
     media: {
-      type: "youtube",
-      youtubeId: "4wf5TPVz56A",
-      url: "https://www.youtube.com/watch?v=4wf5TPVz56A",
-      label: "Original 1938 War of the Worlds broadcast audio",
+      type: "archive",
+      url: "https://archive.org/embed/war-of-the-worlds_mixdown3",
+      label: "Internet Archive broadcast player",
     },
     sources: [
       {
