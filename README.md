@@ -52,7 +52,7 @@ npm run build
 NEXT_PUBLIC_SITE_URL=https://falsology.vercel.app
 ```
 
-7. Redeploy the latest commit.
+7. Deploy the latest commit from `main`.
 
 No environment variables are required for guest play.
 
