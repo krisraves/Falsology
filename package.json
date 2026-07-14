@@ -1,17 +1,15 @@
 {
   "name": "falsology",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "generate:claims": "node scripts/generate-claims.mjs",
-    "validate:claims": "node scripts/validate-claims.mjs",
-    "predev": "npm run generate:claims",
+    "validate:cases": "node scripts/validate-detective-cases.mjs",
     "dev": "next dev",
-    "prebuild": "npm run generate:claims && npm run validate:claims",
+    "prebuild": "npm run validate:cases",
     "build": "next build",
     "start": "next start",
-    "lint": "npm run generate:claims && eslint .",
-    "typecheck": "npm run generate:claims && tsc --noEmit"
+    "lint": "npm run validate:cases && eslint .",
+    "typecheck": "npm run validate:cases && tsc --noEmit"
   },
   "dependencies": {
     "next": "16.2.10",
