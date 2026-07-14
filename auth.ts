@@ -10,10 +10,4 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   trustHost: true,
   session: { strategy: "jwt" },
   providers: [Google],
-  callbacks: {
-    session({ session, token }) {
-      if (session.user && token.sub) session.user.id = token.sub;
-      return session;
-    },
-  },
 });
