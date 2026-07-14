@@ -1,0 +1,763 @@
+{
+  "validatedAt": "2026-07-14T21:27:26Z",
+  "structuralErrors": [],
+  "summary": {
+    "total": 50,
+    "passed": 0,
+    "failed": 50,
+    "truth": 25,
+    "lie": 25
+  },
+  "results": [
+    {
+      "key": "L01",
+      "youtubeId": "kMu-2tXfPQI",
+      "expectedTitle": "Clinton denies having an affair with Monica Lewinsky",
+      "expectedChannel": "AP Archive",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] kMu-2tXfPQI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "USA: CLINTON DENIES HAVING AN AFFAIR WITH MONICA LEWINSKY UPDATE",
+      "oEmbedAuthor": "AP Archive"
+    },
+    {
+      "key": "L02",
+      "youtubeId": "sh163n1lJ4M",
+      "expectedTitle": "Richard Nixon - I'm not a crook",
+      "expectedChannel": "Max Power",
+      "startSeconds": 0,
+      "endSeconds": 37,
+      "clipSeconds": 37,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] sh163n1lJ4M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Richard Nixon - \"I'm not a crook\"",
+      "oEmbedAuthor": "Max Power"
+    },
+    {
+      "key": "L03",
+      "youtubeId": "tPq72EOXiiU",
+      "expectedTitle": "Lance Armstrong insisting he's never taken drugs",
+      "expectedChannel": "Daily Mail World",
+      "startSeconds": 0,
+      "endSeconds": 30,
+      "clipSeconds": 30,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] tPq72EOXiiU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Incredible footage of Lance Armstrong insisting he's never taken drugs - Daily Mail",
+      "oEmbedAuthor": "Daily Mail World"
+    },
+    {
+      "key": "L04",
+      "youtubeId": "jOxVk_DhWes",
+      "expectedTitle": "Tobacco CEO: Nicotine is not Addictive",
+      "expectedChannel": "Center for the Study of Tobacco and Society",
+      "startSeconds": 0,
+      "endSeconds": 23,
+      "clipSeconds": 23,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] jOxVk_DhWes: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Tobacco CEO: \"Nicotine is not Addictive\"",
+      "oEmbedAuthor": "Center for the Study of Tobacco and Society"
+    },
+    {
+      "key": "L05",
+      "youtubeId": "d8dT7EoX5iY",
+      "expectedTitle": "Elizabeth Holmes on Revolutionizing Blood Tests",
+      "expectedChannel": "Glamour",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] d8dT7EoX5iY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Elizabeth Holmes on Revolutionizing Blood Tests",
+      "oEmbedAuthor": "Glamour"
+    },
+    {
+      "key": "L06",
+      "youtubeId": "IZzUjWuMlUU",
+      "expectedTitle": "Volkswagen Passat TDI Clean Diesel Mom Commercial",
+      "expectedChannel": "Volkswagen Egypt Official",
+      "startSeconds": 0,
+      "endSeconds": 46,
+      "clipSeconds": 46,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] IZzUjWuMlUU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "2015 Volkswagen Passat TDI Clean Diesel   “Mom” Commercial",
+      "oEmbedAuthor": "Volkswagen Egypt Official"
+    },
+    {
+      "key": "L07",
+      "youtubeId": "S3EVIeZNHJU",
+      "expectedTitle": "Lay/Skilling statements",
+      "expectedChannel": "CNN",
+      "startSeconds": 0,
+      "endSeconds": 44,
+      "clipSeconds": 44,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] S3EVIeZNHJU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "LAY/SKILLING SPLICE",
+      "oEmbedAuthor": "CNN"
+    },
+    {
+      "key": "L08",
+      "youtubeId": "ibRPRk4W5uA",
+      "expectedTitle": "Skechers Shape-Ups",
+      "expectedChannel": "GouldsDiscountMedica",
+      "startSeconds": 0,
+      "endSeconds": 55,
+      "clipSeconds": 55,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] ibRPRk4W5uA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Skechers Shape-Ups",
+      "oEmbedAuthor": "GouldsDiscountMedica"
+    },
+    {
+      "key": "L09",
+      "youtubeId": "6qOtSZySZGY",
+      "expectedTitle": "Reebok EasyTone - Better Butt with Every Move",
+      "expectedChannel": "shannonbouwer",
+      "startSeconds": 0,
+      "endSeconds": 35,
+      "clipSeconds": 35,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 6qOtSZySZGY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Reebok EasyTone Ad -  Better Butt with Every Move",
+      "oEmbedAuthor": "shannonbouwer"
+    },
+    {
+      "key": "L10",
+      "youtubeId": "lX2-D5K9q9U",
+      "expectedTitle": "Dannon DanActive Immunity Commercial",
+      "expectedChannel": "Mayor McCheese",
+      "startSeconds": 0,
+      "endSeconds": 31,
+      "clipSeconds": 31,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] lX2-D5K9q9U: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Drink - 2007 - Dannon DanActive L. Casei Immunitas Immunity Probiotic Dairy Drink Commercial",
+      "oEmbedAuthor": "Mayor McCheese"
+    },
+    {
+      "key": "L11",
+      "youtubeId": "zNyVsn-V6J0",
+      "expectedTitle": "Ryan Lochte Robbed at Gunpoint",
+      "expectedChannel": "ABC News",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] zNyVsn-V6J0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Ryan Lochte Robbed at Gunpoint",
+      "oEmbedAuthor": "ABC News"
+    },
+    {
+      "key": "L12",
+      "youtubeId": "DbXqiSYDhrA",
+      "expectedTitle": "Trevor Milton: Nikola One was Fully Functioning",
+      "expectedChannel": "Hindenburg Research",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] DbXqiSYDhrA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Trevor Milton Falsely Claimed Repeatedly that the Nikola One Was \"Fully Functioning\" \"Not a Pusher\"",
+      "oEmbedAuthor": "Hindenburg Research"
+    },
+    {
+      "key": "L13",
+      "youtubeId": "Ir8oqJ1w_nU",
+      "expectedTitle": "Fyre Festival Announces Headliners",
+      "expectedChannel": "Fyre Festival",
+      "startSeconds": 0,
+      "endSeconds": 29,
+      "clipSeconds": 29,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] Ir8oqJ1w_nU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Fyre Festival :: Announcing G.O.O.D Music & Major Lazer as Headliners",
+      "oEmbedAuthor": "Fyre Festival"
+    },
+    {
+      "key": "L14",
+      "youtubeId": "Er78Dj5hyeI",
+      "expectedTitle": "Purdue Pharma OxyContin Commercial",
+      "expectedChannel": "Health Policy Politics",
+      "startSeconds": 0,
+      "endSeconds": 38,
+      "clipSeconds": 38,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] Er78Dj5hyeI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Purdue Pharma OxyContin Commercial",
+      "oEmbedAuthor": "Health Policy Politics"
+    },
+    {
+      "key": "L15",
+      "youtubeId": "0ES_nuoZoGE",
+      "expectedTitle": "Sensa Ad",
+      "expectedChannel": "belkinfan",
+      "startSeconds": 0,
+      "endSeconds": 30,
+      "clipSeconds": 30,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 0ES_nuoZoGE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Sensa Ad",
+      "oEmbedAuthor": "belkinfan"
+    },
+    {
+      "key": "L16",
+      "youtubeId": "-03u7u8FXmY",
+      "expectedTitle": "Clinton Bosnia Sarajevo Town Hall",
+      "expectedChannel": "CNN",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] -03u7u8FXmY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "BOSNIA CLINTON SARAJEVO TOWN HALL SOT 1",
+      "oEmbedAuthor": "CNN"
+    },
+    {
+      "key": "L17",
+      "youtubeId": "D-WtAFa8Jlo",
+      "expectedTitle": "How Brian Williams's Iraq Story Changed",
+      "expectedChannel": "The New York Times",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] D-WtAFa8Jlo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "How Brian Williams’s Iraq Story Changed | The New York Times",
+      "oEmbedAuthor": "The New York Times"
+    },
+    {
+      "key": "L18",
+      "youtubeId": "PKzHXelQi_A",
+      "expectedTitle": "Spicer: Inauguration had largest audience ever",
+      "expectedChannel": "CNN",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] PKzHXelQi_A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Spicer: Inauguration had largest audience ever",
+      "oEmbedAuthor": "CNN"
+    },
+    {
+      "key": "L19",
+      "youtubeId": "EdwfKrdUW1s",
+      "expectedTitle": "Jury hears Alex Jones say Sandy Hook was fake with actors",
+      "expectedChannel": "Raw Videos",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] EdwfKrdUW1s: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Jury hears Alex Jones say Sandy Hook was 'fake with actors'",
+      "oEmbedAuthor": "Raw Videos"
+    },
+    {
+      "key": "L20",
+      "youtubeId": "XnWIM-YEJwQ",
+      "expectedTitle": "Airborne Hundreds Of Things Commercial",
+      "expectedChannel": "Michael Bednar",
+      "startSeconds": 0,
+      "endSeconds": 32,
+      "clipSeconds": 32,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] XnWIM-YEJwQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Airborne \"HundredsOfThings\"",
+      "oEmbedAuthor": "Michael Bednar"
+    },
+    {
+      "key": "L21",
+      "youtubeId": "DhWlPo3qxak",
+      "expectedTitle": "Colin Powell Addresses UN Security Council On Iraq",
+      "expectedChannel": "NBC News",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] DhWlPo3qxak: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "From 2003: Colin Powell Addresses United Nations Security Council On Iraq",
+      "oEmbedAuthor": "NBC News"
+    },
+    {
+      "key": "L22",
+      "youtubeId": "-WaDYXxzCJA",
+      "expectedTitle": "Balloon Boy Dad: Not A Hoax",
+      "expectedChannel": "CNN",
+      "startSeconds": 0,
+      "endSeconds": 16,
+      "clipSeconds": 16,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] -WaDYXxzCJA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "DAD NOT A HOAX",
+      "oEmbedAuthor": "CNN"
+    },
+    {
+      "key": "L23",
+      "youtubeId": "j0os4fG07T0",
+      "expectedTitle": "Listerine - At the First Sign of a Cold",
+      "expectedChannel": "Another Era",
+      "startSeconds": 0,
+      "endSeconds": 27,
+      "clipSeconds": 27,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] j0os4fG07T0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Listerine commercial - \"At the First Sign of a Cold\" (1954)",
+      "oEmbedAuthor": "Another Era"
+    },
+    {
+      "key": "L24",
+      "youtubeId": "Twubt8xcqus",
+      "expectedTitle": "Marion Jones talks about doping allegations",
+      "expectedChannel": "CNN",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] Twubt8xcqus: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Marion Jones talks about the doping allegations.",
+      "oEmbedAuthor": "CNN"
+    },
+    {
+      "key": "L25",
+      "youtubeId": "h4fmEbgKeh0",
+      "expectedTitle": "Pete Rose Jim Gray interview 1999",
+      "expectedChannel": "edward stein",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] h4fmEbgKeh0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Pete Rose Jim Gray interview 1999 ALL CENTURY TEAM full clip",
+      "oEmbedAuthor": "edward stein"
+    },
+    {
+      "key": "T01",
+      "youtubeId": "AEE-Nvk_i3Y",
+      "expectedTitle": "Only a Venus Sidereal day is longer than a Venus year!",
+      "expectedChannel": "Interplanetary",
+      "startSeconds": 0,
+      "endSeconds": 30,
+      "clipSeconds": 30,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] AEE-Nvk_i3Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Only a Venus Sidereal day is longer than a Venus year!",
+      "oEmbedAuthor": "Interplanetary"
+    },
+    {
+      "key": "T02",
+      "youtubeId": "7egvJ5LmaH8",
+      "expectedTitle": "Sharks Are Older Than Trees",
+      "expectedChannel": "Plorvix",
+      "startSeconds": 0,
+      "endSeconds": 48,
+      "clipSeconds": 48,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 7egvJ5LmaH8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Sharks Are Older Than Trees – Fascinating Fact About Earth's Ancient Creatures!",
+      "oEmbedAuthor": "Plorvix"
+    },
+    {
+      "key": "T03",
+      "youtubeId": "vckaanafytg",
+      "expectedTitle": "Octopuses HAVE 3 HEARTS and BLUE BLOOD!",
+      "expectedChannel": "BBC Earth Kids",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] vckaanafytg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Octopuses HAVE 3 HEARTS and BLUE BLOOD! | Wild Bites | BBC Earth Kids",
+      "oEmbedAuthor": "BBC Earth Kids"
+    },
+    {
+      "key": "T04",
+      "youtubeId": "P-fAKWAfJuw",
+      "expectedTitle": "Wombat poop is cube-shaped",
+      "expectedChannel": "Maniac Media",
+      "startSeconds": 0,
+      "endSeconds": 55,
+      "clipSeconds": 55,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] P-fAKWAfJuw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Wombat poop is cube-shaped",
+      "oEmbedAuthor": "Maniac Media"
+    },
+    {
+      "key": "T05",
+      "youtubeId": "b_nEA3dtOZs",
+      "expectedTitle": "Watch a Seahorse Give Birth to 2,000 Babies",
+      "expectedChannel": "National Geographic",
+      "startSeconds": 0,
+      "endSeconds": 34,
+      "clipSeconds": 34,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] b_nEA3dtOZs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Watch a Seahorse Give Birth to 2,000 Babies | National Geographic",
+      "oEmbedAuthor": "National Geographic"
+    },
+    {
+      "key": "T06",
+      "youtubeId": "6Sn4a7lnmQk",
+      "expectedTitle": "Polar Bears: The Secret of Their Black Skin!",
+      "expectedChannel": "EarthlyEssentials",
+      "startSeconds": 0,
+      "endSeconds": 43,
+      "clipSeconds": 43,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 6Sn4a7lnmQk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Polar Bears: The Secret of Their Black Skin! 🐻‍❄️ | Earthly Essentials",
+      "oEmbedAuthor": "EarthlyEssentials"
+    },
+    {
+      "key": "T07",
+      "youtubeId": "zhVPoll3LUA",
+      "expectedTitle": "How baby flamingos get their pink colour",
+      "expectedChannel": "BBC",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] zhVPoll3LUA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "How baby flamingos get their pink colour | Animal Super Parents - BBC",
+      "oEmbedAuthor": "BBC"
+    },
+    {
+      "key": "T08",
+      "youtubeId": "IxndOd3kmSs",
+      "expectedTitle": "Meet the tardigrade, the toughest animal on Earth",
+      "expectedChannel": "TED-Ed",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] IxndOd3kmSs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Meet the tardigrade, the toughest animal on Earth - Thomas Boothby",
+      "oEmbedAuthor": "TED-Ed"
+    },
+    {
+      "key": "T09",
+      "youtubeId": "xpnm8TKZoGU",
+      "expectedTitle": "Saturn Would Float on Water!",
+      "expectedChannel": "FactNova",
+      "startSeconds": 0,
+      "endSeconds": 26,
+      "clipSeconds": 26,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] xpnm8TKZoGU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Saturn Would Float on Water! 🪐 #shorts #facts",
+      "oEmbedAuthor": "FactNova"
+    },
+    {
+      "key": "T10",
+      "youtubeId": "zn8KJfWF9iw",
+      "expectedTitle": "How Hot Is Lightning?",
+      "expectedChannel": "WhiteBoard Weather",
+      "startSeconds": 0,
+      "endSeconds": 29,
+      "clipSeconds": 29,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] zn8KJfWF9iw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "WhiteBoard Weather Wisdom Fun Fact: How Hot Is Lightning?",
+      "oEmbedAuthor": "WhiteBoard Weather"
+    },
+    {
+      "key": "T11",
+      "youtubeId": "hREKZIyIbvg",
+      "expectedTitle": "How Much Do Clouds Actually Weigh?",
+      "expectedChannel": "Science Channel",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] hREKZIyIbvg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "How Much Do Clouds Actually Weigh?",
+      "oEmbedAuthor": "Science Channel"
+    },
+    {
+      "key": "T12",
+      "youtubeId": "-Z0bAxSNWY8",
+      "expectedTitle": "Why Are Bananas Berries, But Strawberries Aren't?",
+      "expectedChannel": "Live Science",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] -Z0bAxSNWY8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Why Are Bananas Berries, But Strawberries Aren't?",
+      "oEmbedAuthor": "Live Science"
+    },
+    {
+      "key": "T13",
+      "youtubeId": "8mP4jt1zk8g",
+      "expectedTitle": "Why Eiffel Tower can be taller during summer",
+      "expectedChannel": "The Cognito Lab",
+      "startSeconds": 0,
+      "endSeconds": 27,
+      "clipSeconds": 27,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 8mP4jt1zk8g: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Fact #3 Do you know why Eiffel Tower can be 15cm taller during the summer?",
+      "oEmbedAuthor": "The Cognito Lab"
+    },
+    {
+      "key": "T14",
+      "youtubeId": "VGWrqWU4N20",
+      "expectedTitle": "Cleopatra Was Closer to the Moon Landing Than the Pyramids",
+      "expectedChannel": "Beyond the screen",
+      "startSeconds": 0,
+      "endSeconds": 57,
+      "clipSeconds": 57,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] VGWrqWU4N20: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Cleopatra Was Closer to the Moon Landing Than the Pyramids — Mind-Blowing History Twist!",
+      "oEmbedAuthor": "Beyond the screen"
+    },
+    {
+      "key": "T15",
+      "youtubeId": "HYGTK6OJtS0",
+      "expectedTitle": "Is Oxford University Older than Aztec Empire?",
+      "expectedChannel": "Fact or Fiction",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] HYGTK6OJtS0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Is Oxford University Older than Aztec Empire?",
+      "oEmbedAuthor": "Fact or Fiction"
+    },
+    {
+      "key": "T16",
+      "youtubeId": "GDW1B8l-DH0",
+      "expectedTitle": "Here's What Nintendo's HQ Looked Like in 1889",
+      "expectedChannel": "IGN News",
+      "startSeconds": 0,
+      "endSeconds": 40,
+      "clipSeconds": 40,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] GDW1B8l-DH0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Here's What Nintendo's HQ Looked Like in 1889 - IGN News",
+      "oEmbedAuthor": "IGN News"
+    },
+    {
+      "key": "T17",
+      "youtubeId": "139NSc53RqQ",
+      "expectedTitle": "Frogs Come Alive After Winter Thaw",
+      "expectedChannel": "National Geographic",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 139NSc53RqQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Frogs Come Alive After Winter Thaw | National Geographic",
+      "oEmbedAuthor": "National Geographic"
+    },
+    {
+      "key": "T18",
+      "youtubeId": "DHm-2kDqhG4",
+      "expectedTitle": "How koalas could confuse crime scene investigators",
+      "expectedChannel": "Natural History Museum",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] DHm-2kDqhG4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Whodunnit? How koalas could confuse crime scene investigators | Natural History Museum",
+      "oEmbedAuthor": "Natural History Museum"
+    },
+    {
+      "key": "T19",
+      "youtubeId": "bOkj7lJpeoc",
+      "expectedTitle": "John Marzluff Shows How Crows Will Recognize You",
+      "expectedChannel": "Simon & Schuster Books",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] bOkj7lJpeoc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "John Marzluff Shows How Crows Will Recognize You",
+      "oEmbedAuthor": "Simon & Schuster Books"
+    },
+    {
+      "key": "T20",
+      "youtubeId": "sA7ncUcPjL4",
+      "expectedTitle": "Do Dolphins Have Names?",
+      "expectedChannel": "Nature Nook Channel",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] sA7ncUcPjL4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Do Dolphins Have Names? | The Science Behind Signature Whistles",
+      "oEmbedAuthor": "Nature Nook Channel"
+    },
+    {
+      "key": "T21",
+      "youtubeId": "E0Li1k5hGBE",
+      "expectedTitle": "Mantis Shrimp Packs a Punch",
+      "expectedChannel": "Nat Geo Animals",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] E0Li1k5hGBE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Mantis Shrimp Packs a Punch | Predator in Paradise",
+      "oEmbedAuthor": "Nat Geo Animals"
+    },
+    {
+      "key": "T22",
+      "youtubeId": "K0qTyv1fCBk",
+      "expectedTitle": "Sloths Can Hold Their Breath Longer Than Dolphins?",
+      "expectedChannel": "Factaroo",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "clipSeconds": 45,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] K0qTyv1fCBk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Did You Know Sloths Can Hold Their Breath Longer Than Dolphins?",
+      "oEmbedAuthor": "Factaroo"
+    },
+    {
+      "key": "T23",
+      "youtubeId": "8oUsTY0FCUw",
+      "expectedTitle": "Can Turtles Really Breathe Through Their Butts?",
+      "expectedChannel": "Curious Kids Academy",
+      "startSeconds": 0,
+      "endSeconds": 58,
+      "clipSeconds": 58,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] 8oUsTY0FCUw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Can Turtles Really Breathe Through Their Butts? | Cloacal Respiration Explained",
+      "oEmbedAuthor": "Curious Kids Academy"
+    },
+    {
+      "key": "T24",
+      "youtubeId": "qVLXWbQzixk",
+      "expectedTitle": "Honey never spoils",
+      "expectedChannel": "Top Factor",
+      "startSeconds": 0,
+      "endSeconds": 24,
+      "clipSeconds": 24,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] qVLXWbQzixk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "Honey never spoils #facts",
+      "oEmbedAuthor": "Top Factor"
+    },
+    {
+      "key": "T25",
+      "youtubeId": "JNPZd1W6GHA",
+      "expectedTitle": "Can Water Freeze and Boil at the Same Time?",
+      "expectedChannel": "GeeklyHub",
+      "startSeconds": 0,
+      "endSeconds": 37,
+      "clipSeconds": 37,
+      "valid": false,
+      "errors": [
+        "yt-dlp: CalledProcessError: ERROR: [youtube] JNPZd1W6GHA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+      ],
+      "oEmbedTitle": "#GeeklyHub Can Water Freeze and Boil at the Same Time? | Water Triple Point",
+      "oEmbedAuthor": "GeeklyHub"
+    }
+  ]
+}
