@@ -10,26 +10,26 @@ export type EvidenceSource = {
 };
 
 export type ClaimMedia = {
-  type: "youtube" | "video" | "audio" | "archive" | "external" | "quote";
-  youtubeId?: string;
-  startSeconds?: number;
-  endSeconds?: number;
-  sourceDurationSeconds?: number;
-  url?: string;
-  label?: string;
-  mimeType?: string;
-  verifiedAt?: string;
-  verificationMethod?: string;
+  type: "youtube";
+  youtubeId: string;
+  startSeconds: number;
+  endSeconds: number;
+  videoDurationSeconds: number;
+  url: string;
+  label: string;
+  verifiedAt: string;
 };
 
 export type Claim = {
   id: string;
   slug: string;
+  caseNumber: string;
   person: string;
   personSlug: string;
   personRole: string;
   category: string;
   categorySlug: string;
+  setting: string;
   date: string;
   claim: string;
   prompt: string;
@@ -41,6 +41,8 @@ export type Claim = {
   context: string;
   transcript: string;
   editorialBoundary: string;
+  signals: string[];
+  lesson: string;
   media: ClaimMedia;
   sources: EvidenceSource[];
   tags: string[];
@@ -51,6 +53,7 @@ export type Claim = {
 export type GameAnswer = {
   claimId: string;
   answer: Verdict;
+  confidence: number;
   correct: boolean;
   answeredAt: string;
 };
