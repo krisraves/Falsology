@@ -48,9 +48,10 @@ export function GameClient({
       if (mode === "random") {
         setQueue((items) => {
           const shuffled = [...items].sort(() => Math.random() - 0.5);
+          const playable = new Set(["youtube", "video", "audio", "archive"]);
           return [
-            ...shuffled.filter((item) => item.media.type === "youtube"),
-            ...shuffled.filter((item) => item.media.type !== "youtube"),
+            ...shuffled.filter((item) => playable.has(item.media.type)),
+            ...shuffled.filter((item) => !playable.has(item.media.type)),
           ];
         });
       }
