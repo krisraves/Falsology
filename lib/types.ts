@@ -10,12 +10,13 @@ export type EvidenceSource = {
 };
 
 export type ClaimMedia = {
-  type: "youtube" | "external" | "quote";
+  type: "youtube" | "video" | "audio" | "archive" | "external" | "quote";
   youtubeId?: string;
   startSeconds?: number;
   endSeconds?: number;
   url?: string;
   label?: string;
+  mimeType?: string;
 };
 
 export type Claim = {
