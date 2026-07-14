@@ -1,0 +1,182 @@
+name: Validate selected clips
+
+on:
+  push:
+    paths:
+      - research/selected-clips.json
+      - .github/workflows/validate-selected-clips.yml
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install yt-dlp
+        run: python -m pip install --upgrade yt-dlp
+      - name: Validate structure, availability and embedding
+        shell: bash
+        run: |
+          python <<'PY'
+          import concurrent.futures
+          import json
+          import subprocess
+          import time
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          manifest = json.loads(Path("research/selected-clips.json").read_text())
+          clips = manifest.get("clips", [])
+          structural = []
+          if len(clips) != 50:
+            structural.append(f"Expected 50 clips, found {len(clips)}")
+          truth_count = sum(c.get("verdict") == "truth" for c in clips)
+          lie_count = sum(c.get("verdict") == "lie" for c in clips)
+          if truth_count != 25 or lie_count != 25:
+            structural.append(f"Expected 25 truth and 25 lie, found {truth_count}/{lie_count}")
+          for field in ["key", "youtubeId"]:
+            values = [c.get(field) for c in clips]
+            if len(values) != len(set(values)):
+              structural.append(f"Duplicate {field} values found")
+          for clip in clips:
+            start = clip.get("startSeconds")
+            end = clip.get("endSeconds")
+            if not isinstance(start, int) or not isinstance(end, int) or start < 0 or end <= start:
+              structural.append(f"{clip.get('key')}: invalid clip window {start}-{end}")
+            elif end - start > 60:
+              structural.append(f"{clip.get('key')}: clip window exceeds 60 seconds")
+
+          def validate_one(clip):
+            key = clip["key"]
+            video_id = clip["youtubeId"]
+            url = f"https://www.youtube.com/watch?v={video_id}"
+            record = {
+              "key": key,
+              "youtubeId": video_id,
+              "expectedTitle": clip.get("title"),
+              "expectedChannel": clip.get("channel"),
+              "startSeconds": clip.get("startSeconds"),
+              "endSeconds": clip.get("endSeconds"),
+              "clipSeconds": clip.get("endSeconds", 0) - clip.get("startSeconds", 0),
+              "valid": False,
+              "errors": [],
+            }
+            try:
+              cmd = [
+                "yt-dlp", "--skip-download", "--dump-single-json", "--no-warnings",
+                "--extractor-args", "youtube:player_client=web", url,
+              ]
+              completed = subprocess.run(cmd, capture_output=True, text=True, timeout=90, check=True)
+              metadata = json.loads(completed.stdout)
+              record.update({
+                "actualTitle": metadata.get("title"),
+                "actualChannel": metadata.get("channel") or metadata.get("uploader"),
+                "duration": metadata.get("duration"),
+                "availability": metadata.get("availability"),
+                "playableInEmbed": metadata.get("playable_in_embed"),
+                "ageLimit": metadata.get("age_limit"),
+                "liveStatus": metadata.get("live_status"),
+              })
+              duration = metadata.get("duration")
+              if duration is not None and clip["startSeconds"] >= duration:
+                record["errors"].append("start time is outside video duration")
+              if duration is not None and clip["endSeconds"] > duration + 1:
+                record["errors"].append("end time is outside video duration")
+              if metadata.get("availability") not in (None, "public"):
+                record["errors"].append(f"availability is {metadata.get('availability')}")
+              if metadata.get("playable_in_embed") is False:
+                record["errors"].append("embedding is disabled")
+              if (metadata.get("age_limit") or 0) > 0:
+                record["errors"].append(f"age restricted: {metadata.get('age_limit')}")
+              if metadata.get("live_status") in ("is_live", "is_upcoming"):
+                record["errors"].append(f"unsupported live status: {metadata.get('live_status')}")
+            except Exception as exc:
+              detail = getattr(exc, "stderr", None)
+              record["errors"].append(f"yt-dlp: {type(exc).__name__}: {(detail or str(exc))[-800:]}")
+
+            try:
+              oembed = "https://www.youtube.com/oembed?" + urllib.parse.urlencode({"url": url, "format": "json"})
+              req = urllib.request.Request(oembed, headers={"User-Agent": "Mozilla/5.0 FalsologyValidator/1.0"})
+              with urllib.request.urlopen(req, timeout=20) as response:
+                info = json.load(response)
+              record["oEmbedTitle"] = info.get("title")
+              record["oEmbedAuthor"] = info.get("author_name")
+            except Exception as exc:
+              record["errors"].append(f"oEmbed: {type(exc).__name__}: {exc}")
+
+            record["valid"] = not record["errors"]
+            return record
+
+          results = []
+          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            futures = [pool.submit(validate_one, clip) for clip in clips]
+            for future in concurrent.futures.as_completed(futures):
+              result = future.result()
+              results.append(result)
+              print(f"{result['key']}: {'PASS' if result['valid'] else 'FAIL'}")
+          results.sort(key=lambda item: item["key"])
+
+          report = {
+            "validatedAt": time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+            "structuralErrors": structural,
+            "summary": {
+              "total": len(results),
+              "passed": sum(r["valid"] for r in results),
+              "failed": sum(not r["valid"] for r in results),
+              "truth": truth_count,
+              "lie": lie_count,
+            },
+            "results": results,
+          }
+          Path("research/clip-validation.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
+
+          lines = [
+            "# Selected clip validation",
+            "",
+            f"Validated: {report['validatedAt']}",
+            f"Passed: {report['summary']['passed']} / {report['summary']['total']}",
+            f"Balance: {truth_count} truth / {lie_count} lie",
+            "",
+          ]
+          if structural:
+            lines += ["## Structural errors", ""] + [f"- {error}" for error in structural] + [""]
+          failed = [r for r in results if not r["valid"]]
+          lines += ["## Failed clips", ""]
+          if failed:
+            for result in failed:
+              lines.append(f"- **{result['key']}** `{result['youtubeId']}` — {'; '.join(result['errors'])}")
+          else:
+            lines.append("- None")
+          lines += ["", "## Passing clips", ""]
+          for result in results:
+            if result["valid"]:
+              lines.append(f"- **{result['key']}** `{result['youtubeId']}` — {result.get('actualChannel')} — {result.get('actualTitle')} — {result['clipSeconds']}s")
+          Path("research/clip-validation.md").write_text("\n".join(lines) + "\n")
+          PY
+      - name: Commit validation report
+        shell: bash
+        run: |
+          rm -f .github/workflows/validate-selected-clips.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Validate selected 50-video slate"
+          git push
+      - name: Enforce complete pass
+        shell: bash
+        run: |
+          python <<'PY'
+          import json
+          report = json.load(open("research/clip-validation.json"))
+          if report["structuralErrors"] or report["summary"]["failed"]:
+              raise SystemExit("Selected slate contains validation failures")
+          PY
