@@ -1,0 +1,40 @@
+name: Install auth and test redesign
+
+on:
+  push:
+    paths:
+      - .github/workflows/install-auth-test.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: detective-redesign
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install Auth.js
+        run: npm install next-auth@beta --save
+      - name: Validate detective build
+        run: |
+          npm run validate:cases
+          npm run lint
+          npm run typecheck
+          npm run build
+      - name: Commit tested dependency tree
+        shell: bash
+        run: |
+          rm .github/workflows/install-auth-test.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Install Auth.js and verify detective redesign"
+          git push origin detective-redesign
