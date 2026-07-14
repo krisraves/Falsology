@@ -26,9 +26,10 @@ export const claims: Claim[] = [
     editorialBoundary:
       "This verdict concerns the ordinary factual meaning of the televised denial, not every disputed legal element of the impeachment proceedings.",
     media: {
-      type: "external",
-      url: "https://time.com/3677042/clinton-lewinsky-response/",
-      label: "Watch the archived address",
+      type: "youtube",
+      youtubeId: "ajJMQG4Bmxo",
+      url: "https://www.youtube.com/watch?v=ajJMQG4Bmxo",
+      label: "AP Archive footage of Clinton's televised denial",
     },
     sources: [
       {
@@ -73,9 +74,12 @@ export const claims: Claim[] = [
     editorialBoundary:
       "The verdict is limited to Armstrong's categorical claim that he never doped; his later public admission and the adjudicated record directly contradict it.",
     media: {
-      type: "external",
-      url: "https://www.usada.org/sanction/lance-armstrong-receives-lifetime-ban-and-disqualification-of-competitive-results-for-doping-violations-stemming-from-his-involvement-in-the-united-states-postal-service-pro-cycling-team-doping-conspi/",
-      label: "Open the case record",
+      type: "youtube",
+      youtubeId: "fshoz6cnKPY",
+      startSeconds: 320,
+      endSeconds: 352,
+      url: "https://www.youtube.com/watch?v=fshoz6cnKPY&t=320s",
+      label: "Armstrong repeats his categorical doping denial",
     },
     sources: [
       {
@@ -119,9 +123,10 @@ export const claims: Claim[] = [
     editorialBoundary:
       "This verdict concerns the factual message conveyed by the testimony, while noting that the speakers used the phrase 'I believe.'",
     media: {
-      type: "external",
-      url: "https://senate.ucsf.edu/tobacco-ceo-statement-congress-1994",
-      label: "View the congressional clip",
+      type: "youtube",
+      youtubeId: "jQUNk5meJHs",
+      url: "https://www.youtube.com/watch?v=jQUNk5meJHs",
+      label: "Seven tobacco executives testify before Congress",
     },
     sources: [
       {
@@ -165,9 +170,10 @@ export const claims: Claim[] = [
     editorialBoundary:
       "The verdict applies to affected diesel models and the environmental performance implied by the campaign, not every Volkswagen vehicle.",
     media: {
-      type: "external",
-      url: "https://www.epa.gov/vw/learn-about-volkswagen-violations",
-      label: "Open the EPA case overview",
+      type: "youtube",
+      youtubeId: "c9lTGnvHMTw",
+      url: "https://www.youtube.com/watch?v=c9lTGnvHMTw",
+      label: "Volkswagen Group clean-diesel advertising",
     },
     sources: [
       {
@@ -211,9 +217,10 @@ export const claims: Claim[] = [
     editorialBoundary:
       "The verdict concerns the sweeping performance claims used to market Theranos, not the fact that a limited number of tests could sometimes be performed on small samples.",
     media: {
-      type: "external",
-      url: "https://www.sec.gov/newsroom/press-releases/2018-41",
-      label: "Open the SEC case summary",
+      type: "youtube",
+      youtubeId: "9B_oJMQk754",
+      url: "https://www.youtube.com/watch?v=9B_oJMQk754",
+      label: "Elizabeth Holmes presents Theranos at TEDMED",
     },
     sources: [
       {
@@ -349,9 +356,10 @@ export const claims: Claim[] = [
     editorialBoundary:
       "This verdict does not claim nobody panicked; it rejects the sweeping nationwide-mass-panic version of the story.",
     media: {
-      type: "external",
-      url: "https://www.loc.gov/item/00694607/",
-      label: "Listen at the Library of Congress",
+      type: "youtube",
+      youtubeId: "4wf5TPVz56A",
+      url: "https://www.youtube.com/watch?v=4wf5TPVz56A",
+      label: "Original 1938 War of the Worlds broadcast audio",
     },
     sources: [
       {
