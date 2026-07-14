@@ -1,29 +1,30 @@
 # Falsology
 
-Falsology is a mobile-first, evidence-first Truth-or-Lie video game built with Next.js for Vercel.
+Falsology is a mobile-first detective game for practicing evidence-based discernment.
 
-Users watch a short public video clip, choose **Truth** or **Lie**, then receive a sourced verdict, the fuller truth, historical context, an editorial boundary, and direct evidence links.
+Players watch a timestamped statement from a suspect, criminal, witness, survivor, celebrity offender, or public figure; set their confidence; decide whether the statement holds or breaks; then inspect the evidence that resolves the exact claim.
 
-## Current MVP
+## Production deck
 
-- Guest-first play with no account wall
-- Exactly 50 moving-video claims
-- Balanced deck: 25 lies and 25 hard-to-believe truths
-- Every playback window is 60 seconds or less
-- No text-only or audio-only entries in the live deck
-- Random endless mode
-- Deterministic daily challenges
-- Category-specific rounds
-- Score, streak, accuracy, answer history, and saved evidence in local storage
-- Permanent claim, person, and category pages
-- Searchable evidence archive
-- Visible reporting on every claim
-- Optional report webhook
-- `ClaimReview` structured data
-- Sitemap, robots file, manifest, generated icon, and Open Graph image
-- Reserved, non-intrusive advertising areas
-- Responsive phone-first interface
-- Editorial methodology, privacy policy, terms, and about pages
+- Exactly **50 spoken-statement video cases**
+- Exactly **25 supported statements and 25 false statements**
+- Every clip is **two minutes or less**
+- No random trivia, text-only rounds, or audio-only rounds
+- No duplicate YouTube videos
+- Cases include interrogations, public appeals, testimony, confessions, exonerations, and survivor interviews
+- Verdicts are tied to the exact sentence—not the speaker's general character
+- Build-time validation blocks an invalid or unbalanced deck
+
+## Product features
+
+- Guest-first play
+- Optional Google account sign-in through Auth.js
+- Confidence scoring, streaks, ranks, saved cases, and local history
+- Evidence signals and one short discernment lesson per case
+- Permanent case, person, and category pages
+- Report-evidence workflow
+- AdSense-ready leaderboard, sidebar, verdict, inline, and scheduled break placements
+- Responsive detective/evidence-room interface
 
 ## Local development
 
@@ -32,80 +33,73 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
-
 Validation:
 
 ```bash
-npm run validate:claims
+npm run validate:cases
 npm run lint
 npm run typecheck
 npm run build
 ```
 
-The build is blocked unless the dataset contains exactly 50 unique YouTube clips, a 25/25 verdict balance, and playback windows no longer than 60 seconds.
+## Vercel
 
-## Vercel deployment
+Use the default Next.js settings and production branch `main`.
 
-1. Import `krisraves/Falsology` into Vercel.
-2. Set the production branch to `main`.
-3. Leave the framework preset as **Next.js**.
-4. Leave the root directory blank or set it to `./`.
-5. Use the default install and build commands.
-6. Add:
-
-```text
+```env
 NEXT_PUBLIC_SITE_URL=https://falsology.vercel.app
 ```
 
-7. Deploy the latest commit from `main`.
+Guest play works without OAuth or advertising credentials.
 
-No environment variables are required for guest play.
+## Google sign-in
 
-## Optional report delivery
-
-The report API accepts and validates reports even without an external service. A local fallback copy is stored in the submitting browser.
-
-To forward reports into a moderation service, Slack-compatible endpoint, automation, or database function, set:
+Create Google OAuth web credentials and add this authorized redirect URI:
 
 ```text
-REPORT_WEBHOOK_URL=https://your-secure-endpoint.example/report
+https://falsology.vercel.app/api/auth/callback/google
 ```
 
-## Optional AdSense variables
+Add these Vercel environment variables:
 
-```text
+```env
+AUTH_SECRET=
+AUTH_GOOGLE_ID=
+AUTH_GOOGLE_SECRET=
+```
+
+The account establishes a signed-in identity. Game progress currently remains in that browser's local storage; cross-device synchronization requires a database adapter.
+
+## AdSense
+
+```env
 NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT=
-NEXT_PUBLIC_ADSENSE_HOME_SLOT=
-NEXT_PUBLIC_ADSENSE_GAME_SLOT=
+NEXT_PUBLIC_ADSENSE_LEADERBOARD_SLOT=
+NEXT_PUBLIC_ADSENSE_SIDEBAR_SLOT=
+NEXT_PUBLIC_ADSENSE_VERDICT_SLOT=
+NEXT_PUBLIC_ADSENSE_INTERSTITIAL_SLOT=
+NEXT_PUBLIC_ADSENSE_INLINE_SLOT=
 ```
 
-The current UI only reserves stable ad areas. It does not load AdSense until an approved account and consent strategy are added.
+Unconfigured placements remain stable placeholders so layout does not jump.
 
-## Content pipeline
+## Content structure
 
-The production claim dataset is stored as checksum-safe compressed segments in `data/claims-parts/`. `scripts/generate-claims.mjs` reconstructs `data/claims.json` before development and production builds. `scripts/validate-claims.mjs` enforces the live-deck rules.
+The live case records are in `data/cases/part01.json` through `part10.json`. Each record contains the speaker, exact statement, verdict, concise explanation, evidence signals, discernment lesson, YouTube ID, start/end time, source duration, and supporting links.
 
-Each record contains:
+`scripts/validate-detective-cases.mjs` enforces:
 
-- exact claim and game prompt
-- truth-or-lie verdict and classification
-- short and full explanations
-- historical context
-- editorial boundary
-- speaker and category metadata
-- YouTube ID and start/end timestamps
-- primary or reputable secondary evidence
-- tags, difficulty, and review date
+- 50 cases
+- 25/25 verdict balance
+- unique IDs, slugs, case numbers, and video IDs
+- YouTube video media only
+- valid playback windows no longer than 120 seconds
+- evidence signals and source links
 
-The original project instructions are retained in [`docs/`](docs/).
+## Editorial limitations
 
-## Important production work still required
-
-- Periodic re-verification because third-party videos can be removed or have embedding disabled
-- Human editorial review before promoting newly added claims
-- A real moderation database or ticket destination
-- Authentication and cross-device progress if account features are launched
-- Rate limiting and abuse monitoring for public reports
-- Consent management before personalized advertising
-- Qualified legal review of privacy, terms, copyright, and defamation workflows
+- Third-party videos can be removed or have embedding disabled, so clips need periodic re-verification.
+- Several case records currently use reputable summaries as a secondary source; each case should receive a final human legal/editorial review before paid promotion.
+- Avoid claims that body language proves deception. The game teaches timelines, corroboration, records, changing accounts, and precise wording.
+- Consent management is required before personalized advertising.
+- A qualified attorney should review copyright, privacy, defamation, and moderation procedures before large-scale launch.
