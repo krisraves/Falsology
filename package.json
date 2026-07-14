@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "generate:claims": "node scripts/generate-claims.mjs",
+    "validate:claims": "node scripts/validate-claims.mjs",
+    "predev": "npm run generate:claims",
     "dev": "next dev",
+    "prebuild": "npm run generate:claims && npm run validate:claims",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "lint": "npm run generate:claims && eslint .",
+    "typecheck": "npm run generate:claims && tsc --noEmit"
   },
   "dependencies": {
     "next": "16.2.10",
