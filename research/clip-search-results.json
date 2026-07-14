@@ -1,0 +1,555 @@
+{
+  "generatedAt": "2026-07-14T21:12:42Z",
+  "queries": {
+    "L01": {
+      "query": "Bill Clinton I did not have sexual relations",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L02": {
+      "query": "Richard Nixon I am not a crook",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L03": {
+      "query": "Lance Armstrong I have never doped interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L04": {
+      "query": "tobacco CEOs nicotine is not addictive Congress",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L05": {
+      "query": "Elizabeth Holmes one drop blood hundreds tests interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L06": {
+      "query": "Volkswagen clean diesel commercial",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L07": {
+      "query": "Ken Lay Enron company strong interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L08": {
+      "query": "Bernie Madoff impossible for violation to go undetected interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L09": {
+      "query": "Pete Rose never bet on baseball interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L10": {
+      "query": "Marion Jones never used steroids press conference",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L11": {
+      "query": "Ryan Lochte robbed at gunpoint interview Rio",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L12": {
+      "query": "Trevor Milton Nikola fully functioning truck interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L13": {
+      "query": "Fyre Festival luxury promotional video",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L14": {
+      "query": "Purdue Pharma OxyContin less addictive promotional video",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L15": {
+      "query": "Juul totally safe testimony video",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L16": {
+      "query": "Sam Bankman Fried customer funds safe interview FTX",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L17": {
+      "query": "George Santos worked at Goldman Sachs interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L18": {
+      "query": "Sean Spicer largest audience ever press briefing",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L19": {
+      "query": "Alex Jones Sandy Hook staged crisis actors video",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L20": {
+      "query": "Rudy Giuliani Dominion voting machines fraud press conference",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L21": {
+      "query": "Flint water safe official statement video",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L22": {
+      "query": "Colin Powell Iraq weapons of mass destruction UN speech",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L23": {
+      "query": "BP oil spill tiny compared to ocean Tony Hayward",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 429: Too Many Requests",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L24": {
+      "query": "Balloon Boy father not a hoax interview",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "L25": {
+      "query": "Listerine prevents colds vintage commercial",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T01": {
+      "query": "NASA day on Venus longer than a year",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T02": {
+      "query": "sharks older than trees fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T03": {
+      "query": "octopus three hearts blue blood fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T04": {
+      "query": "wombat cube shaped poop fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T05": {
+      "query": "male seahorses give birth fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 401: Unauthorized",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T06": {
+      "query": "polar bears have black skin fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T07": {
+      "query": "flamingos are born gray fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T08": {
+      "query": "tardigrades survive vacuum of space fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T09": {
+      "query": "Saturn would float in water fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T10": {
+      "query": "lightning hotter than surface of the sun fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T11": {
+      "query": "cloud weighs a million pounds fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T12": {
+      "query": "bananas are berries strawberries are not fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T13": {
+      "query": "Eiffel Tower grows in summer heat fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 401: Unauthorized",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T14": {
+      "query": "Cleopatra closer to moon landing than pyramids fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T15": {
+      "query": "Oxford University older than Aztec Empire fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: HTTPError: HTTP Error 401: Unauthorized",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T16": {
+      "query": "Nintendo founded in 1889 fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T17": {
+      "query": "wood frog freezes solid survives fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T18": {
+      "query": "koala fingerprints fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T19": {
+      "query": "crows recognize human faces fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T20": {
+      "query": "dolphins have names signature whistles fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T21": {
+      "query": "mantis shrimp punch creates light fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T22": {
+      "query": "sloths hold breath longer than dolphins fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T23": {
+      "query": "turtles breathe through their butts fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T24": {
+      "query": "honey never spoils fact",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    },
+    "T25": {
+      "query": "water boils and freezes at same time triple point",
+      "instance": null,
+      "results": [],
+      "errors": [
+        "https://inv.nadeko.net: HTTPError: HTTP Error 403: Forbidden",
+        "https://invidious.nerdvpn.de: TimeoutError: The read operation timed out",
+        "https://invidious.tiekoetter.com: HTTPError: HTTP Error 403: Forbidden",
+        "https://inv.us.projectsegfau.lt: URLError: <urlopen error [Errno 101] Network is unreachable>"
+      ]
+    }
+  }
+}
