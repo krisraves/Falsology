@@ -46,7 +46,13 @@ export function GameClient({
     const timer = window.setTimeout(() => {
       setPlayer(readState());
       if (mode === "random") {
-        setQueue((items) => [...items].sort(() => Math.random() - 0.5));
+        setQueue((items) => {
+          const shuffled = [...items].sort(() => Math.random() - 0.5);
+          return [
+            ...shuffled.filter((item) => item.media.type === "youtube"),
+            ...shuffled.filter((item) => item.media.type !== "youtube"),
+          ];
+        });
       }
     }, 0);
     return () => window.clearTimeout(timer);
