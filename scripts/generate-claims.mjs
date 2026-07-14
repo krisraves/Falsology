@@ -8,8 +8,8 @@ const partNames = readdirSync(partsDir)
   .filter((name) => /^part\d+[a-z]?$/.test(name))
   .sort();
 
-if (partNames.length !== 7) {
-  throw new Error(`Expected 7 claim-data parts, found ${partNames.length}.`);
+if (partNames.length !== 8) {
+  throw new Error(`Expected 8 claim-data parts, found ${partNames.length}.`);
 }
 
 const encoded = partNames
