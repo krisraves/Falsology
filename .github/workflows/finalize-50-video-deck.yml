@@ -1,0 +1,43 @@
+name: Finalize 50-video deck
+
+on:
+  push:
+    paths:
+      - .github/workflows/finalize-50-video-deck.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Remove temporary research artifacts
+        shell: bash
+        run: |
+          rm -rf research app/research-clips
+          rm -f .github/workflows/finalize-50-video-deck.yml
+      - name: Validate clean production tree
+        shell: bash
+        run: |
+          npm ci
+          npm run validate:claims
+          npm run lint
+          npm run typecheck
+          npm run build
+      - name: Commit clean verified tree
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Finalize balanced 50-video production deck"
+          git push
