@@ -1,0 +1,44 @@
+name: Finalize detective redesign
+
+on:
+  push:
+    paths:
+      - .github/workflows/finalize-detective-redesign.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: detective-redesign
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Remove retired research and dataset files
+        shell: bash
+        run: |
+          rm -rf research data/detective-parts data/claims-parts
+          rm -f data/claims.json scripts/generate-claims.mjs scripts/validate-claims.mjs
+          rm .github/workflows/finalize-detective-redesign.yml
+      - name: Verify final production tree
+        run: |
+          npm ci
+          npm run validate:cases
+          npm run lint
+          npm run typecheck
+          npm run build
+      - name: Commit clean tested branch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Finalize verified detective redesign"
+          git push origin detective-redesign
