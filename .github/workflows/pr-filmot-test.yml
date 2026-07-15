@@ -1,4 +1,4 @@
-name: Timedtext relay test
+name: Fast timedtext relay test
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,62 +18,48 @@ jobs:
           python-version: '3.12'
       - name: Install HTTP client
         run: pip install -U requests
-      - name: Inspect timedtext and watch-page metadata
+      - name: Check timedtext routes concurrently
         shell: bash
         run: |
           python <<'PY'
-          import json,re
+          import json
+          from concurrent.futures import ThreadPoolExecutor,as_completed
           from pathlib import Path
           from urllib.parse import quote
           import requests
 
           videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio','DbXqiSYDhrA']
-          relay=lambda url:f'https://api.allorigins.win/raw?url={quote(url,safe="")}'
-          session=requests.Session();session.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36'})
-
-          def request(url,timeout=35):
-            response=session.get(relay(url),timeout=timeout)
-            return {'status':response.status_code,'length':len(response.text),'prefix':response.text[:250],'text':response.text}
-
-          report={}
+          urls={}
           for video_id in videos:
-            item={}
+            urls[(video_id,'list')]=f'https://www.youtube.com/api/timedtext?type=list&v={video_id}'
+            urls[(video_id,'en-json3')]=f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&fmt=json3'
+            urls[(video_id,'en-asr-json3')]=f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&kind=asr&fmt=json3'
+            urls[(video_id,'watch')]=f'https://www.youtube.com/watch?v={video_id}&hl=en'
+          def relay(url):return f'https://api.allorigins.win/raw?url={quote(url,safe="")}'
+          def fetch(key,url):
             try:
-              watch=request(f'https://www.youtube.com/watch?v={video_id}&hl=en')
-              text=watch.pop('text');item['watch']=watch
-              item['markers']={
-                'captionTracks':text.find('captionTracks'),
-                'quotedCaptionTracks':text.find('"captionTracks"'),
-                'escapedCaptionTracks':text.find('\\"captionTracks\\"'),
-                'playerResponse':text.find('ytInitialPlayerResponse'),
-                'playabilityStatus':text.find('playabilityStatus'),
-              }
-              for marker_name,position in item['markers'].items():
-                if position>=0:item[f'{marker_name}Context']=text[max(0,position-180):position+500]
-            except Exception as error:item['watchError']=f'{type(error).__name__}: {error}'
-
-            urls={
-              'list':f'https://www.youtube.com/api/timedtext?type=list&v={video_id}',
-              'en-json3':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&fmt=json3',
-              'en-asr-json3':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&kind=asr&fmt=json3',
-              'en-xml':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en',
-              'en-asr-xml':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&kind=asr',
-            }
-            item['timedtext']={}
-            for name,url in urls.items():
-              try:
-                result=request(url);text=result.pop('text')
-                result['body']=text[:2000]
-                if name.endswith('json3'):
-                  try:result['eventCount']=len(json.loads(text).get('events',[]))
-                  except Exception:result['eventCount']=0
-                item['timedtext'][name]=result
-              except Exception as error:item['timedtext'][name]={'error':f'{type(error).__name__}: {error}'}
-            report[video_id]=item
-          Path('timedtext-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-          print(json.dumps(report,indent=2,ensure_ascii=False))
+              r=requests.get(relay(url),headers={'User-Agent':'Mozilla/5.0'},timeout=14)
+              text=r.text
+              result={'videoId':key[0],'route':key[1],'status':r.status_code,'length':len(text),'prefix':text[:300]}
+              if key[1].endswith('json3'):
+                try:result['eventCount']=len(r.json().get('events',[]))
+                except Exception:result['eventCount']=0
+              if key[1]=='watch':
+                result['markers']={name:text.find(name) for name in ['captionTracks','ytInitialPlayerResponse','playabilityStatus','playerCaptionsTracklistRenderer']}
+                for name,position in result['markers'].items():
+                  if position>=0:result[name+'Context']=text[max(0,position-120):position+500]
+              result['body']=text[:2500]
+              return result
+            except Exception as error:return {'videoId':key[0],'route':key[1],'error':f'{type(error).__name__}: {error}'}
+          results=[]
+          with ThreadPoolExecutor(max_workers=20) as pool:
+            fs=[pool.submit(fetch,key,url) for key,url in urls.items()]
+            for future in as_completed(fs):results.append(future.result())
+          results.sort(key=lambda x:(x['videoId'],x['route']))
+          Path('fast-timedtext-test.json').write_text(json.dumps(results,indent=2,ensure_ascii=False)+'\n')
+          print(json.dumps(results,indent=2,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: timedtext-test
-          path: timedtext-test.json
+          name: fast-timedtext-test
+          path: fast-timedtext-test.json
