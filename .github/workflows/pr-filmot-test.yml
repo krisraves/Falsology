@@ -1,4 +1,4 @@
-name: Player configuration extraction test
+name: Signed player caption test
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,7 +18,7 @@ jobs:
           python-version: '3.12'
       - name: Install HTTP client
         run: pip install -U requests
-      - name: Extract proxied YouTube player configuration
+      - name: Replay YouTube's embedded-player request
         shell: bash
         run: |
           python <<'PY'
@@ -26,43 +26,107 @@ jobs:
           from pathlib import Path
           import requests
 
-          proxies=['34.43.46.91:443','147.45.60.249:1082','50.205.246.13:80','146.190.60.147:8003','117.236.124.166:3128']
+          proxies=['34.43.46.91:443','147.45.60.249:1082','50.205.246.13:80','146.190.60.147:8003','117.236.124.166:3128','117.7.81.125:2027']
           video_id='3MuPWV5cTio'
           origin='https://falsology.vercel.app'
-          urls={
-            'embed':f'https://www.youtube.com/embed/{video_id}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en&origin=https%3A%2F%2Ffalsology.vercel.app',
-            'watch':f'https://www.youtube.com/watch?v={video_id}&hl=en',
-          }
-          headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36','Referer':origin+'/play','Accept-Language':'en-US,en;q=0.9'}
-          marker_names=['ytInitialPlayerResponse','raw_player_response','player_response','PLAYER_CONFIG','PLAYER_VARS','captionTracks','playerCaptionsTracklistRenderer','timedtext','INNERTUBE_API_KEY','playabilityStatus']
+          embed_url=f'https://www.youtube.com/embed/{video_id}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en&origin=https%3A%2F%2Ffalsology.vercel.app'
+          user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
+
+          def balanced_object(text,start):
+            depth=0;inside=False;escaped=False
+            for index in range(start,len(text)):
+              char=text[index]
+              if escaped:escaped=False;continue
+              if inside:
+                if char=='\\':escaped=True
+                elif char=='"':inside=False
+                continue
+              if char=='"':inside=True
+              elif char=='{':depth+=1
+              elif char=='}':
+                depth-=1
+                if depth==0:return text[start:index+1]
+            return None
+
+          def extract_ytcfg(text):
+            merged={};cursor=0
+            while True:
+              position=text.find('ytcfg.set(',cursor)
+              if position<0:break
+              start=text.find('{',position)
+              raw=balanced_object(text,start) if start>=0 else None
+              if raw:
+                try:merged.update(json.loads(raw))
+                except Exception:pass
+                cursor=start+len(raw)
+              else:cursor=position+10
+            return merged
+
+          def parse_json3(data):
+            rows=[]
+            for event in data.get('events',[]):
+              text=''.join(segment.get('utf8','') for segment in event.get('segs',[])).replace('\n',' ').strip()
+              if text:rows.append({'text':text,'start':event.get('tStartMs',0)/1000,'duration':event.get('dDurationMs',0)/1000})
+            return rows
+
           report=[]
-          saved=False
           for proxy in proxies:
             route='http://'+proxy
-            for kind,url in urls.items():
-              item={'proxy':proxy,'kind':kind}
-              try:
-                response=requests.get(url,headers=headers,proxies={'http':route,'https':route},timeout=15,verify=True)
-                text=response.text
-                item.update({'status':response.status_code,'length':len(text),'title':re.search(r'<title[^>]*>(.*?)</title>',text,re.S).group(1)[:300] if re.search(r'<title[^>]*>(.*?)</title>',text,re.S) else None,'markers':{name:text.find(name) for name in marker_names}})
-                contexts={}
-                for name,position in item['markers'].items():
-                  if position>=0:contexts[name]=text[max(0,position-500):position+3000]
-                item['contexts']=contexts
-                # Save the first full, non-challenged page for offline inspection.
-                challenged='confirm you' in text.lower() and 'not a bot' in text.lower()
-                if response.status_code==200 and len(text)>100000 and not challenged and not saved:
-                  Path(f'proxied-youtube-{kind}.html').write_text(text)
-                  saved=True
-              except Exception as error:item['error']=f'{type(error).__name__}: {error}'
-              report.append(item)
-            if saved:break
-          Path('player-config-report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-          print(json.dumps(report,indent=2,ensure_ascii=False)[:50000])
+            session=requests.Session();session.proxies.update({'http':route,'https':route})
+            headers={'User-Agent':user_agent,'Referer':origin+'/play','Accept-Language':'en-US,en;q=0.9'}
+            item={'proxy':proxy}
+            try:
+              page=session.get(embed_url,headers=headers,timeout=18,verify=True)
+              item['embedStatus']=page.status_code;item['embedLength']=len(page.text)
+              config=extract_ytcfg(page.text)
+              item['configKeys']=sorted(config.keys())
+              key=config.get('INNERTUBE_API_KEY')
+              context=config.get('INNERTUBE_CONTEXT')
+              client_name=config.get('INNERTUBE_CONTEXT_CLIENT_NAME')
+              client_version=config.get('INNERTUBE_CONTEXT_CLIENT_VERSION') or ((context or {}).get('client') or {}).get('clientVersion')
+              visitor=config.get('VISITOR_DATA') or ((context or {}).get('client') or {}).get('visitorData')
+              item['clientName']=client_name;item['clientVersion']=client_version;item['visitorPrefix']=(visitor or '')[:60];item['hasContext']=bool(context);item['hasKey']=bool(key)
+              if not key or not context:raise RuntimeError('Missing embedded client configuration')
+              payload={
+                'context':context,
+                'videoId':video_id,
+                'contentCheckOk':True,
+                'racyCheckOk':True,
+                'playbackContext':{'contentPlaybackContext':{'html5Preference':'HTML5_PREF_WANTS','lactMilliseconds':'-1'}},
+                'thirdParty':{'embedUrl':origin},
+              }
+              request_headers={
+                'User-Agent':user_agent,
+                'Content-Type':'application/json',
+                'Origin':'https://www.youtube.com',
+                'Referer':embed_url,
+                'X-Youtube-Client-Version':str(client_version or ''),
+                'X-Youtube-Client-Name':str(client_name or ''),
+                'X-Goog-Visitor-Id':str(visitor or ''),
+              }
+              player=session.post(f'https://www.youtube.com/youtubei/v1/player?key={key}&prettyPrint=false',headers=request_headers,json=payload,timeout=25,verify=True)
+              item['playerStatus']=player.status_code;item['playerLength']=len(player.text);item['playerPrefix']=player.text[:500]
+              data=player.json() if player.ok else {}
+              item['playabilityStatus']=data.get('playabilityStatus')
+              item['videoDetails']={k:(data.get('videoDetails') or {}).get(k) for k in ['videoId','title','lengthSeconds','author']}
+              item['hasStreamingData']=bool(data.get('streamingData'))
+              tracks=(((data.get('captions') or {}).get('playerCaptionsTracklistRenderer') or {}).get('captionTracks') or [])
+              item['tracks']=[{k:track.get(k) for k in ['languageCode','kind','baseUrl','name']} for track in tracks]
+              english=next((track for track in tracks if (track.get('languageCode') or '').startswith('en')),tracks[0] if tracks else None)
+              if english and english.get('baseUrl'):
+                caption_url=english['baseUrl']+('&' if '?' in english['baseUrl'] else '?')+'fmt=json3'
+                captions=session.get(caption_url,headers={'User-Agent':user_agent,'Referer':embed_url},timeout=25,verify=True)
+                item['captionStatus']=captions.status_code;item['captionLength']=len(captions.text);item['captionPrefix']=captions.text[:500]
+                try:item['captionRows']=parse_json3(captions.json())
+                except Exception:item['captionRows']=[]
+              item['success']=bool(item.get('captionRows') or tracks or data.get('streamingData'))
+            except Exception as error:item['error']=f'{type(error).__name__}: {error}'
+            report.append(item)
+            print(json.dumps({k:item.get(k) for k in ['proxy','embedStatus','playerStatus','playabilityStatus','videoDetails','hasStreamingData','captionStatus','success','error']},indent=2,ensure_ascii=False))
+            if item.get('captionRows'):break
+          Path('signed-player-caption-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: player-config-extraction
-          path: |
-            player-config-report.json
-            proxied-youtube-*.html
+          name: signed-player-caption-test
+          path: signed-player-caption-test.json
