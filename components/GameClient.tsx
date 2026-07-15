@@ -130,6 +130,18 @@ export function GameClient({
     else advance();
   }
 
+  function skipUnavailableClaim() {
+    if (queue.length <= 1) return false;
+    const remainingCount = queue.length - 1;
+    setQueue((current) => current.filter((item) => item.id !== claim.id));
+    setIndex((current) => current % remainingCount);
+    setAnswer(null);
+    setExpanded(false);
+    setAdBreak(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return true;
+  }
+
   function toggleSaved() {
     const nextSaved = saved
       ? player.saved.filter((id) => id !== claim.id)
@@ -182,7 +194,7 @@ export function GameClient({
           <section className="case-file-card">
             <div className="case-video-shell">
               <div className="case-tape-label">VIDEO · {claim.media.endSeconds - claim.media.startSeconds}s</div>
-              <MediaPanel key={claim.id} claim={claim} />
+              <MediaPanel key={claim.id} claim={claim} onUnavailable={skipUnavailableClaim} />
               <button className="report-link" onClick={() => setReporting(true)}>⚑ Report</button>
             </div>
 
@@ -200,14 +212,17 @@ export function GameClient({
               <blockquote className="case-statement">“{claim.claim}”</blockquote>
 
               {!answer ? (
-                <div className="detective-actions simple-verdicts" aria-label="Choose truth or lie">
-                  <button className="verdict-button verdict-holds" onClick={() => choose("truth")}>
-                    <span>✓</span><strong>Truth</strong>
-                  </button>
-                  <button className="verdict-button verdict-breaks" onClick={() => choose("lie")}>
-                    <span>×</span><strong>Lie</strong>
-                  </button>
-                </div>
+                <>
+                  <p className="case-instruction">Are they lying?</p>
+                  <div className="detective-actions simple-verdicts" aria-label="Are they lying?">
+                    <button className="verdict-button verdict-breaks" onClick={() => choose("lie")}>
+                      <span aria-hidden="true">Y</span><strong>Yes</strong>
+                    </button>
+                    <button className="verdict-button verdict-holds" onClick={() => choose("truth")}>
+                      <span aria-hidden="true">N</span><strong>No</strong>
+                    </button>
+                  </div>
+                </>
               ) : (
                 <div className={`case-reveal ${correct ? "case-correct" : "case-wrong"}`} aria-live="polite">
                   <div className="reveal-verdict-row">
