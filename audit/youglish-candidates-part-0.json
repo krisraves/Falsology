@@ -1,0 +1,130 @@
+{
+  "chunk": 0,
+  "generatedAt": "2026-07-15T21:57:35.362Z",
+  "cases": [
+    {
+      "caseNumber": "L01",
+      "person": "Chris Watts",
+      "claim": "I have no inclination of where they're at right now.",
+      "currentVideoId": "3MuPWV5cTio",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L02",
+      "person": "Susan Smith",
+      "claim": "A man carjacked me and took my boys.",
+      "currentVideoId": "KPPUHvMyBUs",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L03",
+      "person": "Diane Downs",
+      "claim": "A bushy-haired stranger shot my children.",
+      "currentVideoId": "Enghvd9o2As",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L04",
+      "person": "Jodi Arias",
+      "claim": "I wasn't there when Travis was killed.",
+      "currentVideoId": "ez-4b-yQGzg",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L05",
+      "person": "Casey Anthony",
+      "claim": "A nanny named Zenaida took Caylee.",
+      "currentVideoId": "ixzDBcMTnV8",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L06",
+      "person": "Ted Bundy",
+      "claim": "I am innocent.",
+      "currentVideoId": "SmiiY1rQDVk",
+      "candidates": [
+        {
+          "videoId": "_er8jURZbJk",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I couldn't avoid the pun of calling my piece 'I am Innocent'.",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Mark Wallinger | Dulwich Picture Gallery | Van Dyck: A Masterpiece for Everyone",
+            "author_name": "National Portrait Gallery",
+            "author_url": "https://www.youtube.com/@nationalportraitgallery",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/_er8jURZbJk/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/_er8jURZbJk?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Mark Wallinger | Dulwich Picture Gallery | Van Dyck: A Masterpiece for Everyone\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 78,
+      "completed": false
+    },
+    {
+      "caseNumber": "L07",
+      "person": "John Wayne Gacy",
+      "claim": "I don't believe I killed anybody.",
+      "currentVideoId": "yQ4AT4q2DKs",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L08",
+      "person": "Stephen McDaniel",
+      "claim": "I don't know what happened to Lauren.",
+      "currentVideoId": "YzbIhWu0gpQ",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L09",
+      "person": "Jennifer Pan",
+      "claim": "Intruders tied me up and attacked my parents.",
+      "currentVideoId": "amHb2UoVZ_g",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L10",
+      "person": "Sarah Boone",
+      "claim": "It was not intentional. We were playing hide-and-seek.",
+      "currentVideoId": "9dhV651zp1o",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    }
+  ]
+}
