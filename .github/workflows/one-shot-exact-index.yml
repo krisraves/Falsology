@@ -1,0 +1,103 @@
+name: One-shot exact statement index
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-shot-exact-index.yml
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser
+        run: pip install -U requests rapidfuzz
+      - name: Collect exact indexed matches
+        run: |
+          python <<'PY'
+          import ast,json,re,time,urllib.parse
+          from pathlib import Path
+          import requests
+          from rapidfuzz import fuzz
+
+          manifest=json.loads(Path('audit/live-case-manifest.json').read_text())
+          S=requests.Session();S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36','Accept-Language':'en-US,en;q=0.9'})
+          BAD=['analysis','breakdown','reacts','reaction','explained','documentary','story of','body language','behavior panel','podcast','compilation','movie clip','reenactment','trailer','news report']
+          DIRECT=['interview','interrogation','testimony','testifies','confession','confesses','admits','denies','statement','court','hearing','raw','unedited']
+          NEWS=['abc news','cbs news','nbc news','cnn','fox news','associated press','ap archive','inside edition','newsnation','daily mail','today','gma','good morning america']
+          def norm(v):return re.sub(r'[^a-z0-9 ]+',' ',str(v or '').lower()).strip()
+          def oembed(vid):
+              try:
+                  r=S.get('https://www.youtube.com/oembed',params={'format':'json','url':'https://www.youtube.com/watch?v='+vid},timeout=20)
+                  return {'status':r.status_code,**(r.json() if r.ok else {'error':r.text[:500]})}
+              except Exception as e:return {'error':f'{type(e).__name__}: {e}'}
+          def duration(vid,query):
+              try:
+                  r=S.get('https://youglish.com/fetchcap.jsp',params={'vers':'4','op':'1','vid':vid,'query':query,'lg':'0','accent':'0'},timeout=20)
+                  data=r.json();return int(float(data.get('end',0))) if data.get('end') is not None else None
+              except Exception:return None
+          def extract(query):
+              url='https://youglish.com/pronounce/'+urllib.parse.quote(query,safe='')+'/english/all/emb=1&e_id=audit&e_comp=8264&e_start=1&e_h=-1&e_notif_h=1&e_cur_w=900'
+              r=S.get(url,timeout=35);r.raise_for_status();html=r.text
+              m=re.search(r"params\.jsonData\s*=\s*'((?:\\.|[^'])*)';",html)
+              if not m:return {'url':url,'error':'params.jsonData not found','htmlPreview':html[:3000]}
+              decoded=ast.literal_eval("'"+m.group(1)+"'")
+              return {'url':url,'data':json.loads(decoded)}
+          def score(item,candidate):
+              title=norm(candidate.get('oembed',{}).get('title'));author=norm(candidate.get('oembed',{}).get('author_name'));person=norm(item['person']);last=person.split()[-1] if person else ''
+              s=0
+              if candidate['videoId']==item['videoId']:s+=180
+              if person and person in title:s+=140
+              elif last and last in title:s+=75
+              if person and person in author:s+=40
+              elif last and last in author:s+=20
+              s+=max(0,fuzz.token_set_ratio(norm(item['claim']),norm(candidate.get('display')))-60)*.6
+              s+=sum(8 for x in DIRECT if x in title)
+              s-=sum(35 for x in BAD if x in title)
+              s-=sum(8 for x in NEWS if x in author)
+              if candidate.get('statementStart',0)<15:s-=80
+              duration=candidate.get('videoDurationSeconds') or 0
+              if duration and candidate.get('statementEnd',0)+15>duration:s-=80
+              return round(s,1)
+
+          output={'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'cases':[]}
+          for index,item in enumerate(manifest,1):
+              row={k:item.get(k) for k in ['caseNumber','person','claim','verdict','difficulty','videoId','sourceUrl']};row['candidates']=[]
+              try:
+                  result=extract(item['claim']);row['queryUrl']=result['url']
+                  if result.get('error'):row['error']=result['error'];row['htmlPreview']=result.get('htmlPreview')
+                  else:
+                      data=result['data'];row['totalResults']=int(data.get('total_results',0));row['alteredQuery']=data.get('altered_query')
+                      for match in data.get('results',[]):
+                          vid=match.get('vid');start=float(match.get('start',0));end=float(match.get('end',0));meta=oembed(vid);dur=duration(vid,item['claim'])
+                          candidate={'videoId':vid,'statementStart':start,'statementEnd':end,'display':match.get('display'),'zone':match.get('zone'),'source':match.get('src'),'captionId':match.get('cid'),'oembed':meta,'videoDurationSeconds':dur}
+                          candidate['hasFullContext']=bool(start>=15 and dur and end+15<=dur)
+                          candidate['score']=score(item,candidate);row['candidates'].append(candidate)
+                      row['candidates'].sort(key=lambda x:-x['score']);row['recommended']=next((x for x in row['candidates'] if x['hasFullContext'] and x['score']>=60),None)
+              except Exception as e:row['error']=f'{type(e).__name__}: {e}'
+              output['cases'].append(row);print(f"[{index:02d}/50] {item['caseNumber']} total={row.get('totalResults',0)} candidates={len(row['candidates'])} recommended={bool(row.get('recommended'))}");time.sleep(.15)
+          Path('audit/exact-index-candidates.json').write_text(json.dumps(output,indent=2,ensure_ascii=False)+'\n')
+          summary=[]
+          for row in output['cases']:
+              rec=row.get('recommended');summary.append({'caseNumber':row['caseNumber'],'person':row['person'],'claim':row['claim'],'currentVideoId':row['videoId'],'totalResults':row.get('totalResults',0),'recommended':rec,'topCandidates':row['candidates'][:5],'error':row.get('error')})
+          Path('audit/exact-index-summary.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit index and remove workflow
+        run: |
+          rm .github/workflows/one-shot-exact-index.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record exact indexed statement timings"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
