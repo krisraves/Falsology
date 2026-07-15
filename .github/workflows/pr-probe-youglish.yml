@@ -1,0 +1,59 @@
+name: PR probe YouGlish timestamps
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Probe public widget result payload
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');const fs=require('fs');const http=require('http');
+          const port=8766,origin=`http://127.0.0.1:${port}`;
+          const phrases=['I did not have sexual relations with that woman','I have no inclination where they are','Intruders tied me up and attacked my parents','A humpback whale had me inside its mouth and spit me back out'];
+          const server=http.createServer((q,r)=>{r.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});r.end('<!doctype html><html><body><div id="yg-widget"></div></body></html>')});
+          server.listen(port,'127.0.0.1',async()=>{
+            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox']});
+            const results={};
+            for(const phrase of phrases){
+              const context=await browser.newContext({locale:'en-US',timezoneId:'America/New_York',viewport:{width:1280,height:900},userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36'});
+              await context.addInitScript(()=>Object.defineProperty(navigator,'webdriver',{get:()=>undefined}));
+              const page=await context.newPage();const requests=[],responses=[],consoleLogs=[];
+              page.on('console',m=>consoleLogs.push({type:m.type(),text:m.text()}));
+              page.on('request',r=>{const u=r.url();if(/youglish|youtube|googlevideo|widget|pronounce|search|fetch/i.test(u))requests.push({url:u,method:r.method(),resourceType:r.resourceType(),postData:(r.postData()||'').slice(0,10000)})});
+              page.on('response',async r=>{const u=r.url();if(/youglish|widget|pronounce|search|fetch|youtubei|timedtext/i.test(u)){const x={url:u,status:r.status(),contentType:r.headers()['content-type']};try{const b=await r.body();x.bytes=b.length;x.preview=b.toString('utf8').slice(0,100000)}catch(e){x.error=String(e)}responses.push(x)}});
+              await page.goto(origin);
+              const scriptInfo=await page.evaluate(async()=>{const r=await fetch('https://youglish.com/public/js/widgetapi.js');const text=await r.text();return {status:r.status,length:text.length,text:text.slice(0,250000)}}).catch(e=>({error:String(e)}));
+              await page.addScriptTag({url:'https://youglish.com/public/js/widgetapi.js'}).catch(()=>{});
+              let readyEvent=null,errorEvent=null,widgetSnapshot=null;
+              await page.exposeFunction('ygReady',e=>{readyEvent=e});await page.exposeFunction('ygError',e=>{errorEvent=e});
+              await page.evaluate(async phrase=>{
+                const deadline=Date.now()+10000;while(!window.YG&&Date.now()<deadline)await new Promise(r=>setTimeout(r,100));
+                if(!window.YG)throw new Error('YG API did not load');
+                window.__ygWidget=new window.YG.Widget('yg-widget',{width:'auto',components:15,autoStart:0,events:{onFetchDone:e=>window.ygReady(JSON.parse(JSON.stringify(e))),onError:e=>window.ygError(JSON.parse(JSON.stringify(e))),onVideoChange:e=>console.log('YG_VIDEO_CHANGE',JSON.stringify(e)),onPlayerReady:e=>console.log('YG_PLAYER_READY',JSON.stringify(e))}});
+                window.__ygWidget.fetch(phrase,'english');
+              },phrase).catch(e=>{errorEvent={setupError:String(e)}});
+              for(let i=0;i<20&&!readyEvent&&!errorEvent;i++)await page.waitForTimeout(1000);
+              widgetSnapshot=await page.evaluate(()=>{const w=window.__ygWidget;const own={};if(w)for(const k of Object.keys(w)){try{const v=w[k];if(typeof v!=='function')own[k]=JSON.parse(JSON.stringify(v))}catch{own[k]=String(w[k])}}return {own,body:document.body.innerText.slice(0,10000),html:document.documentElement.outerHTML.slice(0,250000),scripts:[...document.scripts].map(s=>s.src)}}).catch(e=>({error:String(e)}));
+              results[phrase]={readyEvent,errorEvent,widgetSnapshot,scriptInfo,requests,responses,consoleLogs};await context.close();
+            }
+            await browser.close();server.close();fs.mkdirSync('probe-output',{recursive:true});fs.writeFileSync('probe-output/youglish.json',JSON.stringify(results,null,2));
+          });
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: youglish-probe-result
+          path: probe-output/youglish.json
+          retention-days: 1
