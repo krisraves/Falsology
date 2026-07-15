@@ -1,31 +1,34 @@
 # Falsology
 
-Falsology is a mobile-first detective game for practicing evidence-based discernment.
-
-Players watch a tightly trimmed statement from a suspect, criminal, witness, survivor, celebrity offender, or public figure; set their confidence; decide whether the statement holds or breaks; then inspect the evidence that resolves the exact claim.
+Falsology is a mobile-first Truth-or-Lie game built around short, direct footage from interviews, interrogations, testimony, confessions, and survivor accounts.
 
 ## Production deck
 
-- Exactly **50 spoken-statement video cases**
-- Exactly **25 supported statements and 25 false statements**
+- Exactly **50 video cases**
+- Exactly **25 truthful statements and 25 lies**
 - Every selected clip is **45 seconds or less**
-- The named person must be visibly or audibly making the statement
-- No news packages, anchor narration, reenactments, movie scenes, commentary videos, random trivia, text-only rounds, or audio-only rounds
-- No duplicate YouTube videos
-- Direct-footage types include interrogations, raw interviews, testimony, confessions, public statements, hearings, exonerations, and survivor interviews
-- Verdicts are tied to the exact sentence—not the speaker's general character
-- Build-time validation blocks an invalid or unbalanced deck
+- The named person directly makes the statement
+- No reporter-led packages, reenactments, movie scenes, commentary clips, text-only rounds, or audio-only rounds
+- Video order is randomized on every visit while preserving a balanced truth/lie sequence
+- Verdicts apply to the exact statement—not the speaker's general character
+
+## Difficulty levels
+
+- **Easy:** 16 recognizable cases, balanced 8 truth / 8 lie
+- **Hard:** 16 less familiar cases, balanced 8 truth / 8 lie
+- **Expert:** 18 obscure or context-dependent cases, balanced 9 truth / 9 lie
+
+Expert includes strange but verified survival and exoneration accounts alongside lesser-known interrogation lies.
 
 ## Product features
 
-- Guest-first play
-- Optional Google account sign-in through Auth.js
-- Confidence scoring, streaks, ranks, saved cases, and local history
-- Evidence signals and one short discernment lesson per case
+- Simple Truth and Lie controls
+- Score, streak, accuracy, saved cases, and local history
+- Optional Google sign-in through Auth.js
+- Evidence signals and a short lesson after every answer
 - Permanent case, person, and category pages
 - Report-evidence workflow
-- AdSense-ready leaderboard, sidebar, verdict, inline, and scheduled break placements
-- Responsive detective/evidence-room interface
+- AdSense-ready placements
 
 ## Local development
 
@@ -55,13 +58,13 @@ Guest play works without OAuth or advertising credentials.
 
 ## Google sign-in
 
-Create Google OAuth web credentials and add this authorized redirect URI:
+Authorized redirect URI:
 
 ```text
 https://falsology.vercel.app/api/auth/callback/google
 ```
 
-Add these Vercel environment variables:
+Vercel environment variables:
 
 ```env
 AUTH_SECRET=
@@ -69,7 +72,7 @@ AUTH_GOOGLE_ID=
 AUTH_GOOGLE_SECRET=
 ```
 
-The account establishes a signed-in identity. Game progress currently remains in that browser's local storage; cross-device synchronization requires a database adapter.
+Signed-in identity is supported. Game progress currently remains in the browser's local storage.
 
 ## AdSense
 
@@ -82,30 +85,21 @@ NEXT_PUBLIC_ADSENSE_INTERSTITIAL_SLOT=
 NEXT_PUBLIC_ADSENSE_INLINE_SLOT=
 ```
 
-Unconfigured placements remain stable placeholders so layout does not jump.
+Unconfigured placements remain stable placeholders.
 
 ## Content structure
 
-The base case records are in `data/cases/part01.json` through `part10.json`. `data/case-overrides.json` contains the publication-approved direct-footage selections and replaces any retired statement or clip without duplicating the full case library.
+- `data/cases/part01.json` through `part10.json`: base case records
+- `data/case-overrides.json`: reviewed direct-footage selections
+- `data/direct-footage-replacements.json`: source corrections
+- `data/obscure-case-replacements.json`: obscure Expert cases
+- `data/difficulty-map.json`: balanced difficulty assignments
 
-Each published record contains the speaker, exact statement, verdict, concise explanation, evidence signals, discernment lesson, YouTube ID, start/end time, source duration, direct-footage classification, and supporting links.
-
-`scripts/validate-detective-cases.mjs` enforces:
-
-- 50 cases
-- 25/25 verdict balance
-- unique IDs, slugs, case numbers, and video IDs
-- YouTube video media only
-- valid playback windows no longer than 45 seconds
-- the named person directly making the statement
-- no news packages or narrated reports
-- approved direct-footage source types
-- evidence signals and source links
+The validator blocks deployment unless the 50-case deck remains balanced overall and within every difficulty level, uses unique videos, and respects the 45-second direct-footage rule.
 
 ## Editorial limitations
 
-- Third-party videos can be removed or have embedding disabled, so clips need periodic re-verification.
-- A short direct excerpt can still omit context; every verdict page links to the complete source and supporting record.
-- Avoid claims that body language proves deception. The game teaches timelines, corroboration, records, changing accounts, and precise wording.
-- Consent management is required before personalized advertising.
-- A qualified attorney should review copyright, privacy, defamation, and moderation procedures before large-scale launch.
+- Third-party videos can be removed or have embedding disabled and require periodic re-verification.
+- Short excerpts can omit context; every verdict links to the complete source and supporting record.
+- The game does not claim that body language proves deception.
+- Legal review is recommended before paid promotion at scale.
