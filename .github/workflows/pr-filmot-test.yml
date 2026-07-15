@@ -1,4 +1,4 @@
-name: One-video caption diagnostic
+name: Fast one-video caption diagnostic
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Inspect one YouTube player
+      - name: Inspect caption data without awaiting playback
         shell: bash
         run: |
           node <<'JS'
@@ -32,9 +32,10 @@ jobs:
             const browser = await chromium.launch({ headless: true, args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'] });
             const context = await browser.newContext({ locale: 'en-US' });
             const page = await context.newPage();
+            page.setDefaultTimeout(5000);
             const network = [];
             page.on('response', async (response) => {
-              if (!/timedtext|caption|player/.test(response.url())) return;
+              if (!/timedtext|caption|videoplayback/.test(response.url())) return;
               const entry = { url: response.url(), status: response.status(), headers: response.headers() };
               if (response.url().includes('timedtext')) {
                 try { const body = await response.text(); entry.length = body.length; entry.prefix = body.slice(0, 500); entry.body = body; } catch (error) { entry.error = String(error); }
@@ -42,62 +43,61 @@ jobs:
               network.push(entry);
             });
 
-            const result = { videoId, network: [] };
+            const result = { videoId };
             try {
-              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en`, { waitUntil: 'commit', timeout: 30000 });
               result.status = response?.status() ?? null;
-              await page.waitForTimeout(7000);
-              const subtitleButton = page.locator('.ytp-subtitles-button').first();
-              result.subtitleButtonCount = await subtitleButton.count();
-              if (result.subtitleButtonCount) {
-                try { await subtitleButton.click({ timeout: 2500 }); } catch (error) { result.subtitleClickError = String(error); }
-              }
-              const video = page.locator('video').first();
-              result.videoCount = await video.count();
-              if (result.videoCount) {
-                try {
-                  await video.evaluate(async (element) => {
-                    element.muted = true;
-                    element.currentTime = 1;
-                    await element.play();
-                  });
-                } catch (error) { result.playError = String(error); }
-              }
+              await page.waitForTimeout(9000);
+              result.prePlay = await page.evaluate(() => {
+                const video = document.querySelector('video');
+                return {
+                  title: document.title,
+                  body: (document.body?.innerText || '').slice(0, 1500),
+                  video: video ? { readyState: video.readyState, duration: video.duration, currentTime: video.currentTime, paused: video.paused, src: video.src, currentSrc: video.currentSrc } : null,
+                  subtitleButton: Boolean(document.querySelector('.ytp-subtitles-button')),
+                  globalCaptions: window.ytInitialPlayerResponse?.captions || null,
+                };
+              });
+              await page.evaluate(() => {
+                const button = document.querySelector('.ytp-subtitles-button');
+                if (button) button.click();
+                const video = document.querySelector('video');
+                if (video) {
+                  video.muted = true;
+                  video.currentTime = 1;
+                  video.play().catch(() => {});
+                }
+              });
               await page.waitForTimeout(6000);
               result.dom = await page.evaluate(() => {
                 const video = document.querySelector('video');
-                const textTracks = video ? Array.from(video.textTracks || []).map((track) => ({
+                const tracks = video ? Array.from(video.textTracks || []).map((track) => ({
                   kind: track.kind,
                   label: track.label,
                   language: track.language,
                   mode: track.mode,
                   cueCount: track.cues ? track.cues.length : null,
-                  cues: track.cues ? Array.from(track.cues).slice(0, 100).map((cue) => ({ startTime: cue.startTime, endTime: cue.endTime, text: cue.text })) : [],
+                  cues: track.cues ? Array.from(track.cues).slice(0, 500).map((cue) => ({ startTime: cue.startTime, endTime: cue.endTime, text: cue.text })) : [],
                 })) : [];
-                const globalResponse = window.ytInitialPlayerResponse;
-                const scripts = Array.from(document.scripts).map((script) => script.textContent || '');
-                const captionScripts = scripts.filter((text) => /captionTracks|playerCaptionsTracklistRenderer|timedtext/.test(text));
+                const scripts = Array.from(document.scripts).map((script) => script.textContent || '').filter((text) => /captionTracks|playerCaptionsTracklistRenderer|timedtext/.test(text));
                 return {
-                  title: document.title,
-                  bodyText: (document.body?.innerText || '').slice(0, 2000),
-                  htmlLength: document.documentElement.outerHTML.length,
-                  video: video ? { readyState: video.readyState, duration: video.duration, currentTime: video.currentTime, paused: video.paused, textTracks } : null,
+                  video: video ? { readyState: video.readyState, duration: video.duration, currentTime: video.currentTime, paused: video.paused, src: video.src, currentSrc: video.currentSrc, tracks } : null,
                   captionsOnScreen: Array.from(document.querySelectorAll('.ytp-caption-segment')).map((node) => node.textContent || ''),
-                  globalCaptions: globalResponse?.captions || null,
-                  captionScriptCount: captionScripts.length,
-                  captionScripts: captionScripts.slice(0, 5).map((text) => text.slice(0, 300000)),
+                  globalCaptions: window.ytInitialPlayerResponse?.captions || null,
+                  captionScriptCount: scripts.length,
+                  captionScripts: scripts.slice(0, 4).map((text) => text.slice(0, 500000)),
                 };
               });
               result.network = network;
             } catch (error) {
               result.error = String(error?.stack || error);
             }
-            fs.writeFileSync('one-video-caption-diagnostic.json', JSON.stringify(result, null, 2));
-            console.log(JSON.stringify({ status: result.status, video: result.dom?.video, screen: result.dom?.captionsOnScreen, global: Boolean(result.dom?.globalCaptions), scripts: result.dom?.captionScriptCount, network: result.network.length, error: result.error }, null, 2));
+            fs.writeFileSync('fast-caption-diagnostic.json', JSON.stringify(result, null, 2));
+            console.log(JSON.stringify({ status: result.status, prePlay: result.prePlay, video: result.dom?.video, captionsOnScreen: result.dom?.captionsOnScreen, globalCaptions: Boolean(result.dom?.globalCaptions), scriptCount: result.dom?.captionScriptCount, networkCount: result.network?.length, error: result.error }, null, 2));
             await browser.close();
           })().catch((error) => { console.error(error); process.exit(1); });
           JS
       - uses: actions/upload-artifact@v4
         with:
-          name: one-video-caption-diagnostic
-          path: one-video-caption-diagnostic.json
+          name: fast-caption-diagnostic
+          path: fast-caption-diagnostic.json
