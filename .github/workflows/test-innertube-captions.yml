@@ -1,0 +1,59 @@
+name: Test Innertube caption access
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-innertube-captions.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test Innertube clients
+        run: |
+          python <<'PY'
+          import json, urllib.request
+          from pathlib import Path
+          vid='3MuPWV5cTio'
+          key='AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
+          clients=[
+            ('WEB','2.20260710.01.00',{}),
+            ('WEB_EMBEDDED_PLAYER','1.20260710.00.00',{}),
+            ('ANDROID','20.27.38',{'androidSdkVersion':35}),
+            ('ANDROID_VR','1.62.48',{'androidSdkVersion':35}),
+            ('TVHTML5','7.20260710.18.00',{}),
+            ('TVHTML5_SIMPLY_EMBEDDED_PLAYER','2.0',{}),
+            ('IOS','20.27.4',{'deviceMake':'Apple','deviceModel':'iPhone16,2','osName':'iPhone','osVersion':'18.5.0.22F76'}),
+          ]
+          out={}
+          for name,version,extra in clients:
+              body={'context':{'client':{'clientName':name,'clientVersion':version,'hl':'en','gl':'US',**extra}},'videoId':vid,'contentCheckOk':True,'racyCheckOk':True}
+              try:
+                  req=urllib.request.Request(f'https://www.youtube.com/youtubei/v1/player?key={key}',data=json.dumps(body).encode(),headers={'Content-Type':'application/json','User-Agent':'com.google.android.youtube/20.27.38 (Linux; U; Android 15) gzip'})
+                  with urllib.request.urlopen(req,timeout=30) as r:data=json.load(r)
+                  caps=((data.get('captions') or {}).get('playerCaptionsTracklistRenderer') or {}).get('captionTracks') or []
+                  out[name]={'playability':(data.get('playabilityStatus') or {}).get('status'),'reason':(data.get('playabilityStatus') or {}).get('reason'),'captionCount':len(caps),'captions':[{'languageCode':c.get('languageCode'),'name':((c.get('name') or {}).get('simpleText')),'baseUrlPrefix':str(c.get('baseUrl'))[:300]} for c in caps],'streamingData':bool(data.get('streamingData')),'videoDetails':bool(data.get('videoDetails'))}
+              except Exception as e:out[name]={'error':f'{type(e).__name__}: {e}'}
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/innertube-caption-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-innertube-captions.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record Innertube caption test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
