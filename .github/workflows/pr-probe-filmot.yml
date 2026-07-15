@@ -1,0 +1,54 @@
+name: PR probe Filmot timestamps
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser
+        run: pip install requests beautifulsoup4
+      - name: Query subtitle index
+        run: |
+          python <<'PY'
+          import json,re,urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          queries=[
+            'I did not have sexual relations with that woman',
+            'I have no inclination where they are',
+            'Intruders tied me up and attacked my parents',
+            'A humpback whale had me inside its mouth and spit me back out',
+          ]
+          s=requests.Session();s.headers.update({'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/138 Safari/537.36','Accept-Language':'en-US,en;q=0.9'})
+          out={}
+          for q in queries:
+            url='https://filmot.com/search/'+urllib.parse.quote(q,safe='')+'/1/1?gridView=1'
+            row={'url':url}
+            try:
+              r=s.get(url,timeout=45,allow_redirects=True);row['status']=r.status_code;row['finalUrl']=r.url;row['length']=len(r.content);row['headers']=dict(r.headers)
+              html=r.text;row['preview']=html[:50000]
+              soup=BeautifulSoup(html,'html.parser');cards=[]
+              for card in soup.find_all('div',id=lambda x:x and x.startswith('vcard')):
+                full=card.find('a',class_='fullpagelnk');vid=full.get('vid') if full else None
+                links=[{'text':a.get_text(' ',strip=True),'href':a.get('href'),'class':a.get('class')} for a in card.find_all('a',href=True)]
+                cards.append({'id':card.get('id'),'idx':card.get('idx'),'videoId':vid,'text':card.get_text(' ',strip=True)[:5000],'links':links})
+              row['cards']=cards
+              row['timestampLinks']=[{'href':a.get('href'),'text':a.get_text(' ',strip=True)} for a in soup.find_all('a',href=True) if re.search(r'(?:[?&](?:t|start)=\d+|youtu\.be/.+\?t=\d+)',a.get('href',''))][:100]
+            except Exception as e:row['error']=f'{type(e).__name__}: {e}'
+            out[q]=row
+          Path('probe-output').mkdir(exist_ok=True);Path('probe-output/filmot.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: filmot-probe-result
+          path: probe-output/filmot.json
+          retention-days: 1
