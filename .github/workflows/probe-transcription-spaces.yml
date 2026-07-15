@@ -1,0 +1,64 @@
+name: Probe public transcription spaces
+
+on:
+  push:
+    paths:
+      - .github/workflows/probe-transcription-spaces.yml
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe space runtimes and APIs
+        run: |
+          python <<'PY'
+          import json,re,urllib.parse,urllib.request
+          from pathlib import Path
+          spaces=json.loads(Path('audit/public-transcription-spaces.json').read_text())
+          ids=[x['id'] for x in spaces if x.get('id') and x.get('sdk') in ('gradio','docker',None)][:45]
+          out=[]
+          def get(url,timeout=25):
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json,text/plain,*/*'})
+              with urllib.request.urlopen(req,timeout=timeout) as r:return r.status,r.headers.get('content-type'),r.read()
+          for i,sid in enumerate(ids,1):
+              row={'id':sid}
+              try:
+                  status,ct,raw=get('https://huggingface.co/api/spaces/'+urllib.parse.quote(sid,safe='/'))
+                  meta=json.loads(raw); row['apiStatus']=status; row['runtime']=meta.get('runtime'); row['sdk']=meta.get('sdk'); row['host']=meta.get('host') or (meta.get('runtime') or {}).get('host'); row['sha']=meta.get('sha')
+              except Exception as e:row['metaError']=f'{type(e).__name__}: {e}'
+              host=row.get('host')
+              if not host:
+                  owner,name=sid.split('/',1); host=(owner+'-'+name).lower().replace('_','-').replace('.','-')+'.hf.space'
+              if not host.startswith('http'):host='https://'+host
+              row['resolvedHost']=host
+              for path in ['/gradio_api/info','/info','/config']:
+                  try:
+                      status,ct,raw=get(host+path,timeout=35); text=raw.decode('utf-8','replace'); row[path]={'status':status,'contentType':ct,'length':len(raw),'preview':text[:3000]}
+                      if status==200 and ('named_endpoints' in text or 'dependencies' in text):break
+                  except Exception as e:row[path]={'error':f'{type(e).__name__}: {e}'}
+              try:
+                  status,ct,raw=get('https://huggingface.co/spaces/'+sid+'/resolve/main/app.py',timeout=25); row['appPy']={'status':status,'length':len(raw),'preview':raw.decode('utf-8','replace')[:12000]}
+              except Exception as e:row['appPy']={'error':f'{type(e).__name__}: {e}'}
+              out.append(row); print(f'[{i}/{len(ids)}] {sid} host={host} runtime={row.get("runtime")}')
+          Path('audit/usable-transcription-spaces.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit results
+        run: |
+          rm .github/workflows/probe-transcription-spaces.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record transcription space probes"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
