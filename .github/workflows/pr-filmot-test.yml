@@ -1,4 +1,4 @@
-name: Signed player caption test
+name: Capture all statement timestamps
 
 on:
   pull_request:
@@ -8,125 +8,351 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install HTTP client
-        run: pip install -U requests
-      - name: Replay YouTube's embedded-player request
+      - name: Install audit tools
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+          pip install -U rapidfuzz
+      - name: Capture timestamped caption tracks through working egress routes
+        shell: bash
+        run: |
+          node <<'JS'
+          const fs = require('fs');
+          const { chromium } = require('playwright');
+
+          function load(path) { return JSON.parse(fs.readFileSync(path, 'utf8')); }
+          function mergeCase(source, override) {
+            if (!override) return source;
+            return { ...source, ...override, media: { ...(source.media || {}), ...(override.media || {}) } };
+          }
+
+          const parts = fs.readdirSync('data/cases')
+            .filter((name) => /^part\d{2}\.json$/.test(name))
+            .sort()
+            .flatMap((name) => load(`data/cases/${name}`));
+          const layers = [
+            load('data/case-overrides.json'),
+            load('data/direct-footage-replacements.json'),
+            load('data/obscure-case-replacements.json'),
+            load('data/english-weird-replacements.json'),
+          ];
+          const cases = parts.map((base) => layers.reduce((claim, layer) => mergeCase(claim, layer[claim.caseNumber]), base));
+
+          const proxyServers = [
+            'http://147.45.60.249:1082',
+            'http://50.205.246.13:80',
+            'http://117.236.124.166:3128',
+            'http://181.39.25.196:8118',
+            'http://118.71.44.153:2080',
+          ];
+          const origin = 'https://falsology.vercel.app';
+          const pending = [...cases];
+          const results = [];
+          const failures = [];
+
+          function parseJson3(payload) {
+            const rows = [];
+            for (const event of payload?.events || []) {
+              const segments = event.segs || [];
+              const text = segments.map((segment) => segment.utf8 || '').join('').replace(/\n/g, ' ').trim();
+              if (!text) continue;
+              const eventStart = Number(event.tStartMs || 0) / 1000;
+              const duration = Number(event.dDurationMs || 0) / 1000;
+              rows.push({
+                text,
+                start: eventStart,
+                duration,
+                words: segments
+                  .filter((segment) => String(segment.utf8 || '').trim())
+                  .map((segment) => ({
+                    text: segment.utf8 || '',
+                    start: eventStart + Number(segment.tOffsetMs || 0) / 1000,
+                    confidence: segment.acAsrConf ?? null,
+                  })),
+              });
+            }
+            return rows;
+          }
+
+          async function captureCase(browser, claim, proxyServer) {
+            const context = await browser.newContext({
+              locale: 'en-US',
+              ignoreHTTPSErrors: true,
+              extraHTTPHeaders: { Referer: `${origin}/play` },
+            });
+            const page = await context.newPage();
+            page.setDefaultTimeout(4500);
+            let captionResolve;
+            const captionPromise = new Promise((resolve) => { captionResolve = resolve; });
+            const timedtext = [];
+            page.on('response', async (response) => {
+              if (!response.url().includes('/api/timedtext')) return;
+              if (!response.url().includes(`v=${claim.media.youtubeId}`)) return;
+              try {
+                const body = await response.text();
+                const record = { url: response.url(), status: response.status(), length: body.length, body };
+                timedtext.push(record);
+                if (body.length > 100) captionResolve(record);
+              } catch (error) {
+                timedtext.push({ url: response.url(), status: response.status(), error: String(error) });
+              }
+            });
+
+            const item = {
+              caseNumber: claim.caseNumber,
+              person: claim.person,
+              claim: claim.claim,
+              transcriptTarget: claim.transcript,
+              verdict: claim.verdict,
+              videoId: claim.media.youtubeId,
+              videoDurationSeconds: claim.media.videoDurationSeconds,
+              proxyServer,
+            };
+
+            try {
+              const params = new URLSearchParams({
+                enablejsapi: '1',
+                cc_load_policy: '1',
+                controls: '1',
+                playsinline: '1',
+                autoplay: '1',
+                mute: '1',
+                hl: 'en',
+                origin,
+              });
+              const embedUrl = `https://www.youtube.com/embed/${claim.media.youtubeId}?${params}`;
+              const navigation = await page.goto(embedUrl, {
+                waitUntil: 'commit',
+                timeout: 24000,
+                referer: `${origin}/play`,
+              });
+              item.navigationStatus = navigation?.status() ?? null;
+
+              let captionResponse = await Promise.race([
+                captionPromise,
+                page.waitForTimeout(6500).then(() => null),
+              ]);
+
+              if (!captionResponse) {
+                for (const selector of ['button[aria-label^="Play"]', '.ytp-large-play-button', '.ytp-cued-thumbnail-overlay', '.ytp-play-button']) {
+                  const button = page.locator(selector).first();
+                  if (!await button.count()) continue;
+                  try { await button.click({ force: true, timeout: 1800 }); item.clicked = selector; break; } catch {}
+                }
+                const subtitleButton = page.locator('.ytp-subtitles-button').first();
+                if (await subtitleButton.count()) {
+                  try { await subtitleButton.click({ force: true, timeout: 1800 }); item.subtitleClicked = true; } catch {}
+                }
+                captionResponse = await Promise.race([
+                  captionPromise,
+                  page.waitForTimeout(6500).then(() => null),
+                ]);
+              }
+
+              item.pageState = await page.evaluate(() => {
+                const video = document.querySelector('video');
+                return {
+                  title: document.title,
+                  bodyText: (document.body?.innerText || '').slice(0, 800),
+                  errorText: document.querySelector('.ytp-error')?.textContent || null,
+                  video: video ? {
+                    readyState: video.readyState,
+                    duration: video.duration,
+                    currentTime: video.currentTime,
+                    paused: video.paused,
+                  } : null,
+                };
+              });
+              item.timedtextRequests = timedtext.map(({ body, ...rest }) => rest);
+
+              const body = captionResponse?.body || timedtext.find((entry) => entry.body?.length > 100)?.body;
+              if (body) {
+                try {
+                  item.captionRows = parseJson3(JSON.parse(body));
+                  item.captionBodyLength = body.length;
+                } catch (error) {
+                  item.captionParseError = String(error);
+                  item.captionRows = [];
+                }
+              } else {
+                item.captionRows = [];
+              }
+              item.success = item.captionRows.length > 0;
+            } catch (error) {
+              item.error = String(error?.stack || error);
+              item.captionRows = [];
+              item.success = false;
+            } finally {
+              await context.close().catch(() => {});
+            }
+            return item;
+          }
+
+          async function worker(proxyServer) {
+            const browser = await chromium.launch({
+              headless: true,
+              proxy: { server: proxyServer },
+              args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'],
+            });
+            try {
+              while (pending.length) {
+                const claim = pending.shift();
+                if (!claim) break;
+                const result = await captureCase(browser, claim, proxyServer);
+                results.push(result);
+                console.log(`${claim.caseNumber} ${result.success ? 'CAPTURED' : 'FAILED'} ${result.captionRows?.length || 0} ${proxyServer}`);
+                if (!result.success) failures.push(claim);
+              }
+            } finally {
+              await browser.close().catch(() => {});
+            }
+          }
+
+          (async () => {
+            await Promise.all(proxyServers.slice(0, 4).map(worker));
+
+            const uniqueFailures = [...new Map(failures.map((claim) => [claim.caseNumber, claim])).values()]
+              .filter((claim) => !results.some((result) => result.caseNumber === claim.caseNumber && result.success));
+
+            if (uniqueFailures.length) {
+              console.log(`Retrying ${uniqueFailures.length} failed cases`);
+              const retryProxies = [...proxyServers].reverse();
+              for (const claim of uniqueFailures) {
+                let resolved = false;
+                for (const proxyServer of retryProxies) {
+                  const browser = await chromium.launch({
+                    headless: true,
+                    proxy: { server: proxyServer },
+                    args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'],
+                  });
+                  const result = await captureCase(browser, claim, proxyServer);
+                  await browser.close().catch(() => {});
+                  results.push({ ...result, retry: true });
+                  console.log(`${claim.caseNumber} RETRY ${result.success ? 'CAPTURED' : 'FAILED'} ${result.captionRows?.length || 0} ${proxyServer}`);
+                  if (result.success) { resolved = true; break; }
+                }
+                if (!resolved) console.log(`${claim.caseNumber} has no usable timestamped caption track`);
+              }
+            }
+
+            const bestByCase = {};
+            for (const result of results) {
+              if (!bestByCase[result.caseNumber] || (result.success && !bestByCase[result.caseNumber].success)) {
+                bestByCase[result.caseNumber] = result;
+              }
+            }
+            const finalResults = Object.values(bestByCase).sort((a, b) => a.caseNumber.localeCompare(b.caseNumber));
+            fs.mkdirSync('timestamp-audit', { recursive: true });
+            fs.writeFileSync('timestamp-audit/all-caption-tracks.json', JSON.stringify({ capturedAt: '2026-07-15', cases: finalResults }, null, 2));
+            console.log(`Captured ${finalResults.filter((item) => item.success).length}/50 caption tracks`);
+          })().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+          JS
+      - name: Match each displayed statement against its caption track
         shell: bash
         run: |
           python <<'PY'
-          import json,re
+          import html
+          import json
+          import re
           from pathlib import Path
-          import requests
+          from rapidfuzz import fuzz
 
-          proxies=['34.43.46.91:443','147.45.60.249:1082','50.205.246.13:80','146.190.60.147:8003','117.236.124.166:3128','117.7.81.125:2027']
-          video_id='3MuPWV5cTio'
-          origin='https://falsology.vercel.app'
-          embed_url=f'https://www.youtube.com/embed/{video_id}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en&origin=https%3A%2F%2Ffalsology.vercel.app'
-          user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
+          payload = json.loads(Path('timestamp-audit/all-caption-tracks.json').read_text())
 
-          def balanced_object(text,start):
-            depth=0;inside=False;escaped=False
-            for index in range(start,len(text)):
-              char=text[index]
-              if escaped:escaped=False;continue
-              if inside:
-                if char=='\\':escaped=True
-                elif char=='"':inside=False
-                continue
-              if char=='"':inside=True
-              elif char=='{':depth+=1
-              elif char=='}':
-                depth-=1
-                if depth==0:return text[start:index+1]
-            return None
+          def normalize(text):
+              text = html.unescape(text or '').lower().replace('’', "'")
+              replacements = [
+                  (r'\bi am\b', "i'm"), (r'\bdid not\b', "didn't"),
+                  (r'\bdo not\b', "don't"), (r'\bwas not\b', "wasn't"),
+                  (r'\bcould not\b', "couldn't"), (r'\bthey are\b', "they're"),
+                  (r'\bwe are\b', "we're"), (r'\bi have\b', "i've"),
+              ]
+              for pattern, replacement in replacements:
+                  text = re.sub(pattern, replacement, text)
+              return re.sub(r'\s+', ' ', re.sub(r"[^a-z0-9']+", ' ', text)).strip()
 
-          def extract_ytcfg(text):
-            merged={};cursor=0
-            while True:
-              position=text.find('ytcfg.set(',cursor)
-              if position<0:break
-              start=text.find('{',position)
-              raw=balanced_object(text,start) if start>=0 else None
-              if raw:
-                try:merged.update(json.loads(raw))
-                except Exception:pass
-                cursor=start+len(raw)
-              else:cursor=position+10
-            return merged
+          def phrase_score(target, candidate):
+              return max(
+                  fuzz.ratio(target, candidate),
+                  fuzz.partial_ratio(target, candidate),
+                  fuzz.token_set_ratio(target, candidate),
+                  fuzz.token_sort_ratio(target, candidate),
+                  fuzz.WRatio(target, candidate),
+              )
 
-          def parse_json3(data):
-            rows=[]
-            for event in data.get('events',[]):
-              text=''.join(segment.get('utf8','') for segment in event.get('segs',[])).replace('\n',' ').strip()
-              if text:rows.append({'text':text,'start':event.get('tStartMs',0)/1000,'duration':event.get('dDurationMs',0)/1000})
-            return rows
+          def find_matches(case):
+              rows = case.get('captionRows') or []
+              targets = [normalize(case.get('claim')), normalize(case.get('transcriptTarget'))]
+              targets = [target for target in targets if target]
+              matches = []
+              for start_index in range(len(rows)):
+                  combined = ''
+                  for end_index in range(start_index, min(len(rows), start_index + 22)):
+                      combined = (combined + ' ' + rows[end_index].get('text', '')).strip()
+                      candidate = normalize(combined)
+                      if not candidate:
+                          continue
+                      raw_score = max(phrase_score(target, candidate) for target in targets)
+                      statement_start = float(rows[start_index].get('start', 0))
+                      statement_end = float(rows[end_index].get('start', 0)) + max(0.4, float(rows[end_index].get('duration', 0) or 0))
+                      span = statement_end - statement_start
+                      adjusted = raw_score - max(0, span - 25) * 0.35 - max(0, end_index - start_index - 12) * 0.5
+                      target_words = set(max(targets, key=len).split()) if targets else set()
+                      candidate_words = set(candidate.split())
+                      coverage = len(target_words & candidate_words) / max(1, len(target_words))
+                      matches.append({
+                          'score': round(adjusted, 2),
+                          'rawScore': round(raw_score, 2),
+                          'wordCoverage': round(coverage, 3),
+                          'statementStartSeconds': round(statement_start, 3),
+                          'statementEndSeconds': round(statement_end, 3),
+                          'matchedText': combined,
+                          'segmentStartIndex': start_index,
+                          'segmentEndIndex': end_index,
+                      })
+              matches.sort(key=lambda item: (item['score'], item['wordCoverage']), reverse=True)
+              return matches[:12]
 
-          report=[]
-          for proxy in proxies:
-            route='http://'+proxy
-            session=requests.Session();session.proxies.update({'http':route,'https':route})
-            headers={'User-Agent':user_agent,'Referer':origin+'/play','Accept-Language':'en-US,en;q=0.9'}
-            item={'proxy':proxy}
-            try:
-              page=session.get(embed_url,headers=headers,timeout=18,verify=True)
-              item['embedStatus']=page.status_code;item['embedLength']=len(page.text)
-              config=extract_ytcfg(page.text)
-              item['configKeys']=sorted(config.keys())
-              key=config.get('INNERTUBE_API_KEY')
-              context=config.get('INNERTUBE_CONTEXT')
-              client_name=config.get('INNERTUBE_CONTEXT_CLIENT_NAME')
-              client_version=config.get('INNERTUBE_CONTEXT_CLIENT_VERSION') or ((context or {}).get('client') or {}).get('clientVersion')
-              visitor=config.get('VISITOR_DATA') or ((context or {}).get('client') or {}).get('visitorData')
-              item['clientName']=client_name;item['clientVersion']=client_version;item['visitorPrefix']=(visitor or '')[:60];item['hasContext']=bool(context);item['hasKey']=bool(key)
-              if not key or not context:raise RuntimeError('Missing embedded client configuration')
-              payload={
-                'context':context,
-                'videoId':video_id,
-                'contentCheckOk':True,
-                'racyCheckOk':True,
-                'playbackContext':{'contentPlaybackContext':{'html5Preference':'HTML5_PREF_WANTS','lactMilliseconds':'-1'}},
-                'thirdParty':{'embedUrl':origin},
-              }
-              request_headers={
-                'User-Agent':user_agent,
-                'Content-Type':'application/json',
-                'Origin':'https://www.youtube.com',
-                'Referer':embed_url,
-                'X-Youtube-Client-Version':str(client_version or ''),
-                'X-Youtube-Client-Name':str(client_name or ''),
-                'X-Goog-Visitor-Id':str(visitor or ''),
-              }
-              player=session.post(f'https://www.youtube.com/youtubei/v1/player?key={key}&prettyPrint=false',headers=request_headers,json=payload,timeout=25,verify=True)
-              item['playerStatus']=player.status_code;item['playerLength']=len(player.text);item['playerPrefix']=player.text[:500]
-              data=player.json() if player.ok else {}
-              item['playabilityStatus']=data.get('playabilityStatus')
-              item['videoDetails']={k:(data.get('videoDetails') or {}).get(k) for k in ['videoId','title','lengthSeconds','author']}
-              item['hasStreamingData']=bool(data.get('streamingData'))
-              tracks=(((data.get('captions') or {}).get('playerCaptionsTracklistRenderer') or {}).get('captionTracks') or [])
-              item['tracks']=[{k:track.get(k) for k in ['languageCode','kind','baseUrl','name']} for track in tracks]
-              english=next((track for track in tracks if (track.get('languageCode') or '').startswith('en')),tracks[0] if tracks else None)
-              if english and english.get('baseUrl'):
-                caption_url=english['baseUrl']+('&' if '?' in english['baseUrl'] else '?')+'fmt=json3'
-                captions=session.get(caption_url,headers={'User-Agent':user_agent,'Referer':embed_url},timeout=25,verify=True)
-                item['captionStatus']=captions.status_code;item['captionLength']=len(captions.text);item['captionPrefix']=captions.text[:500]
-                try:item['captionRows']=parse_json3(captions.json())
-                except Exception:item['captionRows']=[]
-              item['success']=bool(item.get('captionRows') or tracks or data.get('streamingData'))
-            except Exception as error:item['error']=f'{type(error).__name__}: {error}'
-            report.append(item)
-            print(json.dumps({k:item.get(k) for k in ['proxy','embedStatus','playerStatus','playabilityStatus','videoDetails','hasStreamingData','captionStatus','success','error']},indent=2,ensure_ascii=False))
-            if item.get('captionRows'):break
-          Path('signed-player-caption-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+          report = []
+          for case in payload['cases']:
+              matches = find_matches(case) if case.get('success') else []
+              best = matches[0] if matches else None
+              status = 'verified-candidate' if best and best['rawScore'] >= 88 and best['wordCoverage'] >= 0.65 else 'editorial-review'
+              report.append({
+                  'caseNumber': case['caseNumber'],
+                  'person': case['person'],
+                  'verdict': case['verdict'],
+                  'claim': case['claim'],
+                  'videoId': case['videoId'],
+                  'videoDurationSeconds': case.get('videoDurationSeconds'),
+                  'captionCaptured': bool(case.get('success')),
+                  'captionRowCount': len(case.get('captionRows') or []),
+                  'proxyServer': case.get('proxyServer'),
+                  'pageTitle': (case.get('pageState') or {}).get('title'),
+                  'playerError': (case.get('pageState') or {}).get('errorText'),
+                  'status': status,
+                  'topMatches': matches,
+                  'captureError': case.get('error'),
+              })
+              print(case['caseNumber'], status, best['rawScore'] if best else None, best['statementStartSeconds'] if best else None)
+
+          Path('timestamp-audit/statement-match-report.json').write_text(json.dumps({'cases': report}, indent=2, ensure_ascii=False) + '\n')
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: signed-player-caption-test
-          path: signed-player-caption-test.json
+          name: statement-timestamp-audit
+          path: timestamp-audit/
