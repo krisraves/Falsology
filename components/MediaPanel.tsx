@@ -1,7 +1,15 @@
 import { ClipPlayer } from "@/components/ClipPlayer";
 import type { Claim } from "@/lib/types";
 
-export function MediaPanel({ claim, compact = false }: { claim: Claim; compact?: boolean }) {
+export function MediaPanel({
+  claim,
+  compact = false,
+  onUnavailable,
+}: {
+  claim: Claim;
+  compact?: boolean;
+  onUnavailable?: () => boolean;
+}) {
   const { media } = claim;
 
   return (
@@ -12,6 +20,7 @@ export function MediaPanel({ claim, compact = false }: { claim: Claim; compact?:
         startSeconds={media.startSeconds}
         endSeconds={media.endSeconds}
         sourceUrl={media.url}
+        onUnavailable={onUnavailable}
       />
     </div>
   );
