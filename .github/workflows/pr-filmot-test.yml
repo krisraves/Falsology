@@ -1,4 +1,4 @@
-name: Caption relay test
+name: Timedtext relay test
 
 on:
   pull_request:
@@ -18,73 +18,62 @@ jobs:
           python-version: '3.12'
       - name: Install HTTP client
         run: pip install -U requests
-      - name: Test browser relay caption extraction
+      - name: Inspect timedtext and watch-page metadata
         shell: bash
         run: |
           python <<'PY'
-          import html,json,re
+          import json,re
           from pathlib import Path
           from urllib.parse import quote
           import requests
 
-          videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio']
-          relay_builders={
-            'allorigins':lambda url:f'https://api.allorigins.win/raw?url={quote(url,safe="")}',
-            'corsproxy':lambda url:f'https://corsproxy.io/?{quote(url,safe="")}',
-            'corsproxy-path':lambda url:f'https://corsproxy.io/{url}',
-          }
+          videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio','DbXqiSYDhrA']
+          relay=lambda url:f'https://api.allorigins.win/raw?url={quote(url,safe="")}'
           session=requests.Session();session.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36'})
 
-          def balanced_array(text,start):
-            depth=0;inside=False;escaped=False
-            for index in range(start,len(text)):
-              char=text[index]
-              if escaped:escaped=False;continue
-              if inside:
-                if char=='\\':escaped=True
-                elif char=='"':inside=False
-                continue
-              if char=='"':inside=True
-              elif char=='[':depth+=1
-              elif char==']':
-                depth-=1
-                if depth==0:return text[start:index+1]
-            return None
+          def request(url,timeout=35):
+            response=session.get(relay(url),timeout=timeout)
+            return {'status':response.status_code,'length':len(response.text),'prefix':response.text[:250],'text':response.text}
 
           report={}
           for video_id in videos:
-            report[video_id]=[]
-            watch_url=f'https://www.youtube.com/watch?v={video_id}&hl=en'
-            for relay_name,build in relay_builders.items():
-              item={'relay':relay_name,'watchRelayUrl':build(watch_url)}
+            item={}
+            try:
+              watch=request(f'https://www.youtube.com/watch?v={video_id}&hl=en')
+              text=watch.pop('text');item['watch']=watch
+              item['markers']={
+                'captionTracks':text.find('captionTracks'),
+                'quotedCaptionTracks':text.find('"captionTracks"'),
+                'escapedCaptionTracks':text.find('\\"captionTracks\\"'),
+                'playerResponse':text.find('ytInitialPlayerResponse'),
+                'playabilityStatus':text.find('playabilityStatus'),
+              }
+              for marker_name,position in item['markers'].items():
+                if position>=0:item[f'{marker_name}Context']=text[max(0,position-180):position+500]
+            except Exception as error:item['watchError']=f'{type(error).__name__}: {error}'
+
+            urls={
+              'list':f'https://www.youtube.com/api/timedtext?type=list&v={video_id}',
+              'en-json3':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&fmt=json3',
+              'en-asr-json3':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&kind=asr&fmt=json3',
+              'en-xml':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en',
+              'en-asr-xml':f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&kind=asr',
+            }
+            item['timedtext']={}
+            for name,url in urls.items():
               try:
-                response=session.get(build(watch_url),timeout=35)
-                text=response.text
-                item.update({'watchStatus':response.status_code,'watchLength':len(text),'watchPrefix':text[:180],'hasPlayerResponse':'ytInitialPlayerResponse' in text})
-                position=text.find('"captionTracks":')
-                item['captionMarker']=position
-                if position>=0:
-                  bracket=text.find('[',position);raw=balanced_array(text,bracket)
-                  tracks=json.loads(raw) if raw else []
-                  item['trackCount']=len(tracks)
-                  item['tracks']=[{k:t.get(k) for k in ['languageCode','kind','baseUrl']} for t in tracks[:5]]
-                  track=next((t for t in tracks if (t.get('languageCode') or '').startswith('en')),tracks[0] if tracks else None)
-                  if track and track.get('baseUrl'):
-                    caption_url=html.unescape(track['baseUrl'])
-                    caption_url += ('&' if '?' in caption_url else '?')+'fmt=json3'
-                    item['captionUrlPrefix']=caption_url[:200]
-                    caption_response=session.get(build(caption_url),timeout=35)
-                    item.update({'captionStatus':caption_response.status_code,'captionLength':len(caption_response.text),'captionPrefix':caption_response.text[:250]})
-                    try:
-                      payload=caption_response.json();item['eventCount']=len(payload.get('events',[]));item['firstEvents']=payload.get('events',[])[:3]
-                    except Exception:item['eventCount']=0
-              except Exception as error:item['error']=f'{type(error).__name__}: {error}'
-              report[video_id].append(item)
-              if item.get('eventCount'):break
-          Path('relay-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+                result=request(url);text=result.pop('text')
+                result['body']=text[:2000]
+                if name.endswith('json3'):
+                  try:result['eventCount']=len(json.loads(text).get('events',[]))
+                  except Exception:result['eventCount']=0
+                item['timedtext'][name]=result
+              except Exception as error:item['timedtext'][name]={'error':f'{type(error).__name__}: {error}'}
+            report[video_id]=item
+          Path('timedtext-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
           print(json.dumps(report,indent=2,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: relay-test
-          path: relay-test.json
+          name: timedtext-test
+          path: timedtext-test.json
