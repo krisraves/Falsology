@@ -1,4 +1,4 @@
-name: Subtitle index test
+name: Caption relay test
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,52 +18,73 @@ jobs:
           python-version: '3.12'
       - name: Install HTTP client
         run: pip install -U requests
-      - name: Search indexed subtitles
+      - name: Test browser relay caption extraction
         shell: bash
         run: |
           python <<'PY'
-          import json,re,time
+          import html,json,re
           from pathlib import Path
           from urllib.parse import quote
           import requests
 
-          tests=[
-            ('L01','3MuPWV5cTio',"I have no inclination of where they're at right now",'Chris Watts'),
-            ('L04','ez-4b-yQGzg',"I wasn't there when Travis was killed",'Jodi Arias'),
-            ('L11','DbXqiSYDhrA','The Nikola One is fully functioning','Trevor Milton'),
-            ('L16','TM8EXwemnYA','I did not have sexual relations with that woman','Bill Clinton'),
-            ('T21','K7iAlZzVenU','A humpback whale had me inside its mouth and spit me back out','Michael Packard'),
-            ('L09','amHb2UoVZ_g','Intruders tied me up and attacked my parents','Jennifer Pan'),
-          ]
-          session=requests.Session();session.headers.update({'User-Agent':'Mozilla/5.0','Accept':'text/html,application/xhtml+xml'})
-          def parse(text):
-            m=re.search(r'window\.results\s*=\s*(\{.*?\});',text,re.S)
-            if not m:return []
-            try:data=json.loads(m.group(1))
-            except Exception:return []
-            out=[]
-            for value in data.values():
-              vid=value.get('vid')
-              for hit in value.get('hits',[]):
-                out.append({'videoId':vid,'start':hit.get('start'),'duration':hit.get('dur'),'token':hit.get('token'),'contextBefore':hit.get('ctx_before'),'contextAfter':hit.get('ctx_after')})
-            return out
+          videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio']
+          relay_builders={
+            'allorigins':lambda url:f'https://api.allorigins.win/raw?url={quote(url,safe="")}',
+            'corsproxy':lambda url:f'https://corsproxy.io/?{quote(url,safe="")}',
+            'corsproxy-path':lambda url:f'https://corsproxy.io/{url}',
+          }
+          session=requests.Session();session.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36'})
+
+          def balanced_array(text,start):
+            depth=0;inside=False;escaped=False
+            for index in range(start,len(text)):
+              char=text[index]
+              if escaped:escaped=False;continue
+              if inside:
+                if char=='\\':escaped=True
+                elif char=='"':inside=False
+                continue
+              if char=='"':inside=True
+              elif char=='[':depth+=1
+              elif char==']':
+                depth-=1
+                if depth==0:return text[start:index+1]
+            return None
+
           report={}
-          for case,vid,claim,person in tests:
-            queries=[claim,f'{person} {claim}',' '.join([w for w in re.findall(r"[A-Za-z']+",claim) if len(w)>4])]
-            item={'videoId':vid,'claim':claim,'queries':[]}
-            for q in queries:
-              url=f'https://filmot.com/search/{quote(q,safe="")}/1/1?gridView=1'
+          for video_id in videos:
+            report[video_id]=[]
+            watch_url=f'https://www.youtube.com/watch?v={video_id}&hl=en'
+            for relay_name,build in relay_builders.items():
+              item={'relay':relay_name,'watchRelayUrl':build(watch_url)}
               try:
-                r=session.get(url,timeout=25)
-                hits=parse(r.text) if r.ok else []
-                item['queries'].append({'query':q,'status':r.status_code,'length':len(r.text),'matchingVideo':[h for h in hits if h['videoId']==vid],'allHits':hits[:30],'prefix':r.text[:150]})
-              except Exception as e:item['queries'].append({'query':q,'error':f'{type(e).__name__}: {e}'})
-              time.sleep(.5)
-            report[case]=item
-          Path('filmot-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+                response=session.get(build(watch_url),timeout=35)
+                text=response.text
+                item.update({'watchStatus':response.status_code,'watchLength':len(text),'watchPrefix':text[:180],'hasPlayerResponse':'ytInitialPlayerResponse' in text})
+                position=text.find('"captionTracks":')
+                item['captionMarker']=position
+                if position>=0:
+                  bracket=text.find('[',position);raw=balanced_array(text,bracket)
+                  tracks=json.loads(raw) if raw else []
+                  item['trackCount']=len(tracks)
+                  item['tracks']=[{k:t.get(k) for k in ['languageCode','kind','baseUrl']} for t in tracks[:5]]
+                  track=next((t for t in tracks if (t.get('languageCode') or '').startswith('en')),tracks[0] if tracks else None)
+                  if track and track.get('baseUrl'):
+                    caption_url=html.unescape(track['baseUrl'])
+                    caption_url += ('&' if '?' in caption_url else '?')+'fmt=json3'
+                    item['captionUrlPrefix']=caption_url[:200]
+                    caption_response=session.get(build(caption_url),timeout=35)
+                    item.update({'captionStatus':caption_response.status_code,'captionLength':len(caption_response.text),'captionPrefix':caption_response.text[:250]})
+                    try:
+                      payload=caption_response.json();item['eventCount']=len(payload.get('events',[]));item['firstEvents']=payload.get('events',[])[:3]
+                    except Exception:item['eventCount']=0
+              except Exception as error:item['error']=f'{type(error).__name__}: {error}'
+              report[video_id].append(item)
+              if item.get('eventCount'):break
+          Path('relay-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
           print(json.dumps(report,indent=2,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: filmot-test
-          path: filmot-test.json
+          name: relay-test
+          path: relay-test.json
