@@ -7,8 +7,9 @@ const filenames = readdirSync(directory)
   .sort();
 const baseClaims = filenames.flatMap((name) => JSON.parse(readFileSync(join(directory, name), "utf8")));
 const overrides = JSON.parse(readFileSync(resolve("data/case-overrides.json"), "utf8"));
-const claims = baseClaims.map((claim) => {
-  const override = overrides[claim.caseNumber] ?? {};
+const finalReplacements = JSON.parse(readFileSync(resolve("data/direct-footage-replacements.json"), "utf8"));
+
+function applyOverride(claim, override = {}) {
   return {
     ...claim,
     ...override,
@@ -17,7 +18,11 @@ const claims = baseClaims.map((claim) => {
       ...(override.media ?? {}),
     },
   };
-});
+}
+
+const claims = baseClaims.map((claim) =>
+  applyOverride(applyOverride(claim, overrides[claim.caseNumber]), finalReplacements[claim.caseNumber]),
+);
 
 const failures = [];
 const unique = (values) => new Set(values).size === values.length;
@@ -64,7 +69,7 @@ for (const claim of claims) {
   if (!/^([LT])(0[1-9]|1\d|2[0-5])$/.test(claim.caseNumber || "")) {
     failures.push(`${label}: invalid case number.`);
   }
-  if (!Object.hasOwn(overrides, claim.caseNumber)) failures.push(`${label}: missing direct-footage override.`);
+  if (!Object.hasOwn(overrides, claim.caseNumber)) failures.push(`${label}: missing direct-footage review record.`);
   if (media.type !== "youtube" || typeof media.youtubeId !== "string" || media.youtubeId.length !== 11) {
     failures.push(`${label}: every live case must use a YouTube video.`);
   }
@@ -80,7 +85,7 @@ for (const claim of claims) {
     failures.push(`${label}: source duration ${duration} does not cover the clip end ${end}.`);
   }
   if (media.directStatement !== true) failures.push(`${label}: clip must show the named person making the statement.`);
-  if (media.newsPackage !== false) failures.push(`${label}: news packages and narrated reports are not allowed.`);
+  if (media.newsPackage !== false) failures.push(`${label}: anchor narration, reporter packages, montages, and commentary are not allowed inside the playable segment.`);
   if (!allowedSourceKinds.has(media.sourceKind)) failures.push(`${label}: unapproved direct-footage type ${media.sourceKind}.`);
   if (!media.verifiedAt) failures.push(`${label}: missing media verification date.`);
   if (!Array.isArray(claim.signals) || claim.signals.length < 2) failures.push(`${label}: needs at least two evidence signals.`);
@@ -95,4 +100,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Validated ${claims.length} direct spoken-statement cases: ${truths} truth, ${lies} lie, every clip <= 45 seconds, zero news packages.`);
+console.log(`Validated ${claims.length} direct spoken-statement cases: ${truths} truth, ${lies} lie, every clip <= 45 seconds, no reporter-led packages.`);
