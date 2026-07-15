@@ -1,0 +1,97 @@
+name: Collect exact-statement candidates
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-shot-youglish-candidates.yml
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Collect YouGlish video IDs and exact starts
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');const fs=require('fs');const http=require('http');const https=require('https');
+          const manifest=JSON.parse(fs.readFileSync('audit/live-case-manifest.json','utf8'));
+          const port=8768,origin=`http://127.0.0.1:${port}`;
+          const server=http.createServer((req,res)=>{res.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});res.end('<!doctype html><html><body><div id="widget"></div></body></html>')});
+          const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+          function oembed(videoId){return new Promise(resolve=>{const url=`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent('https://www.youtube.com/watch?v='+videoId)}`;https.get(url,{headers:{'User-Agent':'Mozilla/5.0'}},r=>{let body='';r.on('data',d=>body+=d);r.on('end',()=>{try{resolve({status:r.statusCode,...JSON.parse(body)})}catch{resolve({status:r.statusCode,error:body.slice(0,500)})}})}).on('error',e=>resolve({error:String(e)}))})}
+          function decodeCaption(value){try{return decodeURIComponent(String(value||'')).replace(/\[\[\[|\]\]\]/g,'').replace(/\s+/g,' ').trim()}catch{return String(value||'')}}
+          server.listen(port,'127.0.0.1',async()=>{
+            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox','--autoplay-policy=no-user-gesture-required','--enable-unsafe-swiftshader']});
+            const context=await browser.newContext({locale:'en-US',timezoneId:'America/New_York',viewport:{width:1200,height:850},userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36'});
+            await context.addInitScript(()=>{Object.defineProperty(navigator,'webdriver',{get:()=>undefined});Object.defineProperty(navigator,'languages',{get:()=>['en-US','en']});Object.defineProperty(navigator,'plugins',{get:()=>[1,2,3,4,5]})});
+            const output={generatedAt:new Date().toISOString(),cases:[]};
+            for(let caseIndex=0;caseIndex<manifest.length;caseIndex++){
+              const item=manifest[caseIndex];const page=await context.newPage();const result={caseNumber:item.caseNumber,person:item.person,claim:item.claim,currentVideoId:item.videoId,candidates:[],errors:[]};
+              await page.goto(origin,{waitUntil:'domcontentloaded'});
+              await page.evaluate(({query})=>{
+                window.__events=[];window.__done=false;window.__total=0;window.__lastVideo=null;window.__nextTimer=null;
+                const safe=v=>{try{return JSON.parse(JSON.stringify(v))}catch{return String(v)}};
+                const snapshot=()=>({iframes:[...document.querySelectorAll('iframe')].map(f=>f.src),body:document.body.innerText.slice(0,3000)});
+                window.onYouglishAPIReady=function(){
+                  window.__widget=new window.YG.Widget('widget',{width:900,components:8|64|8192,autoStart:0,events:{
+                    onFetchDone:e=>{window.__total=Number(e.totalResult||0);window.__events.push({type:'fetch',event:safe(e),snapshot:snapshot()});if(!window.__total)window.__done=true},
+                    onVideoChange:e=>{window.__lastVideo=e.video;window.__events.push({type:'video',event:safe(e),snapshot:snapshot()})},
+                    onCaptionChange:e=>{
+                      window.__events.push({type:'caption',event:safe(e),snapshot:snapshot()});
+                      clearTimeout(window.__nextTimer);
+                      window.__nextTimer=setTimeout(()=>{
+                        const seen=new Set(window.__events.filter(x=>x.type==='video').map(x=>x.event.video));
+                        if(seen.size>=Math.min(window.__total||1,12))window.__done=true;
+                        else try{window.__widget.next()}catch(err){window.__events.push({type:'next-error',error:String(err)});window.__done=true}
+                      },250);
+                    },
+                    onPlayerReady:e=>window.__events.push({type:'ready',event:safe(e),snapshot:snapshot()}),
+                    onError:e=>window.__events.push({type:'error',event:safe(e),snapshot:snapshot()})
+                  }});
+                  window.__widget.fetch(query,'english');
+                };
+                const script=document.createElement('script');script.src='https://youglish.com/public/emb/widget.js';script.async=true;script.onerror=()=>{window.__events.push({type:'script-error'});window.__done=true};document.head.appendChild(script);
+              },{query:item.claim});
+              const deadline=Date.now()+45000;
+              while(Date.now()<deadline){const state=await page.evaluate(()=>({done:window.__done,events:window.__events,total:window.__total}));if(state.done){break}await sleep(400)}
+              const state=await page.evaluate(()=>({done:window.__done,events:window.__events,total:window.__total,iframes:[...document.querySelectorAll('iframe')].map(f=>f.src)})).catch(e=>({events:[],error:String(e)}));
+              result.totalResult=state.total||0;result.completed=Boolean(state.done);if(state.error)result.errors.push(state.error);
+              const videoEvents=(state.events||[]).filter(e=>e.type==='video');const captionEvents=(state.events||[]).filter(e=>e.type==='caption');
+              for(let i=0;i<videoEvents.length;i++){
+                const video=videoEvents[i];const videoId=video.event?.video;const trackNumber=video.event?.trackNumber;const laterCaptions=captionEvents.filter(c=>Number(c.event?.id)>0);
+                const caption=laterCaptions[i]||captionEvents.find(c=>c.event?.current_time!==undefined)||null;
+                const iframeList=[...(video.snapshot?.iframes||[]),...((caption&&caption.snapshot?.iframes)||[])];
+                const iframe=iframeList.find(src=>src.includes(`/embed/${videoId}`))||iframeList.find(src=>src.includes('youtube.com/embed/'))||'';
+                const parsed=iframe?new URL(iframe):null;const start=parsed?Number(parsed.searchParams.get('start')||0):null;
+                if(!videoId||result.candidates.some(x=>x.videoId===videoId))continue;
+                result.candidates.push({videoId,trackNumber,startSeconds:Number.isFinite(start)?start:null,caption:decodeCaption(caption?.event?.caption),captionCurrentTime:caption?.event?.current_time,iframeUrl:iframe});
+              }
+              for(const candidate of result.candidates){candidate.oembed=await oembed(candidate.videoId)}
+              result.rawEventTypes=(state.events||[]).map(e=>e.type);output.cases.push(result);console.log(`[${String(caseIndex+1).padStart(2,'0')}/50] ${item.caseNumber} total=${result.totalResult} candidates=${result.candidates.length}`);await page.close();await sleep(150);
+            }
+            await context.close();await browser.close();server.close();fs.mkdirSync('audit',{recursive:true});fs.writeFileSync('audit/youglish-statement-candidates.json',JSON.stringify(output,null,2));
+          });
+          NODE
+      - name: Commit candidates and remove workflow
+        run: |
+          rm .github/workflows/one-shot-youglish-candidates.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record exact-statement video candidates"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
