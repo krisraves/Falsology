@@ -1,4 +1,4 @@
-name: Audit statement times through caption proxies
+name: Audit statement times through working caption proxies
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,86 +22,90 @@ jobs:
           python-version: '3.12'
       - name: Install caption tools
         run: pip install -U requests rapidfuzz webvtt-py
-      - name: Fetch proxy captions and locate claims
+      - name: Find working proxies and locate statements
         run: |
           python <<'PY'
           import concurrent.futures, io, json, re, time
           from pathlib import Path
+          from urllib.parse import urljoin
           import requests, webvtt
           from rapidfuzz import fuzz
 
-          S=requests.Session(); S.headers.update({'User-Agent':'Mozilla/5.0 Falsology timestamp audit'})
+          S=requests.Session(); S.headers.update({'User-Agent':'Mozilla/5.0 (compatible; FalsologyTimestampAudit/1.0)'})
           STOP={'a','an','and','are','as','at','be','been','but','by','for','from','had','has','have','he','her','hers','him','his','i','in','is','it','its','me','my','of','on','or','our','she','that','the','their','them','they','this','to','was','we','were','with','you','your'}
           def norm(text):
               text=(text or '').lower().replace('’',"'")
               text=re.sub(r"[^a-z0-9' ]+",' ',text)
               return re.sub(r'\s+',' ',text).strip()
           def words(text): return [w for w in norm(text).split() if w not in STOP and len(w)>2]
-          def ts(value):
-              parts=value.replace(',','.').split(':'); parts=[float(x) for x in parts]
-              if len(parts)==3:return parts[0]*3600+parts[1]*60+parts[2]
-              return parts[0]*60+parts[1]
+          def sec(value):
+              p=[float(x) for x in value.replace(',','.').split(':')]
+              return p[0]*3600+p[1]*60+p[2] if len(p)==3 else p[0]*60+p[1]
           def parse_vtt(text):
               try:
-                  return [{'text':c.text,'start':ts(c.start),'duration':max(.1,ts(c.end)-ts(c.start))} for c in webvtt.read_buffer(io.StringIO(text))]
+                  return [{'text':c.text.replace('\n',' '),'start':sec(c.start),'duration':max(.1,sec(c.end)-sec(c.start))} for c in webvtt.read_buffer(io.StringIO(text))]
               except Exception:return []
           def match(items,target):
-              target_n=norm(target); target_words=words(target); best=None
+              target_n=norm(target); tw=words(target); best=None
               for i in range(len(items)):
-                  text=[]; start=items[i]['start']; end=start
-                  for j in range(i,min(len(items),i+16)):
-                      text.append(items[j]['text']); end=items[j]['start']+items[j]['duration']
-                      if end-start>40:break
-                      candidate=' '.join(text); cw=set(words(candidate)); recall=sum(w in cw for w in target_words)/max(1,len(target_words))
-                      score=.42*fuzz.token_set_ratio(target_n,norm(candidate))+.38*fuzz.partial_ratio(target_n,norm(candidate))+20*recall
+                  chunks=[]; start=items[i]['start']; end=start
+                  for j in range(i,min(len(items),i+18)):
+                      chunks.append(items[j]['text']); end=items[j]['start']+items[j]['duration']
+                      if end-start>35: break
+                      candidate=' '.join(chunks); cw=set(words(candidate)); recall=sum(w in cw for w in tw)/max(1,len(tw))
+                      score=.44*fuzz.token_set_ratio(target_n,norm(candidate))+.36*fuzz.partial_ratio(target_n,norm(candidate))+20*recall
                       row={'statementStart':round(start,2),'statementEnd':round(end,2),'matchedText':candidate,'score':round(score,1),'contentRecall':round(recall,2)}
                       if best is None or row['score']>best['score']:best=row
               return best
 
-          report=json.loads(Path('audit/exact-statement-times.json').read_text())
+          def invidious_fetch(base,vid):
+              r=S.get(f'{base}/api/v1/captions/{vid}',timeout=8); r.raise_for_status(); data=r.json(); caps=data.get('captions',[]) if isinstance(data,dict) else data
+              en=[c for c in caps if str(c.get('languageCode','')).lower().startswith('en') or 'english' in str(c.get('label','')).lower()]
+              if not en:return None
+              u=en[0].get('url'); u=urljoin(base,u)
+              t=S.get(u,timeout=10); t.raise_for_status(); items=parse_vtt(t.text)
+              return items or None
+          def piped_fetch(base,vid):
+              r=S.get(f'{base}/streams/{vid}',timeout=10); r.raise_for_status(); data=r.json(); caps=data.get('subtitles') or []
+              en=[c for c in caps if str(c.get('code','')).lower().startswith('en') or 'english' in str(c.get('name','')).lower()]
+              if not en:return None
+              t=S.get(en[0]['url'],timeout=10); t.raise_for_status(); items=parse_vtt(t.text)
+              return items or None
 
-          invidious=[]
+          inv=[]
           try:
-              data=S.get('https://instances.invidious.io/instances.json',timeout=20).json()
-              for domain,meta in data:
-                  if meta.get('api') and meta.get('type')=='https': invidious.append('https://'+domain)
-          except Exception: pass
-          invidious += ['https://yewtu.be','https://invidious.nerdvpn.de','https://inv.nadeko.net','https://invidious.private.coffee','https://inv.us.projectsegfau.lt','https://invidious.jing.rocks','https://invidious.materialio.us']
-          invidious=list(dict.fromkeys(invidious))[:40]
+              for domain,meta in S.get('https://instances.invidious.io/instances.json',timeout=15).json():
+                  if meta.get('api') and meta.get('type')=='https':inv.append('https://'+domain)
+          except Exception:pass
+          inv += ['https://yewtu.be','https://inv.nadeko.net','https://invidious.private.coffee','https://inv.us.projectsegfau.lt','https://invidious.jing.rocks','https://invidious.nerdvpn.de']
+          inv=list(dict.fromkeys(inv))[:35]
           piped=['https://pipedapi.kavin.rocks','https://pipedapi.adminforge.de','https://pipedapi.reallyaweso.me','https://pipedapi.leptons.xyz','https://pipedapi.darkness.services','https://pipedapi.r4fo.com']
 
-          def via_invidious(base,vid):
-              r=S.get(f'{base}/api/v1/captions/{vid}',timeout=10); r.raise_for_status(); caps=r.json()
-              english=[c for c in caps if str(c.get('languageCode','')).lower().startswith('en') or 'english' in str(c.get('label','')).lower()]
-              if not english:return None
-              url=english[0].get('url'); url=url if url.startswith('http') else base+url
-              t=S.get(url,timeout=15); t.raise_for_status(); items=parse_vtt(t.text)
-              return (items,base,'invidious') if items else None
-          def via_piped(base,vid):
-              r=S.get(f'{base}/streams/{vid}',timeout=15); r.raise_for_status(); data=r.json(); caps=data.get('subtitles') or []
-              english=[c for c in caps if str(c.get('code','')).lower().startswith('en') or 'english' in str(c.get('name','')).lower()]
-              if not english:return None
-              t=S.get(english[0]['url'],timeout=15); t.raise_for_status(); items=parse_vtt(t.text)
-              return (items,base,'piped') if items else None
+          probe='3MuPWV5cTio'
+          candidates=[('invidious',x) for x in inv]+[('piped',x) for x in piped]
+          working=[]
+          def probe_one(item):
+              kind,base=item
+              try:
+                  data=(invidious_fetch if kind=='invidious' else piped_fetch)(base,probe)
+                  return (kind,base) if data else None
+              except Exception:return None
+          with concurrent.futures.ThreadPoolExecutor(max_workers=16) as ex:
+              for result in ex.map(probe_one,candidates):
+                  if result:working.append(result)
+          print('Working caption proxies:',working)
 
-          def fetch_any(vid):
-              candidates=[('i',x) for x in invidious]+[('p',x) for x in piped]
-              with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
-                  futures={ex.submit(via_invidious if kind=='i' else via_piped,base,vid):(kind,base) for kind,base in candidates}
-                  for future in concurrent.futures.as_completed(futures):
-                      try:
-                          result=future.result()
-                          if result:
-                              for f in futures:f.cancel()
-                              return result
-                      except Exception:pass
-              return None
-
+          report=json.loads(Path('audit/exact-statement-times.json').read_text())
           recovered=0
           for idx,row in enumerate(report['cases'],1):
-              result=fetch_any(row['videoId'])
-              if result:
-                  items,base,kind=result; best=match(items,row['claim']); row['proxyCaptionAvailable']=True; row['proxySource']=base; row['proxyType']=kind; row['bestMatch']=best
+              items=None; used=None
+              for kind,base in working:
+                  try:
+                      items=(invidious_fetch if kind=='invidious' else piped_fetch)(base,row['videoId'])
+                      if items:used=(kind,base);break
+                  except Exception:continue
+              if items:
+                  best=match(items,row['claim']); row['proxyCaptionAvailable']=True; row['proxyType']=used[0]; row['proxySource']=used[1]; row['bestMatch']=best
                   row['accepted']=bool(best and best['score']>=72 and best['contentRecall']>=.45)
                   recovered+=1
               else:
@@ -110,7 +114,8 @@ jobs:
 
           Path('audit/exact-statement-times.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
           accepted=sum(1 for row in report['cases'] if row.get('accepted'))
-          Path('audit/exact-statement-summary.md').write_text(f'# Exact statement timestamp audit\n\nProxy captions recovered: **{recovered}/50**  \nAutomatically accepted matches: **{accepted}/50**\n')
+          Path('audit/exact-statement-summary.md').write_text(f'# Exact statement timestamp audit\n\nWorking caption proxies: **{len(working)}**  \nProxy captions recovered: **{recovered}/50**  \nAutomatically accepted matches: **{accepted}/50**\n')
+          Path('audit/working-caption-proxies.json').write_text(json.dumps(working,indent=2)+'\n')
           PY
       - name: Commit proxy audit
         run: |
@@ -118,5 +123,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Record proxy caption timestamp audit"
+          git commit -m "Record working-proxy timestamp audit"
+          git pull --rebase origin exact-statement-windows
           git push origin exact-statement-windows
