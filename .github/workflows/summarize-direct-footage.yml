@@ -1,0 +1,44 @@
+name: Summarize direct footage audit
+
+on:
+  push:
+    paths:
+      - .github/workflows/summarize-direct-footage.yml
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: direct-footage-audit
+          fetch-depth: 0
+      - name: Build compact audit summary
+        run: |
+          python <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('audit/direct-footage-report.json').read_text())
+          lines=['# Direct footage audit summary','']
+          for case in data['cases']:
+              current=case['current']
+              lines.append(f"## {case['caseNumber']} — {case['person']} — {case['verdict'].upper()}")
+              lines.append(f"Claim: {case['claim']}")
+              lines.append(f"Current: `{current['videoId']}` — {current.get('title') or 'UNKNOWN'} — {current.get('channel') or 'UNKNOWN'} — {current.get('clipSeconds')}s — newsFlag={current.get('newsFlag')}")
+              lines.append('Top candidates:')
+              for c in case.get('candidates',[])[:5]:
+                  lines.append(f"- `{c.get('videoId')}` — {c.get('title')} — {c.get('channel') or c.get('uploader')} — {c.get('duration')}s — score {c.get('score')}")
+              lines.append('')
+          Path('audit/direct-footage-summary.md').write_text('\n'.join(lines)+'\n')
+          PY
+      - name: Commit summary
+        run: |
+          rm .github/workflows/summarize-direct-footage.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Summarize direct-footage audit"
+          git push origin direct-footage-audit
