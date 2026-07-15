@@ -1,4 +1,4 @@
-name: Parallel statement timestamp capture
+name: Search captioned statement sources
 
 on:
   pull_request:
@@ -8,43 +8,102 @@ permissions:
   contents: read
 
 jobs:
-  audit:
+  research:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install audit tools
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install research tools
         run: |
+          pip install -U yt-dlp rapidfuzz
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
-          pip install -U rapidfuzz
-      - name: Capture all caption tracks in parallel
+      - name: Search direct-source candidates
+        shell: bash
+        run: |
+          python <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          queries = {
+            'L03': ['Diane Downs full interview shot my children stranger', 'Diane Downs raw interview denial'],
+            'L04': ["Jodi Arias I wasn't there when Travis was killed interrogation", 'Jodi Arias full police interrogation denial'],
+            'L05': ['Casey Anthony Zenaida nanny police interrogation', 'Casey Anthony full interrogation nanny took Caylee'],
+            'L06': ['Ted Bundy I am innocent full interview', 'Ted Bundy jail interview innocence denial'],
+            'L09': ['Jennifer Pan intruders tied me up police interview', 'Jennifer Pan first full interrogation home invasion'],
+            'L11': ['Trevor Milton Nikola One fully functioning presentation', 'Trevor Milton fully functioning Nikola One direct'],
+            'L13': ['Lance Armstrong I have never doped full interview', 'Lance Armstrong doping denial interview full'],
+            'L14': ['Stephanie Lazarus full interrogation Sherri Rasmussen', 'Stephanie Lazarus did you know Sherri full interview'],
+            'L16': ['Bill Clinton did not have sexual relations full statement', 'Bill Clinton Monica Lewinsky denial full address'],
+            'L17': ['Kenneth Lay Enron company fundamentally strong speech', 'Kenneth Lay employee meeting Enron strong'],
+            'L20': ['Richard Heene it was not a hoax full interview', 'balloon boy father no hoax interview'],
+            'L21': ['Hillary Clinton landed under sniper fire full speech', 'Hillary Clinton Bosnia sniper fire speech full'],
+            'L22': ['Sean Spicer largest audience inauguration full briefing', 'Sean Spicer first press briefing full'],
+            'L25': ['Sherri Papini full FBI interrogation two women kidnapped', 'Sherri Papini full police interview kidnapping story'],
+            'T02': ['Jeffrey Dahmer full direct interview confession victims', 'Jeffrey Dahmer Stone Phillips full interview'],
+            'T03': ['Edmund Kemper full interview killed my mother', 'Ed Kemper direct prison interview mother'],
+            'T04': ['Aileen Wuornos full interview killed seven men', 'Aileen Wuornos direct prison interview confession'],
+            'T05': ['Russell Williams full interrogation confession Jessica Lloyd', 'Russell Williams I killed Jessica confession'],
+            'T06': ['Chris Watts full interrogation confession killed Shanann', 'Chris Watts full unedited confession'],
+            'T07': ['Jodi Arias yes I killed Travis full testimony', 'Jodi Arias direct testimony killed Travis'],
+            'T08': ['Alex Murdaugh I lied about the kennels full testimony', 'Alex Murdaugh admits kennel lie testimony'],
+            'T11': ['Kirk Bloodsworth direct interview DNA exonerated', 'Kirk Bloodsworth innocence project interview'],
+            'T14': ['Jaycee Dugard full direct interview 18 years captive', 'Jaycee Dugard tells captivity story interview'],
+            'T15': ['Mary Vincent direct interview both arms cut off', 'Mary Vincent survivor testimony interview'],
+            'T17': ['Harrison Okene direct interview 60 hours underwater', 'Harrison Okene tells shipwreck story interview'],
+            'T18': ['Ricky Megee direct interview 71 days outback', 'Ricky Megee survivor interview full'],
+            'T19': ['Robert Downey Jr direct interview prison addiction', 'Robert Downey Jr talks prison drugs interview'],
+            'T20': ['Mike Tyson direct interview bit Holyfield ear', 'Mike Tyson explains biting Holyfield full interview'],
+            'T22': ['Sammy Gravano direct interview nineteen murders', 'Sammy Gravano says 19 murders interview'],
+            'T24': ['Michael Morton direct interview DNA innocent 25 years', 'Michael Morton exoneration interview full'],
+          }
+
+          output = {}
+          for case_number, case_queries in queries.items():
+              seen = {}
+              errors = []
+              for query in case_queries:
+                  try:
+                      process = subprocess.run(
+                          ['yt-dlp', '--dump-single-json', '--flat-playlist', '--playlist-end', '10', f'ytsearch10:{query}'],
+                          capture_output=True, text=True, timeout=90, check=True,
+                      )
+                      payload = json.loads(process.stdout)
+                      for item in payload.get('entries') or []:
+                          video_id = item.get('id') or item.get('url')
+                          duration = item.get('duration')
+                          if not video_id or len(video_id) != 11:
+                              continue
+                          if isinstance(duration, (int, float)) and duration < 35:
+                              continue
+                          candidate = {
+                              'videoId': video_id,
+                              'title': item.get('title'),
+                              'channel': item.get('channel') or item.get('uploader'),
+                              'duration': duration,
+                              'viewCount': item.get('view_count'),
+                              'query': query,
+                          }
+                          seen.setdefault(video_id, candidate)
+                  except Exception as error:
+                      errors.append(f'{query}: {type(error).__name__}: {error}')
+              output[case_number] = {'queries': case_queries, 'candidates': list(seen.values())[:12], 'errors': errors}
+              print(case_number, len(output[case_number]['candidates']))
+          Path('candidate-search.json').write_text(json.dumps(output, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Capture captions for replacement candidates
         shell: bash
         run: |
           node <<'JS'
           const fs = require('fs');
           const { chromium } = require('playwright');
-
-          const read = (path) => JSON.parse(fs.readFileSync(path, 'utf8'));
-          const merge = (claim, override) => override
-            ? { ...claim, ...override, media: { ...(claim.media || {}), ...(override.media || {}) } }
-            : claim;
-          const base = fs.readdirSync('data/cases')
-            .filter((name) => /^part\d{2}\.json$/.test(name)).sort()
-            .flatMap((name) => read(`data/cases/${name}`));
-          const layers = [
-            read('data/case-overrides.json'),
-            read('data/direct-footage-replacements.json'),
-            read('data/obscure-case-replacements.json'),
-            read('data/english-weird-replacements.json'),
-          ];
-          const cases = base.map((item) => layers.reduce((claim, layer) => merge(claim, layer[claim.caseNumber]), item));
+          const search = JSON.parse(fs.readFileSync('candidate-search.json', 'utf8'));
           const proxies = [
             'http://147.45.60.249:1082',
             'http://50.205.246.13:80',
@@ -52,6 +111,12 @@ jobs:
             'http://117.236.124.166:3128',
           ];
           const origin = 'https://falsology.vercel.app';
+          const tasks = [];
+          for (const [caseNumber, record] of Object.entries(search)) {
+            for (const candidate of (record.candidates || []).slice(0, 7)) tasks.push({ caseNumber, ...candidate });
+          }
+          let cursor = 0;
+          const results = [];
 
           function parseJson3(payload) {
             const rows = [];
@@ -59,137 +124,71 @@ jobs:
               const segs = event.segs || [];
               const text = segs.map((segment) => segment.utf8 || '').join('').replace(/\n/g, ' ').trim();
               if (!text) continue;
-              const eventStart = Number(event.tStartMs || 0) / 1000;
+              const start = Number(event.tStartMs || 0) / 1000;
               rows.push({
-                text,
-                start: eventStart,
-                duration: Number(event.dDurationMs || 0) / 1000,
+                text, start, duration: Number(event.dDurationMs || 0) / 1000,
                 words: segs.filter((segment) => String(segment.utf8 || '').trim()).map((segment) => ({
-                  text: segment.utf8 || '',
-                  start: eventStart + Number(segment.tOffsetMs || 0) / 1000,
-                  confidence: segment.acAsrConf ?? null,
+                  text: segment.utf8 || '', start: start + Number(segment.tOffsetMs || 0) / 1000,
                 })),
               });
             }
             return rows;
           }
 
-          async function capture(browser, claim, proxy) {
-            const context = await browser.newContext({
-              locale: 'en-US',
-              ignoreHTTPSErrors: true,
-              extraHTTPHeaders: { Referer: `${origin}/play` },
-            });
+          async function capture(browser, task, proxy) {
+            const context = await browser.newContext({ locale: 'en-US', ignoreHTTPSErrors: true, extraHTTPHeaders: { Referer: `${origin}/play` } });
             const page = await context.newPage();
-            page.setDefaultTimeout(3500);
+            page.setDefaultTimeout(3000);
             let resolveCaption;
             const captionPromise = new Promise((resolve) => { resolveCaption = resolve; });
-            const item = {
-              caseNumber: claim.caseNumber,
-              person: claim.person,
-              claim: claim.claim,
-              transcriptTarget: claim.transcript,
-              verdict: claim.verdict,
-              videoId: claim.media.youtubeId,
-              videoDurationSeconds: claim.media.videoDurationSeconds,
-              proxy,
-            };
             page.on('response', async (response) => {
-              if (!response.url().includes('/api/timedtext')) return;
-              if (!response.url().includes(`v=${claim.media.youtubeId}`)) return;
-              try {
-                const body = await response.text();
-                if (body.length > 100) resolveCaption({ body, url: response.url(), status: response.status() });
-              } catch {}
+              if (!response.url().includes('/api/timedtext') || !response.url().includes(`v=${task.videoId}`)) return;
+              try { const body = await response.text(); if (body.length > 100) resolveCaption(body); } catch {}
             });
+            const result = { ...task, proxy };
             try {
-              const params = new URLSearchParams({
-                enablejsapi: '1', cc_load_policy: '1', controls: '1', playsinline: '1',
-                autoplay: '1', mute: '1', hl: 'en', origin,
-              });
-              const response = await page.goto(`https://www.youtube.com/embed/${claim.media.youtubeId}?${params}`, {
-                waitUntil: 'commit', timeout: 18000, referer: `${origin}/play`,
-              });
-              item.navigationStatus = response?.status() ?? null;
-              let caption = await Promise.race([captionPromise, page.waitForTimeout(7000).then(() => null)]);
-              if (!caption) {
-                for (const selector of ['button[aria-label^="Play"]', '.ytp-large-play-button', '.ytp-play-button']) {
-                  const button = page.locator(selector).first();
-                  if (!await button.count()) continue;
-                  try { await button.click({ force: true, timeout: 1200 }); break; } catch {}
-                }
+              const params = new URLSearchParams({ enablejsapi: '1', cc_load_policy: '1', controls: '1', playsinline: '1', autoplay: '1', mute: '1', hl: 'en', origin });
+              const navigation = await page.goto(`https://www.youtube.com/embed/${task.videoId}?${params}`, { waitUntil: 'commit', timeout: 16000, referer: `${origin}/play` });
+              result.navigationStatus = navigation?.status() ?? null;
+              let body = await Promise.race([captionPromise, page.waitForTimeout(6000).then(() => null)]);
+              if (!body) {
+                const play = page.locator('button[aria-label^="Play"], .ytp-large-play-button, .ytp-play-button').first();
+                if (await play.count()) try { await play.click({ force: true, timeout: 1200 }); } catch {}
                 const cc = page.locator('.ytp-subtitles-button').first();
                 if (await cc.count()) try { await cc.click({ force: true, timeout: 1200 }); } catch {}
-                caption = await Promise.race([captionPromise, page.waitForTimeout(5000).then(() => null)]);
+                body = await Promise.race([captionPromise, page.waitForTimeout(4500).then(() => null)]);
               }
-              item.page = await page.evaluate(() => ({
-                title: document.title,
-                errorText: document.querySelector('.ytp-error')?.textContent || null,
-                bodyText: (document.body?.innerText || '').slice(0, 500),
-              }));
-              if (caption) {
-                item.captionUrl = caption.url;
-                item.captionStatus = caption.status;
-                item.captionBodyLength = caption.body.length;
-                item.captionRows = parseJson3(JSON.parse(caption.body));
-              } else item.captionRows = [];
-              item.success = item.captionRows.length > 0;
+              result.pageTitle = await page.title();
+              result.captionRows = body ? parseJson3(JSON.parse(body)) : [];
+              result.success = result.captionRows.length > 0;
             } catch (error) {
-              item.error = String(error?.stack || error);
-              item.captionRows = [];
-              item.success = false;
-            } finally {
-              await context.close().catch(() => {});
-            }
-            return item;
+              result.error = String(error?.stack || error);
+              result.captionRows = [];
+              result.success = false;
+            } finally { await context.close().catch(() => {}); }
+            return result;
           }
 
-          async function runProxy(proxy, assigned) {
-            const browser = await chromium.launch({
-              headless: true,
-              proxy: { server: proxy },
-              args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'],
-            });
-            const results = [];
-            let cursor = 0;
+          async function proxyWorker(proxy) {
+            const browser = await chromium.launch({ headless: true, proxy: { server: proxy }, args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'] });
             async function worker() {
-              while (cursor < assigned.length) {
-                const index = cursor++;
-                const claim = assigned[index];
-                const result = await capture(browser, claim, proxy);
+              while (cursor < tasks.length) {
+                const task = tasks[cursor++];
+                const result = await capture(browser, task, proxy);
                 results.push(result);
-                console.log(`${claim.caseNumber} ${result.success ? 'OK' : 'FAIL'} rows=${result.captionRows?.length || 0} proxy=${proxy}`);
+                console.log(task.caseNumber, task.videoId, result.success ? 'OK' : 'FAIL');
               }
             }
-            await Promise.all(Array.from({ length: 3 }, worker));
+            await Promise.all(Array.from({ length: 4 }, worker));
             await browser.close().catch(() => {});
-            return results;
           }
 
-          (async () => {
-            const groups = proxies.map(() => []);
-            cases.forEach((claim, index) => groups[index % proxies.length].push(claim));
-            const firstPass = (await Promise.all(proxies.map((proxy, index) => runProxy(proxy, groups[index])))).flat();
-            const best = new Map(firstPass.map((item) => [item.caseNumber, item]));
-            const failed = cases.filter((claim) => !best.get(claim.caseNumber)?.success);
-            console.log(`First pass captured ${cases.length - failed.length}/50; retrying ${failed.length}`);
-
-            if (failed.length) {
-              const retryGroups = proxies.map(() => []);
-              failed.forEach((claim, index) => retryGroups[index % proxies.length].push(claim));
-              const retries = (await Promise.all(proxies.map((proxy, index) => runProxy(proxy, retryGroups[(index + 1) % proxies.length])))).flat();
-              for (const item of retries) {
-                if (item.success || !best.get(item.caseNumber)?.success) best.set(item.caseNumber, { ...item, retry: true });
-              }
-            }
-
-            const finalCases = [...best.values()].sort((a, b) => a.caseNumber.localeCompare(b.caseNumber));
-            fs.mkdirSync('timestamp-audit', { recursive: true });
-            fs.writeFileSync('timestamp-audit/all-caption-tracks.json', JSON.stringify({ cases: finalCases }, null, 2));
-            console.log(`Final capture: ${finalCases.filter((item) => item.success).length}/50`);
-          })().catch((error) => { console.error(error); process.exit(1); });
+          Promise.all(proxies.map(proxyWorker)).then(() => {
+            fs.writeFileSync('candidate-captions.json', JSON.stringify(results, null, 2));
+            console.log(`Captured ${results.filter((item) => item.success).length}/${results.length} candidate caption tracks`);
+          }).catch((error) => { console.error(error); process.exit(1); });
           JS
-      - name: Locate the exact spoken phrase
+      - name: Rank captioned candidates by spoken-phrase match
         shell: bash
         run: |
           python <<'PY'
@@ -197,80 +196,65 @@ jobs:
           from pathlib import Path
           from rapidfuzz import fuzz
 
-          data = json.loads(Path('timestamp-audit/all-caption-tracks.json').read_text())
+          def load(path): return json.loads(Path(path).read_text())
+          base = []
+          for path in sorted(Path('data/cases').glob('part*.json')): base.extend(load(path))
+          layers = [load('data/case-overrides.json'), load('data/direct-footage-replacements.json'), load('data/obscure-case-replacements.json'), load('data/english-weird-replacements.json')]
+          def merge(case, override):
+              if not override: return case
+              result = {**case, **override}; result['media'] = {**case.get('media', {}), **override.get('media', {})}; return result
+          cases = {}
+          for case in base:
+              for layer in layers: case = merge(case, layer.get(case['caseNumber']))
+              cases[case['caseNumber']] = case
 
           def normalize(text):
               text = html.unescape(text or '').lower().replace('’', "'")
-              for pattern, replacement in [
-                  (r'\bi am\b', "i'm"), (r'\bdid not\b', "didn't"),
-                  (r'\bdo not\b', "don't"), (r'\bwas not\b', "wasn't"),
-                  (r'\bcould not\b', "couldn't"), (r'\bthey are\b', "they're"),
-                  (r'\bwe are\b', "we're"), (r'\bi have\b', "i've"),
-              ]: text = re.sub(pattern, replacement, text)
+              for pattern, replacement in [(r'\bi am\b', "i'm"), (r'\bdid not\b', "didn't"), (r'\bdo not\b', "don't"), (r'\bwas not\b', "wasn't"), (r'\bthey are\b', "they're"), (r'\bi have\b', "i've")]:
+                  text = re.sub(pattern, replacement, text)
               return re.sub(r'\s+', ' ', re.sub(r"[^a-z0-9']+", ' ', text)).strip()
+          def phrase_score(a, b): return max(fuzz.ratio(a,b), fuzz.partial_ratio(a,b), fuzz.token_set_ratio(a,b), fuzz.token_sort_ratio(a,b), fuzz.WRatio(a,b))
 
-          def score(target, candidate):
-              return max(fuzz.ratio(target, candidate), fuzz.partial_ratio(target, candidate),
-                         fuzz.token_set_ratio(target, candidate), fuzz.token_sort_ratio(target, candidate),
-                         fuzz.WRatio(target, candidate))
-
-          def word_candidates(case):
-              words = []
-              for row in case.get('captionRows') or []:
-                  for word in row.get('words') or []:
-                      token = normalize(word.get('text', ''))
-                      if not token: continue
-                      # Avoid repeated ASR rolling-caption words at an identical timestamp.
-                      record = {'token': token, 'raw': word.get('text', '').strip(), 'start': float(word.get('start', 0))}
-                      if not words or abs(words[-1]['start'] - record['start']) > 0.02 or words[-1]['token'] != token:
-                          words.append(record)
-              for index, word in enumerate(words):
-                  next_start = words[index + 1]['start'] if index + 1 < len(words) else word['start'] + 0.6
-                  word['end'] = max(word['start'] + 0.12, min(word['start'] + 1.5, next_start))
-              return words
-
-          report = []
-          for case in data['cases']:
-              targets = [normalize(case.get('claim')), normalize(case.get('transcriptTarget'))]
+          ranked = {}
+          for candidate in load('candidate-captions.json'):
+              case = cases[candidate['caseNumber']]
+              targets = [normalize(case.get('claim')), normalize(case.get('transcript'))]
               targets = [target for target in targets if target]
-              words = word_candidates(case)
+              words = []
+              for row in candidate.get('captionRows') or []:
+                  for word in row.get('words') or []:
+                      token = normalize(word.get('text'))
+                      if not token: continue
+                      record = {'token': token, 'raw': word.get('text', '').strip(), 'start': float(word.get('start', 0))}
+                      if not words or abs(words[-1]['start'] - record['start']) > .02 or words[-1]['token'] != token: words.append(record)
+              for index, word in enumerate(words):
+                  next_start = words[index + 1]['start'] if index + 1 < len(words) else word['start'] + .6
+                  word['end'] = max(word['start'] + .12, min(word['start'] + 1.5, next_start))
               matches = []
               for start in range(len(words)):
-                  text_tokens = []
-                  for end in range(start, min(len(words), start + 35)):
-                      text_tokens.append(words[end]['token'])
-                      candidate = ' '.join(text_tokens)
-                      raw = max(score(target, candidate) for target in targets) if targets else 0
-                      longest_target = max(targets, key=len) if targets else ''
-                      target_tokens = set(longest_target.split())
-                      coverage = len(target_tokens & set(candidate.split())) / max(1, len(target_tokens))
-                      length_ratio = min(len(candidate.split()), len(longest_target.split())) / max(1, max(len(candidate.split()), len(longest_target.split())))
-                      adjusted = raw + coverage * 12 + length_ratio * 7 - max(0, len(candidate.split()) - len(longest_target.split()) - 4) * 0.7
-                      matches.append({
-                          'score': round(adjusted, 2), 'rawScore': round(raw, 2),
-                          'wordCoverage': round(coverage, 3), 'lengthRatio': round(length_ratio, 3),
-                          'statementStartSeconds': round(words[start]['start'], 3),
-                          'statementEndSeconds': round(words[end]['end'], 3),
-                          'matchedText': ' '.join(word['raw'] for word in words[start:end + 1]),
-                      })
+                  tokens = []
+                  for end in range(start, min(len(words), start + 36)):
+                      tokens.append(words[end]['token']); phrase = ' '.join(tokens)
+                      raw = max(phrase_score(target, phrase) for target in targets) if targets else 0
+                      target = max(targets, key=len) if targets else ''
+                      coverage = len(set(target.split()) & set(phrase.split())) / max(1, len(set(target.split())))
+                      length_ratio = min(len(phrase.split()), len(target.split())) / max(1, max(len(phrase.split()), len(target.split())))
+                      adjusted = raw + coverage * 12 + length_ratio * 7 - max(0, len(phrase.split()) - len(target.split()) - 4) * .7
+                      matches.append({'score': round(adjusted,2), 'rawScore': round(raw,2), 'wordCoverage': round(coverage,3), 'lengthRatio': round(length_ratio,3), 'statementStartSeconds': round(words[start]['start'],3), 'statementEndSeconds': round(words[end]['end'],3), 'matchedText': ' '.join(word['raw'] for word in words[start:end+1])})
               matches.sort(key=lambda item: (item['score'], item['wordCoverage'], item['lengthRatio']), reverse=True)
-              top = matches[:15]
-              best = top[0] if top else None
-              status = 'strong-match' if best and best['rawScore'] >= 86 and best['wordCoverage'] >= 0.62 else 'review-or-replace'
-              report.append({
-                  'caseNumber': case['caseNumber'], 'person': case['person'], 'verdict': case['verdict'],
-                  'claim': case['claim'], 'videoId': case['videoId'],
-                  'videoDurationSeconds': case.get('videoDurationSeconds'),
-                  'captionCaptured': bool(case.get('success')), 'captionRows': len(case.get('captionRows') or []),
-                  'wordCount': len(words), 'status': status, 'topMatches': top,
-                  'page': case.get('page'), 'captureError': case.get('error'),
-              })
-              print(case['caseNumber'], status, best['rawScore'] if best else None,
-                    best['statementStartSeconds'] if best else None, best['matchedText'] if best else '')
-
-          Path('timestamp-audit/statement-match-report.json').write_text(json.dumps({'cases': report}, indent=2, ensure_ascii=False) + '\n')
+              summary = {k:candidate.get(k) for k in ['caseNumber','videoId','title','channel','duration','viewCount','pageTitle','success','error']}
+              summary['topMatches'] = matches[:8]
+              ranked.setdefault(candidate['caseNumber'], []).append(summary)
+          for case_number in ranked:
+              ranked[case_number].sort(key=lambda item: (item['topMatches'][0]['score'] if item['topMatches'] else -1), reverse=True)
+          Path('replacement-candidate-report.json').write_text(json.dumps(ranked, indent=2, ensure_ascii=False) + '\n')
+          for case_number, candidates in sorted(ranked.items()):
+              best = candidates[0] if candidates else {}; match = (best.get('topMatches') or [{}])[0]
+              print(case_number, best.get('videoId'), match.get('rawScore'), match.get('statementStartSeconds'), best.get('title'))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: parallel-statement-timestamp-audit
-          path: timestamp-audit/
+          name: captioned-source-candidates
+          path: |
+            candidate-search.json
+            replacement-candidate-report.json
