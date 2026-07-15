@@ -1,0 +1,74 @@
+[
+  {
+    "client": "WEB",
+    "version": "2.20250701.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxISQ2dOaGMzSVNBbVZ1R2dBJTNEGAEqM2VuZ2FnZW1lbnQtcGFuZWwtc2VhcmNo",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20250701.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxISQ2dOaGMzSVNBbVZ1R2dBJTNEGAEqM2VuZ2FnZW1lbnQtcGFuZWwtc2VhcmNo",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20250701.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxIOQ2dBU0FtVnVHZ0ElM0QYASozZW5nYWdlbWVudC1wYW5lbC1zZWFyY2hhYmxl",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20250701.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxIOQ2dBU0FtVnVHZ0ElM0QYASozZW5nYWdlbWVudC1wYW5lbC1zZWFyY2hhYmxl",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxISQ2dOaGMzSVNBbVZ1R2dBJTNEGAEqM2VuZ2FnZW1lbnQtcGFuZWwtc2VhcmNo",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxISQ2dOaGMzSVNBbVZ1R2dBJTNEGAEqM2VuZ2FnZW1lbnQtcGFuZWwtc2VhcmNo",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxIOQ2dBU0FtVnVHZ0ElM0QYASozZW5nYWdlbWVudC1wYW5lbC1zZWFyY2hhYmxl",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "WEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxIOQ2dBU0FtVnVHZ0ElM0QYASozZW5nYWdlbWVudC1wYW5lbC1zZWFyY2hhYmxl",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "MWEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxISQ2dOaGMzSVNBbVZ1R2dBJTNEGAEqM2VuZ2FnZW1lbnQtcGFuZWwtc2VhcmNo",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "MWEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxISQ2dOaGMzSVNBbVZ1R2dBJTNEGAEqM2VuZ2FnZW1lbnQtcGFuZWwtc2VhcmNo",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "MWEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxIOQ2dBU0FtVnVHZ0ElM0QYASozZW5nYWdlbWVudC1wYW5lbC1zZWFyY2hhYmxl",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  },
+  {
+    "client": "MWEB",
+    "version": "2.20260710.01.00",
+    "paramsPrefix": "CgszTXVQV1Y1Y1RpbxIOQ2dBU0FtVnVHZ0ElM0QYASozZW5nYWdlbWVudC1wYW5lbC1zZWFyY2hhYmxl",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  }
+]
