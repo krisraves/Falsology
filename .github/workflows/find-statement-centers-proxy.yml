@@ -1,0 +1,144 @@
+name: Find statement timestamps through anonymous caption proxies
+
+on:
+  push:
+    paths:
+      - .github/workflows/find-statement-centers-proxy.yml
+
+permissions:
+  contents: write
+
+jobs:
+  locate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: statement-centered-clips
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install tools
+        run: pip install -U youtube-transcript-api requests rapidfuzz
+      - name: Discover working routes and locate statements
+        shell: bash
+        run: |
+          python <<'PY'
+          import html,json,re,threading,time
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          from pathlib import Path
+          import requests
+          from rapidfuzz import fuzz
+          from youtube_transcript_api import YouTubeTranscriptApi
+          from youtube_transcript_api.proxies import GenericProxyConfig
+
+          def load(p):return json.loads(Path(p).read_text())
+          base=[]
+          for p in sorted(Path('data/cases').glob('part*.json')):base.extend(load(p))
+          layers=[load('data/case-overrides.json'),load('data/direct-footage-replacements.json'),load('data/obscure-case-replacements.json'),load('data/english-weird-replacements.json')]
+          def merge(c,o):
+            if not o:return c
+            x={**c,**o};x['media']={**c.get('media',{}),**o.get('media',{})};return x
+          cases=[]
+          for c in base:
+            for layer in layers:c=merge(c,layer.get(c['caseNumber']))
+            cases.append(c)
+
+          proxies=[]
+          sources=[
+            'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt',
+            'https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/http/data.txt',
+            'https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&protocol=http&timeout=7000&country=all&ssl=all&anonymity=all',
+          ]
+          for url in sources:
+            try:
+              r=requests.get(url,timeout=20)
+              if r.ok:
+                for line in r.text.splitlines():
+                  p=line.strip()
+                  p=re.sub(r'^https?://','',p)
+                  if re.fullmatch(r'[A-Za-z0-9.\-]+:\d{2,5}',p):proxies.append(p)
+            except Exception as e:print('proxy source failed',url,e)
+          proxies=list(dict.fromkeys(proxies))[:600]
+          print('candidate proxies',len(proxies))
+
+          test_ids=['K7iAlZzVenU','TM8EXwemnYA','amHb2UoVZ_g']
+          working=[];lock=threading.Lock()
+          def test_proxy(p):
+            url='http://'+p
+            try:
+              api=YouTubeTranscriptApi(proxy_config=GenericProxyConfig(http_url=url,https_url=url))
+              for vid in test_ids:
+                try:
+                  rows=api.fetch(vid,languages=['en','en-US','en-GB'])
+                  if rows:
+                    with lock:
+                      if p not in working:working.append(p)
+                    return p
+                except Exception:continue
+            except Exception:return None
+            return None
+          with ThreadPoolExecutor(max_workers=80) as pool:
+            futures=[pool.submit(test_proxy,p) for p in proxies]
+            for f in as_completed(futures):
+              if f.result():print('working',f.result(),len(working))
+              if len(working)>=12:break
+          print('working routes',working)
+
+          def norm(t):
+            t=html.unescape(t or '').lower().replace('’',"'")
+            for a,b in [(r'\bi am\b',"i'm"),(r'\bdid not\b',"didn't"),(r'\bdo not\b',"don't"),(r'\bwas not\b',"wasn't"),(r'\bthey are\b',"they're")]:t=re.sub(a,b,t)
+            return re.sub(r'\s+',' ',re.sub(r"[^a-z0-9']+",' ',t)).strip()
+          def best(rows,targets):
+            targets=[norm(x) for x in targets if norm(x)];winner=None
+            for i in range(len(rows)):
+              text=''
+              for j in range(i,min(len(rows),i+18)):
+                text=(text+' '+rows[j]['text']).strip();cand=norm(text)
+                raw=max(max(fuzz.ratio(t,cand),fuzz.partial_ratio(t,cand),fuzz.token_set_ratio(t,cand),fuzz.token_sort_ratio(t,cand)) for t in targets)
+                st=rows[i]['start'];en=rows[j]['start']+rows[j]['duration'];span=en-st
+                score=raw-max(0,span-20)*.3-max(0,j-i-10)*.5
+                rec={'score':round(score,2),'rawScore':round(raw,2),'statementStartSeconds':round(st,2),'statementEndSeconds':round(en,2),'matchedText':text}
+                if winner is None or rec['score']>winner['score']:winner=rec
+            return winner
+          def rows_to_dict(transcript):
+            out=[]
+            for x in transcript:
+              if hasattr(x,'text'):out.append({'text':x.text,'start':float(x.start),'duration':float(x.duration)})
+              else:out.append({'text':x['text'],'start':float(x['start']),'duration':float(x['duration'])})
+            return out
+          counter=0;counter_lock=threading.Lock()
+          def fetch_case(c):
+            nonlocal_dummy=None
+            errors=[]
+            routes=working[:] or proxies[:80]
+            for p in routes:
+              url='http://'+p
+              try:
+                api=YouTubeTranscriptApi(proxy_config=GenericProxyConfig(http_url=url,https_url=url))
+                transcript=api.fetch(c['media']['youtubeId'],languages=['en','en-US','en-GB'])
+                rows=rows_to_dict(transcript)
+                if rows:
+                  return {'caseNumber':c['caseNumber'],'person':c['person'],'claim':c['claim'],'verdict':c['verdict'],'videoId':c['media']['youtubeId'],'videoDurationSeconds':c['media'].get('videoDurationSeconds'),'route':p,'transcriptSegments':len(rows),'match':best(rows,[c.get('claim',''),c.get('transcript','')]),'errors':errors}
+              except Exception as e:errors.append(f'{p}:{type(e).__name__}')
+            return {'caseNumber':c['caseNumber'],'person':c['person'],'claim':c['claim'],'verdict':c['verdict'],'videoId':c['media']['youtubeId'],'videoDurationSeconds':c['media'].get('videoDurationSeconds'),'route':None,'transcriptSegments':0,'match':None,'errors':errors[-20:]}
+
+          results=[]
+          with ThreadPoolExecutor(max_workers=10) as pool:
+            fs={pool.submit(fetch_case,c):c for c in cases}
+            for f in as_completed(fs):
+              x=f.result();results.append(x);print(x['caseNumber'],x['route'],x['match']['rawScore'] if x['match'] else None)
+          results.sort(key=lambda x:x['caseNumber'])
+          Path('timestamp-audit').mkdir(exist_ok=True)
+          Path('timestamp-audit/proxy-caption-matches.json').write_text(json.dumps({'workingRoutes':working,'cases':results},indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit report
+        run: |
+          rm .github/workflows/find-statement-centers-proxy.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record proxied caption matches" || exit 0
+          git push origin statement-centered-clips
