@@ -1,4 +1,4 @@
-name: Fast one-video caption diagnostic
+name: Referrer-aware caption diagnostic
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Inspect caption data without awaiting playback
+      - name: Inspect caption data with production referrer
         shell: bash
         run: |
           node <<'JS'
@@ -29,8 +29,12 @@ jobs:
 
           (async () => {
             const videoId = '3MuPWV5cTio';
+            const productionOrigin = 'https://falsology.vercel.app';
             const browser = await chromium.launch({ headless: true, args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'] });
-            const context = await browser.newContext({ locale: 'en-US' });
+            const context = await browser.newContext({
+              locale: 'en-US',
+              extraHTTPHeaders: { Referer: `${productionOrigin}/play` },
+            });
             const page = await context.newPage();
             page.setDefaultTimeout(5000);
             const network = [];
@@ -45,7 +49,19 @@ jobs:
 
             const result = { videoId };
             try {
-              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en`, { waitUntil: 'commit', timeout: 30000 });
+              const params = new URLSearchParams({
+                enablejsapi: '1',
+                cc_load_policy: '1',
+                controls: '1',
+                playsinline: '1',
+                hl: 'en',
+                origin: productionOrigin,
+              });
+              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?${params}`, {
+                waitUntil: 'commit',
+                timeout: 30000,
+                referer: `${productionOrigin}/play`,
+              });
               result.status = response?.status() ?? null;
               await page.waitForTimeout(9000);
               result.prePlay = await page.evaluate(() => {
@@ -92,12 +108,12 @@ jobs:
             } catch (error) {
               result.error = String(error?.stack || error);
             }
-            fs.writeFileSync('fast-caption-diagnostic.json', JSON.stringify(result, null, 2));
+            fs.writeFileSync('referrer-caption-diagnostic.json', JSON.stringify(result, null, 2));
             console.log(JSON.stringify({ status: result.status, prePlay: result.prePlay, video: result.dom?.video, captionsOnScreen: result.dom?.captionsOnScreen, globalCaptions: Boolean(result.dom?.globalCaptions), scriptCount: result.dom?.captionScriptCount, networkCount: result.network?.length, error: result.error }, null, 2));
             await browser.close();
           })().catch((error) => { console.error(error); process.exit(1); });
           JS
       - uses: actions/upload-artifact@v4
         with:
-          name: fast-caption-diagnostic
-          path: fast-caption-diagnostic.json
+          name: referrer-caption-diagnostic
+          path: referrer-caption-diagnostic.json
