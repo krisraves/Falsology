@@ -1,15 +1,22 @@
-name: PR probe Cobalt audio
+name: One-shot Cobalt audio probe
 
 on:
-  pull_request:
-    branches: [main]
+  push:
+    paths:
+      - .github/workflows/pr-probe-cobalt-audio.yml
+
+permissions:
+  contents: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -18,7 +25,7 @@ jobs:
         run: |
           python <<'PY'
           import json, pathlib, requests, time, traceback
-          output=pathlib.Path('probe-output');output.mkdir(exist_ok=True)
+          output=pathlib.Path('audit');output.mkdir(exist_ok=True)
           S=requests.Session();S.headers.update({'User-Agent':'Falsology one-time editorial timestamp audit/1.0','Accept':'application/json'})
           out={'registries':{},'attempts':[]}
           try:
@@ -28,16 +35,11 @@ jobs:
               try:
                 r=S.get(url,timeout=30);data=r.json();serialized=json.dumps(data,default=str)
                 out['registries'][url]={'status':r.status_code,'type':type(data).__name__,'preview':data if len(serialized)<100000 else serialized[:100000]}
-                if isinstance(data,dict) and isinstance(data.get('data'),list):
-                  for item in data['data']:
-                    if not isinstance(item,dict):continue
-                    api=item.get('api') or item.get('url') or item.get('instance')
-                    if api:candidates.append({'api':api,'source':'directory','meta':item})
-                elif isinstance(data,list):
-                  for item in data:
-                    if not isinstance(item,dict):continue
-                    api=item.get('api') or item.get('url') or item.get('instance')
-                    if api:candidates.append({'api':api,'source':'instances','meta':item})
+                rows=data.get('data') if isinstance(data,dict) else data if isinstance(data,list) else []
+                for item in rows or []:
+                  if not isinstance(item,dict):continue
+                  api=item.get('api') or item.get('url') or item.get('instance')
+                  if api:candidates.append({'api':api,'source':url,'meta':item})
               except Exception as e:out['registries'][url]={'error':f'{type(e).__name__}: {e}'}
             seen=set();dedup=[]
             for item in candidates:
@@ -50,10 +52,10 @@ jobs:
               if any(k in text for k in ['success','online','healthy','passed']):value+=3
               if any(k in text for k in ['offline','failed','runtime_error']):value-=4
               return -value
-            dedup.sort(key=score);out['candidateCount']=len(dedup);out['candidates']=[{'api':x['api'],'source':x['source'],'meta':x.get('meta')} for x in dedup[:50]]
+            dedup.sort(key=score);out['candidateCount']=len(dedup);out['candidates']=dedup[:60]
             source='https://www.youtube.com/watch?v=TM8EXwemnYA'
-            for item in dedup[:25]:
-              api=item['api'];row={'api':api,'source':item['source'],'meta':item.get('meta')}
+            for item in dedup[:30]:
+              api=item['api'];row={'api':api,'sourceRegistry':item['source'],'meta':item.get('meta')}
               try:
                 info=S.get(api+'/',timeout=15);row['infoStatus']=info.status_code;row['infoPreview']=info.text[:5000]
                 body={'url':source,'downloadMode':'audio','audioFormat':'mp3','audioBitrate':'64','disableMetadata':True,'alwaysProxy':True}
@@ -66,17 +68,20 @@ jobs:
                 if media_url:
                   media=S.get(media_url,headers={'Range':'bytes=0-2097151'},timeout=60,allow_redirects=True);row['mediaStatus']=media.status_code;row['mediaBytes']=len(media.content);row['mediaType']=media.headers.get('content-type');row['finalMediaUrl']=media.url
                   if media.status_code in (200,206) and len(media.content)>1000:
-                    (output/'audio.bin').write_bytes(media.content);out['success']=row;out['attempts'].append(row);break
+                    pathlib.Path('audit/cobalt-audio-sample.bin').write_bytes(media.content);out['success']=row;out['attempts'].append(row);break
               except Exception as e:row['error']=f'{type(e).__name__}: {e}'
               out['attempts'].append(row);time.sleep(.3)
           except Exception as e:
             out['fatalError']=f'{type(e).__name__}: {e}';out['traceback']=traceback.format_exc()
           finally:
-            (output/'cobalt.json').write_text(json.dumps(out,indent=2,ensure_ascii=False,default=str)+'\n')
+            pathlib.Path('audit/cobalt-audio-probe.json').write_text(json.dumps(out,indent=2,ensure_ascii=False,default=str)+'\n')
           PY
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: cobalt-probe-result
-          path: probe-output/
-          retention-days: 1
+      - name: Commit diagnostics and remove workflow
+        run: |
+          rm .github/workflows/pr-probe-cobalt-audio.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record Cobalt audio probe"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
