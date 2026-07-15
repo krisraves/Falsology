@@ -1,0 +1,123 @@
+name: Audit direct footage
+
+on:
+  push:
+    paths:
+      - .github/workflows/audit-direct-footage.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: direct-footage-audit
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install metadata tools
+        run: pip install -U yt-dlp
+      - name: Audit and search
+        shell: bash
+        run: |
+          python <<'PY'
+          import json, re, subprocess, urllib.parse, urllib.request
+          from pathlib import Path
+
+          cases=[]
+          for path in sorted(Path('data/cases').glob('part*.json')):
+              cases.extend(json.loads(path.read_text()))
+
+          news_terms = {
+              'abc news','abc7','associated press','ap archive','bbc news','bloomberg','cbs','cbs news',
+              'cnbc','cnn','fox news','good morning america','guardian news','inside edition','nbc','newsnation',
+              'new york post','pbs newshour','reuters','sky news','today','usa today','wesh','wcvb','wxyz','wptv',
+              'wplg','wmar','wlwt','denver7','scripps news','the hill','daily mail world','entertainment tonight',
+              'page six','forbes breaking news','yahoo finance','business insider','newsy','local 10','channel 7'
+          }
+          bad_title_terms = {
+              'news report','reports','reporter','breaking news','explained','analysis','breakdown','documentary',
+              'trailer','movie clip','reenactment','reacts','reaction','body language','true crime story','full episode',
+              'what happened','the story of','case update','sentenced','convicted','pleads guilty','trial begins'
+          }
+          direct_terms = {
+              'interrogation','interview','confession','confesses','testimony','testifies','deposition','courtroom',
+              'court footage','parole hearing','press conference','raw','unedited','full interview','jailhouse','prison interview',
+              'police interview','statement','plea hearing','guilty plea','apology','admits','denies','denial'
+          }
+
+          def norm(value): return re.sub(r'[^a-z0-9 ]+',' ',(value or '').lower()).strip()
+          def oembed(video_id):
+              url='https://www.youtube.com/oembed?format=json&url='+urllib.parse.quote('https://www.youtube.com/watch?v='+video_id, safe='')
+              try:
+                  with urllib.request.urlopen(url, timeout=12) as r: return json.load(r)
+              except Exception as e: return {'error':f'{type(e).__name__}: {e}'}
+          def search(q):
+              try:
+                  proc=subprocess.run(['yt-dlp','--dump-single-json','--flat-playlist',f'ytsearch18:{q}'],capture_output=True,text=True,timeout=90,check=True)
+                  data=json.loads(proc.stdout)
+                  return data.get('entries') or []
+              except Exception as e:
+                  return [{'error':f'{type(e).__name__}: {e}'}]
+          def score(entry, person, claim):
+              title=norm(entry.get('title'))
+              channel=norm(entry.get('channel') or entry.get('uploader'))
+              duration=entry.get('duration') or 999999
+              s=0
+              if norm(person) in title: s+=25
+              claim_words=[w for w in norm(claim).split() if len(w)>4]
+              s+=sum(3 for w in claim_words if w in title)
+              s+=sum(5 for t in direct_terms if t in title)
+              if duration<=45: s+=40
+              elif duration<=180: s+=15
+              elif duration<=900: s+=3
+              if any(t in channel for t in news_terms): s-=100
+              if any(t in title for t in bad_title_terms): s-=60
+              if 'shorts' in title: s-=10
+              return s
+
+          output={'rules':{'maxClipSeconds':45,'newsPackagesAllowed':False},'cases':[]}
+          for i,case in enumerate(cases,1):
+              media=case['media']; meta=oembed(media['youtubeId'])
+              author=meta.get('author_name',''); title=meta.get('title','')
+              current_news=any(t in norm(author) for t in news_terms) or any(t in norm(title) for t in bad_title_terms)
+              queries=[
+                  f'"{case["claim"]}" {case["person"]}',
+                  f'{case["person"]} {case["claim"]} interrogation interview confession raw',
+                  f'{case["person"]} direct interview testimony unedited'
+              ]
+              seen={}; errors=[]
+              for q in queries:
+                  for e in search(q):
+                      if e.get('error'): errors.append(e['error']); continue
+                      vid=e.get('id') or e.get('url')
+                      if not vid or len(vid)!=11: continue
+                      e={**e,'videoId':vid,'score':score(e,case['person'],case['claim'])}
+                      if vid not in seen or e['score']>seen[vid]['score']: seen[vid]=e
+              candidates=sorted(seen.values(),key=lambda x:(-x['score'],x.get('duration') or 999999))[:12]
+              output['cases'].append({
+                  'caseNumber':case['caseNumber'],'person':case['person'],'claim':case['claim'],'verdict':case['verdict'],
+                  'current':{'videoId':media['youtubeId'],'start':media['startSeconds'],'end':media['endSeconds'],
+                             'clipSeconds':media['endSeconds']-media['startSeconds'],'title':title,'channel':author,
+                             'newsFlag':current_news,'oembedError':meta.get('error')},
+                  'queries':queries,'candidates':[{k:e.get(k) for k in ['videoId','title','channel','uploader','duration','score','url']} for e in candidates],
+                  'errors':errors[:3]
+              })
+              print(f'[{i:02d}/50] {case["caseNumber"]} current={author} news={current_news} candidates={len(candidates)}')
+
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/direct-footage-report.json').write_text(json.dumps(output,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit audit
+        run: |
+          rm .github/workflows/audit-direct-footage.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record direct-footage audit"
+          git push origin direct-footage-audit
