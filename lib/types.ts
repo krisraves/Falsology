@@ -56,7 +56,6 @@ export type Claim = {
 export type GameAnswer = {
   claimId: string;
   answer: Verdict;
-  confidence: number;
   correct: boolean;
   answeredAt: string;
 };
