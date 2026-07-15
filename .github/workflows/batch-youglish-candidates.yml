@@ -1,0 +1,81 @@
+name: Batch exact-statement candidates
+
+on:
+  push:
+    paths:
+      - .github/workflows/batch-youglish-candidates.yml
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk: [0, 1, 2, 3, 4]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Collect candidate chunk
+        env:
+          CHUNK: ${{ matrix.chunk }}
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');const fs=require('fs');const http=require('http');const https=require('https');
+          const all=JSON.parse(fs.readFileSync('audit/live-case-manifest.json','utf8'));const chunk=Number(process.env.CHUNK);const manifest=all.slice(chunk*10,chunk*10+10);
+          const port=8800+chunk,origin=`http://127.0.0.1:${port}`;const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+          const server=http.createServer((req,res)=>{res.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});res.end('<!doctype html><html><body><div id="widget"></div></body></html>')});
+          function oembed(videoId){return new Promise(resolve=>{const url=`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent('https://www.youtube.com/watch?v='+videoId)}`;https.get(url,{headers:{'User-Agent':'Mozilla/5.0'}},r=>{let b='';r.on('data',d=>b+=d);r.on('end',()=>{try{resolve({status:r.statusCode,...JSON.parse(b)})}catch{resolve({status:r.statusCode,error:b.slice(0,500)})}})}).on('error',e=>resolve({error:String(e)}))})}
+          function decodeCaption(v){try{return decodeURIComponent(String(v||'')).replace(/\[\[\[|\]\]\]/g,'').replace(/\s+/g,' ').trim()}catch{return String(v||'')}}
+          server.listen(port,'127.0.0.1',async()=>{
+            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox','--autoplay-policy=no-user-gesture-required','--enable-unsafe-swiftshader']});
+            const context=await browser.newContext({locale:'en-US',viewport:{width:1100,height:800},userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36'});await context.addInitScript(()=>Object.defineProperty(navigator,'webdriver',{get:()=>undefined}));
+            const output={chunk,generatedAt:new Date().toISOString(),cases:[]};
+            for(let ci=0;ci<manifest.length;ci++){
+              const item=manifest[ci],page=await context.newPage(),result={caseNumber:item.caseNumber,person:item.person,claim:item.claim,currentVideoId:item.videoId,candidates:[],errors:[]};
+              await page.goto(origin);
+              await page.evaluate(query=>{
+                window.__events=[];window.__done=false;window.__total=0;window.__timer=null;
+                const safe=v=>{try{return JSON.parse(JSON.stringify(v))}catch{return String(v)}};const snap=()=>[...document.querySelectorAll('iframe')].map(f=>f.src);
+                window.onYouglishAPIReady=()=>{window.__widget=new window.YG.Widget('widget',{width:850,components:8|64|8192,autoStart:0,events:{
+                  onFetchDone:e=>{window.__total=Number(e.totalResult||0);window.__events.push({type:'fetch',event:safe(e),iframes:snap()});if(!window.__total)window.__done=true},
+                  onVideoChange:e=>window.__events.push({type:'video',event:safe(e),iframes:snap()}),
+                  onCaptionChange:e=>{window.__events.push({type:'caption',event:safe(e),iframes:snap()});clearTimeout(window.__timer);window.__timer=setTimeout(()=>{const n=new Set(window.__events.filter(x=>x.type==='video').map(x=>x.event.video)).size;if(n>=Math.min(window.__total||1,5))window.__done=true;else try{window.__widget.next()}catch(err){window.__events.push({type:'next-error',error:String(err)});window.__done=true}},120)},
+                  onError:e=>window.__events.push({type:'error',event:safe(e),iframes:snap()})
+                }});window.__widget.fetch(query,'english')};
+                const s=document.createElement('script');s.src='https://youglish.com/public/emb/widget.js';s.async=true;s.onerror=()=>{window.__events.push({type:'script-error'});window.__done=true};document.head.appendChild(s);
+              },item.claim);
+              const deadline=Date.now()+15000;while(Date.now()<deadline){const done=await page.evaluate(()=>window.__done);if(done)break;await sleep(250)}
+              const state=await page.evaluate(()=>({done:window.__done,total:window.__total,events:window.__events,iframes:[...document.querySelectorAll('iframe')].map(f=>f.src)})).catch(e=>({events:[],error:String(e)}));result.totalResult=state.total||0;result.completed=!!state.done;if(state.error)result.errors.push(state.error);
+              const events=state.events||[];const videos=events.filter(x=>x.type==='video'),captions=events.filter(x=>x.type==='caption');
+              for(let i=0;i<videos.length;i++){
+                const v=videos[i],videoId=v.event?.video;if(!videoId||result.candidates.some(x=>x.videoId===videoId))continue;const c=captions[i]||captions[captions.length-1];const frames=[...(v.iframes||[]),...((c&&c.iframes)||[]),...(state.iframes||[])];const iframe=frames.find(x=>x.includes(`/embed/${videoId}`))||'';let start=null;try{start=Number(new URL(iframe).searchParams.get('start'))}catch{}result.candidates.push({videoId,trackNumber:v.event?.trackNumber,startSeconds:Number.isFinite(start)?start:null,caption:decodeCaption(c?.event?.caption),iframeUrl:iframe});
+              }
+              for(const c of result.candidates)c.oembed=await oembed(c.videoId);output.cases.push(result);console.log(`[chunk ${chunk} ${ci+1}/10] ${item.caseNumber} total=${result.totalResult} candidates=${result.candidates.length}`);await page.close();await sleep(100);
+            }
+            await context.close();await browser.close();server.close();fs.mkdirSync('audit',{recursive:true});fs.writeFileSync(`audit/youglish-candidates-part-${chunk}.json`,JSON.stringify(output,null,2));
+          });
+          NODE
+      - name: Commit candidate chunk
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "audit/youglish-candidates-part-${{ matrix.chunk }}.json"
+          git commit -m "Record exact-statement candidate chunk ${{ matrix.chunk }}"
+          for try in 1 2 3 4 5; do
+            git pull --rebase origin exact-statement-windows && git push origin exact-statement-windows && exit 0
+            sleep $((try * 3))
+          done
+          exit 1
