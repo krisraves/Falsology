@@ -1,0 +1,49 @@
+name: Summarize usable Whisper spaces
+
+on:
+  push:
+    paths:
+      - .github/workflows/summarize-whisper-spaces.yml
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Create compact summary
+        run: |
+          python <<'PY'
+          import json,re
+          from pathlib import Path
+          rows=[]
+          p=Path('audit/usable-transcription-spaces.json')
+          if p.exists():
+              for x in json.loads(p.read_text()):
+                  text=json.dumps(x).lower()
+                  api_ok=any(isinstance(x.get(k),dict) and x[k].get('status')==200 for k in ['/gradio_api/info','/info','/config'])
+                  app=(x.get('appPy') or {}).get('preview','')
+                  timed=bool(re.search(r'srt|vtt|segment|timestamp|start.*end|return_timestamps',app,re.I))
+                  whisper=bool(re.search(r'whisper|faster_whisper',app,re.I))
+                  youtube=bool(re.search(r'youtube|yt_dlp|pytube',app,re.I))
+                  if api_ok or (whisper and youtube):
+                      rows.append({'id':x.get('id'),'host':x.get('resolvedHost'),'runtime':x.get('runtime'),'apiOk':api_ok,'whisper':whisper,'youtube':youtube,'timed':timed,'appPreview':app[:20000],'apiInfo':{k:x.get(k) for k in ['/gradio_api/info','/info','/config'] if x.get(k)}})
+          Path('audit/usable-whisper-space-summary.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False,default=str)+'\n')
+          PY
+      - name: Commit summary
+        run: |
+          rm .github/workflows/summarize-whisper-spaces.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Summarize usable Whisper spaces"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
