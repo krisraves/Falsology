@@ -8,9 +8,12 @@ import part07 from "@/data/cases/part07.json";
 import part08 from "@/data/cases/part08.json";
 import part09 from "@/data/cases/part09.json";
 import part10 from "@/data/cases/part10.json";
-import type { Claim } from "@/lib/types";
+import rawOverrides from "@/data/case-overrides.json";
+import type { Claim, ClaimMedia } from "@/lib/types";
 
-export const claims = [
+type ClaimOverride = Partial<Omit<Claim, "media">> & { media?: Partial<ClaimMedia> };
+
+const baseClaims = [
   ...part01,
   ...part02,
   ...part03,
@@ -22,6 +25,21 @@ export const claims = [
   ...part09,
   ...part10,
 ] as Claim[];
+
+const overrides = rawOverrides as Record<string, ClaimOverride>;
+
+export const claims = baseClaims.map((claim) => {
+  const override = overrides[claim.caseNumber];
+  if (!override) return claim;
+  return {
+    ...claim,
+    ...override,
+    media: {
+      ...claim.media,
+      ...(override.media ?? {}),
+    },
+  } as Claim;
+});
 
 export function getClaim(slug: string) {
   return claims.find((claim) => claim.slug === slug);
