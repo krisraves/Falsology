@@ -1,0 +1,202 @@
+{
+  "chunk": 2,
+  "generatedAt": "2026-07-15T21:57:37.766Z",
+  "cases": [
+    {
+      "caseNumber": "L21",
+      "person": "Hillary Clinton",
+      "claim": "We landed under sniper fire.",
+      "currentVideoId": "K0neF55UC-4",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L22",
+      "person": "Sean Spicer",
+      "claim": "This was the largest audience ever to witness an inauguration, period.",
+      "currentVideoId": "X2VKQfX5tSE",
+      "candidates": [
+        {
+          "videoId": "6_koveS9n3Y",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "SPICER: This was the largest audience to ever witness an inauguration, period!",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Brett Kavanaugh Is A Terrible Judge, A Liar, and Republicans Don't Care - SOME MORE NEWS",
+            "author_name": "Some More News",
+            "author_url": "https://www.youtube.com/@SMN",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/6_koveS9n3Y/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/6_koveS9n3Y?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Brett Kavanaugh Is A Terrible Judge, A Liar, and Republicans Don&#39;t Care - SOME MORE NEWS\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 4,
+      "completed": false
+    },
+    {
+      "caseNumber": "L23",
+      "person": "Tobacco executives",
+      "claim": "I believe nicotine is not addictive.",
+      "currentVideoId": "jOxVk_DhWes",
+      "candidates": [
+        {
+          "videoId": "DZX582u7Vz4",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I believe nicotine is not addictive I",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Ask Joe Episode 7 - High Fructose Corn Syrup",
+            "author_name": "Joe Scott",
+            "author_url": "https://www.youtube.com/@joescott",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/DZX582u7Vz4/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/DZX582u7Vz4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Ask Joe Episode 7 - High Fructose Corn Syrup\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 2,
+      "completed": false
+    },
+    {
+      "caseNumber": "L24",
+      "person": "Alex Jones",
+      "claim": "Sandy Hook was fake, with actors.",
+      "currentVideoId": "EdwfKrdUW1s",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L25",
+      "person": "Sherri Papini",
+      "claim": "Two women kidnapped and held me captive.",
+      "currentVideoId": "GjjkyscsZR8",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T01",
+      "person": "Dennis Rader",
+      "claim": "I killed ten people.",
+      "currentVideoId": "_yrRC1j7qeo",
+      "candidates": [
+        {
+          "videoId": "IIiZbXZktYk",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I do not think that we should have killed ten thousand people.",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Crash Course US History Outtakes #2",
+            "author_name": "CrashCourse",
+            "author_url": "https://www.youtube.com/@crashcourse",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/IIiZbXZktYk/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/IIiZbXZktYk?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Crash Course US History Outtakes #2\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 1,
+      "completed": true
+    },
+    {
+      "caseNumber": "T02",
+      "person": "Jeffrey Dahmer",
+      "claim": "I killed seventeen people.",
+      "currentVideoId": "RUEnhXunarw",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T03",
+      "person": "Edmund Kemper",
+      "claim": "I killed my mother.",
+      "currentVideoId": "MKK3XDI7wTE",
+      "candidates": [
+        {
+          "videoId": "ZZ1rqunCZNA",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I thought I killed my mother.",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Episode 2: She Never Knew | American Veteran: Unforgettable Stories Podcast | PBS",
+            "author_name": "American Experience | PBS",
+            "author_url": "https://www.youtube.com/@AmericanExperiencePBS",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/ZZ1rqunCZNA/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/ZZ1rqunCZNA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Episode 2: She Never Knew | American Veteran: Unforgettable Stories Podcast | PBS\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 17,
+      "completed": false
+    },
+    {
+      "caseNumber": "T04",
+      "person": "Aileen Wuornos",
+      "claim": "I killed seven men.",
+      "currentVideoId": "ToXjwzwaq3Y",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T05",
+      "person": "Russell Williams",
+      "claim": "I killed Jessica Lloyd.",
+      "currentVideoId": "hzh3adTWZOg",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    }
+  ]
+}
