@@ -1,0 +1,77 @@
+{
+  "L01": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "3MuPWV5cTio",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 487,
+      "url": "https://www.youtube.com/watch?v=3MuPWV5cTio&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L02": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "KPPUHvMyBUs",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 3989,
+      "url": "https://www.youtube.com/watch?v=KPPUHvMyBUs&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L08": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "YzbIhWu0gpQ",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 105,
+      "url": "https://www.youtube.com/watch?v=YzbIhWu0gpQ&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L13": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "25ja7IAxQjY",
+      "startSeconds": 0,
+      "endSeconds": 10,
+      "videoDurationSeconds": 10,
+      "url": "https://www.youtube.com/watch?v=25ja7IAxQjY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T19": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "mFol0tP0pGg",
+      "startSeconds": 0,
+      "endSeconds": 28,
+      "videoDurationSeconds": 28,
+      "url": "https://www.youtube.com/watch?v=mFol0tP0pGg&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  }
+}
