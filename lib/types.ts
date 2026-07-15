@@ -18,6 +18,9 @@ export type ClaimMedia = {
   url: string;
   label: string;
   verifiedAt: string;
+  sourceKind: string;
+  directStatement: true;
+  newsPackage: false;
 };
 
 export type Claim = {
