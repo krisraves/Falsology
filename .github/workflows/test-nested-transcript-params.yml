@@ -1,0 +1,63 @@
+name: Test nested transcript params
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-nested-transcript-params.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test nested protobuf transcript params
+        run: |
+          python <<'PY'
+          import base64,json,urllib.request,urllib.error
+          from pathlib import Path
+          vid='3MuPWV5cTio'
+          def varint(n):
+              out=[]
+              while n>=128:out.append((n&127)|128);n>>=7
+              out.append(n);return bytes(out)
+          def field(num,text):
+              b=text.encode();return bytes([(num<<3)|2])+varint(len(b))+b
+          def nested(kind,lang):
+              inner=base64.b64encode(field(1,kind)+field(2,lang)).decode()
+              return base64.b64encode(field(1,vid)+field(2,inner)).decode()
+          params=[nested(k,l) for k in ['', 'asr'] for l in ['en','en-US','en-GB']]
+          versions=['2.20240826.01.00','2.20250701.01.00','2.20260710.01.00']
+          out=[]
+          for ver in versions:
+            for p in params:
+              body={'context':{'client':{'clientName':'WEB','clientVersion':ver,'hl':'en','gl':'US'}},'params':p}
+              req=urllib.request.Request('https://www.youtube.com/youtubei/v1/get_transcript',data=json.dumps(body).encode(),headers={'Content-Type':'application/json','User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36','X-Youtube-Client-Name':'1','X-Youtube-Client-Version':ver})
+              try:
+                with urllib.request.urlopen(req,timeout=30) as r:text=r.read().decode('utf-8','replace')
+                data=json.loads(text); segs=((((data.get('actions') or [{}])[0].get('updateEngagementPanelAction') or {}).get('content') or {}).get('transcriptRenderer') or {}).get('content',{}).get('transcriptSearchPanelRenderer',{}).get('body',{}).get('transcriptSegmentListRenderer',{}).get('initialSegments',[])
+                out.append({'version':ver,'params':p,'status':r.status,'length':len(text),'segments':len(segs),'preview':segs[:2]})
+              except urllib.error.HTTPError as e:
+                bodytext=e.read().decode('utf-8','replace')
+                out.append({'version':ver,'params':p,'error':f'HTTP {e.code}','body':bodytext[:1000]})
+              except Exception as e:out.append({'version':ver,'params':p,'error':f'{type(e).__name__}: {e}'})
+          Path('audit').mkdir(exist_ok=True);Path('audit/nested-transcript-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-nested-transcript-params.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record nested transcript endpoint test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
