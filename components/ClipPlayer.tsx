@@ -8,7 +8,42 @@ type VideoRange = {
   startSeconds: number;
   endSeconds: number;
   sourceUrl: string;
+  onUnavailable?: () => boolean;
 };
+
+type PlaybackSource = {
+  videoId: string;
+  startSeconds: number;
+  endSeconds: number;
+  sourceUrl: string;
+};
+
+const SOURCE_REPLACEMENTS: Record<string, PlaybackSource[]> = {
+  W259o2tO2pc: [
+    {
+      videoId: "CA-yk8-ALoc",
+      startSeconds: 0,
+      endSeconds: 25,
+      sourceUrl: "https://www.youtube.com/watch?v=CA-yk8-ALoc&t=0s",
+    },
+    {
+      videoId: "bphNcBD663M",
+      startSeconds: 221,
+      endSeconds: 246,
+      sourceUrl: "https://www.youtube.com/watch?v=bphNcBD663M&t=221s",
+    },
+  ],
+};
+
+function buildSourceChain(
+  videoId: string,
+  startSeconds: number,
+  endSeconds: number,
+  sourceUrl: string,
+): PlaybackSource[] {
+  const primary = { videoId, startSeconds, endSeconds, sourceUrl };
+  return [...(SOURCE_REPLACEMENTS[videoId] ?? []), primary];
+}
 
 type VideoIdOptions = {
   videoId: string;
@@ -28,7 +63,7 @@ type YouTubePlayer = {
 
 type PlayerEvent = { target: YouTubePlayer };
 type StateEvent = PlayerEvent & { data: number };
-type ErrorEvent = { data: number };
+type ErrorEvent = PlayerEvent & { data: number };
 
 type YouTubeApi = {
   Player: new (
@@ -96,18 +131,36 @@ function formatTime(seconds: number) {
   return `${minutes}:${String(wholeSeconds % 60).padStart(2, "0")}`;
 }
 
-export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl }: VideoRange) {
+export function ClipPlayer({
+  videoId,
+  title,
+  startSeconds,
+  endSeconds,
+  sourceUrl,
+  onUnavailable,
+}: VideoRange) {
   const reactId = useId();
   const mountRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
+  const sourcesRef = useRef<PlaybackSource[]>(
+    buildSourceChain(videoId, startSeconds, endSeconds, sourceUrl),
+  );
+  const sourceIndexRef = useRef(0);
+  const unavailableNotifiedRef = useRef(false);
+  const onUnavailableRef = useRef(onUnavailable);
+  const [activeSource, setActiveSource] = useState<PlaybackSource>(sourcesRef.current[0]);
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [ended, setEnded] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const duration = Math.max(1, endSeconds - startSeconds);
+  const duration = Math.max(1, activeSource.endSeconds - activeSource.startSeconds);
   const progress = Math.min(100, Math.max(0, (elapsed / duration) * 100));
-  const mountId = `clip-player-${reactId.replace(/:/g, "")}`;
+  const mountId = `clip-player-${reactId.replace(/:/g, "")}-${sourceIndexRef.current}`;
+
+  useEffect(() => {
+    onUnavailableRef.current = onUnavailable;
+  }, [onUnavailable]);
 
   useEffect(() => {
     let cancelled = false;
@@ -117,7 +170,7 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
         if (cancelled || !mountRef.current) return;
 
         playerRef.current = new YT.Player(mountRef.current, {
-          videoId,
+          videoId: activeSource.videoId,
           playerVars: {
             controls: 0,
             disablekb: 1,
@@ -130,28 +183,59 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
           },
           events: {
             onReady: ({ target }) => {
-              target.cueVideoById({ videoId, startSeconds, endSeconds });
+              target.cueVideoById({
+                videoId: activeSource.videoId,
+                startSeconds: activeSource.startSeconds,
+                endSeconds: activeSource.endSeconds,
+              });
               setReady(true);
             },
             onStateChange: ({ data, target }) => {
               setPlaying(data === YT.PlayerState.PLAYING);
               if (data === YT.PlayerState.ENDED) {
-                target.cueVideoById({ videoId, startSeconds, endSeconds });
+                target.cueVideoById({
+                  videoId: activeSource.videoId,
+                  startSeconds: activeSource.startSeconds,
+                  endSeconds: activeSource.endSeconds,
+                });
                 setEnded(true);
                 setElapsed(duration);
               }
             },
-            onError: ({ data }) => {
+            onError: () => {
               setPlaying(false);
-              setError(`This source could not be played (YouTube error ${data}).`);
+              const nextIndex = sourceIndexRef.current + 1;
+              const nextSource = sourcesRef.current[nextIndex];
+
+              if (nextSource) {
+                sourceIndexRef.current = nextIndex;
+                setReady(false);
+                setEnded(false);
+                setElapsed(0);
+                setError(null);
+                setActiveSource(nextSource);
+                return;
+              }
+
+              if (!unavailableNotifiedRef.current) {
+                unavailableNotifiedRef.current = true;
+                const handled = onUnavailableRef.current?.() ?? false;
+                if (handled) {
+                  setReady(false);
+                  return;
+                }
+              }
+
+              setError("This clip is temporarily unavailable. Use the full-source link below.");
             },
           },
         });
       })
       .catch((loadError: unknown) => {
-        if (!cancelled) {
-          setError(loadError instanceof Error ? loadError.message : "The video player could not be loaded.");
-        }
+        if (cancelled) return;
+        const handled = onUnavailableRef.current?.() ?? false;
+        if (handled) return;
+        setError(loadError instanceof Error ? loadError.message : "The video player could not be loaded.");
       });
 
     return () => {
@@ -159,7 +243,7 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
       playerRef.current?.destroy();
       playerRef.current = null;
     };
-  }, [duration, endSeconds, startSeconds, videoId]);
+  }, [activeSource, duration]);
 
   useEffect(() => {
     if (!playing) return;
@@ -169,12 +253,16 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
       if (!player) return;
 
       const current = player.getCurrentTime();
-      const clipElapsed = Math.max(0, current - startSeconds);
+      const clipElapsed = Math.max(0, current - activeSource.startSeconds);
       setElapsed(Math.min(duration, clipElapsed));
 
-      if (current >= endSeconds - 0.15) {
+      if (current >= activeSource.endSeconds - 0.15) {
         player.stopVideo();
-        player.cueVideoById({ videoId, startSeconds, endSeconds });
+        player.cueVideoById({
+          videoId: activeSource.videoId,
+          startSeconds: activeSource.startSeconds,
+          endSeconds: activeSource.endSeconds,
+        });
         setPlaying(false);
         setEnded(true);
         setElapsed(duration);
@@ -182,7 +270,7 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
     }, 150);
 
     return () => window.clearInterval(interval);
-  }, [duration, endSeconds, playing, startSeconds, videoId]);
+  }, [activeSource, duration, playing]);
 
   function playOrPause() {
     const player = playerRef.current;
@@ -197,7 +285,11 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
     if (ended || elapsed === 0) {
       setEnded(false);
       setElapsed(0);
-      player.loadVideoById({ videoId, startSeconds, endSeconds });
+      player.loadVideoById({
+        videoId: activeSource.videoId,
+        startSeconds: activeSource.startSeconds,
+        endSeconds: activeSource.endSeconds,
+      });
       return;
     }
 
@@ -209,13 +301,17 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
     if (!player || !ready) return;
     setEnded(false);
     setElapsed(0);
-    player.loadVideoById({ videoId, startSeconds, endSeconds });
+    player.loadVideoById({
+      videoId: activeSource.videoId,
+      startSeconds: activeSource.startSeconds,
+      endSeconds: activeSource.endSeconds,
+    });
   }
 
   return (
     <div className="clip-player" data-ready={ready ? "true" : "false"}>
       <div className="clip-player-stage">
-        <div id={mountId} ref={mountRef} className="clip-player-mount" />
+        <div key={activeSource.videoId} id={mountId} ref={mountRef} className="clip-player-mount" />
         <button
           type="button"
           className="clip-player-hitbox"
@@ -238,8 +334,8 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
       </div>
 
       <div className="clip-player-meta">
-        <span>Selected excerpt: {formatTime(startSeconds)}–{formatTime(endSeconds)}</span>
-        <a href={sourceUrl} target="_blank" rel="noreferrer">Full source ↗</a>
+        <span>Selected excerpt: {formatTime(activeSource.startSeconds)}–{formatTime(activeSource.endSeconds)}</span>
+        <a href={activeSource.sourceUrl} target="_blank" rel="noreferrer">Full source ↗</a>
       </div>
       <span className="sr-only">{title}</span>
     </div>
