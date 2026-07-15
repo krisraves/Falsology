@@ -1,0 +1,47 @@
+name: Test Jina caption metadata
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-jina-caption-metadata.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe HTML metadata
+        run: |
+          python <<'PY'
+          import json, re, urllib.request
+          from pathlib import Path
+          vid='3MuPWV5cTio'; url=f'https://r.jina.ai/http://www.youtube.com/watch?v={vid}'
+          out={}
+          for fmt in ['html','text','markdown']:
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','X-Return-Format':fmt,'X-Engine':'browser'})
+                  with urllib.request.urlopen(req,timeout=60) as r:text=r.read().decode('utf-8','replace')
+                  out[fmt]={'length':len(text),'captionTracks':('captionTracks' in text),'apiKey':('INNERTUBE_API_KEY' in text),'transcriptRenderer':('transcriptSegmentRenderer' in text),'snippets':[text[max(0,m.start()-300):m.start()+1500] for m in list(re.finditer(r'captionTracks|INNERTUBE_API_KEY|transcriptSegmentRenderer',text))[:3]]}
+              except Exception as e:out[fmt]={'error':f'{type(e).__name__}: {e}'}
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/jina-caption-metadata-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-jina-caption-metadata.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record Jina caption metadata test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
