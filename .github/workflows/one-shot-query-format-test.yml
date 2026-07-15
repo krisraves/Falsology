@@ -1,0 +1,62 @@
+name: One-shot query format test
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-shot-query-format-test.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install requests
+        run: pip install -U requests
+      - name: Test query variants
+        run: |
+          python <<'PY'
+          import json,re,urllib.parse,requests
+          from pathlib import Path
+          queries=[
+            'I did not have sexual relations with that woman',
+            'i did not have sexual relations with that woman',
+            'I did not have sexual relations with that woman.',
+            'I did not have sexual relations with that woman, Miss Lewinsky.',
+            'did not have sexual relations with that woman',
+            'no inclination',
+            'No inclination',
+            "I have no inclination of where they're at right now",
+            "I have no inclination of where they're at right now.",
+            'I am innocent.',
+            'I am innocent',
+          ]
+          s=requests.Session();s.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36','Accept-Language':'en-US,en;q=0.9'})
+          out=[]
+          for q in queries:
+            url='https://youglish.com/pronounce/'+urllib.parse.quote(q,safe='')+'/english/all/emb=1&e_id=audit&e_comp=8264&e_start=1&e_h=-1&e_notif_h=1&e_cur_w=900'
+            row={'query':q,'url':url}
+            try:
+              r=s.get(url,timeout=30);row['status']=r.status_code;row['length']=len(r.text);row['title']=(re.search(r'<title>(.*?)</title>',r.text,re.S|re.I).group(1) if re.search(r'<title>(.*?)</title>',r.text,re.S|re.I) else None)
+              m=re.search(r"params\.jsonData\s*=\s*'((?:\\.|[^'])*)';",r.text);row['hasData']=bool(m);row['snippet']=m.group(1)[:500] if m else r.text[:500]
+            except Exception as e:row['error']=f'{type(e).__name__}: {e}'
+            out.append(row)
+          Path('audit/query-format-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result and remove workflow
+        run: |
+          rm .github/workflows/one-shot-query-format-test.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record YouGlish query format test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
