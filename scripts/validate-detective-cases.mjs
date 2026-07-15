@@ -9,6 +9,7 @@ const baseClaims = filenames.flatMap((name) => JSON.parse(readFileSync(join(dire
 const overrides = JSON.parse(readFileSync(resolve("data/case-overrides.json"), "utf8"));
 const finalReplacements = JSON.parse(readFileSync(resolve("data/direct-footage-replacements.json"), "utf8"));
 const obscureReplacements = JSON.parse(readFileSync(resolve("data/obscure-case-replacements.json"), "utf8"));
+const englishWeirdReplacements = JSON.parse(readFileSync(resolve("data/english-weird-replacements.json"), "utf8"));
 const difficultyMap = JSON.parse(readFileSync(resolve("data/difficulty-map.json"), "utf8"));
 
 function applyOverride(claim, override = {}) {
@@ -26,7 +27,8 @@ const claims = baseClaims.map((claim) => {
   const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
   const direct = applyOverride(reviewed, finalReplacements[claim.caseNumber]);
   const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
-  return { ...obscure, difficulty: difficultyMap[claim.caseNumber] ?? obscure.difficulty };
+  const english = applyOverride(obscure, englishWeirdReplacements[claim.caseNumber]);
+  return { ...english, difficulty: difficultyMap[claim.caseNumber] ?? english.difficulty };
 });
 
 const failures = [];
@@ -60,6 +62,7 @@ if (filenames.length !== 10) failures.push(`Expected 10 case files, found ${file
 if (baseClaims.length !== 50) failures.push(`Expected 50 base cases, found ${baseClaims.length}.`);
 if (Object.keys(overrides).length !== 50) failures.push(`Expected 50 direct-footage reviews, found ${Object.keys(overrides).length}.`);
 if (Object.keys(obscureReplacements).length !== 10) failures.push(`Expected 10 obscure replacements, found ${Object.keys(obscureReplacements).length}.`);
+if (Object.keys(englishWeirdReplacements).length !== 2) failures.push(`Expected 2 English weird-truth replacements, found ${Object.keys(englishWeirdReplacements).length}.`);
 if (Object.keys(difficultyMap).length !== 50) failures.push(`Expected 50 difficulty assignments, found ${Object.keys(difficultyMap).length}.`);
 if (claims.length !== 50) failures.push(`Expected 50 cases, found ${claims.length}.`);
 
