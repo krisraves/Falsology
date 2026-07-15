@@ -10,7 +10,9 @@ import part09 from "@/data/cases/part09.json";
 import part10 from "@/data/cases/part10.json";
 import rawOverrides from "@/data/case-overrides.json";
 import rawFinalReplacements from "@/data/direct-footage-replacements.json";
-import type { Claim, ClaimMedia } from "@/lib/types";
+import rawObscureReplacements from "@/data/obscure-case-replacements.json";
+import rawDifficultyMap from "@/data/difficulty-map.json";
+import type { Claim, ClaimMedia, Difficulty } from "@/lib/types";
 
 type ClaimOverride = Partial<Omit<Claim, "media">> & { media?: Partial<ClaimMedia> };
 
@@ -29,6 +31,8 @@ const baseClaims = [
 
 const overrides = rawOverrides as Record<string, ClaimOverride>;
 const finalReplacements = rawFinalReplacements as Record<string, ClaimOverride>;
+const obscureReplacements = rawObscureReplacements as Record<string, ClaimOverride>;
+const difficultyMap = rawDifficultyMap as Record<string, Difficulty>;
 
 function applyOverride(claim: Claim, override?: ClaimOverride): Claim {
   if (!override) return claim;
@@ -44,7 +48,12 @@ function applyOverride(claim: Claim, override?: ClaimOverride): Claim {
 
 export const claims = baseClaims.map((claim) => {
   const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
-  return applyOverride(reviewed, finalReplacements[claim.caseNumber]);
+  const direct = applyOverride(reviewed, finalReplacements[claim.caseNumber]);
+  const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
+  return {
+    ...obscure,
+    difficulty: difficultyMap[claim.caseNumber] ?? obscure.difficulty,
+  };
 });
 
 export function getClaim(slug: string) {
