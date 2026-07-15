@@ -1,0 +1,3406 @@
+[
+  {
+    "caseNumber": "L01",
+    "person": "Chris Watts",
+    "claim": "I have no inclination of where they're at right now.",
+    "currentVideoId": "3MuPWV5cTio",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i have no inclination of where they re at right now",
+        "results": 0
+      },
+      {
+        "query": "inclination of where they re at right now",
+        "results": 0
+      },
+      {
+        "query": "no inclination of where they re at right",
+        "results": 0
+      },
+      {
+        "query": "i have no inclination of where they re",
+        "results": 0
+      },
+      {
+        "query": "have no inclination of where they re at",
+        "results": 0
+      },
+      {
+        "query": "inclination of where they re at right",
+        "results": 0
+      },
+      {
+        "query": "no inclination of where they re at",
+        "results": 0
+      },
+      {
+        "query": "have no inclination of where they re",
+        "results": 0
+      },
+      {
+        "query": "of where they re at right now",
+        "results": 0
+      },
+      {
+        "query": "no inclination of where they re",
+        "results": 0
+      },
+      {
+        "query": "where they re at right now",
+        "results": 0
+      },
+      {
+        "query": "inclination of where they re at",
+        "results": 0
+      },
+      {
+        "query": "i have no inclination of where",
+        "results": 0
+      },
+      {
+        "query": "no inclination of where they",
+        "results": 0
+      },
+      {
+        "query": "inclination of where they re",
+        "results": 0
+      },
+      {
+        "query": "have no inclination of where",
+        "results": 0
+      },
+      {
+        "query": "where they re at right",
+        "results": 0
+      },
+      {
+        "query": "no inclination of where",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L02",
+    "person": "Susan Smith",
+    "claim": "A man carjacked me and took my boys.",
+    "currentVideoId": "KPPUHvMyBUs",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "a man carjacked me and took my boys",
+        "results": 0
+      },
+      {
+        "query": "man carjacked me and took my boys",
+        "results": 0
+      },
+      {
+        "query": "a man carjacked me and took my",
+        "results": 0
+      },
+      {
+        "query": "carjacked me and took my boys",
+        "results": 0
+      },
+      {
+        "query": "man carjacked me and took my",
+        "results": 0
+      },
+      {
+        "query": "a man carjacked me and took",
+        "results": 0
+      },
+      {
+        "query": "man carjacked me and took",
+        "results": 0
+      },
+      {
+        "query": "carjacked me and took my",
+        "results": 0
+      },
+      {
+        "query": "a man carjacked me and",
+        "results": 0
+      },
+      {
+        "query": "me and took my boys",
+        "results": 0
+      },
+      {
+        "query": "carjacked me and took",
+        "results": 0
+      },
+      {
+        "query": "man carjacked me and",
+        "results": 0
+      },
+      {
+        "query": "a man carjacked me",
+        "results": 0
+      },
+      {
+        "query": "and took my boys",
+        "results": 0
+      },
+      {
+        "query": "man carjacked me",
+        "results": 0
+      },
+      {
+        "query": "a man carjacked",
+        "results": 0
+      },
+      {
+        "query": "took my boys",
+        "results": 0
+      },
+      {
+        "query": "carjacked me and",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L03",
+    "person": "Diane Downs",
+    "claim": "A bushy-haired stranger shot my children.",
+    "currentVideoId": "Enghvd9o2As",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "a bushy haired stranger shot my children",
+        "results": 0
+      },
+      {
+        "query": "bushy haired stranger shot my children",
+        "results": 0
+      },
+      {
+        "query": "a bushy haired stranger shot my",
+        "results": 0
+      },
+      {
+        "query": "haired stranger shot my children",
+        "results": 0
+      },
+      {
+        "query": "bushy haired stranger shot my",
+        "results": 0
+      },
+      {
+        "query": "a bushy haired stranger shot",
+        "results": 0
+      },
+      {
+        "query": "bushy haired stranger shot",
+        "results": 0
+      },
+      {
+        "query": "stranger shot my children",
+        "results": 0
+      },
+      {
+        "query": "a bushy haired stranger",
+        "results": 0
+      },
+      {
+        "query": "haired stranger shot my",
+        "results": 0
+      },
+      {
+        "query": "bushy haired stranger",
+        "results": 0
+      },
+      {
+        "query": "haired stranger shot",
+        "results": 0
+      },
+      {
+        "query": "stranger shot my",
+        "results": 0
+      },
+      {
+        "query": "shot my children",
+        "results": 0
+      },
+      {
+        "query": "haired stranger",
+        "results": 0
+      },
+      {
+        "query": "stranger shot",
+        "results": 0
+      },
+      {
+        "query": "bushy haired",
+        "results": 0
+      },
+      {
+        "query": "my children",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L04",
+    "person": "Jodi Arias",
+    "claim": "I wasn't there when Travis was killed.",
+    "currentVideoId": "ez-4b-yQGzg",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i wasn t there when travis was killed",
+        "results": 0
+      },
+      {
+        "query": "wasn t there when travis was killed",
+        "results": 0
+      },
+      {
+        "query": "i wasn t there when travis was",
+        "results": 0
+      },
+      {
+        "query": "t there when travis was killed",
+        "results": 0
+      },
+      {
+        "query": "wasn t there when travis was",
+        "results": 0
+      },
+      {
+        "query": "i wasn t there when travis",
+        "results": 0
+      },
+      {
+        "query": "wasn t there when travis",
+        "results": 0
+      },
+      {
+        "query": "there when travis was killed",
+        "results": 0
+      },
+      {
+        "query": "t there when travis was",
+        "results": 0
+      },
+      {
+        "query": "i wasn t there when",
+        "results": 0
+      },
+      {
+        "query": "t there when travis",
+        "results": 0
+      },
+      {
+        "query": "wasn t there when",
+        "results": 0
+      },
+      {
+        "query": "when travis was killed",
+        "results": 0
+      },
+      {
+        "query": "there when travis was",
+        "results": 0
+      },
+      {
+        "query": "there when travis",
+        "results": 0
+      },
+      {
+        "query": "wasn t there",
+        "results": 0
+      },
+      {
+        "query": "t there when",
+        "results": 0
+      },
+      {
+        "query": "travis was killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L05",
+    "person": "Casey Anthony",
+    "claim": "A nanny named Zenaida took Caylee.",
+    "currentVideoId": "ixzDBcMTnV8",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "a nanny named zenaida took caylee",
+        "results": 0
+      },
+      {
+        "query": "nanny named zenaida took caylee",
+        "results": 0
+      },
+      {
+        "query": "a nanny named zenaida took",
+        "results": 0
+      },
+      {
+        "query": "named zenaida took caylee",
+        "results": 0
+      },
+      {
+        "query": "nanny named zenaida took",
+        "results": 0
+      },
+      {
+        "query": "a nanny named zenaida",
+        "results": 0
+      },
+      {
+        "query": "zenaida took caylee",
+        "results": 0
+      },
+      {
+        "query": "nanny named zenaida",
+        "results": 0
+      },
+      {
+        "query": "named zenaida took",
+        "results": 0
+      },
+      {
+        "query": "a nanny named",
+        "results": 0
+      },
+      {
+        "query": "named zenaida",
+        "results": 0
+      },
+      {
+        "query": "zenaida took",
+        "results": 0
+      },
+      {
+        "query": "took caylee",
+        "results": 0
+      },
+      {
+        "query": "nanny named",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L06",
+    "person": "Ted Bundy",
+    "claim": "I am innocent.",
+    "currentVideoId": "SmiiY1rQDVk",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i am innocent",
+        "results": 0
+      },
+      {
+        "query": "am innocent",
+        "results": 0
+      },
+      {
+        "query": "i am",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L07",
+    "person": "John Wayne Gacy",
+    "claim": "I don't believe I killed anybody.",
+    "currentVideoId": "yQ4AT4q2DKs",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i don t believe i killed anybody",
+        "results": 0
+      },
+      {
+        "query": "don t believe i killed anybody",
+        "results": 0
+      },
+      {
+        "query": "i don t believe i killed",
+        "results": 0
+      },
+      {
+        "query": "t believe i killed anybody",
+        "results": 0
+      },
+      {
+        "query": "don t believe i killed",
+        "results": 0
+      },
+      {
+        "query": "i don t believe i",
+        "results": 0
+      },
+      {
+        "query": "believe i killed anybody",
+        "results": 0
+      },
+      {
+        "query": "t believe i killed",
+        "results": 0
+      },
+      {
+        "query": "i don t believe",
+        "results": 0
+      },
+      {
+        "query": "don t believe i",
+        "results": 0
+      },
+      {
+        "query": "don t believe",
+        "results": 0
+      },
+      {
+        "query": "i killed anybody",
+        "results": 0
+      },
+      {
+        "query": "believe i killed",
+        "results": 0
+      },
+      {
+        "query": "t believe i",
+        "results": 0
+      },
+      {
+        "query": "killed anybody",
+        "results": 0
+      },
+      {
+        "query": "t believe",
+        "results": 0
+      },
+      {
+        "query": "don t",
+        "results": 0
+      },
+      {
+        "query": "believe i",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L08",
+    "person": "Stephen McDaniel",
+    "claim": "I don't know what happened to Lauren.",
+    "currentVideoId": "YzbIhWu0gpQ",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i don t know what happened to lauren",
+        "results": 0
+      },
+      {
+        "query": "don t know what happened to lauren",
+        "results": 0
+      },
+      {
+        "query": "i don t know what happened to",
+        "results": 0
+      },
+      {
+        "query": "t know what happened to lauren",
+        "results": 0
+      },
+      {
+        "query": "i don t know what happened",
+        "results": 0
+      },
+      {
+        "query": "don t know what happened to",
+        "results": 0
+      },
+      {
+        "query": "don t know what happened",
+        "results": 0
+      },
+      {
+        "query": "know what happened to lauren",
+        "results": 0
+      },
+      {
+        "query": "t know what happened to",
+        "results": 0
+      },
+      {
+        "query": "i don t know what",
+        "results": 0
+      },
+      {
+        "query": "t know what happened",
+        "results": 0
+      },
+      {
+        "query": "don t know what",
+        "results": 0
+      },
+      {
+        "query": "what happened to lauren",
+        "results": 0
+      },
+      {
+        "query": "know what happened to",
+        "results": 0
+      },
+      {
+        "query": "know what happened",
+        "results": 0
+      },
+      {
+        "query": "t know what",
+        "results": 0
+      },
+      {
+        "query": "don t know",
+        "results": 0
+      },
+      {
+        "query": "happened to lauren",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L09",
+    "person": "Jennifer Pan",
+    "claim": "Intruders tied me up and attacked my parents.",
+    "currentVideoId": "amHb2UoVZ_g",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "intruders tied me up and attacked my parents",
+        "results": 0
+      },
+      {
+        "query": "intruders tied me up and attacked my",
+        "results": 0
+      },
+      {
+        "query": "tied me up and attacked my parents",
+        "results": 0
+      },
+      {
+        "query": "intruders tied me up and attacked",
+        "results": 0
+      },
+      {
+        "query": "me up and attacked my parents",
+        "results": 0
+      },
+      {
+        "query": "tied me up and attacked my",
+        "results": 0
+      },
+      {
+        "query": "up and attacked my parents",
+        "results": 0
+      },
+      {
+        "query": "intruders tied me up and",
+        "results": 0
+      },
+      {
+        "query": "tied me up and attacked",
+        "results": 0
+      },
+      {
+        "query": "me up and attacked my",
+        "results": 0
+      },
+      {
+        "query": "intruders tied me up",
+        "results": 0
+      },
+      {
+        "query": "and attacked my parents",
+        "results": 0
+      },
+      {
+        "query": "up and attacked my",
+        "results": 0
+      },
+      {
+        "query": "me up and attacked",
+        "results": 0
+      },
+      {
+        "query": "attacked my parents",
+        "results": 0
+      },
+      {
+        "query": "intruders tied me",
+        "results": 0
+      },
+      {
+        "query": "up and attacked",
+        "results": 0
+      },
+      {
+        "query": "tied me up",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L10",
+    "person": "Sarah Boone",
+    "claim": "It was not intentional. We were playing hide-and-seek.",
+    "currentVideoId": "9dhV651zp1o",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "it was not intentional we were playing hide and seek",
+        "results": 0
+      },
+      {
+        "query": "not intentional we were playing hide and seek",
+        "results": 0
+      },
+      {
+        "query": "was not intentional we were playing hide and",
+        "results": 0
+      },
+      {
+        "query": "it was not intentional we were playing hide",
+        "results": 0
+      },
+      {
+        "query": "intentional we were playing hide and seek",
+        "results": 0
+      },
+      {
+        "query": "was not intentional we were playing hide",
+        "results": 0
+      },
+      {
+        "query": "not intentional we were playing hide and",
+        "results": 0
+      },
+      {
+        "query": "it was not intentional we were playing",
+        "results": 0
+      },
+      {
+        "query": "not intentional we were playing hide",
+        "results": 0
+      },
+      {
+        "query": "intentional we were playing hide and",
+        "results": 0
+      },
+      {
+        "query": "was not intentional we were playing",
+        "results": 0
+      },
+      {
+        "query": "we were playing hide and seek",
+        "results": 0
+      },
+      {
+        "query": "intentional we were playing hide",
+        "results": 0
+      },
+      {
+        "query": "not intentional we were playing",
+        "results": 0
+      },
+      {
+        "query": "were playing hide and seek",
+        "results": 0
+      },
+      {
+        "query": "was not intentional we were",
+        "results": 0
+      },
+      {
+        "query": "playing hide and seek",
+        "results": 0
+      },
+      {
+        "query": "intentional we were playing",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L11",
+    "person": "Trevor Milton",
+    "claim": "The Nikola One is fully functioning.",
+    "currentVideoId": "DbXqiSYDhrA",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "the nikola one is fully functioning",
+        "results": 0
+      },
+      {
+        "query": "nikola one is fully functioning",
+        "results": 0
+      },
+      {
+        "query": "the nikola one is fully",
+        "results": 0
+      },
+      {
+        "query": "one is fully functioning",
+        "results": 0
+      },
+      {
+        "query": "nikola one is fully",
+        "results": 0
+      },
+      {
+        "query": "the nikola one is",
+        "results": 0
+      },
+      {
+        "query": "is fully functioning",
+        "results": 0
+      },
+      {
+        "query": "the nikola one",
+        "results": 0
+      },
+      {
+        "query": "nikola one is",
+        "results": 0
+      },
+      {
+        "query": "one is fully",
+        "results": 0
+      },
+      {
+        "query": "fully functioning",
+        "results": 0
+      },
+      {
+        "query": "nikola one",
+        "results": 0
+      },
+      {
+        "query": "the nikola",
+        "results": 0
+      },
+      {
+        "query": "is fully",
+        "results": 0
+      },
+      {
+        "query": "nikola one fully functioning",
+        "results": 0
+      },
+      {
+        "query": "nikola one fully",
+        "results": 0
+      },
+      {
+        "query": "one fully functioning",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L12",
+    "person": "Bernie Madoff",
+    "claim": "In today's regulatory environment, it's virtually impossible to violate the rules undetected.",
+    "currentVideoId": "auTG_X2jG3E",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "in today s regulatory environment it s virtually impossible to violate the rules undetected",
+        "results": 0
+      },
+      {
+        "query": "today s regulatory environment it s virtually impossible",
+        "results": 0
+      },
+      {
+        "query": "regulatory environment it s virtually impossible to violate",
+        "results": 0
+      },
+      {
+        "query": "s virtually impossible to violate the rules undetected",
+        "results": 0
+      },
+      {
+        "query": "s regulatory environment it s virtually impossible to",
+        "results": 0
+      },
+      {
+        "query": "s regulatory environment it s virtually impossible",
+        "results": 0
+      },
+      {
+        "query": "today s regulatory environment it s virtually",
+        "results": 0
+      },
+      {
+        "query": "virtually impossible to violate the rules undetected",
+        "results": 0
+      },
+      {
+        "query": "regulatory environment it s virtually impossible to",
+        "results": 0
+      },
+      {
+        "query": "regulatory environment it s virtually impossible",
+        "results": 0
+      },
+      {
+        "query": "s regulatory environment it s virtually",
+        "results": 0
+      },
+      {
+        "query": "today s regulatory environment it s",
+        "results": 0
+      },
+      {
+        "query": "impossible to violate the rules undetected",
+        "results": 0
+      },
+      {
+        "query": "regulatory environment it s virtually",
+        "results": 0
+      },
+      {
+        "query": "environment it s virtually impossible",
+        "results": 0
+      },
+      {
+        "query": "today s regulatory environment it",
+        "results": 0
+      },
+      {
+        "query": "s virtually impossible to violate",
+        "results": 0
+      },
+      {
+        "query": "today s regulatory environment",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L13",
+    "person": "Lance Armstrong",
+    "claim": "I have never doped.",
+    "currentVideoId": "25ja7IAxQjY",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i have never doped",
+        "results": 0
+      },
+      {
+        "query": "have never doped",
+        "results": 0
+      },
+      {
+        "query": "i have never",
+        "results": 0
+      },
+      {
+        "query": "never doped",
+        "results": 0
+      },
+      {
+        "query": "have never",
+        "results": 0
+      },
+      {
+        "query": "i have",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L14",
+    "person": "Stephanie Lazarus",
+    "claim": "I barely knew Sherri Rasmussen.",
+    "currentVideoId": "lC3va1aob3g",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i barely knew sherri rasmussen",
+        "results": 0
+      },
+      {
+        "query": "barely knew sherri rasmussen",
+        "results": 0
+      },
+      {
+        "query": "i barely knew sherri",
+        "results": 0
+      },
+      {
+        "query": "knew sherri rasmussen",
+        "results": 0
+      },
+      {
+        "query": "barely knew sherri",
+        "results": 0
+      },
+      {
+        "query": "i barely knew",
+        "results": 0
+      },
+      {
+        "query": "sherri rasmussen",
+        "results": 0
+      },
+      {
+        "query": "knew sherri",
+        "results": 0
+      },
+      {
+        "query": "barely knew",
+        "results": 0
+      },
+      {
+        "query": "i barely",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L15",
+    "person": "Pete Rose",
+    "claim": "I never bet on baseball.",
+    "currentVideoId": "h4fmEbgKeh0",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i never bet on baseball",
+        "results": 0
+      },
+      {
+        "query": "never bet on baseball",
+        "results": 0
+      },
+      {
+        "query": "i never bet on",
+        "results": 0
+      },
+      {
+        "query": "bet on baseball",
+        "results": 0
+      },
+      {
+        "query": "never bet on",
+        "results": 0
+      },
+      {
+        "query": "i never bet",
+        "results": 0
+      },
+      {
+        "query": "never bet",
+        "results": 0
+      },
+      {
+        "query": "on baseball",
+        "results": 0
+      },
+      {
+        "query": "i never",
+        "results": 0
+      },
+      {
+        "query": "bet on",
+        "results": 0
+      },
+      {
+        "query": "never bet baseball",
+        "results": 0
+      },
+      {
+        "query": "bet baseball",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L16",
+    "person": "Bill Clinton",
+    "claim": "I did not have sexual relations with that woman, Miss Lewinsky.",
+    "currentVideoId": "TM8EXwemnYA",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i did not have sexual relations with that woman miss lewinsky",
+        "results": 0
+      },
+      {
+        "query": "have sexual relations with that woman miss lewinsky",
+        "results": 0
+      },
+      {
+        "query": "not have sexual relations with that woman miss",
+        "results": 0
+      },
+      {
+        "query": "did not have sexual relations with that woman",
+        "results": 0
+      },
+      {
+        "query": "i did not have sexual relations with that",
+        "results": 0
+      },
+      {
+        "query": "sexual relations with that woman miss lewinsky",
+        "results": 0
+      },
+      {
+        "query": "have sexual relations with that woman miss",
+        "results": 0
+      },
+      {
+        "query": "not have sexual relations with that woman",
+        "results": 0
+      },
+      {
+        "query": "i did not have sexual relations with",
+        "results": 0
+      },
+      {
+        "query": "relations with that woman miss lewinsky",
+        "results": 0
+      },
+      {
+        "query": "sexual relations with that woman miss",
+        "results": 0
+      },
+      {
+        "query": "have sexual relations with that woman",
+        "results": 0
+      },
+      {
+        "query": "not have sexual relations with that",
+        "results": 0
+      },
+      {
+        "query": "sexual relations with that woman",
+        "results": 0
+      },
+      {
+        "query": "relations with that woman miss",
+        "results": 0
+      },
+      {
+        "query": "not have sexual relations with",
+        "results": 0
+      },
+      {
+        "query": "did not have sexual relations",
+        "results": 0
+      },
+      {
+        "query": "not have sexual relations",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L17",
+    "person": "Kenneth Lay",
+    "claim": "The company is fundamentally strong.",
+    "currentVideoId": "S3EVIeZNHJU",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "the company is fundamentally strong",
+        "results": 0
+      },
+      {
+        "query": "company is fundamentally strong",
+        "results": 0
+      },
+      {
+        "query": "the company is fundamentally",
+        "results": 0
+      },
+      {
+        "query": "company is fundamentally",
+        "results": 0
+      },
+      {
+        "query": "is fundamentally strong",
+        "results": 0
+      },
+      {
+        "query": "the company is",
+        "results": 0
+      },
+      {
+        "query": "fundamentally strong",
+        "results": 0
+      },
+      {
+        "query": "is fundamentally",
+        "results": 0
+      },
+      {
+        "query": "the company",
+        "results": 0
+      },
+      {
+        "query": "company is",
+        "results": 0
+      },
+      {
+        "query": "company fundamentally strong",
+        "results": 0
+      },
+      {
+        "query": "company fundamentally",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L18",
+    "person": "Richard Nixon",
+    "claim": "I am not a crook.",
+    "currentVideoId": "sh163n1lJ4M",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i am not a crook",
+        "results": 0
+      },
+      {
+        "query": "am not a crook",
+        "results": 0
+      },
+      {
+        "query": "i am not a",
+        "results": 0
+      },
+      {
+        "query": "not a crook",
+        "results": 0
+      },
+      {
+        "query": "i am not",
+        "results": 0
+      },
+      {
+        "query": "am not a",
+        "results": 0
+      },
+      {
+        "query": "am not",
+        "results": 0
+      },
+      {
+        "query": "a crook",
+        "results": 0
+      },
+      {
+        "query": "not a",
+        "results": 0
+      },
+      {
+        "query": "i am",
+        "results": 0
+      },
+      {
+        "query": "not crook",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L19",
+    "person": "Chandler Halderson",
+    "claim": "My parents went to their cabin for the weekend.",
+    "currentVideoId": "MVVmLa1vKio",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "my parents went to their cabin for the weekend",
+        "results": 0
+      },
+      {
+        "query": "parents went to their cabin for the weekend",
+        "results": 0
+      },
+      {
+        "query": "my parents went to their cabin for the",
+        "results": 0
+      },
+      {
+        "query": "went to their cabin for the weekend",
+        "results": 0
+      },
+      {
+        "query": "parents went to their cabin for the",
+        "results": 0
+      },
+      {
+        "query": "my parents went to their cabin for",
+        "results": 0
+      },
+      {
+        "query": "parents went to their cabin for",
+        "results": 0
+      },
+      {
+        "query": "my parents went to their cabin",
+        "results": 0
+      },
+      {
+        "query": "to their cabin for the weekend",
+        "results": 0
+      },
+      {
+        "query": "went to their cabin for the",
+        "results": 0
+      },
+      {
+        "query": "parents went to their cabin",
+        "results": 0
+      },
+      {
+        "query": "their cabin for the weekend",
+        "results": 0
+      },
+      {
+        "query": "my parents went to their",
+        "results": 0
+      },
+      {
+        "query": "went to their cabin for",
+        "results": 0
+      },
+      {
+        "query": "cabin for the weekend",
+        "results": 0
+      },
+      {
+        "query": "parents went to their",
+        "results": 0
+      },
+      {
+        "query": "my parents went to",
+        "results": 0
+      },
+      {
+        "query": "went to their cabin",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L20",
+    "person": "Richard Heene",
+    "claim": "It was not a hoax.",
+    "currentVideoId": "_5AlMWoIRB4",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "it was not a hoax",
+        "results": 0
+      },
+      {
+        "query": "was not a hoax",
+        "results": 0
+      },
+      {
+        "query": "it was not a",
+        "results": 0
+      },
+      {
+        "query": "not a hoax",
+        "results": 0
+      },
+      {
+        "query": "was not a",
+        "results": 0
+      },
+      {
+        "query": "it was not",
+        "results": 0
+      },
+      {
+        "query": "a hoax",
+        "results": 0
+      },
+      {
+        "query": "was not",
+        "results": 0
+      },
+      {
+        "query": "not a",
+        "results": 0
+      },
+      {
+        "query": "it was",
+        "results": 0
+      },
+      {
+        "query": "not hoax",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L21",
+    "person": "Hillary Clinton",
+    "claim": "We landed under sniper fire.",
+    "currentVideoId": "K0neF55UC-4",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "we landed under sniper fire",
+        "results": 0
+      },
+      {
+        "query": "landed under sniper fire",
+        "results": 0
+      },
+      {
+        "query": "we landed under sniper",
+        "results": 0
+      },
+      {
+        "query": "landed under sniper",
+        "results": 0
+      },
+      {
+        "query": "under sniper fire",
+        "results": 0
+      },
+      {
+        "query": "we landed under",
+        "results": 0
+      },
+      {
+        "query": "under sniper",
+        "results": 0
+      },
+      {
+        "query": "landed under",
+        "results": 0
+      },
+      {
+        "query": "sniper fire",
+        "results": 0
+      },
+      {
+        "query": "we landed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L22",
+    "person": "Sean Spicer",
+    "claim": "This was the largest audience ever to witness an inauguration, period.",
+    "currentVideoId": "X2VKQfX5tSE",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "this was the largest audience ever to witness an inauguration period",
+        "results": 0
+      },
+      {
+        "query": "largest audience ever to witness an inauguration period",
+        "results": 0
+      },
+      {
+        "query": "the largest audience ever to witness an inauguration",
+        "results": 0
+      },
+      {
+        "query": "was the largest audience ever to witness an",
+        "results": 0
+      },
+      {
+        "query": "this was the largest audience ever to witness",
+        "results": 0
+      },
+      {
+        "query": "largest audience ever to witness an inauguration",
+        "results": 0
+      },
+      {
+        "query": "audience ever to witness an inauguration period",
+        "results": 0
+      },
+      {
+        "query": "was the largest audience ever to witness",
+        "results": 0
+      },
+      {
+        "query": "the largest audience ever to witness an",
+        "results": 0
+      },
+      {
+        "query": "audience ever to witness an inauguration",
+        "results": 0
+      },
+      {
+        "query": "ever to witness an inauguration period",
+        "results": 0
+      },
+      {
+        "query": "the largest audience ever to witness",
+        "results": 0
+      },
+      {
+        "query": "largest audience ever to witness an",
+        "results": 0
+      },
+      {
+        "query": "largest audience ever to witness",
+        "results": 0
+      },
+      {
+        "query": "to witness an inauguration period",
+        "results": 0
+      },
+      {
+        "query": "ever to witness an inauguration",
+        "results": 0
+      },
+      {
+        "query": "was the largest audience ever",
+        "results": 0
+      },
+      {
+        "query": "witness an inauguration period",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L23",
+    "person": "Tobacco executives",
+    "claim": "I believe nicotine is not addictive.",
+    "currentVideoId": "jOxVk_DhWes",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i believe nicotine is not addictive",
+        "results": 0
+      },
+      {
+        "query": "believe nicotine is not addictive",
+        "results": 0
+      },
+      {
+        "query": "i believe nicotine is not",
+        "results": 0
+      },
+      {
+        "query": "nicotine is not addictive",
+        "results": 0
+      },
+      {
+        "query": "believe nicotine is not",
+        "results": 0
+      },
+      {
+        "query": "i believe nicotine is",
+        "results": 0
+      },
+      {
+        "query": "i believe nicotine",
+        "results": 0
+      },
+      {
+        "query": "believe nicotine is",
+        "results": 0
+      },
+      {
+        "query": "is not addictive",
+        "results": 0
+      },
+      {
+        "query": "nicotine is not",
+        "results": 0
+      },
+      {
+        "query": "believe nicotine",
+        "results": 0
+      },
+      {
+        "query": "not addictive",
+        "results": 0
+      },
+      {
+        "query": "nicotine is",
+        "results": 0
+      },
+      {
+        "query": "i believe",
+        "results": 0
+      },
+      {
+        "query": "believe nicotine not addictive",
+        "results": 0
+      },
+      {
+        "query": "believe nicotine not",
+        "results": 0
+      },
+      {
+        "query": "nicotine not addictive",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L24",
+    "person": "Alex Jones",
+    "claim": "Sandy Hook was fake, with actors.",
+    "currentVideoId": "EdwfKrdUW1s",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "sandy hook was fake with actors",
+        "results": 0
+      },
+      {
+        "query": "hook was fake with actors",
+        "results": 0
+      },
+      {
+        "query": "sandy hook was fake with",
+        "results": 0
+      },
+      {
+        "query": "sandy hook was fake",
+        "results": 0
+      },
+      {
+        "query": "was fake with actors",
+        "results": 0
+      },
+      {
+        "query": "hook was fake with",
+        "results": 0
+      },
+      {
+        "query": "fake with actors",
+        "results": 0
+      },
+      {
+        "query": "sandy hook was",
+        "results": 0
+      },
+      {
+        "query": "hook was fake",
+        "results": 0
+      },
+      {
+        "query": "was fake with",
+        "results": 0
+      },
+      {
+        "query": "sandy hook",
+        "results": 0
+      },
+      {
+        "query": "with actors",
+        "results": 0
+      },
+      {
+        "query": "was fake",
+        "results": 0
+      },
+      {
+        "query": "hook was",
+        "results": 0
+      },
+      {
+        "query": "sandy hook fake actors",
+        "results": 0
+      },
+      {
+        "query": "sandy hook fake",
+        "results": 0
+      },
+      {
+        "query": "hook fake actors",
+        "results": 0
+      },
+      {
+        "query": "fake actors",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "L25",
+    "person": "Sherri Papini",
+    "claim": "Two women kidnapped and held me captive.",
+    "currentVideoId": "GjjkyscsZR8",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "two women kidnapped and held me captive",
+        "results": 0
+      },
+      {
+        "query": "women kidnapped and held me captive",
+        "results": 0
+      },
+      {
+        "query": "two women kidnapped and held me",
+        "results": 0
+      },
+      {
+        "query": "two women kidnapped and held",
+        "results": 0
+      },
+      {
+        "query": "kidnapped and held me captive",
+        "results": 0
+      },
+      {
+        "query": "women kidnapped and held me",
+        "results": 0
+      },
+      {
+        "query": "women kidnapped and held",
+        "results": 0
+      },
+      {
+        "query": "two women kidnapped and",
+        "results": 0
+      },
+      {
+        "query": "kidnapped and held me",
+        "results": 0
+      },
+      {
+        "query": "and held me captive",
+        "results": 0
+      },
+      {
+        "query": "two women kidnapped",
+        "results": 0
+      },
+      {
+        "query": "women kidnapped and",
+        "results": 0
+      },
+      {
+        "query": "kidnapped and held",
+        "results": 0
+      },
+      {
+        "query": "held me captive",
+        "results": 0
+      },
+      {
+        "query": "women kidnapped",
+        "results": 0
+      },
+      {
+        "query": "two women",
+        "results": 0
+      },
+      {
+        "query": "kidnapped and",
+        "results": 0
+      },
+      {
+        "query": "me captive",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T01",
+    "person": "Dennis Rader",
+    "claim": "I killed ten people.",
+    "currentVideoId": "_yrRC1j7qeo",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i killed ten people",
+        "results": 0
+      },
+      {
+        "query": "killed ten people",
+        "results": 0
+      },
+      {
+        "query": "i killed ten",
+        "results": 0
+      },
+      {
+        "query": "ten people",
+        "results": 0
+      },
+      {
+        "query": "killed ten",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T02",
+    "person": "Jeffrey Dahmer",
+    "claim": "I killed seventeen people.",
+    "currentVideoId": "RUEnhXunarw",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i killed seventeen people",
+        "results": 0
+      },
+      {
+        "query": "killed seventeen people",
+        "results": 0
+      },
+      {
+        "query": "i killed seventeen",
+        "results": 0
+      },
+      {
+        "query": "seventeen people",
+        "results": 0
+      },
+      {
+        "query": "killed seventeen",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T03",
+    "person": "Edmund Kemper",
+    "claim": "I killed my mother.",
+    "currentVideoId": "MKK3XDI7wTE",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i killed my mother",
+        "results": 0
+      },
+      {
+        "query": "killed my mother",
+        "results": 0
+      },
+      {
+        "query": "i killed my",
+        "results": 0
+      },
+      {
+        "query": "my mother",
+        "results": 0
+      },
+      {
+        "query": "killed my",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      },
+      {
+        "query": "killed mother",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T04",
+    "person": "Aileen Wuornos",
+    "claim": "I killed seven men.",
+    "currentVideoId": "ToXjwzwaq3Y",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i killed seven men",
+        "results": 0
+      },
+      {
+        "query": "killed seven men",
+        "results": 0
+      },
+      {
+        "query": "i killed seven",
+        "results": 0
+      },
+      {
+        "query": "killed seven",
+        "results": 0
+      },
+      {
+        "query": "seven men",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T05",
+    "person": "Russell Williams",
+    "claim": "I killed Jessica Lloyd.",
+    "currentVideoId": "hzh3adTWZOg",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i killed jessica lloyd",
+        "results": 0
+      },
+      {
+        "query": "killed jessica lloyd",
+        "results": 0
+      },
+      {
+        "query": "i killed jessica",
+        "results": 0
+      },
+      {
+        "query": "killed jessica",
+        "results": 0
+      },
+      {
+        "query": "jessica lloyd",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T06",
+    "person": "Chris Watts",
+    "claim": "I killed Shanann.",
+    "currentVideoId": "eWsXwpgCG8Q",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i killed shanann",
+        "results": 0
+      },
+      {
+        "query": "killed shanann",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T07",
+    "person": "Jodi Arias",
+    "claim": "Yes, I killed Travis.",
+    "currentVideoId": "Qvde4s--GrM",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "yes i killed travis",
+        "results": 0
+      },
+      {
+        "query": "i killed travis",
+        "results": 0
+      },
+      {
+        "query": "yes i killed",
+        "results": 0
+      },
+      {
+        "query": "killed travis",
+        "results": 0
+      },
+      {
+        "query": "i killed",
+        "results": 0
+      },
+      {
+        "query": "yes i",
+        "results": 0
+      },
+      {
+        "query": "yes killed travis",
+        "results": 0
+      },
+      {
+        "query": "yes killed",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T08",
+    "person": "Alex Murdaugh",
+    "claim": "I lied about being at the kennels.",
+    "currentVideoId": "rEXrNoyv4Q8",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i lied about being at the kennels",
+        "results": 0
+      },
+      {
+        "query": "lied about being at the kennels",
+        "results": 0
+      },
+      {
+        "query": "i lied about being at the",
+        "results": 0
+      },
+      {
+        "query": "about being at the kennels",
+        "results": 0
+      },
+      {
+        "query": "lied about being at the",
+        "results": 0
+      },
+      {
+        "query": "i lied about being at",
+        "results": 0
+      },
+      {
+        "query": "lied about being at",
+        "results": 0
+      },
+      {
+        "query": "i lied about being",
+        "results": 0
+      },
+      {
+        "query": "being at the kennels",
+        "results": 0
+      },
+      {
+        "query": "about being at the",
+        "results": 0
+      },
+      {
+        "query": "lied about being",
+        "results": 0
+      },
+      {
+        "query": "about being at",
+        "results": 0
+      },
+      {
+        "query": "i lied about",
+        "results": 0
+      },
+      {
+        "query": "at the kennels",
+        "results": 0
+      },
+      {
+        "query": "about being",
+        "results": 0
+      },
+      {
+        "query": "lied about",
+        "results": 0
+      },
+      {
+        "query": "the kennels",
+        "results": 0
+      },
+      {
+        "query": "being at",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T09",
+    "person": "Richard Jewell",
+    "claim": "I did not plant the Olympic Park bomb.",
+    "currentVideoId": "DPMOiJIayPc",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i did not plant the olympic park bomb",
+        "results": 0
+      },
+      {
+        "query": "did not plant the olympic park bomb",
+        "results": 0
+      },
+      {
+        "query": "i did not plant the olympic park",
+        "results": 0
+      },
+      {
+        "query": "not plant the olympic park bomb",
+        "results": 0
+      },
+      {
+        "query": "did not plant the olympic park",
+        "results": 0
+      },
+      {
+        "query": "i did not plant the olympic",
+        "results": 0
+      },
+      {
+        "query": "plant the olympic park bomb",
+        "results": 0
+      },
+      {
+        "query": "not plant the olympic park",
+        "results": 0
+      },
+      {
+        "query": "did not plant the olympic",
+        "results": 0
+      },
+      {
+        "query": "i did not plant the",
+        "results": 0
+      },
+      {
+        "query": "plant the olympic park",
+        "results": 0
+      },
+      {
+        "query": "the olympic park bomb",
+        "results": 0
+      },
+      {
+        "query": "not plant the olympic",
+        "results": 0
+      },
+      {
+        "query": "i did not plant",
+        "results": 0
+      },
+      {
+        "query": "olympic park bomb",
+        "results": 0
+      },
+      {
+        "query": "plant the olympic",
+        "results": 0
+      },
+      {
+        "query": "the olympic park",
+        "results": 0
+      },
+      {
+        "query": "not plant the",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T10",
+    "person": "Lindy Chamberlain",
+    "claim": "A dingo took my baby.",
+    "currentVideoId": "WRyeAkP17aM",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "a dingo took my baby",
+        "results": 0
+      },
+      {
+        "query": "dingo took my baby",
+        "results": 0
+      },
+      {
+        "query": "a dingo took my",
+        "results": 0
+      },
+      {
+        "query": "dingo took my",
+        "results": 0
+      },
+      {
+        "query": "a dingo took",
+        "results": 0
+      },
+      {
+        "query": "took my baby",
+        "results": 0
+      },
+      {
+        "query": "dingo took",
+        "results": 0
+      },
+      {
+        "query": "a dingo",
+        "results": 0
+      },
+      {
+        "query": "took my",
+        "results": 0
+      },
+      {
+        "query": "my baby",
+        "results": 0
+      },
+      {
+        "query": "dingo took baby",
+        "results": 0
+      },
+      {
+        "query": "took baby",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T11",
+    "person": "Kirk Bloodsworth",
+    "claim": "DNA proved I did not commit the murder.",
+    "currentVideoId": "q47wkZXczwY",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "dna proved i did not commit the murder",
+        "results": 0
+      },
+      {
+        "query": "proved i did not commit the murder",
+        "results": 0
+      },
+      {
+        "query": "dna proved i did not commit the",
+        "results": 0
+      },
+      {
+        "query": "dna proved i did not commit",
+        "results": 0
+      },
+      {
+        "query": "proved i did not commit the",
+        "results": 0
+      },
+      {
+        "query": "i did not commit the murder",
+        "results": 0
+      },
+      {
+        "query": "proved i did not commit",
+        "results": 0
+      },
+      {
+        "query": "did not commit the murder",
+        "results": 0
+      },
+      {
+        "query": "dna proved i did not",
+        "results": 0
+      },
+      {
+        "query": "i did not commit the",
+        "results": 0
+      },
+      {
+        "query": "not commit the murder",
+        "results": 0
+      },
+      {
+        "query": "proved i did not",
+        "results": 0
+      },
+      {
+        "query": "i did not commit",
+        "results": 0
+      },
+      {
+        "query": "dna proved i did",
+        "results": 0
+      },
+      {
+        "query": "commit the murder",
+        "results": 0
+      },
+      {
+        "query": "not commit the",
+        "results": 0
+      },
+      {
+        "query": "dna proved i",
+        "results": 0
+      },
+      {
+        "query": "did not commit",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T12",
+    "person": "Anthony Ray Hinton",
+    "claim": "I spent thirty years on death row for a crime I did not commit.",
+    "currentVideoId": "po2ui6EYW8Y",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i spent thirty years on death row for a crime i did not commit",
+        "results": 0
+      },
+      {
+        "query": "thirty years on death row for a crime",
+        "results": 0
+      },
+      {
+        "query": "spent thirty years on death row for a",
+        "results": 0
+      },
+      {
+        "query": "i spent thirty years on death row for",
+        "results": 0
+      },
+      {
+        "query": "years on death row for a crime i",
+        "results": 0
+      },
+      {
+        "query": "spent thirty years on death row for",
+        "results": 0
+      },
+      {
+        "query": "i spent thirty years on death row",
+        "results": 0
+      },
+      {
+        "query": "thirty years on death row for a",
+        "results": 0
+      },
+      {
+        "query": "years on death row for a crime",
+        "results": 0
+      },
+      {
+        "query": "spent thirty years on death row",
+        "results": 0
+      },
+      {
+        "query": "i spent thirty years on death",
+        "results": 0
+      },
+      {
+        "query": "thirty years on death row for",
+        "results": 0
+      },
+      {
+        "query": "a crime i did not commit",
+        "results": 0
+      },
+      {
+        "query": "spent thirty years on death",
+        "results": 0
+      },
+      {
+        "query": "thirty years on death row",
+        "results": 0
+      },
+      {
+        "query": "i spent thirty years on",
+        "results": 0
+      },
+      {
+        "query": "crime i did not commit",
+        "results": 0
+      },
+      {
+        "query": "thirty years on death",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T13",
+    "person": "Elizabeth Smart",
+    "claim": "I was held captive for nine months.",
+    "currentVideoId": "2w-ZdPkNvFY",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i was held captive for nine months",
+        "results": 0
+      },
+      {
+        "query": "was held captive for nine months",
+        "results": 0
+      },
+      {
+        "query": "i was held captive for nine",
+        "results": 0
+      },
+      {
+        "query": "held captive for nine months",
+        "results": 0
+      },
+      {
+        "query": "was held captive for nine",
+        "results": 0
+      },
+      {
+        "query": "i was held captive for",
+        "results": 0
+      },
+      {
+        "query": "captive for nine months",
+        "results": 0
+      },
+      {
+        "query": "held captive for nine",
+        "results": 0
+      },
+      {
+        "query": "was held captive for",
+        "results": 0
+      },
+      {
+        "query": "i was held captive",
+        "results": 0
+      },
+      {
+        "query": "was held captive",
+        "results": 0
+      },
+      {
+        "query": "held captive for",
+        "results": 0
+      },
+      {
+        "query": "captive for nine",
+        "results": 0
+      },
+      {
+        "query": "for nine months",
+        "results": 0
+      },
+      {
+        "query": "held captive",
+        "results": 0
+      },
+      {
+        "query": "nine months",
+        "results": 0
+      },
+      {
+        "query": "captive for",
+        "results": 0
+      },
+      {
+        "query": "was held",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T14",
+    "person": "Jaycee Dugard",
+    "claim": "I was held captive for eighteen years.",
+    "currentVideoId": "yXRPgKLnWnU",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i was held captive for eighteen years",
+        "results": 0
+      },
+      {
+        "query": "was held captive for eighteen years",
+        "results": 0
+      },
+      {
+        "query": "i was held captive for eighteen",
+        "results": 0
+      },
+      {
+        "query": "held captive for eighteen years",
+        "results": 0
+      },
+      {
+        "query": "was held captive for eighteen",
+        "results": 0
+      },
+      {
+        "query": "i was held captive for",
+        "results": 0
+      },
+      {
+        "query": "captive for eighteen years",
+        "results": 0
+      },
+      {
+        "query": "held captive for eighteen",
+        "results": 0
+      },
+      {
+        "query": "was held captive for",
+        "results": 0
+      },
+      {
+        "query": "i was held captive",
+        "results": 0
+      },
+      {
+        "query": "captive for eighteen",
+        "results": 0
+      },
+      {
+        "query": "for eighteen years",
+        "results": 0
+      },
+      {
+        "query": "was held captive",
+        "results": 0
+      },
+      {
+        "query": "held captive for",
+        "results": 0
+      },
+      {
+        "query": "eighteen years",
+        "results": 0
+      },
+      {
+        "query": "held captive",
+        "results": 0
+      },
+      {
+        "query": "for eighteen",
+        "results": 0
+      },
+      {
+        "query": "captive for",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T15",
+    "person": "Mary Vincent",
+    "claim": "He cut off both my arms, and I survived.",
+    "currentVideoId": "W259o2tO2pc",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "he cut off both my arms and i survived",
+        "results": 0
+      },
+      {
+        "query": "cut off both my arms and i survived",
+        "results": 0
+      },
+      {
+        "query": "he cut off both my arms and i",
+        "results": 0
+      },
+      {
+        "query": "off both my arms and i survived",
+        "results": 0
+      },
+      {
+        "query": "he cut off both my arms and",
+        "results": 0
+      },
+      {
+        "query": "cut off both my arms and i",
+        "results": 0
+      },
+      {
+        "query": "he cut off both my arms",
+        "results": 0
+      },
+      {
+        "query": "cut off both my arms and",
+        "results": 0
+      },
+      {
+        "query": "both my arms and i survived",
+        "results": 0
+      },
+      {
+        "query": "off both my arms and i",
+        "results": 0
+      },
+      {
+        "query": "cut off both my arms",
+        "results": 0
+      },
+      {
+        "query": "off both my arms and",
+        "results": 0
+      },
+      {
+        "query": "he cut off both my",
+        "results": 0
+      },
+      {
+        "query": "my arms and i survived",
+        "results": 0
+      },
+      {
+        "query": "off both my arms",
+        "results": 0
+      },
+      {
+        "query": "he cut off both",
+        "results": 0
+      },
+      {
+        "query": "cut off both my",
+        "results": 0
+      },
+      {
+        "query": "arms and i survived",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T16",
+    "person": "Aron Ralston",
+    "claim": "I cut off my own arm to survive.",
+    "currentVideoId": "idLfpNH5KTc",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i cut off my own arm to survive",
+        "results": 0
+      },
+      {
+        "query": "cut off my own arm to survive",
+        "results": 0
+      },
+      {
+        "query": "i cut off my own arm to",
+        "results": 0
+      },
+      {
+        "query": "off my own arm to survive",
+        "results": 0
+      },
+      {
+        "query": "i cut off my own arm",
+        "results": 0
+      },
+      {
+        "query": "cut off my own arm to",
+        "results": 0
+      },
+      {
+        "query": "cut off my own arm",
+        "results": 0
+      },
+      {
+        "query": "my own arm to survive",
+        "results": 0
+      },
+      {
+        "query": "off my own arm to",
+        "results": 0
+      },
+      {
+        "query": "i cut off my own",
+        "results": 0
+      },
+      {
+        "query": "own arm to survive",
+        "results": 0
+      },
+      {
+        "query": "off my own arm",
+        "results": 0
+      },
+      {
+        "query": "cut off my own",
+        "results": 0
+      },
+      {
+        "query": "my own arm to",
+        "results": 0
+      },
+      {
+        "query": "arm to survive",
+        "results": 0
+      },
+      {
+        "query": "own arm to",
+        "results": 0
+      },
+      {
+        "query": "off my own",
+        "results": 0
+      },
+      {
+        "query": "my own arm",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T17",
+    "person": "Harrison Okene",
+    "claim": "I survived nearly three days in an air pocket inside a sunken ship.",
+    "currentVideoId": "qevehxLe2s4",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i survived nearly three days in an air pocket inside a sunken ship",
+        "results": 0
+      },
+      {
+        "query": "survived nearly three days in an air pocket",
+        "results": 0
+      },
+      {
+        "query": "nearly three days in an air pocket inside",
+        "results": 0
+      },
+      {
+        "query": "i survived nearly three days in an air",
+        "results": 0
+      },
+      {
+        "query": "in an air pocket inside a sunken ship",
+        "results": 0
+      },
+      {
+        "query": "survived nearly three days in an air",
+        "results": 0
+      },
+      {
+        "query": "an air pocket inside a sunken ship",
+        "results": 0
+      },
+      {
+        "query": "three days in an air pocket inside",
+        "results": 0
+      },
+      {
+        "query": "nearly three days in an air pocket",
+        "results": 0
+      },
+      {
+        "query": "air pocket inside a sunken ship",
+        "results": 0
+      },
+      {
+        "query": "survived nearly three days in an",
+        "results": 0
+      },
+      {
+        "query": "i survived nearly three days in",
+        "results": 0
+      },
+      {
+        "query": "an air pocket inside a sunken",
+        "results": 0
+      },
+      {
+        "query": "survived nearly three days in",
+        "results": 0
+      },
+      {
+        "query": "i survived nearly three days",
+        "results": 0
+      },
+      {
+        "query": "pocket inside a sunken ship",
+        "results": 0
+      },
+      {
+        "query": "air pocket inside a sunken",
+        "results": 0
+      },
+      {
+        "query": "survived nearly three days",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T18",
+    "person": "Ricky Megee",
+    "claim": "I survived 71 days alone in the Australian outback.",
+    "currentVideoId": "Ka0MVmd5Tes",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i survived 71 days alone in the australian outback",
+        "results": 0
+      },
+      {
+        "query": "survived 71 days alone in the australian outback",
+        "results": 0
+      },
+      {
+        "query": "i survived 71 days alone in the australian",
+        "results": 0
+      },
+      {
+        "query": "survived 71 days alone in the australian",
+        "results": 0
+      },
+      {
+        "query": "71 days alone in the australian outback",
+        "results": 0
+      },
+      {
+        "query": "i survived 71 days alone in the",
+        "results": 0
+      },
+      {
+        "query": "days alone in the australian outback",
+        "results": 0
+      },
+      {
+        "query": "71 days alone in the australian",
+        "results": 0
+      },
+      {
+        "query": "survived 71 days alone in the",
+        "results": 0
+      },
+      {
+        "query": "i survived 71 days alone in",
+        "results": 0
+      },
+      {
+        "query": "survived 71 days alone in",
+        "results": 0
+      },
+      {
+        "query": "i survived 71 days alone",
+        "results": 0
+      },
+      {
+        "query": "alone in the australian outback",
+        "results": 0
+      },
+      {
+        "query": "days alone in the australian",
+        "results": 0
+      },
+      {
+        "query": "survived 71 days alone",
+        "results": 0
+      },
+      {
+        "query": "i survived 71 days",
+        "results": 0
+      },
+      {
+        "query": "71 days alone in",
+        "results": 0
+      },
+      {
+        "query": "in the australian outback",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T19",
+    "person": "Robert Downey Jr.",
+    "claim": "My addiction led to prison.",
+    "currentVideoId": "mFol0tP0pGg",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "my addiction led to prison",
+        "results": 0
+      },
+      {
+        "query": "addiction led to prison",
+        "results": 0
+      },
+      {
+        "query": "my addiction led to",
+        "results": 0
+      },
+      {
+        "query": "my addiction led",
+        "results": 0
+      },
+      {
+        "query": "addiction led to",
+        "results": 0
+      },
+      {
+        "query": "led to prison",
+        "results": 0
+      },
+      {
+        "query": "addiction led",
+        "results": 0
+      },
+      {
+        "query": "my addiction",
+        "results": 0
+      },
+      {
+        "query": "to prison",
+        "results": 0
+      },
+      {
+        "query": "led to",
+        "results": 0
+      },
+      {
+        "query": "addiction led prison",
+        "results": 0
+      },
+      {
+        "query": "led prison",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T20",
+    "person": "Mike Tyson",
+    "claim": "I bit Evander Holyfield's ear.",
+    "currentVideoId": "qC4AG8x2768",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i bit evander holyfield s ear",
+        "results": 0
+      },
+      {
+        "query": "bit evander holyfield s ear",
+        "results": 0
+      },
+      {
+        "query": "i bit evander holyfield s",
+        "results": 0
+      },
+      {
+        "query": "evander holyfield s ear",
+        "results": 0
+      },
+      {
+        "query": "bit evander holyfield s",
+        "results": 0
+      },
+      {
+        "query": "i bit evander holyfield",
+        "results": 0
+      },
+      {
+        "query": "bit evander holyfield",
+        "results": 0
+      },
+      {
+        "query": "evander holyfield s",
+        "results": 0
+      },
+      {
+        "query": "holyfield s ear",
+        "results": 0
+      },
+      {
+        "query": "i bit evander",
+        "results": 0
+      },
+      {
+        "query": "evander holyfield",
+        "results": 0
+      },
+      {
+        "query": "holyfield s",
+        "results": 0
+      },
+      {
+        "query": "bit evander",
+        "results": 0
+      },
+      {
+        "query": "s ear",
+        "results": 0
+      },
+      {
+        "query": "bit evander holyfield ear",
+        "results": 0
+      },
+      {
+        "query": "evander holyfield ear",
+        "results": 0
+      },
+      {
+        "query": "holyfield ear",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T21",
+    "person": "Michael Packard",
+    "claim": "A humpback whale had me inside its mouth and spit me back out.",
+    "currentVideoId": "K7iAlZzVenU",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "a humpback whale had me inside its mouth and spit me back out",
+        "results": 0
+      },
+      {
+        "query": "inside its mouth and spit me back out",
+        "results": 0
+      },
+      {
+        "query": "humpback whale had me inside its mouth and",
+        "results": 0
+      },
+      {
+        "query": "a humpback whale had me inside its mouth",
+        "results": 0
+      },
+      {
+        "query": "whale had me inside its mouth and spit",
+        "results": 0
+      },
+      {
+        "query": "humpback whale had me inside its mouth",
+        "results": 0
+      },
+      {
+        "query": "inside its mouth and spit me back",
+        "results": 0
+      },
+      {
+        "query": "its mouth and spit me back out",
+        "results": 0
+      },
+      {
+        "query": "a humpback whale had me inside its",
+        "results": 0
+      },
+      {
+        "query": "mouth and spit me back out",
+        "results": 0
+      },
+      {
+        "query": "humpback whale had me inside its",
+        "results": 0
+      },
+      {
+        "query": "a humpback whale had me inside",
+        "results": 0
+      },
+      {
+        "query": "whale had me inside its mouth",
+        "results": 0
+      },
+      {
+        "query": "humpback whale had me inside",
+        "results": 0
+      },
+      {
+        "query": "inside its mouth and spit",
+        "results": 0
+      },
+      {
+        "query": "mouth and spit me back",
+        "results": 0
+      },
+      {
+        "query": "and spit me back out",
+        "results": 0
+      },
+      {
+        "query": "spit me back out",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T22",
+    "person": "Sammy Gravano",
+    "claim": "I was involved in nineteen murders.",
+    "currentVideoId": "diqdKgEzOkE",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i was involved in nineteen murders",
+        "results": 0
+      },
+      {
+        "query": "was involved in nineteen murders",
+        "results": 0
+      },
+      {
+        "query": "i was involved in nineteen",
+        "results": 0
+      },
+      {
+        "query": "involved in nineteen murders",
+        "results": 0
+      },
+      {
+        "query": "was involved in nineteen",
+        "results": 0
+      },
+      {
+        "query": "i was involved in",
+        "results": 0
+      },
+      {
+        "query": "involved in nineteen",
+        "results": 0
+      },
+      {
+        "query": "in nineteen murders",
+        "results": 0
+      },
+      {
+        "query": "was involved in",
+        "results": 0
+      },
+      {
+        "query": "i was involved",
+        "results": 0
+      },
+      {
+        "query": "nineteen murders",
+        "results": 0
+      },
+      {
+        "query": "was involved",
+        "results": 0
+      },
+      {
+        "query": "involved in",
+        "results": 0
+      },
+      {
+        "query": "in nineteen",
+        "results": 0
+      },
+      {
+        "query": "involved nineteen murders",
+        "results": 0
+      },
+      {
+        "query": "involved nineteen",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T23",
+    "person": "Paul Templer",
+    "claim": "I was trapped inside a hippo's mouth and survived repeated attacks.",
+    "currentVideoId": "sjVgpvlzrXM",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i was trapped inside a hippo s mouth and survived repeated attacks",
+        "results": 0
+      },
+      {
+        "query": "a hippo s mouth and survived repeated attacks",
+        "results": 0
+      },
+      {
+        "query": "inside a hippo s mouth and survived repeated",
+        "results": 0
+      },
+      {
+        "query": "trapped inside a hippo s mouth and survived",
+        "results": 0
+      },
+      {
+        "query": "was trapped inside a hippo s mouth and",
+        "results": 0
+      },
+      {
+        "query": "hippo s mouth and survived repeated attacks",
+        "results": 0
+      },
+      {
+        "query": "a hippo s mouth and survived repeated",
+        "results": 0
+      },
+      {
+        "query": "inside a hippo s mouth and survived",
+        "results": 0
+      },
+      {
+        "query": "was trapped inside a hippo s mouth",
+        "results": 0
+      },
+      {
+        "query": "s mouth and survived repeated attacks",
+        "results": 0
+      },
+      {
+        "query": "hippo s mouth and survived repeated",
+        "results": 0
+      },
+      {
+        "query": "trapped inside a hippo s mouth",
+        "results": 0
+      },
+      {
+        "query": "was trapped inside a hippo s",
+        "results": 0
+      },
+      {
+        "query": "mouth and survived repeated attacks",
+        "results": 0
+      },
+      {
+        "query": "s mouth and survived repeated",
+        "results": 0
+      },
+      {
+        "query": "trapped inside a hippo s",
+        "results": 0
+      },
+      {
+        "query": "hippo s mouth and survived",
+        "results": 0
+      },
+      {
+        "query": "and survived repeated attacks",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T24",
+    "person": "Michael Morton",
+    "claim": "I spent nearly 25 years in prison for my wife's murder, but DNA proved I was innocent.",
+    "currentVideoId": "kv3j7yd7kTk",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i spent nearly 25 years in prison for my wife s murder but dna proved i was innocent",
+        "results": 0
+      },
+      {
+        "query": "spent nearly 25 years in prison for my",
+        "results": 0
+      },
+      {
+        "query": "s murder but dna proved i was innocent",
+        "results": 0
+      },
+      {
+        "query": "i spent nearly 25 years in prison for",
+        "results": 0
+      },
+      {
+        "query": "nearly 25 years in prison for my wife",
+        "results": 0
+      },
+      {
+        "query": "spent nearly 25 years in prison for",
+        "results": 0
+      },
+      {
+        "query": "i spent nearly 25 years in prison",
+        "results": 0
+      },
+      {
+        "query": "wife s murder but dna proved i",
+        "results": 0
+      },
+      {
+        "query": "my wife s murder but dna proved",
+        "results": 0
+      },
+      {
+        "query": "spent nearly 25 years in prison",
+        "results": 0
+      },
+      {
+        "query": "wife s murder but dna proved",
+        "results": 0
+      },
+      {
+        "query": "nearly 25 years in prison for",
+        "results": 0
+      },
+      {
+        "query": "i spent nearly 25 years in",
+        "results": 0
+      },
+      {
+        "query": "nearly 25 years in prison",
+        "results": 0
+      },
+      {
+        "query": "spent nearly 25 years in",
+        "results": 0
+      },
+      {
+        "query": "i spent nearly 25 years",
+        "results": 0
+      },
+      {
+        "query": "s murder but dna proved",
+        "results": 0
+      },
+      {
+        "query": "spent nearly 25 years",
+        "results": 0
+      }
+    ]
+  },
+  {
+    "caseNumber": "T25",
+    "person": "Lance Armstrong",
+    "claim": "I used banned substances during my Tour victories.",
+    "currentVideoId": "FRXzbNReCR0",
+    "recommended": null,
+    "topCandidates": [],
+    "queriesTried": [
+      {
+        "query": "i used banned substances during my tour victories",
+        "results": 0
+      },
+      {
+        "query": "used banned substances during my tour victories",
+        "results": 0
+      },
+      {
+        "query": "i used banned substances during my tour",
+        "results": 0
+      },
+      {
+        "query": "banned substances during my tour victories",
+        "results": 0
+      },
+      {
+        "query": "used banned substances during my tour",
+        "results": 0
+      },
+      {
+        "query": "i used banned substances during my",
+        "results": 0
+      },
+      {
+        "query": "substances during my tour victories",
+        "results": 0
+      },
+      {
+        "query": "used banned substances during my",
+        "results": 0
+      },
+      {
+        "query": "i used banned substances during",
+        "results": 0
+      },
+      {
+        "query": "banned substances during my tour",
+        "results": 0
+      },
+      {
+        "query": "used banned substances during",
+        "results": 0
+      },
+      {
+        "query": "banned substances during my",
+        "results": 0
+      },
+      {
+        "query": "substances during my tour",
+        "results": 0
+      },
+      {
+        "query": "i used banned substances",
+        "results": 0
+      },
+      {
+        "query": "banned substances during",
+        "results": 0
+      },
+      {
+        "query": "used banned substances",
+        "results": 0
+      },
+      {
+        "query": "substances during my",
+        "results": 0
+      },
+      {
+        "query": "my tour victories",
+        "results": 0
+      }
+    ]
+  }
+]
