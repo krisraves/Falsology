@@ -1,0 +1,49 @@
+name: Inspect running Whisper services
+
+on:
+  push:
+    paths:
+      - .github/workflows/inspect-running-whisper-services.yml
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch app sources and API configs
+        run: |
+          python <<'PY'
+          import json,urllib.request
+          from pathlib import Path
+          ids=['devilent2/whisper-youtube','kazuk/youtube-whisper','kazuk/youtube-whisper-08','RASMUS/Whisper-youtube-crosslingual-subtitles','artificialguybr/VIDEO-TRANSLATION-TRANSCRIPTION','aashu1707/audio_video_transcript','Senasu/YouTube-Video-Transcription-Summarization']
+          out={}
+          for sid in ids:
+              row={}
+              for name in ['app.py','requirements.txt','README.md']:
+                  try:
+                      req=urllib.request.Request('https://huggingface.co/spaces/'+sid+'/resolve/main/'+name+'?download=true',headers={'User-Agent':'Mozilla/5.0'})
+                      with urllib.request.urlopen(req,timeout=30) as r:data=r.read()
+                      row[name]=data.decode('utf-8','replace')[:80000]
+                  except Exception as e:row[name]={'error':f'{type(e).__name__}: {e}'}
+              out[sid]=row
+          Path('audit').mkdir(exist_ok=True);Path('audit/running-whisper-service-source.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/inspect-running-whisper-services.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record running Whisper service source"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
