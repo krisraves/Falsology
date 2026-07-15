@@ -1,4 +1,4 @@
-name: Proxied browser caption test
+name: Player configuration extraction test
 
 on:
   pull_request:
@@ -10,195 +10,59 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: '22'
-      - name: Install Chromium
-        run: |
-          npm install --no-save playwright@1.55.0
-          npx playwright install --with-deps chromium
-      - name: Load YouTube through verified egress routes
+          python-version: '3.12'
+      - name: Install HTTP client
+        run: pip install -U requests
+      - name: Extract proxied YouTube player configuration
         shell: bash
         run: |
-          node <<'JS'
-          const fs = require('fs');
-          const { chromium } = require('playwright');
+          python <<'PY'
+          import json,re
+          from pathlib import Path
+          import requests
 
-          const proxies = [
-            'http://34.43.46.91:443',
-            'http://147.45.60.249:1082',
-            'http://50.205.246.13:80',
-            'http://146.190.60.147:8003',
-            'http://117.236.124.166:3128',
-            'http://117.7.81.125:2027',
-            'http://181.39.25.196:8118',
-            'http://118.71.44.153:2080',
-            'http://103.183.8.185:8080',
-            'http://181.204.185.98:8081',
-            'http://38.58.64.139:999',
-            'http://103.177.104.121:8080',
-          ];
-          const videoId = '3MuPWV5cTio';
-          const origin = 'https://falsology.vercel.app';
-
-          function extractBalancedArray(text, marker) {
-            const markerIndex = text.indexOf(marker);
-            if (markerIndex < 0) return null;
-            const start = text.indexOf('[', markerIndex);
-            if (start < 0) return null;
-            let depth = 0;
-            let inString = false;
-            let escaped = false;
-            for (let index = start; index < text.length; index += 1) {
-              const char = text[index];
-              if (escaped) { escaped = false; continue; }
-              if (inString) {
-                if (char === '\\') escaped = true;
-                else if (char === '"') inString = false;
-                continue;
-              }
-              if (char === '"') inString = true;
-              else if (char === '[') depth += 1;
-              else if (char === ']') {
-                depth -= 1;
-                if (depth === 0) return text.slice(start, index + 1);
-              }
-            }
-            return null;
+          proxies=['34.43.46.91:443','147.45.60.249:1082','50.205.246.13:80','146.190.60.147:8003','117.236.124.166:3128']
+          video_id='3MuPWV5cTio'
+          origin='https://falsology.vercel.app'
+          urls={
+            'embed':f'https://www.youtube.com/embed/{video_id}?enablejsapi=1&cc_load_policy=1&controls=1&playsinline=1&hl=en&origin=https%3A%2F%2Ffalsology.vercel.app',
+            'watch':f'https://www.youtube.com/watch?v={video_id}&hl=en',
           }
-
-          function parseJson3(payload) {
-            const rows = [];
-            for (const event of payload?.events || []) {
-              const text = (event.segs || []).map((segment) => segment.utf8 || '').join('').replace(/\n/g, ' ').trim();
-              if (!text) continue;
-              rows.push({ text, start: Number(event.tStartMs || 0) / 1000, duration: Number(event.dDurationMs || 0) / 1000 });
-            }
-            return rows;
-          }
-
-          async function inspect(proxyServer) {
-            const item = { proxyServer, network: [] };
-            let browser;
-            try {
-              browser = await chromium.launch({
-                headless: true,
-                proxy: { server: proxyServer },
-                args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'],
-              });
-              const context = await browser.newContext({
-                locale: 'en-US',
-                ignoreHTTPSErrors: true,
-                extraHTTPHeaders: { Referer: `${origin}/play` },
-              });
-              const page = await context.newPage();
-              page.setDefaultTimeout(4000);
-              page.on('response', async (response) => {
-                if (!/timedtext|caption|videoplayback/.test(response.url())) return;
-                const entry = { url: response.url(), status: response.status(), headers: response.headers() };
-                if (response.url().includes('timedtext')) {
-                  try { const body = await response.text(); entry.length = body.length; entry.prefix = body.slice(0, 400); entry.body = body; } catch (error) { entry.error = String(error); }
-                }
-                item.network.push(entry);
-              });
-
-              const params = new URLSearchParams({ enablejsapi: '1', cc_load_policy: '1', controls: '1', playsinline: '1', hl: 'en', origin });
-              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?${params}`, { waitUntil: 'commit', timeout: 20000, referer: `${origin}/play` });
-              item.navigationStatus = response?.status() ?? null;
-              await page.waitForTimeout(5000);
-
-              const buttons = ['button[aria-label^="Play"]', '.ytp-large-play-button', '.ytp-cued-thumbnail-overlay', '.ytp-play-button'];
-              for (const selector of buttons) {
-                const locator = page.locator(selector).first();
-                if (!await locator.count()) continue;
-                try { await locator.click({ force: true, timeout: 2500 }); item.clicked = selector; break; } catch (error) { item.clickError = String(error); }
-              }
-              await page.waitForTimeout(8000);
-
-              const subtitleButton = page.locator('.ytp-subtitles-button').first();
-              item.subtitleButtonCount = await subtitleButton.count();
-              if (item.subtitleButtonCount) {
-                try { await subtitleButton.click({ force: true, timeout: 2500 }); item.subtitleClicked = true; } catch (error) { item.subtitleClickError = String(error); }
-              }
-              await page.waitForTimeout(4000);
-
-              item.dom = await page.evaluate(() => {
-                const video = document.querySelector('video');
-                const scripts = Array.from(document.scripts).map((script) => script.textContent || '').filter((text) => /captionTracks|playerCaptionsTracklistRenderer|timedtext/.test(text));
-                return {
-                  title: document.title,
-                  body: (document.body?.innerText || '').slice(0, 2200),
-                  errorText: document.querySelector('.ytp-error')?.textContent || null,
-                  video: video ? {
-                    readyState: video.readyState,
-                    duration: video.duration,
-                    currentTime: video.currentTime,
-                    paused: video.paused,
-                    src: video.src,
-                    currentSrc: video.currentSrc,
-                    textTracks: Array.from(video.textTracks || []).map((track) => ({
-                      kind: track.kind,
-                      label: track.label,
-                      language: track.language,
-                      mode: track.mode,
-                      cueCount: track.cues ? track.cues.length : null,
-                      cues: track.cues ? Array.from(track.cues).slice(0, 1000).map((cue) => ({ startTime: cue.startTime, endTime: cue.endTime, text: cue.text })) : [],
-                    })),
-                  } : null,
-                  globalCaptions: window.ytInitialPlayerResponse?.captions || null,
-                  captionsOnScreen: Array.from(document.querySelectorAll('.ytp-caption-segment')).map((node) => node.textContent || ''),
-                  captionScripts: scripts.slice(0, 5).map((text) => text.slice(0, 900000)),
-                };
-              });
-
-              let tracks = item.dom.globalCaptions?.playerCaptionsTracklistRenderer?.captionTracks || [];
-              if (!tracks.length) {
-                for (const scriptText of item.dom.captionScripts || []) {
-                  const raw = extractBalancedArray(scriptText, '"captionTracks":');
-                  if (!raw) continue;
-                  try { tracks = JSON.parse(raw); if (tracks.length) break; } catch {}
-                }
-              }
-              item.tracks = tracks.map((track) => ({ baseUrl: track.baseUrl, languageCode: track.languageCode, kind: track.kind, name: track.name }));
-              const english = tracks.find((track) => String(track.languageCode || '').startsWith('en')) || tracks[0];
-              if (english?.baseUrl) {
-                let url = english.baseUrl;
-                url += url.includes('?') ? '&fmt=json3' : '?fmt=json3';
-                const captionResponse = await context.request.get(url, { timeout: 30000, headers: { Referer: `${origin}/play` } });
-                const body = await captionResponse.text();
-                item.captionFetch = { status: captionResponse.status(), length: body.length, prefix: body.slice(0, 400) };
-                try { item.captionRows = parseJson3(JSON.parse(body)); } catch { item.captionRows = []; }
-              }
-              item.success = Boolean(
-                item.captionRows?.length ||
-                item.tracks?.length ||
-                item.dom?.video?.readyState > 0 ||
-                item.network.some((entry) => entry.url.includes('videoplayback'))
-              );
-              await context.close();
-            } catch (error) {
-              item.error = String(error?.stack || error);
-            } finally {
-              if (browser) await browser.close().catch(() => {});
-            }
-            return item;
-          }
-
-          (async () => {
-            const results = [];
-            for (const proxy of proxies) {
-              const result = await inspect(proxy);
-              results.push(result);
-              console.log(JSON.stringify({ proxy, success: result.success, status: result.navigationStatus, title: result.dom?.title, errorText: result.dom?.errorText, video: result.dom?.video ? { readyState: result.dom.video.readyState, duration: result.dom.video.duration, currentTime: result.dom.video.currentTime } : null, tracks: result.tracks?.length || 0, rows: result.captionRows?.length || 0, network: result.network?.length || 0, error: result.error }, null, 2));
-              if (result.success && (result.captionRows?.length || result.tracks?.length)) break;
-            }
-            fs.writeFileSync('proxied-browser-caption-test.json', JSON.stringify(results, null, 2));
-          })().catch((error) => { console.error(error); process.exit(1); });
-          JS
+          headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36','Referer':origin+'/play','Accept-Language':'en-US,en;q=0.9'}
+          marker_names=['ytInitialPlayerResponse','raw_player_response','player_response','PLAYER_CONFIG','PLAYER_VARS','captionTracks','playerCaptionsTracklistRenderer','timedtext','INNERTUBE_API_KEY','playabilityStatus']
+          report=[]
+          saved=False
+          for proxy in proxies:
+            route='http://'+proxy
+            for kind,url in urls.items():
+              item={'proxy':proxy,'kind':kind}
+              try:
+                response=requests.get(url,headers=headers,proxies={'http':route,'https':route},timeout=15,verify=True)
+                text=response.text
+                item.update({'status':response.status_code,'length':len(text),'title':re.search(r'<title[^>]*>(.*?)</title>',text,re.S).group(1)[:300] if re.search(r'<title[^>]*>(.*?)</title>',text,re.S) else None,'markers':{name:text.find(name) for name in marker_names}})
+                contexts={}
+                for name,position in item['markers'].items():
+                  if position>=0:contexts[name]=text[max(0,position-500):position+3000]
+                item['contexts']=contexts
+                # Save the first full, non-challenged page for offline inspection.
+                challenged='confirm you' in text.lower() and 'not a bot' in text.lower()
+                if response.status_code==200 and len(text)>100000 and not challenged and not saved:
+                  Path(f'proxied-youtube-{kind}.html').write_text(text)
+                  saved=True
+              except Exception as error:item['error']=f'{type(error).__name__}: {error}'
+              report.append(item)
+            if saved:break
+          Path('player-config-report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+          print(json.dumps(report,indent=2,ensure_ascii=False)[:50000])
+          PY
       - uses: actions/upload-artifact@v4
         with:
-          name: proxied-browser-caption-test
-          path: proxied-browser-caption-test.json
+          name: player-config-extraction
+          path: |
+            player-config-report.json
+            proxied-youtube-*.html
