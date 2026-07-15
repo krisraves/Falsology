@@ -2,74 +2,71 @@ import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { claims } from "@/lib/claims";
 
-const featured = [claims.find((claim) => claim.caseNumber === "L01"), claims.find((claim) => claim.caseNumber === "T10"), claims.find((claim) => claim.caseNumber === "L23")].filter(Boolean);
+const levels = [
+  {
+    name: "Easy",
+    value: "easy",
+    internal: "easy",
+    description: "Recognizable cases. Clearer evidence.",
+  },
+  {
+    name: "Hard",
+    value: "hard",
+    internal: "medium",
+    description: "Less familiar footage. More context.",
+  },
+  {
+    name: "Expert",
+    value: "expert",
+    internal: "hard",
+    description: "Obscure interrogations and unbelievable truths.",
+  },
+] as const;
 
 export default function HomePage() {
   return (
-    <main className="detective-home">
-      <section className="detective-hero">
-        <div className="site-shell detective-hero-grid">
-          <div className="detective-hero-copy">
-            <p className="case-kicker">Interactive discernment training</p>
-            <h1>Everybody sounds believable <em>until the evidence arrives.</em></h1>
-            <p>Watch real statements from suspects, criminals, witnesses, survivors, and public figures. Make the call. Learn what actually exposes a lie.</p>
-            <div className="detective-hero-actions">
-              <Link href="/play" className="detective-primary">Open your first case →</Link>
-              <Link href="/methodology" className="detective-secondary">View the protocol</Link>
-            </div>
-            <div className="detective-proof">
-              <span><strong>50</strong><small>video cases</small></span>
-              <span><strong>25 / 25</strong><small>truth and lie</small></span>
-              <span><strong>≤ 2 min</strong><small>per evidence clip</small></span>
-            </div>
-          </div>
-          <div className="detective-hero-file" aria-label="Example detective case">
-            <div className="file-tabs"><span>CASE 013</span><span>INTERVIEW</span><i>ACTIVE</i></div>
-            <div className="file-portrait"><span>?</span><div className="scan-bar" /></div>
-            <blockquote>“I have never doped.”</blockquote>
-            <div className="file-checks"><span>Timeline</span><span>Corroboration</span><span>Records</span></div>
-            <div className="file-verdicts"><b>STATEMENT HOLDS</b><b>STATEMENT BREAKS</b></div>
-          </div>
+    <main className="simple-home">
+      <section className="simple-hero site-shell">
+        <p className="simple-kicker">Truth or lie?</p>
+        <h1>One clip.<br />One call.</h1>
+        <p className="simple-lede">Real interviews, interrogations, and testimony. Half true. Half false.</p>
+
+        <div className="level-grid" aria-label="Choose a difficulty level">
+          {levels.map((level, index) => {
+            const levelClaims = claims.filter((claim) => claim.difficulty === level.internal);
+            return (
+              <Link className={`level-card level-${level.value}`} href={`/play?difficulty=${level.value}`} key={level.value}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h2>{level.name}</h2>
+                <p>{level.description}</p>
+                <small>{levelClaims.length} randomized cases</small>
+                <b>Play →</b>
+              </Link>
+            );
+          })}
         </div>
+
+        <Link href="/play" className="mix-link">Mix all 50 cases</Link>
       </section>
 
-      <div className="site-shell home-leaderboard"><AdSlot placement="leaderboard" /></div>
-
-      <section className="detective-process site-shell">
-        <header><p className="case-kicker">The protocol</p><h2>Do not “read body language.” Read the case.</h2></header>
-        <div className="process-grid">
-          <article><span>01</span><h3>Define</h3><p>Pin down the exact sentence.</p></article>
-          <article><span>02</span><h3>Check</h3><p>Test the timeline and records.</p></article>
-          <article><span>03</span><h3>Corroborate</h3><p>Find evidence outside the speaker.</p></article>
-          <article><span>04</span><h3>Calibrate</h3><p>Match confidence to proof.</p></article>
-        </div>
+      <section className="simple-stats site-shell" aria-label="Game facts">
+        <span><strong>50</strong><small>video cases</small></span>
+        <span><strong>25</strong><small>truths</small></span>
+        <span><strong>25</strong><small>lies</small></span>
+        <span><strong>≤45s</strong><small>per clip</small></span>
       </section>
 
-      <section className="detective-cases site-shell">
-        <div className="detective-section-heading">
-          <div><p className="case-kicker">Inside the case board</p><h2>Real people. Narrow statements. Verifiable outcomes.</h2></div>
-          <Link href="/archive">Browse all cases →</Link>
-        </div>
-        <div className="detective-preview-grid">
-          {featured.map((claim) => claim ? (
-            <Link href={`/claim/${claim.slug}`} key={claim.id} className="detective-preview-card">
-              <span>{claim.caseNumber}</span>
-              <small>{claim.category}</small>
-              <h3>{claim.person}</h3>
-              <blockquote>“{claim.claim}”</blockquote>
-              <b>Open evidence →</b>
-            </Link>
-          ) : null)}
-        </div>
+      <section className="site-shell simple-ad"><AdSlot placement="leaderboard" /></section>
+
+      <section className="simple-how site-shell">
+        <article><span>1</span><h3>Watch</h3></article>
+        <article><span>2</span><h3>Decide</h3></article>
+        <article><span>3</span><h3>Check the evidence</h3></article>
       </section>
 
-      <section className="site-shell home-inline-ad"><AdSlot placement="inline" /></section>
-
-      <section className="discernment-mission">
-        <div className="site-shell mission-grid">
-          <div><p className="case-kicker">Why this exists</p><h2>The next fake will look more real than the last one.</h2></div>
-          <div><p>Falsology trains habits that survive deepfakes, clipped interviews, false certainty, and manufactured outrage.</p><Link href="/play" className="detective-primary">Start training →</Link></div>
-        </div>
+      <section className="simple-rule site-shell">
+        <p>No body-language tricks. Use timelines, records, and corroboration.</p>
+        <Link href="/methodology">How verdicts work →</Link>
       </section>
     </main>
   );
