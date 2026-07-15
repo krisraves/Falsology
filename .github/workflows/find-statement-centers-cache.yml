@@ -1,0 +1,132 @@
+name: Locate statements through timestamped transcript cache
+
+on:
+  push:
+    paths:
+      - .github/workflows/find-statement-centers-cache.yml
+
+permissions:
+  contents: write
+
+jobs:
+  locate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: statement-centered-clips
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install tools
+        run: pip install -U requests rapidfuzz
+      - name: Fetch timestamped transcripts and locate statements
+        shell: bash
+        run: |
+          python <<'PY'
+          import html,json,re,time
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          from pathlib import Path
+          import requests
+          from rapidfuzz import fuzz
+
+          API='https://youtube-transcript-storage.automatehub.workers.dev'
+          def load(p):return json.loads(Path(p).read_text())
+          base=[]
+          for p in sorted(Path('data/cases').glob('part*.json')):base.extend(load(p))
+          layers=[load('data/case-overrides.json'),load('data/direct-footage-replacements.json'),load('data/obscure-case-replacements.json'),load('data/english-weird-replacements.json')]
+          def merge(c,o):
+            if not o:return c
+            x={**c,**o};x['media']={**c.get('media',{}),**o.get('media',{})};return x
+          cases=[]
+          for c in base:
+            for layer in layers:c=merge(c,layer.get(c['caseNumber']))
+            cases.append(c)
+
+          def norm(t):
+            t=html.unescape(t or '').lower().replace('’',"'")
+            for a,b in [(r'\bi am\b',"i'm"),(r'\bdid not\b',"didn't"),(r'\bdo not\b',"don't"),(r'\bwas not\b',"wasn't"),(r'\bthey are\b',"they're"),(r'\bwe are\b',"we're"),(r'\bi have\b',"i've")]:t=re.sub(a,b,t)
+            return re.sub(r'\s+',' ',re.sub(r"[^a-z0-9']+",' ',t)).strip()
+          def parse_clock(value):
+            parts=value.strip().split(':')
+            try:
+              if len(parts)==2:return int(parts[0])*60+float(parts[1])
+              if len(parts)==3:return int(parts[0])*3600+int(parts[1])*60+float(parts[2])
+            except Exception:return None
+            return None
+          def timestamp_rows(value):
+            if isinstance(value,str):
+              try:value=json.loads(value)
+              except Exception:value=value.splitlines()
+            if not isinstance(value,list):return []
+            raw=[]
+            pattern=re.compile(r'^\s*(\d{1,2}:\d{2}(?::\d{2})?(?:\.\d+)?)\s*[-–—]\s*(.*)$')
+            for item in value:
+              if isinstance(item,dict):
+                start=item.get('start') or item.get('startSeconds') or item.get('offset')
+                text=item.get('text') or item.get('caption') or ''
+                if isinstance(start,(int,float)) and str(text).strip():raw.append({'start':float(start),'text':str(text).strip()})
+              else:
+                m=pattern.match(str(item))
+                if m:
+                  start=parse_clock(m.group(1));text=m.group(2).strip()
+                  if start is not None and text:raw.append({'start':start,'text':text})
+            raw.sort(key=lambda x:x['start']);rows=[]
+            for i,x in enumerate(raw):
+              nxt=raw[i+1]['start'] if i+1<len(raw) else x['start']+5
+              rows.append({'start':x['start'],'duration':max(.5,min(15,nxt-x['start'])),'text':x['text']})
+            return rows
+          def score(a,b):return max(fuzz.ratio(a,b),fuzz.partial_ratio(a,b),fuzz.token_set_ratio(a,b),fuzz.token_sort_ratio(a,b),fuzz.WRatio(a,b))
+          def best(rows,targets):
+            targets=[norm(x) for x in targets if norm(x)];matches=[]
+            for i in range(len(rows)):
+              text=''
+              for j in range(i,min(len(rows),i+20)):
+                text=(text+' '+rows[j]['text']).strip();candidate=norm(text)
+                raw=max(score(t,candidate) for t in targets)
+                st=rows[i]['start'];en=rows[j]['start']+rows[j]['duration'];span=en-st
+                adjusted=raw-max(0,span-25)*.3-max(0,j-i-12)*.5
+                matches.append({'score':round(adjusted,2),'rawScore':round(raw,2),'statementStartSeconds':round(st,2),'statementEndSeconds':round(en,2),'matchedText':text})
+            return sorted(matches,key=lambda x:x['score'],reverse=True)[:10]
+
+          session=requests.Session();session.headers.update({'User-Agent':'Falsology editorial timestamp audit'})
+          def fetch_record(vid):
+            errors=[]
+            try:
+              r=session.get(f'{API}/transcript/{vid}',timeout=20)
+              if r.ok:return r.json(),True,errors
+              errors.append(f'cache GET {r.status_code}: {r.text[:250]}')
+            except Exception as e:errors.append(f'cache GET {type(e).__name__}: {e}')
+            for attempt in range(2):
+              try:
+                r=session.post(f'{API}/fetch',json={'video':vid,'languages':['en'],'force':False},timeout=45)
+                if r.ok:
+                  payload=r.json();return payload.get('data') or payload,False,errors
+                errors.append(f'fetch POST {r.status_code}: {r.text[:300]}')
+              except Exception as e:errors.append(f'fetch POST {type(e).__name__}: {e}')
+              time.sleep(1.5)
+            return None,False,errors
+          def process(c):
+            record,cached,errors=fetch_record(c['media']['youtubeId']);rows=[]
+            if isinstance(record,dict):rows=timestamp_rows(record.get('timestamps'))
+            return {'caseNumber':c['caseNumber'],'person':c['person'],'claim':c['claim'],'transcriptTarget':c.get('transcript'),'verdict':c['verdict'],'videoId':c['media']['youtubeId'],'videoDurationSeconds':c['media'].get('videoDurationSeconds'),'cached':cached,'recordTitle':record.get('title') if isinstance(record,dict) else None,'timestampRows':len(rows),'topMatches':best(rows,[c.get('claim',''),c.get('transcript','')]) if rows else [],'preview':rows[:12],'errors':errors}
+
+          results=[]
+          with ThreadPoolExecutor(max_workers=5) as pool:
+            fs=[pool.submit(process,c) for c in cases]
+            for f in as_completed(fs):
+              x=f.result();results.append(x);m=x['topMatches'][0] if x['topMatches'] else None;print(x['caseNumber'],x['timestampRows'],m['rawScore'] if m else None,x['errors'][-1] if x['errors'] else '')
+          results.sort(key=lambda x:x['caseNumber'])
+          Path('timestamp-audit').mkdir(exist_ok=True)
+          Path('timestamp-audit/cache-caption-matches.json').write_text(json.dumps({'source':API,'cases':results},indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit report
+        run: |
+          rm .github/workflows/find-statement-centers-cache.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record cached timestamp matches" || exit 0
+          git push origin statement-centered-clips
