@@ -1,0 +1,3475 @@
+[
+  {
+    "id": "Divyanshuinfo/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "EinfachOlder/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "Javed7/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "Talvanes/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "buildingai/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "darttur/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "eaglelandsonce/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "hersia/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "neillk/youtube-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "neuralworm/youtube-transcription-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "rajesh1729/youtube-video-transcription-with-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 5
+  },
+  {
+    "id": "1s/YouTube-Video-Transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "DHESIGAN/video-to-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "Jahankhan01/Youtube-Transcription",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "Maxkillor/video-transcription-and-subtitling-1.0",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "RASMUS/Youtube-videos-with-crosslingual-transcriptions",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "Senasu/YouTube-Video-Transcription-Summarization",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "Timo123432345443/YoutubeTranscription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "Timo123432345443/youtube_transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "hesham111/whisper-transcription-api-youtube",
+    "title": null,
+    "sdk": null,
+    "tags": [
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 4
+  },
+  {
+    "id": "AIEngineer226/YoutubeTranscription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Abhishek279/Video_Transcription_Analysis",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Alpersx/YouTube-Video-Transcript-Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Aqdas/YouTube_Video_OpenAI_whisper",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "AreesaAshfaq/VideoTranscriptionandSummarisation",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Ashish0307/Video-Transcription-Multi-speaker",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "BEACON849322/youtube-subtitle-api",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "ClarityClips/clarityclips-youtube-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Danielzapirtan/video_transcription",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Docfile/Whisper-youtube-crosslingual-subtitles",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "whisper-event",
+      "speech-recognition",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "GhadaSaylami/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Hamza4100/ai-video-transcription-clip-extractor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "IRISLAB/VideoTranscription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "JaganathC/Video-Transcription-Summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Karwasze/Whisper-ASR-youtube-subtitles",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "MYousafRana/audio-video-transcription",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "MansoorSarookh/VideoTranscriptionAndSummarization",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Masterdqqq/Video-Transcription-Smart-Summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Mer000/Video-Transcription",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "MoonKnight79/VideoTranscriptionandSummarization",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Mubashir412/Video_Transcription_Classification",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "MuhammadQASIM111/VideoTranscriptionAndSummarization",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "MuhammadQASIM111/VideoTranscriptionAndSummarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Omid-sar/YouTube_Transcript_Analyzer",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "ProTecGames/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "RASMUS/Whisper-youtube-crosslingual-subtitles",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "whisper-event",
+      "speech-recognition",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Raanakhalil/VideoTranscriptionSummarization",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Sabbah13/Video_Call_Recording_and_Transcription_API_Service",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "SaeedBaloch/video-transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "SamerKharboush/free-fast-youtube-url-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "SoulAbi/whisper-youtube-video-text",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "SoumyaJ/VideoTranscription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "SteveDigital/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "TahirRaheem/videotranscriptionandsummary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Zoe11nine/video-transcript-player",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "Zubair295/Video_Transcription_Summarization_App",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "abdullahzunorain/Audio-or-Video-Transcription-and-Summarization-Application",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "ahmedyahyax/youtube-transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "anamzulfiqar/VideoTranscriptionandSummarization",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "apratiush/youtube_transcript_summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "artificialguybr/VIDEO-TRANSLATION-TRANSCRIPTION",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "artificialguybr/Video-Transcription-Smart-Summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "asiflhr/YouTubeTranscriptSummarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "cupcakes323/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "datasciencedojo/YouTube-video-transcript-generator",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "devsbarn/youtube-transcript-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "fhsp93/Video-Transcription-Smart-Summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "ganbca2003/video_transcript_whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "ganesh-dhumal/YouTube-Video-Transcript-Translator",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "hshahzada/AI_Video_Transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "jensinjames/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "kareem-796/Video_Transcriptor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "kavanatn111/video-transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "lavan2012/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "maguid28/YoutubeTranscriptTool",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "memaal/video-transcriptor-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "monika-kapur/YouTube-Transcript-Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "mubashrawaqar123/YoutubeTranscriptionRAGApp",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "nagel/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "neel692/Youtube_Transcript_RAG",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "neuralworm/video_transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "os1187/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "papasega/YouTube-Wolof-Transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "product2204/Youtube_transcription_deepgram",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "qisan/whisper-small-CN-YouTube-video-transcribe",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "rheatony/video_audio_transcription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "rudayrude/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "samir-fama/youtube-video-transcriptor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "santhoshkanna/videotranscription",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "shadow/Whisper-youtube-crosslingual-subtitles",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "whisper-event",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "stacybraiuca/youtube-url-video-transcribe-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "storni/Whisper-youtube-crosslingual-subtitles",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "whisper-event",
+      "speech-recognition",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "swathi-s-v/YouTube_Transcript_Summarization",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "syedusama5556/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "tahirsher/Video_Transcription_Summarization",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "tahirsher/Video_Transcription_Summarization_Text_Video",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "tahirsher/Video_Transcription_Text_Audio",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "trhacknon/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "trhacknon/free-fast-youtube-url-video-to-text-using-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "trhacknon/free-fast-youtube-url-video-to-text-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "tykiww/Video-Transcription-Summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "viliang/Video-Transcription-Smart-Summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 3
+  },
+  {
+    "id": "ABDULLAHIISMAIL2/editflow-ai-transcript-based-video-editor",
+    "title": null,
+    "sdk": "static",
+    "tags": [
+      "static",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "AI-DHD/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "AITOOLTIPS101/youtube-transcript-generatot",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Abu1998/YouTubeTranscriptApi",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Abu1998/YouTubeTranscriptApi1",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Ahmed-Hassan-Siddiqui/Video_Audio_Transcriptor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Alfasign/youtube-whisper-17",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Alyani12/YouTube_transcript_summerizer",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "AnilkumarGak/Ai-Ml-VideoTranscriptSummarizer",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Arielinchristaverse/video-transcript-v2",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Ashish907345/YoutubeTranscript",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Bilalst/Gradio_Youtube_Transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Bilalst/Gradio_Youtube_Transcript_Private",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Bilalst/Gradio_Youtube_Transcript_v2",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "ChandanaMusunuru/videoTranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "DaL1ght1/YoutubeTranscriptExtractorAndSummarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Datasculptor/youtube-whisper-17",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Deepakcreates/video-transcript-tool",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "DinoPiteko/youtube-whisper-04",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Epodok/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Firasmahmoudfi/youtube-transcript-firas",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Geethanjali/YouTube_Transcript_Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "GktnGmsl/YoutubeTranscriptTool",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Gladiaio/Youtube-Subtitler",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Imtaiz/Youtube_Transcript_Downloader",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "IshanGenAI/YoutubeTranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "JhonnBug45/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "K00B404/youtube_transcript_documentor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "KAHRAMAN42/youtube_transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "KotaShivani/VIDEO_TRANSCRIPT_SUMMAIZER",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Kuzey-Arda/YoutubeTranscriptSum",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Laptop16/captionquest-youtube-transcript-explorer",
+    "title": null,
+    "sdk": "static",
+    "tags": [
+      "static",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "M07/YouTube_Transcript_Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Manasi1506/YouTube_Transcript_Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Maryam/youtube-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Mightypeacock/tool-YoutubeTranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "tool",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Nymbo/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Omnibus/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Oshchepkov/annotation_of_youtube_subtitles",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Oshchepkov/youtube_summurize_subtitles",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "POTHAMSETTI/youtubetranscript",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "PreethiPS/YouTube_Transcript_Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Ronxak/Video-and-Audio-Transcript-System",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Sodagraph/YouTube_Transcript_Extraction",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "Thalay/youtube-whisper-09",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "TypeGPT/Youtube_Transcript",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "UndueTarget/youtube-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "VPCSinfo/tool-YoutubeTranscript-blog",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "tool",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "aashu1707/audio_video_transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "abdulshakur/YouTube-Transcript-Analysis-SmolaGent",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "abhishekjoel/YoutubeWhisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "ad2/youtube-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "ahmedale/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "aichina/youtube-whisper-09",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "akshil-jain/Video-Transcript-Chatbot",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "aljanjic/tool-YoutubeTranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "tool",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "amarkc/Youtube-Transcript-Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "andaleebhossain/youtube_transcript_summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "ansh111/generate-video-transcript",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "arnabbumba077/YoutubeTranscripttoDetailedNotesConverterApp",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "awacke1/Transcript-AI-Learner-From-Youtube",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "aweerawat/youtube-whisper-00",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "aybukeyy/youtube_transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "baglada/youtube-whisper-10",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "ben880153/youtube-transcript-api",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "cc778/YoutubeTranscriptSummarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "celalkilinc/youtube_transcripter",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "chiawuese/youtube-transcript-wizard",
+    "title": null,
+    "sdk": "static",
+    "tags": [
+      "static",
+      "deepsite-v3",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "danilotpnta/Youtube-Whisper",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "devilent2/whisper-youtube",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "dhruvshettty/youtube-dutch-whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "dilaraaksoy/YoutubeTranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "dodoya1/youtube_transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "drmurataltun/YoutubeTranscriptSum",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "elonshen/youtube-whisper-10",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "elumamai/youtube-whisper-10",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "esrakgn/Youtube_Transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "filipetest66/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "gauravgarg/youtube_transcript",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "geometric/youtube-whisper-19",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "grapograc/youtube_shorts_transcript_downloader",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "hamza2923/Youtube-Transcript",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "heshamkamal1/youtube-transcript-api2",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "humeur/Swedish-Whisper-from-Youtube",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "i5m/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "initinll/youtube-transcript-summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "jacobbeckerman/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "jaisun2004/YoutubeTranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "jeffistyping/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "jgkaya/youtube-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "jgkaya/youtube-transcript-sum",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "jipenaflor/Youtube-Transcript-Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "johann22/Video-Summary-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "johann22/Video-Summary-transcript-test",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "joheras/Whisper-Youtube",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "joseluisthepower/videotranscriptor",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "juancopi81/whisper-youtube-2-hf_dataset",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kareem-796/video-to-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-00",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-01",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-02",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-03",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-04",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-05",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-06",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-07",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-08",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-09",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-10",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-11",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-12",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-13",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-14",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-15",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-16",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-17",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-18",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-19",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-20",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kazuk/youtube-whisper-21",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kirbah/mcp-youtube-transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "mcp-server-track",
+      "mcp-server",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kiyran/youtube-transcriptor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kkumar015/youtube-transcript-summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "kldgarrido/transcript-video-text-summary",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "klovin/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "krishnasivaborra/youtube_transcript_reader",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "lanbogao/youtube-whisper-04",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "lgsantini1/transcript_youtube",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "lout33/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "magikdevelopments/transcript-video-audio-flask",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "maximrrrr/Long1405-whisper-small-youtube-podcast-data",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "midlajvalappil/AI-Powered-YouTube-Transcript-Tutor",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "mirari/Whisper-Youtube",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "mkhasawneh/youtube_subtitle",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "mobylin/youtubesubtitletrans",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "monkeyprofe/whisper-youtube-description2",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "mosh5566/youtube-subtitle-machine",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "namfam/youtube-transcript-extractor",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "nazimboudeffa/whisper-youtube-to-text",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "neonwatty/youtube_shorts_transcript_downloader",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "nnmykn/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "onlygoodthingsllcpa/Youtube-Whisperer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "patrosleboss007/Whisper-Youtube-Audio-Transcriber",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "pianoweb/youtube-whisperer-pianoweb",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "product2204/youtube_transcript",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "rajujadhav/YouTubeTranscript",
+    "title": null,
+    "sdk": "streamlit",
+    "tags": [
+      "streamlit",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "sana04/YouTubeTranscriptSummarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "santhoshkanna/videotranscript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "shubh-e2m/youtube-transcript-api",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "skavya/youtube_transcript_summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "sridivya01/Youtube_Transcript_Summarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "syedfurqan0099/video-transcript-tool",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "tech-rakesh-ai/YouTubeTranscriptSummarizer",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "testand999/youtube-whisper-06",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "testand999/youtube-whisper-08",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "timfocus/YouTube_Subtitle_to_Speech_Converter",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "traversaal-ai/youtube-transcripts",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "tregu0458/YouTubeTranscriptLoader",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "tregu0458/load_youtube_transcript",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "tregu0458/youtubetranscript",
+    "title": null,
+    "sdk": "docker",
+    "tags": [
+      "docker",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "visualizingjp/youtube-whisper-17",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "wahab5763/VideoTranscript-App",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  },
+  {
+    "id": "youngtsai/youtube-whisper-09",
+    "title": null,
+    "sdk": "gradio",
+    "tags": [
+      "gradio",
+      "region:us"
+    ],
+    "private": false,
+    "disabled": null,
+    "runtime": null,
+    "score": 2
+  }
+]
