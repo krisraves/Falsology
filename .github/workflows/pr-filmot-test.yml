@@ -1,4 +1,4 @@
-name: Fast timedtext relay test
+name: Direct transcript XML test
 
 on:
   pull_request:
@@ -18,48 +18,36 @@ jobs:
           python-version: '3.12'
       - name: Install HTTP client
         run: pip install -U requests
-      - name: Check timedtext routes concurrently
+      - name: Test timestamped transcript XML
         shell: bash
         run: |
           python <<'PY'
-          import json
+          import html,json,re
           from concurrent.futures import ThreadPoolExecutor,as_completed
           from pathlib import Path
-          from urllib.parse import quote
           import requests
 
-          videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio','DbXqiSYDhrA']
-          urls={}
-          for video_id in videos:
-            urls[(video_id,'list')]=f'https://www.youtube.com/api/timedtext?type=list&v={video_id}'
-            urls[(video_id,'en-json3')]=f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&fmt=json3'
-            urls[(video_id,'en-asr-json3')]=f'https://www.youtube.com/api/timedtext?v={video_id}&lang=en&kind=asr&fmt=json3'
-            urls[(video_id,'watch')]=f'https://www.youtube.com/watch?v={video_id}&hl=en'
-          def relay(url):return f'https://api.allorigins.win/raw?url={quote(url,safe="")}'
-          def fetch(key,url):
+          videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio','DbXqiSYDhrA','ez-4b-yQGzg']
+          pattern=re.compile(r'<text\s+start="([\d.]+)"\s+dur="([\d.]+)"[^>]*>([\s\S]*?)</text>')
+          def fetch(video_id):
+            url=f'https://youtubetranscript.com/?server_vid2={video_id}'
             try:
-              r=requests.get(relay(url),headers={'User-Agent':'Mozilla/5.0'},timeout=14)
-              text=r.text
-              result={'videoId':key[0],'route':key[1],'status':r.status_code,'length':len(text),'prefix':text[:300]}
-              if key[1].endswith('json3'):
-                try:result['eventCount']=len(r.json().get('events',[]))
-                except Exception:result['eventCount']=0
-              if key[1]=='watch':
-                result['markers']={name:text.find(name) for name in ['captionTracks','ytInitialPlayerResponse','playabilityStatus','playerCaptionsTracklistRenderer']}
-                for name,position in result['markers'].items():
-                  if position>=0:result[name+'Context']=text[max(0,position-120):position+500]
-              result['body']=text[:2500]
-              return result
-            except Exception as error:return {'videoId':key[0],'route':key[1],'error':f'{type(error).__name__}: {error}'}
+              response=requests.get(url,headers={'User-Agent':'Mozilla/5.0','Accept-Language':'en-US,en;q=0.9'},timeout=25)
+              segments=[]
+              for start,duration,text in pattern.findall(response.text):
+                cleaned=html.unescape(re.sub(r'<[^>]*>','',text)).replace('\n',' ').strip()
+                if cleaned:segments.append({'start':float(start),'duration':float(duration),'text':cleaned})
+              return {'videoId':video_id,'status':response.status_code,'length':len(response.text),'segmentCount':len(segments),'segments':segments[:30],'prefix':response.text[:500]}
+            except Exception as error:return {'videoId':video_id,'error':f'{type(error).__name__}: {error}'}
           results=[]
-          with ThreadPoolExecutor(max_workers=20) as pool:
-            fs=[pool.submit(fetch,key,url) for key,url in urls.items()]
-            for future in as_completed(fs):results.append(future.result())
-          results.sort(key=lambda x:(x['videoId'],x['route']))
-          Path('fast-timedtext-test.json').write_text(json.dumps(results,indent=2,ensure_ascii=False)+'\n')
+          with ThreadPoolExecutor(max_workers=6) as pool:
+            futures=[pool.submit(fetch,video_id) for video_id in videos]
+            for future in as_completed(futures):results.append(future.result())
+          results.sort(key=lambda item:item['videoId'])
+          Path('direct-transcript-test.json').write_text(json.dumps(results,indent=2,ensure_ascii=False)+'\n')
           print(json.dumps(results,indent=2,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: fast-timedtext-test
-          path: fast-timedtext-test.json
+          name: direct-transcript-test
+          path: direct-transcript-test.json
