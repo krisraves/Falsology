@@ -1,0 +1,71 @@
+name: Find replacement direct lie cases
+
+on:
+  push:
+    paths:
+      - .github/workflows/find-new-direct-lie-cases.yml
+
+permissions:
+  contents: write
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: direct-footage-audit
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -U yt-dlp
+      - name: Search direct suspect footage
+        run: |
+          python <<'PY'
+          import concurrent.futures,json,re,subprocess
+          from pathlib import Path
+          queries={
+            'DIPPOLITO':['Dalia Dippolito 5000 percent sure raw undercover video','Dalia Dippolito police interview I did not do anything raw'],
+            'LAZARUS':['Stephanie Lazarus gosh I do not know raw interrogation clip','Stephanie Lazarus denies knowing Sherri Rasmussen interrogation'],
+            'PAN':['Jennifer Pan raw interrogation intruders tied me up','Jennifer Pan police interrogation original full'],
+            'PETERSON':['Scott Peterson I had nothing to do with Laci direct interview','Scott Peterson police interview original raw'],
+            'OJ':['OJ Simpson I am absolutely 100 percent not guilty direct interview','OJ Simpson I did not kill Nicole original statement'],
+            'PAPINI':['Sherri Papini police interview kidnapping raw interrogation','Sherri Papini direct interview abducted two women'],
+            'MURDAUGH':['Alex Murdaugh I was not at kennels police interview raw','Alex Murdaugh kennel denial direct footage'],
+            'SMART':['Pamela Smart I did not plan my husband murder direct interview','Pamela Smart denies murder plot interview'],
+          }
+          blocked=['abc','associated press','ap archive','bbc','bloomberg','cbs','cnbc','cnn','denver7','entertainment tonight','extra','fox','good morning america','inside edition','nbc','news','post','reuters','today','usa today','daily mail','forbes','yahoo','the hill','60 minutes']
+          bad=['analysis','breakdown','documentary','reaction','reacts','movie','reenactment','body language','story','explained']
+          direct=['raw','interrogation','undercover','interview','testimony','trial','police','unedited','full']
+          def norm(x):return re.sub(r'[^a-z0-9 ]+',' ',(x or '').lower())
+          def search(q):
+            try:
+              p=subprocess.run(['yt-dlp','--dump-single-json','--flat-playlist',f'ytsearch30:{q}'],capture_output=True,text=True,timeout=120,check=True)
+              return json.loads(p.stdout).get('entries') or []
+            except Exception as e:return [{'error':str(e)}]
+          out={}
+          for key,qs in queries.items():
+            rows=[];seen=set()
+            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex: sets=list(ex.map(search,qs))
+            for entries in sets:
+              for e in entries:
+                vid=e.get('id') or e.get('url');
+                if not vid or len(vid)!=11 or vid in seen:continue
+                seen.add(vid);title=e.get('title') or '';channel=e.get('channel') or e.get('uploader') or '';duration=e.get('duration') or 999999;n=norm(title+' '+channel)
+                news=[b for b in blocked if b in n]
+                score=(50 if duration<=45 else 25 if duration<=180 else 10 if duration<=1800 else 0)+sum(8 for d in direct if d in norm(title))-sum(50 for b in news)-sum(35 for b in bad if b in norm(title))
+                rows.append({'videoId':vid,'title':title,'channel':channel,'duration':duration,'newsTerms':news,'score':score,'url':'https://www.youtube.com/watch?v='+vid})
+            rows.sort(key=lambda x:(-x['score'],x['duration']))
+            out[key]=rows[:25]
+          Path('audit/replacement-lie-cases.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit
+        run: |
+          rm .github/workflows/find-new-direct-lie-cases.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record direct suspect replacement cases"
+          git push origin direct-footage-audit
