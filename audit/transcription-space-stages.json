@@ -1,0 +1,3726 @@
+[
+  {
+    "id": "ABDULLAHIISMAIL2/editflow-ai-transcript-based-video-editor",
+    "sdk": "static",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": null,
+      "requested": null
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f26183b87fcf0dfb9abefa5b0e22965228d32215",
+    "host": "https://abdullahiismail2-editflow-ai-transcript-based-vi-267f0bf.static.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Ashish0307/Video-Transcription-Multi-speaker",
+    "sdk": "docker",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4c1322e7c6d2a9a574b27de3f9fd86f0ad586b2e",
+    "host": "https://ashish0307-video-transcription-multi-speaker.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "BEACON849322/youtube-subtitle-api",
+    "sdk": "docker",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a35936ae018234e7f6f9897adde411b517829ef1",
+    "host": "https://beacon849322-youtube-subtitle-api.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ClarityClips/clarityclips-youtube-transcript",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5c3a3d2675e202d85155bc435adb9ea4bcef4a2e",
+    "host": "https://clarityclips-clarityclips-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Danielzapirtan/video_transcription",
+    "sdk": "docker",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9fece8c0bd4a37c5efae52de6777a1dc73fa5e49",
+    "host": "https://danielzapirtan-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "GhadaSaylami/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4a71c2c5da64d5283def9abe6e5876963026c30c",
+    "host": "https://ghadasaylami-free-fast-youtube-url-video-to-text-631014b.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Hamza4100/ai-video-transcription-clip-extractor",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a123db43f3dcf619d052fd7078e6499f1d3d629c",
+    "host": "https://hamza4100-ai-video-transcription-clip-extractor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Laptop16/captionquest-youtube-transcript-explorer",
+    "sdk": "static",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": null,
+      "requested": null
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d23294cab7129538135d0854b6fcfb57794228c8",
+    "host": "https://laptop16-captionquest-youtube-transcript-explorer.static.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Omid-sar/YouTube_Transcript_Analyzer",
+    "sdk": "streamlit",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "78ed96460c4073133c1afd11f1c7fab3aa005049",
+    "host": "https://omid-sar-youtube-transcript-analyzer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "RASMUS/Whisper-youtube-crosslingual-subtitles",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "08f6c0376abd73b0a2dca91a88637922f3f0c7c4",
+    "host": "https://rasmus-whisper-youtube-crosslingual-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Senasu/YouTube-Video-Transcription-Summarization",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "433ceb3485a14e436162e639eacfc4fd8800de81",
+    "host": "https://senasu-youtube-video-transcription-summarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "aashu1707/audio_video_transcript",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4c618abdc75f4dcf4a46fa5e75ea528c08a6489d",
+    "host": "https://aashu1707-audio-video-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "abdullahzunorain/Audio-or-Video-Transcription-and-Summarization-Application",
+    "sdk": "streamlit",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4dfbce6b9de7b5304b69345198e60f3add6f4b7d",
+    "host": "https://abdullahzunorain-audio-or-video-transcription-an-1ed9618.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "artificialguybr/VIDEO-TRANSLATION-TRANSCRIPTION",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "zero-a10g",
+      "requested": "zero-a10g"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8f291d6bf249b35763a6e1d740152bac5946d7c4",
+    "host": "https://artificialguybr-video-translation-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "chiawuese/youtube-transcript-wizard",
+    "sdk": "static",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": null,
+      "requested": null
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b70fd810679e40fa43c25d516f66bfea74c0c76b",
+    "host": "https://chiawuese-youtube-transcript-wizard.static.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "devilent2/whisper-youtube",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "zero-a10g",
+      "requested": "zero-a10g"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4a845d7d2994665495d31864772d3ba36fd6d33a",
+    "host": "https://devilent2-whisper-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-upgrade",
+      "requested": "cpu-upgrade"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c982dee861bc72d244dfb16beb98b3298640a6f5",
+    "host": "https://kazuk-youtube-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-08",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-08.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-14",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "19fa6b89369e485e34156d5af6eff66d2c60588f",
+    "host": "https://kazuk-youtube-whisper-14.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kirbah/mcp-youtube-transcript",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3e99ad403996b7ee6b059f3e6f4ba5d58b8a69be",
+    "host": "https://kirbah-mcp-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "neuralworm/youtube-transcription-whisper",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3cb6a1ab0007383726e9b510b27304b7ab3e63a5",
+    "host": "https://neuralworm-youtube-transcription-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "rajesh1729/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d20343aa13b18d1e1234ac4bc42560da87db7ff6",
+    "host": "https://rajesh1729-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "AITOOLTIPS101/youtube-transcript-generatot",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "59dbfb6039a67d115b9dd71a91ee125d32c6cad1",
+    "host": "https://aitooltips101-youtube-transcript-generatot.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Abu1998/YouTubeTranscriptApi",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "272eb45bbf2aa684111e0d0fe8fbcc54e65996c4",
+    "host": "https://abu1998-youtubetranscriptapi.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Abu1998/YouTubeTranscriptApi1",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ed365856b2a661e83d7f16c6449e99e73d7793b5",
+    "host": "https://abu1998-youtubetranscriptapi1.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Alyani12/YouTube_transcript_summerizer",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "7328397135b1fbb3ad863a5da0ca66fd2de4a4a7",
+    "host": "https://alyani12-youtube-transcript-summerizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "AnilkumarGak/Ai-Ml-VideoTranscriptSummarizer",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "536939a55c84015d1c93fd4a6916c5ecf4a7ebc9",
+    "host": "https://anilkumargak-ai-ml-videotranscriptsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Aqdas/YouTube_Video_OpenAI_whisper",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "58d02bea56de495605441c7516663489482d0445",
+    "host": "https://aqdas-youtube-video-openai-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ChandanaMusunuru/videoTranscript",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "0e758cb6f40b3c26ea967d8f09832480adab4a3f",
+    "host": "https://chandanamusunuru-videotranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "DaL1ght1/YoutubeTranscriptExtractorAndSummarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "019712b53eb7981eb521aad12b8d94d85f5bd8d1",
+    "host": "https://dal1ght1-youtubetranscriptextractorandsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "DinoPiteko/youtube-whisper-04",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3095f9a14fbe685bc088f2e1cbdad9f93a9db857",
+    "host": "https://dinopiteko-youtube-whisper-04.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Firasmahmoudfi/youtube-transcript-firas",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ba8f8d4ff64f0c86daec8bea2de4d566d0f62da3",
+    "host": "https://firasmahmoudfi-youtube-transcript-firas.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "GktnGmsl/YoutubeTranscriptTool",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "94626db6529c0814ab8cac18fc0bcc9b1735c254",
+    "host": "https://gktngmsl-youtubetranscripttool.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Gladiaio/Youtube-Subtitler",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-upgrade"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ac78836d56153f529882067ea875b4714ddd7568",
+    "host": "https://gladiaio-youtube-subtitler.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "JhonnBug45/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "30cc91853ec3a882d984ad8da3348b53ed32fcc4",
+    "host": "https://jhonnbug45-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Kuzey-Arda/YoutubeTranscriptSum",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "fb1db55befd8ad7d31c5f4ac20c2d8641822cb78",
+    "host": "https://kuzey-arda-youtubetranscriptsum.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "M07/YouTube_Transcript_Summarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1c3a7a44935f3464f44f271fd129f610734a085c",
+    "host": "https://m07-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Maryam/youtube-transcript",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f1ad08114677847de459cef860d9701b2138b37c",
+    "host": "https://maryam-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Mer000/Video-Transcription",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1f9f7d9b51592503993266ace6fc1c2dad25050c",
+    "host": "https://mer000-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "MuhammadQASIM111/VideoTranscriptionAndSummarization",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ca4a5b71f5c3ad6e54c480f04fa3892816b1c5ab",
+    "host": "https://muhammadqasim111-videotranscriptionandsummarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Nymbo/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c55d0807eb89d98364611a2a1ee1dac28a6a24f7",
+    "host": "https://nymbo-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "POTHAMSETTI/youtubetranscript",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "46dec5cd67a017d9390554be4f162a92d4a1e822",
+    "host": "https://pothamsetti-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Ronxak/Video-and-Audio-Transcript-System",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "824cdab45e7e5da4c6f1c0197f2bfe63a4bdb833",
+    "host": "https://ronxak-video-and-audio-transcript-system.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "SamerKharboush/free-fast-youtube-url-whisper",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "40c269a7009cf5a433ff0d48bc21130993646166",
+    "host": "https://samerkharboush-free-fast-youtube-url-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Thalay/youtube-whisper-09",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1ef32e7dba0b633ff98a45ba0cf237c05ee91d44",
+    "host": "https://thalay-youtube-whisper-09.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "VPCSinfo/tool-YoutubeTranscript-blog",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "51fd16550207982308020a47da62c406440b26f0",
+    "host": "https://vpcsinfo-tool-youtubetranscript-blog.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Zoe11nine/video-transcript-player",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "bfeced292476af1018ca0fb0f5d53fd8fb6abd3b",
+    "host": "https://zoe11nine-video-transcript-player.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "abhishekjoel/YoutubeWhisper",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "72e4af8715e81b4026dfd9f950ea53c911b2d59a",
+    "host": "https://abhishekjoel-youtubewhisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ahmedyahyax/youtube-transcription",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "fcab9f58a16aaab0e9f95ef3596c90505a307488",
+    "host": "https://ahmedyahyax-youtube-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "aljanjic/tool-YoutubeTranscript",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "583462f4aa5cb7f3d8c3c04c358e68f784ef7f8d",
+    "host": "https://aljanjic-tool-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "anamzulfiqar/VideoTranscriptionandSummarization",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "64b1759cc2db9826ca5bb0a4184d51dec65fca02",
+    "host": "https://anamzulfiqar-videotranscriptionandsummarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "andaleebhossain/youtube_transcript_summarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d6fc631918c9d7ce96939f8585ad4d1968c64033",
+    "host": "https://andaleebhossain-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ansh111/generate-video-transcript",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c86fc7a8bcaaf35818bb33f96ecfff7144c497e9",
+    "host": "https://ansh111-generate-video-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "apratiush/youtube_transcript_summary",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "82bca2c62c0242cd11d2a5ae9f3dfef6400bffb5",
+    "host": "https://apratiush-youtube-transcript-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "artificialguybr/Video-Transcription-Smart-Summary",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "zero-a10g"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "02361cd340ff6aa6dc7c64ed06580fd2e609ba77",
+    "host": "https://artificialguybr-video-transcription-smart-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "asiflhr/YouTubeTranscriptSummarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "eb1e1a9a863a1e75f872519c45537ed6134fde64",
+    "host": "https://asiflhr-youtubetranscriptsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "aybukeyy/youtube_transcript",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3a5bf228695bf1481f6433727596f7e0af460798",
+    "host": "https://aybukeyy-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "celalkilinc/youtube_transcripter",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "bd044f33d6dc863fde7c3955efd0dba28cac7a63",
+    "host": "https://celalkilinc-youtube-transcripter.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "danilotpnta/Youtube-Whisper",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "aa30609c55c7eb5a078bd7f97e97ef2e4b52748e",
+    "host": "https://danilotpnta-youtube-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "devsbarn/youtube-transcript-whisper",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "33f9b077b81689c54869bca5dd8bcd13688092ea",
+    "host": "https://devsbarn-youtube-transcript-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "elonshen/youtube-whisper-10",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "48c2b39ad7d4ccd3bf580f208c098b03388a4e11",
+    "host": "https://elonshen-youtube-whisper-10.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "geometric/youtube-whisper-19",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://geometric-youtube-whisper-19.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "grapograc/youtube_shorts_transcript_downloader",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "39c54daa8f1e0be0b313d6a9cc898a9800056b68",
+    "host": "https://grapograc-youtube-shorts-transcript-downloader.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "heshamkamal1/youtube-transcript-api2",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "231a1297c142a62a2e900e31e157a055a2f2648d",
+    "host": "https://heshamkamal1-youtube-transcript-api2.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jaisun2004/YoutubeTranscript",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cec851a31138ceb9ea631a0c15f7cb662013b21d",
+    "host": "https://jaisun2004-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "johann22/Video-Summary-transcript",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b15c1441f087f96e1aff3da3eb6034a555652eea",
+    "host": "https://johann22-video-summary-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kavanatn111/video-transcription",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "2b3c2050da9f6a03f5e9b8c614d7355fb4de0853",
+    "host": "https://kavanatn111-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-16",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-16.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kiyran/youtube-transcriptor",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "80ed70fa1dceaf9ca1dc892b60a5a65599807c08",
+    "host": "https://kiyran-youtube-transcriptor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "krishnasivaborra/youtube_transcript_reader",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9202158643568938222c953805ae75bf1dbce569",
+    "host": "https://krishnasivaborra-youtube-transcript-reader.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "lanbogao/youtube-whisper-04",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9127a2287c52f3ab653f66766adeeb6df1e820fe",
+    "host": "https://lanbogao-youtube-whisper-04.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "magikdevelopments/transcript-video-audio-flask",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6a3bc8b6ee910e70e9a158d377de59e575525a3f",
+    "host": "https://magikdevelopments-transcript-video-audio-flask.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "maguid28/YoutubeTranscriptTool",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "85b61dcc39fe45ab56a30bb2f51150bc610a319d",
+    "host": "https://maguid28-youtubetranscripttool.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "mkhasawneh/youtube_subtitle",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c4243804a43c57e208160f11f9300c0930c070c4",
+    "host": "https://mkhasawneh-youtube-subtitle.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "monika-kapur/YouTube-Transcript-Summarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "13c14f85fd2fe48346f3ab217a8acff51e15e69f",
+    "host": "https://monika-kapur-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "monkeyprofe/whisper-youtube-description2",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b29a19e680e09146ac334a3894975e80da254673",
+    "host": "https://monkeyprofe-whisper-youtube-description2.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "mosh5566/youtube-subtitle-machine",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5f5f42c99bdda9c821e1af97f7a84c211fdbb8b1",
+    "host": "https://mosh5566-youtube-subtitle-machine.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "mubashrawaqar123/YoutubeTranscriptionRAGApp",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "04210c58bff66f1231f3cbd25305ee5bec2f5b5e",
+    "host": "https://mubashrawaqar123-youtubetranscriptionragapp.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "neel692/Youtube_Transcript_RAG",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a67ff5bc4390474294fbf32a0ee25f66756fc1f3",
+    "host": "https://neel692-youtube-transcript-rag.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "neuralworm/video_transcription",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f137403caaddd632129ade86547a9665997bb1d2",
+    "host": "https://neuralworm-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "onlygoodthingsllcpa/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1c9b158078fcaad117b848f0bbe2a0508f281ad2",
+    "host": "https://onlygoodthingsllcpa-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "papasega/YouTube-Wolof-Transcription",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ca1a8b4c38cb34b2939f9d44610dd4cd8ef05ac7",
+    "host": "https://papasega-youtube-wolof-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "sana04/YouTubeTranscriptSummarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "21072771cfd7bb8205744d015793cb4dce75fb28",
+    "host": "https://sana04-youtubetranscriptsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "shubh-e2m/youtube-transcript-api",
+    "sdk": "docker",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ac2648ec911bb9ca60b57207c149294e516be573",
+    "host": "https://shubh-e2m-youtube-transcript-api.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "sridivya01/Youtube_Transcript_Summarizer",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "97ffc3f00054575b98b3efe71ea0908c714e7493",
+    "host": "https://sridivya01-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "syedfurqan0099/video-transcript-tool",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1110d1f590898b7be2e5d25e93f06d23c959b927",
+    "host": "https://syedfurqan0099-video-transcript-tool.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tahirsher/Video_Transcription_Summarization",
+    "sdk": "streamlit",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c2fbd48370f2d8aaa64ab7ffb3ec219d5d923c8b",
+    "host": "https://tahirsher-video-transcription-summarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tahirsher/Video_Transcription_Text_Audio",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "fe3ef3e1fa83305f932251a166c664a046022384",
+    "host": "https://tahirsher-video-transcription-text-audio.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "testand999/youtube-whisper-06",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "06b2c54ac9dcbb0a8724e9195cdd4d85aa9bfd52",
+    "host": "https://testand999-youtube-whisper-06.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "traversaal-ai/youtube-transcripts",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f8712de3c992561bd0eafaa44084294355790252",
+    "host": "https://traversaal-ai-youtube-transcripts.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "visualizingjp/youtube-whisper-17",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "366dc8d01d143996428c21b0d93c2ba6d8452a80",
+    "host": "https://visualizingjp-youtube-whisper-17.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "youngtsai/youtube-whisper-09",
+    "sdk": "gradio",
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "2a4ddcec764d1af33275c47f563fa22b73b6462e",
+    "host": "https://youngtsai-youtube-whisper-09.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "MYousafRana/audio-video-transcription",
+    "sdk": "docker",
+    "stage": "APP_STARTING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8aeac0f2a99c9385b2ea2c9e4286a47800e0fbd5",
+    "host": "https://myousafrana-audio-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Ahmed-Hassan-Siddiqui/Video_Audio_Transcriptor",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1cf2ed6d19219884dfa748851aa1a2abb25046cc",
+    "host": "https://ahmed-hassan-siddiqui-video-audio-transcriptor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Alfasign/youtube-whisper-17",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b5d534497e712fee3f4a8b4d33aebe659dc8bc46",
+    "host": "https://alfasign-youtube-whisper-17.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Divyanshuinfo/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9aa68c0736193d2bb973889d528a3377cb0583d6",
+    "host": "https://divyanshuinfo-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Timo123432345443/YoutubeTranscription",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f10c92d1b2c50cb593b7a05324cbe750017b6951",
+    "host": "https://timo123432345443-youtubetranscription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Timo123432345443/youtube_transcription",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8b4d9f5e392f00b439829805541ea876bc4b0d6f",
+    "host": "https://timo123432345443-youtube-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "TypeGPT/Youtube_Transcript",
+    "sdk": "streamlit",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "10e198a145fff9f35b1318aaff1db45198669a28",
+    "host": "https://typegpt-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "akshil-jain/Video-Transcript-Chatbot",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "df453a52616dc56d9035d2b093c0c75ec4d094ab",
+    "host": "https://akshil-jain-video-transcript-chatbot.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "joseluisthepower/videotranscriptor",
+    "sdk": "streamlit",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1754a74c4fa293636dcb665cc3a4ac3e60192898",
+    "host": "https://joseluisthepower-videotranscriptor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kkumar015/youtube-transcript-summarizer",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c3ec0600b165a9c9bd065377d86d06a6208cfa8f",
+    "host": "https://kkumar015-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "mirari/Whisper-Youtube",
+    "sdk": "gradio",
+    "stage": "PAUSED",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5ff1440b7ad5e9b6407274aa1e1b79a5ab4b2442",
+    "host": "https://mirari-whisper-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "1s/YouTube-Video-Transcription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e4f9d2f0378e966000683f8ff44afb56d3d3a9f2",
+    "host": "https://1s-youtube-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "AI-DHD/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b64720bedd0e9060cddf3030db1f005a76e8a95b",
+    "host": "https://ai-dhd-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "AIEngineer226/YoutubeTranscription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c8851e90b109e7c8ac62714ffe72d6564ff918ea",
+    "host": "https://aiengineer226-youtubetranscription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Abhishek279/Video_Transcription_Analysis",
+    "sdk": "docker",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "18d520d9a34a6fb82dcd8662f8115669b4a53c35",
+    "host": "https://abhishek279-video-transcription-analysis.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Alpersx/YouTube-Video-Transcript-Summarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e2e29de31a5262c1387ef4fb47397f0a33d077b9",
+    "host": "https://alpersx-youtube-video-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "AreesaAshfaq/VideoTranscriptionandSummarisation",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3f7ef4b21554ea870036f94c978213519d769cd9",
+    "host": "https://areesaashfaq-videotranscriptionandsummarisation.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Arielinchristaverse/video-transcript-v2",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e71177293c3f61d274095ce3a044e9096eae52e8",
+    "host": "https://arielinchristaverse-video-transcript-v2.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Ashish907345/YoutubeTranscript",
+    "sdk": "streamlit",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "584a8a79965165cdad4ce9b9ce930d868ca333ca",
+    "host": "https://ashish907345-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Bilalst/Gradio_Youtube_Transcript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "057e55c984b322c95dd6995a60ef7faf5ce099f0",
+    "host": "https://bilalst-gradio-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Bilalst/Gradio_Youtube_Transcript_Private",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "90d5de6031e472ff273c1e06c494e1e2dad23f95",
+    "host": "https://bilalst-gradio-youtube-transcript-private.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Bilalst/Gradio_Youtube_Transcript_v2",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4b4a2b44d25fcb41411ec66aec937b5d72697126",
+    "host": "https://bilalst-gradio-youtube-transcript-v2.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "DHESIGAN/video-to-transcript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4a71c2c5da64d5283def9abe6e5876963026c30c",
+    "host": "https://dhesigan-video-to-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Datasculptor/youtube-whisper-17",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b5d534497e712fee3f4a8b4d33aebe659dc8bc46",
+    "host": "https://datasculptor-youtube-whisper-17.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Deepakcreates/video-transcript-tool",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "639061c21ccaf19de2a891af0ad6a317a8598efd",
+    "host": "https://deepakcreates-video-transcript-tool.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Docfile/Whisper-youtube-crosslingual-subtitles",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "38c7c86914e493b06208b72a0d022862dee2065a",
+    "host": "https://docfile-whisper-youtube-crosslingual-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "EinfachOlder/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "372f2cbead9540cadc74e8e2c750dbc8072d83d5",
+    "host": "https://einfacholder-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Epodok/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3f50b3cdce6b7c47304caa8cd907042ff6bc83b6",
+    "host": "https://epodok-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Geethanjali/YouTube_Transcript_Summarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "dbc5ec9a519a2d3a93243d250a2893f668f7ce2b",
+    "host": "https://geethanjali-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "IRISLAB/VideoTranscription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9eae1670526456193ca37f9589a16e8876418dc6",
+    "host": "https://irislab-videotranscription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Imtaiz/Youtube_Transcript_Downloader",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "59f729349b13e9ddbe09bc9456123822d97e1c6c",
+    "host": "https://imtaiz-youtube-transcript-downloader.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "IshanGenAI/YoutubeTranscript",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "65741c07d723b9431aefcfc7b4994e02316fc21b",
+    "host": "https://ishangenai-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "JaganathC/Video-Transcription-Summary",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "63e5c75995dd4e7c0b5402809cc98a379fdad547",
+    "host": "https://jaganathc-video-transcription-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Jahankhan01/Youtube-Transcription",
+    "sdk": "docker",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9368c5b2f49aed76906766ec1bc7ad33e016192b",
+    "host": "https://jahankhan01-youtube-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Javed7/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a3182abfa8805b3688d335fc75628773efac3ca5",
+    "host": "https://javed7-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "K00B404/youtube_transcript_documentor",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "bfd1883314a37324169042012f191eb74580a6f1",
+    "host": "https://k00b404-youtube-transcript-documentor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "KAHRAMAN42/youtube_transcript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ceb1689941f3a8982194b20b72d2256bca4a967a",
+    "host": "https://kahraman42-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Karwasze/Whisper-ASR-youtube-subtitles",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5c836c22370f067310980ce63be0e42e3eb55909",
+    "host": "https://karwasze-whisper-asr-youtube-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "KotaShivani/VIDEO_TRANSCRIPT_SUMMAIZER",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "52579acbf2f23ca7300fb16a80d1802d38adc889",
+    "host": "https://kotashivani-video-transcript-summaizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Manasi1506/YouTube_Transcript_Summarizer",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c9975b7ed2503aff492fd71c6a73b55790dd9fed",
+    "host": "https://manasi1506-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "MansoorSarookh/VideoTranscriptionAndSummarization",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9e5d0be162e8086349ab6abbd389dc30948e583f",
+    "host": "https://mansoorsarookh-videotranscriptionandsummarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Masterdqqq/Video-Transcription-Smart-Summary",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "63e5c75995dd4e7c0b5402809cc98a379fdad547",
+    "host": "https://masterdqqq-video-transcription-smart-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Maxkillor/video-transcription-and-subtitling-1.0",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c5fe24571d33d36dc5f8758430006261923b7d54",
+    "host": "https://maxkillor-video-transcription-and-subtitling-1-0.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Mightypeacock/tool-YoutubeTranscript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "583462f4aa5cb7f3d8c3c04c358e68f784ef7f8d",
+    "host": "https://mightypeacock-tool-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "MoonKnight79/VideoTranscriptionandSummarization",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "0950ed41a53177e20b877e0b3bc3a53f07cc2cd6",
+    "host": "https://moonknight79-videotranscriptionandsummarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Mubashir412/Video_Transcription_Classification",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "7a9242e339ab807ad232e2f7c8d4189f62211eb9",
+    "host": "https://mubashir412-video-transcription-classification.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "MuhammadQASIM111/VideoTranscriptionAndSummarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a32282846bee1cb420b8406895571fb28a96f631",
+    "host": "https://muhammadqasim111-videotranscriptionandsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Omnibus/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c55d0807eb89d98364611a2a1ee1dac28a6a24f7",
+    "host": "https://omnibus-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Oshchepkov/annotation_of_youtube_subtitles",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6bf869cab7aa1fc22372e62e304ed5287452f9e6",
+    "host": "https://oshchepkov-annotation-of-youtube-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Oshchepkov/youtube_summurize_subtitles",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4b9f77d2bffc5153a17a09c9a4eca5bad806b235",
+    "host": "https://oshchepkov-youtube-summurize-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "PreethiPS/YouTube_Transcript_Summarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ccdf8f41e9d634348b1c99e173a4c4f97b360798",
+    "host": "https://preethips-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ProTecGames/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "efb3df557a1d59bc95430faf2e050a0381218782",
+    "host": "https://protecgames-free-fast-youtube-url-video-to-text-ab9664b.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "RASMUS/Youtube-videos-with-crosslingual-transcriptions",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "0461bb68667f04b14f190d8e1ac9d007459b4ef6",
+    "host": "https://rasmus-youtube-videos-with-crosslingual-transcriptions.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Raanakhalil/VideoTranscriptionSummarization",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "764d3319c7fcab0b74432c6e263f3c4f04da8ca3",
+    "host": "https://raanakhalil-videotranscriptionsummarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Sabbah13/Video_Call_Recording_and_Transcription_API_Service",
+    "sdk": "docker",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a93f32dc4a44d7df9a935d6e0f989726952ea920",
+    "host": "https://sabbah13-video-call-recording-and-transcription-9729a08.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "SaeedBaloch/video-transcription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "629845ceec5b925ddfaa7b344b2f7bf90e57755f",
+    "host": "https://saeedbaloch-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Sodagraph/YouTube_Transcript_Extraction",
+    "sdk": "docker",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f6b11339abf5bc74e75e18d517d73f2a23ad059d",
+    "host": "https://sodagraph-youtube-transcript-extraction.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "SoulAbi/whisper-youtube-video-text",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f9cc46036375444b959c840a56b10f17b1cf2742",
+    "host": "https://soulabi-whisper-youtube-video-text.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "SoumyaJ/VideoTranscription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4dc2299779bfc998b86dbdfdbd3785a0480cae81",
+    "host": "https://soumyaj-videotranscription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "SteveDigital/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4a71c2c5da64d5283def9abe6e5876963026c30c",
+    "host": "https://stevedigital-free-fast-youtube-url-video-to-text-c1ba908.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "TahirRaheem/videotranscriptionandsummary",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "121e0d5be913df5d579621b67d872ad0470380f7",
+    "host": "https://tahirraheem-videotranscriptionandsummary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Talvanes/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d20343aa13b18d1e1234ac4bc42560da87db7ff6",
+    "host": "https://talvanes-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "UndueTarget/youtube-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b9923f9b5102d122eb4521db000f6e0aee836be9",
+    "host": "https://unduetarget-youtube-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "Zubair295/Video_Transcription_Summarization_App",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6fbcedf9eb2e8dde163807bae9cad97e3f2509af",
+    "host": "https://zubair295-video-transcription-summarization-app.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "abdulshakur/YouTube-Transcript-Analysis-SmolaGent",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1a8eadc9670515e6b7c861ab53aa52bb85213fc4",
+    "host": "https://abdulshakur-youtube-transcript-analysis-smolagent.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ad2/youtube-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "561c4163151738554cf25754a2ce8cf6aff0892c",
+    "host": "https://ad2-youtube-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ahmedale/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "11999ba43faaeea8ce5c829a0ed92a573c14b4ba",
+    "host": "https://ahmedale-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "aichina/youtube-whisper-09",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e5a1d6136495e5e47f63f413a4fccb031e35bf93",
+    "host": "https://aichina-youtube-whisper-09.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "amarkc/Youtube-Transcript-Summarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "be80db2a659c2d616f8c03225150ccb5c44459db",
+    "host": "https://amarkc-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "arnabbumba077/YoutubeTranscripttoDetailedNotesConverterApp",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1d5b91d2a7ac4e9ba7f5b6b6e4710a6adec3e0db",
+    "host": "https://arnabbumba077-youtubetranscripttodetailednotesco-51e705f.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "awacke1/Transcript-AI-Learner-From-Youtube",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "234082f9ae18616f2e34ac6d86873bb00cd9374e",
+    "host": "https://awacke1-transcript-ai-learner-from-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "aweerawat/youtube-whisper-00",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "315cb42d5900001f5db477fa597f1d6557d48ab1",
+    "host": "https://aweerawat-youtube-whisper-00.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "baglada/youtube-whisper-10",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d583248fc5bf3619b98b206fe587a45370052f30",
+    "host": "https://baglada-youtube-whisper-10.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ben880153/youtube-transcript-api",
+    "sdk": "docker",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "385baf37aaf8d5d1c851043b2d20a2eb305311f8",
+    "host": "https://ben880153-youtube-transcript-api.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "buildingai/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b94a28e8122219275d330c94892a65c5889f17a4",
+    "host": "https://buildingai-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "cc778/YoutubeTranscriptSummarizer",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "ccb39b69b323cb49dd49895e526282bb1c915970",
+    "host": "https://cc778-youtubetranscriptsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "cupcakes323/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6daf234278bf47a1afd68d619abc69f65557bb74",
+    "host": "https://cupcakes323-free-fast-youtube-url-video-to-text-8f5ca3a.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "darttur/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1819ccd1c02661b0c501fd3d5af5ebaaa5064f0b",
+    "host": "https://darttur-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "datasciencedojo/YouTube-video-transcript-generator",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6e700f7f12854740f06cc8be5864fe581e406b89",
+    "host": "https://datasciencedojo-youtube-video-transcript-generator.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "dhruvshettty/youtube-dutch-whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c1b272516d4d66f16d06eeff9e17d1e57a9080de",
+    "host": "https://dhruvshettty-youtube-dutch-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "dilaraaksoy/YoutubeTranscript",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "fad12fd5bd56c28d7fb720f4afe19cc08454039a",
+    "host": "https://dilaraaksoy-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "dodoya1/youtube_transcript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a41b0abffc6b08aff6c1c30854209ffbbc20212c",
+    "host": "https://dodoya1-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "drmurataltun/YoutubeTranscriptSum",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e58e6a90de48e3988ad5574151882d351abdc2e4",
+    "host": "https://drmurataltun-youtubetranscriptsum.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "eaglelandsonce/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "bf5a5ae09df8ec9799f0afbb5c27e575587dc34a",
+    "host": "https://eaglelandsonce-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "elumamai/youtube-whisper-10",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "63bba3bd4e6699e698f57949394119ef4d702ac4",
+    "host": "https://elumamai-youtube-whisper-10.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "esrakgn/Youtube_Transcript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a006b43b7b1514efcf69a6eb56e4e12835480c1c",
+    "host": "https://esrakgn-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "fhsp93/Video-Transcription-Smart-Summary",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "63e5c75995dd4e7c0b5402809cc98a379fdad547",
+    "host": "https://fhsp93-video-transcription-smart-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "filipetest66/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8e5a3dfd98554db005261b76aaf05996984ec9e9",
+    "host": "https://filipetest66-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ganbca2003/video_transcript_whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6399051c74b4126222492e70993685e42c7848c5",
+    "host": "https://ganbca2003-video-transcript-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "ganesh-dhumal/YouTube-Video-Transcript-Translator",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a1045b4a1ab14b48130a87e049f43707fd602577",
+    "host": "https://ganesh-dhumal-youtube-video-transcript-translator.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "gauravgarg/youtube_transcript",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8e3ac04e004956f6f8674a96c364414972d71286",
+    "host": "https://gauravgarg-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "hamza2923/Youtube-Transcript",
+    "sdk": "docker",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cb5af191191bf52189df8cea7901665905b18c16",
+    "host": "https://hamza2923-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "hersia/youtube-video-transcription-with-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "02980227b7ebcc9e7c31ff5aa24fad71e12a43e2",
+    "host": "https://hersia-youtube-video-transcription-with-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "hesham111/whisper-transcription-api-youtube",
+    "sdk": null,
+    "stage": "CONFIG_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "98bbc83117a561e1b704ce3253711f7396ba4244",
+    "host": "https://hesham111-whisper-transcription-api-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "hshahzada/AI_Video_Transcription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5b4e44e32ef3623d11ba257bd4c637c2d06ede41",
+    "host": "https://hshahzada-ai-video-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "humeur/Swedish-Whisper-from-Youtube",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "fed269d5c238a557ab3b457a413b4b4b8b69d2fe",
+    "host": "https://humeur-swedish-whisper-from-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "i5m/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "6730274580050f2e4270f825e2aa7f98acad8a23",
+    "host": "https://i5m-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "initinll/youtube-transcript-summarizer",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a26ae3e32bc11992b8d07eccd2e23987e471a1bc",
+    "host": "https://initinll-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jacobbeckerman/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c503c4068efdf11fc816d7fdf9c9aead8db73aae",
+    "host": "https://jacobbeckerman-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jeffistyping/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "t4-small"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1c9b158078fcaad117b848f0bbe2a0508f281ad2",
+    "host": "https://jeffistyping-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jensinjames/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c5d3c794385044978b8da5cde440f0d67a31920e",
+    "host": "https://jensinjames-free-fast-youtube-url-video-to-text-21c3c5c.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jgkaya/youtube-transcript",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5442b62fd02230dc983adc4f8cf6d5a0070662a7",
+    "host": "https://jgkaya-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jgkaya/youtube-transcript-sum",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "32ed5f8a941ce2b6821eb65c13dacb96d1b1cef7",
+    "host": "https://jgkaya-youtube-transcript-sum.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "jipenaflor/Youtube-Transcript-Summarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "7976ba0bb721055df9ef31df9a5d5229bd250416",
+    "host": "https://jipenaflor-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "johann22/Video-Summary-transcript-test",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1154e0a7f4777404731a85066192fedaa5145e89",
+    "host": "https://johann22-video-summary-transcript-test.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "joheras/Whisper-Youtube",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1458398009f9a1d61ef6ab8bd97c0dc550c3742f",
+    "host": "https://joheras-whisper-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "juancopi81/whisper-youtube-2-hf_dataset",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a2d05dd33890246a9b84616e0dbcb8f6e8e48703",
+    "host": "https://juancopi81-whisper-youtube-2-hf-dataset.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kareem-796/Video_Transcriptor",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f089133cdd162116cf96be4fb4ce8e7b799c9358",
+    "host": "https://kareem-796-video-transcriptor-0435d51.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kareem-796/video-to-transcript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "039b69013b7d69cf86fceb4ff040590b5861ce82",
+    "host": "https://kareem-796-video-to-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-00",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-00.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-01",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e53f3a0826a02eb93e95feab9451811bb58f29b5",
+    "host": "https://kazuk-youtube-whisper-01.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-02",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d53dfdb137753d734c9c5bbf9ca2df52c3867585",
+    "host": "https://kazuk-youtube-whisper-02.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-03",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "31256c883bf613ee55956c3649323ccd5fd0a87a",
+    "host": "https://kazuk-youtube-whisper-03.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-04",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9ec21c45c85e76e51a40423dca6e40afdc39e95e",
+    "host": "https://kazuk-youtube-whisper-04.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-05",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d472dc2623bc04e9855b7ec05c6d1c0579979580",
+    "host": "https://kazuk-youtube-whisper-05.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-06",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "06b2c54ac9dcbb0a8724e9195cdd4d85aa9bfd52",
+    "host": "https://kazuk-youtube-whisper-06.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-07",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-07.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-09",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-09.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-10",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5a9232c07b59026093238303e98fd3c6d8c45404",
+    "host": "https://kazuk-youtube-whisper-10.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-11",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-11.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-12",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-12.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-13",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-13.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-15",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-15.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-17",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-17.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-18",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-18.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-19",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-19.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-20",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-20.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kazuk/youtube-whisper-21",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://kazuk-youtube-whisper-21.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "kldgarrido/transcript-video-text-summary",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "813b292c3343ab4a88a0e11b945851494751f394",
+    "host": "https://kldgarrido-transcript-video-text-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "klovin/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "c55d0807eb89d98364611a2a1ee1dac28a6a24f7",
+    "host": "https://klovin-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "lavan2012/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "f4f172ceb44013e2c49201f09c318b8e056f169c",
+    "host": "https://lavan2012-free-fast-youtube-url-video-to-text-us-642486d.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "lgsantini1/transcript_youtube",
+    "sdk": "streamlit",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "81927b79f42fccd150b52c2701055d180b69c58c",
+    "host": "https://lgsantini1-transcript-youtube.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "lout33/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b9d63ba259c0c79f284dcabc725e9fc2cf165c87",
+    "host": "https://lout33-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "maximrrrr/Long1405-whisper-small-youtube-podcast-data",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9f6bc108d2d5d275297104573f7bbf911fca28da",
+    "host": "https://maximrrrr-long1405-whisper-small-youtube-podcast-data.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "memaal/video-transcriptor-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b8c0062e9afc1f6a5c3a56deb0bb8476e8cdf709",
+    "host": "https://memaal-video-transcriptor-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "midlajvalappil/AI-Powered-YouTube-Transcript-Tutor",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8ea7b7abb907223885cac08f1659c9d60a0e1e90",
+    "host": "https://midlajvalappil-ai-powered-youtube-transcript-tutor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "mobylin/youtubesubtitletrans",
+    "sdk": "docker",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "bfcd99b95e0037a830c267e0f6f7deea9d1c243f",
+    "host": "https://mobylin-youtubesubtitletrans.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "nagel/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "0c05d67aa9b3d870d5ac965c2da8f2d20bd29694",
+    "host": "https://nagel-free-fast-youtube-url-video-to-text-using-5f6771b.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "namfam/youtube-transcript-extractor",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "45ea03cc00ac8614bf231ba8b8567ed1e5608fe8",
+    "host": "https://namfam-youtube-transcript-extractor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "nazimboudeffa/whisper-youtube-to-text",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5695edf51f717d989d87551eac034df8d303e5ed",
+    "host": "https://nazimboudeffa-whisper-youtube-to-text.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "neillk/youtube-whisper",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "50b84183dadc3e1852d0aee39a3d3f6446a8060c",
+    "host": "https://neillk-youtube-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "neonwatty/youtube_shorts_transcript_downloader",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "39c54daa8f1e0be0b313d6a9cc898a9800056b68",
+    "host": "https://neonwatty-youtube-shorts-transcript-downloader.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "nnmykn/Youtube-Whisperer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "848bd94501dfe113f91c3d82a006d614753d122c",
+    "host": "https://nnmykn-youtube-whisperer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "os1187/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "90cdd4ac342dac9515cd42faeccb4f100cbe4ac3",
+    "host": "https://os1187-free-fast-youtube-url-video-to-text-using-08aad57.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "patrosleboss007/Whisper-Youtube-Audio-Transcriber",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "883b4a357eb66626949027acc45f4b64095520de",
+    "host": "https://patrosleboss007-whisper-youtube-audio-transcriber.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "pianoweb/youtube-whisperer-pianoweb",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "d0473d12ac274a99a2f57bd2e6de448464970335",
+    "host": "https://pianoweb-youtube-whisperer-pianoweb.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "product2204/Youtube_transcription_deepgram",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "890280ac71fc2be4311e9cf2712b95cd5e1b6f98",
+    "host": "https://product2204-youtube-transcription-deepgram.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "product2204/youtube_transcript",
+    "sdk": "streamlit",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "520a66ec8fc2a29d2053f85e217cc2834b2ba12d",
+    "host": "https://product2204-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "qisan/whisper-small-CN-YouTube-video-transcribe",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "24f50a13f70034e05835761dc9462b8d841cae57",
+    "host": "https://qisan-whisper-small-cn-youtube-video-transcribe.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "rajujadhav/YouTubeTranscript",
+    "sdk": "streamlit",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3156cfe71a83a58a52c852d63697b5b63f4c59db",
+    "host": "https://rajujadhav-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "rheatony/video_audio_transcription",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a73c5e74293f34b1681d68d8bb76f45849935362",
+    "host": "https://rheatony-video-audio-transcription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "rudayrude/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a69491c80cc125eeaeeda5f6114fd48bf3e56a60",
+    "host": "https://rudayrude-free-fast-youtube-url-video-to-text-us-65c6893.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "samir-fama/youtube-video-transcriptor",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8244e650ad15b191cd94ae8f27d88b0bd7461d9b",
+    "host": "https://samir-fama-youtube-video-transcriptor.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "santhoshkanna/videotranscript",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9babca74054183d8f92a0c57b4f7486e290d5767",
+    "host": "https://santhoshkanna-videotranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "santhoshkanna/videotranscription",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "7a5ef62c102b6b00bff28f35e9835ec0a72f818b",
+    "host": "https://santhoshkanna-videotranscription.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "shadow/Whisper-youtube-crosslingual-subtitles",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "52c603205b84d830ced1caf00cfad936455aaf1b",
+    "host": "https://shadow-whisper-youtube-crosslingual-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "skavya/youtube_transcript_summarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "b6849644d48868d12b897c3ddc8bdf3d1ee31a8d",
+    "host": "https://skavya-youtube-transcript-summarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "stacybraiuca/youtube-url-video-transcribe-openai-whisper",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "4a71c2c5da64d5283def9abe6e5876963026c30c",
+    "host": "https://stacybraiuca-youtube-url-video-transcribe-openai-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "storni/Whisper-youtube-crosslingual-subtitles",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "5dad4252023fbf9b675b27f6d0f14a7f74c9e6a3",
+    "host": "https://storni-whisper-youtube-crosslingual-subtitles.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "swathi-s-v/YouTube_Transcript_Summarization",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e7bb18fd86809a8142a0193a2a2d50b91b606fc3",
+    "host": "https://swathi-s-v-youtube-transcript-summarization.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "syedusama5556/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "a2da6583c37e86cbd63a1a881a4b8f2212080f9a",
+    "host": "https://syedusama5556-free-fast-youtube-url-video-to-tex-3025ff1.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tahirsher/Video_Transcription_Summarization_Text_Video",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "0861ca7467fc21e1694d640acd357931af183431",
+    "host": "https://tahirsher-video-transcription-summarization-text-video.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tech-rakesh-ai/YouTubeTranscriptSummarizer",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "fabef8e7074d86cdf9ac70fab4b5e0ea4176cb8d",
+    "host": "https://tech-rakesh-ai-youtubetranscriptsummarizer.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "testand999/youtube-whisper-08",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "cc5c6289eff6065905d66cf1eeca33dd22ce7cfe",
+    "host": "https://testand999-youtube-whisper-08.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "timfocus/YouTube_Subtitle_to_Speech_Converter",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "e23c5049d314062bf516eca7fd3d3b1129029f1f",
+    "host": "https://timfocus-youtube-subtitle-to-speech-converter.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tregu0458/YouTubeTranscriptLoader",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "049b4e58fd0ee9b9895ed61bf673985852cf0a1a",
+    "host": "https://tregu0458-youtubetranscriptloader.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tregu0458/load_youtube_transcript",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "54926dd1a5d567c9abcd378913e9d2916c1d61e4",
+    "host": "https://tregu0458-load-youtube-transcript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tregu0458/youtubetranscript",
+    "sdk": "docker",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "1d2edca1b1b01e30dbb1f3af4bff7853dd6f15bd",
+    "host": "https://tregu0458-youtubetranscript.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "trhacknon/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "9d63a2708c7b56773f56fc16fd1115e5315c8a27",
+    "host": "https://trhacknon-free-fast-youtube-url-video-to-text-us-0b64e37.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "trhacknon/free-fast-youtube-url-video-to-text-using-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "54686a05d48b46a8f1ec90d8a3aebbda014c03a0",
+    "host": "https://trhacknon-free-fast-youtube-url-video-to-text-us-2e828ba.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "trhacknon/free-fast-youtube-url-video-to-text-whisper",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "805fe7171c65fb00805d65712e18c583cf5ede60",
+    "host": "https://trhacknon-free-fast-youtube-url-video-to-text-whisper.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "tykiww/Video-Transcription-Summary",
+    "sdk": "gradio",
+    "stage": "BUILD_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "8df83fe34d7aa78fae2f119395558e6ef2d21402",
+    "host": "https://tykiww-video-transcription-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "viliang/Video-Transcription-Smart-Summary",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "3760cb0b2710c7e9a958672705258d4ef8505ee6",
+    "host": "https://viliang-video-transcription-smart-summary.hf.space",
+    "disabled": false
+  },
+  {
+    "id": "wahab5763/VideoTranscript-App",
+    "sdk": "gradio",
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "requestedHardware": null,
+    "sleepTime": null,
+    "sha": "78f8f73119718b5e0e2433c378c5d479e55ed8f5",
+    "host": "https://wahab5763-videotranscript-app.hf.space",
+    "disabled": false
+  }
+]
