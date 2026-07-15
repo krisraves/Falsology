@@ -1,0 +1,55 @@
+name: Find timed Whisper Space code
+
+on:
+  push:
+    paths:
+      - .github/workflows/find-timed-whisper-space-code.yml
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan app sources
+        run: |
+          python <<'PY'
+          import concurrent.futures,json,re,urllib.request
+          from pathlib import Path
+          ids=[x['id'] for x in json.loads(Path('audit/public-transcription-spaces.json').read_text()) if x.get('id')]
+          def fetch(sid):
+              url='https://huggingface.co/spaces/'+sid+'/resolve/main/app.py?download=true'
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+                  with urllib.request.urlopen(req,timeout=25) as r:code=r.read().decode('utf-8','replace')
+                  low=code.lower()
+                  youtube=any(x in low for x in ['youtube','yt_dlp','pytube'])
+                  whisper=any(x in low for x in ['whisper','faster_whisper','pipeline("automatic-speech-recognition','pipeline(\'automatic-speech-recognition'])
+                  timed=any(x in low for x in ['result["segments"]',"result['segments']",'return_timestamps','word_timestamps','format_srt','webvtt','.srt','subtitle'])
+                  url_input=any(x in low for x in ['youtube url','youtube video url','video_url','youtube_url','input_text_url'])
+                  score=3*youtube+3*whisper+4*timed+2*url_input
+                  if score>=9:return {'id':sid,'score':score,'youtube':youtube,'whisper':whisper,'timed':timed,'urlInput':url_input,'length':len(code),'code':code[:50000]}
+              except Exception as e:return None
+              return None
+          with concurrent.futures.ThreadPoolExecutor(max_workers=20) as ex:rows=[x for x in ex.map(fetch,ids) if x]
+          rows.sort(key=lambda x:(-x['score'],x['id']))
+          Path('audit/timed-whisper-space-code.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit results
+        run: |
+          rm .github/workflows/find-timed-whisper-space-code.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record timed Whisper Space candidates"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
