@@ -1,0 +1,128 @@
+name: One-shot statement phrase variants
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-shot-variant-index.yml
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser
+        run: pip install -U requests rapidfuzz
+      - name: Find named-speaker matches from phrase variants
+        run: |
+          python <<'PY'
+          import ast,json,re,time,urllib.parse
+          from pathlib import Path
+          import requests
+          from rapidfuzz import fuzz
+
+          manifest=json.loads(Path('audit/live-case-manifest.json').read_text())
+          S=requests.Session();S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36','Accept-Language':'en-US,en;q=0.9'})
+          STOP={'a','an','and','are','as','at','be','been','but','by','did','do','does','for','from','had','has','have','he','her','him','his','i','in','is','it','its','me','my','of','on','or','our','she','that','the','their','them','they','this','to','was','we','were','with','you','your'}
+          BAD=['analysis','breakdown','reacts','reaction','explained','documentary','story of','body language','behavior panel','podcast','compilation','movie clip','reenactment','trailer','news report']
+          DIRECT=['interview','interrogation','testimony','testifies','confession','confesses','admits','denies','statement','court','hearing','raw','unedited','press conference']
+          def norm(v):return re.sub(r'\s+',' ',re.sub(r'[^a-z0-9 ]+',' ',str(v or '').lower())).strip()
+          def variants(claim):
+              words=norm(claim).split();out=[]
+              def add(v):
+                  v=' '.join(v.split()).strip()
+                  if len(v)>=4 and v not in out:out.append(v)
+              add(' '.join(words))
+              # Keep distinctive contiguous windows, longest first.
+              for size in [8,7,6,5,4,3,2]:
+                  if size>len(words):continue
+                  windows=[]
+                  for i in range(len(words)-size+1):
+                      w=words[i:i+size];content=[x for x in w if x not in STOP]
+                      rarity=sum(len(x) for x in content)+8*len(content)
+                      windows.append((rarity,' '.join(w)))
+                  for _,window in sorted(windows,reverse=True)[:4]:add(window)
+              # Add compact content-word phrases.
+              content=[x for x in words if x not in STOP and len(x)>2]
+              for n in [5,4,3,2]:
+                  if len(content)>=n:add(' '.join(content[:n]));add(' '.join(content[-n:]))
+              return out[:18]
+          def query_index(query):
+              url='https://youglish.com/pronounce/'+urllib.parse.quote(query,safe='')+'/english/all/emb=1&e_id=audit&e_comp=8264&e_start=1&e_h=-1&e_notif_h=1&e_cur_w=900'
+              r=S.get(url,timeout=30)
+              if r.status_code==404:return []
+              r.raise_for_status();m=re.search(r"params\.jsonData\s*=\s*'((?:\\.|[^'])*)';",r.text)
+              if not m:return []
+              return json.loads(ast.literal_eval("'"+m.group(1)+"'" )).get('results',[])
+          def oembed(vid):
+              try:
+                  r=S.get('https://www.youtube.com/oembed',params={'format':'json','url':'https://www.youtube.com/watch?v='+vid},timeout=15)
+                  return {'status':r.status_code,**(r.json() if r.ok else {'error':r.text[:300]})}
+              except Exception as e:return {'error':f'{type(e).__name__}: {e}'}
+          def duration(vid,query):
+              try:
+                  r=S.get('https://youglish.com/fetchcap.jsp',params={'vers':'4','op':'1','vid':vid,'query':query,'lg':'0','accent':'0'},timeout=15);d=r.json();return int(float(d.get('end',0)))
+              except:return None
+          def candidate_score(item,c,query):
+              title=norm(c['oembed'].get('title'));author=norm(c['oembed'].get('author_name'));person=norm(item['person']);last=person.split()[-1] if person else ''
+              spoken=norm(c['display']);claim=norm(item['claim']);s=0
+              if c['videoId']==item['videoId']:s+=220
+              if person and person in title:s+=180
+              elif last and last in title:s+=100
+              if person and person in author:s+=50
+              elif last and last in author:s+=25
+              s+=.45*fuzz.token_set_ratio(claim,spoken)+.25*fuzz.partial_ratio(claim,spoken)
+              s+=sum(9 for x in DIRECT if x in title)
+              s-=sum(40 for x in BAD if x in title)
+              if c['statementStart']<15:s-=100
+              if c.get('videoDurationSeconds') and c['statementEnd']+15>c['videoDurationSeconds']:s-=100
+              if len(query.split())<3:s-=15
+              return round(s,1)
+
+          output={'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'cases':[]}
+          for idx,item in enumerate(manifest,1):
+              row={k:item.get(k) for k in ['caseNumber','person','claim','verdict','difficulty','videoId','sourceUrl']};row['queriesTried']=[];seen={}
+              person=norm(item['person']);last=person.split()[-1]
+              for query in variants(item['claim']):
+                  try:matches=query_index(query)
+                  except Exception as e:row['queriesTried'].append({'query':query,'error':f'{type(e).__name__}: {e}'});continue
+                  row['queriesTried'].append({'query':query,'results':len(matches)})
+                  for m in matches:
+                      vid=m.get('vid');key=(vid,m.get('start'),m.get('end'))
+                      if not vid or key in seen:continue
+                      meta=oembed(vid);title=norm(meta.get('title'));author=norm(meta.get('author_name'))
+                      # Keep current video or metadata that identifies the person; retain a few high-similarity fallbacks.
+                      identifies=(vid==item['videoId'] or person in title or last in title or person in author or last in author)
+                      sim=fuzz.token_set_ratio(norm(item['claim']),norm(m.get('display')))
+                      if not identifies and sim<82:continue
+                      dur=duration(vid,query);c={'videoId':vid,'statementStart':float(m.get('start',0)),'statementEnd':float(m.get('end',0)),'display':m.get('display'),'query':query,'oembed':meta,'videoDurationSeconds':dur}
+                      c['hasFullContext']=bool(c['statementStart']>=15 and dur and c['statementEnd']+15<=dur);c['identifiesPerson']=identifies;c['score']=candidate_score(item,c,query);seen[key]=c
+                  # Stop early once a strong current/direct match is found.
+                  strong=[c for c in seen.values() if c['hasFullContext'] and c['identifiesPerson'] and c['score']>=190]
+                  if strong:break
+                  time.sleep(.06)
+              row['candidates']=sorted(seen.values(),key=lambda x:-x['score'])[:20]
+              row['recommended']=next((c for c in row['candidates'] if c['hasFullContext'] and c['identifiesPerson'] and c['score']>=145),None)
+              output['cases'].append(row);print(f"[{idx:02d}/50] {item['caseNumber']} queries={len(row['queriesTried'])} candidates={len(row['candidates'])} recommended={bool(row['recommended'])}")
+          Path('audit/variant-index-candidates.json').write_text(json.dumps(output,indent=2,ensure_ascii=False)+'\n')
+          compact=[{'caseNumber':r['caseNumber'],'person':r['person'],'claim':r['claim'],'currentVideoId':r['videoId'],'recommended':r.get('recommended'),'topCandidates':r['candidates'][:5],'queriesTried':r['queriesTried']} for r in output['cases']]
+          Path('audit/variant-index-summary.json').write_text(json.dumps(compact,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit variants and remove workflow
+        run: |
+          rm .github/workflows/one-shot-variant-index.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record statement phrase variant timings"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
