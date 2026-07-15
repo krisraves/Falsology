@@ -1,0 +1,57 @@
+name: Test direct transcript endpoint
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-direct-transcript-endpoint.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Call get_transcript directly
+        run: |
+          python <<'PY'
+          import base64,json,urllib.parse,urllib.request
+          from pathlib import Path
+          vid='3MuPWV5cTio'
+          def params(video_id,asr,field6):
+              out=bytearray(); b=video_id.encode(); out += bytes([0x0a,len(b)])+b
+              context=('CgNhc3ISAmVuGgA%3D' if asr else 'CgASAmVuGgA%3D').encode(); out += bytes([0x12,len(context)])+context
+              out += bytes([0x18,0x01]); panel=b'engagement-panel-searchable-transcript-search-panel'; out += bytes([0x2a,len(panel)])+panel
+              out += bytes([0x30,field6,0x38,0x01,0x40,0x01])
+              return base64.b64encode(out).decode().replace('=','%3D')
+          variations=[params(vid,a,f) for a in [True,False] for f in [1,0]]
+          clients=[('WEB','2.20250701.01.00','1'),('WEB','2.20260710.01.00','1'),('MWEB','2.20260710.01.00','2')]
+          out=[]
+          for client,version,client_num in clients:
+            for p in variations:
+              body={'context':{'client':{'clientName':client,'clientVersion':version,'hl':'en','gl':'US','userAgent':'Mozilla/5.0','platform':'DESKTOP'},'user':{'lockedSafetyMode':False},'request':{'useSsl':True}},'externalVideoId':vid,'params':p}
+              try:
+                req=urllib.request.Request('https://www.youtube.com/youtubei/v1/get_transcript?prettyPrint=false',data=json.dumps(body).encode(),headers={'Content-Type':'application/json','User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36','Accept':'*/*','X-Youtube-Client-Name':client_num,'X-Youtube-Client-Version':version,'Origin':'https://www.youtube.com','Referer':f'https://www.youtube.com/watch?v={vid}'})
+                with urllib.request.urlopen(req,timeout=30) as r:text=r.read().decode('utf-8','replace')
+                data=json.loads(text); segs=((((data.get('actions') or [{}])[0].get('updateEngagementPanelAction') or {}).get('content') or {}).get('transcriptRenderer') or {}).get('content',{}).get('transcriptSearchPanelRenderer',{}).get('body',{}).get('transcriptSegmentListRenderer',{}).get('initialSegments',[])
+                out.append({'client':client,'version':version,'paramsPrefix':p[:80],'status':'ok','length':len(text),'segments':len(segs),'preview':segs[:3]})
+              except Exception as e:out.append({'client':client,'version':version,'paramsPrefix':p[:80],'error':f'{type(e).__name__}: {e}'})
+          Path('audit').mkdir(exist_ok=True); Path('audit/direct-transcript-endpoint-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-direct-transcript-endpoint.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record direct transcript endpoint test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
