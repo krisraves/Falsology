@@ -1,4 +1,5 @@
 # Exact statement timestamp audit
 
-Transcripts available: **0/50**  
+Working caption proxies: **0**  
+Proxy captions recovered: **0/50**  
 Automatically accepted matches: **0/50**
