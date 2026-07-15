@@ -92,14 +92,14 @@
   "L07": {
     "media": {
       "type": "youtube",
-      "youtubeId": "DaF2ST7ldss",
-      "startSeconds": 15,
+      "youtubeId": "yQ4AT4q2DKs",
+      "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 132,
-      "url": "https://www.youtube.com/watch?v=DaF2ST7ldss&t=15s",
+      "videoDurationSeconds": 88,
+      "url": "https://www.youtube.com/watch?v=yQ4AT4q2DKs&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
-      "sourceKind": "archival-prison-interview",
+      "sourceKind": "prison-interview",
       "directStatement": true,
       "newsPackage": false
     }
@@ -107,11 +107,11 @@
   "L08": {
     "media": {
       "type": "youtube",
-      "youtubeId": "VSK47WlZ6Ac",
+      "youtubeId": "fAISMApjd5c",
       "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 160,
-      "url": "https://www.youtube.com/watch?v=VSK47WlZ6Ac&t=0s",
+      "videoDurationSeconds": 673,
+      "url": "https://www.youtube.com/watch?v=fAISMApjd5c&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
       "sourceKind": "raw-interview",
@@ -122,14 +122,14 @@
   "L09": {
     "media": {
       "type": "youtube",
-      "youtubeId": "WFMhZ8cdhi4",
-      "startSeconds": 5,
+      "youtubeId": "XoomCiQANEc",
+      "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 75,
-      "url": "https://www.youtube.com/watch?v=WFMhZ8cdhi4&t=5s",
+      "videoDurationSeconds": 130,
+      "url": "https://www.youtube.com/watch?v=XoomCiQANEc&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
-      "sourceKind": "direct-conference-interview",
+      "sourceKind": "direct-interview",
       "directStatement": true,
       "newsPackage": false
     }
@@ -227,11 +227,11 @@
   "L16": {
     "media": {
       "type": "youtube",
-      "youtubeId": "kMu-2tXfPQI",
-      "startSeconds": 10,
-      "endSeconds": 45,
-      "videoDurationSeconds": 71,
-      "url": "https://www.youtube.com/watch?v=kMu-2tXfPQI&t=10s",
+      "youtubeId": "TM8EXwemnYA",
+      "startSeconds": 0,
+      "endSeconds": 38,
+      "videoDurationSeconds": 38,
+      "url": "https://www.youtube.com/watch?v=TM8EXwemnYA&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
       "sourceKind": "public-statement",
@@ -454,11 +454,11 @@
   "L25": {
     "media": {
       "type": "youtube",
-      "youtubeId": "1eDGRZ1VoZg",
+      "youtubeId": "4lvrPFW0ztY",
       "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 218,
-      "url": "https://www.youtube.com/watch?v=1eDGRZ1VoZg&t=0s",
+      "videoDurationSeconds": 62,
+      "url": "https://www.youtube.com/watch?v=4lvrPFW0ztY&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
       "sourceKind": "direct-interview",
@@ -544,11 +544,11 @@
   "T06": {
     "media": {
       "type": "youtube",
-      "youtubeId": "4cVqY4Jf0qo",
-      "startSeconds": 15,
+      "youtubeId": "eWsXwpgCG8Q",
+      "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 158,
-      "url": "https://www.youtube.com/watch?v=4cVqY4Jf0qo&t=15s",
+      "videoDurationSeconds": 404,
+      "url": "https://www.youtube.com/watch?v=eWsXwpgCG8Q&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
       "sourceKind": "police-confession",
@@ -724,11 +724,11 @@
   "T18": {
     "media": {
       "type": "youtube",
-      "youtubeId": "98QCCxluNZc",
+      "youtubeId": "nBUjN_6PK6U",
       "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 58,
-      "url": "https://www.youtube.com/watch?v=98QCCxluNZc&t=0s",
+      "videoDurationSeconds": 174,
+      "url": "https://www.youtube.com/watch?v=nBUjN_6PK6U&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
       "sourceKind": "direct-interview",
@@ -814,17 +814,63 @@
   "T24": {
     "media": {
       "type": "youtube",
-      "youtubeId": "UAjAcGD3kCQ",
+      "youtubeId": "WJAnSe0_ijs",
       "startSeconds": 0,
       "endSeconds": 45,
-      "videoDurationSeconds": 116,
-      "url": "https://www.youtube.com/watch?v=UAjAcGD3kCQ&t=0s",
+      "videoDurationSeconds": 97,
+      "url": "https://www.youtube.com/watch?v=WJAnSe0_ijs&t=0s",
       "label": "Open the complete source recording",
       "verifiedAt": "2026-07-14",
       "sourceKind": "direct-interview",
       "directStatement": true,
       "newsPackage": false
-    }
+    },
+    "slug": "george-santos-i-have-been-a-terrible-liar",
+    "person": "George Santos",
+    "personSlug": "george-santos",
+    "personRole": "Former U.S. representative and convicted fraudster",
+    "category": "Admission interview",
+    "categorySlug": "admission-interview",
+    "setting": "Long-form interview",
+    "date": "2023-02-20",
+    "claim": "I've been a terrible liar on those subjects.",
+    "prompt": "Does this admission match the documented record?",
+    "verdict": "truth",
+    "classification": "Verified admission",
+    "difficulty": "easy",
+    "shortExplanation": "Santos admitted lying about major parts of his education, employment, and personal history.",
+    "fullTruth": "Independent records contradicted multiple claims about his college education, Wall Street employment, family background, and résumé. His admission that he had lied on those subjects was supported by the record.",
+    "context": "The statement came during a direct interview in which he was pressed about specific fabrications.",
+    "transcript": "I've been a terrible liar on those subjects.",
+    "editorialBoundary": "The verdict applies only to the admission that he lied on the subjects being discussed; it does not validate his explanations or his other claims.",
+    "signals": [
+      "Direct admission",
+      "Employer and school records",
+      "Repeated documented contradictions"
+    ],
+    "lesson": "A confession can be accurate even when the speaker minimizes motive or scope.",
+    "sources": [
+      {
+        "title": "Direct Piers Morgan interview excerpt",
+        "publisher": "Interview recording",
+        "url": "https://www.youtube.com/watch?v=WJAnSe0_ijs",
+        "type": "primary",
+        "note": "Santos making the quoted admission."
+      },
+      {
+        "title": "House Ethics investigation report",
+        "publisher": "U.S. House Committee on Ethics",
+        "url": "https://ethics.house.gov/committee-reports/matter-allegations-relating-representative-george-santos",
+        "type": "primary",
+        "note": "Official record documenting false statements and misconduct."
+      }
+    ],
+    "tags": [
+      "admission-interview",
+      "spoken-statement",
+      "discernment"
+    ],
+    "reviewedAt": "2026-07-14"
   },
   "T25": {
     "media": {
