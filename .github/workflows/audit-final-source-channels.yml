@@ -1,0 +1,64 @@
+name: Audit final source channels
+
+on:
+  push:
+    paths:
+      - .github/workflows/audit-final-source-channels.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: direct-footage-audit
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Resolve selected YouTube metadata
+        shell: bash
+        run: |
+          python <<'PY'
+          import json, re, time, urllib.parse, urllib.request
+          from pathlib import Path
+
+          overrides=json.loads(Path('data/case-overrides.json').read_text())
+          news_terms=[
+            'abc news','abc7','abc 7','associated press','ap archive','bbc','bloomberg','cbs','cnbc','cnn',
+            'denver7','entertainment tonight','fox news','good morning america','guardian news','inside edition',
+            'nbc','newsnation','new york post','page six','pbs newshour','reuters','scripps','sky news','today',
+            'usa today','wesh','wcvb','wxyz','wptv','wplg','wmar','wlwt','wgxa','wfmh','wate','wgn','al.com',
+            'daily mail','forbes','yahoo finance','business insider','the hill','ktvu','wclj','wltx','11alive',
+            'news 19','channel 7','local 10','newsday','fortune','national post','the independent','newsy'
+          ]
+          def norm(s): return re.sub(r'[^a-z0-9 ]+',' ',(s or '').lower()).strip()
+          def meta(video_id):
+            url='https://www.youtube.com/oembed?format=json&url='+urllib.parse.quote('https://www.youtube.com/watch?v='+video_id,safe='')
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 Falsology audit'})
+              with urllib.request.urlopen(req,timeout=15) as r:return json.load(r)
+            except Exception as e:return {'error':f'{type(e).__name__}: {e}'}
+          rows=[]
+          for case_number in sorted(overrides):
+            m=overrides[case_number]['media']; info=meta(m['youtubeId']); channel=info.get('author_name',''); title=info.get('title','')
+            text=norm(channel+' '+title)
+            flagged=[term for term in news_terms if term in text]
+            rows.append({'caseNumber':case_number,'videoId':m['youtubeId'],'channel':channel,'title':title,'newsTerms':flagged,'error':info.get('error')})
+            print(case_number,m['youtubeId'],channel,'NEWS' if flagged else 'OK')
+            time.sleep(.08)
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/final-source-channels.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit audit
+        run: |
+          rm .github/workflows/audit-final-source-channels.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record final source channel audit"
+          git push origin direct-footage-audit
