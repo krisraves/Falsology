@@ -9,6 +9,7 @@ import part08 from "@/data/cases/part08.json";
 import part09 from "@/data/cases/part09.json";
 import part10 from "@/data/cases/part10.json";
 import rawOverrides from "@/data/case-overrides.json";
+import rawFinalReplacements from "@/data/direct-footage-replacements.json";
 import type { Claim, ClaimMedia } from "@/lib/types";
 
 type ClaimOverride = Partial<Omit<Claim, "media">> & { media?: Partial<ClaimMedia> };
@@ -27,9 +28,9 @@ const baseClaims = [
 ] as Claim[];
 
 const overrides = rawOverrides as Record<string, ClaimOverride>;
+const finalReplacements = rawFinalReplacements as Record<string, ClaimOverride>;
 
-export const claims = baseClaims.map((claim) => {
-  const override = overrides[claim.caseNumber];
+function applyOverride(claim: Claim, override?: ClaimOverride): Claim {
   if (!override) return claim;
   return {
     ...claim,
@@ -39,6 +40,11 @@ export const claims = baseClaims.map((claim) => {
       ...(override.media ?? {}),
     },
   } as Claim;
+}
+
+export const claims = baseClaims.map((claim) => {
+  const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
+  return applyOverride(reviewed, finalReplacements[claim.caseNumber]);
 });
 
 export function getClaim(slug: string) {
