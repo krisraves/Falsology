@@ -17,50 +17,73 @@ jobs:
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Inspect YouGlish phrase page
+      - name: Run supported YouGlish widget API
         run: |
           node <<'NODE'
-          const {chromium}=require('playwright');const fs=require('fs');
-          const phrase='I did not have sexual relations with that woman';
-          const url=`https://youglish.com/pronounce/${encodeURIComponent(phrase)}/english`;
-          (async()=>{
-            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox','--enable-unsafe-swiftshader']});
+          const {chromium}=require('playwright');const fs=require('fs');const http=require('http');
+          const phrase='I did not have sexual relations with that woman';const port=8767;const origin=`http://127.0.0.1:${port}`;
+          const server=http.createServer((req,res)=>{res.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});res.end('<!doctype html><html><body><div id="widget"></div></body></html>')});
+          server.listen(port,'127.0.0.1',async()=>{
+            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox','--autoplay-policy=no-user-gesture-required','--enable-unsafe-swiftshader']});
             const context=await browser.newContext({locale:'en-US',timezoneId:'America/New_York',viewport:{width:1440,height:1000},userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36'});
             await context.addInitScript(()=>{Object.defineProperty(navigator,'webdriver',{get:()=>undefined});Object.defineProperty(navigator,'languages',{get:()=>['en-US','en']});Object.defineProperty(navigator,'plugins',{get:()=>[1,2,3,4,5]})});
-            const page=await context.newPage();const requests=[],responses=[],consoleLogs=[],failures=[];
-            page.on('console',m=>consoleLogs.push({type:m.type(),text:m.text()}));
-            page.on('requestfailed',r=>failures.push({url:r.url(),method:r.method(),resourceType:r.resourceType(),failure:r.failure()}));
-            page.on('request',r=>{const u=r.url();if(/youglish|youtube|googlevideo|widget|pronounce|search|fetch|api|result|video/i.test(u))requests.push({url:u,method:r.method(),resourceType:r.resourceType(),postData:(r.postData()||'').slice(0,20000)})});
-            page.on('response',async r=>{const u=r.url();if(/youglish|widget|pronounce|search|fetch|youtube|api|result|video/i.test(u)){const x={url:u,status:r.status(),contentType:r.headers()['content-type']};if(!/googlevideo/i.test(u)){try{const b=await r.body();x.bytes=b.length;x.preview=b.toString('utf8').slice(0,150000)}catch(e){x.error=String(e)}}responses.push(x)}});
-            let navError=null;try{await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000})}catch(e){navError=String(e)}
-            const states=[];
-            for(let i=0;i<10;i++){
-              await page.waitForTimeout(3000);
-              const body=(await page.locator('body').innerText().catch(()=>'' )).slice(0,15000);
-              states.push({i,url:page.url(),title:await page.title(),body,frames:page.frames().map(f=>f.url())});
-              for(const text of ['Accept','Accept all','Agree','I agree','Continue','Allow all']){try{const b=page.getByRole('button',{name:new RegExp(`^${text}$`,'i')}).first();if(await b.count()&&await b.isVisible())await b.click({force:true,timeout:1500})}catch{}}
-            }
-            const data=await page.evaluate(()=>{
-              const globals={};
-              for(const key of Object.keys(window).filter(k=>/yg|youglish|video|player|result|search/i.test(k)).slice(0,300)){
-                try{const value=window[key];if(typeof value!=='function')globals[key]=JSON.parse(JSON.stringify(value))}catch{globals[key]=String(window[key])}
+            const page=await context.newPage();const requests=[],responses=[],failures=[],consoleLogs=[],messages=[];
+            page.on('console',m=>consoleLogs.push({type:m.type(),text:m.text()}));page.on('requestfailed',r=>failures.push({url:r.url(),method:r.method(),resourceType:r.resourceType(),failure:r.failure()}));
+            page.on('request',r=>{const u=r.url();if(/youglish|youtube|googlevideo|widget|pronounce|search|fetch|api|result|video|caption/i.test(u))requests.push({url:u,method:r.method(),resourceType:r.resourceType(),postData:(r.postData()||'').slice(0,50000)})});
+            page.on('response',async r=>{const u=r.url();if(/youglish|widget|pronounce|search|fetch|youtube|api|result|video|caption/i.test(u)){const x={url:u,status:r.status(),contentType:r.headers()['content-type']};if(!/googlevideo/i.test(u)){try{const b=await r.body();x.bytes=b.length;x.preview=b.toString('utf8').slice(0,300000)}catch(e){x.error=String(e)}}responses.push(x)}});
+            page.on('websocket',ws=>{messages.push({type:'websocket',url:ws.url()});ws.on('framereceived',e=>messages.push({type:'ws-in',payload:String(e.payload).slice(0,100000)}));ws.on('framesent',e=>messages.push({type:'ws-out',payload:String(e.payload).slice(0,100000)}))});
+            await page.goto(origin,{waitUntil:'domcontentloaded'});
+            await page.evaluate(phrase=>{
+              window.__ygEvents=[];window.__ygReady=false;window.__ygError=null;
+              function safe(value){try{return JSON.parse(JSON.stringify(value))}catch{return String(value)}}
+              function inspectWidget(widget){
+                const result={keys:Object.keys(widget||{}),properties:{},players:[]};
+                if(!widget)return result;
+                for(const key of Object.keys(widget).slice(0,300)){
+                  try{const v=widget[key];result.properties[key]=typeof v==='function'?'[function]':safe(v)}catch(e){result.properties[key]='[error '+e+']'}
+                }
+                const seen=new WeakSet();
+                function walk(obj,path,depth){
+                  if(!obj||typeof obj!=='object'||depth>4||seen.has(obj))return;seen.add(obj);
+                  try{
+                    const row={path,keys:Object.keys(obj).slice(0,100)};
+                    for(const method of ['getCurrentTime','getDuration','getVideoData','getPlayerState'])if(typeof obj[method]==='function'){try{row[method]=obj[method]()}catch(e){row[method+'Error']=String(e)}}
+                    if(Object.keys(row).length>2)result.players.push(row);
+                    for(const key of Object.keys(obj).slice(0,100)){
+                      let value;try{value=obj[key]}catch{continue}
+                      if(value&&typeof value==='object')walk(value,`${path}.${key}`,depth+1);
+                    }
+                  }catch{}
+                }
+                walk(widget,'widget',0);return result;
               }
-              return {
-                globals,
-                scripts:[...document.scripts].map(s=>({src:s.src,text:s.src?'':s.textContent?.slice(0,50000)})),
-                iframes:[...document.querySelectorAll('iframe')].map(f=>({src:f.src,id:f.id,name:f.name,title:f.title})),
-                links:[...document.querySelectorAll('a[href]')].map(a=>({href:a.href,text:a.textContent?.trim()})).filter(x=>/youtube|youtu\.be|youglish/i.test(x.href)).slice(0,500),
-                html:document.documentElement.outerHTML.slice(0,500000),
-                body:document.body.innerText.slice(0,30000)
+              window.__inspectWidget=inspectWidget;
+              window.onYouglishAPIReady=function(){
+                window.__ygReady=true;
+                window.__widget=new window.YG.Widget('widget',{width:900,components:8|64|8192,autoStart:1,events:{
+                  onFetchDone:e=>window.__ygEvents.push({type:'fetch',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget)}),
+                  onVideoChange:e=>window.__ygEvents.push({type:'video',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget),iframes:[...document.querySelectorAll('iframe')].map(f=>f.src)}),
+                  onCaptionChange:e=>window.__ygEvents.push({type:'caption',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget),iframes:[...document.querySelectorAll('iframe')].map(f=>f.src)}),
+                  onCaptionConsumed:e=>window.__ygEvents.push({type:'consumed',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget)}),
+                  onPlayerReady:e=>window.__ygEvents.push({type:'ready',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget),iframes:[...document.querySelectorAll('iframe')].map(f=>f.src)}),
+                  onPlayerStateChange:e=>window.__ygEvents.push({type:'state',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget)}),
+                  onError:e=>{window.__ygError=safe(e);window.__ygEvents.push({type:'error',at:performance.now(),event:safe(e),inspect:inspectWidget(window.__widget)})}
+                }});
+                window.__widget.fetch(phrase,'english');
               };
-            }).catch(e=>({error:String(e)}));
-            const frameData=[];
-            for(const frame of page.frames()){
-              try{frameData.push({url:frame.url(),body:(await frame.locator('body').innerText()).slice(0,15000),html:(await frame.content()).slice(0,200000)})}catch(e){frameData.push({url:frame.url(),error:String(e)})}
+              const script=document.createElement('script');script.src='https://youglish.com/public/emb/widget.js';script.async=true;script.onerror=e=>{window.__ygError='widget script failed'};document.head.appendChild(script);
+            },phrase);
+            const states=[];
+            for(let i=0;i<60;i++){
+              await page.waitForTimeout(1000);
+              const snapshot=await page.evaluate(()=>({ready:window.__ygReady,error:window.__ygError,events:window.__ygEvents?.slice(-10),body:document.body.innerText.slice(0,10000),iframes:[...document.querySelectorAll('iframe')].map(f=>f.src),inspect:window.__inspectWidget?.(window.__widget)})).catch(e=>({evalError:String(e)}));
+              if(i%5===0||snapshot.events?.some(e=>e.type==='caption'))states.push({i,...snapshot});
+              if(snapshot.events?.some(e=>e.type==='caption'&&String(e.event?.caption||'').toLowerCase().includes('sexual relations')))break;
             }
-            const result={phrase,requestedUrl:url,navError,finalUrl:page.url(),states,data,frameData,requests,responses,failures,consoleLogs,cookies:await context.cookies()};
-            fs.mkdirSync('probe-output',{recursive:true});fs.writeFileSync('probe-output/youglish.json',JSON.stringify(result,null,2));await browser.close();
-          })().catch(e=>{console.error(e);process.exit(1)});
+            const data=await page.evaluate(()=>({ready:window.__ygReady,error:window.__ygError,events:window.__ygEvents,widgetInspect:window.__inspectWidget?.(window.__widget),body:document.body.innerText.slice(0,30000),html:document.documentElement.outerHTML.slice(0,500000),iframes:[...document.querySelectorAll('iframe')].map(f=>({src:f.src,id:f.id,name:f.name,title:f.title})),scripts:[...document.scripts].map(s=>s.src)})).catch(e=>({error:String(e)}));
+            const frameData=[];for(const frame of page.frames()){try{frameData.push({url:frame.url(),body:(await frame.locator('body').innerText()).slice(0,20000),html:(await frame.content()).slice(0,250000)})}catch(e){frameData.push({url:frame.url(),error:String(e)})}}
+            const result={phrase,origin,states,data,frameData,requests,responses,failures,consoleLogs,messages,cookies:await context.cookies()};fs.mkdirSync('probe-output',{recursive:true});fs.writeFileSync('probe-output/youglish.json',JSON.stringify(result,null,2));await browser.close();server.close();
+          });
           NODE
       - uses: actions/upload-artifact@v4
         with:
