@@ -1,0 +1,111 @@
+name: Audit exact statement times
+
+on:
+  push:
+    paths:
+      - .github/workflows/audit-exact-statement-times.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install transcript matcher
+        run: pip install -U youtube-transcript-api rapidfuzz
+      - name: Locate spoken statements
+        run: |
+          python <<'PY'
+          import json, re, time
+          from pathlib import Path
+          from rapidfuzz import fuzz
+          from youtube_transcript_api import YouTubeTranscriptApi
+
+          def apply_override(claim, override):
+              if not override:
+                  return claim
+              merged = {**claim, **override}
+              merged['media'] = {**claim.get('media', {}), **override.get('media', {})}
+              return merged
+
+          cases=[]
+          for path in sorted(Path('data/cases').glob('part*.json')):
+              cases.extend(json.loads(path.read_text()))
+          layers=[]
+          for name in ['case-overrides.json','direct-footage-replacements.json','obscure-case-replacements.json','english-weird-replacements.json']:
+              p=Path('data')/name
+              layers.append(json.loads(p.read_text()) if p.exists() else {})
+          difficulty=json.loads((Path('data')/'difficulty-map.json').read_text())
+          final=[]
+          for claim in cases:
+              for layer in layers:
+                  claim=apply_override(claim, layer.get(claim['caseNumber']))
+              claim['difficulty']=difficulty.get(claim['caseNumber'],claim.get('difficulty'))
+              final.append(claim)
+
+          STOP={'a','an','and','are','as','at','be','been','but','by','for','from','had','has','have','he','her','hers','him','his','i','in','is','it','its','me','my','of','on','or','our','she','that','the','their','them','they','this','to','was','we','were','with','you','your'}
+          def norm(text):
+              text=(text or '').lower().replace('’',"'")
+              text=re.sub(r"[^a-z0-9' ]+",' ',text)
+              return re.sub(r'\s+',' ',text).strip()
+          def words(text): return [w for w in norm(text).split() if w not in STOP and len(w)>2]
+          def item_dict(item):
+              if hasattr(item,'to_raw_data'):
+                  raw=item.to_raw_data()
+                  return {'text':raw.get('text',''),'start':float(raw.get('start',0)),'duration':float(raw.get('duration',0))}
+              if isinstance(item,dict):
+                  return {'text':item.get('text',''),'start':float(item.get('start',0)),'duration':float(item.get('duration',0))}
+              return {'text':getattr(item,'text',''),'start':float(getattr(item,'start',0)),'duration':float(getattr(item,'duration',0))}
+
+          api=YouTubeTranscriptApi()
+          report={'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'cases':[]}
+          for index,claim in enumerate(final,1):
+              vid=claim['media']['youtubeId']; target=norm(claim['claim']); target_words=words(target)
+              row={'caseNumber':claim['caseNumber'],'person':claim['person'],'claim':claim['claim'],'videoId':vid,'difficulty':claim['difficulty']}
+              try:
+                  transcript=api.fetch(vid,languages=['en','en-US','en-GB'])
+                  items=[item_dict(x) for x in transcript]
+                  best=None
+                  for i in range(len(items)):
+                      text=[]; start=items[i]['start']; end=start
+                      for j in range(i,min(len(items),i+14)):
+                          text.append(items[j]['text'])
+                          end=items[j]['start']+items[j]['duration']
+                          if end-start>35: break
+                          candidate=' '.join(text); c_norm=norm(candidate); c_words=set(words(candidate))
+                          recall=(sum(1 for w in target_words if w in c_words)/max(1,len(target_words)))
+                          score=(0.42*fuzz.token_set_ratio(target,c_norm)+0.38*fuzz.partial_ratio(target,c_norm)+20*recall)
+                          value={'statementStart':round(start,2),'statementEnd':round(end,2),'matchedText':candidate,'score':round(score,1),'contentRecall':round(recall,2),'segmentStartIndex':i,'segmentEndIndex':j}
+                          if best is None or value['score']>best['score']: best=value
+                  row['transcriptAvailable']=True
+                  row['bestMatch']=best
+                  row['accepted']=bool(best and best['score']>=72 and best['contentRecall']>=0.45)
+              except Exception as exc:
+                  row['transcriptAvailable']=False; row['accepted']=False; row['error']=f'{type(exc).__name__}: {exc}'
+              report['cases'].append(row)
+              print(f"[{index:02d}/50] {claim['caseNumber']} transcript={row.get('transcriptAvailable')} accepted={row.get('accepted')} score={(row.get('bestMatch') or {}).get('score')}")
+              time.sleep(.2)
+
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/exact-statement-times.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+          accepted=sum(1 for row in report['cases'] if row.get('accepted'))
+          available=sum(1 for row in report['cases'] if row.get('transcriptAvailable'))
+          Path('audit/exact-statement-summary.md').write_text(f'# Exact statement timestamp audit\n\nTranscripts available: **{available}/50**  \nAutomatically accepted matches: **{accepted}/50**\n')
+          PY
+      - name: Commit audit results
+        run: |
+          rm .github/workflows/audit-exact-statement-times.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record exact statement timestamp audit"
+          git push origin exact-statement-windows
