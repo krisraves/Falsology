@@ -1,0 +1,58 @@
+name: Test GPU YouTube audio bridge
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-gpu-youtube-audio.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Gradio client
+        run: pip install -U gradio_client
+      - name: Inspect and call GPU YouTube tab
+        run: |
+          python <<'PY'
+          import json,multiprocessing as mp
+          from pathlib import Path
+          def work(q):
+              try:
+                  from gradio_client import Client
+                  c=Client('devilent2/whisper-youtube',verbose=False)
+                  api=c.view_api(return_format='dict',print_info=False)
+                  endpoints=list((api.get('named_endpoints') or {}).keys())
+                  row={'api':api,'endpoints':endpoints}
+                  candidate=next((x for x in endpoints if 'yt' in x.lower() or 'youtube' in x.lower()),None)
+                  if not candidate and endpoints:candidate=endpoints[-1]
+                  row['chosen']=candidate
+                  if candidate:
+                      try:row['result']=c.predict('https://www.youtube.com/watch?v=TM8EXwemnYA','transcribe',api_name=candidate)
+                      except Exception as e:row['callError']=f'{type(e).__name__}: {e}'
+                  q.put(row)
+              except Exception as e:q.put({'error':f'{type(e).__name__}: {e}'})
+          q=mp.Queue();p=mp.Process(target=work,args=(q,));p.start();p.join(720)
+          if p.is_alive():p.terminate();p.join();out={'error':'hard timeout after 720 seconds'}
+          else:out=q.get() if not q.empty() else {'error':f'worker exited {p.exitcode}'}
+          Path('audit').mkdir(exist_ok=True);Path('audit/gpu-youtube-audio-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False,default=str)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-gpu-youtube-audio.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record GPU YouTube audio bridge test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
