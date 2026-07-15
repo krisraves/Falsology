@@ -1,0 +1,39 @@
+name: Final verify simple homepage
+
+on:
+  push:
+    paths:
+      - .github/workflows/final-verify-simple-home.yml
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: simple-home-obscure-cases
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Clean research files
+        run: |
+          rm -rf research
+          rm .github/workflows/final-verify-simple-home.yml
+      - run: npm ci
+      - run: npm run validate:cases
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Commit verified production tree
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Finalize simple homepage with obscure cases"
+          git push origin simple-home-obscure-cases
