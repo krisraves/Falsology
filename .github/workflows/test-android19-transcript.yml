@@ -1,0 +1,89 @@
+name: Test Android 19 transcript access
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-android19-transcript.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test older Android client
+        run: |
+          python <<'PY'
+          import base64,json,random,string,time,urllib.parse,urllib.request,urllib.error
+          from pathlib import Path
+          vid='3MuPWV5cTio'
+          def varint(value):
+              out=[]
+              while value>127:out.append((value&0x7f)|0x80);value>>=7
+              out.append(value&0x7f);return bytes(out)
+          def visitor_data():
+              ident=''.join(random.choice(string.ascii_letters+string.digits+'-_') for _ in range(11)).encode()
+              raw=bytes([10])+varint(len(ident))+ident+bytes([40])+varint(int(time.time()))
+              return urllib.parse.quote(base64.b64encode(raw).decode().replace('+','-').replace('/','_'))
+          def field(num,wire,data):
+              head=bytes([(num<<3)|wire])
+              if wire==2:return head+varint(len(data))+data
+              return head+varint(data)
+          def transcript_params(video_id,language='en',auto=True):
+              nested=field(1,2,(b'asr' if auto else b''))+field(2,2,language.encode())+field(3,2,b'')
+              nested_value=urllib.parse.quote(base64.b64encode(nested).decode()).encode()
+              main=field(1,2,video_id.encode())+field(2,2,nested_value)+field(3,0,1)+field(5,2,b'engagement-panel-searchable-transcript-search-panel')+field(6,0,1)+field(7,0,1)+field(8,0,1)
+              return urllib.parse.quote(base64.b64encode(main).decode())
+          visitor=visitor_data()
+          client={'clientName':'ANDROID','clientVersion':'19.09.37','userAgent':'com.google.android.youtube/19.09.37 (Linux; U; Android 11) gzip','osName':'Android','osVersion':'11','visitorData':visitor,'hl':'en','gl':'US'}
+          context={'client':client}
+          headers={'Content-Type':'application/json','Accept':'application/json','User-Agent':client['userAgent'],'X-Goog-Visitor-Id':visitor,'X-Youtube-Client-Name':'3','X-Youtube-Client-Version':'19.09.37'}
+          out={'visitorData':visitor}
+          body={'context':context,'videoId':vid,'playbackContext':{'contentPlaybackContext':{'html5Preference':'HTML5_PREF_WANTS'}},'contentCheckOk':True,'racyCheckOk':True}
+          try:
+              req=urllib.request.Request('https://www.youtube.com/youtubei/v1/player?prettyPrint=false',data=json.dumps(body).encode(),headers=headers)
+              with urllib.request.urlopen(req,timeout=30) as r:data=json.load(r)
+              status=data.get('playabilityStatus',{}); tracks=((data.get('captions') or {}).get('playerCaptionsTracklistRenderer') or {}).get('captionTracks') or []
+              out['player']={'http':r.status,'status':status.get('status'),'reason':status.get('reason'),'trackCount':len(tracks),'tracks':[{'languageCode':t.get('languageCode'),'kind':t.get('kind'),'name':(t.get('name') or {}).get('simpleText')} for t in tracks],'videoDetails':data.get('videoDetails')}
+          except urllib.error.HTTPError as e:out['player']={'error':f'HTTP {e.code}','body':e.read().decode('utf-8','replace')[:3000]}
+          except Exception as e:out['player']={'error':f'{type(e).__name__}: {e}'}
+          tries=[]
+          track_options=[]
+          if out.get('player',{}).get('tracks'):
+              for t in out['player']['tracks']:
+                  if str(t.get('languageCode','')).startswith('en'):track_options.append((t['languageCode'],t.get('kind')=='asr'))
+          track_options += [('en',True),('en',False),('en-US',True),('en-US',False)]
+          for language,auto in list(dict.fromkeys(track_options)):
+              params=transcript_params(vid,language,auto)
+              request_body={'context':context,'params':params}
+              try:
+                  req=urllib.request.Request('https://www.youtube.com/youtubei/v1/get_transcript?prettyPrint=false',data=json.dumps(request_body).encode(),headers=headers)
+                  with urllib.request.urlopen(req,timeout=30) as r:text=r.read().decode('utf-8','replace')
+                  data=json.loads(text); segs=((((data.get('actions') or [{}])[0].get('updateEngagementPanelAction') or {}).get('content') or {}).get('transcriptRenderer') or {}).get('content',{}).get('transcriptSearchPanelRenderer',{}).get('body',{}).get('transcriptSegmentListRenderer',{}).get('initialSegments',[])
+                  parsed=[]
+                  for s in segs[:10]:
+                      q=s.get('transcriptSegmentRenderer') or {}; parsed.append({'startMs':q.get('startMs'),'endMs':q.get('endMs'),'text':''.join(x.get('text','') for x in ((q.get('snippet') or {}).get('runs') or []))})
+                  tries.append({'language':language,'auto':auto,'http':r.status,'length':len(text),'segmentCount':len(segs),'segments':parsed})
+              except urllib.error.HTTPError as e:tries.append({'language':language,'auto':auto,'error':f'HTTP {e.code}','body':e.read().decode('utf-8','replace')[:2000]})
+              except Exception as e:tries.append({'language':language,'auto':auto,'error':f'{type(e).__name__}: {e}'})
+          out['transcriptTries']=tries
+          Path('audit').mkdir(exist_ok=True);Path('audit/android19-transcript-test.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-android19-transcript.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record Android 19 transcript test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
