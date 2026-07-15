@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install HTTP client
+        run: pip install -U requests
       - name: Search indexed subtitles
         shell: bash
         run: |
