@@ -1,0 +1,75 @@
+name: PR probe Cobalt audio
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe public Cobalt registry and one short source
+        run: |
+          python <<'PY'
+          import json, pathlib, requests, time
+          S=requests.Session();S.headers.update({'User-Agent':'Falsology one-time editorial timestamp audit/1.0','Accept':'application/json'})
+          out={'registries':{},'attempts':[]}
+          registries=['https://cobalt.directory/api/tests','https://instances.cobalt.best/instances.json']
+          candidates=[]
+          for url in registries:
+            try:
+              r=S.get(url,timeout=30);data=r.json();out['registries'][url]={'status':r.status_code,'type':type(data).__name__,'preview':data if len(json.dumps(data))<100000 else str(data)[:100000]}
+              if isinstance(data,dict) and isinstance(data.get('data'),list):
+                for x in data['data']:
+                  api=x.get('api');
+                  if api:candidates.append({'api':api,'source':'directory','meta':x})
+              elif isinstance(data,list):
+                for x in data:
+                  if isinstance(x,dict):
+                    api=x.get('api') or x.get('url') or x.get('instance')
+                    if api:candidates.append({'api':api,'source':'instances','meta':x})
+            except Exception as e:out['registries'][url]={'error':f'{type(e).__name__}: {e}'}
+          seen=set();dedup=[]
+          for x in candidates:
+            api=str(x['api']).rstrip('/')
+            if not api.startswith('http') or api in seen:continue
+            seen.add(api);x['api']=api;dedup.append(x)
+          # Prefer instances whose registry metadata reports recent success/YouTube support.
+          def score(x):
+            t=json.dumps(x.get('meta',{})).lower();s=0
+            if 'youtube' in t:s+=5
+            if any(k in t for k in ['success','online','healthy','passed']):s+=3
+            if any(k in t for k in ['false','failed','offline','error']):s-=2
+            return -s
+          dedup.sort(key=score)
+          source='https://www.youtube.com/watch?v=TM8EXwemnYA'
+          pathlib.Path('probe-output').mkdir(exist_ok=True)
+          for item in dedup[:20]:
+            api=item['api'];row={'api':api,'source':item['source'],'meta':item.get('meta')}
+            try:
+              info=S.get(api+'/',timeout=15);row['infoStatus']=info.status_code;row['infoPreview']=info.text[:5000]
+              body={'url':source,'downloadMode':'audio','audioFormat':'mp3','audioBitrate':'64','disableMetadata':True,'alwaysProxy':True}
+              r=S.post(api+'/',json=body,headers={'Content-Type':'application/json','Accept':'application/json'},timeout=60);row['postStatus']=r.status_code;row['postText']=r.text[:10000]
+              try:result=r.json()
+              except:result={}
+              row['result']=result
+              media_url=result.get('url')
+              if not media_url and isinstance(result.get('tunnel'),list) and result['tunnel']:media_url=result['tunnel'][0]
+              if media_url:
+                rr=S.get(media_url,headers={'Range':'bytes=0-1048575'},timeout=60,allow_redirects=True);row['mediaStatus']=rr.status_code;row['mediaBytes']=len(rr.content);row['mediaType']=rr.headers.get('content-type');row['finalMediaUrl']=rr.url
+                if rr.status_code in (200,206) and len(rr.content)>1000:
+                  pathlib.Path('probe-output/audio.bin').write_bytes(rr.content);out['success']=row;out['attempts'].append(row);break
+            except Exception as e:row['error']=f'{type(e).__name__}: {e}'
+            out['attempts'].append(row);time.sleep(.4)
+          pathlib.Path('probe-output/cobalt.json').write_text(json.dumps(out,indent=2,ensure_ascii=False,default=str)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cobalt-probe-result
+          path: probe-output/
+          retention-days: 1
