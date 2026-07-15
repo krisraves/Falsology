@@ -1,0 +1,106 @@
+{
+  "chunk": 4,
+  "generatedAt": "2026-07-15T21:57:33.894Z",
+  "cases": [
+    {
+      "caseNumber": "T16",
+      "person": "Aron Ralston",
+      "claim": "I cut off my own arm to survive.",
+      "currentVideoId": "idLfpNH5KTc",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T17",
+      "person": "Harrison Okene",
+      "claim": "I survived nearly three days in an air pocket inside a sunken ship.",
+      "currentVideoId": "qevehxLe2s4",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T18",
+      "person": "Ricky Megee",
+      "claim": "I survived 71 days alone in the Australian outback.",
+      "currentVideoId": "Ka0MVmd5Tes",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T19",
+      "person": "Robert Downey Jr.",
+      "claim": "My addiction led to prison.",
+      "currentVideoId": "mFol0tP0pGg",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T20",
+      "person": "Mike Tyson",
+      "claim": "I bit Evander Holyfield's ear.",
+      "currentVideoId": "qC4AG8x2768",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T21",
+      "person": "Michael Packard",
+      "claim": "A humpback whale had me inside its mouth and spit me back out.",
+      "currentVideoId": "K7iAlZzVenU",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T22",
+      "person": "Sammy Gravano",
+      "claim": "I was involved in nineteen murders.",
+      "currentVideoId": "diqdKgEzOkE",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T23",
+      "person": "Paul Templer",
+      "claim": "I was trapped inside a hippo's mouth and survived repeated attacks.",
+      "currentVideoId": "sjVgpvlzrXM",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T24",
+      "person": "Michael Morton",
+      "claim": "I spent nearly 25 years in prison for my wife's murder, but DNA proved I was innocent.",
+      "currentVideoId": "kv3j7yd7kTk",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    },
+    {
+      "caseNumber": "T25",
+      "person": "Lance Armstrong",
+      "claim": "I used banned substances during my Tour victories.",
+      "currentVideoId": "FRXzbNReCR0",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false
+    }
+  ]
+}
