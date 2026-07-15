@@ -1,4 +1,4 @@
-name: Referrer-aware caption diagnostic
+name: Click-through caption diagnostic
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Inspect caption data with production referrer
+      - name: Start the player and inspect captions
         shell: bash
         run: |
           node <<'JS'
@@ -29,12 +29,9 @@ jobs:
 
           (async () => {
             const videoId = '3MuPWV5cTio';
-            const productionOrigin = 'https://falsology.vercel.app';
+            const origin = 'https://falsology.vercel.app';
             const browser = await chromium.launch({ headless: true, args: ['--autoplay-policy=no-user-gesture-required', '--no-sandbox'] });
-            const context = await browser.newContext({
-              locale: 'en-US',
-              extraHTTPHeaders: { Referer: `${productionOrigin}/play` },
-            });
+            const context = await browser.newContext({ locale: 'en-US', extraHTTPHeaders: { Referer: `${origin}/play` } });
             const page = await context.newPage();
             page.setDefaultTimeout(5000);
             const network = [];
@@ -46,74 +43,72 @@ jobs:
               }
               network.push(entry);
             });
-
             const result = { videoId };
             try {
-              const params = new URLSearchParams({
-                enablejsapi: '1',
-                cc_load_policy: '1',
-                controls: '1',
-                playsinline: '1',
-                hl: 'en',
-                origin: productionOrigin,
-              });
-              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?${params}`, {
-                waitUntil: 'commit',
-                timeout: 30000,
-                referer: `${productionOrigin}/play`,
-              });
+              const params = new URLSearchParams({ enablejsapi: '1', cc_load_policy: '1', controls: '1', playsinline: '1', hl: 'en', origin });
+              const response = await page.goto(`https://www.youtube.com/embed/${videoId}?${params}`, { waitUntil: 'commit', timeout: 30000, referer: `${origin}/play` });
               result.status = response?.status() ?? null;
-              await page.waitForTimeout(9000);
-              result.prePlay = await page.evaluate(() => {
-                const video = document.querySelector('video');
-                return {
-                  title: document.title,
-                  body: (document.body?.innerText || '').slice(0, 1500),
-                  video: video ? { readyState: video.readyState, duration: video.duration, currentTime: video.currentTime, paused: video.paused, src: video.src, currentSrc: video.currentSrc } : null,
-                  subtitleButton: Boolean(document.querySelector('.ytp-subtitles-button')),
-                  globalCaptions: window.ytInitialPlayerResponse?.captions || null,
-                };
-              });
-              await page.evaluate(() => {
-                const button = document.querySelector('.ytp-subtitles-button');
-                if (button) button.click();
-                const video = document.querySelector('video');
-                if (video) {
-                  video.muted = true;
-                  video.currentTime = 1;
-                  video.play().catch(() => {});
+              await page.waitForTimeout(7000);
+
+              const selectors = [
+                '.ytp-large-play-button',
+                '.ytp-cued-thumbnail-overlay',
+                '.ytp-play-button',
+                'button[aria-label^="Play"]',
+              ];
+              result.clicks = [];
+              for (const selector of selectors) {
+                const locator = page.locator(selector).first();
+                const count = await locator.count();
+                let clicked = false;
+                let error = null;
+                if (count) {
+                  try { await locator.click({ force: true, timeout: 3000 }); clicked = true; } catch (clickError) { error = String(clickError); }
                 }
-              });
-              await page.waitForTimeout(6000);
+                result.clicks.push({ selector, count, clicked, error });
+                if (clicked) break;
+              }
+              await page.waitForTimeout(10000);
+
+              const subtitleButton = page.locator('.ytp-subtitles-button').first();
+              result.subtitleButtonCount = await subtitleButton.count();
+              if (result.subtitleButtonCount) {
+                try { await subtitleButton.click({ force: true, timeout: 3000 }); result.subtitleClicked = true; } catch (error) { result.subtitleClickError = String(error); }
+              }
+              await page.waitForTimeout(5000);
+
               result.dom = await page.evaluate(() => {
                 const video = document.querySelector('video');
-                const tracks = video ? Array.from(video.textTracks || []).map((track) => ({
+                const textTracks = video ? Array.from(video.textTracks || []).map((track) => ({
                   kind: track.kind,
                   label: track.label,
                   language: track.language,
                   mode: track.mode,
                   cueCount: track.cues ? track.cues.length : null,
-                  cues: track.cues ? Array.from(track.cues).slice(0, 500).map((cue) => ({ startTime: cue.startTime, endTime: cue.endTime, text: cue.text })) : [],
+                  cues: track.cues ? Array.from(track.cues).slice(0, 1000).map((cue) => ({ startTime: cue.startTime, endTime: cue.endTime, text: cue.text })) : [],
                 })) : [];
                 const scripts = Array.from(document.scripts).map((script) => script.textContent || '').filter((text) => /captionTracks|playerCaptionsTracklistRenderer|timedtext/.test(text));
                 return {
-                  video: video ? { readyState: video.readyState, duration: video.duration, currentTime: video.currentTime, paused: video.paused, src: video.src, currentSrc: video.currentSrc, tracks } : null,
+                  title: document.title,
+                  body: (document.body?.innerText || '').slice(0, 2500),
+                  video: video ? { readyState: video.readyState, duration: video.duration, currentTime: video.currentTime, paused: video.paused, src: video.src, currentSrc: video.currentSrc, textTracks } : null,
                   captionsOnScreen: Array.from(document.querySelectorAll('.ytp-caption-segment')).map((node) => node.textContent || ''),
                   globalCaptions: window.ytInitialPlayerResponse?.captions || null,
                   captionScriptCount: scripts.length,
-                  captionScripts: scripts.slice(0, 4).map((text) => text.slice(0, 500000)),
+                  captionScripts: scripts.slice(0, 5).map((text) => text.slice(0, 700000)),
+                  errorText: document.querySelector('.ytp-error')?.textContent || null,
                 };
               });
               result.network = network;
             } catch (error) {
               result.error = String(error?.stack || error);
             }
-            fs.writeFileSync('referrer-caption-diagnostic.json', JSON.stringify(result, null, 2));
-            console.log(JSON.stringify({ status: result.status, prePlay: result.prePlay, video: result.dom?.video, captionsOnScreen: result.dom?.captionsOnScreen, globalCaptions: Boolean(result.dom?.globalCaptions), scriptCount: result.dom?.captionScriptCount, networkCount: result.network?.length, error: result.error }, null, 2));
+            fs.writeFileSync('click-caption-diagnostic.json', JSON.stringify(result, null, 2));
+            console.log(JSON.stringify({ status: result.status, clicks: result.clicks, subtitle: result.subtitleButtonCount, video: result.dom?.video, captions: result.dom?.captionsOnScreen, globalCaptions: Boolean(result.dom?.globalCaptions), scriptCount: result.dom?.captionScriptCount, networkCount: result.network?.length, errorText: result.dom?.errorText, error: result.error }, null, 2));
             await browser.close();
           })().catch((error) => { console.error(error); process.exit(1); });
           JS
       - uses: actions/upload-artifact@v4
         with:
-          name: referrer-caption-diagnostic
-          path: referrer-caption-diagnostic.json
+          name: click-caption-diagnostic
+          path: click-caption-diagnostic.json
