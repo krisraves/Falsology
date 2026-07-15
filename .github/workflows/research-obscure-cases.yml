@@ -1,0 +1,152 @@
+name: Research obscure cases
+
+on:
+  push:
+    paths:
+      - .github/workflows/research-obscure-cases.yml
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: simple-home-obscure-cases
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -U yt-dlp
+      - name: Search direct footage candidates
+        shell: bash
+        run: |
+          python <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          topics = {
+            "T_HARRISON_OKENE": [
+              "Harrison Okene direct interview survived 60 hours underwater",
+              "Harrison Okene tells story interview air pocket shipwreck",
+            ],
+            "T_JULIANE_KOEPCKE": [
+              "Juliane Koepcke direct interview fell from plane survived jungle",
+              "Juliane Koepcke tells her story interview",
+            ],
+            "T_ALVARENGA": [
+              "Jose Salvador Alvarenga direct interview 438 days at sea",
+              "Alvarenga survivor interview adrift 438 days",
+            ],
+            "T_RICKY_MEGEE": [
+              "Ricky Megee direct interview survived Australian outback 71 days",
+              "Ricky Megee tells survival story interview",
+            ],
+            "T_ROY_SULLIVAN": [
+              "Roy Sullivan interview struck by lightning seven times",
+              "Roy Sullivan park ranger direct interview lightning",
+            ],
+            "T_JUAN_CATALAN": [
+              "Juan Catalan direct interview Curb Your Enthusiasm proved innocence",
+              "Juan Catalan tells story Dodgers game murder alibi interview",
+            ],
+            "T_VESNA_VULOVIC": [
+              "Vesna Vulovic direct interview survived 33000 foot fall",
+              "Vesna Vulovic interview plane fall survivor",
+            ],
+            "T_TSUTOMU_YAMAGUCHI": [
+              "Tsutomu Yamaguchi direct interview survived Hiroshima Nagasaki",
+              "Tsutomu Yamaguchi speaks interview both atomic bombs",
+            ],
+            "T_MARTY_TANKLEFF": [
+              "Marty Tankleff direct interview I did not kill my parents exonerated",
+              "Marty Tankleff innocence interview",
+            ],
+            "T_MICHAEL_MORTON": [
+              "Michael Morton direct interview innocent wife murder DNA exonerated",
+              "Michael Morton tells exoneration story interview",
+            ],
+            "L_JENNIFER_PAN": [
+              "Jennifer Pan police interrogation intruders tied me up raw",
+              "Jennifer Pan first police interview full interrogation",
+            ],
+            "L_CHANDLER_HALDERSON": [
+              "Chandler Halderson police interview parents cabin raw",
+              "Chandler Halderson interrogation parents missing full",
+            ],
+            "L_SHERRI_PAPINI": [
+              "Sherri Papini FBI interrogation kidnapped by two women raw",
+              "Sherri Papini full interrogation kidnapping story",
+            ],
+            "L_STEPHANIE_LAZARUS": [
+              "Stephanie Lazarus interrogation barely knew Sherri Rasmussen raw",
+              "Stephanie Lazarus full police interrogation",
+            ],
+            "L_DALIA_DIPPOLITO": [
+              "Dalia Dippolito interrogation murder plot acting raw",
+              "Dalia Dippolito full police interrogation acting",
+            ],
+            "L_SARAH_BOONE": [
+              "Sarah Boone interrogation hide and seek suitcase raw",
+              "Sarah Boone full police interrogation suitcase",
+            ],
+            "L_GRANT_AMATO": [
+              "Grant Amato police interrogation did not kill family raw",
+              "Grant Amato full interrogation family murders",
+            ],
+            "L_JENNIFER_FAITH": [
+              "Jennifer Faith public appeal husband murdered direct interview",
+              "Jennifer Faith interview killer stranger husband",
+            ],
+          }
+
+          def search(query):
+              try:
+                  result = subprocess.run(
+                      ["yt-dlp", "--dump-single-json", "--flat-playlist", f"ytsearch20:{query}"],
+                      capture_output=True, text=True, timeout=100, check=True,
+                  )
+                  return json.loads(result.stdout).get("entries") or []
+              except Exception as exc:
+                  return [{"error": f"{type(exc).__name__}: {exc}"}]
+
+          output = {}
+          for key, queries in topics.items():
+              seen = {}
+              errors = []
+              for query in queries:
+                  for item in search(query):
+                      if item.get("error"):
+                          errors.append(item["error"])
+                          continue
+                      video_id = item.get("id") or item.get("url")
+                      if not video_id or len(video_id) != 11:
+                          continue
+                      row = {
+                          "videoId": video_id,
+                          "title": item.get("title"),
+                          "channel": item.get("channel") or item.get("uploader"),
+                          "duration": item.get("duration"),
+                          "viewCount": item.get("view_count"),
+                          "url": f"https://www.youtube.com/watch?v={video_id}",
+                      }
+                      seen[video_id] = row
+              rows = list(seen.values())
+              rows.sort(key=lambda row: (0 if row.get("duration") and row["duration"] <= 900 else 1, -(row.get("viewCount") or 0)))
+              output[key] = {"queries": queries, "results": rows[:25], "errors": errors[:3]}
+              print(key, len(rows))
+
+          Path("research").mkdir(exist_ok=True)
+          Path("research/obscure-case-candidates.json").write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n")
+          PY
+      - name: Commit research and remove workflow
+        run: |
+          rm .github/workflows/research-obscure-cases.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Collect obscure direct-footage candidates"
+          git push origin simple-home-obscure-cases
