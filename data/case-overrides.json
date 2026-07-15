@@ -1,0 +1,844 @@
+{
+  "L01": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "ugoYkx04E2Q",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 441,
+      "url": "https://www.youtube.com/watch?v=ugoYkx04E2Q&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L02": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "YUT5XOk1KAE",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 169,
+      "url": "https://www.youtube.com/watch?v=YUT5XOk1KAE&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "archival-public-appeal",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L03": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Enghvd9o2As",
+      "startSeconds": 0,
+      "endSeconds": 25,
+      "videoDurationSeconds": 25,
+      "url": "https://www.youtube.com/watch?v=Enghvd9o2As&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L04": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "ez-4b-yQGzg",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 80,
+      "url": "https://www.youtube.com/watch?v=ez-4b-yQGzg&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "police-interrogation",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L05": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "ixzDBcMTnV8",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 3938,
+      "url": "https://www.youtube.com/watch?v=ixzDBcMTnV8&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "police-interrogation",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L06": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "SmiiY1rQDVk",
+      "startSeconds": 0,
+      "endSeconds": 42,
+      "videoDurationSeconds": 42,
+      "url": "https://www.youtube.com/watch?v=SmiiY1rQDVk&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "prison-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L07": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DaF2ST7ldss",
+      "startSeconds": 15,
+      "endSeconds": 45,
+      "videoDurationSeconds": 132,
+      "url": "https://www.youtube.com/watch?v=DaF2ST7ldss&t=15s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "archival-prison-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L08": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "VSK47WlZ6Ac",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 160,
+      "url": "https://www.youtube.com/watch?v=VSK47WlZ6Ac&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L09": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "WFMhZ8cdhi4",
+      "startSeconds": 5,
+      "endSeconds": 45,
+      "videoDurationSeconds": 75,
+      "url": "https://www.youtube.com/watch?v=WFMhZ8cdhi4&t=5s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-conference-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L10": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "d8dT7EoX5iY",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 198,
+      "url": "https://www.youtube.com/watch?v=d8dT7EoX5iY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L11": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DbXqiSYDhrA",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 109,
+      "url": "https://www.youtube.com/watch?v=DbXqiSYDhrA&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-presentation",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L12": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "auTG_X2jG3E",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 57,
+      "url": "https://www.youtube.com/watch?v=auTG_X2jG3E&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L13": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "tPq72EOXiiU",
+      "startSeconds": 0,
+      "endSeconds": 30,
+      "videoDurationSeconds": 30,
+      "url": "https://www.youtube.com/watch?v=tPq72EOXiiU&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L14": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Twubt8xcqus",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=Twubt8xcqus&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L15": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "h4fmEbgKeh0",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 150,
+      "url": "https://www.youtube.com/watch?v=h4fmEbgKeh0&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L16": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "kMu-2tXfPQI",
+      "startSeconds": 10,
+      "endSeconds": 45,
+      "videoDurationSeconds": 71,
+      "url": "https://www.youtube.com/watch?v=kMu-2tXfPQI&t=10s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L17": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "S3EVIeZNHJU",
+      "startSeconds": 0,
+      "endSeconds": 44,
+      "videoDurationSeconds": 44,
+      "url": "https://www.youtube.com/watch?v=S3EVIeZNHJU&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "corporate-statement",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L18": {
+    "slug": "richard-nixon-i-am-not-a-crook",
+    "person": "Richard Nixon",
+    "personSlug": "richard-nixon",
+    "personRole": "U.S. president",
+    "category": "Public statement",
+    "categorySlug": "public-statement",
+    "setting": "Question-and-answer session",
+    "date": "1973-11-17",
+    "claim": "I am not a crook.",
+    "prompt": "Does this statement survive the evidence?",
+    "verdict": "lie",
+    "classification": "False self-exoneration",
+    "difficulty": "medium",
+    "shortExplanation": "The Watergate record showed presidential participation in obstruction and abuse of power.",
+    "fullTruth": "Nixon resigned after the Supreme Court forced release of recordings that undermined his public denials; President Ford later granted him a broad pardon for federal offenses he may have committed in office.",
+    "context": "Nixon made the statement while denying personal wrongdoing during the Watergate scandal.",
+    "transcript": "People have got to know whether or not their president is a crook. Well, I am not a crook.",
+    "editorialBoundary": "The verdict applies to Nixon's broad self-exonerating claim in the context of the documented Watergate cover-up.",
+    "signals": [
+      "White House recordings",
+      "Obstruction evidence",
+      "Resignation and pardon"
+    ],
+    "lesson": "A vague moral label can hide specific conduct. Replace 'crook' with testable actions and examine the record.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "sh163n1lJ4M",
+      "startSeconds": 0,
+      "endSeconds": 37,
+      "videoDurationSeconds": 37,
+      "url": "https://www.youtube.com/watch?v=sh163n1lJ4M&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Direct statement recording",
+        "publisher": "Source recording",
+        "url": "https://www.youtube.com/watch?v=sh163n1lJ4M",
+        "type": "primary",
+        "note": "Nixon making the quoted statement."
+      },
+      {
+        "title": "Watergate archival resources",
+        "publisher": "Richard Nixon Presidential Library",
+        "url": "https://www.nixonlibrary.gov/watergate",
+        "type": "primary",
+        "note": "Official archive of Watergate records."
+      }
+    ],
+    "tags": [
+      "public-statement",
+      "spoken-statement",
+      "discernment"
+    ],
+    "reviewedAt": "2026-07-14"
+  },
+  "L19": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "8qyDZQh1UR4",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 70,
+      "url": "https://www.youtube.com/watch?v=8qyDZQh1UR4&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L20": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "_5AlMWoIRB4",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 79,
+      "url": "https://www.youtube.com/watch?v=_5AlMWoIRB4&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L21": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K0neF55UC-4",
+      "startSeconds": 0,
+      "endSeconds": 19,
+      "videoDurationSeconds": 19,
+      "url": "https://www.youtube.com/watch?v=K0neF55UC-4&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "public-speech",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L22": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "X2VKQfX5tSE",
+      "startSeconds": 0,
+      "endSeconds": 5,
+      "videoDurationSeconds": 5,
+      "url": "https://www.youtube.com/watch?v=X2VKQfX5tSE&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "press-briefing",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L23": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "jOxVk_DhWes",
+      "startSeconds": 0,
+      "endSeconds": 23,
+      "videoDurationSeconds": 23,
+      "url": "https://www.youtube.com/watch?v=jOxVk_DhWes&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "congressional-testimony",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "L24": {
+    "slug": "alex-jones-sandy-hook-was-fake-with-actors",
+    "person": "Alex Jones",
+    "personSlug": "alex-jones",
+    "personRole": "Conspiracy broadcaster and civil defendant",
+    "category": "Recorded broadcast",
+    "categorySlug": "recorded-broadcast",
+    "setting": "Archived on-camera statement played in court",
+    "date": "2017-01-01",
+    "claim": "Sandy Hook was fake, with actors.",
+    "prompt": "Does this statement survive the evidence?",
+    "verdict": "lie",
+    "classification": "Defamatory falsehood",
+    "difficulty": "easy",
+    "shortExplanation": "The Sandy Hook shooting was real; twenty children and six educators were murdered.",
+    "fullTruth": "Jones repeatedly promoted false claims that the massacre was staged. Juries later found him liable for defamation and awarded damages to victims' families.",
+    "context": "The selected segment is Jones's own recorded statement, not a reporter summarizing it.",
+    "transcript": "Sandy Hook was fake, with actors.",
+    "editorialBoundary": "The verdict is limited to the specific staged-event claim and the established record of the shooting.",
+    "signals": [
+      "Death records",
+      "Crime-scene evidence",
+      "Defamation verdicts"
+    ],
+    "lesson": "Repetition and audience size do not create evidence. Trace extraordinary claims back to primary records.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "EdwfKrdUW1s",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 161,
+      "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "courtroom-evidence-playback",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Recorded statement played for the jury",
+        "publisher": "Court exhibit footage",
+        "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s",
+        "type": "primary",
+        "note": "Jones making the quoted statement."
+      },
+      {
+        "title": "Attorney General statement on the verdict",
+        "publisher": "Connecticut Office of the Attorney General",
+        "url": "https://portal.ct.gov/ag/press-releases/2022-press-releases/attorney-general-tong-statement-on-alex-jones-verdict",
+        "type": "primary",
+        "note": "Official statement concerning the defamation verdict."
+      }
+    ],
+    "tags": [
+      "recorded-broadcast",
+      "spoken-statement",
+      "discernment"
+    ],
+    "reviewedAt": "2026-07-14"
+  },
+  "L25": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "1eDGRZ1VoZg",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 218,
+      "url": "https://www.youtube.com/watch?v=1eDGRZ1VoZg&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T01": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "_yrRC1j7qeo",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 106,
+      "url": "https://www.youtube.com/watch?v=_yrRC1j7qeo&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "courtroom-confession",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T02": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "RUEnhXunarw",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 1786,
+      "url": "https://www.youtube.com/watch?v=RUEnhXunarw&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "prison-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T03": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "MKK3XDI7wTE",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 261,
+      "url": "https://www.youtube.com/watch?v=MKK3XDI7wTE&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "prison-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T04": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "ToXjwzwaq3Y",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 138,
+      "url": "https://www.youtube.com/watch?v=ToXjwzwaq3Y&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "courtroom-statement",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T05": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "hzh3adTWZOg",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 237,
+      "url": "https://www.youtube.com/watch?v=hzh3adTWZOg&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "police-interrogation",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T06": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "4cVqY4Jf0qo",
+      "startSeconds": 15,
+      "endSeconds": 45,
+      "videoDurationSeconds": 158,
+      "url": "https://www.youtube.com/watch?v=4cVqY4Jf0qo&t=15s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "police-confession",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T07": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Qvde4s--GrM",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 75,
+      "url": "https://www.youtube.com/watch?v=Qvde4s--GrM&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "court-testimony",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T08": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "rEXrNoyv4Q8",
+      "startSeconds": 10,
+      "endSeconds": 45,
+      "videoDurationSeconds": 245,
+      "url": "https://www.youtube.com/watch?v=rEXrNoyv4Q8&t=10s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "court-testimony",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T09": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DPMOiJIayPc",
+      "startSeconds": 10,
+      "endSeconds": 45,
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=DPMOiJIayPc&t=10s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T10": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "WRyeAkP17aM",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 96,
+      "url": "https://www.youtube.com/watch?v=WRyeAkP17aM&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T11": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "q47wkZXczwY",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 80,
+      "url": "https://www.youtube.com/watch?v=q47wkZXczwY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T12": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "po2ui6EYW8Y",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 114,
+      "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "raw-release-statement",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T13": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "2w-ZdPkNvFY",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 118,
+      "url": "https://www.youtube.com/watch?v=2w-ZdPkNvFY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T14": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "yXRPgKLnWnU",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 113,
+      "url": "https://www.youtube.com/watch?v=yXRPgKLnWnU&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T15": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "W259o2tO2pc",
+      "startSeconds": 0,
+      "endSeconds": 25,
+      "videoDurationSeconds": 25,
+      "url": "https://www.youtube.com/watch?v=W259o2tO2pc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T16": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "idLfpNH5KTc",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 55,
+      "url": "https://www.youtube.com/watch?v=idLfpNH5KTc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T17": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "P9JU5hl3meI",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 134,
+      "url": "https://www.youtube.com/watch?v=P9JU5hl3meI&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "documentary-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T18": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "98QCCxluNZc",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 58,
+      "url": "https://www.youtube.com/watch?v=98QCCxluNZc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T19": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "NO15btTB2Pc",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 120,
+      "url": "https://www.youtube.com/watch?v=NO15btTB2Pc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T20": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "qC4AG8x2768",
+      "startSeconds": 0,
+      "endSeconds": 44,
+      "videoDurationSeconds": 44,
+      "url": "https://www.youtube.com/watch?v=qC4AG8x2768&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T21": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Lv6tvvuo0jc",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 139,
+      "url": "https://www.youtube.com/watch?v=Lv6tvvuo0jc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T22": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "diqdKgEzOkE",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 225,
+      "url": "https://www.youtube.com/watch?v=diqdKgEzOkE&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T23": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "OW-Z9eUM2VI",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 116,
+      "url": "https://www.youtube.com/watch?v=OW-Z9eUM2VI&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T24": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "UAjAcGD3kCQ",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 116,
+      "url": "https://www.youtube.com/watch?v=UAjAcGD3kCQ&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  },
+  "T25": {
+    "media": {
+      "type": "youtube",
+      "youtubeId": "FRXzbNReCR0",
+      "startSeconds": 0,
+      "endSeconds": 45,
+      "videoDurationSeconds": 65,
+      "url": "https://www.youtube.com/watch?v=FRXzbNReCR0&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-14",
+      "sourceKind": "direct-confession",
+      "directStatement": true,
+      "newsPackage": false
+    }
+  }
+}
