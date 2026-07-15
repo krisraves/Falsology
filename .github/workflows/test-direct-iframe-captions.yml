@@ -1,0 +1,88 @@
+name: Test direct iframe captions
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-direct-iframe-captions.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Start real iframe and capture captions
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const videos=['TM8EXwemnYA','3MuPWV5cTio','amHb2UoVZ_g'];
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--autoplay-policy=no-user-gesture-required','--disable-dev-shm-usage','--enable-unsafe-swiftshader']});
+            const results={};
+            for(const videoId of videos){
+              const context=await browser.newContext({locale:'en-US',permissions:[]});
+              const page=await context.newPage();
+              const requests=[]; const responses=[]; const consoleLogs=[];
+              page.on('console',m=>consoleLogs.push({type:m.type(),text:m.text()}));
+              page.on('request',req=>{
+                const url=req.url();
+                if(/timedtext|caption|transcript|youtubei\/v1\/player|\/embed\//i.test(url)) requests.push({url,method:req.method(),resourceType:req.resourceType()});
+              });
+              page.on('response',async resp=>{
+                const url=resp.url();
+                if(/timedtext|caption|transcript|youtubei\/v1\/player|\/embed\//i.test(url)){
+                  const row={url,status:resp.status(),contentType:resp.headers()['content-type']};
+                  if(!/googlevideo/i.test(url)){
+                    try{const b=await resp.body();row.bytes=b.length;row.preview=b.toString('utf8').slice(0,20000)}catch(e){row.error=String(e)}
+                  }
+                  responses.push(row);
+                }
+              });
+              const src=`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&cc_load_policy=1&cc_lang_pref=en&hl=en&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Ffalsology.vercel.app`;
+              await page.setContent(`<html><body style="margin:0;background:black"><iframe id="yt" width="800" height="450" src="${src}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></body></html>`,{waitUntil:'domcontentloaded'});
+              await page.waitForTimeout(8000);
+              const frames=page.frames().map(f=>f.url());
+              const ytFrame=page.frames().find(f=>/youtube\.com\/embed/.test(f.url()));
+              let controls={};
+              if(ytFrame){
+                try{controls.bodyText=(await ytFrame.locator('body').innerText()).slice(0,5000)}catch(e){controls.bodyError=String(e)}
+                for(const [name,selector] of Object.entries({play:'.ytp-large-play-button,.ytp-play-button',captions:'.ytp-subtitles-button',settings:'.ytp-settings-button'})){
+                  try{const loc=ytFrame.locator(selector).first();controls[name+'Count']=await loc.count();if(await loc.count()){controls[name+'Title']=await loc.getAttribute('title');if(name!=='settings')await loc.click({force:true,timeout:5000})}}catch(e){controls[name+'Error']=String(e)}
+                }
+              }
+              await page.waitForTimeout(18000);
+              if(ytFrame){
+                try{controls.finalBodyText=(await ytFrame.locator('body').innerText()).slice(0,5000)}catch(e){}
+                try{controls.captionText=await ytFrame.locator('.ytp-caption-segment').allInnerTexts()}catch(e){controls.captionError=String(e)}
+                try{controls.currentTime=await ytFrame.locator('video').evaluate(v=>({currentTime:v.currentTime,duration:v.duration,paused:v.paused,readyState:v.readyState}))}catch(e){controls.videoError=String(e)}
+              }
+              results[videoId]={src,frames,controls,requests,responses,consoleLogs};
+              await context.close();
+            }
+            await browser.close();
+            fs.mkdirSync('audit',{recursive:true});fs.writeFileSync('audit/direct-iframe-caption-test.json',JSON.stringify(results,null,2));
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Commit result
+        run: |
+          rm .github/workflows/test-direct-iframe-captions.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record direct iframe caption test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows
