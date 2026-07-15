@@ -1,9 +1,8 @@
 name: One-shot EntryMng Clinton validation
 
 on:
-  push:
-    paths:
-      - .github/workflows/one-shot-entry-manager-clinton.yml
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
