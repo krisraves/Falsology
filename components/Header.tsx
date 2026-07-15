@@ -3,7 +3,7 @@ import { auth, authConfigured, signIn, signOut } from "@/auth";
 
 export async function Header() {
   const session = authConfigured ? await auth() : null;
-  const name = session?.user?.name || session?.user?.email || "Investigator";
+  const name = session?.user?.name || session?.user?.email || "Player";
 
   return (
     <header className="site-header detective-header">
@@ -12,13 +12,13 @@ export async function Header() {
           <span className="brand-mark" aria-hidden="true">F</span>
           <span>
             <strong>Falsology</strong>
-            <small>Evidence beats instinct</small>
+            <small>Truth or lie?</small>
           </span>
         </Link>
         <nav className="top-nav" aria-label="Primary navigation">
-          <Link href="/play">Case files</Link>
-          <Link href="/archive">Case archive</Link>
-          <Link href="/methodology">Protocol</Link>
+          <Link href="/play">Play</Link>
+          <Link href="/archive">Archive</Link>
+          <Link href="/methodology">Method</Link>
         </nav>
         <div className="auth-controls">
           {session?.user ? (
@@ -31,13 +31,13 @@ export async function Header() {
               </form>
             </>
           ) : authConfigured ? (
-            <form action={async () => { "use server"; await signIn("google", { redirectTo: "/play" }); }}>
+            <form action={async () => { "use server"; await signIn("google", { redirectTo: "/" }); }}>
               <button className="header-auth-button google-button" type="submit"><span aria-hidden="true">G</span> Sign in</button>
             </form>
           ) : (
-            <span className="guest-chip">Guest investigator</span>
+            <span className="guest-chip">Guest</span>
           )}
-          <Link href="/play" className="header-case-button">Open a case</Link>
+          <Link href="/play" className="header-case-button">Play</Link>
         </div>
       </div>
     </header>
