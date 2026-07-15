@@ -2,16 +2,17 @@
 
 Falsology is a mobile-first detective game for practicing evidence-based discernment.
 
-Players watch a timestamped statement from a suspect, criminal, witness, survivor, celebrity offender, or public figure; set their confidence; decide whether the statement holds or breaks; then inspect the evidence that resolves the exact claim.
+Players watch a tightly trimmed statement from a suspect, criminal, witness, survivor, celebrity offender, or public figure; set their confidence; decide whether the statement holds or breaks; then inspect the evidence that resolves the exact claim.
 
 ## Production deck
 
 - Exactly **50 spoken-statement video cases**
 - Exactly **25 supported statements and 25 false statements**
-- Every clip is **two minutes or less**
-- No random trivia, text-only rounds, or audio-only rounds
+- Every selected clip is **45 seconds or less**
+- The named person must be visibly or audibly making the statement
+- No news packages, anchor narration, reenactments, movie scenes, commentary videos, random trivia, text-only rounds, or audio-only rounds
 - No duplicate YouTube videos
-- Cases include interrogations, public appeals, testimony, confessions, exonerations, and survivor interviews
+- Direct-footage types include interrogations, raw interviews, testimony, confessions, public statements, hearings, exonerations, and survivor interviews
 - Verdicts are tied to the exact sentence—not the speaker's general character
 - Build-time validation blocks an invalid or unbalanced deck
 
@@ -85,7 +86,9 @@ Unconfigured placements remain stable placeholders so layout does not jump.
 
 ## Content structure
 
-The live case records are in `data/cases/part01.json` through `part10.json`. Each record contains the speaker, exact statement, verdict, concise explanation, evidence signals, discernment lesson, YouTube ID, start/end time, source duration, and supporting links.
+The base case records are in `data/cases/part01.json` through `part10.json`. `data/case-overrides.json` contains the publication-approved direct-footage selections and replaces any retired statement or clip without duplicating the full case library.
+
+Each published record contains the speaker, exact statement, verdict, concise explanation, evidence signals, discernment lesson, YouTube ID, start/end time, source duration, direct-footage classification, and supporting links.
 
 `scripts/validate-detective-cases.mjs` enforces:
 
@@ -93,13 +96,16 @@ The live case records are in `data/cases/part01.json` through `part10.json`. Eac
 - 25/25 verdict balance
 - unique IDs, slugs, case numbers, and video IDs
 - YouTube video media only
-- valid playback windows no longer than 120 seconds
+- valid playback windows no longer than 45 seconds
+- the named person directly making the statement
+- no news packages or narrated reports
+- approved direct-footage source types
 - evidence signals and source links
 
 ## Editorial limitations
 
 - Third-party videos can be removed or have embedding disabled, so clips need periodic re-verification.
-- Several case records currently use reputable summaries as a secondary source; each case should receive a final human legal/editorial review before paid promotion.
+- A short direct excerpt can still omit context; every verdict page links to the complete source and supporting record.
 - Avoid claims that body language proves deception. The game teaches timelines, corroboration, records, changing accounts, and precise wording.
 - Consent management is required before personalized advertising.
 - A qualified attorney should review copyright, privacy, defamation, and moderation procedures before large-scale launch.
