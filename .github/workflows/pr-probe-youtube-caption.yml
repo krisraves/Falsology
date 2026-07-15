@@ -20,7 +20,7 @@ jobs:
       - name: Probe one embedded video
         run: |
           node <<'NODE'
-          const {chromium}=require('playwright');const http=require('http');
+          const {chromium}=require('playwright');const http=require('http');const fs=require('fs');
           const port=8765,origin=`http://127.0.0.1:${port}`,videoId='TM8EXwemnYA';
           const server=http.createServer((q,r)=>{r.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});r.end('<html><body></body></html>')});
           server.listen(port,'127.0.0.1',async()=>{
@@ -28,11 +28,16 @@ jobs:
             const page=await browser.newPage();const requests=[],responses=[],failures=[];
             page.on('requestfailed',r=>failures.push({url:r.url(),failure:r.failure()}));
             page.on('request',r=>{if(/timedtext|caption|transcript|youtubei\/v1\/player|\/embed\//i.test(r.url()))requests.push(r.url())});
-            page.on('response',async r=>{if(/timedtext|caption|transcript|youtubei\/v1\/player|\/embed\//i.test(r.url())){const x={url:r.url(),status:r.status()};try{const b=await r.body();x.bytes=b.length;x.preview=b.toString('utf8').slice(0,4000)}catch(e){x.error=String(e)}responses.push(x)}});
+            page.on('response',async r=>{if(/timedtext|caption|transcript|youtubei\/v1\/player|\/embed\//i.test(r.url())){const x={url:r.url(),status:r.status()};try{const b=await r.body();x.bytes=b.length;x.preview=b.toString('utf8').slice(0,50000)}catch(e){x.error=String(e)}responses.push(x)}});
             await page.goto(origin);
             await page.evaluate(({videoId,origin})=>{document.body.innerHTML=`<iframe width="800" height="450" allow="autoplay; encrypted-media" src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&cc_load_policy=1&cc_lang_pref=en&hl=en&enablejsapi=1&origin=${encodeURIComponent(origin)}"></iframe>`},{videoId,origin});
             await page.waitForTimeout(10000);const frame=page.frames().find(f=>/youtube\.com\/embed/.test(f.url()));const result={frames:page.frames().map(f=>f.url()),requests,responses,failures};
             if(frame){try{result.body=(await frame.locator('body').innerText()).slice(0,2000)}catch(e){result.bodyError=String(e)}try{const p=frame.locator('.ytp-large-play-button,.ytp-play-button').first();if(await p.count())await p.click({force:true})}catch(e){result.playError=String(e)}await page.waitForTimeout(3000);try{const cc=frame.locator('.ytp-subtitles-button').first();result.ccCount=await cc.count();if(await cc.count())await cc.click({force:true})}catch(e){result.ccError=String(e)}await page.waitForTimeout(12000);try{result.video=await frame.locator('video').evaluate(v=>({currentTime:v.currentTime,duration:v.duration,paused:v.paused,readyState:v.readyState}))}catch(e){result.videoError=String(e)}try{result.captionText=await frame.locator('.ytp-caption-segment').allInnerTexts()}catch(e){result.captionError=String(e)}}
-            console.log('CAPTION_PROBE_RESULT='+JSON.stringify(result));await browser.close();server.close();
+            fs.mkdirSync('probe-output',{recursive:true});fs.writeFileSync('probe-output/result.json',JSON.stringify(result,null,2));console.log('CAPTION_PROBE_RESULT='+JSON.stringify(result));await browser.close();server.close();
           });
           NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: caption-probe-result
+          path: probe-output/result.json
+          retention-days: 1
