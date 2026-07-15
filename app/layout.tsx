@@ -2,19 +2,20 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "@/app/globals.css";
 import "@/app/detective.css";
+import "@/app/simple.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SITE_NAME, siteUrl } from "@/lib/site";
 
-const description = "Train your discernment on real spoken statements from suspects, criminals, witnesses, survivors, and public figures. Watch the clip, make the call, then inspect the evidence.";
+const description = "Watch short statements from interviews, interrogations, and testimony. Choose Truth or Lie, then check the evidence.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: `${SITE_NAME} — Can you read the case?`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} — Truth or lie?`, template: `%s | ${SITE_NAME}` },
   description,
   applicationName: SITE_NAME,
-  keywords: ["detective game", "truth or lie", "deception detection", "media literacy", "criminal interviews", "evidence training"],
-  openGraph: { title: `${SITE_NAME} — Evidence beats instinct`, description, type: "website", url: siteUrl(), siteName: SITE_NAME },
+  keywords: ["truth or lie", "interrogation game", "witness testimony", "criminal interviews", "media literacy"],
+  openGraph: { title: `${SITE_NAME} — One clip. One call.`, description, type: "website", url: siteUrl(), siteName: SITE_NAME },
   twitter: { card: "summary_large_image", title: SITE_NAME, description },
   alternates: { canonical: siteUrl() },
 };
