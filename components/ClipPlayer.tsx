@@ -133,9 +133,10 @@ export function ClipPlayer({ videoId, title, startSeconds, endSeconds, sourceUrl
               target.cueVideoById({ videoId, startSeconds, endSeconds });
               setReady(true);
             },
-            onStateChange: ({ data }) => {
+            onStateChange: ({ data, target }) => {
               setPlaying(data === YT.PlayerState.PLAYING);
               if (data === YT.PlayerState.ENDED) {
+                target.cueVideoById({ videoId, startSeconds, endSeconds });
                 setEnded(true);
                 setElapsed(duration);
               }
