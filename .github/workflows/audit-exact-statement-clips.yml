@@ -1,0 +1,53 @@
+name: Audit exact statement clip windows
+
+on:
+  push:
+    branches:
+      - agent/exact-statement-clips
+    paths:
+      - .github/workflows/audit-exact-statement-clips.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/exact-statement-clips
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install timestamp audit tools
+        run: pip install "youtube-transcript-api>=1.2.0" "rapidfuzz>=3.9.0" "yt-dlp>=2025.1.0"
+
+      - name: Match statements and generate exact windows
+        run: python scripts/audit-exact-statement-clips.py
+
+      - name: Verify application
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      - name: Commit audited production data
+        shell: bash
+        run: |
+          rm .github/workflows/audit-exact-statement-clips.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Use exact statement-centered clip windows"
+          git push origin agent/exact-statement-clips
