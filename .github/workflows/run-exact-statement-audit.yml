@@ -6,6 +6,11 @@ on:
       - main
     paths:
       - .github/workflows/run-exact-statement-audit.yml
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
 
 permissions:
   contents: write
@@ -49,10 +54,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Use exact statement-centered clip windows"
-          git push origin agent/exact-statement-clips
+          if git diff --cached --quiet; then
+            echo "No new audited changes to commit."
+          else
+            git commit -m "Use exact statement-centered clip windows"
+            git push origin agent/exact-statement-clips
+          fi
 
       - name: Remove temporary trigger from main
+        if: github.event_name == 'push'
         shell: bash
         run: |
           git fetch origin main
