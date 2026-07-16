@@ -1,4 +1,4 @@
-name: Run exact statement timestamp audit
+name: Generate exact statement candidate review
 
 on:
   push:
@@ -13,14 +13,14 @@ on:
       - opened
 
 concurrency:
-  group: exact-statement-audit
+  group: exact-statement-candidate-review
   cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
-  audit:
+  review:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
@@ -33,27 +33,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
-      - name: Install audit dependencies
+      - name: Install review dependencies
         run: pip install "youtube-transcript-api>=1.2.0" "rapidfuzz>=3.9.0"
 
-      - name: Progressively match all 50 statements
-        id: audit
+      - name: Generate exact spoken candidate passages
+        id: candidates
         continue-on-error: true
         env:
-          AUDIT_WORKERS: "12"
-          AUDIT_REQUEST_TIMEOUT: "80"
+          CANDIDATE_WORKERS: "12"
+          CANDIDATE_TIMEOUT: "90"
         shell: bash
         run: |
           code=2
-          for round in 1 2 3 4; do
-            echo "Exact statement audit round $round"
+          for round in 1 2 3; do
+            echo "Candidate generation round $round"
             set +e
-            python scripts/run-exact-statement-audit-progressive.py
+            python scripts/generate-statement-candidate-review.py
             code=$?
             set -e
             if [ "$code" -eq 0 ]; then
@@ -64,43 +59,16 @@ jobs:
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
 
-      - name: Save unresolved-source report
-        if: steps.audit.outputs.exit_code != '0'
+      - name: Save candidate review
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/exact-statement-progress.json
+          git add validation/statement-candidate-review.json
           if ! git diff --cached --quiet; then
-            git commit -m "Record progressive exact statement audit"
+            git commit -m "Record exact statement candidate review"
             git push origin agent/exact-statement-clips
           fi
-          exit 1
-
-      - name: Verify application
-        if: steps.audit.outputs.exit_code == '0'
-        run: |
-          npm ci
-          npm run lint
-          npm run typecheck
-          npm run build
-
-      - name: Commit exact production clips
-        if: steps.audit.outputs.exit_code == '0'
-        shell: bash
-        run: |
-          rm -f .github/workflows/audit-exact-statement-clips.yml
-          rm -f scripts/audit-exact-statement-clips.py
-          rm -f scripts/run-exact-statement-audit.py
-          rm -f scripts/run-exact-statement-audit-v2.py
-          rm -f scripts/run-exact-statement-audit-hosted.py
-          rm -f scripts/run-exact-statement-audit-progressive.py
-          rm -f scripts/probe-caption-mirrors.py
-          rm -f validation/caption-provider-probe.json
-          rm -f validation/exact-statement-audit.json
-          rm -f validation/exact-statement-progress.json
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Use exact statement-centered clip windows"
-          git push origin agent/exact-statement-clips
+          if [ "${{ steps.candidates.outputs.exit_code }}" != "0" ]; then
+            exit 1
+          fi
