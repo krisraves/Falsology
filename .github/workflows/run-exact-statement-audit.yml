@@ -11,6 +11,11 @@ on:
       - main
     types:
       - opened
+      - ready_for_review
+
+concurrency:
+  group: exact-statement-audit
+  cancel-in-progress: true
 
 permissions:
   contents: write
