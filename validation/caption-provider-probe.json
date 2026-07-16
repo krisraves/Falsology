@@ -14,7 +14,7 @@
       "kind": "invidious",
       "instance": "https://invidious.nerdvpn.de",
       "usable": false,
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "kind": "invidious",
