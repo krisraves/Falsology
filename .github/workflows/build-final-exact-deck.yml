@@ -51,7 +51,6 @@ jobs:
               "L07": "I'm not a crook.",
               "L14": "A synthetic, completely fake.",
               "L15": "Completely fake with actors.",
-              "L18": "I have no idea, like, where they went.",
               "L21": "I'm not a crook.",
           }
           for case_number, claim in fixes.items():
