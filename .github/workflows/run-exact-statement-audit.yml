@@ -20,26 +20,73 @@ permissions:
   contents: write
 
 jobs:
-  probe:
+  audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/exact-statement-clips
           fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Probe independent caption providers
-        run: python scripts/probe-caption-mirrors.py
-      - name: Save probe results
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install audit dependencies
+        run: pip install "youtube-transcript-api>=1.2.0" "rapidfuzz>=3.9.0"
+
+      - name: Match every statement and generate exact windows
+        id: audit
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python scripts/run-exact-statement-audit-hosted.py
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+
+      - name: Save failed audit report
+        if: steps.audit.outputs.exit_code != '0'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/caption-provider-probe.json
+          git add validation/exact-statement-audit.json
           if ! git diff --cached --quiet; then
-            git commit -m "Record caption provider probe"
+            git commit -m "Record failed exact statement audit"
             git push origin agent/exact-statement-clips
           fi
+          exit 1
+
+      - name: Verify application
+        if: steps.audit.outputs.exit_code == '0'
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      - name: Commit exact production clips
+        if: steps.audit.outputs.exit_code == '0'
+        shell: bash
+        run: |
+          rm -f .github/workflows/audit-exact-statement-clips.yml
+          rm -f scripts/audit-exact-statement-clips.py
+          rm -f scripts/run-exact-statement-audit.py
+          rm -f scripts/run-exact-statement-audit-v2.py
+          rm -f scripts/run-exact-statement-audit-hosted.py
+          rm -f scripts/probe-caption-mirrors.py
+          rm -f validation/caption-provider-probe.json
+          rm -f validation/exact-statement-audit.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Use exact statement-centered clip windows"
+          git push origin agent/exact-statement-clips
