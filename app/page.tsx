@@ -53,7 +53,7 @@ export default function HomePage() {
         <span><strong>50</strong><small>video cases</small></span>
         <span><strong>25</strong><small>truths</small></span>
         <span><strong>25</strong><small>lies</small></span>
-        <span><strong>≤45s</strong><small>per clip</small></span>
+        <span><strong>±15s</strong><small>around each statement</small></span>
       </section>
 
       <section className="site-shell simple-ad"><AdSlot placement="leaderboard" /></section>

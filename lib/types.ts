@@ -14,6 +14,9 @@ export type ClaimMedia = {
   youtubeId: string;
   startSeconds: number;
   endSeconds: number;
+  statementStartSeconds: number;
+  statementEndSeconds: number;
+  spokenText: string;
   videoDurationSeconds: number;
   url: string;
   label: string;

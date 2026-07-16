@@ -1,0 +1,3152 @@
+{
+  "L01": {
+    "slug": "l01-chris-watts-i-have-no-inclination-to-where-they-re-at-right-now",
+    "person": "Chris Watts",
+    "personSlug": "chris-watts",
+    "personRole": "Murder suspect",
+    "category": "Public appeal",
+    "categorySlug": "public-appeal",
+    "setting": "Front-porch interview",
+    "date": "2018-08-14",
+    "claim": "I have no inclination to where they're at right now.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False missing-family account",
+    "shortExplanation": "Watts said this after murdering his wife and daughters and concealing their bodies.",
+    "fullTruth": "He later confessed and pleaded guilty to murdering Shanann, Bella, Celeste, and unborn Nico.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have no inclination to where they're at right now.”",
+    "transcript": "I have no inclination to where they're at right now.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Later confession",
+      "Location evidence",
+      "Timeline contradiction"
+    ],
+    "lesson": "A calm public appeal is not corroboration. Compare it with access, timeline, and later admissions.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "3MuPWV5cTio",
+      "startSeconds": 0.0,
+      "endSeconds": 28.04,
+      "statementStartSeconds": 8.48,
+      "statementEndSeconds": 13.04,
+      "spokenText": "Wherever they're at, like, I have no inclination to where they're at right now, like.",
+      "videoDurationSeconds": 487,
+      "url": "https://www.youtube.com/watch?v=3MuPWV5cTio&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=3MuPWV5cTio",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Watts family murders",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watts_family_murders",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "public-appeal",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L02": {
+    "slug": "l02-chris-watts-i-have-no-idea-like-where-they-went",
+    "person": "Chris Watts",
+    "personSlug": "chris-watts",
+    "personRole": "Murder suspect",
+    "category": "Public appeal",
+    "categorySlug": "public-appeal",
+    "setting": "Front-porch interview",
+    "date": "2018-08-14",
+    "claim": "I have no idea, like, where they went.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False missing-family account",
+    "shortExplanation": "Watts said this after murdering his wife and daughters and concealing their bodies.",
+    "fullTruth": "He later confessed and pleaded guilty to murdering Shanann, Bella, Celeste, and unborn Nico.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have no idea, like, where they went.”",
+    "transcript": "I have no idea, like, where they went.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Later confession",
+      "Location evidence",
+      "Timeline contradiction"
+    ],
+    "lesson": "A calm public appeal is not corroboration. Compare it with access, timeline, and later admissions.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "3MuPWV5cTio",
+      "startSeconds": 14.2,
+      "endSeconds": 49.24,
+      "statementStartSeconds": 29.2,
+      "statementEndSeconds": 34.24,
+      "spokenText": "I have no idea, like, where they went.",
+      "videoDurationSeconds": 487,
+      "url": "https://www.youtube.com/watch?v=3MuPWV5cTio&t=14.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=3MuPWV5cTio",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Watts family murders",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watts_family_murders",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "public-appeal",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L03": {
+    "slug": "l03-diane-downs-if-i-had-shot-my-own-children-would-i-not-have-done-a-good-job-of-it",
+    "person": "Diane Downs",
+    "personSlug": "diane-downs",
+    "personRole": "Mother and shooting suspect",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "1983-01-01",
+    "claim": "If I had shot my own children, would I not have done a good job of it?",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False denial",
+    "shortExplanation": "Downs used a rhetorical denial after shooting her children.",
+    "fullTruth": "Her surviving daughter identified Downs as the shooter, physical evidence contradicted her account, and a jury convicted her.",
+    "context": "The playable excerpt is centered on the exact spoken line: “If I had shot my own children, would I not have done a good job of it?”",
+    "transcript": "If I had shot my own children, would I not have done a good job of it?",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Surviving witness",
+      "Forensic conflict",
+      "Conviction"
+    ],
+    "lesson": "Rhetorical questions can function as denials without providing evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Enghvd9o2As",
+      "startSeconds": 0.0,
+      "endSeconds": 25.0,
+      "statementStartSeconds": 6.54,
+      "statementEndSeconds": 14.1,
+      "spokenText": "There are too many holes in it. If I had shot my own children, would I not have done a good job of it?",
+      "videoDurationSeconds": 25,
+      "url": "https://www.youtube.com/watch?v=Enghvd9o2As&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=Enghvd9o2As",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Diane Downs",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Diane_Downs",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L04": {
+    "slug": "l04-stephen-mcdaniel-we-just-don-t-know-where-she-is",
+    "person": "Stephen McDaniel",
+    "personSlug": "stephen-mcdaniel",
+    "personRole": "Murder suspect",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "2011-06-30",
+    "claim": "We just don't know where she is.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False professed ignorance",
+    "shortExplanation": "McDaniel pretended not to know what happened after killing Lauren Giddings.",
+    "fullTruth": "He later pleaded guilty to her murder. Investigators recovered evidence linking him to the killing and dismemberment.",
+    "context": "The playable excerpt is centered on the exact spoken line: “We just don't know where she is.”",
+    "transcript": "We just don't know where she is.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Guilty plea",
+      "Physical evidence",
+      "Prior surveillance"
+    ],
+    "lesson": "Watch whether professed uncertainty conflicts with the speaker's hidden knowledge and actions.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "YzbIhWu0gpQ",
+      "startSeconds": 54.76,
+      "endSeconds": 91.0,
+      "statementStartSeconds": 69.76,
+      "statementEndSeconds": 76.0,
+      "spokenText": "We just don't know where she is.",
+      "videoDurationSeconds": 105,
+      "url": "https://www.youtube.com/watch?v=YzbIhWu0gpQ&t=54.76s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=YzbIhWu0gpQ",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Murder of Lauren Giddings",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Murder_of_Lauren_Giddings",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L05": {
+    "slug": "l05-lance-armstrong-i-have-never-doped",
+    "person": "Lance Armstrong",
+    "personSlug": "lance-armstrong",
+    "personRole": "Professional cyclist",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "2005-01-01",
+    "claim": "I have never doped.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False doping denial",
+    "shortExplanation": "Armstrong repeatedly denied doping before later admitting it.",
+    "fullTruth": "In 2013 he acknowledged using banned performance-enhancing substances during all seven Tour de France victories.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have never doped.”",
+    "transcript": "I have never doped.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Later admission",
+      "Anti-doping evidence",
+      "Stripped titles"
+    ],
+    "lesson": "A repeated denial does not outweigh records, witnesses, and a later admission.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "25ja7IAxQjY",
+      "startSeconds": 0.0,
+      "endSeconds": 12.0,
+      "statementStartSeconds": 2.0,
+      "statementEndSeconds": 8.24,
+      "spokenText": "I've said it for longer than seven years. I have never doped.",
+      "videoDurationSeconds": 12,
+      "url": "https://www.youtube.com/watch?v=25ja7IAxQjY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=25ja7IAxQjY",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "History of Lance Armstrong doping allegations",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/History_of_Lance_Armstrong_doping_allegations",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L06": {
+    "slug": "l06-pete-rose-i-m-not-going-to-admit-something-didn-t-happen",
+    "person": "Pete Rose",
+    "personSlug": "pete-rose",
+    "personRole": "Former baseball player and manager",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "2004-01-01",
+    "claim": "I'm not going to admit something didn't happen.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False betting denial",
+    "shortExplanation": "Rose continued denying that he bet on baseball before publicly admitting it.",
+    "fullTruth": "He later acknowledged betting on baseball while managing the Cincinnati Reds.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I'm not going to admit something didn't happen.”",
+    "transcript": "I'm not going to admit something didn't happen.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Betting records",
+      "Permanent ineligibility",
+      "Later admission"
+    ],
+    "lesson": "A refusal to admit a documented act is not evidence that the act did not happen.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "h4fmEbgKeh0",
+      "startSeconds": 6.64,
+      "endSeconds": 44.5,
+      "statementStartSeconds": 21.64,
+      "statementEndSeconds": 29.5,
+      "spokenText": "Not at all, Jim. I'm not going to admit something didn't happen.",
+      "videoDurationSeconds": 150,
+      "url": "https://www.youtube.com/watch?v=h4fmEbgKeh0&t=6.64s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=h4fmEbgKeh0",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Pete Rose permanent ineligibility",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Pete_Rose#Permanent_ineligibility",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L07": {
+    "slug": "l07-richard-nixon-i-m-not-a-crook",
+    "person": "Richard Nixon",
+    "personSlug": "richard-nixon",
+    "personRole": "President of the United States",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1973-11-17",
+    "claim": "I'm not a crook.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False Watergate denial",
+    "shortExplanation": "Nixon denied criminality and obstruction while the Watergate evidence was still emerging.",
+    "fullTruth": "The White House tapes and related evidence documented obstruction of the Watergate investigation; Nixon resigned in 1974.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I'm not a crook.”",
+    "transcript": "I'm not a crook.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "White House tapes",
+      "Obstruction evidence",
+      "Resignation"
+    ],
+    "lesson": "A categorical denial can be tested against contemporaneous recordings and conduct.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "sh163n1lJ4M",
+      "startSeconds": 15.16,
+      "endSeconds": 37.0,
+      "statementStartSeconds": 30.16,
+      "statementEndSeconds": 31.16,
+      "spokenText": "Well, I'm not a crook.",
+      "videoDurationSeconds": 37,
+      "url": "https://www.youtube.com/watch?v=sh163n1lJ4M&t=15.16s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=sh163n1lJ4M",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Watergate scandal",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L08": {
+    "slug": "l08-richard-nixon-i-have-never-obstructed-justice",
+    "person": "Richard Nixon",
+    "personSlug": "richard-nixon",
+    "personRole": "President of the United States",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1973-11-17",
+    "claim": "I have never obstructed justice.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False Watergate denial",
+    "shortExplanation": "Nixon denied criminality and obstruction while the Watergate evidence was still emerging.",
+    "fullTruth": "The White House tapes and related evidence documented obstruction of the Watergate investigation; Nixon resigned in 1974.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have never obstructed justice.”",
+    "transcript": "I have never obstructed justice.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "White House tapes",
+      "Obstruction evidence",
+      "Resignation"
+    ],
+    "lesson": "A categorical denial can be tested against contemporaneous recordings and conduct.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "sh163n1lJ4M",
+      "startSeconds": 0.0,
+      "endSeconds": 36.71,
+      "statementStartSeconds": 14.0,
+      "statementEndSeconds": 21.71,
+      "spokenText": "In all of my years of public life, I have never obstructed justice.",
+      "videoDurationSeconds": 37,
+      "url": "https://www.youtube.com/watch?v=sh163n1lJ4M&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=sh163n1lJ4M",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Watergate scandal",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L09": {
+    "slug": "l09-hillary-clinton-i-remember-landing-under-sniper-fire",
+    "person": "Hillary Clinton",
+    "personSlug": "hillary-clinton",
+    "personRole": "Former first lady and presidential candidate",
+    "category": "Campaign speech",
+    "categorySlug": "campaign-speech",
+    "setting": "Public speech",
+    "date": "2008-03-17",
+    "claim": "I remember landing under sniper fire.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False danger recollection",
+    "shortExplanation": "Clinton described landing under sniper fire in Bosnia.",
+    "fullTruth": "Archival footage showed a peaceful arrival and greeting ceremony rather than sniper fire or a heads-down run to vehicles.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I remember landing under sniper fire.”",
+    "transcript": "I remember landing under sniper fire.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Archival video",
+      "Arrival ceremony",
+      "Public correction"
+    ],
+    "lesson": "Compare dramatic memory claims with contemporaneous footage.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K0neF55UC-4",
+      "startSeconds": 0.0,
+      "endSeconds": 19.0,
+      "statementStartSeconds": 0.0,
+      "statementEndSeconds": 4.44,
+      "spokenText": "I remember landing under sniper fire.",
+      "videoDurationSeconds": 19,
+      "url": "https://www.youtube.com/watch?v=K0neF55UC-4&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-speech",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=K0neF55UC-4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Hillary Clinton Bosnia trip controversy",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Hillary_Clinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "campaign-speech",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L10": {
+    "slug": "l10-hillary-clinton-we-just-ran-with-our-heads-down-to-get-into-the-vehicles",
+    "person": "Hillary Clinton",
+    "personSlug": "hillary-clinton",
+    "personRole": "Former first lady and presidential candidate",
+    "category": "Campaign speech",
+    "categorySlug": "campaign-speech",
+    "setting": "Public speech",
+    "date": "2008-03-17",
+    "claim": "We just ran with our heads down to get into the vehicles.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False danger recollection",
+    "shortExplanation": "Clinton described landing under sniper fire in Bosnia.",
+    "fullTruth": "Archival footage showed a peaceful arrival and greeting ceremony rather than sniper fire or a heads-down run to vehicles.",
+    "context": "The playable excerpt is centered on the exact spoken line: “We just ran with our heads down to get into the vehicles.”",
+    "transcript": "We just ran with our heads down to get into the vehicles.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Archival video",
+      "Arrival ceremony",
+      "Public correction"
+    ],
+    "lesson": "Compare dramatic memory claims with contemporaneous footage.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K0neF55UC-4",
+      "startSeconds": 0.0,
+      "endSeconds": 19.0,
+      "statementStartSeconds": 0.0,
+      "statementEndSeconds": 10.86,
+      "spokenText": "There was supposed to be some kind of a greeting ceremony at the airport, but instead we just ran with our heads down to get into the vehicles.",
+      "videoDurationSeconds": 19,
+      "url": "https://www.youtube.com/watch?v=K0neF55UC-4&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-speech",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=K0neF55UC-4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Hillary Clinton Bosnia trip controversy",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Hillary_Clinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "campaign-speech",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L11": {
+    "slug": "l11-sean-spicer-this-was-the-largest-audience-to-ever-witness-an-inauguration-period",
+    "person": "Sean Spicer",
+    "personSlug": "sean-spicer",
+    "personRole": "White House press secretary",
+    "category": "Press briefing",
+    "categorySlug": "press-briefing",
+    "setting": "Official press statement",
+    "date": "2017-01-21",
+    "claim": "This was the largest audience to ever witness an inauguration, period.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False crowd-size claim",
+    "shortExplanation": "Spicer claimed the inauguration audience was the largest ever.",
+    "fullTruth": "Photographs, transit data, and independent estimates showed the crowd was smaller than several prior inauguration audiences.",
+    "context": "The playable excerpt is centered on the exact spoken line: “This was the largest audience to ever witness an inauguration, period.”",
+    "transcript": "This was the largest audience to ever witness an inauguration, period.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Aerial photographs",
+      "Transit records",
+      "Independent estimates"
+    ],
+    "lesson": "Superlatives such as largest ever require comparable measurements, not assertion.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "X2VKQfX5tSE",
+      "startSeconds": 0.0,
+      "endSeconds": 7.0,
+      "statementStartSeconds": 0.04,
+      "statementEndSeconds": 6.24,
+      "spokenText": "This was the largest audience to ever witness an inauguration, period.",
+      "videoDurationSeconds": 7,
+      "url": "https://www.youtube.com/watch?v=X2VKQfX5tSE&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "press-briefing",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=X2VKQfX5tSE",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "First inauguration of Donald Trump",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/First_inauguration_of_Donald_Trump#Crowd_size",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-briefing",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L12": {
+    "slug": "l12-tobacco-executive-i-believe-nicotine-is-not-addictive",
+    "person": "Tobacco executive",
+    "personSlug": "tobacco-executive",
+    "personRole": "Tobacco-company chief executive",
+    "category": "Congressional testimony",
+    "categorySlug": "congressional-testimony",
+    "setting": "Sworn testimony",
+    "date": "1994-04-14",
+    "claim": "I believe nicotine is not addictive.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False addiction claim",
+    "shortExplanation": "The executive denied that nicotine is addictive.",
+    "fullTruth": "Nicotine is highly addictive, a fact established by extensive medical evidence and later acknowledged across public-health regulation and tobacco litigation.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I believe nicotine is not addictive.”",
+    "transcript": "I believe nicotine is not addictive.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Medical evidence",
+      "Internal industry records",
+      "Public-health consensus"
+    ],
+    "lesson": "Formal testimony still requires comparison with scientific evidence and internal records.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "jOxVk_DhWes",
+      "startSeconds": 2.82,
+      "endSeconds": 24.0,
+      "statementStartSeconds": 17.82,
+      "statementEndSeconds": 23.69,
+      "spokenText": "I believe nicotine is not addictive.",
+      "videoDurationSeconds": 24,
+      "url": "https://www.youtube.com/watch?v=jOxVk_DhWes&t=2.82s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "congressional-testimony",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=jOxVk_DhWes",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Nicotine addiction",
+        "publisher": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/tobacco/about/index.html",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "congressional-testimony",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L13": {
+    "slug": "l13-alex-jones-sandy-hook-is-a-synthetic",
+    "person": "Alex Jones",
+    "personSlug": "alex-jones",
+    "personRole": "Media personality",
+    "category": "Recorded broadcast",
+    "categorySlug": "recorded-broadcast",
+    "setting": "Direct monologue",
+    "date": "2017-01-01",
+    "claim": "Sandy Hook is a synthetic.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False massacre-hoax claim",
+    "shortExplanation": "Jones falsely described the Sandy Hook massacre as fabricated.",
+    "fullTruth": "Twenty children and six educators were murdered at Sandy Hook Elementary School. Courts later entered major judgments against Jones in defamation cases brought by victims' families.",
+    "context": "The playable excerpt is centered on the exact spoken line: “Sandy Hook is a synthetic.”",
+    "transcript": "Sandy Hook is a synthetic.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Death records",
+      "Contemporaneous reporting",
+      "Defamation judgments"
+    ],
+    "lesson": "A claim of fabrication must confront named victims, records, witnesses, and physical evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "EdwfKrdUW1s",
+      "startSeconds": 76.2,
+      "endSeconds": 114.12,
+      "statementStartSeconds": 91.2,
+      "statementEndSeconds": 99.12,
+      "spokenText": "Sandy Hook is a synthetic, completely fake, with actors.",
+      "videoDurationSeconds": 161,
+      "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s&t=76.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-presentation",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Sandy Hook Elementary School shooting",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Sandy_Hook_Elementary_School_shooting",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "recorded-broadcast",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L14": {
+    "slug": "l14-alex-jones-a-synthetic-completely-fake",
+    "person": "Alex Jones",
+    "personSlug": "alex-jones",
+    "personRole": "Media personality",
+    "category": "Recorded broadcast",
+    "categorySlug": "recorded-broadcast",
+    "setting": "Direct monologue",
+    "date": "2017-01-01",
+    "claim": "A synthetic, completely fake.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False massacre-hoax claim",
+    "shortExplanation": "Jones falsely described the Sandy Hook massacre as fabricated.",
+    "fullTruth": "Twenty children and six educators were murdered at Sandy Hook Elementary School. Courts later entered major judgments against Jones in defamation cases brought by victims' families.",
+    "context": "The playable excerpt is centered on the exact spoken line: “A synthetic, completely fake.”",
+    "transcript": "A synthetic, completely fake.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Death records",
+      "Contemporaneous reporting",
+      "Defamation judgments"
+    ],
+    "lesson": "A claim of fabrication must confront named victims, records, witnesses, and physical evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "EdwfKrdUW1s",
+      "startSeconds": 76.2,
+      "endSeconds": 114.12,
+      "statementStartSeconds": 91.2,
+      "statementEndSeconds": 99.12,
+      "spokenText": "Sandy Hook is a synthetic, completely fake, with actors.",
+      "videoDurationSeconds": 161,
+      "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s&t=76.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-presentation",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Sandy Hook Elementary School shooting",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Sandy_Hook_Elementary_School_shooting",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "recorded-broadcast",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L15": {
+    "slug": "l15-alex-jones-completely-fake-with-actors",
+    "person": "Alex Jones",
+    "personSlug": "alex-jones",
+    "personRole": "Media personality",
+    "category": "Recorded broadcast",
+    "categorySlug": "recorded-broadcast",
+    "setting": "Direct monologue",
+    "date": "2017-01-01",
+    "claim": "Completely fake with actors.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False massacre-hoax claim",
+    "shortExplanation": "Jones falsely described the Sandy Hook massacre as fabricated.",
+    "fullTruth": "Twenty children and six educators were murdered at Sandy Hook Elementary School. Courts later entered major judgments against Jones in defamation cases brought by victims' families.",
+    "context": "The playable excerpt is centered on the exact spoken line: “Completely fake with actors.”",
+    "transcript": "Completely fake with actors.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Death records",
+      "Contemporaneous reporting",
+      "Defamation judgments"
+    ],
+    "lesson": "A claim of fabrication must confront named victims, records, witnesses, and physical evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "EdwfKrdUW1s",
+      "startSeconds": 76.2,
+      "endSeconds": 114.12,
+      "statementStartSeconds": 91.2,
+      "statementEndSeconds": 99.12,
+      "spokenText": "Sandy Hook is a synthetic, completely fake, with actors.",
+      "videoDurationSeconds": 161,
+      "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s&t=76.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-presentation",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Sandy Hook Elementary School shooting",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Sandy_Hook_Elementary_School_shooting",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "recorded-broadcast",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L16": {
+    "slug": "l16-bernie-madoff-it-s-impossible-for-a-violation-to-go-undetected",
+    "person": "Bernie Madoff",
+    "personSlug": "bernie-madoff",
+    "personRole": "Investment manager",
+    "category": "Recorded presentation",
+    "categorySlug": "recorded-presentation",
+    "setting": "Industry presentation",
+    "date": "2007-01-01",
+    "claim": "It's impossible for a violation to go undetected.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False regulatory-assurance claim",
+    "shortExplanation": "Madoff claimed modern regulation made undetected violations virtually impossible.",
+    "fullTruth": "His investment business was a long-running Ponzi scheme that evaded detection until 2008.",
+    "context": "The playable excerpt is centered on the exact spoken line: “It's impossible for a violation to go undetected.”",
+    "transcript": "It's impossible for a violation to go undetected.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Guilty plea",
+      "Account records",
+      "Ponzi-scheme collapse"
+    ],
+    "lesson": "Claims that misconduct is impossible should be tested against incentives, controls, and independent records.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "auTG_X2jG3E",
+      "startSeconds": 6.2,
+      "endSeconds": 44.04,
+      "statementStartSeconds": 21.2,
+      "statementEndSeconds": 29.04,
+      "spokenText": "It's impossible for a violation to go undetected.",
+      "videoDurationSeconds": 57,
+      "url": "https://www.youtube.com/watch?v=auTG_X2jG3E&t=6.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-presentation",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=auTG_X2jG3E",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Madoff investment scandal",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Madoff_investment_scandal",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "recorded-presentation",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L17": {
+    "slug": "l17-chris-watts-i-have-no-inclination-to-where-they-re-at-right-now",
+    "person": "Chris Watts",
+    "personSlug": "chris-watts",
+    "personRole": "Murder suspect",
+    "category": "Public appeal",
+    "categorySlug": "public-appeal",
+    "setting": "Front-porch interview",
+    "date": "2018-08-14",
+    "claim": "I have no inclination to where they're at right now.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False missing-family account",
+    "shortExplanation": "Watts said this after murdering his wife and daughters and concealing their bodies.",
+    "fullTruth": "He later confessed and pleaded guilty to murdering Shanann, Bella, Celeste, and unborn Nico.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have no inclination to where they're at right now.”",
+    "transcript": "I have no inclination to where they're at right now.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Later confession",
+      "Location evidence",
+      "Timeline contradiction"
+    ],
+    "lesson": "A calm public appeal is not corroboration. Compare it with access, timeline, and later admissions.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "3MuPWV5cTio",
+      "startSeconds": 0.0,
+      "endSeconds": 28.04,
+      "statementStartSeconds": 8.48,
+      "statementEndSeconds": 13.04,
+      "spokenText": "Wherever they're at, like, I have no inclination to where they're at right now, like.",
+      "videoDurationSeconds": 487,
+      "url": "https://www.youtube.com/watch?v=3MuPWV5cTio&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=3MuPWV5cTio",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Watts family murders",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watts_family_murders",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "public-appeal",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L18": {
+    "slug": "l18-diane-downs-if-i-had-shot-my-own-children-would-i-not-have-done-a-good-job-of-it",
+    "person": "Diane Downs",
+    "personSlug": "diane-downs",
+    "personRole": "Mother and shooting suspect",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "1983-01-01",
+    "claim": "If I had shot my own children, would I not have done a good job of it?",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False denial",
+    "shortExplanation": "Downs used a rhetorical denial after shooting her children.",
+    "fullTruth": "Her surviving daughter identified Downs as the shooter, physical evidence contradicted her account, and a jury convicted her.",
+    "context": "The playable excerpt is centered on the exact spoken line: “If I had shot my own children, would I not have done a good job of it?”",
+    "transcript": "If I had shot my own children, would I not have done a good job of it?",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Surviving witness",
+      "Forensic conflict",
+      "Conviction"
+    ],
+    "lesson": "Rhetorical questions can function as denials without providing evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Enghvd9o2As",
+      "startSeconds": 0.0,
+      "endSeconds": 25.0,
+      "statementStartSeconds": 6.54,
+      "statementEndSeconds": 14.1,
+      "spokenText": "There are too many holes in it. If I had shot my own children, would I not have done a good job of it?",
+      "videoDurationSeconds": 25,
+      "url": "https://www.youtube.com/watch?v=Enghvd9o2As&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=Enghvd9o2As",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Diane Downs",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Diane_Downs",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L19": {
+    "slug": "l19-stephen-mcdaniel-we-just-don-t-know-where-she-is",
+    "person": "Stephen McDaniel",
+    "personSlug": "stephen-mcdaniel",
+    "personRole": "Murder suspect",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "2011-06-30",
+    "claim": "We just don't know where she is.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False professed ignorance",
+    "shortExplanation": "McDaniel pretended not to know what happened after killing Lauren Giddings.",
+    "fullTruth": "He later pleaded guilty to her murder. Investigators recovered evidence linking him to the killing and dismemberment.",
+    "context": "The playable excerpt is centered on the exact spoken line: “We just don't know where she is.”",
+    "transcript": "We just don't know where she is.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Guilty plea",
+      "Physical evidence",
+      "Prior surveillance"
+    ],
+    "lesson": "Watch whether professed uncertainty conflicts with the speaker's hidden knowledge and actions.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "YzbIhWu0gpQ",
+      "startSeconds": 54.76,
+      "endSeconds": 91.0,
+      "statementStartSeconds": 69.76,
+      "statementEndSeconds": 76.0,
+      "spokenText": "We just don't know where she is.",
+      "videoDurationSeconds": 105,
+      "url": "https://www.youtube.com/watch?v=YzbIhWu0gpQ&t=54.76s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "raw-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=YzbIhWu0gpQ",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Murder of Lauren Giddings",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Murder_of_Lauren_Giddings",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L20": {
+    "slug": "l20-lance-armstrong-i-have-never-doped",
+    "person": "Lance Armstrong",
+    "personSlug": "lance-armstrong",
+    "personRole": "Professional cyclist",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Recorded interview",
+    "date": "2005-01-01",
+    "claim": "I have never doped.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False doping denial",
+    "shortExplanation": "Armstrong repeatedly denied doping before later admitting it.",
+    "fullTruth": "In 2013 he acknowledged using banned performance-enhancing substances during all seven Tour de France victories.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have never doped.”",
+    "transcript": "I have never doped.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Later admission",
+      "Anti-doping evidence",
+      "Stripped titles"
+    ],
+    "lesson": "A repeated denial does not outweigh records, witnesses, and a later admission.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "25ja7IAxQjY",
+      "startSeconds": 0.0,
+      "endSeconds": 12.0,
+      "statementStartSeconds": 2.0,
+      "statementEndSeconds": 8.24,
+      "spokenText": "I've said it for longer than seven years. I have never doped.",
+      "videoDurationSeconds": 12,
+      "url": "https://www.youtube.com/watch?v=25ja7IAxQjY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=25ja7IAxQjY",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "History of Lance Armstrong doping allegations",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/History_of_Lance_Armstrong_doping_allegations",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L21": {
+    "slug": "l21-richard-nixon-i-m-not-a-crook",
+    "person": "Richard Nixon",
+    "personSlug": "richard-nixon",
+    "personRole": "President of the United States",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1973-11-17",
+    "claim": "I'm not a crook.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False Watergate denial",
+    "shortExplanation": "Nixon denied criminality and obstruction while the Watergate evidence was still emerging.",
+    "fullTruth": "The White House tapes and related evidence documented obstruction of the Watergate investigation; Nixon resigned in 1974.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I'm not a crook.”",
+    "transcript": "I'm not a crook.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "White House tapes",
+      "Obstruction evidence",
+      "Resignation"
+    ],
+    "lesson": "A categorical denial can be tested against contemporaneous recordings and conduct.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "sh163n1lJ4M",
+      "startSeconds": 15.16,
+      "endSeconds": 37.0,
+      "statementStartSeconds": 30.16,
+      "statementEndSeconds": 31.16,
+      "spokenText": "Well, I'm not a crook.",
+      "videoDurationSeconds": 37,
+      "url": "https://www.youtube.com/watch?v=sh163n1lJ4M&t=15.16s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=sh163n1lJ4M",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Watergate scandal",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L22": {
+    "slug": "l22-hillary-clinton-i-remember-landing-under-sniper-fire",
+    "person": "Hillary Clinton",
+    "personSlug": "hillary-clinton",
+    "personRole": "Former first lady and presidential candidate",
+    "category": "Campaign speech",
+    "categorySlug": "campaign-speech",
+    "setting": "Public speech",
+    "date": "2008-03-17",
+    "claim": "I remember landing under sniper fire.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False danger recollection",
+    "shortExplanation": "Clinton described landing under sniper fire in Bosnia.",
+    "fullTruth": "Archival footage showed a peaceful arrival and greeting ceremony rather than sniper fire or a heads-down run to vehicles.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I remember landing under sniper fire.”",
+    "transcript": "I remember landing under sniper fire.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Archival video",
+      "Arrival ceremony",
+      "Public correction"
+    ],
+    "lesson": "Compare dramatic memory claims with contemporaneous footage.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K0neF55UC-4",
+      "startSeconds": 0.0,
+      "endSeconds": 19.0,
+      "statementStartSeconds": 0.0,
+      "statementEndSeconds": 4.44,
+      "spokenText": "I remember landing under sniper fire.",
+      "videoDurationSeconds": 19,
+      "url": "https://www.youtube.com/watch?v=K0neF55UC-4&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-speech",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=K0neF55UC-4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Hillary Clinton Bosnia trip controversy",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Hillary_Clinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "campaign-speech",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L23": {
+    "slug": "l23-sean-spicer-this-was-the-largest-audience-to-ever-witness-an-inauguration-period",
+    "person": "Sean Spicer",
+    "personSlug": "sean-spicer",
+    "personRole": "White House press secretary",
+    "category": "Press briefing",
+    "categorySlug": "press-briefing",
+    "setting": "Official press statement",
+    "date": "2017-01-21",
+    "claim": "This was the largest audience to ever witness an inauguration, period.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False crowd-size claim",
+    "shortExplanation": "Spicer claimed the inauguration audience was the largest ever.",
+    "fullTruth": "Photographs, transit data, and independent estimates showed the crowd was smaller than several prior inauguration audiences.",
+    "context": "The playable excerpt is centered on the exact spoken line: “This was the largest audience to ever witness an inauguration, period.”",
+    "transcript": "This was the largest audience to ever witness an inauguration, period.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Aerial photographs",
+      "Transit records",
+      "Independent estimates"
+    ],
+    "lesson": "Superlatives such as largest ever require comparable measurements, not assertion.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "X2VKQfX5tSE",
+      "startSeconds": 0.0,
+      "endSeconds": 7.0,
+      "statementStartSeconds": 0.04,
+      "statementEndSeconds": 6.24,
+      "spokenText": "This was the largest audience to ever witness an inauguration, period.",
+      "videoDurationSeconds": 7,
+      "url": "https://www.youtube.com/watch?v=X2VKQfX5tSE&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "press-briefing",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=X2VKQfX5tSE",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "First inauguration of Donald Trump",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/First_inauguration_of_Donald_Trump#Crowd_size",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-briefing",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L24": {
+    "slug": "l24-tobacco-executive-i-believe-nicotine-is-not-addictive",
+    "person": "Tobacco executive",
+    "personSlug": "tobacco-executive",
+    "personRole": "Tobacco-company chief executive",
+    "category": "Congressional testimony",
+    "categorySlug": "congressional-testimony",
+    "setting": "Sworn testimony",
+    "date": "1994-04-14",
+    "claim": "I believe nicotine is not addictive.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False addiction claim",
+    "shortExplanation": "The executive denied that nicotine is addictive.",
+    "fullTruth": "Nicotine is highly addictive, a fact established by extensive medical evidence and later acknowledged across public-health regulation and tobacco litigation.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I believe nicotine is not addictive.”",
+    "transcript": "I believe nicotine is not addictive.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Medical evidence",
+      "Internal industry records",
+      "Public-health consensus"
+    ],
+    "lesson": "Formal testimony still requires comparison with scientific evidence and internal records.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "jOxVk_DhWes",
+      "startSeconds": 2.82,
+      "endSeconds": 24.0,
+      "statementStartSeconds": 17.82,
+      "statementEndSeconds": 23.69,
+      "spokenText": "I believe nicotine is not addictive.",
+      "videoDurationSeconds": 24,
+      "url": "https://www.youtube.com/watch?v=jOxVk_DhWes&t=2.82s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "congressional-testimony",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=jOxVk_DhWes",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Nicotine addiction",
+        "publisher": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/tobacco/about/index.html",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "congressional-testimony",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "L25": {
+    "slug": "l25-alex-jones-sandy-hook-is-a-synthetic",
+    "person": "Alex Jones",
+    "personSlug": "alex-jones",
+    "personRole": "Media personality",
+    "category": "Recorded broadcast",
+    "categorySlug": "recorded-broadcast",
+    "setting": "Direct monologue",
+    "date": "2017-01-01",
+    "claim": "Sandy Hook is a synthetic.",
+    "prompt": "Are they lying?",
+    "verdict": "lie",
+    "classification": "False massacre-hoax claim",
+    "shortExplanation": "Jones falsely described the Sandy Hook massacre as fabricated.",
+    "fullTruth": "Twenty children and six educators were murdered at Sandy Hook Elementary School. Courts later entered major judgments against Jones in defamation cases brought by victims' families.",
+    "context": "The playable excerpt is centered on the exact spoken line: “Sandy Hook is a synthetic.”",
+    "transcript": "Sandy Hook is a synthetic.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Death records",
+      "Contemporaneous reporting",
+      "Defamation judgments"
+    ],
+    "lesson": "A claim of fabrication must confront named victims, records, witnesses, and physical evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "EdwfKrdUW1s",
+      "startSeconds": 76.2,
+      "endSeconds": 114.12,
+      "statementStartSeconds": 91.2,
+      "statementEndSeconds": 99.12,
+      "spokenText": "Sandy Hook is a synthetic, completely fake, with actors.",
+      "videoDurationSeconds": 161,
+      "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s&t=76.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-presentation",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=EdwfKrdUW1s",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Sandy Hook Elementary School shooting",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Sandy_Hook_Elementary_School_shooting",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "recorded-broadcast",
+      "lie",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T01": {
+    "slug": "t01-aron-ralston-i-have-to-cut-my-arm-off",
+    "person": "Aron Ralston",
+    "personSlug": "aron-ralston",
+    "personRole": "Canyon accident survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2003-05-01",
+    "claim": "I have to cut my arm off.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified survival account",
+    "shortExplanation": "Ralston described the decision and method he used to escape after his arm was pinned by a boulder.",
+    "fullTruth": "After more than five days trapped in Bluejohn Canyon, he broke the bones in his forearm, amputated it with a multitool, and reached rescuers.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I have to cut my arm off.”",
+    "transcript": "I have to cut my arm off.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue record",
+      "Documented injuries",
+      "First-person account"
+    ],
+    "lesson": "An extraordinary account becomes credible when injuries, location, and rescue records independently support it.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "idLfpNH5KTc",
+      "startSeconds": 0.0,
+      "endSeconds": 19.24,
+      "statementStartSeconds": 0.08,
+      "statementEndSeconds": 4.24,
+      "spokenText": "I have to cut my arm off, except I couldn't figure out how to do it.",
+      "videoDurationSeconds": 55,
+      "url": "https://www.youtube.com/watch?v=idLfpNH5KTc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=idLfpNH5KTc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Aron Ralston",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Aron_Ralston",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T02": {
+    "slug": "t02-aron-ralston-i-couldn-t-figure-out-how-to-do-it",
+    "person": "Aron Ralston",
+    "personSlug": "aron-ralston",
+    "personRole": "Canyon accident survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2003-05-01",
+    "claim": "I couldn't figure out how to do it.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified survival account",
+    "shortExplanation": "Ralston described the decision and method he used to escape after his arm was pinned by a boulder.",
+    "fullTruth": "After more than five days trapped in Bluejohn Canyon, he broke the bones in his forearm, amputated it with a multitool, and reached rescuers.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I couldn't figure out how to do it.”",
+    "transcript": "I couldn't figure out how to do it.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue record",
+      "Documented injuries",
+      "First-person account"
+    ],
+    "lesson": "An extraordinary account becomes credible when injuries, location, and rescue records independently support it.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "idLfpNH5KTc",
+      "startSeconds": 0.0,
+      "endSeconds": 19.24,
+      "statementStartSeconds": 0.08,
+      "statementEndSeconds": 4.24,
+      "spokenText": "I have to cut my arm off, except I couldn't figure out how to do it.",
+      "videoDurationSeconds": 55,
+      "url": "https://www.youtube.com/watch?v=idLfpNH5KTc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=idLfpNH5KTc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Aron Ralston",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Aron_Ralston",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T03": {
+    "slug": "t03-aron-ralston-i-was-pretty-sure-that-i-was-going-to-die",
+    "person": "Aron Ralston",
+    "personSlug": "aron-ralston",
+    "personRole": "Canyon accident survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2003-05-01",
+    "claim": "I was pretty sure that I was going to die.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified survival account",
+    "shortExplanation": "Ralston described the decision and method he used to escape after his arm was pinned by a boulder.",
+    "fullTruth": "After more than five days trapped in Bluejohn Canyon, he broke the bones in his forearm, amputated it with a multitool, and reached rescuers.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I was pretty sure that I was going to die.”",
+    "transcript": "I was pretty sure that I was going to die.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue record",
+      "Documented injuries",
+      "First-person account"
+    ],
+    "lesson": "An extraordinary account becomes credible when injuries, location, and rescue records independently support it.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "idLfpNH5KTc",
+      "startSeconds": 0.0,
+      "endSeconds": 24.92,
+      "statementStartSeconds": 4.24,
+      "statementEndSeconds": 9.92,
+      "spokenText": "By the final night that I was there, I was pretty sure that I was going to die.",
+      "videoDurationSeconds": 55,
+      "url": "https://www.youtube.com/watch?v=idLfpNH5KTc&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=idLfpNH5KTc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Aron Ralston",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Aron_Ralston",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T04": {
+    "slug": "t04-aron-ralston-i-could-break-the-bones-of-my-arm",
+    "person": "Aron Ralston",
+    "personSlug": "aron-ralston",
+    "personRole": "Canyon accident survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2003-05-01",
+    "claim": "I could break the bones of my arm.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified survival account",
+    "shortExplanation": "Ralston described the decision and method he used to escape after his arm was pinned by a boulder.",
+    "fullTruth": "After more than five days trapped in Bluejohn Canyon, he broke the bones in his forearm, amputated it with a multitool, and reached rescuers.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I could break the bones of my arm.”",
+    "transcript": "I could break the bones of my arm.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue record",
+      "Documented injuries",
+      "First-person account"
+    ],
+    "lesson": "An extraordinary account becomes credible when injuries, location, and rescue records independently support it.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "idLfpNH5KTc",
+      "startSeconds": 14.36,
+      "endSeconds": 50.5,
+      "statementStartSeconds": 29.36,
+      "statementEndSeconds": 35.5,
+      "spokenText": "I could break the bones of my arm. I didn't have to cut through them with a knife.",
+      "videoDurationSeconds": 55,
+      "url": "https://www.youtube.com/watch?v=idLfpNH5KTc&t=14.36s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=idLfpNH5KTc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Aron Ralston",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Aron_Ralston",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T05": {
+    "slug": "t05-aron-ralston-i-didn-t-have-to-cut-through-them-with-a-knife",
+    "person": "Aron Ralston",
+    "personSlug": "aron-ralston",
+    "personRole": "Canyon accident survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2003-05-01",
+    "claim": "I didn't have to cut through them with a knife.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified survival account",
+    "shortExplanation": "Ralston described the decision and method he used to escape after his arm was pinned by a boulder.",
+    "fullTruth": "After more than five days trapped in Bluejohn Canyon, he broke the bones in his forearm, amputated it with a multitool, and reached rescuers.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I didn't have to cut through them with a knife.”",
+    "transcript": "I didn't have to cut through them with a knife.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue record",
+      "Documented injuries",
+      "First-person account"
+    ],
+    "lesson": "An extraordinary account becomes credible when injuries, location, and rescue records independently support it.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "idLfpNH5KTc",
+      "startSeconds": 14.36,
+      "endSeconds": 50.5,
+      "statementStartSeconds": 29.36,
+      "statementEndSeconds": 35.5,
+      "spokenText": "I could break the bones of my arm. I didn't have to cut through them with a knife.",
+      "videoDurationSeconds": 55,
+      "url": "https://www.youtube.com/watch?v=idLfpNH5KTc&t=14.36s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=idLfpNH5KTc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Aron Ralston",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Aron_Ralston",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T06": {
+    "slug": "t06-anthony-ray-hinton-i-believe-in-justice",
+    "person": "Anthony Ray Hinton",
+    "personSlug": "anthony-ray-hinton",
+    "personRole": "Wrongfully convicted prisoner",
+    "category": "Release statement",
+    "categorySlug": "release-statement",
+    "setting": "Public statement after release",
+    "date": "2015-04-03",
+    "claim": "I believe in justice.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wrongful-conviction account",
+    "shortExplanation": "Hinton spoke after spending about thirty years on Alabama's death row.",
+    "fullTruth": "Ballistics evidence used against him could not be matched to the crime, and prosecutors dismissed the case after the Supreme Court ordered a new trial.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I believe in justice.”",
+    "transcript": "I believe in justice.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Case dismissal",
+      "Ballistics review",
+      "Release record"
+    ],
+    "lesson": "A conviction can be overturned when forensic foundations fail and the case is independently reexamined.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "po2ui6EYW8Y",
+      "startSeconds": 60.32,
+      "endSeconds": 100.76,
+      "statementStartSeconds": 75.32,
+      "statementEndSeconds": 85.76,
+      "spokenText": "I believe in justice. This is the case to start showing, because I shouldn't have sat on death row thirty years. All they had to do was test the gun.",
+      "videoDurationSeconds": 114,
+      "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y&t=60.32s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Anthony Ray Hinton",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Anthony_Ray_Hinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "release-statement",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T07": {
+    "slug": "t07-anthony-ray-hinton-this-is-the-case-to-start-showing",
+    "person": "Anthony Ray Hinton",
+    "personSlug": "anthony-ray-hinton",
+    "personRole": "Wrongfully convicted prisoner",
+    "category": "Release statement",
+    "categorySlug": "release-statement",
+    "setting": "Public statement after release",
+    "date": "2015-04-03",
+    "claim": "This is the case to start showing.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wrongful-conviction account",
+    "shortExplanation": "Hinton spoke after spending about thirty years on Alabama's death row.",
+    "fullTruth": "Ballistics evidence used against him could not be matched to the crime, and prosecutors dismissed the case after the Supreme Court ordered a new trial.",
+    "context": "The playable excerpt is centered on the exact spoken line: “This is the case to start showing.”",
+    "transcript": "This is the case to start showing.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Case dismissal",
+      "Ballistics review",
+      "Release record"
+    ],
+    "lesson": "A conviction can be overturned when forensic foundations fail and the case is independently reexamined.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "po2ui6EYW8Y",
+      "startSeconds": 60.32,
+      "endSeconds": 100.76,
+      "statementStartSeconds": 75.32,
+      "statementEndSeconds": 85.76,
+      "spokenText": "I believe in justice. This is the case to start showing, because I shouldn't have sat on death row thirty years. All they had to do was test the gun.",
+      "videoDurationSeconds": 114,
+      "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y&t=60.32s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Anthony Ray Hinton",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Anthony_Ray_Hinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "release-statement",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T08": {
+    "slug": "t08-anthony-ray-hinton-i-shouldn-t-have-sat-on-death-row-thirty-years",
+    "person": "Anthony Ray Hinton",
+    "personSlug": "anthony-ray-hinton",
+    "personRole": "Wrongfully convicted prisoner",
+    "category": "Release statement",
+    "categorySlug": "release-statement",
+    "setting": "Public statement after release",
+    "date": "2015-04-03",
+    "claim": "I shouldn't have sat on death row thirty years.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wrongful-conviction account",
+    "shortExplanation": "Hinton spoke after spending about thirty years on Alabama's death row.",
+    "fullTruth": "Ballistics evidence used against him could not be matched to the crime, and prosecutors dismissed the case after the Supreme Court ordered a new trial.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I shouldn't have sat on death row thirty years.”",
+    "transcript": "I shouldn't have sat on death row thirty years.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Case dismissal",
+      "Ballistics review",
+      "Release record"
+    ],
+    "lesson": "A conviction can be overturned when forensic foundations fail and the case is independently reexamined.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "po2ui6EYW8Y",
+      "startSeconds": 60.32,
+      "endSeconds": 100.76,
+      "statementStartSeconds": 75.32,
+      "statementEndSeconds": 85.76,
+      "spokenText": "I believe in justice. This is the case to start showing, because I shouldn't have sat on death row thirty years. All they had to do was test the gun.",
+      "videoDurationSeconds": 114,
+      "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y&t=60.32s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Anthony Ray Hinton",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Anthony_Ray_Hinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "release-statement",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T09": {
+    "slug": "t09-anthony-ray-hinton-all-they-had-to-do-was-test-the-gun",
+    "person": "Anthony Ray Hinton",
+    "personSlug": "anthony-ray-hinton",
+    "personRole": "Wrongfully convicted prisoner",
+    "category": "Release statement",
+    "categorySlug": "release-statement",
+    "setting": "Public statement after release",
+    "date": "2015-04-03",
+    "claim": "All they had to do was test the gun.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wrongful-conviction account",
+    "shortExplanation": "Hinton spoke after spending about thirty years on Alabama's death row.",
+    "fullTruth": "Ballistics evidence used against him could not be matched to the crime, and prosecutors dismissed the case after the Supreme Court ordered a new trial.",
+    "context": "The playable excerpt is centered on the exact spoken line: “All they had to do was test the gun.”",
+    "transcript": "All they had to do was test the gun.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Case dismissal",
+      "Ballistics review",
+      "Release record"
+    ],
+    "lesson": "A conviction can be overturned when forensic foundations fail and the case is independently reexamined.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "po2ui6EYW8Y",
+      "startSeconds": 60.32,
+      "endSeconds": 100.76,
+      "statementStartSeconds": 75.32,
+      "statementEndSeconds": 85.76,
+      "spokenText": "I believe in justice. This is the case to start showing, because I shouldn't have sat on death row thirty years. All they had to do was test the gun.",
+      "videoDurationSeconds": 114,
+      "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y&t=60.32s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=po2ui6EYW8Y",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Anthony Ray Hinton",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Anthony_Ray_Hinton",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "release-statement",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T10": {
+    "slug": "t10-richard-jewell-i-did-not-set-out-to-be-a-hero-i-set-out-that-night-simply-to-do-my-job",
+    "person": "Richard Jewell",
+    "personSlug": "richard-jewell",
+    "personRole": "Olympic security guard",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1997-01-01",
+    "claim": "I did not set out to be a hero. I set out that night simply to do my job.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified public statement",
+    "shortExplanation": "Jewell described his actions and commitment after being cleared in the Olympic Park bombing investigation.",
+    "fullTruth": "He discovered the bomb, helped evacuate the area, was formally cleared, and the actual bomber later pleaded guilty.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I did not set out to be a hero. I set out that night simply to do my job.”",
+    "transcript": "I did not set out to be a hero. I set out that night simply to do my job.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Formal clearance",
+      "Actual offender confession",
+      "Contemporaneous response"
+    ],
+    "lesson": "Public suspicion is not proof; later records may vindicate a person treated as a suspect.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DPMOiJIayPc",
+      "startSeconds": 63.8,
+      "endSeconds": 103.64,
+      "statementStartSeconds": 78.8,
+      "statementEndSeconds": 88.64,
+      "spokenText": "At Centennial Olympic Park, I did not set out to be a hero. I set out that night simply to do my job.",
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=DPMOiJIayPc&t=63.8s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=DPMOiJIayPc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Richard Jewell",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Richard_Jewell",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T11": {
+    "slug": "t11-richard-jewell-i-did-not-set-out-to-be-a-hero",
+    "person": "Richard Jewell",
+    "personSlug": "richard-jewell",
+    "personRole": "Olympic security guard",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1997-01-01",
+    "claim": "I did not set out to be a hero.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified public statement",
+    "shortExplanation": "Jewell described his actions and commitment after being cleared in the Olympic Park bombing investigation.",
+    "fullTruth": "He discovered the bomb, helped evacuate the area, was formally cleared, and the actual bomber later pleaded guilty.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I did not set out to be a hero.”",
+    "transcript": "I did not set out to be a hero.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Formal clearance",
+      "Actual offender confession",
+      "Contemporaneous response"
+    ],
+    "lesson": "Public suspicion is not proof; later records may vindicate a person treated as a suspect.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DPMOiJIayPc",
+      "startSeconds": 63.8,
+      "endSeconds": 103.64,
+      "statementStartSeconds": 78.8,
+      "statementEndSeconds": 88.64,
+      "spokenText": "At Centennial Olympic Park, I did not set out to be a hero. I set out that night simply to do my job.",
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=DPMOiJIayPc&t=63.8s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=DPMOiJIayPc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Richard Jewell",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Richard_Jewell",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T12": {
+    "slug": "t12-richard-jewell-i-set-out-that-night-simply-to-do-my-job",
+    "person": "Richard Jewell",
+    "personSlug": "richard-jewell",
+    "personRole": "Olympic security guard",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1997-01-01",
+    "claim": "I set out that night simply to do my job.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified public statement",
+    "shortExplanation": "Jewell described his actions and commitment after being cleared in the Olympic Park bombing investigation.",
+    "fullTruth": "He discovered the bomb, helped evacuate the area, was formally cleared, and the actual bomber later pleaded guilty.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I set out that night simply to do my job.”",
+    "transcript": "I set out that night simply to do my job.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Formal clearance",
+      "Actual offender confession",
+      "Contemporaneous response"
+    ],
+    "lesson": "Public suspicion is not proof; later records may vindicate a person treated as a suspect.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DPMOiJIayPc",
+      "startSeconds": 63.8,
+      "endSeconds": 103.64,
+      "statementStartSeconds": 78.8,
+      "statementEndSeconds": 88.64,
+      "spokenText": "At Centennial Olympic Park, I did not set out to be a hero. I set out that night simply to do my job.",
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=DPMOiJIayPc&t=63.8s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=DPMOiJIayPc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Richard Jewell",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Richard_Jewell",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T13": {
+    "slug": "t13-richard-jewell-i-set-out-that-night-simply-to-do-my-job-and-to-do-it-right",
+    "person": "Richard Jewell",
+    "personSlug": "richard-jewell",
+    "personRole": "Olympic security guard",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1997-01-01",
+    "claim": "I set out that night simply to do my job and to do it right.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified public statement",
+    "shortExplanation": "Jewell described his actions and commitment after being cleared in the Olympic Park bombing investigation.",
+    "fullTruth": "He discovered the bomb, helped evacuate the area, was formally cleared, and the actual bomber later pleaded guilty.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I set out that night simply to do my job and to do it right.”",
+    "transcript": "I set out that night simply to do my job and to do it right.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Formal clearance",
+      "Actual offender confession",
+      "Contemporaneous response"
+    ],
+    "lesson": "Public suspicion is not proof; later records may vindicate a person treated as a suspect.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DPMOiJIayPc",
+      "startSeconds": 68.2,
+      "endSeconds": 112.92,
+      "statementStartSeconds": 83.2,
+      "statementEndSeconds": 97.92,
+      "spokenText": "I set out that night simply to do my job and to do it right. I was then and remain now an individual committed to the principles of law enforcement.",
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=DPMOiJIayPc&t=68.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=DPMOiJIayPc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Richard Jewell",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Richard_Jewell",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T14": {
+    "slug": "t14-richard-jewell-i-was-then-and-remain-now-an-individual-committed-to-the-principles-of-l",
+    "person": "Richard Jewell",
+    "personSlug": "richard-jewell",
+    "personRole": "Olympic security guard",
+    "category": "Press conference",
+    "categorySlug": "press-conference",
+    "setting": "Public statement",
+    "date": "1997-01-01",
+    "claim": "I was then and remain now an individual committed to the principles of law enforcement.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified public statement",
+    "shortExplanation": "Jewell described his actions and commitment after being cleared in the Olympic Park bombing investigation.",
+    "fullTruth": "He discovered the bomb, helped evacuate the area, was formally cleared, and the actual bomber later pleaded guilty.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I was then and remain now an individual committed to the principles of law enforcement.”",
+    "transcript": "I was then and remain now an individual committed to the principles of law enforcement.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Formal clearance",
+      "Actual offender confession",
+      "Contemporaneous response"
+    ],
+    "lesson": "Public suspicion is not proof; later records may vindicate a person treated as a suspect.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "DPMOiJIayPc",
+      "startSeconds": 68.2,
+      "endSeconds": 112.92,
+      "statementStartSeconds": 83.2,
+      "statementEndSeconds": 97.92,
+      "spokenText": "I set out that night simply to do my job and to do it right. I was then and remain now an individual committed to the principles of law enforcement.",
+      "videoDurationSeconds": 172,
+      "url": "https://www.youtube.com/watch?v=DPMOiJIayPc&t=68.2s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=DPMOiJIayPc",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Richard Jewell",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Richard_Jewell",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "press-conference",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T15": {
+    "slug": "t15-harrison-okene-the-only-thing-i-could-put-my-hope-and-trust-in-is-god",
+    "person": "Harrison Okene",
+    "personSlug": "harrison-okene",
+    "personRole": "Shipwreck survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2013-05-26",
+    "claim": "The only thing I could put my hope and trust in is God.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified underwater-survival account",
+    "shortExplanation": "Okene described how he remained calm and prayed while trapped underwater.",
+    "fullTruth": "He survived for roughly sixty hours in an air pocket inside the sunken tugboat Jascon-4 before divers found him alive.",
+    "context": "The playable excerpt is centered on the exact spoken line: “The only thing I could put my hope and trust in is God.”",
+    "transcript": "The only thing I could put my hope and trust in is God.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue video",
+      "Dive-team record",
+      "Named vessel"
+    ],
+    "lesson": "Rare survival claims are strongest when the rescue itself is independently recorded.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "qevehxLe2s4",
+      "startSeconds": 34.44,
+      "endSeconds": 68.0,
+      "statementStartSeconds": 49.44,
+      "statementEndSeconds": 53.0,
+      "spokenText": "The only thing I could put my hope and trust in is God.",
+      "videoDurationSeconds": 83,
+      "url": "https://www.youtube.com/watch?v=qevehxLe2s4&t=34.44s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=qevehxLe2s4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Jascon-4 shipwreck",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Jascon-4",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T16": {
+    "slug": "t16-harrison-okene-i-don-t-know-it-s-up-to-three-days",
+    "person": "Harrison Okene",
+    "personSlug": "harrison-okene",
+    "personRole": "Shipwreck survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2013-05-26",
+    "claim": "I don't know. It's up to three days.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified underwater-survival account",
+    "shortExplanation": "Okene described how he remained calm and prayed while trapped underwater.",
+    "fullTruth": "He survived for roughly sixty hours in an air pocket inside the sunken tugboat Jascon-4 before divers found him alive.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I don't know. It's up to three days.”",
+    "transcript": "I don't know. It's up to three days.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue video",
+      "Dive-team record",
+      "Named vessel"
+    ],
+    "lesson": "Rare survival claims are strongest when the rescue itself is independently recorded.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "qevehxLe2s4",
+      "startSeconds": 36.68,
+      "endSeconds": 70.84,
+      "statementStartSeconds": 51.68,
+      "statementEndSeconds": 55.84,
+      "spokenText": "I don't know. It's up to three days.",
+      "videoDurationSeconds": 83,
+      "url": "https://www.youtube.com/watch?v=qevehxLe2s4&t=36.68s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=qevehxLe2s4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Jascon-4 shipwreck",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Jascon-4",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T17": {
+    "slug": "t17-harrison-okene-i-was-thinking-just-a-day",
+    "person": "Harrison Okene",
+    "personSlug": "harrison-okene",
+    "personRole": "Shipwreck survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2013-05-26",
+    "claim": "I was thinking just a day.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified underwater-survival account",
+    "shortExplanation": "Okene described how he remained calm and prayed while trapped underwater.",
+    "fullTruth": "He survived for roughly sixty hours in an air pocket inside the sunken tugboat Jascon-4 before divers found him alive.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I was thinking just a day.”",
+    "transcript": "I was thinking just a day.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue video",
+      "Dive-team record",
+      "Named vessel"
+    ],
+    "lesson": "Rare survival claims are strongest when the rescue itself is independently recorded.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "qevehxLe2s4",
+      "startSeconds": 38.92,
+      "endSeconds": 72.0,
+      "statementStartSeconds": 53.92,
+      "statementEndSeconds": 57.0,
+      "spokenText": "I was thinking just a day.",
+      "videoDurationSeconds": 83,
+      "url": "https://www.youtube.com/watch?v=qevehxLe2s4&t=38.92s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=qevehxLe2s4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Jascon-4 shipwreck",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Jascon-4",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T18": {
+    "slug": "t18-harrison-okene-i-kept-on-praying-praying-praying",
+    "person": "Harrison Okene",
+    "personSlug": "harrison-okene",
+    "personRole": "Shipwreck survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2013-05-26",
+    "claim": "I kept on praying, praying, praying.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified underwater-survival account",
+    "shortExplanation": "Okene described how he remained calm and prayed while trapped underwater.",
+    "fullTruth": "He survived for roughly sixty hours in an air pocket inside the sunken tugboat Jascon-4 before divers found him alive.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I kept on praying, praying, praying.”",
+    "transcript": "I kept on praying, praying, praying.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue video",
+      "Dive-team record",
+      "Named vessel"
+    ],
+    "lesson": "Rare survival claims are strongest when the rescue itself is independently recorded.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "qevehxLe2s4",
+      "startSeconds": 40.84,
+      "endSeconds": 75.08,
+      "statementStartSeconds": 55.84,
+      "statementEndSeconds": 60.08,
+      "spokenText": "I kept on praying, praying, praying.",
+      "videoDurationSeconds": 83,
+      "url": "https://www.youtube.com/watch?v=qevehxLe2s4&t=40.84s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=qevehxLe2s4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Jascon-4 shipwreck",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Jascon-4",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T19": {
+    "slug": "t19-harrison-okene-i-kept-calm-and-i-was-bold-because-i-was-not-afraid-anymore",
+    "person": "Harrison Okene",
+    "personSlug": "harrison-okene",
+    "personRole": "Shipwreck survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2013-05-26",
+    "claim": "I kept calm, and I was bold because I was not afraid anymore.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified underwater-survival account",
+    "shortExplanation": "Okene described how he remained calm and prayed while trapped underwater.",
+    "fullTruth": "He survived for roughly sixty hours in an air pocket inside the sunken tugboat Jascon-4 before divers found him alive.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I kept calm, and I was bold because I was not afraid anymore.”",
+    "transcript": "I kept calm, and I was bold because I was not afraid anymore.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue video",
+      "Dive-team record",
+      "Named vessel"
+    ],
+    "lesson": "Rare survival claims are strongest when the rescue itself is independently recorded.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "qevehxLe2s4",
+      "startSeconds": 45.08,
+      "endSeconds": 83.0,
+      "statementStartSeconds": 60.08,
+      "statementEndSeconds": 70.0,
+      "spokenText": "I kept calm, and I was bold because I was not afraid anymore.",
+      "videoDurationSeconds": 83,
+      "url": "https://www.youtube.com/watch?v=qevehxLe2s4&t=45.08s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=qevehxLe2s4",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Jascon-4 shipwreck",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Jascon-4",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T20": {
+    "slug": "t20-michael-packard-i-wasn-t-swallowed-jimmy",
+    "person": "Michael Packard",
+    "personSlug": "michael-packard",
+    "personRole": "Commercial lobster diver",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Direct studio interview",
+    "date": "2021-06-01",
+    "claim": "I wasn't swallowed, Jimmy.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified whale encounter",
+    "shortExplanation": "Packard clarified that the whale held him in its mouth rather than swallowing him into its stomach.",
+    "fullTruth": "A humpback whale engulfed Packard in its mouth off Cape Cod and released him alive shortly afterward.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I wasn't swallowed, Jimmy.”",
+    "transcript": "I wasn't swallowed, Jimmy.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Named witness",
+      "Hospital treatment",
+      "Direct interview"
+    ],
+    "lesson": "Precise wording matters: being inside an animal's mouth is not the same as being swallowed into its stomach.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K7iAlZzVenU",
+      "startSeconds": 93.96,
+      "endSeconds": 130.04,
+      "statementStartSeconds": 108.96,
+      "statementEndSeconds": 115.04,
+      "spokenText": "I wasn't swallowed, Jimmy. I was in his mouth. Let's get that straight.",
+      "videoDurationSeconds": 520,
+      "url": "https://www.youtube.com/watch?v=K7iAlZzVenU&t=93.96s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=K7iAlZzVenU",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Lobster diver survives whale encounter",
+        "publisher": "BBC News",
+        "url": "https://www.bbc.com/news/world-us-canada-57469077",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T21": {
+    "slug": "t21-michael-packard-i-was-in-his-mouth",
+    "person": "Michael Packard",
+    "personSlug": "michael-packard",
+    "personRole": "Commercial lobster diver",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Direct studio interview",
+    "date": "2021-06-01",
+    "claim": "I was in his mouth.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified whale encounter",
+    "shortExplanation": "Packard clarified that the whale held him in its mouth rather than swallowing him into its stomach.",
+    "fullTruth": "A humpback whale engulfed Packard in its mouth off Cape Cod and released him alive shortly afterward.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I was in his mouth.”",
+    "transcript": "I was in his mouth.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Named witness",
+      "Hospital treatment",
+      "Direct interview"
+    ],
+    "lesson": "Precise wording matters: being inside an animal's mouth is not the same as being swallowed into its stomach.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K7iAlZzVenU",
+      "startSeconds": 93.96,
+      "endSeconds": 130.04,
+      "statementStartSeconds": 108.96,
+      "statementEndSeconds": 115.04,
+      "spokenText": "I wasn't swallowed, Jimmy. I was in his mouth. Let's get that straight.",
+      "videoDurationSeconds": 520,
+      "url": "https://www.youtube.com/watch?v=K7iAlZzVenU&t=93.96s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=K7iAlZzVenU",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Lobster diver survives whale encounter",
+        "publisher": "BBC News",
+        "url": "https://www.bbc.com/news/world-us-canada-57469077",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T22": {
+    "slug": "t22-michael-packard-let-s-get-that-straight",
+    "person": "Michael Packard",
+    "personSlug": "michael-packard",
+    "personRole": "Commercial lobster diver",
+    "category": "Television interview",
+    "categorySlug": "television-interview",
+    "setting": "Direct studio interview",
+    "date": "2021-06-01",
+    "claim": "Let's get that straight.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified whale encounter",
+    "shortExplanation": "Packard clarified that the whale held him in its mouth rather than swallowing him into its stomach.",
+    "fullTruth": "A humpback whale engulfed Packard in its mouth off Cape Cod and released him alive shortly afterward.",
+    "context": "The playable excerpt is centered on the exact spoken line: “Let's get that straight.”",
+    "transcript": "Let's get that straight.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Named witness",
+      "Hospital treatment",
+      "Direct interview"
+    ],
+    "lesson": "Precise wording matters: being inside an animal's mouth is not the same as being swallowed into its stomach.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "K7iAlZzVenU",
+      "startSeconds": 93.96,
+      "endSeconds": 130.04,
+      "statementStartSeconds": 108.96,
+      "statementEndSeconds": 115.04,
+      "spokenText": "I wasn't swallowed, Jimmy. I was in his mouth. Let's get that straight.",
+      "videoDurationSeconds": 520,
+      "url": "https://www.youtube.com/watch?v=K7iAlZzVenU&t=93.96s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=K7iAlZzVenU",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Lobster diver survives whale encounter",
+        "publisher": "BBC News",
+        "url": "https://www.bbc.com/news/world-us-canada-57469077",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "television-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T23": {
+    "slug": "t23-ricky-megee-i-was-very-lucky",
+    "person": "Ricky Megee",
+    "personSlug": "ricky-megee",
+    "personRole": "Outback survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2006-04-05",
+    "claim": "I was very lucky.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wilderness-survival account",
+    "shortExplanation": "Megee described his condition and travel before surviving for seventy-one days in remote Australian bushland.",
+    "fullTruth": "Station workers found him severely malnourished after more than two months alone in the Northern Territory outback.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I was very lucky.”",
+    "transcript": "I was very lucky.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue condition",
+      "Hospital treatment",
+      "Station witnesses"
+    ],
+    "lesson": "Separate a documented rescue and survival period from details that remain debated.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Ka0MVmd5Tes",
+      "startSeconds": 0.0,
+      "endSeconds": 33.32,
+      "statementStartSeconds": 12.96,
+      "statementEndSeconds": 18.32,
+      "spokenText": "I was very lucky. I was very lucky.",
+      "videoDurationSeconds": 594,
+      "url": "https://www.youtube.com/watch?v=Ka0MVmd5Tes&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=Ka0MVmd5Tes",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Ricky Megee",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Ricky_Megee",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T24": {
+    "slug": "t24-ricky-megee-i-was-very-lucky",
+    "person": "Ricky Megee",
+    "personSlug": "ricky-megee",
+    "personRole": "Outback survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2006-04-05",
+    "claim": "I was very lucky.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wilderness-survival account",
+    "shortExplanation": "Megee described his condition and travel before surviving for seventy-one days in remote Australian bushland.",
+    "fullTruth": "Station workers found him severely malnourished after more than two months alone in the Northern Territory outback.",
+    "context": "The playable excerpt is centered on the exact spoken line: “I was very lucky.”",
+    "transcript": "I was very lucky.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue condition",
+      "Hospital treatment",
+      "Station witnesses"
+    ],
+    "lesson": "Separate a documented rescue and survival period from details that remain debated.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Ka0MVmd5Tes",
+      "startSeconds": 0.0,
+      "endSeconds": 33.32,
+      "statementStartSeconds": 12.96,
+      "statementEndSeconds": 18.32,
+      "spokenText": "I was very lucky. I was very lucky.",
+      "videoDurationSeconds": 594,
+      "url": "https://www.youtube.com/watch?v=Ka0MVmd5Tes&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=Ka0MVmd5Tes",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Ricky Megee",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Ricky_Megee",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  },
+  "T25": {
+    "slug": "t25-ricky-megee-basically-i-was-traveling-from-one-side-of-australia-to-the-other",
+    "person": "Ricky Megee",
+    "personSlug": "ricky-megee",
+    "personRole": "Outback survivor",
+    "category": "Survivor interview",
+    "categorySlug": "survivor-interview",
+    "setting": "Recorded interview",
+    "date": "2006-04-05",
+    "claim": "Basically, I was traveling from one side of Australia to the other.",
+    "prompt": "Are they lying?",
+    "verdict": "truth",
+    "classification": "Verified wilderness-survival account",
+    "shortExplanation": "Megee described his condition and travel before surviving for seventy-one days in remote Australian bushland.",
+    "fullTruth": "Station workers found him severely malnourished after more than two months alone in the Northern Territory outback.",
+    "context": "The playable excerpt is centered on the exact spoken line: “Basically, I was traveling from one side of Australia to the other.”",
+    "transcript": "Basically, I was traveling from one side of Australia to the other.",
+    "editorialBoundary": "The verdict applies only to the displayed statement and the evidence cited for this case.",
+    "signals": [
+      "Rescue condition",
+      "Hospital treatment",
+      "Station witnesses"
+    ],
+    "lesson": "Separate a documented rescue and survival period from details that remain debated.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Ka0MVmd5Tes",
+      "startSeconds": 20.44,
+      "endSeconds": 58.5,
+      "statementStartSeconds": 35.44,
+      "statementEndSeconds": 43.5,
+      "spokenText": "Basically, I was traveling from one side of Australia to the other.",
+      "videoDurationSeconds": 594,
+      "url": "https://www.youtube.com/watch?v=Ka0MVmd5Tes&t=20.44s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-16",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Complete source recording",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=Ka0MVmd5Tes",
+        "type": "primary",
+        "note": "Contains the exact spoken statement used in the playable excerpt."
+      },
+      {
+        "title": "Ricky Megee",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Ricky_Megee",
+        "type": "secondary",
+        "note": "Background evidence used to classify the displayed statement."
+      }
+    ],
+    "tags": [
+      "survivor-interview",
+      "truth",
+      "exact-statement"
+    ],
+    "reviewedAt": "2026-07-16"
+  }
+}
