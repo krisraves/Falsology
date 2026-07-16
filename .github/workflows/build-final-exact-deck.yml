@@ -61,6 +61,28 @@ jobs:
               safe = '-'.join(part for part in safe.split('-') if part)
               data[case_number]["slug"] = f"{case_number.lower()}-{data[case_number]['personSlug']}-{safe[:48]}"
           path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+          player = Path("components/ClipPlayer.tsx")
+          text = player.read_text(encoding="utf-8")
+          text = text.replace(
+              '  const sourcesRef = useRef<PlaybackSource[]>(\n    buildSourceChain(videoId, startSeconds, endSeconds, sourceUrl),\n  );\n  const sourceIndexRef = useRef(0);\n',
+              '  const [sources] = useState<PlaybackSource[]>(() =>\n    buildSourceChain(videoId, startSeconds, endSeconds, sourceUrl),\n  );\n  const sourceIndexRef = useRef(0);\n  const [sourceIndex, setSourceIndex] = useState(0);\n',
+          )
+          text = text.replace(
+              '  const [activeSource, setActiveSource] = useState<PlaybackSource>(sourcesRef.current[0]);\n',
+              '  const [activeSource, setActiveSource] = useState<PlaybackSource>(() => sources[0]);\n',
+          )
+          text = text.replace(
+              '  const mountId = `clip-player-${reactId.replace(/:/g, "")}-${sourceIndexRef.current}`;\n',
+              '  const mountId = `clip-player-${reactId.replace(/:/g, "")}-${sourceIndex}`;\n',
+          )
+          text = text.replace('              const nextSource = sourcesRef.current[nextIndex];\n', '              const nextSource = sources[nextIndex];\n')
+          text = text.replace(
+              '                sourceIndexRef.current = nextIndex;\n                setReady(false);\n',
+              '                sourceIndexRef.current = nextIndex;\n                setSourceIndex(nextIndex);\n                setReady(false);\n',
+          )
+          text = text.replace('  }, [activeSource, duration]);\n', '  }, [activeSource, duration, sources]);\n', 1)
+          player.write_text(text, encoding="utf-8")
           PY
 
       - name: Validate production build
