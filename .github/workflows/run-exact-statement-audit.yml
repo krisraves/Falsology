@@ -48,7 +48,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python scripts/run-exact-statement-audit.py
+          python scripts/run-exact-statement-audit-v2.py
           code=$?
           set -e
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
