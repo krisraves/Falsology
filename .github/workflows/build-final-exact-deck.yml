@@ -1,0 +1,88 @@
+name: Build final exact statement deck
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-final-exact-statement-deck
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/exact-statement-clips
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Generate production exact-statement deck
+        shell: bash
+        run: |
+          python scripts/apply-final-exact-deck.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          validator = Path("scripts/validate-detective-cases.mjs")
+          validator.write_text(validator.read_text(encoding="utf-8").replace('\\"', '"'), encoding="utf-8")
+
+          path = Path("data/exact-statement-overrides.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          fixes = {
+              "L14": "A synthetic, completely fake.",
+              "L15": "Completely fake with actors.",
+          }
+          for case_number, claim in fixes.items():
+              data[case_number]["claim"] = claim
+              data[case_number]["transcript"] = claim
+              data[case_number]["context"] = f"The playable excerpt is centered on the exact spoken line: “{claim}”"
+              data[case_number]["slug"] = f"{case_number.lower()}-alex-jones-{claim.lower().replace(',', '').replace('.', '').replace(' ', '-')}"
+          path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+          PY
+
+      - name: Validate production build
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      - name: Remove audit-only files and commit production tree
+        shell: bash
+        run: |
+          rm -f .github/workflows/audit-exact-statement-clips.yml
+          rm -f scripts/audit-exact-statement-clips.py
+          rm -f scripts/apply-final-exact-deck.py
+          rm -f scripts/generate-statement-candidate-review.py
+          rm -f scripts/inventory-problem-source-lines.py
+          rm -f scripts/probe-caption-mirrors.py
+          rm -f scripts/run-exact-statement-audit-hosted.py
+          rm -f scripts/run-exact-statement-audit-progressive.py
+          rm -f scripts/run-exact-statement-audit-v2.py
+          rm -f scripts/run-exact-statement-audit.py
+          rm -f scripts/run-transcript-line-batch.py
+          rm -f scripts/summarize-statement-candidates.py
+          rm -rf validation
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Use exact statement-centered clips"
+          git push origin agent/exact-statement-clips
