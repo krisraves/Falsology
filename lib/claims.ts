@@ -12,6 +12,7 @@ import rawOverrides from "@/data/case-overrides.json";
 import rawFinalReplacements from "@/data/direct-footage-replacements.json";
 import rawObscureReplacements from "@/data/obscure-case-replacements.json";
 import rawEnglishWeirdReplacements from "@/data/english-weird-replacements.json";
+import rawExactStatementOverrides from "@/data/exact-statement-overrides.json";
 import rawDifficultyMap from "@/data/difficulty-map.json";
 import type { Claim, ClaimMedia, Difficulty } from "@/lib/types";
 
@@ -34,6 +35,7 @@ const overrides = rawOverrides as Record<string, ClaimOverride>;
 const finalReplacements = rawFinalReplacements as Record<string, ClaimOverride>;
 const obscureReplacements = rawObscureReplacements as Record<string, ClaimOverride>;
 const englishWeirdReplacements = rawEnglishWeirdReplacements as Record<string, ClaimOverride>;
+const exactStatementOverrides = rawExactStatementOverrides as Record<string, ClaimOverride>;
 const difficultyMap = rawDifficultyMap as Record<string, Difficulty>;
 
 function applyOverride(claim: Claim, override?: ClaimOverride): Claim {
@@ -53,9 +55,10 @@ export const claims = baseClaims.map((claim) => {
   const direct = applyOverride(reviewed, finalReplacements[claim.caseNumber]);
   const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
   const english = applyOverride(obscure, englishWeirdReplacements[claim.caseNumber]);
+  const exact = applyOverride(english, exactStatementOverrides[claim.caseNumber]);
   return {
-    ...english,
-    difficulty: difficultyMap[claim.caseNumber] ?? english.difficulty,
+    ...exact,
+    difficulty: difficultyMap[claim.caseNumber] ?? exact.difficulty,
   };
 });
 

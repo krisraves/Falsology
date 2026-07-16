@@ -42,7 +42,7 @@ function buildSourceChain(
   sourceUrl: string,
 ): PlaybackSource[] {
   const primary = { videoId, startSeconds, endSeconds, sourceUrl };
-  return [...(SOURCE_REPLACEMENTS[videoId] ?? []), primary];
+  return [primary, ...(SOURCE_REPLACEMENTS[videoId] ?? [])];
 }
 
 type VideoIdOptions = {
@@ -58,6 +58,7 @@ type YouTubePlayer = {
   pauseVideo(): void;
   stopVideo(): void;
   getCurrentTime(): number;
+  seekTo(seconds: number, allowSeekAhead: boolean): void;
   destroy(): void;
 };
 
@@ -142,13 +143,14 @@ export function ClipPlayer({
   const reactId = useId();
   const mountRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
-  const sourcesRef = useRef<PlaybackSource[]>(
+  const [sources] = useState<PlaybackSource[]>(() =>
     buildSourceChain(videoId, startSeconds, endSeconds, sourceUrl),
   );
   const sourceIndexRef = useRef(0);
+  const [sourceIndex, setSourceIndex] = useState(0);
   const unavailableNotifiedRef = useRef(false);
   const onUnavailableRef = useRef(onUnavailable);
-  const [activeSource, setActiveSource] = useState<PlaybackSource>(sourcesRef.current[0]);
+  const [activeSource, setActiveSource] = useState<PlaybackSource>(() => sources[0]);
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [ended, setEnded] = useState(false);
@@ -156,7 +158,7 @@ export function ClipPlayer({
   const [error, setError] = useState<string | null>(null);
   const duration = Math.max(1, activeSource.endSeconds - activeSource.startSeconds);
   const progress = Math.min(100, Math.max(0, (elapsed / duration) * 100));
-  const mountId = `clip-player-${reactId.replace(/:/g, "")}-${sourceIndexRef.current}`;
+  const mountId = `clip-player-${reactId.replace(/:/g, "")}-${sourceIndex}`;
 
   useEffect(() => {
     onUnavailableRef.current = onUnavailable;
@@ -179,6 +181,8 @@ export function ClipPlayer({
             fs: 0,
             iv_load_policy: 3,
             cc_load_policy: 1,
+            start: activeSource.startSeconds,
+            end: activeSource.endSeconds,
             origin: window.location.origin,
           },
           events: {
@@ -188,10 +192,21 @@ export function ClipPlayer({
                 startSeconds: activeSource.startSeconds,
                 endSeconds: activeSource.endSeconds,
               });
+              target.seekTo(activeSource.startSeconds, true);
+              target.pauseVideo();
               setReady(true);
             },
             onStateChange: ({ data, target }) => {
               setPlaying(data === YT.PlayerState.PLAYING);
+              if (data === YT.PlayerState.CUED) {
+                target.seekTo(activeSource.startSeconds, true);
+              }
+              if (data === YT.PlayerState.PLAYING) {
+                const current = target.getCurrentTime();
+                if (current < activeSource.startSeconds - 0.5 || current >= activeSource.endSeconds) {
+                  target.seekTo(activeSource.startSeconds, true);
+                }
+              }
               if (data === YT.PlayerState.ENDED) {
                 target.cueVideoById({
                   videoId: activeSource.videoId,
@@ -205,10 +220,11 @@ export function ClipPlayer({
             onError: () => {
               setPlaying(false);
               const nextIndex = sourceIndexRef.current + 1;
-              const nextSource = sourcesRef.current[nextIndex];
+              const nextSource = sources[nextIndex];
 
               if (nextSource) {
                 sourceIndexRef.current = nextIndex;
+                setSourceIndex(nextIndex);
                 setReady(false);
                 setEnded(false);
                 setElapsed(0);
@@ -243,7 +259,7 @@ export function ClipPlayer({
       playerRef.current?.destroy();
       playerRef.current = null;
     };
-  }, [activeSource, duration]);
+  }, [activeSource, duration, sources]);
 
   useEffect(() => {
     if (!playing) return;
@@ -290,6 +306,7 @@ export function ClipPlayer({
         startSeconds: activeSource.startSeconds,
         endSeconds: activeSource.endSeconds,
       });
+      window.setTimeout(() => player.seekTo(activeSource.startSeconds, true), 0);
       return;
     }
 
@@ -306,6 +323,7 @@ export function ClipPlayer({
       startSeconds: activeSource.startSeconds,
       endSeconds: activeSource.endSeconds,
     });
+    window.setTimeout(() => player.seekTo(activeSource.startSeconds, true), 0);
   }
 
   return (
