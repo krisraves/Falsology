@@ -30,7 +30,7 @@ jobs:
         run: pip install "youtube-transcript-api>=1.2.0" "rapidfuzz>=3.9.0"
       - name: Fetch direct-line batch
         env:
-          CASES: "T23,T24,T25,L06,L16"
+          CASES: "L17,T03,T04,T08,T15"
           TRANSCRIPT_WORKERS: "2"
           TRANSCRIPT_TIMEOUT: "90"
           TRANSCRIPT_ATTEMPTS: "4"
@@ -42,6 +42,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add validation/problem-source-lines.json
           if ! git diff --cached --quiet; then
-            git commit -m "Record controlled transcript batch six"
+            git commit -m "Record controlled transcript batch seven"
             git push origin agent/exact-statement-clips
           fi
