@@ -1,0 +1,115 @@
+{
+  "L06": {
+    "person": "Ted Bundy",
+    "videos": {
+      "CvGr3hMIS6A": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "VO8hZ3Yy-sM": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "SmiiY1rQDVk": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "AEWsxCrMM1U": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  },
+  "L16": {
+    "person": "Bill Clinton",
+    "videos": {
+      "umj0gu5nEGs": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "VBe_guezGGc": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "_aGbdni7QNs": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "IYGBmV63Iow": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "TM8EXwemnYA": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  },
+  "L17": {
+    "person": "Kenneth Lay",
+    "videos": {
+      "hwollZoVmUc": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "S3EVIeZNHJU": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "Rjqgdggnlfo": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  },
+  "T03": {
+    "person": "Edmund Kemper",
+    "videos": {
+      "ToXjwzwaq3Y": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "I8x5PeZZFNs": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  },
+  "T04": {
+    "person": "Aileen Wuornos",
+    "videos": {
+      "3yi2dbaQ3mM": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "MKK3XDI7wTE": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "KH1PCwyZOsY": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  },
+  "T08": {
+    "person": "Alex Murdaugh",
+    "videos": {
+      "xxjUDj82_h8": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "rEXrNoyv4Q8": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "XfbkJMVH0w0": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  },
+  "T15": {
+    "person": "Mary Vincent",
+    "videos": {
+      "TbJ_1vHagfQ": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "UjV1cmesxdI": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "CA-yk8-ALoc": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "bphNcBD663M": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "HhQmL2FKRDw": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      },
+      "W259o2tO2pc": {
+        "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out | attempt 2: TimeoutError: The read operation timed out | attempt 3: TimeoutError: The read operation timed out"
+      }
+    }
+  }
+}
