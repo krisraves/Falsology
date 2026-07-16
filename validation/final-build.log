@@ -1,0 +1,17 @@
+
+added 355 packages, and audited 356 packages in 11s
+
+147 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> falsology@2.0.0 lint
+> npm run validate:cases && eslint .
+
+
+> falsology@2.0.0 validate:cases
+> node scripts/validate-detective-cases.mjs
+
+Case validation failed:
+- L18: displayed claim is not contained in the verified spoken text.
