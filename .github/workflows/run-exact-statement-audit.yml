@@ -22,7 +22,7 @@ permissions:
 jobs:
   review:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,12 +40,12 @@ jobs:
         id: candidates
         continue-on-error: true
         env:
-          CANDIDATE_WORKERS: "12"
-          CANDIDATE_TIMEOUT: "90"
+          CANDIDATE_WORKERS: "30"
+          CANDIDATE_TIMEOUT: "45"
         shell: bash
         run: |
           code=2
-          for round in 1 2 3; do
+          for round in 1 2 3 4; do
             echo "Candidate generation round $round"
             set +e
             python scripts/generate-statement-candidate-review.py
@@ -54,7 +54,7 @@ jobs:
             if [ "$code" -eq 0 ]; then
               break
             fi
-            sleep $((round * 8))
+            sleep $((round * 5))
           done
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
