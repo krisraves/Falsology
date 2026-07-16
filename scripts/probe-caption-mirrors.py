@@ -7,10 +7,12 @@ import concurrent.futures
 import json
 import urllib.parse
 import urllib.request
+from pathlib import Path
 
 VIDEO_ID = "3MuPWV5cTio"
 TIMEOUT = 5
 USER_AGENT = "Mozilla/5.0 (compatible; FalsologyTimestampProbe/1.0)"
+OUTPUT = Path("validation/caption-provider-probe.json")
 
 INVIDIOUS = (
     "https://inv.nadeko.net",
@@ -58,7 +60,7 @@ def probe(kind: str, instance: str) -> dict[str, object]:
             "status": status,
             "contentType": content_type,
             "usable": usable,
-            "sample": text[:160].replace("\n", " "),
+            "sample": text[:300].replace("\n", " "),
         }
     except Exception as exc:  # noqa: BLE001
         return {
@@ -76,12 +78,12 @@ def main() -> int:
     ]
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(providers)) as executor:
         results = list(executor.map(lambda item: probe(*item), providers))
-    print(json.dumps(results, indent=2))
     usable = [result for result in results if result.get("usable")]
-    print(f"USABLE_PROVIDERS={len(usable)}")
-    for result in usable:
-        print(f"USABLE={result['kind']} {result['instance']}")
-    return 0 if usable else 1
+    report = {"videoId": VIDEO_ID, "usableProviders": len(usable), "results": results}
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(report, indent=2))
+    return 0
 
 
 if __name__ == "__main__":
