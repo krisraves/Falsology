@@ -1,70 +1,48 @@
 {
   "videoId": "3MuPWV5cTio",
-  "usableProviders": 0,
+  "instance": "https://inv.nadeko.net",
   "results": [
     {
-      "kind": "invidious",
-      "instance": "https://inv.nadeko.net",
+      "query": "(track index)",
+      "url": "https://inv.nadeko.net/api/v1/captions/3MuPWV5cTio",
+      "status": 200,
+      "contentType": "application/json",
+      "byteLength": 143,
+      "hasWebVtt": false,
+      "sample": "{\"captions\":[{\"label\":\"English (auto-generated)\",\"languageCode\":\"en\",\"url\":\"/api/v1/captions/3MuPWV5cTio?label=English+%28auto-generated%29\"}]}"
+    },
+    {
+      "query": "?lang=en",
+      "url": "https://inv.nadeko.net/api/v1/captions/3MuPWV5cTio?lang=en",
       "status": 200,
       "contentType": "text/vtt; charset=UTF-8",
-      "usable": false,
+      "byteLength": 0,
+      "hasWebVtt": false,
       "sample": ""
     },
     {
-      "kind": "invidious",
-      "instance": "https://invidious.nerdvpn.de",
-      "usable": false,
-      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      "query": "?lang=en-US",
+      "url": "https://inv.nadeko.net/api/v1/captions/3MuPWV5cTio?lang=en-US",
+      "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
-      "kind": "invidious",
-      "instance": "https://yt.chocolatemoo53.com",
-      "usable": false,
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "query": "?lang=en-GB",
+      "url": "https://inv.nadeko.net/api/v1/captions/3MuPWV5cTio?lang=en-GB",
+      "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
-      "kind": "invidious",
-      "instance": "https://invidious.tiekoetter.com",
-      "usable": false,
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "query": "?label=English",
+      "url": "https://inv.nadeko.net/api/v1/captions/3MuPWV5cTio?label=English",
+      "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
-      "kind": "invidious",
-      "instance": "https://invidious.f5.si",
+      "query": "?label=English%20(auto-generated)",
+      "url": "https://inv.nadeko.net/api/v1/captions/3MuPWV5cTio?label=English%20(auto-generated)",
       "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "usable": false,
-      "sample": "<!doctype html><html lang=\"en\"><head><title>Making sure you&#39;re not a bot!</title><link rel=\"stylesheet\" href=\"/.within.website/x/xess/xess.min.css?cachebuster=1.24.0\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><meta name=\"robots\" content=\"noindex,nofollow\"><style>     "
-    },
-    {
-      "kind": "invidious",
-      "instance": "https://inv.zoomerville.com",
-      "usable": false,
-      "error": "URLError: <urlopen error timed out>"
-    },
-    {
-      "kind": "piped",
-      "instance": "https://pipedapi.adminforge.de",
-      "usable": false,
-      "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "kind": "piped",
-      "instance": "https://pipedapi.reallyaweso.me",
-      "usable": false,
-      "error": "HTTPError: HTTP Error 502: Bad Gateway"
-    },
-    {
-      "kind": "piped",
-      "instance": "https://pipedapi.kavin.rocks",
-      "usable": false,
-      "error": "HTTPError: HTTP Error 526: <none>"
-    },
-    {
-      "kind": "piped",
-      "instance": "https://pipedapi-libre.kavin.rocks",
-      "usable": false,
-      "error": "HTTPError: HTTP Error 502: Bad Gateway"
+      "contentType": "text/vtt; charset=UTF-8",
+      "byteLength": 0,
+      "hasWebVtt": false,
+      "sample": ""
     }
   ]
 }
