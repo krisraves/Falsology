@@ -47,25 +47,53 @@ jobs:
           path = Path("data/exact-statement-overrides.json")
           data = json.loads(path.read_text(encoding="utf-8"))
           fixes = {
+              "L02": "I have no idea, like, where they went.",
+              "L07": "I'm not a crook.",
               "L14": "A synthetic, completely fake.",
               "L15": "Completely fake with actors.",
+              "L18": "I have no idea, like, where they went.",
+              "L21": "I'm not a crook.",
           }
           for case_number, claim in fixes.items():
               data[case_number]["claim"] = claim
               data[case_number]["transcript"] = claim
               data[case_number]["context"] = f"The playable excerpt is centered on the exact spoken line: “{claim}”"
-              data[case_number]["slug"] = f"{case_number.lower()}-alex-jones-{claim.lower().replace(',', '').replace('.', '').replace(' ', '-')}"
+              safe = ''.join(character.lower() if character.isalnum() else '-' for character in claim)
+              safe = '-'.join(part for part in safe.split('-') if part)
+              data[case_number]["slug"] = f"{case_number.lower()}-{data[case_number]['personSlug']}-{safe[:48]}"
           path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
           PY
 
       - name: Validate production build
+        id: validation
+        continue-on-error: true
+        shell: bash
         run: |
-          npm ci
-          npm run lint
-          npm run typecheck
-          npm run build
+          mkdir -p validation
+          set +e
+          npm ci 2>&1 | tee validation/final-build.log
+          code=${PIPESTATUS[0]}
+          if [ "$code" -eq 0 ]; then npm run lint 2>&1 | tee -a validation/final-build.log; code=${PIPESTATUS[0]}; fi
+          if [ "$code" -eq 0 ]; then npm run typecheck 2>&1 | tee -a validation/final-build.log; code=${PIPESTATUS[0]}; fi
+          if [ "$code" -eq 0 ]; then npm run build 2>&1 | tee -a validation/final-build.log; code=${PIPESTATUS[0]}; fi
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Save failed build diagnostics
+        if: steps.validation.outputs.exit_code != '0'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add validation/final-build.log
+          if ! git diff --cached --quiet; then
+            git commit -m "Record final exact deck build failure"
+            git push origin agent/exact-statement-clips
+          fi
+          exit 1
 
       - name: Remove audit-only files and commit production tree
+        if: steps.validation.outputs.exit_code == '0'
         shell: bash
         run: |
           rm -f .github/workflows/audit-exact-statement-clips.yml
