@@ -9,20 +9,24 @@ const directReplacements = JSON.parse(readFileSync(resolve("data/direct-footage-
 const obscureReplacements = JSON.parse(readFileSync(resolve("data/obscure-case-replacements.json"), "utf8"));
 const englishReplacements = JSON.parse(readFileSync(resolve("data/english-weird-replacements.json"), "utf8"));
 const exactOverrides = JSON.parse(readFileSync(resolve("data/exact-statement-overrides.json"), "utf8"));
+const activeCaseNumbers = JSON.parse(readFileSync(resolve("data/active-case-numbers.json"), "utf8"));
 const difficultyMap = JSON.parse(readFileSync(resolve("data/difficulty-map.json"), "utf8"));
+const activeSet = new Set(activeCaseNumbers);
 
 function applyOverride(claim, override = {}) {
   return { ...claim, ...override, media: { ...(claim.media ?? {}), ...(override.media ?? {}) } };
 }
 
-const claims = baseClaims.map((claim) => {
-  const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
-  const direct = applyOverride(reviewed, directReplacements[claim.caseNumber]);
-  const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
-  const english = applyOverride(obscure, englishReplacements[claim.caseNumber]);
-  const exact = applyOverride(english, exactOverrides[claim.caseNumber]);
-  return { ...exact, difficulty: difficultyMap[claim.caseNumber] ?? exact.difficulty };
-});
+const claims = baseClaims
+  .map((claim) => {
+    const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
+    const direct = applyOverride(reviewed, directReplacements[claim.caseNumber]);
+    const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
+    const english = applyOverride(obscure, englishReplacements[claim.caseNumber]);
+    const exact = applyOverride(english, exactOverrides[claim.caseNumber]);
+    return { ...exact, difficulty: difficultyMap[claim.caseNumber] ?? exact.difficulty };
+  })
+  .filter((claim) => activeSet.has(claim.caseNumber));
 
 const failures = [];
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
@@ -37,20 +41,23 @@ const allowedSourceKinds = new Set([
 ]);
 
 if (filenames.length !== 10) failures.push(`Expected 10 case files, found ${filenames.length}.`);
-if (baseClaims.length !== 50 || claims.length !== 50) failures.push(`Expected 50 cases, found ${claims.length}.`);
-if (Object.keys(exactOverrides).length !== 50) failures.push(`Expected 50 exact statement overrides, found ${Object.keys(exactOverrides).length}.`);
+if (baseClaims.length !== 50) failures.push(`Expected 50 archived cases, found ${baseClaims.length}.`);
+if (!Array.isArray(activeCaseNumbers) || activeCaseNumbers.length !== 12) failures.push(`Expected 12 active cases, found ${activeCaseNumbers.length}.`);
+if (!unique(activeCaseNumbers)) failures.push("Active case numbers are not unique.");
+if (claims.length !== activeCaseNumbers.length) failures.push(`Expected ${activeCaseNumbers.length} active cases, found ${claims.length}.`);
 if (!unique(claims.map((claim) => claim.id))) failures.push("Case IDs are not unique.");
 if (!unique(claims.map((claim) => claim.slug))) failures.push("Case slugs are not unique.");
 if (!unique(claims.map((claim) => claim.caseNumber))) failures.push("Case numbers are not unique.");
+if (!unique(claims.map((claim) => claim.media?.youtubeId))) failures.push("Every active case must use a different YouTube video.");
 
 const truths = claims.filter((claim) => claim.verdict === "truth").length;
 const lies = claims.filter((claim) => claim.verdict === "lie").length;
-if (truths !== 25 || lies !== 25) failures.push(`Expected 25 truths and 25 lies, found ${truths}/${lies}.`);
+if (truths !== 6 || lies !== 6) failures.push(`Expected 6 truths and 6 lies, found ${truths}/${lies}.`);
 
 const expectedTiers = {
-  easy: { total: 16, truths: 8, lies: 8 },
-  medium: { total: 16, truths: 8, lies: 8 },
-  hard: { total: 18, truths: 9, lies: 9 },
+  easy: { total: 4, truths: 2, lies: 2 },
+  medium: { total: 4, truths: 2, lies: 2 },
+  hard: { total: 4, truths: 2, lies: 2 },
 };
 for (const [difficulty, expected] of Object.entries(expectedTiers)) {
   const tier = claims.filter((claim) => claim.difficulty === difficulty);
@@ -97,4 +104,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log("Validated 50 transcript-backed cases: 25 truth, 25 lie; every clip is centered ±15 seconds around the exact displayed statement.");
+console.log("Validated 12 transcript-backed cases: 6 truth, 6 lie, 12 unique videos; every clip is centered ±15 seconds around the exact displayed statement.");
