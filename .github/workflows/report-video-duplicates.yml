@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/unique-video-deck
+          ref: agent/unique-video-deck-v2
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
@@ -35,23 +35,3 @@ jobs:
           npm run lint
           npm run typecheck
           npm run build
-      - name: Remove planning artifacts and commit production tree
-        shell: bash
-        run: |
-          rm -f README.tmp
-          rm -f .github/workflows/report-video-duplicates.yml
-          rm -f scripts/report-video-duplicates.mjs
-          rm -f scripts/build-unique-source-plan.mjs
-          rm -f scripts/build-unique-exact-candidate-plan.mjs
-          rm -f scripts/build-all-unique-candidate-plan.mjs
-          rm -f scripts/inventory-missing-unique-videos.py
-          rm -f scripts/search-alternate-uploads.py
-          rm -f scripts/summarize-missing-unique-lines.mjs
-          rm -rf validation
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "Enforce one unique video per active case"
-            git push origin agent/unique-video-deck
-          fi
