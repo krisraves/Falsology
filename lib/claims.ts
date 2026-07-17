@@ -13,6 +13,7 @@ import rawFinalReplacements from "@/data/direct-footage-replacements.json";
 import rawObscureReplacements from "@/data/obscure-case-replacements.json";
 import rawEnglishWeirdReplacements from "@/data/english-weird-replacements.json";
 import rawExactStatementOverrides from "@/data/exact-statement-overrides.json";
+import rawActiveCaseNumbers from "@/data/active-case-numbers.json";
 import rawDifficultyMap from "@/data/difficulty-map.json";
 import type { Claim, ClaimMedia, Difficulty } from "@/lib/types";
 
@@ -37,6 +38,7 @@ const obscureReplacements = rawObscureReplacements as Record<string, ClaimOverri
 const englishWeirdReplacements = rawEnglishWeirdReplacements as Record<string, ClaimOverride>;
 const exactStatementOverrides = rawExactStatementOverrides as Record<string, ClaimOverride>;
 const difficultyMap = rawDifficultyMap as Record<string, Difficulty>;
+const activeCaseNumbers = new Set(rawActiveCaseNumbers as string[]);
 
 function applyOverride(claim: Claim, override?: ClaimOverride): Claim {
   if (!override) return claim;
@@ -50,17 +52,19 @@ function applyOverride(claim: Claim, override?: ClaimOverride): Claim {
   } as Claim;
 }
 
-export const claims = baseClaims.map((claim) => {
-  const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
-  const direct = applyOverride(reviewed, finalReplacements[claim.caseNumber]);
-  const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
-  const english = applyOverride(obscure, englishWeirdReplacements[claim.caseNumber]);
-  const exact = applyOverride(english, exactStatementOverrides[claim.caseNumber]);
-  return {
-    ...exact,
-    difficulty: difficultyMap[claim.caseNumber] ?? exact.difficulty,
-  };
-});
+export const claims = baseClaims
+  .map((claim) => {
+    const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
+    const direct = applyOverride(reviewed, finalReplacements[claim.caseNumber]);
+    const obscure = applyOverride(direct, obscureReplacements[claim.caseNumber]);
+    const english = applyOverride(obscure, englishWeirdReplacements[claim.caseNumber]);
+    const exact = applyOverride(english, exactStatementOverrides[claim.caseNumber]);
+    return {
+      ...exact,
+      difficulty: difficultyMap[claim.caseNumber] ?? exact.difficulty,
+    };
+  })
+  .filter((claim) => activeCaseNumbers.has(claim.caseNumber));
 
 export function getClaim(slug: string) {
   return claims.find((claim) => claim.slug === slug);
