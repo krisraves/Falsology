@@ -1,39 +1,60 @@
 {
   "cases": {
-    "L09": {
-      "person": "Jennifer Pan",
+    "L06": {
+      "error": "RuntimeError: attempt 1: HTTPError: HTTP Error 422: Unprocessable Entity {\"detail\":\"YouTube is temporarily blocking transcript requests. Please try again in a few seconds.\"}"
+    },
+    "L07": {
+      "person": "John Wayne Gacy",
       "verdict": "lie",
-      "originalClaim": "Intruders tied me up and attacked my parents.",
-      "youtubeId": "amHb2UoVZ_g",
-      "configuredDurationSeconds": 48,
-      "transcriptEndSeconds": 47.83,
+      "originalClaim": "I don't believe I killed anybody.",
+      "youtubeId": "yQ4AT4q2DKs",
+      "configuredDurationSeconds": 88,
+      "transcriptEndSeconds": 88.22,
       "lines": [
         {
+          "score": 25.0,
+          "startSeconds": 22.74,
+          "endSeconds": 27.96,
+          "text": "number nine and he was buried by me in",
+          "contextStartSeconds": 16.8,
+          "contextEndSeconds": 35.46,
+          "context": "Tim McCoy's name wasn't put on him until 1988. prior to that he was known as unknown number nine and he was buried by me in the crawl space that's the only knowledge that I have of it what was the circumstances of that he was killed in"
+        },
+        {
+          "score": 24.75,
+          "startSeconds": 27.96,
+          "endSeconds": 32.7,
+          "text": "knowledge that I have of it what was the",
+          "contextStartSeconds": 20.46,
+          "contextEndSeconds": 39.3,
+          "context": "prior to that he was known as unknown number nine and he was buried by me in the crawl space that's the only knowledge that I have of it what was the circumstances of that he was killed in the house uh in self-defense and who killed him then"
+        },
+        {
+          "score": 13.25,
+          "startSeconds": 60.3,
+          "endSeconds": 64.62,
+          "text": "in the crawl space no I had nothing I",
+          "contextStartSeconds": 54.06,
+          "contextEndSeconds": 71.16,
+          "context": "bury him then in the crawl space right and if you if you notice he's under concrete did you bury any of the others in the crawl space no I had nothing I had no knowledge of it yeah well why why is it that yours your first one is there and then you know 20 some others are"
+        },
+        {
+          "score": 13.0,
+          "startSeconds": 36.6,
+          "endSeconds": 41.4,
+          "text": "I saved them yeah and it was a man an",
+          "contextStartSeconds": 29.7,
+          "contextEndSeconds": 47.4,
+          "context": "circumstances of that he was killed in the house uh in self-defense and who killed him then I saved them yeah and it was a man an issue with self-defense why was he in the process assaulting you or what he was coming at me with a knife I just"
+        },
+        {
           "score": 12.75,
-          "startSeconds": 8.3,
-          "endSeconds": 16.31,
-          "text": "I love my parents and I chose to be with",
-          "contextStartSeconds": 3.83,
-          "contextEndSeconds": 24.77,
-          "context": "but in your house at the end of the day I love my parents and I chose to be with them and if I wanted to I could have just left but I didn't I wanted to stay with them and take care of them so this"
-        },
-        {
-          "score": 1.0,
-          "startSeconds": 16.31,
-          "endSeconds": 23.06,
-          "text": "just left but I didn't I wanted to stay",
-          "contextStartSeconds": 3.83,
-          "contextEndSeconds": 32.84,
-          "context": "but in your house at the end of the day I love my parents and I chose to be with them and if I wanted to I could have just left but I didn't I wanted to stay with them and take care of them so this wasn't some evil plot that you thought up - oh my god no no interaction no"
-        },
-        {
-          "score": 0.5,
-          "startSeconds": 24.77,
-          "endSeconds": 32.84,
-          "text": "up - oh my god no no interaction no",
-          "contextStartSeconds": 16.31,
-          "contextEndSeconds": 39.07,
-          "context": "just left but I didn't I wanted to stay with them and take care of them so this wasn't some evil plot that you thought up - oh my god no no interaction no belief no you didn't have anything to do with this thing at all whatsoever you don't engage in illegal activity no"
+          "startSeconds": 43.5,
+          "endSeconds": 47.4,
+          "text": "was coming at me with a knife I just",
+          "contextStartSeconds": 36.6,
+          "contextEndSeconds": 54.06,
+          "context": "I saved them yeah and it was a man an issue with self-defense why was he in the process assaulting you or what he was coming at me with a knife I just took the knife away and twisted in his hand and that that's what killed him"
         }
       ]
     },
@@ -101,8 +122,14 @@
         }
       ]
     },
-    "L06": {
-      "error": "RuntimeError: attempt 1: HTTPError: HTTP Error 422: Unprocessable Entity {\"detail\":\"YouTube is temporarily blocking transcript requests. Please try again in a few seconds.\"}"
+    "L16": {
+      "person": "Bill Clinton",
+      "verdict": "lie",
+      "originalClaim": "I did not have sexual relations with that woman, Miss Lewinsky.",
+      "youtubeId": "TM8EXwemnYA",
+      "configuredDurationSeconds": 38,
+      "transcriptEndSeconds": 39.5,
+      "lines": []
     },
     "L11": {
       "person": "Trevor Milton",
@@ -122,70 +149,6 @@
           "context": "au fost cei din jur de urs noua desfrîu au pus butoane is my first ceva nou ce au hârtie was trained as you can see that's the way out West Norfolk și Pegas so much lower price Tag q"
         }
       ]
-    },
-    "L07": {
-      "person": "John Wayne Gacy",
-      "verdict": "lie",
-      "originalClaim": "I don't believe I killed anybody.",
-      "youtubeId": "yQ4AT4q2DKs",
-      "configuredDurationSeconds": 88,
-      "transcriptEndSeconds": 88.22,
-      "lines": [
-        {
-          "score": 25.0,
-          "startSeconds": 22.74,
-          "endSeconds": 27.96,
-          "text": "number nine and he was buried by me in",
-          "contextStartSeconds": 16.8,
-          "contextEndSeconds": 35.46,
-          "context": "Tim McCoy's name wasn't put on him until 1988. prior to that he was known as unknown number nine and he was buried by me in the crawl space that's the only knowledge that I have of it what was the circumstances of that he was killed in"
-        },
-        {
-          "score": 24.75,
-          "startSeconds": 27.96,
-          "endSeconds": 32.7,
-          "text": "knowledge that I have of it what was the",
-          "contextStartSeconds": 20.46,
-          "contextEndSeconds": 39.3,
-          "context": "prior to that he was known as unknown number nine and he was buried by me in the crawl space that's the only knowledge that I have of it what was the circumstances of that he was killed in the house uh in self-defense and who killed him then"
-        },
-        {
-          "score": 13.25,
-          "startSeconds": 60.3,
-          "endSeconds": 64.62,
-          "text": "in the crawl space no I had nothing I",
-          "contextStartSeconds": 54.06,
-          "contextEndSeconds": 71.16,
-          "context": "bury him then in the crawl space right and if you if you notice he's under concrete did you bury any of the others in the crawl space no I had nothing I had no knowledge of it yeah well why why is it that yours your first one is there and then you know 20 some others are"
-        },
-        {
-          "score": 13.0,
-          "startSeconds": 36.6,
-          "endSeconds": 41.4,
-          "text": "I saved them yeah and it was a man an",
-          "contextStartSeconds": 29.7,
-          "contextEndSeconds": 47.4,
-          "context": "circumstances of that he was killed in the house uh in self-defense and who killed him then I saved them yeah and it was a man an issue with self-defense why was he in the process assaulting you or what he was coming at me with a knife I just"
-        },
-        {
-          "score": 12.75,
-          "startSeconds": 43.5,
-          "endSeconds": 47.4,
-          "text": "was coming at me with a knife I just",
-          "contextStartSeconds": 36.6,
-          "contextEndSeconds": 54.06,
-          "context": "I saved them yeah and it was a man an issue with self-defense why was he in the process assaulting you or what he was coming at me with a knife I just took the knife away and twisted in his hand and that that's what killed him"
-        }
-      ]
-    },
-    "L16": {
-      "person": "Bill Clinton",
-      "verdict": "lie",
-      "originalClaim": "I did not have sexual relations with that woman, Miss Lewinsky.",
-      "youtubeId": "TM8EXwemnYA",
-      "configuredDurationSeconds": 38,
-      "transcriptEndSeconds": 39.5,
-      "lines": []
     },
     "L04": {
       "person": "Jodi Arias",
@@ -266,6 +229,43 @@
           "contextStartSeconds": 39.24,
           "contextEndSeconds": 61.84,
           "context": "mean I'm not going to change your way act no obviously you can't change it with you're you're acting I mean I am who I am it's not [Music] fair I mean I know that he's in a good"
+        }
+      ]
+    },
+    "L09": {
+      "person": "Jennifer Pan",
+      "verdict": "lie",
+      "originalClaim": "Intruders tied me up and attacked my parents.",
+      "youtubeId": "amHb2UoVZ_g",
+      "configuredDurationSeconds": 48,
+      "transcriptEndSeconds": 47.83,
+      "lines": [
+        {
+          "score": 12.75,
+          "startSeconds": 8.3,
+          "endSeconds": 16.31,
+          "text": "I love my parents and I chose to be with",
+          "contextStartSeconds": 3.83,
+          "contextEndSeconds": 24.77,
+          "context": "but in your house at the end of the day I love my parents and I chose to be with them and if I wanted to I could have just left but I didn't I wanted to stay with them and take care of them so this"
+        },
+        {
+          "score": 1.0,
+          "startSeconds": 16.31,
+          "endSeconds": 23.06,
+          "text": "just left but I didn't I wanted to stay",
+          "contextStartSeconds": 3.83,
+          "contextEndSeconds": 32.84,
+          "context": "but in your house at the end of the day I love my parents and I chose to be with them and if I wanted to I could have just left but I didn't I wanted to stay with them and take care of them so this wasn't some evil plot that you thought up - oh my god no no interaction no"
+        },
+        {
+          "score": 0.5,
+          "startSeconds": 24.77,
+          "endSeconds": 32.84,
+          "text": "up - oh my god no no interaction no",
+          "contextStartSeconds": 16.31,
+          "contextEndSeconds": 39.07,
+          "context": "just left but I didn't I wanted to stay with them and take care of them so this wasn't some evil plot that you thought up - oh my god no no interaction no belief no you didn't have anything to do with this thing at all whatsoever you don't engage in illegal activity no"
         }
       ]
     },
@@ -1310,7 +1310,7 @@
       ]
     },
     "T08": {
-      "error": "RuntimeError: attempt 1: HTTPError: HTTP Error 422: Unprocessable Entity {\"detail\":\"YouTube is temporarily blocking transcript requests. Please try again in a few seconds.\"}"
+      "error": "RuntimeError: attempt 1: TimeoutError: The read operation timed out"
     },
     "T10": {
       "person": "Lindy Chamberlain",
