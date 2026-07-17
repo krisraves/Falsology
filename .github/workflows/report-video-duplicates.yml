@@ -1,4 +1,4 @@
-name: Summarize unique video direct lines
+name: Validate unique video deck
 
 on:
   pull_request:
@@ -13,12 +13,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: unique-video-deck-summary
+  group: unique-video-deck-validation
   cancel-in-progress: true
 
 jobs:
-  summarize:
+  validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,13 +28,30 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/summarize-missing-unique-lines.mjs
-      - shell: bash
+          cache: npm
+      - name: Validate application
         run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+      - name: Remove planning artifacts and commit production tree
+        shell: bash
+        run: |
+          rm -f README.tmp
+          rm -f .github/workflows/report-video-duplicates.yml
+          rm -f scripts/report-video-duplicates.mjs
+          rm -f scripts/build-unique-source-plan.mjs
+          rm -f scripts/build-unique-exact-candidate-plan.mjs
+          rm -f scripts/build-all-unique-candidate-plan.mjs
+          rm -f scripts/inventory-missing-unique-videos.py
+          rm -f scripts/search-alternate-uploads.py
+          rm -f scripts/summarize-missing-unique-lines.mjs
+          rm -rf validation
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/missing-unique-video-lines.md
+          git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Summarize unique video direct lines"
+            git commit -m "Enforce one unique video per active case"
             git push origin agent/unique-video-deck
           fi
