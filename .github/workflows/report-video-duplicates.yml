@@ -1,4 +1,4 @@
-name: Report duplicate videos
+name: Summarize unique video direct lines
 
 on:
   pull_request:
@@ -13,13 +13,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: unique-video-deck-planning
+  group: unique-video-deck-summary
   cancel-in-progress: true
 
 jobs:
-  report:
+  summarize:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,28 +27,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Build unique video plans
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          node scripts/report-video-duplicates.mjs
-          node scripts/build-unique-source-plan.mjs
-          gh api repos/krisraves/Falsology/git/blobs/6a6b2fa967519dba8ae8cb6f76c1f02cd35d7b37 --jq .content | base64 -d > validation/historical-statement-candidates.json
-          gh api repos/krisraves/Falsology/git/blobs/e4be23b10e04a0dcdedc66314bd620806f3b72fe --jq .content | base64 -d > validation/historical-statement-candidates.md
-          node scripts/build-unique-exact-candidate-plan.mjs
-          node scripts/build-all-unique-candidate-plan.mjs
-          python scripts/inventory-missing-unique-videos.py
-          python scripts/search-alternate-uploads.py
+      - run: node scripts/summarize-missing-unique-lines.mjs
       - shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/video-duplicate-report.json validation/unique-source-plan.json validation/historical-statement-candidates.json validation/historical-statement-candidates.md validation/unique-exact-candidate-plan.json validation/all-unique-candidate-plan.json validation/missing-unique-video-lines.json validation/alternate-upload-search.json
+          git add validation/missing-unique-video-lines.md
           if ! git diff --cached --quiet; then
-            git commit -m "Search alternate uploads for unique video deck"
+            git commit -m "Summarize unique video direct lines"
             git push origin agent/unique-video-deck
           fi
