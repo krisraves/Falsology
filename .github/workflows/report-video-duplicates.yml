@@ -27,15 +27,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: |
+      - name: Build source plan and recover transcript audit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
           node scripts/report-video-duplicates.mjs
           node scripts/build-unique-source-plan.mjs
+          gh api repos/krisraves/Falsology/git/blobs/6a6b2fa967519dba8ae8cb6f76c1f02cd35d7b37 --jq .content | base64 -d > validation/historical-statement-candidates.json
+          gh api repos/krisraves/Falsology/git/blobs/e4be23b10e04a0dcdedc66314bd620806f3b72fe --jq .content | base64 -d > validation/historical-statement-candidates.md
       - shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/video-duplicate-report.json validation/unique-source-plan.json
+          git add validation/video-duplicate-report.json validation/unique-source-plan.json validation/historical-statement-candidates.json validation/historical-statement-candidates.md
           if ! git diff --cached --quiet; then
-            git commit -m "Record unique video source plan"
+            git commit -m "Recover unique video transcript evidence"
             git push origin agent/unique-video-deck
           fi
