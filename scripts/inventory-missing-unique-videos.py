@@ -18,9 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 ENDPOINT = "https://youtube2text.diguardia.org/api/transcript"
 OUTPUT = ROOT / "validation" / "missing-unique-video-lines.json"
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
-TIMEOUT = 120
-ATTEMPTS = 4
-WORKERS = 2
+TIMEOUT = 35
+ATTEMPTS = 1
+WORKERS = 8
 
 FIRST_PERSON = re.compile(r"\b(i|i'm|im|i've|ive|i'd|id|i'll|ill|me|my|mine|we|we're|were|we've|our|ours)\b", re.I)
 QUESTION = re.compile(r"\b(did you|do you|are you|were you|can you|could you|would you|tell me|what did|why did|how did)\b", re.I)
@@ -91,7 +91,7 @@ def fetch(video_id: str) -> list[dict[str, Any]]:
                     pass
             errors.append(f"attempt {attempt}: {type(exc).__name__}: {exc} {detail}".strip())
             if attempt < ATTEMPTS:
-                time.sleep(attempt * 10 + random.uniform(1, 4))
+                time.sleep(attempt * 3 + random.uniform(0.5, 1.5))
     raise RuntimeError(" | ".join(errors))
 
 
