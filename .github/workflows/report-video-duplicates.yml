@@ -31,7 +31,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build unique source transcript plan
+      - name: Build unique video plans
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -43,12 +43,13 @@ jobs:
           node scripts/build-unique-exact-candidate-plan.mjs
           node scripts/build-all-unique-candidate-plan.mjs
           python scripts/inventory-missing-unique-videos.py
+          python scripts/search-alternate-uploads.py
       - shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/video-duplicate-report.json validation/unique-source-plan.json validation/historical-statement-candidates.json validation/historical-statement-candidates.md validation/unique-exact-candidate-plan.json validation/all-unique-candidate-plan.json validation/missing-unique-video-lines.json
+          git add validation/video-duplicate-report.json validation/unique-source-plan.json validation/historical-statement-candidates.json validation/historical-statement-candidates.md validation/unique-exact-candidate-plan.json validation/all-unique-candidate-plan.json validation/missing-unique-video-lines.json validation/alternate-upload-search.json
           if ! git diff --cached --quiet; then
-            git commit -m "Inventory exact lines for all unique videos"
+            git commit -m "Search alternate uploads for unique video deck"
             git push origin agent/unique-video-deck
           fi
