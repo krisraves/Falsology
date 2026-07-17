@@ -6,9 +6,15 @@ on:
       - main
     types:
       - opened
+      - synchronize
+      - ready_for_review
 
 permissions:
   contents: write
+
+concurrency:
+  group: unique-video-deck-planning
+  cancel-in-progress: true
 
 jobs:
   report:
@@ -21,11 +27,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/report-video-duplicates.mjs
+      - run: |
+          node scripts/report-video-duplicates.mjs
+          node scripts/build-unique-source-plan.mjs
       - shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/video-duplicate-report.json
-          git commit -m "Record duplicate video report"
-          git push origin agent/unique-video-deck
+          git add validation/video-duplicate-report.json validation/unique-source-plan.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record unique video source plan"
+            git push origin agent/unique-video-deck
+          fi
