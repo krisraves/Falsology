@@ -37,12 +37,13 @@ jobs:
           gh api repos/krisraves/Falsology/git/blobs/6a6b2fa967519dba8ae8cb6f76c1f02cd35d7b37 --jq .content | base64 -d > validation/historical-statement-candidates.json
           gh api repos/krisraves/Falsology/git/blobs/e4be23b10e04a0dcdedc66314bd620806f3b72fe --jq .content | base64 -d > validation/historical-statement-candidates.md
           node scripts/build-unique-exact-candidate-plan.mjs
+          node scripts/build-all-unique-candidate-plan.mjs
       - shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add validation/video-duplicate-report.json validation/unique-source-plan.json validation/historical-statement-candidates.json validation/historical-statement-candidates.md validation/unique-exact-candidate-plan.json
+          git add validation/video-duplicate-report.json validation/unique-source-plan.json validation/historical-statement-candidates.json validation/historical-statement-candidates.md validation/unique-exact-candidate-plan.json validation/all-unique-candidate-plan.json
           if ! git diff --cached --quiet; then
-            git commit -m "Build unique exact video candidate plan"
+            git commit -m "Plan all 50 unique video sources"
             git push origin agent/unique-video-deck
           fi
