@@ -24,6 +24,9 @@ const levels = [
 ] as const;
 
 export default function HomePage() {
+  const truthCount = claims.filter((claim) => claim.verdict === "truth").length;
+  const lieCount = claims.filter((claim) => claim.verdict === "lie").length;
+
   return (
     <main className="simple-home">
       <section className="simple-hero site-shell">
@@ -46,13 +49,13 @@ export default function HomePage() {
           })}
         </div>
 
-        <Link href="/play" className="mix-link">Mix all 50 cases</Link>
+        <Link href="/play" className="mix-link">Mix all {claims.length} cases</Link>
       </section>
 
       <section className="simple-stats site-shell" aria-label="Game facts">
-        <span><strong>50</strong><small>video cases</small></span>
-        <span><strong>25</strong><small>truths</small></span>
-        <span><strong>25</strong><small>lies</small></span>
+        <span><strong>{claims.length}</strong><small>unique videos</small></span>
+        <span><strong>{truthCount}</strong><small>truths</small></span>
+        <span><strong>{lieCount}</strong><small>lies</small></span>
         <span><strong>±15s</strong><small>around each statement</small></span>
       </section>
 
