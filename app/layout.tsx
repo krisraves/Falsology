@@ -4,6 +4,7 @@ import "@/app/globals.css";
 import "@/app/detective.css";
 import "@/app/simple.css";
 import "@/app/clip-player.css";
+import "@/app/section-break.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SITE_NAME, siteUrl } from "@/lib/site";
