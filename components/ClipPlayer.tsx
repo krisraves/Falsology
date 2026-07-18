@@ -126,12 +126,6 @@ function loadYouTubeApi(): Promise<YouTubeApi> {
   return apiPromise;
 }
 
-function formatTime(seconds: number) {
-  const wholeSeconds = Math.max(0, Math.floor(seconds));
-  const minutes = Math.floor(wholeSeconds / 60);
-  return `${minutes}:${String(wholeSeconds % 60).padStart(2, "0")}`;
-}
-
 export function ClipPlayer({
   videoId,
   title,
@@ -348,11 +342,10 @@ export function ClipPlayer({
           {playing ? "Pause" : ended ? "Replay" : "Play"}
         </button>
         <progress value={progress} max="100" aria-label="Shortened clip progress" />
-        <span>{formatTime(elapsed)} / {formatTime(duration)}</span>
       </div>
 
       <div className="clip-player-meta">
-        <span>Selected excerpt: {formatTime(activeSource.startSeconds)}–{formatTime(activeSource.endSeconds)}</span>
+        <span>Selected evidence excerpt</span>
         <a href={activeSource.sourceUrl} target="_blank" rel="noreferrer">Full source ↗</a>
       </div>
       <span className="sr-only">{title}</span>
