@@ -5,6 +5,7 @@ import "@/app/detective.css";
 import "@/app/simple.css";
 import "@/app/clip-player.css";
 import "@/app/section-break.css";
+import "@/app/home-rebuild.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SITE_NAME, siteUrl } from "@/lib/site";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   keywords: ["truth or lie", "interrogation game", "witness testimony", "criminal interviews", "media literacy"],
-  openGraph: { title: `${SITE_NAME} — One clip. One call.`, description, type: "website", url: siteUrl(), siteName: SITE_NAME },
+  openGraph: { title: `${SITE_NAME} — Would you believe them?`, description, type: "website", url: siteUrl(), siteName: SITE_NAME },
   twitter: { card: "summary_large_image", title: SITE_NAME, description },
   alternates: { canonical: siteUrl() },
 };
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#080b10",
+  themeColor: "#11111f",
   colorScheme: "dark",
 };
 
