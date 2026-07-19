@@ -1,1 +1,1 @@
-Run the optimized one-source-per-seed verified content build.
+Run the next deck completion validation pass.
