@@ -1,0 +1,1260 @@
+[
+  {
+    "id": "Divyanshuinfo/youtube-video-transcription-with-whisper",
+    "error": "ValueError: The current space is in the invalid state: PAUSED. Please contact the owner to fix this."
+  },
+  {
+    "id": "neillk/youtube-whisper",
+    "error": "ValueError: The current space is in the invalid state: BUILD_ERROR. Please contact the owner to fix this."
+  },
+  {
+    "id": "neuralworm/youtube-transcription-whisper",
+    "error": "ReadTimeout: The read operation timed out"
+  },
+  {
+    "id": "1s/YouTube-Video-Transcription",
+    "error": "ValueError: The current space is in the invalid state: RUNTIME_ERROR. Please contact the owner to fix this."
+  },
+  {
+    "id": "hesham111/whisper-transcription-api-youtube",
+    "error": "ValueError: The current space is in the invalid state: CONFIG_ERROR. Please contact the owner to fix this."
+  },
+  {
+    "id": "ClarityClips/clarityclips-youtube-transcript",
+    "src": "https://clarityclips-clarityclips-youtube-transcript.hf.space",
+    "api": {
+      "named_endpoints": {
+        "/get_transcript": {
+          "parameters": [
+            {
+              "label": "YouTube Video ID",
+              "parameter_name": "video_id",
+              "parameter_has_default": false,
+              "parameter_default": null,
+              "type": {
+                "type": "string"
+              },
+              "python_type": {
+                "type": "str",
+                "description": ""
+              },
+              "component": "Textbox",
+              "example_input": "Hello!!"
+            },
+            {
+              "label": "Languages (comma-separated)",
+              "parameter_name": "languages",
+              "parameter_has_default": true,
+              "parameter_default": "en",
+              "type": {
+                "type": "string"
+              },
+              "python_type": {
+                "type": "str",
+                "description": ""
+              },
+              "component": "Textbox",
+              "example_input": "Hello!!"
+            },
+            {
+              "label": "Output Format",
+              "parameter_name": "format_type",
+              "parameter_has_default": true,
+              "parameter_default": "Text",
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Text",
+                  "JSON",
+                  "WebVTT",
+                  "SRT"
+                ]
+              },
+              "python_type": {
+                "type": "Literal['Text', 'JSON', 'WebVTT', 'SRT']",
+                "description": ""
+              },
+              "component": "Dropdown",
+              "example_input": "Text"
+            },
+            {
+              "label": "Translate To (optional)",
+              "parameter_name": "translate_to",
+              "parameter_has_default": true,
+              "parameter_default": "",
+              "type": {
+                "type": "string",
+                "enum": [
+                  "",
+                  "en",
+                  "de",
+                  "es",
+                  "fr",
+                  "it"
+                ]
+              },
+              "python_type": {
+                "type": "Literal['', 'en', 'de', 'es', 'fr', 'it']",
+                "description": ""
+              },
+              "component": "Dropdown",
+              "example_input": ""
+            },
+            {
+              "label": "Preserve Formatting",
+              "parameter_name": "preserve_formatting",
+              "parameter_has_default": true,
+              "parameter_default": false,
+              "type": {
+                "type": "boolean"
+              },
+              "python_type": {
+                "type": "bool",
+                "description": ""
+              },
+              "component": "Checkbox",
+              "example_input": true
+            }
+          ],
+          "returns": [
+            {
+              "label": "Transcript",
+              "type": {
+                "type": "string"
+              },
+              "python_type": {
+                "type": "str",
+                "description": ""
+              },
+              "component": "Textbox"
+            }
+          ]
+        },
+        "/list_available_transcripts": {
+          "parameters": [
+            {
+              "label": "YouTube Video ID",
+              "parameter_name": "video_id",
+              "parameter_has_default": false,
+              "parameter_default": null,
+              "type": {
+                "type": "string"
+              },
+              "python_type": {
+                "type": "str",
+                "description": ""
+              },
+              "component": "Textbox",
+              "example_input": "Hello!!"
+            }
+          ],
+          "returns": [
+            {
+              "label": "Available Transcripts (JSON)",
+              "type": {
+                "type": "string"
+              },
+              "python_type": {
+                "type": "str",
+                "description": ""
+              },
+              "component": "Textbox"
+            }
+          ]
+        }
+      },
+      "unnamed_endpoints": {}
+    },
+    "config": {
+      "version": "5.20.0",
+      "api_prefix": "/gradio_api",
+      "mode": "blocks",
+      "app_id": 6192441776060515865,
+      "dev_mode": false,
+      "analytics_enabled": true,
+      "components": [
+        {
+          "id": 1,
+          "type": "markdown",
+          "props": {
+            "value": "# YouTube Transcript Fetcher",
+            "show_label": false,
+            "rtl": false,
+            "latex_delimiters": [
+              {
+                "left": "$$",
+                "right": "$$",
+                "display": true
+              }
+            ],
+            "visible": true,
+            "elem_classes": [],
+            "sanitize_html": true,
+            "line_breaks": false,
+            "header_links": false,
+            "show_copy_button": false,
+            "container": false,
+            "name": "markdown",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "927e99ba5dda4bcd0dfe596d4d0cecdc2e0b41e7e95071a05f96ae3971390ed6",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "# Hello!"
+        },
+        {
+          "id": 2,
+          "type": "markdown",
+          "props": {
+            "value": "Retrieve transcripts from YouTube videos with various formatting options",
+            "show_label": false,
+            "rtl": false,
+            "latex_delimiters": [
+              {
+                "left": "$$",
+                "right": "$$",
+                "display": true
+              }
+            ],
+            "visible": true,
+            "elem_classes": [],
+            "sanitize_html": true,
+            "line_breaks": false,
+            "header_links": false,
+            "show_copy_button": false,
+            "container": false,
+            "name": "markdown",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "927e99ba5dda4bcd0dfe596d4d0cecdc2e0b41e7e95071a05f96ae3971390ed6",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "# Hello!"
+        },
+        {
+          "id": 3,
+          "type": "tabitem",
+          "props": {
+            "label": "Get Transcript",
+            "visible": true,
+            "interactive": true,
+            "name": "tab"
+          },
+          "skip_api": true,
+          "component_class_id": "1c90007b1764f6020d609b76bbdbb41f90397317a32298785a60800796916496",
+          "key": null
+        },
+        {
+          "id": 4,
+          "type": "row",
+          "props": {
+            "variant": "default",
+            "visible": true,
+            "equal_height": false,
+            "show_progress": false,
+            "name": "row"
+          },
+          "skip_api": true,
+          "component_class_id": "724216f2707d8e99d1bf5993a957b41df582b9f858086784b9e93dca5b08e3ce",
+          "key": null
+        },
+        {
+          "id": 5,
+          "type": "column",
+          "props": {
+            "scale": 1,
+            "min_width": 320,
+            "variant": "default",
+            "visible": true,
+            "show_progress": false,
+            "name": "column"
+          },
+          "skip_api": true,
+          "component_class_id": "2936b1d11eae2288921900031596f1dda70bc86ea3912baac685b76d520ed450",
+          "key": null
+        },
+        {
+          "id": 6,
+          "type": "textbox",
+          "props": {
+            "lines": 1,
+            "max_lines": 20,
+            "placeholder": "e.g., dQw4w9WgXcQ",
+            "label": "YouTube Video ID",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "autofocus": false,
+            "autoscroll": true,
+            "elem_classes": [],
+            "type": "text",
+            "rtl": false,
+            "show_copy_button": false,
+            "submit_btn": false,
+            "stop_btn": false,
+            "name": "textbox",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "0ad8e7dd48970890cef0fb44101b5b9b5a57422fa28062cfa5b0de927e78f3dc",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "Hello!!"
+        },
+        {
+          "id": 7,
+          "type": "textbox",
+          "props": {
+            "value": "en",
+            "lines": 1,
+            "max_lines": 20,
+            "placeholder": "e.g., en,de,es",
+            "label": "Languages (comma-separated)",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "autofocus": false,
+            "autoscroll": true,
+            "elem_classes": [],
+            "type": "text",
+            "rtl": false,
+            "show_copy_button": false,
+            "submit_btn": false,
+            "stop_btn": false,
+            "name": "textbox",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "0ad8e7dd48970890cef0fb44101b5b9b5a57422fa28062cfa5b0de927e78f3dc",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "Hello!!"
+        },
+        {
+          "id": 8,
+          "type": "dropdown",
+          "props": {
+            "choices": [
+              [
+                "Text",
+                "Text"
+              ],
+              [
+                "JSON",
+                "JSON"
+              ],
+              [
+                "WebVTT",
+                "WebVTT"
+              ],
+              [
+                "SRT",
+                "SRT"
+              ]
+            ],
+            "value": "Text",
+            "type": "value",
+            "allow_custom_value": false,
+            "filterable": true,
+            "label": "Output Format",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "elem_classes": [],
+            "name": "dropdown",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "ab4364d7fce4d39b423da06814d2184031a9485af4e94c2e684a84bfb6e53489",
+          "key": null,
+          "api_info": {
+            "type": "string",
+            "enum": [
+              "Text",
+              "JSON",
+              "WebVTT",
+              "SRT"
+            ]
+          },
+          "api_info_as_input": {
+            "type": "string",
+            "enum": [
+              "Text",
+              "JSON",
+              "WebVTT",
+              "SRT"
+            ]
+          },
+          "api_info_as_output": {
+            "type": "string",
+            "enum": [
+              "Text",
+              "JSON",
+              "WebVTT",
+              "SRT"
+            ]
+          },
+          "example_inputs": "Text"
+        },
+        {
+          "id": 9,
+          "type": "dropdown",
+          "props": {
+            "choices": [
+              [
+                "",
+                ""
+              ],
+              [
+                "en",
+                "en"
+              ],
+              [
+                "de",
+                "de"
+              ],
+              [
+                "es",
+                "es"
+              ],
+              [
+                "fr",
+                "fr"
+              ],
+              [
+                "it",
+                "it"
+              ]
+            ],
+            "value": "",
+            "type": "value",
+            "allow_custom_value": false,
+            "filterable": true,
+            "label": "Translate To (optional)",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "elem_classes": [],
+            "name": "dropdown",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "ab4364d7fce4d39b423da06814d2184031a9485af4e94c2e684a84bfb6e53489",
+          "key": null,
+          "api_info": {
+            "type": "string",
+            "enum": [
+              "",
+              "en",
+              "de",
+              "es",
+              "fr",
+              "it"
+            ]
+          },
+          "api_info_as_input": {
+            "type": "string",
+            "enum": [
+              "",
+              "en",
+              "de",
+              "es",
+              "fr",
+              "it"
+            ]
+          },
+          "api_info_as_output": {
+            "type": "string",
+            "enum": [
+              "",
+              "en",
+              "de",
+              "es",
+              "fr",
+              "it"
+            ]
+          },
+          "example_inputs": ""
+        },
+        {
+          "id": 10,
+          "type": "checkbox",
+          "props": {
+            "value": false,
+            "label": "Preserve Formatting",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "elem_classes": [],
+            "name": "checkbox",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "ee84e6fe71f46ce35def4649190f65f814a794e417222238f1c6f0b7977175e6",
+          "key": null,
+          "api_info": {
+            "type": "boolean"
+          },
+          "api_info_as_input": {
+            "type": "boolean"
+          },
+          "api_info_as_output": {
+            "type": "boolean"
+          },
+          "example_inputs": true
+        },
+        {
+          "id": 11,
+          "type": "button",
+          "props": {
+            "value": "Get Transcript",
+            "variant": "secondary",
+            "size": "lg",
+            "visible": true,
+            "interactive": true,
+            "elem_classes": [],
+            "name": "button",
+            "_selectable": false
+          },
+          "skip_api": true,
+          "component_class_id": "51bd485a5354bcd93c72c66428b42770f71e60d8f9bb8345f6ce8a6787cd1c8f",
+          "key": null
+        },
+        {
+          "id": 12,
+          "type": "form",
+          "props": {
+            "scale": 0,
+            "min_width": 0,
+            "name": "form"
+          },
+          "skip_api": true,
+          "component_class_id": "ed5cd51f569f3a7624b1709c4e7e50a5a608037f5fb82307671a5cec77e36b71",
+          "key": null
+        },
+        {
+          "id": 13,
+          "type": "column",
+          "props": {
+            "scale": 1,
+            "min_width": 320,
+            "variant": "default",
+            "visible": true,
+            "show_progress": false,
+            "name": "column"
+          },
+          "skip_api": true,
+          "component_class_id": "2936b1d11eae2288921900031596f1dda70bc86ea3912baac685b76d520ed450",
+          "key": null
+        },
+        {
+          "id": 14,
+          "type": "textbox",
+          "props": {
+            "lines": 20,
+            "max_lines": 20,
+            "label": "Transcript",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "autofocus": false,
+            "autoscroll": true,
+            "elem_classes": [],
+            "type": "text",
+            "rtl": false,
+            "show_copy_button": false,
+            "submit_btn": false,
+            "stop_btn": false,
+            "name": "textbox",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "0ad8e7dd48970890cef0fb44101b5b9b5a57422fa28062cfa5b0de927e78f3dc",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "Hello!!"
+        },
+        {
+          "id": 15,
+          "type": "form",
+          "props": {
+            "scale": 0,
+            "min_width": 0,
+            "name": "form"
+          },
+          "skip_api": true,
+          "component_class_id": "ed5cd51f569f3a7624b1709c4e7e50a5a608037f5fb82307671a5cec77e36b71",
+          "key": null
+        },
+        {
+          "id": 16,
+          "type": "tabitem",
+          "props": {
+            "label": "List Available Transcripts",
+            "visible": true,
+            "interactive": true,
+            "name": "tab"
+          },
+          "skip_api": true,
+          "component_class_id": "1c90007b1764f6020d609b76bbdbb41f90397317a32298785a60800796916496",
+          "key": null
+        },
+        {
+          "id": 17,
+          "type": "row",
+          "props": {
+            "variant": "default",
+            "visible": true,
+            "equal_height": false,
+            "show_progress": false,
+            "name": "row"
+          },
+          "skip_api": true,
+          "component_class_id": "724216f2707d8e99d1bf5993a957b41df582b9f858086784b9e93dca5b08e3ce",
+          "key": null
+        },
+        {
+          "id": 18,
+          "type": "column",
+          "props": {
+            "scale": 1,
+            "min_width": 320,
+            "variant": "default",
+            "visible": true,
+            "show_progress": false,
+            "name": "column"
+          },
+          "skip_api": true,
+          "component_class_id": "2936b1d11eae2288921900031596f1dda70bc86ea3912baac685b76d520ed450",
+          "key": null
+        },
+        {
+          "id": 19,
+          "type": "textbox",
+          "props": {
+            "lines": 1,
+            "max_lines": 20,
+            "placeholder": "e.g., dQw4w9WgXcQ",
+            "label": "YouTube Video ID",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "autofocus": false,
+            "autoscroll": true,
+            "elem_classes": [],
+            "type": "text",
+            "rtl": false,
+            "show_copy_button": false,
+            "submit_btn": false,
+            "stop_btn": false,
+            "name": "textbox",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "0ad8e7dd48970890cef0fb44101b5b9b5a57422fa28062cfa5b0de927e78f3dc",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "Hello!!"
+        },
+        {
+          "id": 20,
+          "type": "button",
+          "props": {
+            "value": "List Transcripts",
+            "variant": "secondary",
+            "size": "lg",
+            "visible": true,
+            "interactive": true,
+            "elem_classes": [],
+            "name": "button",
+            "_selectable": false
+          },
+          "skip_api": true,
+          "component_class_id": "51bd485a5354bcd93c72c66428b42770f71e60d8f9bb8345f6ce8a6787cd1c8f",
+          "key": null
+        },
+        {
+          "id": 21,
+          "type": "form",
+          "props": {
+            "scale": 0,
+            "min_width": 0,
+            "name": "form"
+          },
+          "skip_api": true,
+          "component_class_id": "ed5cd51f569f3a7624b1709c4e7e50a5a608037f5fb82307671a5cec77e36b71",
+          "key": null
+        },
+        {
+          "id": 22,
+          "type": "column",
+          "props": {
+            "scale": 1,
+            "min_width": 320,
+            "variant": "default",
+            "visible": true,
+            "show_progress": false,
+            "name": "column"
+          },
+          "skip_api": true,
+          "component_class_id": "2936b1d11eae2288921900031596f1dda70bc86ea3912baac685b76d520ed450",
+          "key": null
+        },
+        {
+          "id": 23,
+          "type": "textbox",
+          "props": {
+            "lines": 20,
+            "max_lines": 20,
+            "label": "Available Transcripts (JSON)",
+            "show_label": true,
+            "container": true,
+            "min_width": 160,
+            "visible": true,
+            "autofocus": false,
+            "autoscroll": true,
+            "elem_classes": [],
+            "type": "text",
+            "rtl": false,
+            "show_copy_button": false,
+            "submit_btn": false,
+            "stop_btn": false,
+            "name": "textbox",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "0ad8e7dd48970890cef0fb44101b5b9b5a57422fa28062cfa5b0de927e78f3dc",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "Hello!!"
+        },
+        {
+          "id": 24,
+          "type": "form",
+          "props": {
+            "scale": 0,
+            "min_width": 0,
+            "name": "form"
+          },
+          "skip_api": true,
+          "component_class_id": "ed5cd51f569f3a7624b1709c4e7e50a5a608037f5fb82307671a5cec77e36b71",
+          "key": null
+        },
+        {
+          "id": 25,
+          "type": "markdown",
+          "props": {
+            "value": "### Notes\n- Enter a valid YouTube video ID (found in the URL)\n- Specify languages as comma-separated codes (e.g., \"en,de\")\n- Choose output format from available options\n- Optional: Select a language to translate the transcript to\n- Preserve formatting keeps HTML tags if present",
+            "show_label": false,
+            "rtl": false,
+            "latex_delimiters": [
+              {
+                "left": "$$",
+                "right": "$$",
+                "display": true
+              }
+            ],
+            "visible": true,
+            "elem_classes": [],
+            "sanitize_html": true,
+            "line_breaks": false,
+            "header_links": false,
+            "show_copy_button": false,
+            "container": false,
+            "name": "markdown",
+            "_selectable": false
+          },
+          "skip_api": false,
+          "component_class_id": "927e99ba5dda4bcd0dfe596d4d0cecdc2e0b41e7e95071a05f96ae3971390ed6",
+          "key": null,
+          "api_info": {
+            "type": "string"
+          },
+          "api_info_as_input": {
+            "type": "string"
+          },
+          "api_info_as_output": {
+            "type": "string"
+          },
+          "example_inputs": "# Hello!"
+        },
+        {
+          "id": 26,
+          "type": "tabs",
+          "props": {
+            "visible": true,
+            "name": "tabs"
+          },
+          "skip_api": true,
+          "component_class_id": "01bcf447b29dfcb9603af34a268077fbe3f736c3ebd52801a0497553de1b2ce6",
+          "key": null
+        }
+      ],
+      "css": "",
+      "connect_heartbeat": false,
+      "js": "",
+      "head": "",
+      "title": "YouTube Transcript Fetcher",
+      "space_id": "ClarityClips/clarityclips-youtube-transcript",
+      "enable_queue": true,
+      "show_error": false,
+      "show_api": true,
+      "is_colab": false,
+      "max_file_size": null,
+      "stylesheets": [
+        "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+      ],
+      "theme": "default",
+      "protocol": "sse_v3",
+      "body_css": {
+        "body_background_fill": "white",
+        "body_text_color": "#27272a",
+        "body_background_fill_dark": "#0f0f11",
+        "body_text_color_dark": "#f4f4f5"
+      },
+      "fill_height": false,
+      "fill_width": false,
+      "theme_hash": "63194d3741d384f9f85db890247b6c0ef9e7abac0f297f40a15c59fe4baba916",
+      "pwa": true,
+      "pages": [
+        [
+          "",
+          "Home"
+        ]
+      ],
+      "page": {
+        "": {
+          "layout": {
+            "id": 0,
+            "children": [
+              {
+                "id": 1
+              },
+              {
+                "id": 2
+              },
+              {
+                "id": 26,
+                "children": [
+                  {
+                    "id": 3,
+                    "children": [
+                      {
+                        "id": 4,
+                        "children": [
+                          {
+                            "id": 5,
+                            "children": [
+                              {
+                                "id": 12,
+                                "children": [
+                                  {
+                                    "id": 6
+                                  },
+                                  {
+                                    "id": 7
+                                  },
+                                  {
+                                    "id": 8
+                                  },
+                                  {
+                                    "id": 9
+                                  },
+                                  {
+                                    "id": 10
+                                  }
+                                ]
+                              },
+                              {
+                                "id": 11
+                              }
+                            ]
+                          },
+                          {
+                            "id": 13,
+                            "children": [
+                              {
+                                "id": 15,
+                                "children": [
+                                  {
+                                    "id": 14
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 16,
+                    "children": [
+                      {
+                        "id": 17,
+                        "children": [
+                          {
+                            "id": 18,
+                            "children": [
+                              {
+                                "id": 21,
+                                "children": [
+                                  {
+                                    "id": 19
+                                  }
+                                ]
+                              },
+                              {
+                                "id": 20
+                              }
+                            ]
+                          },
+                          {
+                            "id": 22,
+                            "children": [
+                              {
+                                "id": 24,
+                                "children": [
+                                  {
+                                    "id": 23
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 25
+              }
+            ]
+          },
+          "components": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "dependencies": [
+            0,
+            1
+          ]
+        }
+      },
+      "dependencies": [
+        {
+          "id": 0,
+          "targets": [
+            [
+              11,
+              "click"
+            ]
+          ],
+          "inputs": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "outputs": [
+            14
+          ],
+          "backend_fn": true,
+          "js": null,
+          "queue": true,
+          "api_name": "get_transcript",
+          "scroll_to_output": false,
+          "show_progress": "full",
+          "show_progress_on": null,
+          "batch": false,
+          "max_batch_size": 4,
+          "cancels": [],
+          "types": {
+            "generator": false,
+            "cancel": false
+          },
+          "collects_event_data": false,
+          "trigger_after": null,
+          "trigger_only_on_success": false,
+          "trigger_mode": "once",
+          "show_api": true,
+          "rendered_in": null,
+          "connection": "sse",
+          "time_limit": null,
+          "stream_every": 0.5,
+          "like_user_message": false,
+          "event_specific_args": null,
+          "js_implementation": null
+        },
+        {
+          "id": 1,
+          "targets": [
+            [
+              20,
+              "click"
+            ]
+          ],
+          "inputs": [
+            19
+          ],
+          "outputs": [
+            23
+          ],
+          "backend_fn": true,
+          "js": null,
+          "queue": true,
+          "api_name": "list_available_transcripts",
+          "scroll_to_output": false,
+          "show_progress": "full",
+          "show_progress_on": null,
+          "batch": false,
+          "max_batch_size": 4,
+          "cancels": [],
+          "types": {
+            "generator": false,
+            "cancel": false
+          },
+          "collects_event_data": false,
+          "trigger_after": null,
+          "trigger_only_on_success": false,
+          "trigger_mode": "once",
+          "show_api": true,
+          "rendered_in": null,
+          "connection": "sse",
+          "time_limit": null,
+          "stream_every": 0.5,
+          "like_user_message": false,
+          "event_specific_args": null,
+          "js_implementation": null
+        }
+      ],
+      "layout": {
+        "id": 0,
+        "children": [
+          {
+            "id": 1
+          },
+          {
+            "id": 2
+          },
+          {
+            "id": 26,
+            "children": [
+              {
+                "id": 3,
+                "children": [
+                  {
+                    "id": 4,
+                    "children": [
+                      {
+                        "id": 5,
+                        "children": [
+                          {
+                            "id": 12,
+                            "children": [
+                              {
+                                "id": 6
+                              },
+                              {
+                                "id": 7
+                              },
+                              {
+                                "id": 8
+                              },
+                              {
+                                "id": 9
+                              },
+                              {
+                                "id": 10
+                              }
+                            ]
+                          },
+                          {
+                            "id": 11
+                          }
+                        ]
+                      },
+                      {
+                        "id": 13,
+                        "children": [
+                          {
+                            "id": 15,
+                            "children": [
+                              {
+                                "id": 14
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 16,
+                "children": [
+                  {
+                    "id": 17,
+                    "children": [
+                      {
+                        "id": 18,
+                        "children": [
+                          {
+                            "id": 21,
+                            "children": [
+                              {
+                                "id": 19
+                              }
+                            ]
+                          },
+                          {
+                            "id": 20
+                          }
+                        ]
+                      },
+                      {
+                        "id": 22,
+                        "children": [
+                          {
+                            "id": 24,
+                            "children": [
+                              {
+                                "id": 23
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 25
+          }
+        ]
+      },
+      "root": "https://clarityclips-clarityclips-youtube-transcript.hf.space",
+      "username": null
+    }
+  },
+  {
+    "id": "GhadaSaylami/free-fast-youtube-url-video-to-text-using-openai-whisper",
+    "error": "ReadTimeout: The read operation timed out"
+  },
+  {
+    "id": "Hamza4100/ai-video-transcription-clip-extractor",
+    "error": "ReadTimeout: The read operation timed out"
+  },
+  {
+    "id": "BEACON849322/youtube-subtitle-api",
+    "error": "ReadTimeout: The read operation timed out"
+  },
+  {
+    "id": "Docfile/Whisper-youtube-crosslingual-subtitles",
+    "error": "ValueError: The current space is in the invalid state: RUNTIME_ERROR. Please contact the owner to fix this."
+  },
+  {
+    "id": "Jahankhan01/Youtube-Transcription",
+    "error": "ValueError: The current space is in the invalid state: RUNTIME_ERROR. Please contact the owner to fix this."
+  },
+  {
+    "id": "RASMUS/Youtube-videos-with-crosslingual-transcriptions",
+    "error": "ValueError: The current space is in the invalid state: BUILD_ERROR. Please contact the owner to fix this."
+  }
+]

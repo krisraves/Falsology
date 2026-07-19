@@ -1,0 +1,89 @@
+{
+  "videoId": "3MuPWV5cTio",
+  "piped": [
+    {
+      "base": "https://pipedapi.kavin.rocks",
+      "status": 526,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "base": "https://pipedapi.adminforge.de",
+      "error": "ConnectionError: HTTPSConnectionPool(host='adminforge.destreams', port=443): Max retries exceeded with url: /3MuPWV5cTio (Caused by NameResolutionError(\"HTTPSConnection(host='adminforge.destreams', port=443): Failed to resolve 'adminforge.destreams' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "base": "https://pipedapi.reallyaweso.me",
+      "status": 502,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "base": "https://pipedapi.leptons.xyz",
+      "status": 403,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "base": "https://pipedapi.darkness.services",
+      "error": "ConnectionError: HTTPSConnectionPool(host='pipedapi.darkness.services', port=443): Max retries exceeded with url: /streams/3MuPWV5cTio (Caused by NameResolutionError(\"HTTPSConnection(host='pipedapi.darkness.services', port=443): Failed to resolve 'pipedapi.darkness.services' ([Errno -5] No address associated with hostname)\"))"
+    },
+    {
+      "base": "https://pipedapi.r4fo.com",
+      "status": 200,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "invidious": [
+    {
+      "base": "https://yewtu.be",
+      "status": 403,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "base": "https://inv.nadeko.net",
+      "status": 403,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "base": "https://invidious.private.coffee",
+      "status": 502,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "base": "https://inv.us.projectsegfau.lt",
+      "error": "ConnectionError: HTTPSConnectionPool(host='inv.us.projectsegfau.lt', port=443): Max retries exceeded with url: /api/v1/videos/3MuPWV5cTio (Caused by NewConnectionError(\"HTTPSConnection(host='inv.us.projectsegfau.lt', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    {
+      "base": "https://invidious.jing.rocks",
+      "error": "ConnectionError: HTTPSConnectionPool(host='invidious.jing.rocks', port=443): Max retries exceeded with url: /api/v1/videos/3MuPWV5cTio (Caused by NameResolutionError(\"HTTPSConnection(host='invidious.jing.rocks', port=443): Failed to resolve 'invidious.jing.rocks' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "base": "https://invidious.nerdvpn.de",
+      "error": "ConnectionError: HTTPSConnectionPool(host='invidious.nerdvpn.de', port=443): Max retries exceeded with url: /api/v1/videos/3MuPWV5cTio (Caused by NewConnectionError(\"HTTPSConnection(host='invidious.nerdvpn.de', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    }
+  ],
+  "ytdlp": [
+    {
+      "client": "android",
+      "returncode": 1,
+      "stderr": "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\nERROR: [youtube] 3MuPWV5cTio: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+    },
+    {
+      "client": "android_vr",
+      "returncode": 1,
+      "stderr": "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\nERROR: [youtube] 3MuPWV5cTio: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+    },
+    {
+      "client": "web_creator",
+      "returncode": 1,
+      "stderr": "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\nERROR: [youtube] 3MuPWV5cTio: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+    },
+    {
+      "client": "tv_embedded",
+      "returncode": 1,
+      "stderr": "WARNING: [youtube] Skipping unsupported client \"tv_embedded\"\nWARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one\nWARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\nERROR: [youtube] 3MuPWV5cTio: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+    },
+    {
+      "client": "mweb",
+      "returncode": 1,
+      "stderr": "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing\nERROR: [youtube] 3MuPWV5cTio: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "TM8EXwemnYA": {
+    "playerInfo": {
+      "error": "Error: page.evaluate: TypeError: player.getPlayerState is not a function\n    at eval (eval at evaluate (:291:30), <anonymous>:1:26)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    "network": [],
+    "captionBodies": [],
+    "consoleLogs": [
+      {
+        "type": "warning",
+        "text": "A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.youtube.com/iframe_api, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details."
+      },
+      {
+        "type": "warning",
+        "text": "A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.youtube.com/iframe_api, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details."
+      },
+      {
+        "type": "warning",
+        "text": "Unrecognized feature: 'web-share'."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0702000F4290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0A02000F4290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ]
+  },
+  "3MuPWV5cTio": {
+    "playerInfo": {
+      "error": "Error: page.evaluate: TypeError: player.getPlayerState is not a function\n    at eval (eval at evaluate (:291:30), <anonymous>:1:26)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    "network": [],
+    "captionBodies": [],
+    "consoleLogs": [
+      {
+        "type": "warning",
+        "text": "A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.youtube.com/iframe_api, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details."
+      },
+      {
+        "type": "warning",
+        "text": "A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.youtube.com/iframe_api, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details."
+      },
+      {
+        "type": "warning",
+        "text": "Unrecognized feature: 'web-share'."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0702000F4290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0A02000F4290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ]
+  },
+  "amHb2UoVZ_g": {
+    "playerInfo": {
+      "error": "Error: page.evaluate: TypeError: player.getPlayerState is not a function\n    at eval (eval at evaluate (:291:30), <anonymous>:1:26)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    "network": [],
+    "captionBodies": [],
+    "consoleLogs": [
+      {
+        "type": "warning",
+        "text": "A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.youtube.com/iframe_api, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details."
+      },
+      {
+        "type": "warning",
+        "text": "A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.youtube.com/iframe_api, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details."
+      },
+      {
+        "type": "warning",
+        "text": "Unrecognized feature: 'web-share'."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0702000F4290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0A02000F4290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ]
+  }
+}

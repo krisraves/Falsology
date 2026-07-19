@@ -1,0 +1,348 @@
+{
+  "api": {
+    "named_endpoints": {
+      "/predict": {
+        "parameters": [
+          {
+            "label": "parameter_1",
+            "type": {
+              "properties": {
+                "path": {
+                  "title": "Path",
+                  "type": "string"
+                },
+                "url": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Url"
+                },
+                "size": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Size"
+                },
+                "orig_name": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Orig Name"
+                },
+                "mime_type": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Mime Type"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "title": "FileData",
+              "type": "object"
+            },
+            "python_type": {
+              "type": "filepath",
+              "description": ""
+            },
+            "component": "Audio",
+            "example_input": "https://github.com/gradio-app/gradio/raw/main/test/test_files/audio_sample.wav"
+          },
+          {
+            "label": "Task",
+            "type": {
+              "enum": [
+                "transcribe",
+                "translate"
+              ],
+              "title": "Radio",
+              "type": "string"
+            },
+            "python_type": {
+              "type": "Literal[transcribe, translate]",
+              "description": ""
+            },
+            "component": "Radio",
+            "example_input": "transcribe"
+          }
+        ],
+        "returns": [
+          {
+            "label": "output",
+            "type": {
+              "type": "string"
+            },
+            "python_type": {
+              "type": "str",
+              "description": ""
+            },
+            "component": "Textbox"
+          }
+        ]
+      },
+      "/predict_1": {
+        "parameters": [
+          {
+            "label": "Audio file",
+            "type": {
+              "properties": {
+                "path": {
+                  "title": "Path",
+                  "type": "string"
+                },
+                "url": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Url"
+                },
+                "size": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Size"
+                },
+                "orig_name": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Orig Name"
+                },
+                "mime_type": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Mime Type"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "title": "FileData",
+              "type": "object"
+            },
+            "python_type": {
+              "type": "filepath",
+              "description": ""
+            },
+            "component": "Audio",
+            "example_input": "https://github.com/gradio-app/gradio/raw/main/test/test_files/audio_sample.wav"
+          },
+          {
+            "label": "Task",
+            "type": {
+              "enum": [
+                "transcribe",
+                "translate"
+              ],
+              "title": "Radio",
+              "type": "string"
+            },
+            "python_type": {
+              "type": "Literal[transcribe, translate]",
+              "description": ""
+            },
+            "component": "Radio",
+            "example_input": "transcribe"
+          }
+        ],
+        "returns": [
+          {
+            "label": "output",
+            "type": {
+              "type": "string"
+            },
+            "python_type": {
+              "type": "str",
+              "description": ""
+            },
+            "component": "Textbox"
+          }
+        ]
+      },
+      "/predict_2": {
+        "parameters": [
+          {
+            "label": "YouTube URL",
+            "type": {
+              "type": "string"
+            },
+            "python_type": {
+              "type": "str",
+              "description": ""
+            },
+            "component": "Textbox",
+            "example_input": "Hello!!"
+          },
+          {
+            "label": "Task",
+            "type": {
+              "enum": [
+                "transcribe",
+                "translate"
+              ],
+              "title": "Radio",
+              "type": "string"
+            },
+            "python_type": {
+              "type": "Literal[transcribe, translate]",
+              "description": ""
+            },
+            "component": "Radio",
+            "example_input": "transcribe"
+          }
+        ],
+        "returns": [
+          {
+            "label": "output 0",
+            "type": {
+              "type": "string"
+            },
+            "python_type": {
+              "type": "str",
+              "description": ""
+            },
+            "component": "Html"
+          },
+          {
+            "label": "output 1",
+            "type": {
+              "type": "string"
+            },
+            "python_type": {
+              "type": "str",
+              "description": ""
+            },
+            "component": "Textbox"
+          },
+          {
+            "label": "Extracted Audio",
+            "type": {
+              "properties": {
+                "path": {
+                  "title": "Path",
+                  "type": "string"
+                },
+                "url": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Url"
+                },
+                "size": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Size"
+                },
+                "orig_name": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Orig Name"
+                },
+                "mime_type": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Mime Type"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "title": "FileData",
+              "type": "object"
+            },
+            "python_type": {
+              "type": "filepath",
+              "description": ""
+            },
+            "component": "Audio"
+          }
+        ]
+      }
+    },
+    "unnamed_endpoints": {}
+  },
+  "endpoints": [
+    "/predict",
+    "/predict_1",
+    "/predict_2"
+  ],
+  "chosen": "/predict_2",
+  "callError": "AppError: 'ERROR: [youtube] TM8EXwemnYA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies'"
+}

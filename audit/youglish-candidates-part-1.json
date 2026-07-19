@@ -1,0 +1,178 @@
+{
+  "chunk": 1,
+  "generatedAt": "2026-07-15T21:57:41.218Z",
+  "cases": [
+    {
+      "caseNumber": "L11",
+      "person": "Trevor Milton",
+      "claim": "The Nikola One is fully functioning.",
+      "currentVideoId": "DbXqiSYDhrA",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L12",
+      "person": "Bernie Madoff",
+      "claim": "In today's regulatory environment, it's virtually impossible to violate the rules undetected.",
+      "currentVideoId": "auTG_X2jG3E",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L13",
+      "person": "Lance Armstrong",
+      "claim": "I have never doped.",
+      "currentVideoId": "25ja7IAxQjY",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L14",
+      "person": "Stephanie Lazarus",
+      "claim": "I barely knew Sherri Rasmussen.",
+      "currentVideoId": "lC3va1aob3g",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L15",
+      "person": "Pete Rose",
+      "claim": "I never bet on baseball.",
+      "currentVideoId": "h4fmEbgKeh0",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L16",
+      "person": "Bill Clinton",
+      "claim": "I did not have sexual relations with that woman, Miss Lewinsky.",
+      "currentVideoId": "TM8EXwemnYA",
+      "candidates": [
+        {
+          "videoId": "S1DaIgb_kgc",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I did not have sexual relations with that woman Miss Lewinsky.",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Michael Sandel：Justice  What's The Right Thing To Do  Episode 07   A LESSON IN LYING",
+            "author_name": "GoshEnglish",
+            "author_url": "https://www.youtube.com/@Goshenglish",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/S1DaIgb_kgc/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/S1DaIgb_kgc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Michael Sandel：Justice  What&#39;s The Right Thing To Do  Episode 07   A LESSON IN LYING\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 2,
+      "completed": false
+    },
+    {
+      "caseNumber": "L17",
+      "person": "Kenneth Lay",
+      "claim": "The company is fundamentally strong.",
+      "currentVideoId": "S3EVIeZNHJU",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L18",
+      "person": "Richard Nixon",
+      "claim": "I am not a crook.",
+      "currentVideoId": "sh163n1lJ4M",
+      "candidates": [
+        {
+          "videoId": "JzNh_8WlbQw",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I am not a crook when he had directed Mr. Haldeman and Mr.",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Why This Republican Governor is Running Against President Trump",
+            "author_name": "Yahoo",
+            "author_url": "https://www.youtube.com/@Yahoo",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/JzNh_8WlbQw/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/JzNh_8WlbQw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why This Republican Governor is Running Against President Trump\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 13,
+      "completed": false
+    },
+    {
+      "caseNumber": "L19",
+      "person": "Chandler Halderson",
+      "claim": "My parents went to their cabin for the weekend.",
+      "currentVideoId": "MVVmLa1vKio",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "L20",
+      "person": "Richard Heene",
+      "claim": "It was not a hoax.",
+      "currentVideoId": "_5AlMWoIRB4",
+      "candidates": [
+        {
+          "videoId": "kBHk32fKrZ0",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "and has not come forward to claim if it was a hoax or not.",
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Top 10 Mysterious Videos That Cant Be Explained",
+            "author_name": "Top 10 Archive",
+            "author_url": "https://www.youtube.com/@Top10Archive",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/kBHk32fKrZ0/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/kBHk32fKrZ0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Top 10 Mysterious Videos That Cant Be Explained\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 9,
+      "completed": false
+    }
+  ]
+}

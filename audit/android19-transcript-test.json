@@ -1,0 +1,33 @@
+{
+  "visitorData": "CgszQlE0eW5tLTg3Myjl5d_SBg%3D%3D",
+  "player": {
+    "error": "HTTP 400",
+    "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Precondition check failed.\",\n    \"errors\": [\n      {\n        \"message\": \"Precondition check failed.\",\n        \"domain\": \"global\",\n        \"reason\": \"failedPrecondition\"\n      }\n    ],\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+  },
+  "transcriptTries": [
+    {
+      "language": "en",
+      "auto": true,
+      "error": "HTTP 400",
+      "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Precondition check failed.\",\n    \"errors\": [\n      {\n        \"message\": \"Precondition check failed.\",\n        \"domain\": \"global\",\n        \"reason\": \"failedPrecondition\"\n      }\n    ],\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+    },
+    {
+      "language": "en",
+      "auto": false,
+      "error": "HTTP 400",
+      "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Precondition check failed.\",\n    \"errors\": [\n      {\n        \"message\": \"Precondition check failed.\",\n        \"domain\": \"global\",\n        \"reason\": \"failedPrecondition\"\n      }\n    ],\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+    },
+    {
+      "language": "en-US",
+      "auto": true,
+      "error": "HTTP 400",
+      "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Precondition check failed.\",\n    \"errors\": [\n      {\n        \"message\": \"Precondition check failed.\",\n        \"domain\": \"global\",\n        \"reason\": \"failedPrecondition\"\n      }\n    ],\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+    },
+    {
+      "language": "en-US",
+      "auto": false,
+      "error": "HTTP 400",
+      "body": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Precondition check failed.\",\n    \"errors\": [\n      {\n        \"message\": \"Precondition check failed.\",\n        \"domain\": \"global\",\n        \"reason\": \"failedPrecondition\"\n      }\n    ],\n    \"status\": \"FAILED_PRECONDITION\"\n  }\n}\n"
+    }
+  ]
+}

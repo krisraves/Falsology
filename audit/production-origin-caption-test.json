@@ -1,0 +1,53 @@
+{
+  "TM8EXwemnYA": {
+    "navError": null,
+    "pageUrl": "https://falsology.vercel.app/",
+    "frames": [
+      "https://falsology.vercel.app/"
+    ],
+    "controls": {},
+    "requests": [
+      {
+        "url": "https://www.youtube.com/embed/TM8EXwemnYA?autoplay=1&mute=1&controls=1&cc_load_policy=1&cc_lang_pref=en&hl=en&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Ffalsology.vercel.app",
+        "method": "GET",
+        "resourceType": "document"
+      }
+    ],
+    "responses": [],
+    "consoleLogs": []
+  },
+  "3MuPWV5cTio": {
+    "navError": null,
+    "pageUrl": "https://falsology.vercel.app/",
+    "frames": [
+      "https://falsology.vercel.app/"
+    ],
+    "controls": {},
+    "requests": [
+      {
+        "url": "https://www.youtube.com/embed/3MuPWV5cTio?autoplay=1&mute=1&controls=1&cc_load_policy=1&cc_lang_pref=en&hl=en&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Ffalsology.vercel.app",
+        "method": "GET",
+        "resourceType": "document"
+      }
+    ],
+    "responses": [],
+    "consoleLogs": []
+  },
+  "amHb2UoVZ_g": {
+    "navError": null,
+    "pageUrl": "https://falsology.vercel.app/",
+    "frames": [
+      "https://falsology.vercel.app/"
+    ],
+    "controls": {},
+    "requests": [
+      {
+        "url": "https://www.youtube.com/embed/amHb2UoVZ_g?autoplay=1&mute=1&controls=1&cc_load_policy=1&cc_lang_pref=en&hl=en&playsinline=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Ffalsology.vercel.app",
+        "method": "GET",
+        "resourceType": "document"
+      }
+    ],
+    "responses": [],
+    "consoleLogs": []
+  }
+}

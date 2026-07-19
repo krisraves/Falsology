@@ -1,0 +1,106 @@
+{
+  "chunk": 3,
+  "generatedAt": "2026-07-15T21:57:45.664Z",
+  "cases": [
+    {
+      "caseNumber": "T06",
+      "person": "Chris Watts",
+      "claim": "I killed Shanann.",
+      "currentVideoId": "eWsXwpgCG8Q",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T07",
+      "person": "Jodi Arias",
+      "claim": "Yes, I killed Travis.",
+      "currentVideoId": "Qvde4s--GrM",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T08",
+      "person": "Alex Murdaugh",
+      "claim": "I lied about being at the kennels.",
+      "currentVideoId": "rEXrNoyv4Q8",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T09",
+      "person": "Richard Jewell",
+      "claim": "I did not plant the Olympic Park bomb.",
+      "currentVideoId": "DPMOiJIayPc",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T10",
+      "person": "Lindy Chamberlain",
+      "claim": "A dingo took my baby.",
+      "currentVideoId": "WRyeAkP17aM",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T11",
+      "person": "Kirk Bloodsworth",
+      "claim": "DNA proved I did not commit the murder.",
+      "currentVideoId": "q47wkZXczwY",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T12",
+      "person": "Anthony Ray Hinton",
+      "claim": "I spent thirty years on death row for a crime I did not commit.",
+      "currentVideoId": "po2ui6EYW8Y",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T13",
+      "person": "Elizabeth Smart",
+      "claim": "I was held captive for nine months.",
+      "currentVideoId": "2w-ZdPkNvFY",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T14",
+      "person": "Jaycee Dugard",
+      "claim": "I was held captive for eighteen years.",
+      "currentVideoId": "yXRPgKLnWnU",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    },
+    {
+      "caseNumber": "T15",
+      "person": "Mary Vincent",
+      "claim": "He cut off both my arms, and I survived.",
+      "currentVideoId": "W259o2tO2pc",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true
+    }
+  ]
+}

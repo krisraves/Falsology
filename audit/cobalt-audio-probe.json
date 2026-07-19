@@ -1,0 +1,13 @@
+{
+  "registries": {
+    "https://cobalt.directory/api/tests": {
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    "https://instances.cobalt.best/instances.json": {
+      "error": "SSLError: HTTPSConnectionPool(host='instances.cobalt.best', port=443): Max retries exceeded with url: /instances.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+    }
+  },
+  "attempts": [],
+  "candidateCount": 0,
+  "candidates": []
+}

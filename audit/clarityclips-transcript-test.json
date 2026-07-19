@@ -1,0 +1,86 @@
+{
+  "3MuPWV5cTio": {
+    "JSON": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=3MuPWV5cTio (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "WebVTT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=3MuPWV5cTio (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "SRT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=3MuPWV5cTio (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "available": "Error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=3MuPWV5cTio (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+  },
+  "K7iAlZzVenU": {
+    "JSON": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=K7iAlZzVenU (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "WebVTT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=K7iAlZzVenU (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "SRT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=K7iAlZzVenU (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "available": "Error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=K7iAlZzVenU (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+  },
+  "amHb2UoVZ_g": {
+    "JSON": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=amHb2UoVZ_g (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "WebVTT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=amHb2UoVZ_g (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "SRT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=amHb2UoVZ_g (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "available": "Error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=amHb2UoVZ_g (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+  },
+  "TM8EXwemnYA": {
+    "JSON": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=TM8EXwemnYA (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "WebVTT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=TM8EXwemnYA (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "SRT": {
+      "ok": true,
+      "type": "str",
+      "length": 252,
+      "result": "Unexpected error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=TM8EXwemnYA (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+    },
+    "available": "Error: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /watch?v=TM8EXwemnYA (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))"
+  }
+}

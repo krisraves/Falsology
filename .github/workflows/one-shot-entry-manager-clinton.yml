@@ -1,0 +1,49 @@
+name: One-shot EntryMng Clinton validation
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Traverse Clinton results
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');const fs=require('fs');const http=require('http');const https=require('https');const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+          const port=8771,origin=`http://127.0.0.1:${port}`,query='I did not have sexual relations with that woman';
+          const server=http.createServer((q,r)=>{r.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});r.end('<html><body><div id="widget"></div></body></html>')});
+          function oembed(v){return new Promise(resolve=>https.get(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent('https://www.youtube.com/watch?v='+v)}`,{headers:{'User-Agent':'Mozilla/5.0'}},r=>{let b='';r.on('data',d=>b+=d);r.on('end',()=>{try{resolve(JSON.parse(b))}catch{resolve({error:b.slice(0,500)})}})}).on('error',e=>resolve({error:String(e)})))}
+          server.listen(port,'127.0.0.1',async()=>{
+            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox','--autoplay-policy=no-user-gesture-required','--enable-unsafe-swiftshader']});const page=await browser.newPage();await page.goto(origin);
+            await page.evaluate(query=>{window.onYouglishAPIReady=()=>{window.__widget=new window.YG.Widget('widget',{width:900,components:8|64|8192,autoStart:0,events:{}});window.__widget.fetch(query,'english')};const s=document.createElement('script');s.src='https://youglish.com/public/emb/widget.js';document.head.appendChild(s)},query);
+            let frame=null;for(let i=0;i<100;i++){await sleep(200);frame=page.frames().find(f=>/youglish\.com\/pronounce/.test(f.url()));if(frame&&await frame.evaluate(()=>!!(window.Y&&Y.EntryMng&&Y.EntryMng.getCurrentTrack&&Y.EntryMng.getCurrentTrack())).catch(()=>false))break}
+            const out={query,tracks:[]};if(!frame)out.error='no frame';else{out.total=await frame.evaluate(()=>Y.EntryMng.getTotal());let prev=-1;for(let n=0;n<10;n++){const state=await frame.evaluate(()=>({index:Y.EntryMng.getCurrentInd(),loaded:Y.EntryMng.totalLoaded(),track:Y.EntryMng.getCurrentTrack()}));if(state.index===prev){await sleep(300);n--;continue}prev=state.index;const meta=await oembed(state.track.vid);out.tracks.push({...state,oembed:meta});if(((meta.title||'')+' '+(meta.author_name||'')).toLowerCase().includes('clinton')){out.match=out.tracks.at(-1);break}await frame.evaluate(()=>Y.EntryMng.next());const until=Date.now()+5000;while(Date.now()<until){await sleep(150);if(await frame.evaluate(()=>Y.EntryMng.getCurrentInd())!==prev)break}}}
+            fs.mkdirSync('audit',{recursive:true});fs.writeFileSync('audit/entry-manager-clinton.json',JSON.stringify(out,null,2));await browser.close();server.close();
+          });
+          NODE
+      - name: Commit result and remove workflow
+        run: |
+          rm .github/workflows/one-shot-entry-manager-clinton.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record EntryMng Clinton validation"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows

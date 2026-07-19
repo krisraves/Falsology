@@ -1,0 +1,725 @@
+{
+  "generatedAt": "2026-07-15T21:54:37.413Z",
+  "cases": [
+    {
+      "caseNumber": "L01",
+      "person": "Chris Watts",
+      "claim": "I have no inclination of where they're at right now.",
+      "currentVideoId": "3MuPWV5cTio",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L02",
+      "person": "Susan Smith",
+      "claim": "A man carjacked me and took my boys.",
+      "currentVideoId": "KPPUHvMyBUs",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "error",
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L03",
+      "person": "Diane Downs",
+      "claim": "A bushy-haired stranger shot my children.",
+      "currentVideoId": "Enghvd9o2As",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L04",
+      "person": "Jodi Arias",
+      "claim": "I wasn't there when Travis was killed.",
+      "currentVideoId": "ez-4b-yQGzg",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L05",
+      "person": "Casey Anthony",
+      "claim": "A nanny named Zenaida took Caylee.",
+      "currentVideoId": "ixzDBcMTnV8",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L06",
+      "person": "Ted Bundy",
+      "claim": "I am innocent.",
+      "currentVideoId": "SmiiY1rQDVk",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "L07",
+      "person": "John Wayne Gacy",
+      "claim": "I don't believe I killed anybody.",
+      "currentVideoId": "yQ4AT4q2DKs",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L08",
+      "person": "Stephen McDaniel",
+      "claim": "I don't know what happened to Lauren.",
+      "currentVideoId": "YzbIhWu0gpQ",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "error",
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L09",
+      "person": "Jennifer Pan",
+      "claim": "Intruders tied me up and attacked my parents.",
+      "currentVideoId": "amHb2UoVZ_g",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L10",
+      "person": "Sarah Boone",
+      "claim": "It was not intentional. We were playing hide-and-seek.",
+      "currentVideoId": "9dhV651zp1o",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L11",
+      "person": "Trevor Milton",
+      "claim": "The Nikola One is fully functioning.",
+      "currentVideoId": "DbXqiSYDhrA",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L12",
+      "person": "Bernie Madoff",
+      "claim": "In today's regulatory environment, it's virtually impossible to violate the rules undetected.",
+      "currentVideoId": "auTG_X2jG3E",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "L13",
+      "person": "Lance Armstrong",
+      "claim": "I have never doped.",
+      "currentVideoId": "25ja7IAxQjY",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L14",
+      "person": "Stephanie Lazarus",
+      "claim": "I barely knew Sherri Rasmussen.",
+      "currentVideoId": "lC3va1aob3g",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L15",
+      "person": "Pete Rose",
+      "claim": "I never bet on baseball.",
+      "currentVideoId": "h4fmEbgKeh0",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "L16",
+      "person": "Bill Clinton",
+      "claim": "I did not have sexual relations with that woman, Miss Lewinsky.",
+      "currentVideoId": "TM8EXwemnYA",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L17",
+      "person": "Kenneth Lay",
+      "claim": "The company is fundamentally strong.",
+      "currentVideoId": "S3EVIeZNHJU",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L18",
+      "person": "Richard Nixon",
+      "claim": "I am not a crook.",
+      "currentVideoId": "sh163n1lJ4M",
+      "candidates": [
+        {
+          "videoId": "JzNh_8WlbQw",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I am not a crook when he had directed Mr. Haldeman and Mr.",
+          "captionCurrentTime": -1,
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Why This Republican Governor is Running Against President Trump",
+            "author_name": "Yahoo",
+            "author_url": "https://www.youtube.com/@Yahoo",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/JzNh_8WlbQw/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/JzNh_8WlbQw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why This Republican Governor is Running Against President Trump\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 13,
+      "completed": false,
+      "rawEventTypes": [
+        "error",
+        "fetch",
+        "video",
+        "caption",
+        "ready"
+      ]
+    },
+    {
+      "caseNumber": "L19",
+      "person": "Chandler Halderson",
+      "claim": "My parents went to their cabin for the weekend.",
+      "currentVideoId": "MVVmLa1vKio",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L20",
+      "person": "Richard Heene",
+      "claim": "It was not a hoax.",
+      "currentVideoId": "_5AlMWoIRB4",
+      "candidates": [
+        {
+          "videoId": "kBHk32fKrZ0",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "and has not come forward to claim if it was a hoax or not.",
+          "captionCurrentTime": -1,
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Top 10 Mysterious Videos That Cant Be Explained",
+            "author_name": "Top 10 Archive",
+            "author_url": "https://www.youtube.com/@Top10Archive",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/kBHk32fKrZ0/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/kBHk32fKrZ0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Top 10 Mysterious Videos That Cant Be Explained\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 9,
+      "completed": false,
+      "rawEventTypes": [
+        "fetch",
+        "video",
+        "caption",
+        "ready"
+      ]
+    },
+    {
+      "caseNumber": "L21",
+      "person": "Hillary Clinton",
+      "claim": "We landed under sniper fire.",
+      "currentVideoId": "K0neF55UC-4",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "L22",
+      "person": "Sean Spicer",
+      "claim": "This was the largest audience ever to witness an inauguration, period.",
+      "currentVideoId": "X2VKQfX5tSE",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L23",
+      "person": "Tobacco executives",
+      "claim": "I believe nicotine is not addictive.",
+      "currentVideoId": "jOxVk_DhWes",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L24",
+      "person": "Alex Jones",
+      "claim": "Sandy Hook was fake, with actors.",
+      "currentVideoId": "EdwfKrdUW1s",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "L25",
+      "person": "Sherri Papini",
+      "claim": "Two women kidnapped and held me captive.",
+      "currentVideoId": "GjjkyscsZR8",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "T01",
+      "person": "Dennis Rader",
+      "claim": "I killed ten people.",
+      "currentVideoId": "_yrRC1j7qeo",
+      "candidates": [
+        {
+          "videoId": "IIiZbXZktYk",
+          "trackNumber": 1,
+          "startSeconds": null,
+          "caption": "I do not think that we should have killed ten thousand people.",
+          "captionCurrentTime": -1,
+          "iframeUrl": "",
+          "oembed": {
+            "status": 200,
+            "title": "Crash Course US History Outtakes #2",
+            "author_name": "CrashCourse",
+            "author_url": "https://www.youtube.com/@crashcourse",
+            "type": "video",
+            "height": 113,
+            "width": 200,
+            "version": "1.0",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_height": 360,
+            "thumbnail_width": 480,
+            "thumbnail_url": "https://i.ytimg.com/vi/IIiZbXZktYk/hqdefault.jpg",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/IIiZbXZktYk?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Crash Course US History Outtakes #2\"></iframe>"
+          }
+        }
+      ],
+      "errors": [],
+      "totalResult": 1,
+      "completed": true,
+      "rawEventTypes": [
+        "fetch",
+        "video",
+        "caption",
+        "ready"
+      ]
+    },
+    {
+      "caseNumber": "T02",
+      "person": "Jeffrey Dahmer",
+      "claim": "I killed seventeen people.",
+      "currentVideoId": "RUEnhXunarw",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": true,
+      "rawEventTypes": [
+        "error",
+        "fetch"
+      ]
+    },
+    {
+      "caseNumber": "T03",
+      "person": "Edmund Kemper",
+      "claim": "I killed my mother.",
+      "currentVideoId": "MKK3XDI7wTE",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "T04",
+      "person": "Aileen Wuornos",
+      "claim": "I killed seven men.",
+      "currentVideoId": "ToXjwzwaq3Y",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T05",
+      "person": "Russell Williams",
+      "claim": "I killed Jessica Lloyd.",
+      "currentVideoId": "hzh3adTWZOg",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "T06",
+      "person": "Chris Watts",
+      "claim": "I killed Shanann.",
+      "currentVideoId": "eWsXwpgCG8Q",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T07",
+      "person": "Jodi Arias",
+      "claim": "Yes, I killed Travis.",
+      "currentVideoId": "Qvde4s--GrM",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T08",
+      "person": "Alex Murdaugh",
+      "claim": "I lied about being at the kennels.",
+      "currentVideoId": "rEXrNoyv4Q8",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T09",
+      "person": "Richard Jewell",
+      "claim": "I did not plant the Olympic Park bomb.",
+      "currentVideoId": "DPMOiJIayPc",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T10",
+      "person": "Lindy Chamberlain",
+      "claim": "A dingo took my baby.",
+      "currentVideoId": "WRyeAkP17aM",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "T11",
+      "person": "Kirk Bloodsworth",
+      "claim": "DNA proved I did not commit the murder.",
+      "currentVideoId": "q47wkZXczwY",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T12",
+      "person": "Anthony Ray Hinton",
+      "claim": "I spent thirty years on death row for a crime I did not commit.",
+      "currentVideoId": "po2ui6EYW8Y",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T13",
+      "person": "Elizabeth Smart",
+      "claim": "I was held captive for nine months.",
+      "currentVideoId": "2w-ZdPkNvFY",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T14",
+      "person": "Jaycee Dugard",
+      "claim": "I was held captive for eighteen years.",
+      "currentVideoId": "yXRPgKLnWnU",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T15",
+      "person": "Mary Vincent",
+      "claim": "He cut off both my arms, and I survived.",
+      "currentVideoId": "W259o2tO2pc",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T16",
+      "person": "Aron Ralston",
+      "claim": "I cut off my own arm to survive.",
+      "currentVideoId": "idLfpNH5KTc",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "T17",
+      "person": "Harrison Okene",
+      "claim": "I survived nearly three days in an air pocket inside a sunken ship.",
+      "currentVideoId": "qevehxLe2s4",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "T18",
+      "person": "Ricky Megee",
+      "claim": "I survived 71 days alone in the Australian outback.",
+      "currentVideoId": "Ka0MVmd5Tes",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T19",
+      "person": "Robert Downey Jr.",
+      "claim": "My addiction led to prison.",
+      "currentVideoId": "mFol0tP0pGg",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T20",
+      "person": "Mike Tyson",
+      "claim": "I bit Evander Holyfield's ear.",
+      "currentVideoId": "qC4AG8x2768",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T21",
+      "person": "Michael Packard",
+      "claim": "A humpback whale had me inside its mouth and spit me back out.",
+      "currentVideoId": "K7iAlZzVenU",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T22",
+      "person": "Sammy Gravano",
+      "claim": "I was involved in nineteen murders.",
+      "currentVideoId": "diqdKgEzOkE",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T23",
+      "person": "Paul Templer",
+      "claim": "I was trapped inside a hippo's mouth and survived repeated attacks.",
+      "currentVideoId": "sjVgpvlzrXM",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    },
+    {
+      "caseNumber": "T24",
+      "person": "Michael Morton",
+      "claim": "I spent nearly 25 years in prison for my wife's murder, but DNA proved I was innocent.",
+      "currentVideoId": "kv3j7yd7kTk",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": []
+    },
+    {
+      "caseNumber": "T25",
+      "person": "Lance Armstrong",
+      "claim": "I used banned substances during my Tour victories.",
+      "currentVideoId": "FRXzbNReCR0",
+      "candidates": [],
+      "errors": [],
+      "totalResult": 0,
+      "completed": false,
+      "rawEventTypes": [
+        "error"
+      ]
+    }
+  ]
+}

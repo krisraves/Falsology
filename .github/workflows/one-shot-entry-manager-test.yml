@@ -1,0 +1,65 @@
+name: One-shot EntryMng scan test
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-shot-entry-manager-test.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: exact-statement-windows
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Traverse indexed results
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');const fs=require('fs');const http=require('http');const https=require('https');
+          const tests=[{person:'Chris Watts',query:'no inclination'},{person:'Ted Bundy',query:'I am innocent.'}];const port=8770,origin=`http://127.0.0.1:${port}`;const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+          const server=http.createServer((q,r)=>{r.writeHead(200,{'Content-Type':'text/html','Referrer-Policy':'strict-origin-when-cross-origin'});r.end('<html><body><div id="widget"></div></body></html>')});
+          function oembed(videoId){return new Promise(resolve=>{https.get(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent('https://www.youtube.com/watch?v='+videoId)}`,{headers:{'User-Agent':'Mozilla/5.0'}},r=>{let b='';r.on('data',d=>b+=d);r.on('end',()=>{try{resolve({status:r.statusCode,...JSON.parse(b)})}catch{resolve({status:r.statusCode,error:b.slice(0,500)})}})}).on('error',e=>resolve({error:String(e)}))})}
+          server.listen(port,'127.0.0.1',async()=>{
+            const browser=await chromium.launch({headless:true,args:['--disable-blink-features=AutomationControlled','--disable-dev-shm-usage','--no-sandbox','--autoplay-policy=no-user-gesture-required','--enable-unsafe-swiftshader']});const context=await browser.newContext({locale:'en-US',viewport:{width:1200,height:850},userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140.0.0.0 Safari/537.36'});const out=[];
+            for(const test of tests){
+              const page=await context.newPage();await page.goto(origin);await page.evaluate(query=>{window.onYouglishAPIReady=()=>{window.__widget=new window.YG.Widget('widget',{width:900,components:8|64|8192,autoStart:0,events:{onFetchDone:e=>window.__fetch=e,onError:e=>window.__error=e}});window.__widget.fetch(query,'english')};const s=document.createElement('script');s.src='https://youglish.com/public/emb/widget.js';document.head.appendChild(s)},test.query);
+              let frame=null;for(let i=0;i<80;i++){await sleep(250);frame=page.frames().find(f=>/youglish\.com\/pronounce/.test(f.url()));if(frame){const ready=await frame.evaluate(()=>!!(window.Y&&Y.EntryMng&&Y.EntryMng.getCurrentTrack&&Y.EntryMng.getCurrentTrack())).catch(()=>false);if(ready)break}}
+              const row={...test,tracks:[],errors:[]};if(!frame){row.errors.push('no YouGlish frame');out.push(row);await page.close();continue}
+              const total=await frame.evaluate(()=>Y.EntryMng.getTotal()).catch(()=>0);row.total=total;
+              let previous=-2;
+              for(let i=0;i<Math.min(Number(total)||0,120);i++){
+                const state=await frame.evaluate(()=>({index:Y.EntryMng.getCurrentInd(),loaded:Y.EntryMng.totalLoaded(),total:Y.EntryMng.getTotal(),track:Y.EntryMng.getCurrentTrack()})).catch(e=>({error:String(e)}));
+                if(state.error){row.errors.push(state.error);break}
+                if(state.index===previous){await sleep(250);continue}previous=state.index;
+                const track=JSON.parse(JSON.stringify(state.track||{}));if(!track.vid){row.errors.push('track without video');break}
+                const meta=await oembed(track.vid);const candidate={index:state.index,loaded:state.loaded,total:state.total,track,oembed:meta};row.tracks.push(candidate);
+                const hay=((meta.title||'')+' '+(meta.author_name||'')).toLowerCase(),last=test.person.split(' ').pop().toLowerCase();if(hay.includes(last)){row.match=candidate;break}
+                await frame.evaluate(()=>Y.EntryMng.next()).catch(e=>row.errors.push(String(e))
+                const deadline=Date.now()+5000;while(Date.now()<deadline){await sleep(150);const idx=await frame.evaluate(()=>Y.EntryMng.getCurrentInd()).catch(()=>previous);if(idx!==previous)break}
+              }
+              out.push(row);console.log(test.person,'total',row.total,'scanned',row.tracks.length,'match',row.match?.track?.vid);await page.close();
+            }
+            await context.close();await browser.close();server.close();fs.mkdirSync('audit',{recursive:true});fs.writeFileSync('audit/entry-manager-scan-test.json',JSON.stringify(out,null,2));
+          });
+          NODE
+      - name: Commit result and remove workflow
+        run: |
+          rm .github/workflows/one-shot-entry-manager-test.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record EntryMng result traversal test"
+          git pull --rebase origin exact-statement-windows
+          git push origin exact-statement-windows

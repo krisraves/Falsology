@@ -1,0 +1,58 @@
+{
+  "WEB": {
+    "playability": "LOGIN_REQUIRED",
+    "reason": "Sign in to confirm you’re not a bot",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  },
+  "WEB_EMBEDDED_PLAYER": {
+    "playability": "ERROR",
+    "reason": "This video is unavailable",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  },
+  "ANDROID": {
+    "playability": "LOGIN_REQUIRED",
+    "reason": "Sign in to confirm you’re not a bot",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  },
+  "ANDROID_VR": {
+    "playability": "LOGIN_REQUIRED",
+    "reason": "Sign in to confirm you’re not a bot",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  },
+  "TVHTML5": {
+    "playability": "LOGIN_REQUIRED",
+    "reason": "Sign in to confirm you’re not a bot",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  },
+  "TVHTML5_SIMPLY_EMBEDDED_PLAYER": {
+    "playability": "ERROR",
+    "reason": "YouTube is no longer supported in this application or device.",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  },
+  "IOS": {
+    "playability": "LOGIN_REQUIRED",
+    "reason": "Sign in to confirm you’re not a bot",
+    "captionCount": 0,
+    "captions": [],
+    "streamingData": false,
+    "videoDetails": false
+  }
+}
