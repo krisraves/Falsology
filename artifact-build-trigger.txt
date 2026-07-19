@@ -1,1 +1,1 @@
-Run the observable restored-candidate content artifact build.
+Run the faster observable build with named truth and lie seeds.
