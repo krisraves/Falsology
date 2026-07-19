@@ -1,1 +1,1 @@
-Run deck build validation after workflow cleanup.
+Run deck build validation with corrected public embed checks.
