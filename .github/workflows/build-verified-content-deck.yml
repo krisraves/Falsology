@@ -60,7 +60,7 @@ jobs:
             method_version=0
           fi
 
-          if [ "$status" = "complete" ] && [ "$method_version" = "5" ] && python - <<'PY'
+          if [ "$status" = "complete" ] && [ "$method_version" = "6" ] && python - <<'PY'
           import json
           from pathlib import Path
           values = json.loads(Path("data/generated-cases.json").read_text())
@@ -69,11 +69,11 @@ jobs:
           then
             echo "Existing complete 108-case generated deck found."
             code=0
-          elif [ "$status" = "incomplete" ] && [ "$method_version" = "5" ]; then
-            echo "Existing method-v5 incomplete report found; preserving it for inspection."
+          elif [ "$status" = "incomplete" ] && [ "$method_version" = "6" ]; then
+            echo "Existing method-v6 incomplete report found; preserving it for inspection."
             code=2
           else
-            python scripts/run-content-builder-v5.py
+            python scripts/run-content-builder-v6.py
             code=$?
           fi
           set -e
