@@ -1,0 +1,45 @@
+name: Apply five-second clip windows
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-validate:
+    if: github.head_ref == 'agent/120-case-decks'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/120-case-decks
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Apply shorter clips
+        run: node scripts/apply-five-second-clips.mjs
+      - name: Validate application
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+      - name: Save migrated clip data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/exact-statement-overrides.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Shorten statement clips to five-second context"
+            git push origin agent/120-case-decks
+          fi
