@@ -1,0 +1,723 @@
+{
+  "summary": {
+    "recovered": 0,
+    "unresolved": 38,
+    "byDifficulty": {
+      "easy": {
+        "recovered": 0,
+        "unresolved": 12
+      },
+      "medium": {
+        "recovered": 0,
+        "unresolved": 12
+      },
+      "hard": {
+        "recovered": 0,
+        "unresolved": 14
+      }
+    }
+  },
+  "results": [
+    {
+      "caseNumber": "L02",
+      "status": "unresolved",
+      "person": "Chris Watts",
+      "claim": "I have no idea, like, where they went.",
+      "verdict": "lie",
+      "difficulty": "medium",
+      "attempts": [
+        {
+          "videoId": "mOngrb2tkTs",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "q3QOib14NWo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "8X8Lm--bDi4",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "44yVQ4s9X4Q",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "WFq8KfA9MlQ",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "COHty3iEFqM",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZHPqSp_oc5U",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "nb--N4mDs3w",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "SawldEnQ74M",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "uUgGNmJFjTE",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L03",
+      "status": "unresolved",
+      "person": "Diane Downs",
+      "claim": "If I had shot my own children, would I not have done a good job of it?",
+      "verdict": "lie",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L04",
+      "status": "unresolved",
+      "person": "Stephen McDaniel",
+      "claim": "We just don't know where she is.",
+      "verdict": "lie",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L06",
+      "status": "unresolved",
+      "person": "Pete Rose",
+      "claim": "I'm not going to admit something didn't happen.",
+      "verdict": "lie",
+      "difficulty": "easy",
+      "attempts": [
+        {
+          "videoId": "dsSV3wVN_yE",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L08",
+      "status": "unresolved",
+      "person": "Richard Nixon",
+      "claim": "I have never obstructed justice.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "T4KqJeXCbvc",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "MX_HYL6-0Co",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZdIClFUX-Bo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "vzzUYaf1vNY",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L10",
+      "status": "unresolved",
+      "person": "Hillary Clinton",
+      "claim": "We just ran with our heads down to get into the vehicles.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "CWS21zYx6J8",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "2faZWUy-mPM",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "b-dwobZGirc",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "nhkr03vmpdo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "_tDWAYIXm1k",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "wumgEcIV5dY",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "GsxbCplcfHI",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "7GQGHBJjdrE",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L12",
+      "status": "unresolved",
+      "person": "Tobacco executive",
+      "claim": "I believe nicotine is not addictive.",
+      "verdict": "lie",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L14",
+      "status": "unresolved",
+      "person": "Alex Jones",
+      "claim": "A synthetic, completely fake.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "6WNuxGXw22w",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ebByb9JJgJg",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "O5D_ZJTj1M4",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "qPV8kJ6-Yd0",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L15",
+      "status": "unresolved",
+      "person": "Alex Jones",
+      "claim": "Completely fake with actors.",
+      "verdict": "lie",
+      "difficulty": "medium",
+      "attempts": [
+        {
+          "videoId": "6NdUiTOnNrY",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "t-v1UXFMzl0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "K-um5_dSQkk",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "wuC2tdSPMVg",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "WyGq6cjcc3Q",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "qPV8kJ6-Yd0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "8V9oN6M3wKI",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "FuqjmP959vo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ebByb9JJgJg",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "bs7vp1dJyc0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "TpWHzeO-THs",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L16",
+      "status": "unresolved",
+      "person": "Bernie Madoff",
+      "claim": "It's impossible for a violation to go undetected.",
+      "verdict": "lie",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L17",
+      "status": "unresolved",
+      "person": "Chris Watts",
+      "claim": "I have no inclination to where they're at right now.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "ugoYkx04E2Q",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "NB8nVk-5eh8",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "mOngrb2tkTs",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "9YejMvri8cI",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "MlQsm_HCuKc",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L18",
+      "status": "unresolved",
+      "person": "Diane Downs",
+      "claim": "If I had shot my own children, would I not have done a good job of it?",
+      "verdict": "lie",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L19",
+      "status": "unresolved",
+      "person": "Stephen McDaniel",
+      "claim": "We just don't know where she is.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L20",
+      "status": "unresolved",
+      "person": "Lance Armstrong",
+      "claim": "I have never doped.",
+      "verdict": "lie",
+      "difficulty": "medium",
+      "attempts": [
+        {
+          "videoId": "ZxkULBtpF3s",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "0sR8Qrj12gE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "d5bKs2GaOQE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "4RBjrLGdw7c",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "p8AH-nZxg4k",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "R9S6noxMOSM",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "4C6mFYEZdx0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "nXldHlTvSNI",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "NKHObeqDFP4",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "4e70bFtN0Gc",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "8fhYyL0dCus",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L21",
+      "status": "unresolved",
+      "person": "Richard Nixon",
+      "claim": "I'm not a crook.",
+      "verdict": "lie",
+      "difficulty": "easy",
+      "attempts": [
+        {
+          "videoId": "XjQN3SfLnSI",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "sXfiOyO4N4I",
+          "reason": "not public or embeddable"
+        },
+        {
+          "videoId": "DGeAlAIjvLY",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "Ak_2_gQUZ5s",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "Z3v7jCKttyU",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "mL0j_CN7dpw",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "fBJZQSMsunQ",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "vzzUYaf1vNY",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L22",
+      "status": "unresolved",
+      "person": "Hillary Clinton",
+      "claim": "I remember landing under sniper fire.",
+      "verdict": "lie",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L23",
+      "status": "unresolved",
+      "person": "Sean Spicer",
+      "claim": "This was the largest audience to ever witness an inauguration, period.",
+      "verdict": "lie",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "L24",
+      "status": "unresolved",
+      "person": "Tobacco executive",
+      "claim": "I believe nicotine is not addictive.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "e_ZDQKq2F08",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "A6B1q22R438",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "NC4f_yfuR34",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "QCZLkHf3ca0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "Kr6lrJoamhw",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "0BA1K-jMaBE",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "L25",
+      "status": "unresolved",
+      "person": "Alex Jones",
+      "claim": "Sandy Hook is a synthetic.",
+      "verdict": "lie",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "K-um5_dSQkk",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "wuC2tdSPMVg",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "G7LZFoO6fZQ",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "WyGq6cjcc3Q",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "6WNuxGXw22w",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "KwPSKg-v3Wo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "l43T-xdfs6Y",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "T02",
+      "status": "unresolved",
+      "person": "Aron Ralston",
+      "claim": "I couldn't figure out how to do it.",
+      "verdict": "truth",
+      "difficulty": "easy",
+      "attempts": [
+        {
+          "videoId": "B2XLoQ1xYB0",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "T03",
+      "status": "unresolved",
+      "person": "Aron Ralston",
+      "claim": "I was pretty sure that I was going to die.",
+      "verdict": "truth",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T04",
+      "status": "unresolved",
+      "person": "Aron Ralston",
+      "claim": "I could break the bones of my arm.",
+      "verdict": "truth",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T05",
+      "status": "unresolved",
+      "person": "Aron Ralston",
+      "claim": "I didn't have to cut through them with a knife.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": [
+        {
+          "videoId": "B2XLoQ1xYB0",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "T07",
+      "status": "unresolved",
+      "person": "Anthony Ray Hinton",
+      "claim": "This is the case to start showing.",
+      "verdict": "truth",
+      "difficulty": "easy",
+      "attempts": [
+        {
+          "videoId": "HbMjJX_az3I",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "lWafl_2gIKE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZfnTdQ28Hbo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "N6JEED6eF_c",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "PHlmpU8bAAo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "MQNPASeSz3Q",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "nZPujz5sXFY",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "lOJCDB3n0h8",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "T08",
+      "status": "unresolved",
+      "person": "Anthony Ray Hinton",
+      "claim": "I shouldn't have sat on death row thirty years.",
+      "verdict": "truth",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T09",
+      "status": "unresolved",
+      "person": "Anthony Ray Hinton",
+      "claim": "All they had to do was test the gun.",
+      "verdict": "truth",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T10",
+      "status": "unresolved",
+      "person": "Richard Jewell",
+      "claim": "I did not set out to be a hero. I set out that night simply to do my job.",
+      "verdict": "truth",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T12",
+      "status": "unresolved",
+      "person": "Richard Jewell",
+      "claim": "I set out that night simply to do my job.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T13",
+      "status": "unresolved",
+      "person": "Richard Jewell",
+      "claim": "I set out that night simply to do my job and to do it right.",
+      "verdict": "truth",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T14",
+      "status": "unresolved",
+      "person": "Richard Jewell",
+      "claim": "I was then and remain now an individual committed to the principles of law enforcement.",
+      "verdict": "truth",
+      "difficulty": "medium",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T15",
+      "status": "unresolved",
+      "person": "Harrison Okene",
+      "claim": "The only thing I could put my hope and trust in is God.",
+      "verdict": "truth",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T16",
+      "status": "unresolved",
+      "person": "Harrison Okene",
+      "claim": "I don't know. It's up to three days.",
+      "verdict": "truth",
+      "difficulty": "easy",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T18",
+      "status": "unresolved",
+      "person": "Harrison Okene",
+      "claim": "I kept on praying, praying, praying.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T19",
+      "status": "unresolved",
+      "person": "Harrison Okene",
+      "claim": "I kept calm, and I was bold because I was not afraid anymore.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T21",
+      "status": "unresolved",
+      "person": "Michael Packard",
+      "claim": "I was in his mouth.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T22",
+      "status": "unresolved",
+      "person": "Michael Packard",
+      "claim": "Let's get that straight.",
+      "verdict": "truth",
+      "difficulty": "medium",
+      "attempts": [
+        {
+          "videoId": "lC5lsemxaJo",
+          "reason": "no timed transcript"
+        }
+      ]
+    },
+    {
+      "caseNumber": "T23",
+      "status": "unresolved",
+      "person": "Ricky Megee",
+      "claim": "I was very lucky.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": []
+    },
+    {
+      "caseNumber": "T24",
+      "status": "unresolved",
+      "person": "Ricky Megee",
+      "claim": "I was very lucky.",
+      "verdict": "truth",
+      "difficulty": "hard",
+      "attempts": []
+    }
+  ]
+}
