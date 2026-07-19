@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the content builder with reliable embed and timed-caption providers."""
+"""Run the content builder with confirmed embed and timed-caption providers."""
 
 from __future__ import annotations
 
@@ -21,17 +21,16 @@ spec.loader.exec_module(module)
 
 
 def youtube_public_metadata(video_id: str) -> dict[str, Any] | None:
-    """Confirm a public YouTube watch page without scanning generic UI strings."""
     oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
     try:
-        response = requests.get(oembed_url, headers=module.HEADERS, timeout=module.HTTP_TIMEOUT)
+        response = requests.get(oembed_url, headers=module.HEADERS, timeout=20)
         if response.status_code != 200:
             return None
         data = response.json()
         embed_response = requests.get(
             f"https://www.youtube.com/embed/{video_id}?hl=en",
             headers=module.HEADERS,
-            timeout=module.HTTP_TIMEOUT,
+            timeout=20,
         )
         if embed_response.status_code >= 400:
             return None
@@ -90,54 +89,81 @@ def parse_segments(payload: Any) -> list[dict[str, Any]]:
 
 def provider_transcript(video_id: str) -> list[dict[str, Any]]:
     video_url = f"https://www.youtube.com/watch?v={video_id}"
-    endpoint = module.TRANSCRIPT_ENDPOINT
-    attempts = [
-        ("post-json-url", lambda: requests.post(endpoint, json={"url": video_url}, headers=module.HEADERS, timeout=55)),
-        ("post-json-video", lambda: requests.post(endpoint, json={"video_url": video_url}, headers=module.HEADERS, timeout=55)),
-        ("post-form-url", lambda: requests.post(endpoint, data={"url": video_url}, headers=module.HEADERS, timeout=55)),
-        ("get-url", lambda: requests.get(endpoint, params={"url": video_url}, headers=module.HEADERS, timeout=55)),
-        ("get-video-id", lambda: requests.get(endpoint, params={"video_id": video_id}, headers=module.HEADERS, timeout=55)),
-    ]
-    for _, request in attempts:
-        try:
-            response = request()
-            if response.status_code != 200:
-                continue
+    try:
+        response = requests.post(
+            module.TRANSCRIPT_ENDPOINT,
+            json={"url": video_url},
+            headers=module.HEADERS,
+            timeout=30,
+        )
+        if response.status_code == 200:
             segments = parse_segments(response.json())
             if segments:
                 return segments
-        except Exception:
-            continue
+    except Exception:
+        pass
 
-    # Independent fallback for YouTube's public caption tracks.
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
 
-        try:
-            fetched = YouTubeTranscriptApi().fetch(video_id, languages=["en"])
-            raw_values = fetched.to_raw_data() if hasattr(fetched, "to_raw_data") else list(fetched)
-        except Exception:
-            raw_values = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
-        segments = parse_segments(raw_values)
-        if segments:
-            return segments
+        fetched = YouTubeTranscriptApi().fetch(video_id, languages=["en"])
+        raw_values = fetched.to_raw_data() if hasattr(fetched, "to_raw_data") else list(fetched)
+        return parse_segments(raw_values)
     except Exception:
-        pass
-    return []
+        return []
+
+
+def efficient_process_seed(seed: dict[str, Any]) -> dict[str, Any]:
+    attempts: list[dict[str, Any]] = []
+    accepted: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    rejection_counts: dict[str, int] = {
+        "duplicateSearchResult": 0,
+        "failedVerification": 0,
+    }
+    for query in list(seed.get("searchQueries") or [])[:2]:
+        search_results = module.youtube_search(str(query))
+        attempts.append({"query": query, "resultCount": len(search_results)})
+        for candidate in search_results[:8]:
+            video_id = candidate["videoId"]
+            if video_id in seen_ids:
+                rejection_counts["duplicateSearchResult"] += 1
+                continue
+            seen_ids.add(video_id)
+            evaluated = module.evaluate_video(seed, candidate)
+            if evaluated:
+                accepted.append(evaluated)
+                accepted.sort(key=lambda item: item["confidence"], reverse=True)
+                accepted = accepted[:2]
+                if len(accepted) >= 2:
+                    break
+            else:
+                rejection_counts["failedVerification"] += 1
+        if accepted:
+            break
+    return {
+        "seed": seed,
+        "attempts": attempts,
+        "candidates": accepted,
+        "rejectionCounts": rejection_counts,
+    }
 
 
 module.youtube_public_metadata = youtube_public_metadata
 module.timed_transcript = provider_transcript
+module.process_seed = efficient_process_seed
+module.SEARCH_WORKERS = 8
 exit_code = module.main()
 
 if module.REPORT_PATH.exists():
     report = json.loads(module.REPORT_PATH.read_text(encoding="utf-8"))
-    report["methodVersion"] = 3
+    report["methodVersion"] = 4
     report["embedCheck"] = "YouTube oEmbed plus reachable embed endpoint"
     report["transcriptProviders"] = [
-        "YouTube2Text URL-based POST and GET variants",
+        "Confirmed YouTube2Text POST {url} timed segments",
         "youtube-transcript-api timed caption fallback",
     ]
+    report["candidateEvaluationLimit"] = "Eight search results per query; stop after two verified options"
     module.REPORT_PATH.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 raise SystemExit(exit_code)
