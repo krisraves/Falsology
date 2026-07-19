@@ -1,1 +1,1 @@
-Run the restored-candidate and archive-recovery content build.
+Run the restored-candidate build with expanded named truth seeds and corrected archive recovery.
