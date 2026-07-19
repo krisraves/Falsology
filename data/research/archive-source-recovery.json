@@ -7,13 +7,13 @@
         "recovered": 0,
         "unresolved": 12
       },
-      "medium": {
-        "recovered": 0,
-        "unresolved": 12
-      },
       "hard": {
         "recovered": 0,
         "unresolved": 14
+      },
+      "medium": {
+        "recovered": 0,
+        "unresolved": 12
       }
     }
   },
@@ -35,10 +35,6 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "8X8Lm--bDi4",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "44yVQ4s9X4Q",
           "reason": "no timed transcript"
         },
@@ -51,7 +47,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "ZHPqSp_oc5U",
+          "videoId": "8X8Lm--bDi4",
           "reason": "no timed transcript"
         },
         {
@@ -63,7 +59,15 @@
           "reason": "no timed transcript"
         },
         {
+          "videoId": "ZHPqSp_oc5U",
+          "reason": "no timed transcript"
+        },
+        {
           "videoId": "uUgGNmJFjTE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "iug-f8VXrGs",
           "reason": "no timed transcript"
         }
       ]
@@ -151,11 +155,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "_tDWAYIXm1k",
+          "videoId": "wumgEcIV5dY",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "wumgEcIV5dY",
+          "videoId": "_tDWAYIXm1k",
           "reason": "no timed transcript"
         },
         {
@@ -164,6 +168,10 @@
         },
         {
           "videoId": "7GQGHBJjdrE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZeKn46fMrc8",
           "reason": "no timed transcript"
         }
       ]
@@ -175,7 +183,36 @@
       "claim": "I believe nicotine is not addictive.",
       "verdict": "lie",
       "difficulty": "medium",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "e_ZDQKq2F08",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "A6B1q22R438",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "NC4f_yfuR34",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "QCZLkHf3ca0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "Kr6lrJoamhw",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "0BA1K-jMaBE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "OtXcthvgZdY",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "L14",
@@ -184,24 +221,7 @@
       "claim": "A synthetic, completely fake.",
       "verdict": "lie",
       "difficulty": "hard",
-      "attempts": [
-        {
-          "videoId": "6WNuxGXw22w",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "ebByb9JJgJg",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "O5D_ZJTj1M4",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "qPV8kJ6-Yd0",
-          "reason": "no timed transcript"
-        }
-      ]
+      "attempts": []
     },
     {
       "caseNumber": "L15",
@@ -335,10 +355,6 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "4RBjrLGdw7c",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "p8AH-nZxg4k",
           "reason": "no timed transcript"
         },
@@ -347,11 +363,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "4C6mFYEZdx0",
+          "videoId": "4RBjrLGdw7c",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "nXldHlTvSNI",
+          "videoId": "4C6mFYEZdx0",
           "reason": "no timed transcript"
         },
         {
@@ -363,7 +379,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "8fhYyL0dCus",
+          "videoId": "XqxS4E89zrc",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "YB8AeerNGSo",
           "reason": "no timed transcript"
         }
       ]
@@ -389,6 +409,10 @@
           "reason": "no timed transcript"
         },
         {
+          "videoId": "mL0j_CN7dpw",
+          "reason": "no timed transcript"
+        },
+        {
           "videoId": "Ak_2_gQUZ5s",
           "reason": "no timed transcript"
         },
@@ -397,15 +421,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "mL0j_CN7dpw",
+          "videoId": "vzzUYaf1vNY",
           "reason": "no timed transcript"
         },
         {
           "videoId": "fBJZQSMsunQ",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "vzzUYaf1vNY",
           "reason": "no timed transcript"
         }
       ]
@@ -479,11 +499,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "G7LZFoO6fZQ",
+          "videoId": "WyGq6cjcc3Q",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "WyGq6cjcc3Q",
+          "videoId": "G7LZFoO6fZQ",
           "reason": "no timed transcript"
         },
         {
@@ -521,7 +541,16 @@
       "claim": "I was pretty sure that I was going to die.",
       "verdict": "truth",
       "difficulty": "easy",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "B2XLoQ1xYB0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "1rnTymWI_BU",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "T04",
@@ -563,15 +592,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "ZfnTdQ28Hbo",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "N6JEED6eF_c",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "PHlmpU8bAAo",
           "reason": "no timed transcript"
         },
         {
@@ -579,11 +600,19 @@
           "reason": "no timed transcript"
         },
         {
+          "videoId": "ZfnTdQ28Hbo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "PHlmpU8bAAo",
+          "reason": "no timed transcript"
+        },
+        {
           "videoId": "nZPujz5sXFY",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "lOJCDB3n0h8",
+          "videoId": "O-RxzSQWR3E",
           "reason": "no timed transcript"
         }
       ]
@@ -595,7 +624,12 @@
       "claim": "I shouldn't have sat on death row thirty years.",
       "verdict": "truth",
       "difficulty": "medium",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "iCaSkURTBSI",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "T09",
