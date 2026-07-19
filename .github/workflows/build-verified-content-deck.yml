@@ -37,7 +37,7 @@ jobs:
           cache: npm
 
       - name: Install sourcing tools
-        run: python -m pip install --upgrade yt-dlp requests
+        run: python -m pip install --upgrade yt-dlp requests youtube-transcript-api
 
       - name: Build exact-statement cases
         id: content
@@ -60,7 +60,7 @@ jobs:
             method_version=0
           fi
 
-          if [ "$status" = "complete" ] && [ "$method_version" = "2" ] && python - <<'PY'
+          if [ "$status" = "complete" ] && [ "$method_version" = "3" ] && python - <<'PY'
           import json
           from pathlib import Path
           values = json.loads(Path("data/generated-cases.json").read_text())
@@ -69,8 +69,8 @@ jobs:
           then
             echo "Existing complete 108-case generated deck found."
             code=0
-          elif [ "$status" = "incomplete" ] && [ "$method_version" = "2" ]; then
-            echo "Existing method-v2 incomplete report found; preserving it for inspection."
+          elif [ "$status" = "incomplete" ] && [ "$method_version" = "3" ]; then
+            echo "Existing method-v3 incomplete report found; preserving it for inspection."
             code=2
           else
             python scripts/run-content-builder-v2.py
