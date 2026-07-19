@@ -1,1 +1,1 @@
-Run deck build validation with corrected public embed checks.
+Run deck build validation with URL-based POST transcripts and timed-caption fallback.
