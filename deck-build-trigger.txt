@@ -1,1 +1,1 @@
-Run deck build validation with URL-based POST transcripts and timed-caption fallback.
+Run the definitive content build with the confirmed URL-based timed transcript provider.
