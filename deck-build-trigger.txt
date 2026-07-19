@@ -1,1 +1,1 @@
-Run deck build validation.
+Run deck build validation after workflow cleanup.
