@@ -1,1 +1,0 @@
-verify all 300 candidates with public YouTube endpoints
