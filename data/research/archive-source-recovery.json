@@ -7,13 +7,13 @@
         "recovered": 0,
         "unresolved": 12
       },
-      "medium": {
-        "recovered": 0,
-        "unresolved": 12
-      },
       "hard": {
         "recovered": 0,
         "unresolved": 14
+      },
+      "medium": {
+        "recovered": 0,
+        "unresolved": 12
       }
     }
   },
@@ -35,7 +35,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "44yVQ4s9X4Q",
+          "videoId": "COHty3iEFqM",
           "reason": "no timed transcript"
         },
         {
@@ -43,27 +43,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "COHty3iEFqM",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "8X8Lm--bDi4",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "SawldEnQ74M",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "uUgGNmJFjTE",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "XMQOp665ylU",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "JyOnyPpIriQ",
+          "videoId": "44yVQ4s9X4Q",
           "reason": "no timed transcript"
         },
         {
@@ -71,7 +55,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "iug-f8VXrGs",
+          "videoId": "nb--N4mDs3w",
           "reason": "no timed transcript"
         }
       ]
@@ -83,7 +67,16 @@
       "claim": "If I had shot my own children, would I not have done a good job of it?",
       "verdict": "lie",
       "difficulty": "easy",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "iGtBrysNYEA",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "YxxH6xm_ZVg",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "L04",
@@ -101,7 +94,12 @@
       "claim": "I'm not going to admit something didn't happen.",
       "verdict": "lie",
       "difficulty": "easy",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "dsSV3wVN_yE",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "L08",
@@ -112,15 +110,19 @@
       "difficulty": "hard",
       "attempts": [
         {
-          "videoId": "T4KqJeXCbvc",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "MX_HYL6-0Co",
           "reason": "no timed transcript"
         },
         {
+          "videoId": "T4KqJeXCbvc",
+          "reason": "no timed transcript"
+        },
+        {
           "videoId": "ZdIClFUX-Bo",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "GbDJ5AZ1SHk",
           "reason": "no timed transcript"
         },
         {
@@ -146,11 +148,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "nhkr03vmpdo",
+          "videoId": "b-dwobZGirc",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "b-dwobZGirc",
+          "videoId": "nhkr03vmpdo",
           "reason": "no timed transcript"
         },
         {
@@ -182,7 +184,32 @@
       "claim": "I believe nicotine is not addictive.",
       "verdict": "lie",
       "difficulty": "medium",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "e_ZDQKq2F08",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "A6B1q22R438",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "NC4f_yfuR34",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "QCZLkHf3ca0",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "Kr6lrJoamhw",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "0BA1K-jMaBE",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "L14",
@@ -227,11 +254,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "wuC2tdSPMVg",
+          "videoId": "K-um5_dSQkk",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "K-um5_dSQkk",
+          "videoId": "wuC2tdSPMVg",
           "reason": "no timed transcript"
         },
         {
@@ -239,11 +266,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "ebByb9JJgJg",
+          "videoId": "qPV8kJ6-Yd0",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "qPV8kJ6-Yd0",
+          "videoId": "8V9oN6M3wKI",
           "reason": "no timed transcript"
         },
         {
@@ -251,7 +278,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "TpWHzeO-THs",
+          "videoId": "ebByb9JJgJg",
           "reason": "no timed transcript"
         },
         {
@@ -259,11 +286,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "jmzGSZRlNJo",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "tDA5IVCLyQk",
+          "videoId": "TpWHzeO-THs",
           "reason": "no timed transcript"
         }
       ]
@@ -330,11 +353,11 @@
       "difficulty": "medium",
       "attempts": [
         {
-          "videoId": "ZxkULBtpF3s",
+          "videoId": "0sR8Qrj12gE",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "0sR8Qrj12gE",
+          "videoId": "ZxkULBtpF3s",
           "reason": "no timed transcript"
         },
         {
@@ -342,7 +365,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "R9S6noxMOSM",
+          "videoId": "4RBjrLGdw7c",
           "reason": "no timed transcript"
         },
         {
@@ -350,15 +373,11 @@
           "reason": "no timed transcript"
         },
         {
+          "videoId": "R9S6noxMOSM",
+          "reason": "no timed transcript"
+        },
+        {
           "videoId": "4C6mFYEZdx0",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "4RBjrLGdw7c",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "NKHObeqDFP4",
           "reason": "no timed transcript"
         },
         {
@@ -366,11 +385,15 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "YB8AeerNGSo",
+          "videoId": "nXldHlTvSNI",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "pxbbVpbYlMA",
+          "videoId": "XqxS4E89zrc",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "NKHObeqDFP4",
           "reason": "no timed transcript"
         }
       ]
@@ -392,10 +415,6 @@
           "reason": "not public or embeddable"
         },
         {
-          "videoId": "mL0j_CN7dpw",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "DGeAlAIjvLY",
           "reason": "no timed transcript"
         },
@@ -405,6 +424,10 @@
         },
         {
           "videoId": "Z3v7jCKttyU",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "mL0j_CN7dpw",
           "reason": "no timed transcript"
         },
         {
@@ -514,7 +537,12 @@
       "claim": "I couldn't figure out how to do it.",
       "verdict": "truth",
       "difficulty": "easy",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "B2XLoQ1xYB0",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "T03",
@@ -591,10 +619,6 @@
         },
         {
           "videoId": "nZPujz5sXFY",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "HxrFqssWPy4",
           "reason": "no timed transcript"
         },
         {
