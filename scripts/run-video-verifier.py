@@ -6,6 +6,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +17,7 @@ spec = importlib.util.spec_from_file_location("falsology_video_verifier", SCRIPT
 if spec is None or spec.loader is None:
     raise RuntimeError("Could not load candidate verifier")
 module = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = module
 spec.loader.exec_module(module)
 
 # Negation is materially important to truth/lie statements and must remain in
