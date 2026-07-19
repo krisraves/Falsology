@@ -12,6 +12,23 @@
   "candidates": {
     "easy": [
       {
+        "videoId": "K9Lq62vzGlM",
+        "title": "FULL VIDEO: Trump Deposition Revealed in E. Jean Carroll Violation Trial | Courtroom Evidence",
+        "channel": "WatchingTheWorld777",
+        "url": "https://www.youtube.com/watch?v=K9Lq62vzGlM",
+        "searchQuery": "Donald Trump deposition direct testimony",
+        "candidateScore": 12,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "CfM-7TERCMw",
         "title": "O. J.  SIMPSON | THE  LOST CONFESSION Fox Interview - Full Documentary 2018",
         "channel": "Advexon Science Network",
@@ -63,6 +80,23 @@
         ]
       },
       {
+        "videoId": "l6bQSNSiFRA",
+        "title": "Jodi Arias: Police Interview [PT 1] | Court TV Trial Archive",
+        "channel": "COURT TV",
+        "url": "https://www.youtube.com/watch?v=l6bQSNSiFRA",
+        "searchQuery": "Jodi Arias police interview full",
+        "candidateScore": 9,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "Eeswj9AjEKs",
         "title": "Michael Cohen's full testimony and hearing before Congress | USA TODAY",
         "channel": "USA TODAY",
@@ -101,24 +135,7 @@
         "title": "Lance Armstrong Oprah Interview: Doping Confession to Winfrey After Years of Denial",
         "channel": "ABC News",
         "url": "https://www.youtube.com/watch?v=ZxkULBtpF3s",
-        "searchQuery": "Lance Armstrong Oprah confession full",
-        "candidateScore": 6,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "Zq3iyTk0RmQ",
-        "title": "‘O.J. Simpson: The Lost Confession’ takes new look at infamous murder trial",
-        "channel": "Fox Business",
-        "url": "https://www.youtube.com/watch?v=Zq3iyTk0RmQ",
-        "searchQuery": "O J Simpson interview denial",
+        "searchQuery": "Lance Armstrong doping denial interview",
         "candidateScore": 6,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -221,40 +238,6 @@
         "channel": "𝐃𝐈𝐀𝐍𝐄 𝐃𝐎𝐖𝐍𝐒 𝐓𝐕",
         "url": "https://www.youtube.com/watch?v=gRf8uEm8Yeo",
         "searchQuery": "Diane Downs interview direct",
-        "candidateScore": 6,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "fsV1u25eXR4",
-        "title": "RAW VIDEO: Diane Downs testifies at parole hearing",
-        "channel": "KVAL",
-        "url": "https://www.youtube.com/watch?v=fsV1u25eXR4",
-        "searchQuery": "Susan Smith press conference raw",
-        "candidateScore": 6,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "XQQyc493x5A",
-        "title": "Diane Downs' Most Disturbing Interview │ Full 1984 Special with Anne Jaeger",
-        "channel": "𝐃𝐈𝐀𝐍𝐄 𝐃𝐎𝐖𝐍𝐒 𝐓𝐕",
-        "url": "https://www.youtube.com/watch?v=XQQyc493x5A",
-        "searchQuery": "Susan Smith press conference raw",
         "candidateScore": 6,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -437,27 +420,10 @@
         ]
       },
       {
-        "videoId": "rE4jN8FuILE",
-        "title": "John Dean (Part 2) Watergate Hearings Testimony",
+        "videoId": "-b9995Y3XC8",
+        "title": "John Dean (Part 5) Watergate Hearings Testimony",
         "channel": "Patrick O'Dare",
-        "url": "https://www.youtube.com/watch?v=rE4jN8FuILE",
-        "searchQuery": "Watergate John Dean testimony",
-        "candidateScore": 6,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "Yf5mxto8qws",
-        "title": "John Dean (Part 4) Watergate Hearings Testimony",
-        "channel": "Patrick O'Dare",
-        "url": "https://www.youtube.com/watch?v=Yf5mxto8qws",
+        "url": "https://www.youtube.com/watch?v=-b9995Y3XC8",
         "searchQuery": "Watergate John Dean testimony",
         "candidateScore": 6,
         "difficulty": "easy",
@@ -590,23 +556,6 @@
         ]
       },
       {
-        "videoId": "KU-SO72EEcs",
-        "title": "Julian Assange on RT ☬ Secret World of US Elections (Full Interview)",
-        "channel": "Truth Revelations",
-        "url": "https://www.youtube.com/watch?v=KU-SO72EEcs",
-        "searchQuery": "Julian Assange interview full",
-        "candidateScore": 6,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "dmnP2J94CB8",
         "title": "Julian Assange Full Interview w: Sean Hannity Fox News 1:3:17 720p",
         "channel": "mkultraviolent",
@@ -630,23 +579,6 @@
         "url": "https://www.youtube.com/watch?v=a7WVygYdZcw",
         "searchQuery": "Joseph McCarthy Army hearings direct",
         "candidateScore": 6,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "UZlR20QQtlM",
-        "title": "How Nixon's 'I'm not a crook' speech should have sounded",
-        "channel": "wildposes",
-        "url": "https://www.youtube.com/watch?v=UZlR20QQtlM",
-        "searchQuery": "Richard Nixon I am not a crook full speech",
-        "candidateScore": 3,
         "difficulty": "easy",
         "reviewStatus": "candidate",
         "directFootageLikely": true,
@@ -896,10 +828,10 @@
         ]
       },
       {
-        "videoId": "on1MDjhvOtY",
-        "title": "Baseball Players Face Congressional Steroid Hearing",
-        "channel": "electron media group, inc.",
-        "url": "https://www.youtube.com/watch?v=on1MDjhvOtY",
+        "videoId": "942HcHKbOno",
+        "title": "Mark McGwire Senate Testimony",
+        "channel": "Bert Decker",
+        "url": "https://www.youtube.com/watch?v=942HcHKbOno",
         "searchQuery": "Mark McGwire steroids testimony",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1066,23 +998,6 @@
         ]
       },
       {
-        "videoId": "NmXxck9IiFQ",
-        "title": "Jodi Arias - Police Phone Interviews June 10, 21 (vm) & 25, 2008",
-        "channel": "WSTigerBalm",
-        "url": "https://www.youtube.com/watch?v=NmXxck9IiFQ",
-        "searchQuery": "Jodi Arias police interview full",
-        "candidateScore": 3,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "ALvdk2ATBXk",
         "title": "Chris Watts Case - 1st Front Porch Interview - New",
         "channel": "Chris Watts Discovery",
@@ -1117,6 +1032,23 @@
         ]
       },
       {
+        "videoId": "iU5k_UJoWNA",
+        "title": "Chris Watts Case - 3rd Front Porch Interview - New",
+        "channel": "Chris Watts Discovery",
+        "url": "https://www.youtube.com/watch?v=iU5k_UJoWNA",
+        "searchQuery": "Chris Watts porch interview full",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "mOngrb2tkTs",
         "title": "High-quality Audio | Christopher Watts' Prison Interview",
         "channel": "UnJustified",
@@ -1134,11 +1066,11 @@
         ]
       },
       {
-        "videoId": "iU5k_UJoWNA",
-        "title": "Chris Watts Case - 3rd Front Porch Interview - New",
-        "channel": "Chris Watts Discovery",
-        "url": "https://www.youtube.com/watch?v=iU5k_UJoWNA",
-        "searchQuery": "Chris Watts porch interview full",
+        "videoId": "RSaZUkJlWfs",
+        "title": "Diane Downs charged with contempt of court  │  27 Nov 1983",
+        "channel": "𝐃𝐈𝐀𝐍𝐄 𝐃𝐎𝐖𝐍𝐒 𝐓𝐕",
+        "url": "https://www.youtube.com/watch?v=RSaZUkJlWfs",
+        "searchQuery": "Diane Downs interview direct",
         "candidateScore": 3,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -1168,10 +1100,10 @@
         ]
       },
       {
-        "videoId": "Ma0wDl10bT0",
-        "title": "The Killer That Wouldn't Crack: Police Interrogation of Stephen McDaniel",
-        "channel": "Law&Crime Investigates",
-        "url": "https://www.youtube.com/watch?v=Ma0wDl10bT0",
+        "videoId": "WiNMbCvc5Sk",
+        "title": "McDaniel's first media interview",
+        "channel": "The Telegraph",
+        "url": "https://www.youtube.com/watch?v=WiNMbCvc5Sk",
         "searchQuery": "Stephen McDaniel news interview raw",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1185,10 +1117,10 @@
         ]
       },
       {
-        "videoId": "WiNMbCvc5Sk",
-        "title": "McDaniel's first media interview",
-        "channel": "The Telegraph",
-        "url": "https://www.youtube.com/watch?v=WiNMbCvc5Sk",
+        "videoId": "Ma0wDl10bT0",
+        "title": "The Killer That Wouldn't Crack: Police Interrogation of Stephen McDaniel",
+        "channel": "Law&Crime Investigates",
+        "url": "https://www.youtube.com/watch?v=Ma0wDl10bT0",
         "searchQuery": "Stephen McDaniel news interview raw",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1236,6 +1168,23 @@
         ]
       },
       {
+        "videoId": "Th8-VkXSSJU",
+        "title": "💥PAROLE for Susan Smith? SHOCKING True Crime Confessions Revealed",
+        "channel": "The Behavior Panel",
+        "url": "https://www.youtube.com/watch?v=Th8-VkXSSJU",
+        "searchQuery": "Susan Smith press conference raw",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "vDiVqJI7Lio",
         "title": "Scott Peterson: First On-Camera Interview in 2 Decades",
         "channel": "COURT TV",
@@ -1253,10 +1202,27 @@
         ]
       },
       {
-        "videoId": "jKlqIh4STt8",
-        "title": "Michael Jackson - OPRAH WINFREY Interview (1993) 4K 50FPS UPSCALE",
-        "channel": "CINEKYD MEDIA ARCHIVE",
-        "url": "https://www.youtube.com/watch?v=jKlqIh4STt8",
+        "videoId": "jxFxObV4rPs",
+        "title": "Michael Jackson 2005 Trial, Day 2, Part 3 | Martin Bashir",
+        "channel": "MJ Trial",
+        "url": "https://www.youtube.com/watch?v=jxFxObV4rPs",
+        "searchQuery": "Michael Jackson Bashir interview direct",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "fTTl4Vaow5Y",
+        "title": "Michael Jackson Interview 1979 (HIGH QUALITY SNIPPETS)",
+        "channel": "ℓ. мoonwalĸer",
+        "url": "https://www.youtube.com/watch?v=fTTl4Vaow5Y",
         "searchQuery": "Michael Jackson Bashir interview direct",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1355,23 +1321,6 @@
         ]
       },
       {
-        "videoId": "0PsfdttNboQ",
-        "title": "R. Kelly Interview (Best Moments) 2019 *HILARIOUS* MUST WATCH*",
-        "channel": "InThaBassmintTV",
-        "url": "https://www.youtube.com/watch?v=0PsfdttNboQ",
-        "searchQuery": "R Kelly Gayle King interview full",
-        "candidateScore": 3,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "FA7ty2LQwc0",
         "title": "Tiger Woods' Press Conference Apology",
         "channel": "ABC News",
@@ -1457,10 +1406,10 @@
         ]
       },
       {
-        "videoId": "fc8CTnWNPG4",
-        "title": "Closing arguments in Trump-Carroll civil trial to begin",
-        "channel": "CBS News",
-        "url": "https://www.youtube.com/watch?v=fc8CTnWNPG4",
+        "videoId": "Rp9Gja2oZkM",
+        "title": "Trump's ULTRA Trump Deposition Highlights",
+        "channel": "Robert Gouveia Esq.",
+        "url": "https://www.youtube.com/watch?v=Rp9Gja2oZkM",
         "searchQuery": "Donald Trump deposition direct testimony",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1474,10 +1423,10 @@
         ]
       },
       {
-        "videoId": "hX9cUmM3raE",
-        "title": "Closing arguments begin in Donald Trump civil rape trial | Dan Abrams Live",
-        "channel": "NewsNation",
-        "url": "https://www.youtube.com/watch?v=hX9cUmM3raE",
+        "videoId": "6Z-wLgG4x_Q",
+        "title": "Trump takes stand. Hear why judge struck part of his testimony from the record",
+        "channel": "CNN",
+        "url": "https://www.youtube.com/watch?v=6Z-wLgG4x_Q",
         "searchQuery": "Donald Trump deposition direct testimony",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1508,11 +1457,11 @@
         ]
       },
       {
-        "videoId": "nALPoLOIwM8",
-        "title": "WATCH: Plagiarized speech that sank Biden's 1988 presidential campaign",
-        "channel": "Talking Talking",
-        "url": "https://www.youtube.com/watch?v=nALPoLOIwM8",
-        "searchQuery": "Joe Biden plagiarism speech archive",
+        "videoId": "4LD4Mj3wZoY",
+        "title": "HARDING STATEMENT",
+        "channel": "CNN",
+        "url": "https://www.youtube.com/watch?v=4LD4Mj3wZoY",
+        "searchQuery": "Tonya Harding interview direct",
         "candidateScore": 3,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -1529,23 +1478,6 @@
         "title": "Tonya Harding interview during Nancy Kerrigan controversy - Eye To Eye with Connie Chung 2/10/94",
         "channel": "Cleveland Live Music ",
         "url": "https://www.youtube.com/watch?v=Xl5j-agudkM",
-        "searchQuery": "Tonya Harding interview direct",
-        "candidateScore": 3,
-        "difficulty": "easy",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "3AABtDMdgiE",
-        "title": "Tonya Harding Interview on I, TONYA",
-        "channel": "Birth.Movies.Death.",
-        "url": "https://www.youtube.com/watch?v=3AABtDMdgiE",
         "searchQuery": "Tonya Harding interview direct",
         "candidateScore": 3,
         "difficulty": "easy",
@@ -1627,11 +1559,11 @@
         ]
       },
       {
-        "videoId": "EAZXRHxXEJE",
-        "title": "VW US CEO apologizes at congressional hearing",
-        "channel": "CGTN America",
-        "url": "https://www.youtube.com/watch?v=EAZXRHxXEJE",
-        "searchQuery": "Volkswagen emissions executive testimony",
+        "videoId": "2eNakZ00_38",
+        "title": "Milli Vanilli Grammy revoked (1990 press conference)",
+        "channel": "HLN",
+        "url": "https://www.youtube.com/watch?v=2eNakZ00_38",
+        "searchQuery": "Milli Vanilli interview lip sync confession",
         "candidateScore": 3,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -1644,11 +1576,11 @@
         ]
       },
       {
-        "videoId": "xJhkX74D10M",
-        "title": "Senator Elizabeth Warren questions Wells Fargo CEO John Stumpf at Banking Committee Hearing",
-        "channel": "Senator Elizabeth Warren",
-        "url": "https://www.youtube.com/watch?v=xJhkX74D10M",
-        "searchQuery": "Wells Fargo fake accounts testimony",
+        "videoId": "EAZXRHxXEJE",
+        "title": "VW US CEO apologizes at congressional hearing",
+        "channel": "CGTN America",
+        "url": "https://www.youtube.com/watch?v=EAZXRHxXEJE",
+        "searchQuery": "Volkswagen emissions executive testimony",
         "candidateScore": 3,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -1700,6 +1632,74 @@
         "channel": "Michael J. Wynne",
         "url": "https://www.youtube.com/watch?v=dv0iMvwjAYI",
         "searchQuery": "Jeffrey Skilling Enron testimony",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "WOwJJr_RlS8",
+        "title": "Worldcom executives Congressional hearing",
+        "channel": "AP Archive",
+        "url": "https://www.youtube.com/watch?v=WOwJJr_RlS8",
+        "searchQuery": "WorldCom Bernard Ebbers testimony",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "ki8nTBkdRRE",
+        "title": "Elizabeth Holmes SEC Deposition JULY 13, 2017 1 OF 4 redacted",
+        "channel": "ANTL Media",
+        "url": "https://www.youtube.com/watch?v=ki8nTBkdRRE",
+        "searchQuery": "Theranos Elizabeth Holmes deposition",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "OuMIxiPxJU4",
+        "title": "Elizabeth Holmes SEC Deposition JULY 11, 2017 1 OF 4 redacted",
+        "channel": "ANTL Media",
+        "url": "https://www.youtube.com/watch?v=OuMIxiPxJU4",
+        "searchQuery": "Theranos Elizabeth Holmes deposition",
+        "candidateScore": 3,
+        "difficulty": "easy",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "w3aetimni3o",
+        "title": "Elizabeth Holmes SEC Deposition AUG 23, 2017 1 of 4 redacted",
+        "channel": "ANTL Media",
+        "url": "https://www.youtube.com/watch?v=w3aetimni3o",
+        "searchQuery": "Theranos Elizabeth Holmes deposition",
         "candidateScore": 3,
         "difficulty": "easy",
         "reviewStatus": "candidate",
@@ -1918,6 +1918,23 @@
         ]
       },
       {
+        "videoId": "3VVBPdDMn6M",
+        "title": "The FULL Police Interrogation and CONFESSSION - Chris Watts",
+        "channel": "Couch Detectives",
+        "url": "https://www.youtube.com/watch?v=3VVBPdDMn6M",
+        "searchQuery": "Chris Watts interrogation confession",
+        "candidateScore": 6,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "ijL9451uoR4",
         "title": "Darlie Routier: statements/Prison Interview/2020",
         "channel": "Alisdarl",
@@ -1952,6 +1969,23 @@
         ]
       },
       {
+        "videoId": "1Cz7Wb-BgyY",
+        "title": "Pam Hupp Psych0 Serial KlLLer INTERROGATION police interview - investigation series True Crime Doc",
+        "channel": "Crime Circus Cult",
+        "url": "https://www.youtube.com/watch?v=1Cz7Wb-BgyY",
+        "searchQuery": "Pam Hupp police interview",
+        "candidateScore": 6,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "vySQvOZ1XRo",
         "title": "CHRIS WATTS: Chris Watts girlfriend Nichol Kessinger's  full Police interview.",
         "channel": "Murder Mysteries",
@@ -1969,11 +2003,11 @@
         ]
       },
       {
-        "videoId": "M_tDOmXgo2w",
-        "title": "Crimestopnews.com Full Video Of Nichol Kessinger Chris Watts Mistress Interview #2",
-        "channel": "Crimes Topnews",
-        "url": "https://www.youtube.com/watch?v=M_tDOmXgo2w",
-        "searchQuery": "Nichol Kessinger police interview",
+        "videoId": "fsV1u25eXR4",
+        "title": "RAW VIDEO: Diane Downs testifies at parole hearing",
+        "channel": "KVAL",
+        "url": "https://www.youtube.com/watch?v=fsV1u25eXR4",
+        "searchQuery": "Diane Downs parole hearing",
         "candidateScore": 6,
         "difficulty": "hard",
         "reviewStatus": "candidate",
@@ -2122,40 +2156,6 @@
         ]
       },
       {
-        "videoId": "rtxKP4bOJmg",
-        "title": "Israel Keyes - Samantha Koenig Full Confession",
-        "channel": "Sotos",
-        "url": "https://www.youtube.com/watch?v=rtxKP4bOJmg",
-        "searchQuery": "Israel Keyes interrogation full",
-        "candidateScore": 6,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "bmwlJbW8uTo",
-        "title": "The Unabomber Speaks: Rare Ted Kaczynski Interview (Full Documentary)",
-        "channel": "Serial Killers",
-        "url": "https://www.youtube.com/watch?v=bmwlJbW8uTo",
-        "searchQuery": "Unabomber Ted Kaczynski interview",
-        "candidateScore": 6,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "xPq2dkD1YPA",
         "title": "Madeleine McCann Parents Full Interview Piers Morgan 2011 www.findingmadeleine.com",
         "channel": "Madeleine Search",
@@ -2195,23 +2195,6 @@
         "channel": "WVTM 13 News",
         "url": "https://www.youtube.com/watch?v=yZvsSJqAYLE",
         "searchQuery": "Natalee Holloway Joran van der Sloot confession",
-        "candidateScore": 6,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "aCXDpQEfZm8",
-        "title": "Josh Powell  Full Interview With 2News   Utah News, KUTV, 2News, Utah Community.flv",
-        "channel": "Chris Jones",
-        "url": "https://www.youtube.com/watch?v=aCXDpQEfZm8",
-        "searchQuery": "Susan Powell Josh Powell interview",
         "candidateScore": 6,
         "difficulty": "hard",
         "reviewStatus": "candidate",
@@ -2275,23 +2258,6 @@
         ]
       },
       {
-        "videoId": "QHGq6gKqaEs",
-        "title": "Watch CNBC's full interview with short-seller Carson Block",
-        "channel": "CNBC Television",
-        "url": "https://www.youtube.com/watch?v=QHGq6gKqaEs",
-        "searchQuery": "Luckin Coffee executive interview",
-        "candidateScore": 6,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "_LkjFGXNyXc",
         "title": "President Reagan Testimony In Poindexter Trial Part 1",
         "channel": "Adam Fitzgerald",
@@ -2343,10 +2309,10 @@
         ]
       },
       {
-        "videoId": "wJO9CQC7ZJg",
-        "title": "She Was a Cop. She Was Also a Killer | Stephanie Lazarus Interrogation",
-        "channel": "The Interrogator Files",
-        "url": "https://www.youtube.com/watch?v=wJO9CQC7ZJg",
+        "videoId": "WLSNPkf8RCU",
+        "title": "The Interrogation of Stephanie Lazarus",
+        "channel": "JCS - Criminal Psychology",
+        "url": "https://www.youtube.com/watch?v=WLSNPkf8RCU",
         "searchQuery": "Stephanie Lazarus interrogation full",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -2360,10 +2326,10 @@
         ]
       },
       {
-        "videoId": "WLSNPkf8RCU",
-        "title": "The Interrogation of Stephanie Lazarus",
-        "channel": "JCS - Criminal Psychology",
-        "url": "https://www.youtube.com/watch?v=WLSNPkf8RCU",
+        "videoId": "wJO9CQC7ZJg",
+        "title": "She Was a Cop. She Was Also a Killer | Stephanie Lazarus Interrogation",
+        "channel": "The Interrogator Files",
+        "url": "https://www.youtube.com/watch?v=wJO9CQC7ZJg",
         "searchQuery": "Stephanie Lazarus interrogation full",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -2513,10 +2479,10 @@
         ]
       },
       {
-        "videoId": "Gjvixip5UlA",
-        "title": "Russell Williams interrogation - BEST VERSION on YouTube - 16x9 w/improved audio",
-        "channel": "abc abc",
-        "url": "https://www.youtube.com/watch?v=Gjvixip5UlA",
+        "videoId": "DloswfXMP_o",
+        "title": "Col. Russell Williams - Interrogation Part 1",
+        "channel": "OP Presents - True Crime",
+        "url": "https://www.youtube.com/watch?v=DloswfXMP_o",
         "searchQuery": "Russell Williams interrogation confession",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -2615,6 +2581,23 @@
         ]
       },
       {
+        "videoId": "NxSUgNKX714",
+        "title": "Ed Kemper Interviews | Chronological Order | From 1981 - 1991 | Video Footage",
+        "channel": "NotoriousSquigTV",
+        "url": "https://www.youtube.com/watch?v=NxSUgNKX714",
+        "searchQuery": "Edmund Kemper prison interview full",
+        "candidateScore": 3,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "9WF87WnxcPM",
         "title": "True Crime Rewind: Serial killer Aileen Wuornos goes off in court | Banfield",
         "channel": "NewsNation",
@@ -2670,40 +2653,6 @@
         "title": "John Wayne Gacy interview with Walter Jacobson",
         "channel": "Jack Hamilton",
         "url": "https://www.youtube.com/watch?v=mmpc5P9urlU",
-        "searchQuery": "John Wayne Gacy prison interview",
-        "candidateScore": 3,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "orsxuAjBaY0",
-        "title": "John Wayne Gacy Documentary - FULL",
-        "channel": "Stranger Than Stranger Things",
-        "url": "https://www.youtube.com/watch?v=orsxuAjBaY0",
-        "searchQuery": "John Wayne Gacy prison interview",
-        "candidateScore": 3,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "eItRrfl5cj4",
-        "title": "John Wayne Gacy Talks: Part 1-5 EXCLUSIVE INTERVIEW",
-        "channel": "PROJECTHIGHERGROUNDTV",
-        "url": "https://www.youtube.com/watch?v=eItRrfl5cj4",
         "searchQuery": "John Wayne Gacy prison interview",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -2836,10 +2785,10 @@
         ]
       },
       {
-        "videoId": "w1YGyROXXy0",
-        "title": "Salvatore \"Sammy the Bull\" Gravano interview with Diane Sawyer 1997",
-        "channel": "Infinite-Lee Productions",
-        "url": "https://www.youtube.com/watch?v=w1YGyROXXy0",
+        "videoId": "A9WJqkKg0wk",
+        "title": "Mobster interview -Sammy \"The Bull\" Gravano",
+        "channel": "Soft White Underbelly",
+        "url": "https://www.youtube.com/watch?v=A9WJqkKg0wk",
         "searchQuery": "Sammy Gravano interview murders",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -2938,23 +2887,6 @@
         ]
       },
       {
-        "videoId": "yjhqxsMRaDI",
-        "title": "Ridgway Confession 1 (short)",
-        "channel": "kkg108",
-        "url": "https://www.youtube.com/watch?v=yjhqxsMRaDI",
-        "searchQuery": "Gary Ridgway confession footage",
-        "candidateScore": 3,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "2QGw3VmHG8M",
         "title": "Dennis Rader interview",
         "channel": "Jack Hamilton",
@@ -3006,23 +2938,6 @@
         ]
       },
       {
-        "videoId": "i2lpwPsY410",
-        "title": "Watch These FBI Interrogation Tactics Crack Chris Watts, Family Murderer, Into Finally Confessing",
-        "channel": "Derek Van Schaik",
-        "url": "https://www.youtube.com/watch?v=i2lpwPsY410",
-        "searchQuery": "Chris Watts interrogation confession",
-        "candidateScore": 3,
-        "difficulty": "hard",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "Z87GGL4Id2Q",
         "title": "Alex Murdaugh admits he lied about dog kennels story to public until trial",
         "channel": "News 19 WLTX",
@@ -3057,10 +2972,10 @@
         ]
       },
       {
-        "videoId": "a2TcefFtW5U",
-        "title": "[TRIAL TRANSCRIPT PART 51]  - Darlie Routier Trial - Detective Jimmy Patterson Part 1",
+        "videoId": "Wot2VJDH5yY",
+        "title": "[TRIAL TRANSCRIPT PART 68] - Darlie Routier Trial -Richard Coons, Psychologist",
         "channel": "TrueCrimeFM",
-        "url": "https://www.youtube.com/watch?v=a2TcefFtW5U",
+        "url": "https://www.youtube.com/watch?v=Wot2VJDH5yY",
         "searchQuery": "Darlie Routier interview direct",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -3074,11 +2989,11 @@
         ]
       },
       {
-        "videoId": "hnvWO92shXg",
-        "title": "The Shocking Interrogation Of Master Manipulator",
-        "channel": "Real Crime Psychology",
-        "url": "https://www.youtube.com/watch?v=hnvWO92shXg",
-        "searchQuery": "Pam Hupp police interview",
+        "videoId": "a2TcefFtW5U",
+        "title": "[TRIAL TRANSCRIPT PART 51]  - Darlie Routier Trial - Detective Jimmy Patterson Part 1",
+        "channel": "TrueCrimeFM",
+        "url": "https://www.youtube.com/watch?v=a2TcefFtW5U",
+        "searchQuery": "Darlie Routier interview direct",
         "candidateScore": 3,
         "difficulty": "hard",
         "reviewStatus": "candidate",
@@ -3244,11 +3159,11 @@
         ]
       },
       {
-        "videoId": "GqTgo4Vc9GY",
-        "title": "CA v. Robert Durst Murder Trial Day 34 - Durst Discusses Film \"All Good Things\"",
-        "channel": "Law&Crime Network",
-        "url": "https://www.youtube.com/watch?v=GqTgo4Vc9GY",
-        "searchQuery": "Robert Durst interview raw",
+        "videoId": "w7jOSP7BwK4",
+        "title": "BREAKING: Nichol Kessinger FINALLY Speaks | Uncut Police Interview | Chris Watts Case | Part 2",
+        "channel": "True Crime Footnotes",
+        "url": "https://www.youtube.com/watch?v=w7jOSP7BwK4",
+        "searchQuery": "Nichol Kessinger police interview",
         "candidateScore": 3,
         "difficulty": "hard",
         "reviewStatus": "candidate",
@@ -3261,10 +3176,10 @@
         ]
       },
       {
-        "videoId": "6yL0KuLOlw4",
-        "title": "CA v. Robert Durst Murder Trial Day 31- Direct Exam Joe Becerra - Investigator, NY State",
-        "channel": "Law&Crime Network",
-        "url": "https://www.youtube.com/watch?v=6yL0KuLOlw4",
+        "videoId": "SkRFVbKykH0",
+        "title": "LIVE: Robert Durst testifies at his murder trial in Los Angeles",
+        "channel": "Reuters",
+        "url": "https://www.youtube.com/watch?v=SkRFVbKykH0",
         "searchQuery": "Robert Durst testimony direct",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -3282,6 +3197,23 @@
         "title": "CA v. Robert Durst Murder Trial Day 22 - Douglas Durst, Defendant's Brother Continues Part 3",
         "channel": "Law&Crime Network",
         "url": "https://www.youtube.com/watch?v=_hyfha2DnFU",
+        "searchQuery": "Robert Durst testimony direct",
+        "candidateScore": 3,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "6yL0KuLOlw4",
+        "title": "CA v. Robert Durst Murder Trial Day 31- Direct Exam Joe Becerra - Investigator, NY State",
+        "channel": "Law&Crime Network",
+        "url": "https://www.youtube.com/watch?v=6yL0KuLOlw4",
         "searchQuery": "Robert Durst testimony direct",
         "candidateScore": 3,
         "difficulty": "hard",
@@ -3380,11 +3312,28 @@
         ]
       },
       {
-        "videoId": "O9y5EyYMPrw",
-        "title": "Diane Downs 2020 Parole Hearing Audio │ Part 3:  \"FINAL VERSION\"",
+        "videoId": "si7O90Rffbc",
+        "title": "Diane Downs 2020 Parole Hearing Audio │ Part 2: \"Fantastical Stories\"",
         "channel": "𝐃𝐈𝐀𝐍𝐄 𝐃𝐎𝐖𝐍𝐒 𝐓𝐕",
-        "url": "https://www.youtube.com/watch?v=O9y5EyYMPrw",
+        "url": "https://www.youtube.com/watch?v=si7O90Rffbc",
         "searchQuery": "Diane Downs parole hearing",
+        "candidateScore": 3,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "mhoO6Tl3BVc",
+        "title": "Father of Susan Smith's kids speaks out ahead of convicted killer's parole hearing",
+        "channel": "KTXS News",
+        "url": "https://www.youtube.com/watch?v=mhoO6Tl3BVc",
+        "searchQuery": "Susan Smith parole hearing",
         "candidateScore": 3,
         "difficulty": "hard",
         "reviewStatus": "candidate",
@@ -3402,6 +3351,57 @@
         "channel": "mascaramurderblog",
         "url": "https://www.youtube.com/watch?v=EsZbfNJQZMo",
         "searchQuery": "Karla Homolka interview archive",
+        "candidateScore": 3,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "919K4y5UcDE",
+        "title": "Killer Couples Bonus 309: Interview with Paula Todd",
+        "channel": "earthconfidential",
+        "url": "https://www.youtube.com/watch?v=919K4y5UcDE",
+        "searchQuery": "Karla Homolka interview archive",
+        "candidateScore": 3,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "hLTAjW5Twlk",
+        "title": "Paul Bernardo — Police interrogation of notorious serial killer",
+        "channel": "The Mob Reporter",
+        "url": "https://www.youtube.com/watch?v=hLTAjW5Twlk",
+        "searchQuery": "Paul Bernardo police interview",
+        "candidateScore": 3,
+        "difficulty": "hard",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "u9p877BdxBI",
+        "title": "Paul Bernardo   Police interview",
+        "channel": "The Cappening Channel",
+        "url": "https://www.youtube.com/watch?v=u9p877BdxBI",
+        "searchQuery": "Paul Bernardo police interview",
         "candidateScore": 3,
         "difficulty": "hard",
         "reviewStatus": "candidate",
@@ -3433,10 +3433,10 @@
         ]
       },
       {
-        "videoId": "LlZDc2gwfnY",
-        "title": "Watch: Robert Mueller’s Full Opening Statement At House Intelligence Hearing | NBC News",
-        "channel": "NBC News",
-        "url": "https://www.youtube.com/watch?v=LlZDc2gwfnY",
+        "videoId": "I-_Cqyf4E28",
+        "title": "FULL OPENING STATEMENT: Attorney General Jeff Sessions Senate Intelligence Hearing (FNN)",
+        "channel": "LiveNOW from FOX",
+        "url": "https://www.youtube.com/watch?v=I-_Cqyf4E28",
         "searchQuery": "intelligence hearing misleading statement testimony",
         "candidateScore": 9,
         "difficulty": "expert",
@@ -3450,10 +3450,10 @@
         ]
       },
       {
-        "videoId": "I-_Cqyf4E28",
-        "title": "FULL OPENING STATEMENT: Attorney General Jeff Sessions Senate Intelligence Hearing (FNN)",
-        "channel": "LiveNOW from FOX",
-        "url": "https://www.youtube.com/watch?v=I-_Cqyf4E28",
+        "videoId": "LlZDc2gwfnY",
+        "title": "Watch: Robert Mueller’s Full Opening Statement At House Intelligence Hearing | NBC News",
+        "channel": "NBC News",
+        "url": "https://www.youtube.com/watch?v=LlZDc2gwfnY",
         "searchQuery": "intelligence hearing misleading statement testimony",
         "candidateScore": 9,
         "difficulty": "expert",
@@ -3518,10 +3518,44 @@
         ]
       },
       {
+        "videoId": "hIkRjdu7O4E",
+        "title": "Investigators Follow The Money & Find a Murderous Friendship | Interrogation Raw | A&E",
+        "channel": "A&E",
+        "url": "https://www.youtube.com/watch?v=hIkRjdu7O4E",
+        "searchQuery": "obscure police interrogation false alibi full",
+        "candidateScore": 6,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "dAdpMdYrRrI",
         "title": "1970 Charles Manson Giving Interview In Court",
         "channel": "My Footage",
         "url": "https://www.youtube.com/watch?v=dAdpMdYrRrI",
+        "searchQuery": "obscure courtroom confession archival footage",
+        "candidateScore": 6,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "59dqKjhlh3U",
+        "title": "Ted Bundy's Real Court Footage – Chilling Defense Moment (1979 Trial)",
+        "channel": "@oneminutehistory",
+        "url": "https://www.youtube.com/watch?v=59dqKjhlh3U",
         "searchQuery": "obscure courtroom confession archival footage",
         "candidateScore": 6,
         "difficulty": "expert",
@@ -3569,10 +3603,27 @@
         ]
       },
       {
-        "videoId": "RfRW4QH9ta8",
-        "title": "Statements of Nuremberg defendants (Aug. 31, 1946) (Trial Day 216)",
-        "channel": "RobertHJacksonCenter",
-        "url": "https://www.youtube.com/watch?v=RfRW4QH9ta8",
+        "videoId": "z7B39aaF2NU",
+        "title": "Elizabeth Holmes Day 2⧸3 FULL Deposition 2017",
+        "channel": "Jay",
+        "url": "https://www.youtube.com/watch?v=z7B39aaF2NU",
+        "searchQuery": "corporate fraud executive deposition full",
+        "candidateScore": 6,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "IDh5mI-q1nI",
+        "title": "War Crimes Trial Participant Paula Isenberg Testimony | USC Shoah Foundation",
+        "channel": "USC Shoah Foundation",
+        "url": "https://www.youtube.com/watch?v=IDh5mI-q1nI",
         "searchQuery": "war crimes tribunal defendant testimony",
         "candidateScore": 6,
         "difficulty": "expert",
@@ -3654,11 +3705,28 @@
         ]
       },
       {
-        "videoId": "N8hLYLomRds",
-        "title": "Takata Airbag Hearing Opening Statement",
-        "channel": "RepSchakowsky",
-        "url": "https://www.youtube.com/watch?v=N8hLYLomRds",
-        "searchQuery": "Takata airbag executive testimony",
+        "videoId": "F7MzlCTr1XA",
+        "title": "Restored 4k - CIA MK ULTRA Hearings Survivor Testimony  C",
+        "channel": "Captive State",
+        "url": "https://www.youtube.com/watch?v=F7MzlCTr1XA",
+        "searchQuery": "MKUltra congressional hearing testimony",
+        "candidateScore": 6,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "acauxXJQLP4",
+        "title": "AC2001 Sherron Watkins Interview (Raw Video Clip)",
+        "channel": "NathanGregoryAuthor",
+        "url": "https://www.youtube.com/watch?v=acauxXJQLP4",
+        "searchQuery": "Enron Sherron Watkins testimony",
         "candidateScore": 6,
         "difficulty": "expert",
         "reviewStatus": "candidate",
@@ -3705,10 +3773,10 @@
         ]
       },
       {
-        "videoId": "Ao6K0Ow--bs",
-        "title": "06/11/2023: Thaçi et al, Trial hearing (reclassified)",
+        "videoId": "Nvrywpv-8Vo",
+        "title": "30/10/2023: Thaçi et al, Trial hearing (reclassified)",
         "channel": "Kosovo Specialist Chambers",
-        "url": "https://www.youtube.com/watch?v=Ao6K0Ow--bs",
+        "url": "https://www.youtube.com/watch?v=Nvrywpv-8Vo",
         "searchQuery": "Kosovo tribunal testimony",
         "candidateScore": 6,
         "difficulty": "expert",
@@ -3727,23 +3795,6 @@
         "channel": "AP Archive",
         "url": "https://www.youtube.com/watch?v=32kv2d8BERM",
         "searchQuery": "Cambodia Khmer Rouge tribunal testimony",
-        "candidateScore": 6,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "MqFRmYT5710",
-        "title": "Paolo Carozza testimony to Inter-American Court of Human Rights in Beatriz v. El Salvador",
-        "channel": "Notre Dame Law School",
-        "url": "https://www.youtube.com/watch?v=MqFRmYT5710",
-        "searchQuery": "El Salvador truth commission testimony",
         "candidateScore": 6,
         "difficulty": "expert",
         "reviewStatus": "candidate",
@@ -3777,23 +3828,6 @@
         "title": "Ted Bundy's Angry Outburst at the Kimberly Leach Trial; Jan 1980",
         "channel": "Ted Bundy: A Killer in the Archives",
         "url": "https://www.youtube.com/watch?v=pWWWoXC_MYU",
-        "searchQuery": "obscure courtroom confession archival footage",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "EVsAPBOPJQ8",
-        "title": "Ted Bundy Court Footage",
-        "channel": "Theo Bundy",
-        "url": "https://www.youtube.com/watch?v=EVsAPBOPJQ8",
         "searchQuery": "obscure courtroom confession archival footage",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -3841,40 +3875,6 @@
         ]
       },
       {
-        "videoId": "hkzeUL9DbWI",
-        "title": "How DNA Exonerated Man Wrongfully Convicted of Murder and Rape",
-        "channel": "The Doctors",
-        "url": "https://www.youtube.com/watch?v=hkzeUL9DbWI",
-        "searchQuery": "wrongful conviction exoneration interview DNA",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "ShSObd0vwrs",
-        "title": "Farenthold deposition",
-        "channel": "TheVictoriaAdvocate",
-        "url": "https://www.youtube.com/watch?v=ShSObd0vwrs",
-        "searchQuery": "corporate fraud executive deposition full",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "zUNrhPUV6Ew",
         "title": "Watch 8-hour Deposition Of Richard Sackler As He Denies Family's Role in The Opioid Crisis",
         "channel": "ProPublica",
@@ -3896,23 +3896,6 @@
         "title": "WE scandal: Finance Minister Bill Morneau testifies before House committee | FULL",
         "channel": "Global News",
         "url": "https://www.youtube.com/watch?v=6K7z55WJT14",
-        "searchQuery": "financial scandal parliamentary testimony full",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "IYiI7B2w4DA",
-        "title": "Trudeau, chief of staff testify before House Finance Committee on WE Charity deal | FULL",
-        "channel": "Global News",
-        "url": "https://www.youtube.com/watch?v=IYiI7B2w4DA",
         "searchQuery": "financial scandal parliamentary testimony full",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -3960,10 +3943,10 @@
         ]
       },
       {
-        "videoId": "CxLElP6Np5M",
-        "title": "G. EDWARD GRIFFIN INTERVIEWS YURI BEZMENOV (1984)",
-        "channel": "FraziorONE",
-        "url": "https://www.youtube.com/watch?v=CxLElP6Np5M",
+        "videoId": "tnRKlUyA5Eo",
+        "title": "KGB Defector Yuri Bezmenov Explains: Deception Was My Job (Full)",
+        "channel": "conspiracykingdotcom",
+        "url": "https://www.youtube.com/watch?v=tnRKlUyA5Eo",
         "searchQuery": "cold war defector interview archive",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -3977,11 +3960,11 @@
         ]
       },
       {
-        "videoId": "IIXoaA2S7rM",
-        "title": "War Crimes Witness Woes: Key Milosevic witness to sue Hague court after identity exposed",
-        "channel": "UKRAINE TODAY",
-        "url": "https://www.youtube.com/watch?v=IIXoaA2S7rM",
-        "searchQuery": "war crimes tribunal defendant testimony",
+        "videoId": "C3kXs2ISxWA",
+        "title": "Facebook and Twitter testify at the Senate Intelligence Committee hearing",
+        "channel": "CNET",
+        "url": "https://www.youtube.com/watch?v=C3kXs2ISxWA",
+        "searchQuery": "intelligence hearing misleading statement testimony",
         "candidateScore": 3,
         "difficulty": "expert",
         "reviewStatus": "candidate",
@@ -4050,6 +4033,23 @@
         "channel": "SLICE Full Doc",
         "url": "https://www.youtube.com/watch?v=wRfCdY9id6M",
         "searchQuery": "Stasi informant interview archive",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "CxLElP6Np5M",
+        "title": "G. EDWARD GRIFFIN INTERVIEWS YURI BEZMENOV (1984)",
+        "channel": "FraziorONE",
+        "url": "https://www.youtube.com/watch?v=CxLElP6Np5M",
+        "searchQuery": "KGB defector interview archive",
         "candidateScore": 3,
         "difficulty": "expert",
         "reviewStatus": "candidate",
@@ -4215,6 +4215,23 @@
         ]
       },
       {
+        "videoId": "gx7IHy3b5O0",
+        "title": "SYND 18-8-72 INTERVIEW WITH EDITH IRVING, WIFE OF CLIFFORD IRVING",
+        "channel": "AP Archive",
+        "url": "https://www.youtube.com/watch?v=gx7IHy3b5O0",
+        "searchQuery": "Howard Hughes autobiography hoax Clifford Irving interview",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "PLjPGpQFKdY",
         "title": "Story Behind the Cottingley Fairies (includes Interviews with Frances Griffthis and Elsie Wright)",
         "channel": "HistorianR42",
@@ -4232,10 +4249,10 @@
         ]
       },
       {
-        "videoId": "rdTpCE6-U7w",
-        "title": "FOX 5 LIVE (4/10) Facebook CEO Zuckerberg testifies in Senate hearing on Cambridge Analytica scandal",
-        "channel": "FOX 5 Washington DC",
-        "url": "https://www.youtube.com/watch?v=rdTpCE6-U7w",
+        "videoId": "Uq5YBE5GHQ4",
+        "title": "Mark Zuckerberg senate testimony on Cambridge Analytica",
+        "channel": "Fox News",
+        "url": "https://www.youtube.com/watch?v=Uq5YBE5GHQ4",
         "searchQuery": "Cambridge Analytica testimony direct",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -4249,10 +4266,10 @@
         ]
       },
       {
-        "videoId": "Uq5YBE5GHQ4",
-        "title": "Mark Zuckerberg senate testimony on Cambridge Analytica",
-        "channel": "Fox News",
-        "url": "https://www.youtube.com/watch?v=Uq5YBE5GHQ4",
+        "videoId": "rdTpCE6-U7w",
+        "title": "FOX 5 LIVE (4/10) Facebook CEO Zuckerberg testifies in Senate hearing on Cambridge Analytica scandal",
+        "channel": "FOX 5 Washington DC",
+        "url": "https://www.youtube.com/watch?v=rdTpCE6-U7w",
         "searchQuery": "Cambridge Analytica testimony direct",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -4368,6 +4385,23 @@
         ]
       },
       {
+        "videoId": "uCsXVXnRD4Y",
+        "title": "SYND01/07/71 SUPREME COURT DECISION UPHOLDING RIGHT TO PUBLISH PENTAGON PAPERS",
+        "channel": "AP Archive",
+        "url": "https://www.youtube.com/watch?v=uCsXVXnRD4Y",
+        "searchQuery": "Pentagon Papers hearing archive",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "sYISgHPymEE",
         "title": "Church Committee Hearings CIA William Colby 1975",
         "channel": "Kike Freeman",
@@ -4407,23 +4441,6 @@
         "channel": "Ambakisye-Okang Dukuzumurenyi | PhD",
         "url": "https://www.youtube.com/watch?v=ntPUxuSzOKU",
         "searchQuery": "COINTELPRO congressional testimony",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "BCXWRasgWb8",
-        "title": "MKULTRA Hearing: Rep. Burchett's CIA Experiments Question Stuns Room, Elicits Cheers",
-        "channel": "New York Post",
-        "url": "https://www.youtube.com/watch?v=BCXWRasgWb8",
-        "searchQuery": "MKUltra congressional hearing testimony",
         "candidateScore": 3,
         "difficulty": "expert",
         "reviewStatus": "candidate",
@@ -4521,6 +4538,23 @@
         ]
       },
       {
+        "videoId": "fFKEMaAjjP4",
+        "title": "WATCH: Rep. Keating blasts alleged drug boat strikes in Hegseth and Caine hearing",
+        "channel": "PBS NewsHour",
+        "url": "https://www.youtube.com/watch?v=fFKEMaAjjP4",
+        "searchQuery": "Keating Five hearing testimony",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "MytBjMExJTA",
         "title": "Ex-UBS Executive Under Fire Over Libor Testimony",
         "channel": "The Wall Street Journal",
@@ -4543,6 +4577,40 @@
         "channel": "Global New",
         "url": "https://www.youtube.com/watch?v=cOjw54529do",
         "searchQuery": "LIBOR scandal trader testimony",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "PqjXjgyXNrA",
+        "title": "Alex Winter Corruption, The Panama Papers Leak, Whistleblowers & To Dust ( Film Interview)",
+        "channel": "Phantom Hampton Podcast",
+        "url": "https://www.youtube.com/watch?v=PqjXjgyXNrA",
+        "searchQuery": "Panama Papers whistleblower interview",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
+        "videoId": "oMdlI75QzUI",
+        "title": "Wirecard-Whistleblower packt aus: So deckte er den Milliardenbetrug auf | Pav Gill Interview",
+        "channel": "BILD",
+        "url": "https://www.youtube.com/watch?v=oMdlI75QzUI",
+        "searchQuery": "Wirecard whistleblower interview",
         "candidateScore": 3,
         "difficulty": "expert",
         "reviewStatus": "candidate",
@@ -4674,23 +4742,6 @@
         ]
       },
       {
-        "videoId": "XS4CqOFal6s",
-        "title": "Tyco Fraud Interview: Dennis Kozlowski",
-        "channel": "Miranda Pesa",
-        "url": "https://www.youtube.com/watch?v=XS4CqOFal6s",
-        "searchQuery": "Tyco Dennis Kozlowski interview",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
         "videoId": "eCPax-3Mibw",
         "title": "Former HealthSouth CEO seeks 2006 fraud trial exoneration",
         "channel": "WSFA 12 News",
@@ -4708,10 +4759,10 @@
         ]
       },
       {
-        "videoId": "WToTr-0OsXI",
-        "title": "Top Takata Executive Under Fire During Senate Hearing",
-        "channel": "Alexander Brangman",
-        "url": "https://www.youtube.com/watch?v=WToTr-0OsXI",
+        "videoId": "-yECNs6dvWw",
+        "title": "TAKATA AIRBAG HRG: TAKATA SENIOR VP ENTERS HEARING",
+        "channel": "CNN",
+        "url": "https://www.youtube.com/watch?v=-yECNs6dvWw",
         "searchQuery": "Takata airbag executive testimony",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -4725,10 +4776,10 @@
         ]
       },
       {
-        "videoId": "-yECNs6dvWw",
-        "title": "TAKATA AIRBAG HRG: TAKATA SENIOR VP ENTERS HEARING",
-        "channel": "CNN",
-        "url": "https://www.youtube.com/watch?v=-yECNs6dvWw",
+        "videoId": "A3wlqgCR6r8",
+        "title": "Lawmakers Hear Testimony on Airbag Recall",
+        "channel": "WPRI",
+        "url": "https://www.youtube.com/watch?v=A3wlqgCR6r8",
         "searchQuery": "Takata airbag executive testimony",
         "candidateScore": 3,
         "difficulty": "expert",
@@ -4929,6 +4980,23 @@
         ]
       },
       {
+        "videoId": "s-KrkKXdGnc",
+        "title": "Shocking testimony from a Fukushima Parent from February 2014",
+        "channel": "arclight2011",
+        "url": "https://www.youtube.com/watch?v=s-KrkKXdGnc",
+        "searchQuery": "Fukushima worker testimony",
+        "candidateScore": 3,
+        "difficulty": "expert",
+        "reviewStatus": "candidate",
+        "directFootageLikely": true,
+        "requiredReview": [
+          "Confirm the named person speaks directly",
+          "Identify the exact statement and timestamps",
+          "Verify truth or lie using primary and secondary evidence",
+          "Set a clip from 15 seconds before through 15 seconds after the statement"
+        ]
+      },
+      {
         "videoId": "b5eA_snuv5Q",
         "title": "PROOF - God Doesn't Leave You! - Job Testimony #encouragement",
         "channel": "Ash ♡",
@@ -5031,79 +5099,11 @@
         ]
       },
       {
-        "videoId": "nvN8t-dLbTs",
-        "title": "Magdalene Laundry New Ross - interview with survivor Maureen Sullivan",
-        "channel": "Eileen McCourt (Eileen McCourt Author)",
-        "url": "https://www.youtube.com/watch?v=nvN8t-dLbTs",
-        "searchQuery": "Magdalene laundries survivor testimony",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "DajmN6zQrGE",
-        "title": "Rwanda’s gacaca courts questioned 10 years on",
-        "channel": "Al Jazeera English",
-        "url": "https://www.youtube.com/watch?v=DajmN6zQrGE",
-        "searchQuery": "Rwandan genocide gacaca confession",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "uSmTtGOy9BE",
-        "title": "RR0201/A  Rwanda: Trials",
-        "channel": "AP Archive",
-        "url": "https://www.youtube.com/watch?v=uSmTtGOy9BE",
-        "searchQuery": "Rwandan genocide gacaca confession",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "bIjbLnVn714",
-        "title": "South Africa - Truth commission hearing",
-        "channel": "AP Archive",
-        "url": "https://www.youtube.com/watch?v=bIjbLnVn714",
-        "searchQuery": "South Africa truth commission amnesty hearing",
-        "candidateScore": 3,
-        "difficulty": "expert",
-        "reviewStatus": "candidate",
-        "directFootageLikely": true,
-        "requiredReview": [
-          "Confirm the named person speaks directly",
-          "Identify the exact statement and timestamps",
-          "Verify truth or lie using primary and secondary evidence",
-          "Set a clip from 15 seconds before through 15 seconds after the statement"
-        ]
-      },
-      {
-        "videoId": "32wGa1R_jh0",
-        "title": "How the Srebrenica genocide war crimes trials gave birth to the ICC | Featured Documentary",
-        "channel": "Al Jazeera English",
-        "url": "https://www.youtube.com/watch?v=32wGa1R_jh0",
-        "searchQuery": "Srebrenica tribunal testimony",
+        "videoId": "IvYnlxuOVxI",
+        "title": "Soldier F goes on trial over historic Bloody Sunday murders in Derry",
+        "channel": "Crime World ",
+        "url": "https://www.youtube.com/watch?v=IvYnlxuOVxI",
+        "searchQuery": "Bloody Sunday soldier testimony inquiry",
         "candidateScore": 3,
         "difficulty": "expert",
         "reviewStatus": "candidate",
