@@ -41,13 +41,13 @@ jobs:
           import json
           from pathlib import Path
           report = json.loads(Path("data/research/video-verification-report.json").read_text())
-          valid = report.get("candidateCount") == 300 and len(report.get("results", [])) == 300
+          valid = report.get("candidateCount") == 300 and len(report.get("results", [])) == 300 and report.get("methodVersion") == 1
           raise SystemExit(0 if valid else 1)
           PY
           then
             echo "Existing 300-candidate verification report is complete."
           else
-            python scripts/verify-video-candidates.py
+            python scripts/run-video-verifier.py
           fi
 
       - name: Commit verification results
