@@ -46,18 +46,21 @@ jobs:
         run: |
           set +e
           if [ -f data/research/content-build-report.json ]; then
-            status=$(python - <<'PY'
+            read -r status method_version <<EOF
+          $(python - <<'PY'
           import json
           from pathlib import Path
           report = json.loads(Path("data/research/content-build-report.json").read_text())
-          print(report.get("status", "unknown"))
+          print(report.get("status", "unknown"), report.get("methodVersion", 0))
           PY
           )
+          EOF
           else
             status="missing"
+            method_version=0
           fi
 
-          if [ "$status" = "complete" ] && python - <<'PY'
+          if [ "$status" = "complete" ] && [ "$method_version" = "2" ] && python - <<'PY'
           import json
           from pathlib import Path
           values = json.loads(Path("data/generated-cases.json").read_text())
@@ -66,11 +69,11 @@ jobs:
           then
             echo "Existing complete 108-case generated deck found."
             code=0
-          elif [ "$status" = "incomplete" ]; then
-            echo "Existing incomplete sourcing report found; preserving it for editorial inspection."
+          elif [ "$status" = "incomplete" ] && [ "$method_version" = "2" ]; then
+            echo "Existing method-v2 incomplete report found; preserving it for inspection."
             code=2
           else
-            python scripts/build-verified-content-deck.py
+            python scripts/run-content-builder-v2.py
             code=$?
           fi
           set -e
