@@ -41,7 +41,7 @@ jobs:
           import json
           from pathlib import Path
           report = json.loads(Path("data/research/video-verification-report.json").read_text())
-          valid = report.get("candidateCount") == 300 and len(report.get("results", [])) == 300 and report.get("methodVersion") == 1
+          valid = report.get("candidateCount") == 300 and len(report.get("results", [])) == 300 and report.get("methodVersion") == 2
           raise SystemExit(0 if valid else 1)
           PY
           then
