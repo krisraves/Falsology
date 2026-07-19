@@ -1,0 +1,98 @@
+name: Test browser caption relay routes
+
+on:
+  push:
+    paths:
+      - .github/workflows/test-cors-caption-routes.yml
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: statement-centered-clips
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test relay extraction
+        shell: bash
+        run: |
+          python <<'PY'
+          import html,json,re
+          from pathlib import Path
+          from urllib.parse import quote
+          import requests
+
+          videos=['TM8EXwemnYA','K7iAlZzVenU','amHb2UoVZ_g','3MuPWV5cTio']
+          relays=[
+            lambda url:f'https://api.allorigins.win/raw?url={quote(url,safe="")}',
+            lambda url:f'https://corsproxy.io/?{quote(url,safe="")}',
+          ]
+          uas=[
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36',
+            'Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 Chrome/126 Mobile Safari/537.36',
+          ]
+
+          def balanced_array(text,start):
+            depth=0;inside=False;escape=False
+            for i in range(start,len(text)):
+              ch=text[i]
+              if escape:escape=False;continue
+              if inside:
+                if ch=='\\':escape=True
+                elif ch=='"':inside=False
+                continue
+              if ch=='"':inside=True
+              elif ch=='[':depth+=1
+              elif ch==']':
+                depth-=1
+                if depth==0:return text[start:i+1]
+            return None
+
+          report={}
+          for vid in videos:
+            report[vid]=[]
+            watch=f'https://www.youtube.com/watch?v={vid}&hl=en'
+            for relay_index,build in enumerate(relays):
+              for ua in uas:
+                item={'relay':relay_index,'ua':ua[:35]}
+                try:
+                  r=requests.get(build(watch),headers={'User-Agent':ua},timeout=25)
+                  item.update({'watchStatus':r.status_code,'watchLength':len(r.text),'watchPrefix':r.text[:100]})
+                  text=r.text
+                  pos=text.find('"captionTracks":')
+                  item['captionMarker']=pos
+                  if pos>=0:
+                    bracket=text.find('[',pos)
+                    raw=balanced_array(text,bracket)
+                    tracks=json.loads(raw) if raw else []
+                    item['tracks']=[{k:t.get(k) for k in ['languageCode','kind','baseUrl']} for t in tracks[:4]]
+                    english=next((t for t in tracks if (t.get('languageCode') or '').startswith('en')),tracks[0] if tracks else None)
+                    if english and english.get('baseUrl'):
+                      capurl=html.unescape(english['baseUrl'])
+                      capurl += ('&' if '?' in capurl else '?')+'fmt=json3'
+                      cr=requests.get(build(capurl),headers={'User-Agent':ua},timeout=25)
+                      item.update({'captionStatus':cr.status_code,'captionLength':len(cr.text),'captionPrefix':cr.text[:200]})
+                      try:item['eventCount']=len(cr.json().get('events',[]))
+                      except Exception:item['eventCount']=0
+                except Exception as e:item['error']=f'{type(e).__name__}: {e}'
+                report[vid].append(item)
+                if item.get('eventCount'):break
+              if report[vid][-1].get('eventCount'):break
+          Path('timestamp-audit').mkdir(exist_ok=True)
+          Path('timestamp-audit/cors-route-test.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Commit test report
+        run: |
+          rm .github/workflows/test-cors-caption-routes.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record browser caption relay test" || exit 0
+          git push origin statement-centered-clips

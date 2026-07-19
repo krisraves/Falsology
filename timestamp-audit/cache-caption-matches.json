@@ -1,0 +1,955 @@
+{
+  "source": "https://youtube-transcript-storage.automatehub.workers.dev",
+  "cases": [
+    {
+      "caseNumber": "L01",
+      "person": "Chris Watts",
+      "claim": "I have no inclination of where they're at right now.",
+      "transcriptTarget": "I have no inclination of where they're at right now.",
+      "verdict": "lie",
+      "videoId": "3MuPWV5cTio",
+      "videoDurationSeconds": 487,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L02",
+      "person": "Susan Smith",
+      "claim": "A man carjacked me and took my boys.",
+      "transcriptTarget": "A man carjacked me and took my boys.",
+      "verdict": "lie",
+      "videoId": "KPPUHvMyBUs",
+      "videoDurationSeconds": 3989,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L03",
+      "person": "Diane Downs",
+      "claim": "A bushy-haired stranger shot my children.",
+      "transcriptTarget": "A bushy-haired stranger shot my children.",
+      "verdict": "lie",
+      "videoId": "Enghvd9o2As",
+      "videoDurationSeconds": 25,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L04",
+      "person": "Jodi Arias",
+      "claim": "I wasn't there when Travis was killed.",
+      "transcriptTarget": "I wasn't there when Travis was killed.",
+      "verdict": "lie",
+      "videoId": "ez-4b-yQGzg",
+      "videoDurationSeconds": 80,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L05",
+      "person": "Casey Anthony",
+      "claim": "A nanny named Zenaida took Caylee.",
+      "transcriptTarget": "A nanny named Zenaida took Caylee.",
+      "verdict": "lie",
+      "videoId": "ixzDBcMTnV8",
+      "videoDurationSeconds": 3938,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L06",
+      "person": "Ted Bundy",
+      "claim": "I am innocent.",
+      "transcriptTarget": "I am innocent.",
+      "verdict": "lie",
+      "videoId": "SmiiY1rQDVk",
+      "videoDurationSeconds": 42,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L07",
+      "person": "John Wayne Gacy",
+      "claim": "I don't believe I killed anybody.",
+      "transcriptTarget": "I don't believe I killed anybody.",
+      "verdict": "lie",
+      "videoId": "yQ4AT4q2DKs",
+      "videoDurationSeconds": 88,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L08",
+      "person": "Stephen McDaniel",
+      "claim": "I don't know what happened to Lauren.",
+      "transcriptTarget": "I don't know what happened to Lauren.",
+      "verdict": "lie",
+      "videoId": "YzbIhWu0gpQ",
+      "videoDurationSeconds": 105,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L09",
+      "person": "Jennifer Pan",
+      "claim": "Intruders tied me up and attacked my parents.",
+      "transcriptTarget": "Intruders tied me up and attacked my parents.",
+      "verdict": "lie",
+      "videoId": "amHb2UoVZ_g",
+      "videoDurationSeconds": 48,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L10",
+      "person": "Sarah Boone",
+      "claim": "It was not intentional. We were playing hide-and-seek.",
+      "transcriptTarget": "It was not intentional. We were playing hide-and-seek.",
+      "verdict": "lie",
+      "videoId": "9dhV651zp1o",
+      "videoDurationSeconds": 350,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L11",
+      "person": "Trevor Milton",
+      "claim": "The Nikola One is fully functioning.",
+      "transcriptTarget": "The Nikola One is fully functioning.",
+      "verdict": "lie",
+      "videoId": "DbXqiSYDhrA",
+      "videoDurationSeconds": 109,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L12",
+      "person": "Bernie Madoff",
+      "claim": "In today's regulatory environment, it's virtually impossible to violate the rules undetected.",
+      "transcriptTarget": "In today's regulatory environment, it's virtually impossible to violate the rules undetected.",
+      "verdict": "lie",
+      "videoId": "auTG_X2jG3E",
+      "videoDurationSeconds": 57,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L13",
+      "person": "Lance Armstrong",
+      "claim": "I have never doped.",
+      "transcriptTarget": "I have never doped.",
+      "verdict": "lie",
+      "videoId": "25ja7IAxQjY",
+      "videoDurationSeconds": 10,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L14",
+      "person": "Stephanie Lazarus",
+      "claim": "I barely knew Sherri Rasmussen.",
+      "transcriptTarget": "I barely knew Sherri Rasmussen.",
+      "verdict": "lie",
+      "videoId": "lC3va1aob3g",
+      "videoDurationSeconds": 159,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L15",
+      "person": "Pete Rose",
+      "claim": "I never bet on baseball.",
+      "transcriptTarget": "I never bet on baseball.",
+      "verdict": "lie",
+      "videoId": "h4fmEbgKeh0",
+      "videoDurationSeconds": 150,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L16",
+      "person": "Bill Clinton",
+      "claim": "I did not have sexual relations with that woman, Miss Lewinsky.",
+      "transcriptTarget": "I did not have sexual relations with that woman, Miss Lewinsky.",
+      "verdict": "lie",
+      "videoId": "TM8EXwemnYA",
+      "videoDurationSeconds": 38,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L17",
+      "person": "Kenneth Lay",
+      "claim": "The company is fundamentally strong.",
+      "transcriptTarget": "The company is fundamentally strong.",
+      "verdict": "lie",
+      "videoId": "S3EVIeZNHJU",
+      "videoDurationSeconds": 44,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L18",
+      "person": "Richard Nixon",
+      "claim": "I am not a crook.",
+      "transcriptTarget": "People have got to know whether or not their president is a crook. Well, I am not a crook.",
+      "verdict": "lie",
+      "videoId": "sh163n1lJ4M",
+      "videoDurationSeconds": 37,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L19",
+      "person": "Chandler Halderson",
+      "claim": "My parents went to their cabin for the weekend.",
+      "transcriptTarget": "My parents went to their cabin for the weekend.",
+      "verdict": "lie",
+      "videoId": "MVVmLa1vKio",
+      "videoDurationSeconds": 6408,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L20",
+      "person": "Richard Heene",
+      "claim": "It was not a hoax.",
+      "transcriptTarget": "It was not a hoax.",
+      "verdict": "lie",
+      "videoId": "_5AlMWoIRB4",
+      "videoDurationSeconds": 79,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L21",
+      "person": "Hillary Clinton",
+      "claim": "We landed under sniper fire.",
+      "transcriptTarget": "We landed under sniper fire.",
+      "verdict": "lie",
+      "videoId": "K0neF55UC-4",
+      "videoDurationSeconds": 19,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L22",
+      "person": "Sean Spicer",
+      "claim": "This was the largest audience ever to witness an inauguration, period.",
+      "transcriptTarget": "This was the largest audience ever to witness an inauguration, period.",
+      "verdict": "lie",
+      "videoId": "X2VKQfX5tSE",
+      "videoDurationSeconds": 5,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L23",
+      "person": "Tobacco executives",
+      "claim": "I believe nicotine is not addictive.",
+      "transcriptTarget": "I believe nicotine is not addictive.",
+      "verdict": "lie",
+      "videoId": "jOxVk_DhWes",
+      "videoDurationSeconds": 23,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L24",
+      "person": "Alex Jones",
+      "claim": "Sandy Hook was fake, with actors.",
+      "transcriptTarget": "Sandy Hook was fake, with actors.",
+      "verdict": "lie",
+      "videoId": "EdwfKrdUW1s",
+      "videoDurationSeconds": 161,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "L25",
+      "person": "Sherri Papini",
+      "claim": "Two women kidnapped and held me captive.",
+      "transcriptTarget": "Two women kidnapped and held me captive.",
+      "verdict": "lie",
+      "videoId": "GjjkyscsZR8",
+      "videoDurationSeconds": 439,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T01",
+      "person": "Dennis Rader",
+      "claim": "I killed ten people.",
+      "transcriptTarget": "I killed ten people.",
+      "verdict": "truth",
+      "videoId": "_yrRC1j7qeo",
+      "videoDurationSeconds": 106,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T02",
+      "person": "Jeffrey Dahmer",
+      "claim": "I killed seventeen people.",
+      "transcriptTarget": "I killed seventeen people.",
+      "verdict": "truth",
+      "videoId": "RUEnhXunarw",
+      "videoDurationSeconds": 1786,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T03",
+      "person": "Edmund Kemper",
+      "claim": "I killed my mother.",
+      "transcriptTarget": "I killed my mother.",
+      "verdict": "truth",
+      "videoId": "MKK3XDI7wTE",
+      "videoDurationSeconds": 261,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T04",
+      "person": "Aileen Wuornos",
+      "claim": "I killed seven men.",
+      "transcriptTarget": "I killed seven men.",
+      "verdict": "truth",
+      "videoId": "ToXjwzwaq3Y",
+      "videoDurationSeconds": 138,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T05",
+      "person": "Russell Williams",
+      "claim": "I killed Jessica Lloyd.",
+      "transcriptTarget": "I killed Jessica Lloyd.",
+      "verdict": "truth",
+      "videoId": "hzh3adTWZOg",
+      "videoDurationSeconds": 237,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T06",
+      "person": "Chris Watts",
+      "claim": "I killed Shanann.",
+      "transcriptTarget": "I killed Shanann.",
+      "verdict": "truth",
+      "videoId": "eWsXwpgCG8Q",
+      "videoDurationSeconds": 404,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T07",
+      "person": "Jodi Arias",
+      "claim": "Yes, I killed Travis.",
+      "transcriptTarget": "Yes, I killed Travis.",
+      "verdict": "truth",
+      "videoId": "Qvde4s--GrM",
+      "videoDurationSeconds": 75,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T08",
+      "person": "Alex Murdaugh",
+      "claim": "I lied about being at the kennels.",
+      "transcriptTarget": "I lied about being at the kennels.",
+      "verdict": "truth",
+      "videoId": "rEXrNoyv4Q8",
+      "videoDurationSeconds": 245,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T09",
+      "person": "Richard Jewell",
+      "claim": "I did not plant the Olympic Park bomb.",
+      "transcriptTarget": "I did not plant the Olympic Park bomb.",
+      "verdict": "truth",
+      "videoId": "DPMOiJIayPc",
+      "videoDurationSeconds": 172,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T10",
+      "person": "Lindy Chamberlain",
+      "claim": "A dingo took my baby.",
+      "transcriptTarget": "A dingo took my baby.",
+      "verdict": "truth",
+      "videoId": "WRyeAkP17aM",
+      "videoDurationSeconds": 96,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T11",
+      "person": "Kirk Bloodsworth",
+      "claim": "DNA proved I did not commit the murder.",
+      "transcriptTarget": "DNA proved I did not commit the murder.",
+      "verdict": "truth",
+      "videoId": "q47wkZXczwY",
+      "videoDurationSeconds": 80,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T12",
+      "person": "Anthony Ray Hinton",
+      "claim": "I spent thirty years on death row for a crime I did not commit.",
+      "transcriptTarget": "I spent thirty years on death row for a crime I did not commit.",
+      "verdict": "truth",
+      "videoId": "po2ui6EYW8Y",
+      "videoDurationSeconds": 114,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T13",
+      "person": "Elizabeth Smart",
+      "claim": "I was held captive for nine months.",
+      "transcriptTarget": "I was held captive for nine months.",
+      "verdict": "truth",
+      "videoId": "2w-ZdPkNvFY",
+      "videoDurationSeconds": 118,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T14",
+      "person": "Jaycee Dugard",
+      "claim": "I was held captive for eighteen years.",
+      "transcriptTarget": "I was held captive for eighteen years.",
+      "verdict": "truth",
+      "videoId": "yXRPgKLnWnU",
+      "videoDurationSeconds": 113,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T15",
+      "person": "Mary Vincent",
+      "claim": "He cut off both my arms, and I survived.",
+      "transcriptTarget": "He cut off both my arms, and I survived.",
+      "verdict": "truth",
+      "videoId": "W259o2tO2pc",
+      "videoDurationSeconds": 25,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T16",
+      "person": "Aron Ralston",
+      "claim": "I cut off my own arm to survive.",
+      "transcriptTarget": "I cut off my own arm to survive.",
+      "verdict": "truth",
+      "videoId": "idLfpNH5KTc",
+      "videoDurationSeconds": 55,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T17",
+      "person": "Harrison Okene",
+      "claim": "I survived nearly three days in an air pocket inside a sunken ship.",
+      "transcriptTarget": "I survived nearly three days in an air pocket inside a sunken ship.",
+      "verdict": "truth",
+      "videoId": "qevehxLe2s4",
+      "videoDurationSeconds": 83,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T18",
+      "person": "Ricky Megee",
+      "claim": "I survived 71 days alone in the Australian outback.",
+      "transcriptTarget": "I survived 71 days alone in the Australian outback.",
+      "verdict": "truth",
+      "videoId": "Ka0MVmd5Tes",
+      "videoDurationSeconds": 594,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T19",
+      "person": "Robert Downey Jr.",
+      "claim": "My addiction led to prison.",
+      "transcriptTarget": "My addiction led to prison.",
+      "verdict": "truth",
+      "videoId": "mFol0tP0pGg",
+      "videoDurationSeconds": 28,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T20",
+      "person": "Mike Tyson",
+      "claim": "I bit Evander Holyfield's ear.",
+      "transcriptTarget": "I bit Evander Holyfield's ear.",
+      "verdict": "truth",
+      "videoId": "qC4AG8x2768",
+      "videoDurationSeconds": 44,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T21",
+      "person": "Michael Packard",
+      "claim": "A humpback whale had me inside its mouth and spit me back out.",
+      "transcriptTarget": "A humpback whale had me inside its mouth and spit me back out.",
+      "verdict": "truth",
+      "videoId": "K7iAlZzVenU",
+      "videoDurationSeconds": 520,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T22",
+      "person": "Sammy Gravano",
+      "claim": "I was involved in nineteen murders.",
+      "transcriptTarget": "I was involved in nineteen murders.",
+      "verdict": "truth",
+      "videoId": "diqdKgEzOkE",
+      "videoDurationSeconds": 225,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T23",
+      "person": "Paul Templer",
+      "claim": "I was trapped inside a hippo's mouth and survived repeated attacks.",
+      "transcriptTarget": "I was trapped inside a hippo's mouth and survived repeated attacks.",
+      "verdict": "truth",
+      "videoId": "sjVgpvlzrXM",
+      "videoDurationSeconds": 767,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T24",
+      "person": "Michael Morton",
+      "claim": "I spent nearly 25 years in prison for my wife's murder, but DNA proved I was innocent.",
+      "transcriptTarget": "I spent nearly 25 years in prison for my wife's murder, but DNA proved I was innocent.",
+      "verdict": "truth",
+      "videoId": "kv3j7yd7kTk",
+      "videoDurationSeconds": 1219,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    },
+    {
+      "caseNumber": "T25",
+      "person": "Lance Armstrong",
+      "claim": "I used banned substances during my Tour victories.",
+      "transcriptTarget": "I used banned substances during my Tour victories.",
+      "verdict": "truth",
+      "videoId": "FRXzbNReCR0",
+      "videoDurationSeconds": 65,
+      "cached": false,
+      "recordTitle": null,
+      "timestampRows": 0,
+      "topMatches": [],
+      "preview": [],
+      "errors": [
+        "cache GET 404: {\"error\":\"Transcript not found\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}",
+        "fetch POST 500: {\"error\":\"Unexpected token 'e', \\\"error code: 1016\\\" is not valid JSON\"}"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+name: Locate spoken statements with timestamped captions
+
+on:
+  push:
+    paths:
+      - .github/workflows/find-statement-centers-cloudflare.yml
+
+permissions:
+  contents: write
+
+jobs:
+  locate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: statement-centered-clips
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install matching tools
+        run: pip install -U requests rapidfuzz
+      - name: Retrieve caption segments and locate each statement
+        shell: bash
+        run: |
+          python <<'PY'
+          import html
+          import json
+          import re
+          import time
+          from concurrent.futures import ThreadPoolExecutor, as_completed
+          from pathlib import Path
+
+          import requests
+          from rapidfuzz import fuzz
+
+          TRANSCRIPT_WORKER = "https://delicate-disk-ef3f.tranductrist.workers.dev"
+          SESSION = requests.Session()
+          SESSION.headers.update({"User-Agent": "Falsology editorial timestamp audit/1.0"})
+
+          def load(path):
+              return json.loads(Path(path).read_text())
+
+          base_cases = []
+          for path in sorted(Path("data/cases").glob("part*.json")):
+              base_cases.extend(load(path))
+
+          layers = [
+              load("data/case-overrides.json"),
+              load("data/direct-footage-replacements.json"),
+              load("data/obscure-case-replacements.json"),
+              load("data/english-weird-replacements.json"),
+          ]
+
+          def merge_case(case, override):
+              if not override:
+                  return case
+              merged = {**case, **override}
+              merged["media"] = {**case.get("media", {}), **override.get("media", {})}
+              return merged
+
+          cases = []
+          for case in base_cases:
+              for layer in layers:
+                  case = merge_case(case, layer.get(case["caseNumber"]))
+              cases.append(case)
+
+          def normalize(text):
+              text = html.unescape(text or "").lower().replace("’", "'")
+              replacements = [
+                  (r"\bi am\b", "i'm"),
+                  (r"\bdid not\b", "didn't"),
+                  (r"\bdo not\b", "don't"),
+                  (r"\bwas not\b", "wasn't"),
+                  (r"\bcould not\b", "couldn't"),
+                  (r"\bthey are\b", "they're"),
+                  (r"\bwe are\b", "we're"),
+                  (r"\bi have\b", "i've"),
+              ]
+              for pattern, replacement in replacements:
+                  text = re.sub(pattern, replacement, text)
+              text = re.sub(r"[^a-z0-9']+", " ", text)
+              return re.sub(r"\s+", " ", text).strip()
+
+          def fetch_segments(video_id):
+              errors = []
+              for attempt in range(4):
+                  try:
+                      response = SESSION.get(
+                          f"{TRANSCRIPT_WORKER}/",
+                          params={"videoId": video_id},
+                          timeout=25,
+                      )
+                      if response.ok:
+                          payload = response.json()
+                          if isinstance(payload, list) and payload:
+                              raw = []
+                              for item in payload:
+                                  text = str(item.get("text") or "").strip()
+                                  start = item.get("start")
+                                  if text and isinstance(start, (int, float)):
+                                      raw.append({"text": text, "start": float(start)})
+                              raw.sort(key=lambda item: item["start"])
+                              if raw:
+                                  segments = []
+                                  for index, item in enumerate(raw):
+                                      next_start = (
+                                          raw[index + 1]["start"]
+                                          if index + 1 < len(raw)
+                                          else item["start"] + 4.0
+                                      )
+                                      duration = max(0.4, min(12.0, next_start - item["start"]))
+                                      segments.append(
+                                          {
+                                              "text": item["text"],
+                                              "start": item["start"],
+                                              "duration": duration,
+                                          }
+                                      )
+                                  return segments, errors
+                          errors.append(f"attempt {attempt + 1}: empty transcript payload")
+                      else:
+                          errors.append(
+                              f"attempt {attempt + 1}: HTTP {response.status_code}: {response.text[:300]}"
+                          )
+                  except Exception as error:
+                      errors.append(f"attempt {attempt + 1}: {type(error).__name__}: {error}")
+                  time.sleep(1.2 * (attempt + 1))
+              return [], errors
+
+          def score_window(target, candidate):
+              return max(
+                  fuzz.ratio(target, candidate),
+                  fuzz.partial_ratio(target, candidate),
+                  fuzz.token_set_ratio(target, candidate),
+                  fuzz.token_sort_ratio(target, candidate),
+                  fuzz.WRatio(target, candidate),
+              )
+
+          def locate_statement(segments, targets):
+              normalized_targets = [normalize(value) for value in targets if normalize(value)]
+              candidates = []
+              for start_index in range(len(segments)):
+                  combined = ""
+                  for end_index in range(start_index, min(len(segments), start_index + 20)):
+                      combined = (combined + " " + segments[end_index]["text"]).strip()
+                      candidate = normalize(combined)
+                      if not candidate:
+                          continue
+                      raw_score = max(
+                          score_window(target, candidate) for target in normalized_targets
+                      )
+                      statement_start = segments[start_index]["start"]
+                      statement_end = (
+                          segments[end_index]["start"] + segments[end_index]["duration"]
+                      )
+                      span = statement_end - statement_start
+                      length_penalty = max(0, span - 22) * 0.35
+                      segment_penalty = max(0, end_index - start_index - 10) * 0.6
+                      adjusted_score = raw_score - length_penalty - segment_penalty
+                      candidates.append(
+                          {
+                              "score": round(adjusted_score, 2),
+                              "rawScore": round(raw_score, 2),
+                              "statementStartSeconds": round(statement_start, 2),
+                              "statementEndSeconds": round(statement_end, 2),
+                              "matchedText": combined,
+                              "segmentStartIndex": start_index,
+                              "segmentEndIndex": end_index,
+                          }
+                      )
+              candidates.sort(key=lambda item: item["score"], reverse=True)
+              return candidates[:8]
+
+          def process(case):
+              video_id = case["media"]["youtubeId"]
+              segments, errors = fetch_segments(video_id)
+              matches = locate_statement(
+                  segments,
+                  [case.get("claim", ""), case.get("transcript", "")],
+              ) if segments else []
+              return {
+                  "caseNumber": case["caseNumber"],
+                  "person": case["person"],
+                  "claim": case["claim"],
+                  "transcriptTarget": case.get("transcript"),
+                  "verdict": case["verdict"],
+                  "videoId": video_id,
+                  "videoDurationSeconds": case["media"].get("videoDurationSeconds"),
+                  "currentStartSeconds": case["media"].get("startSeconds"),
+                  "currentEndSeconds": case["media"].get("endSeconds"),
+                  "transcriptSegments": len(segments),
+                  "topMatches": matches,
+                  "captionPreview": segments[:12],
+                  "errors": errors,
+              }
+
+          results = []
+          with ThreadPoolExecutor(max_workers=4) as executor:
+              futures = {executor.submit(process, case): case for case in cases}
+              for future in as_completed(futures):
+                  result = future.result()
+                  results.append(result)
+                  best = result["topMatches"][0] if result["topMatches"] else None
+                  print(
+                      f'{result["caseNumber"]}: segments={result["transcriptSegments"]} '
+                      f'score={best["rawScore"] if best else None} '
+                      f'time={best["statementStartSeconds"] if best else None}'
+                  )
+
+          results.sort(key=lambda item: item["caseNumber"])
+          Path("timestamp-audit").mkdir(exist_ok=True)
+          Path("timestamp-audit/cloudflare-caption-matches.json").write_text(
+              json.dumps(
+                  {
+                      "source": TRANSCRIPT_WORKER,
+                      "generatedAt": "2026-07-15",
+                      "cases": results,
+                  },
+                  indent=2,
+                  ensure_ascii=False,
+              ) + "\n"
+          )
+          PY
+      - name: Commit report
+        run: |
+          rm .github/workflows/find-statement-centers-cloudflare.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record timestamped statement matches" || exit 0
+          git push origin statement-centered-clips
