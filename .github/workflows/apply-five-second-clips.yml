@@ -1,4 +1,4 @@
-name: Apply five-second clip windows
+name: Apply content expansion interface changes
 
 on:
   pull_request:
@@ -14,32 +14,34 @@ permissions:
 
 jobs:
   apply-and-validate:
-    if: github.head_ref == 'agent/120-case-decks'
+    if: github.head_ref == 'agent/content-expansion'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/120-case-decks
+          ref: agent/content-expansion
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - name: Apply shorter clips
-        run: node scripts/apply-five-second-clips.mjs
+      - name: Apply truth-lie controls and shorter clips
+        run: |
+          node scripts/apply-content-expansion-ui.mjs
+          node scripts/apply-five-second-clips.mjs
       - name: Validate application
         run: |
           npm ci
           npm run lint
           npm run typecheck
           npm run build
-      - name: Save migrated clip data
+      - name: Save interface and clip changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/exact-statement-overrides.json
+          git add components/GameClient.tsx scripts/validate-detective-cases.mjs data/exact-statement-overrides.json
           if ! git diff --cached --quiet; then
-            git commit -m "Shorten statement clips to five-second context"
-            git push origin agent/120-case-decks
+            git commit -m "Use truth-lie controls and five-second context"
+            git push origin agent/content-expansion
           fi
