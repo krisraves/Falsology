@@ -7,13 +7,13 @@
         "recovered": 0,
         "unresolved": 12
       },
-      "hard": {
-        "recovered": 0,
-        "unresolved": 14
-      },
       "medium": {
         "recovered": 0,
         "unresolved": 12
+      },
+      "hard": {
+        "recovered": 0,
+        "unresolved": 14
       }
     }
   },
@@ -43,19 +43,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "8X8Lm--bDi4",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "COHty3iEFqM",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "iug-f8VXrGs",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "SawldEnQ74M",
+          "videoId": "8X8Lm--bDi4",
           "reason": "no timed transcript"
         },
         {
@@ -63,11 +55,19 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "uUgGNmJFjTE",
+          "videoId": "SawldEnQ74M",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "9Fz9qbRakN0",
+          "videoId": "iug-f8VXrGs",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZHPqSp_oc5U",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "uUgGNmJFjTE",
           "reason": "no timed transcript"
         }
       ]
@@ -113,11 +113,11 @@
       "difficulty": "hard",
       "attempts": [
         {
-          "videoId": "T4KqJeXCbvc",
+          "videoId": "MX_HYL6-0Co",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "MX_HYL6-0Co",
+          "videoId": "T4KqJeXCbvc",
           "reason": "no timed transcript"
         },
         {
@@ -125,7 +125,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "vzzUYaf1vNY",
+          "videoId": "GbDJ5AZ1SHk",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "zIpNLaQYaF8",
           "reason": "no timed transcript"
         }
       ]
@@ -155,11 +159,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "_tDWAYIXm1k",
+          "videoId": "wumgEcIV5dY",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "wumgEcIV5dY",
+          "videoId": "_tDWAYIXm1k",
           "reason": "no timed transcript"
         },
         {
@@ -168,6 +172,10 @@
         },
         {
           "videoId": "7GQGHBJjdrE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZeKn46fMrc8",
           "reason": "no timed transcript"
         }
       ]
@@ -179,32 +187,7 @@
       "claim": "I believe nicotine is not addictive.",
       "verdict": "lie",
       "difficulty": "medium",
-      "attempts": [
-        {
-          "videoId": "e_ZDQKq2F08",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "A6B1q22R438",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "NC4f_yfuR34",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "QCZLkHf3ca0",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "Kr6lrJoamhw",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "0BA1K-jMaBE",
-          "reason": "no timed transcript"
-        }
-      ]
+      "attempts": []
     },
     {
       "caseNumber": "L14",
@@ -241,15 +224,15 @@
       "difficulty": "medium",
       "attempts": [
         {
+          "videoId": "6NdUiTOnNrY",
+          "reason": "no timed transcript"
+        },
+        {
           "videoId": "t-v1UXFMzl0",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "WyGq6cjcc3Q",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "6NdUiTOnNrY",
+          "videoId": "K-um5_dSQkk",
           "reason": "no timed transcript"
         },
         {
@@ -257,7 +240,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "K-um5_dSQkk",
+          "videoId": "WyGq6cjcc3Q",
           "reason": "no timed transcript"
         },
         {
@@ -322,10 +305,6 @@
         {
           "videoId": "MlQsm_HCuKc",
           "reason": "no timed transcript"
-        },
-        {
-          "videoId": "OMBQwGzn_TE",
-          "reason": "no timed transcript"
         }
       ]
     },
@@ -354,7 +333,56 @@
       "claim": "I have never doped.",
       "verdict": "lie",
       "difficulty": "medium",
-      "attempts": []
+      "attempts": [
+        {
+          "videoId": "u1qf9TlFTl4",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "DX38XZkulbw",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZxkULBtpF3s",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "0sR8Qrj12gE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "Vot-s5p1l5A",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "tpb-VBNoEC0",
+          "reason": "not public or embeddable"
+        },
+        {
+          "videoId": "mSwStl7X--4",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "p8AH-nZxg4k",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "d5bKs2GaOQE",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "IWU9CAVrFAs",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "w2uGDti1zYc",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "4RBjrLGdw7c",
+          "reason": "no timed transcript"
+        }
+      ]
     },
     {
       "caseNumber": "L21",
@@ -377,15 +405,15 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "mL0j_CN7dpw",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "Ak_2_gQUZ5s",
           "reason": "no timed transcript"
         },
         {
           "videoId": "Z3v7jCKttyU",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "mL0j_CN7dpw",
           "reason": "no timed transcript"
         },
         {
@@ -437,19 +465,15 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "Kr6lrJoamhw",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "QCZLkHf3ca0",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "0BA1K-jMaBE",
+          "videoId": "Kr6lrJoamhw",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "OtXcthvgZdY",
+          "videoId": "0BA1K-jMaBE",
           "reason": "no timed transcript"
         }
       ]
@@ -463,11 +487,11 @@
       "difficulty": "hard",
       "attempts": [
         {
-          "videoId": "wuC2tdSPMVg",
+          "videoId": "K-um5_dSQkk",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "K-um5_dSQkk",
+          "videoId": "wuC2tdSPMVg",
           "reason": "no timed transcript"
         },
         {
@@ -560,11 +584,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "N6JEED6eF_c",
+          "videoId": "lWafl_2gIKE",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "lWafl_2gIKE",
+          "videoId": "N6JEED6eF_c",
           "reason": "no timed transcript"
         },
         {
@@ -586,10 +610,6 @@
         {
           "videoId": "O-RxzSQWR3E",
           "reason": "no timed transcript"
-        },
-        {
-          "videoId": "lOJCDB3n0h8",
-          "reason": "no timed transcript"
         }
       ]
     },
@@ -603,10 +623,6 @@
       "attempts": [
         {
           "videoId": "iCaSkURTBSI",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "apX4Fb024EI",
           "reason": "no timed transcript"
         }
       ]
