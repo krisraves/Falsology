@@ -6,6 +6,10 @@ import type { Claim, PlayerState, Verdict } from "@/lib/types";
 import { AdSlot } from "@/components/AdSlot";
 import { MediaPanel } from "@/components/MediaPanel";
 import { ReportDialog } from "@/components/ReportDialog";
+import { ReviewDialog } from "@/components/ReviewDialog";
+import { lyingFacts } from "@/data/lying-facts";
+
+const SECTION_SIZE = 4;
 
 const EMPTY_STATE: PlayerState = {
   score: 0,
@@ -15,6 +19,11 @@ const EMPTY_STATE: PlayerState = {
   correct: 0,
   history: [],
   saved: [],
+};
+
+type SectionResult = {
+  correct: boolean;
+  points: number;
 };
 
 function readState(): PlayerState {
@@ -68,8 +77,11 @@ export function GameClient({
   const [player, setPlayer] = useState<PlayerState>(EMPTY_STATE);
   const [expanded, setExpanded] = useState(false);
   const [reporting, setReporting] = useState(false);
+  const [reviewing, setReviewing] = useState(false);
   const [copied, setCopied] = useState(false);
   const [adBreak, setAdBreak] = useState(false);
+  const [sectionResults, setSectionResults] = useState<SectionResult[]>([]);
+  const [factIndex, setFactIndex] = useState(() => Math.floor(Math.random() * lyingFacts.length));
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -83,11 +95,17 @@ export function GameClient({
   const correct = answer === claim.verdict;
   const accuracy = player.answered ? Math.round((player.correct / player.answered) * 100) : 0;
   const saved = player.saved.includes(claim.id);
+  const sectionCorrect = sectionResults.filter((result) => result.correct).length;
+  const sectionPoints = sectionResults.reduce((total, result) => total + result.points, 0);
+  const sectionAccuracy = sectionResults.length
+    ? Math.round((sectionCorrect / sectionResults.length) * 100)
+    : 0;
+  const fact = lyingFacts[factIndex % lyingFacts.length];
 
   const sessionLabel = useMemo(() => {
     if (mode === "daily") return `Daily case ${Math.min(index + 1, queue.length)} / ${queue.length}`;
     if (mode === "category") return `Case ${Math.min(index + 1, queue.length)} / ${queue.length}`;
-    return `${levelLabel} · Case ${String(index + 1).padStart(2, "0")}`;
+    return `${levelLabel} · Case ${String((index % queue.length) + 1).padStart(2, "0")} / ${queue.length}`;
   }, [index, levelLabel, mode, queue.length]);
 
   function persist(next: PlayerState) {
@@ -113,6 +131,7 @@ export function GameClient({
       ].slice(0, 100),
     };
     persist(next);
+    setSectionResults((current) => [...current, { correct: isCorrect, points }]);
     setAnswer(value);
   }
 
@@ -126,8 +145,25 @@ export function GameClient({
   }
 
   function nextClaim() {
-    if (player.answered > 0 && player.answered % 4 === 0) setAdBreak(true);
+    if (sectionResults.length >= SECTION_SIZE) setAdBreak(true);
     else advance();
+  }
+
+  function continueDeck() {
+    setSectionResults([]);
+    setFactIndex((current) => (current + 1 + Math.floor(Math.random() * (lyingFacts.length - 1))) % lyingFacts.length);
+    advance();
+  }
+
+  function reshuffleDeck() {
+    setQueue(balancedQueue(initialClaims));
+    setIndex(0);
+    setAnswer(null);
+    setExpanded(false);
+    setAdBreak(false);
+    setSectionResults([]);
+    setFactIndex((current) => (current + 1) % lyingFacts.length);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function skipUnavailableClaim() {
@@ -164,14 +200,44 @@ export function GameClient({
 
   if (adBreak) {
     return (
-      <main className="detective-game detective-ad-break">
-        <section className="case-break-card">
-          <p className="case-kicker">Case break</p>
-          <h1>Four cases cleared.</h1>
-          <AdSlot placement="interstitial" label="Sponsored break" />
-          <button className="detective-primary" onClick={advance}>Next case →</button>
-        </section>
-      </main>
+      <>
+        <main className="detective-game detective-ad-break">
+          <section className="case-break-card">
+            <p className="case-kicker">Case break · History of deception</p>
+            <h1>{fact.fact}</h1>
+            <a className="text-link" href={fact.sourceUrl} target="_blank" rel="noreferrer">
+              Source: {fact.sourceTitle} ↗
+            </a>
+
+            <div className="section-scorecard" aria-label="Section scorecard">
+              <p className="case-kicker">Section scorecard</p>
+              <div className="section-score-grid">
+                <span><small>Correct</small><strong>{sectionCorrect} / {sectionResults.length}</strong></span>
+                <span><small>Accuracy</small><strong>{sectionAccuracy}%</strong></span>
+                <span><small>Points</small><strong>{sectionPoints}</strong></span>
+                <span><small>Best streak</small><strong>{player.bestStreak}</strong></span>
+              </div>
+            </div>
+
+            <AdSlot placement="interstitial" label="Sponsored break" />
+
+            <div className="section-break-actions">
+              <button className="detective-primary" onClick={continueDeck}>Continue current deck →</button>
+              <button className="detective-secondary" onClick={reshuffleDeck}>Reshuffle {levelLabel}</button>
+              <Link className="detective-secondary" href="/">Choose new difficulty</Link>
+              <button className="detective-secondary" onClick={() => setReviewing(true)}>Leave a review</button>
+            </div>
+          </section>
+        </main>
+        {reviewing ? (
+          <ReviewDialog
+            levelLabel={levelLabel}
+            correct={sectionCorrect}
+            answered={sectionResults.length}
+            onClose={() => setReviewing(false)}
+          />
+        ) : null}
+      </>
     );
   }
 
@@ -193,7 +259,7 @@ export function GameClient({
         <div className="site-shell detective-layout">
           <section className="case-file-card">
             <div className="case-video-shell">
-              <div className="case-tape-label">VIDEO · {claim.media.endSeconds - claim.media.startSeconds}s</div>
+              <div className="case-tape-label">VIDEO EVIDENCE</div>
               <MediaPanel key={claim.id} claim={claim} onUnavailable={skipUnavailableClaim} />
               <button className="report-link" onClick={() => setReporting(true)}>⚑ Report</button>
             </div>

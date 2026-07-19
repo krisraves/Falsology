@@ -1,0 +1,71 @@
+.case-break-card > h1 {
+  max-width: 860px;
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 5vw, 4.7rem);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+
+.section-scorecard {
+  width: 100%;
+  margin: 30px 0 24px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.section-score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.section-score-grid span {
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+}
+
+.section-score-grid small {
+  color: var(--muted);
+  font-size: .65rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.section-score-grid strong {
+  margin-top: 4px;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.section-break-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 22px;
+}
+
+.section-break-actions > * {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .section-score-grid,
+  .section-break-actions {
+    grid-template-columns: 1fr;
+  }
+}
