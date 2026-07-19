@@ -1,0 +1,1 @@
+Run the restored-candidate and archive-recovery content build.
