@@ -10,6 +10,7 @@ const obscureReplacements = JSON.parse(readFileSync(resolve("data/obscure-case-r
 const englishReplacements = JSON.parse(readFileSync(resolve("data/english-weird-replacements.json"), "utf8"));
 const exactOverrides = JSON.parse(readFileSync(resolve("data/exact-statement-overrides.json"), "utf8"));
 const activeCaseNumbers = JSON.parse(readFileSync(resolve("data/active-case-numbers.json"), "utf8"));
+const generatedClaims = JSON.parse(readFileSync(resolve("data/generated-cases.json"), "utf8"));
 const difficultyMap = JSON.parse(readFileSync(resolve("data/difficulty-map.json"), "utf8"));
 const activeSet = new Set(activeCaseNumbers);
 
@@ -17,7 +18,7 @@ function applyOverride(claim, override = {}) {
   return { ...claim, ...override, media: { ...(claim.media ?? {}), ...(override.media ?? {}) } };
 }
 
-const claims = baseClaims
+const archivedClaims = baseClaims
   .map((claim) => {
     const reviewed = applyOverride(claim, overrides[claim.caseNumber]);
     const direct = applyOverride(reviewed, directReplacements[claim.caseNumber]);
@@ -28,6 +29,7 @@ const claims = baseClaims
   })
   .filter((claim) => activeSet.has(claim.caseNumber));
 
+const claims = [...archivedClaims, ...generatedClaims];
 const failures = [];
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
 const unique = (values) => new Set(values).size === values.length;
@@ -40,11 +42,12 @@ const allowedSourceKinds = new Set([
   "police-confession", "court-testimony", "raw-release-statement", "documentary-interview", "direct-confession",
 ]);
 
-if (filenames.length !== 10) failures.push(`Expected 10 case files, found ${filenames.length}.`);
+if (filenames.length !== 10) failures.push(`Expected 10 archived case files, found ${filenames.length}.`);
 if (baseClaims.length !== 50) failures.push(`Expected 50 archived cases, found ${baseClaims.length}.`);
-if (!Array.isArray(activeCaseNumbers) || activeCaseNumbers.length !== 12) failures.push(`Expected 12 active cases, found ${activeCaseNumbers.length}.`);
-if (!unique(activeCaseNumbers)) failures.push("Active case numbers are not unique.");
-if (claims.length !== activeCaseNumbers.length) failures.push(`Expected ${activeCaseNumbers.length} active cases, found ${claims.length}.`);
+if (!Array.isArray(activeCaseNumbers) || activeCaseNumbers.length !== 12) failures.push(`Expected 12 retained archived cases, found ${activeCaseNumbers.length}.`);
+if (!Array.isArray(generatedClaims) || generatedClaims.length !== 108) failures.push(`Expected 108 newly generated cases, found ${generatedClaims.length}.`);
+if (!unique(activeCaseNumbers)) failures.push("Retained archived case numbers are not unique.");
+if (claims.length !== 120) failures.push(`Expected 120 active cases, found ${claims.length}.`);
 if (!unique(claims.map((claim) => claim.id))) failures.push("Case IDs are not unique.");
 if (!unique(claims.map((claim) => claim.slug))) failures.push("Case slugs are not unique.");
 if (!unique(claims.map((claim) => claim.caseNumber))) failures.push("Case numbers are not unique.");
@@ -52,12 +55,12 @@ if (!unique(claims.map((claim) => claim.media?.youtubeId))) failures.push("Every
 
 const truths = claims.filter((claim) => claim.verdict === "truth").length;
 const lies = claims.filter((claim) => claim.verdict === "lie").length;
-if (truths !== 6 || lies !== 6) failures.push(`Expected 6 truths and 6 lies, found ${truths}/${lies}.`);
+if (truths !== 60 || lies !== 60) failures.push(`Expected 60 truths and 60 lies, found ${truths}/${lies}.`);
 
 const expectedTiers = {
-  easy: { total: 4, truths: 2, lies: 2 },
-  medium: { total: 4, truths: 2, lies: 2 },
-  hard: { total: 4, truths: 2, lies: 2 },
+  easy: { total: 40, truths: 20, lies: 20 },
+  medium: { total: 40, truths: 20, lies: 20 },
+  hard: { total: 40, truths: 20, lies: 20 },
 };
 for (const [difficulty, expected] of Object.entries(expectedTiers)) {
   const tier = claims.filter((claim) => claim.difficulty === difficulty);
@@ -71,7 +74,9 @@ for (const [difficulty, expected] of Object.entries(expectedTiers)) {
 for (const claim of claims) {
   const label = claim.caseNumber || claim.id || "unknown case";
   const media = claim.media ?? {};
-  if (!Object.hasOwn(exactOverrides, claim.caseNumber)) failures.push(`${label}: missing exact statement override.`);
+  const isArchived = activeSet.has(claim.caseNumber);
+  if (isArchived && !Object.hasOwn(exactOverrides, claim.caseNumber)) failures.push(`${label}: missing exact statement override.`);
+  if (!isArchived && !/^G\d{3}$/.test(claim.caseNumber)) failures.push(`${label}: generated case number must use G000 format.`);
   if (media.type !== "youtube" || typeof media.youtubeId !== "string" || media.youtubeId.length !== 11) failures.push(`${label}: invalid YouTube source.`);
   const values = [media.startSeconds, media.endSeconds, media.statementStartSeconds, media.statementEndSeconds, media.videoDurationSeconds];
   if (!values.every(finite)) failures.push(`${label}: clip and statement times must be finite numbers.`);
@@ -91,9 +96,13 @@ for (const claim of claims) {
   if (media.directStatement !== true) failures.push(`${label}: named person must make the statement directly.`);
   if (media.newsPackage !== false) failures.push(`${label}: playable segment cannot be a reporter package or commentary montage.`);
   if (!allowedSourceKinds.has(media.sourceKind)) failures.push(`${label}: unapproved source kind ${media.sourceKind}.`);
-  if (media.verifiedAt !== "2026-07-16") failures.push(`${label}: exact statement verification date is missing or stale.`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(media.verifiedAt ?? "")) || String(media.verifiedAt) < "2026-07-16") failures.push(`${label}: exact statement verification date is missing or stale.`);
   if (!Array.isArray(claim.signals) || claim.signals.length < 2) failures.push(`${label}: needs at least two evidence signals.`);
   if (!Array.isArray(claim.sources) || claim.sources.length < 2) failures.push(`${label}: needs at least two evidence sources.`);
+  else {
+    if (!claim.sources.some((source) => source.type === "primary" && /^https:\/\//.test(source.url))) failures.push(`${label}: needs a valid primary source.`);
+    if (!claim.sources.some((source) => source.type === "secondary" && /^https:\/\//.test(source.url))) failures.push(`${label}: needs a valid secondary source.`);
+  }
   for (const field of ["person", "claim", "prompt", "shortExplanation", "fullTruth", "lesson", "editorialBoundary"]) {
     if (typeof claim[field] !== "string" || claim[field].trim().length < 8) failures.push(`${label}: invalid ${field}.`);
   }
@@ -104,4 +113,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log("Validated 12 transcript-backed cases: 6 truth, 6 lie, 12 unique videos; every clip is centered ±5 seconds around the exact displayed statement.");
+console.log("Validated 120 transcript-backed cases: 60 truth, 60 lie, 120 unique videos; every clip is centered ±5 seconds around the exact displayed statement.");
