@@ -1,0 +1,8 @@
+{
+  "easy": 40,
+  "medium": 40,
+  "hard": 40,
+  "total": 120,
+  "truthsPerDifficulty": 20,
+  "liesPerDifficulty": 20
+}
