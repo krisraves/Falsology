@@ -39,7 +39,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "8X8Lm--bDi4",
+          "videoId": "WFq8KfA9MlQ",
           "reason": "no timed transcript"
         },
         {
@@ -47,7 +47,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "WFq8KfA9MlQ",
+          "videoId": "8X8Lm--bDi4",
           "reason": "no timed transcript"
         },
         {
@@ -55,11 +55,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "JyOnyPpIriQ",
+          "videoId": "nb--N4mDs3w",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "uUgGNmJFjTE",
+          "videoId": "iug-f8VXrGs",
           "reason": "no timed transcript"
         },
         {
@@ -67,7 +67,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "iug-f8VXrGs",
+          "videoId": "uUgGNmJFjTE",
           "reason": "no timed transcript"
         }
       ]
@@ -127,6 +127,10 @@
         {
           "videoId": "vzzUYaf1vNY",
           "reason": "no timed transcript"
+        },
+        {
+          "videoId": "GbDJ5AZ1SHk",
+          "reason": "no timed transcript"
         }
       ]
     },
@@ -137,44 +141,7 @@
       "claim": "We just ran with our heads down to get into the vehicles.",
       "verdict": "lie",
       "difficulty": "hard",
-      "attempts": [
-        {
-          "videoId": "CWS21zYx6J8",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "2faZWUy-mPM",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "b-dwobZGirc",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "nhkr03vmpdo",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "_tDWAYIXm1k",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "wumgEcIV5dY",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "GsxbCplcfHI",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "7GQGHBJjdrE",
-          "reason": "no timed transcript"
-        },
-        {
-          "videoId": "ZeKn46fMrc8",
-          "reason": "no timed transcript"
-        }
-      ]
+      "attempts": []
     },
     {
       "caseNumber": "L12",
@@ -245,11 +212,11 @@
       "difficulty": "medium",
       "attempts": [
         {
-          "videoId": "t-v1UXFMzl0",
+          "videoId": "6NdUiTOnNrY",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "6NdUiTOnNrY",
+          "videoId": "t-v1UXFMzl0",
           "reason": "no timed transcript"
         },
         {
@@ -326,10 +293,6 @@
         {
           "videoId": "MlQsm_HCuKc",
           "reason": "no timed transcript"
-        },
-        {
-          "videoId": "OMBQwGzn_TE",
-          "reason": "no timed transcript"
         }
       ]
     },
@@ -368,11 +331,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "d5bKs2GaOQE",
+          "videoId": "4RBjrLGdw7c",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "4RBjrLGdw7c",
+          "videoId": "d5bKs2GaOQE",
           "reason": "no timed transcript"
         },
         {
@@ -388,11 +351,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "4e70bFtN0Gc",
+          "videoId": "NKHObeqDFP4",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "NKHObeqDFP4",
+          "videoId": "4e70bFtN0Gc",
           "reason": "no timed transcript"
         },
         {
@@ -426,7 +389,7 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "vzzUYaf1vNY",
+          "videoId": "Ak_2_gQUZ5s",
           "reason": "no timed transcript"
         },
         {
@@ -434,15 +397,15 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "Ak_2_gQUZ5s",
+          "videoId": "mL0j_CN7dpw",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "lnUJa6uuL_Y",
+          "videoId": "vzzUYaf1vNY",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "MOZLg422dZs",
+          "videoId": "fBJZQSMsunQ",
           "reason": "no timed transcript"
         }
       ]
@@ -490,11 +453,11 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "0BA1K-jMaBE",
+          "videoId": "Kr6lrJoamhw",
           "reason": "no timed transcript"
         },
         {
-          "videoId": "Kr6lrJoamhw",
+          "videoId": "0BA1K-jMaBE",
           "reason": "no timed transcript"
         }
       ]
@@ -609,15 +572,15 @@
           "reason": "no timed transcript"
         },
         {
-          "videoId": "ZfnTdQ28Hbo",
-          "reason": "no timed transcript"
-        },
-        {
           "videoId": "N6JEED6eF_c",
           "reason": "no timed transcript"
         },
         {
           "videoId": "MQNPASeSz3Q",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "ZfnTdQ28Hbo",
           "reason": "no timed transcript"
         },
         {
@@ -630,6 +593,10 @@
         },
         {
           "videoId": "O-RxzSQWR3E",
+          "reason": "no timed transcript"
+        },
+        {
+          "videoId": "lOJCDB3n0h8",
           "reason": "no timed transcript"
         }
       ]
