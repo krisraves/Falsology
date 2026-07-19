@@ -43,9 +43,10 @@ jobs:
         run: |
           git cat-file -p 359d5874a1caab31336c5514f5fa9297227723d5 > data/research/content-build-report-v4.json
           python scripts/extend-truth-seeds.py
+          python scripts/extend-lie-seeds.py
 
       - name: Recover archived exact statements
-        run: python scripts/recover-archive-sources.py
+        run: python scripts/run-archive-recovery-fast.py
 
       - name: Build exact-statement cases
         shell: bash
