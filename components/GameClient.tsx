@@ -279,13 +279,13 @@ export function GameClient({
 
               {!answer ? (
                 <>
-                  <p className="case-instruction">Are they lying?</p>
-                  <div className="detective-actions simple-verdicts" aria-label="Are they lying?">
+                  <p className="case-instruction">Truth or lie?</p>
+                  <div className="detective-actions simple-verdicts" aria-label="Choose truth or lie">
                     <button className="verdict-button verdict-breaks" onClick={() => choose("lie")}>
-                      <span aria-hidden="true">Y</span><strong>Yes</strong>
+                      <span aria-hidden="true">L</span><strong>Lie</strong>
                     </button>
                     <button className="verdict-button verdict-holds" onClick={() => choose("truth")}>
-                      <span aria-hidden="true">N</span><strong>No</strong>
+                      <span aria-hidden="true">T</span><strong>True</strong>
                     </button>
                   </div>
                 </>

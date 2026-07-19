@@ -76,14 +76,14 @@ for (const claim of claims) {
   const values = [media.startSeconds, media.endSeconds, media.statementStartSeconds, media.statementEndSeconds, media.videoDurationSeconds];
   if (!values.every(finite)) failures.push(`${label}: clip and statement times must be finite numbers.`);
   else {
-    const expectedStart = Math.max(0, media.statementStartSeconds - 15);
-    const expectedEnd = Math.min(media.videoDurationSeconds, media.statementEndSeconds + 15);
+    const expectedStart = Math.max(0, media.statementStartSeconds - 5);
+    const expectedEnd = Math.min(media.videoDurationSeconds, media.statementEndSeconds + 5);
     if (media.statementStartSeconds < 0 || media.statementEndSeconds <= media.statementStartSeconds) failures.push(`${label}: invalid statement range.`);
     if (media.startSeconds < 0 || media.endSeconds <= media.startSeconds) failures.push(`${label}: invalid clip range.`);
     if (media.endSeconds > media.videoDurationSeconds + 0.01) failures.push(`${label}: clip extends beyond source duration.`);
-    if (Math.abs(media.startSeconds - expectedStart) > 0.02) failures.push(`${label}: clip must begin exactly 15 seconds before the statement or at source start.`);
-    if (Math.abs(media.endSeconds - expectedEnd) > 0.02) failures.push(`${label}: clip must end exactly 15 seconds after the statement or at source end.`);
-    if (media.endSeconds - media.startSeconds > 75) failures.push(`${label}: clip exceeds 75 seconds.`);
+    if (Math.abs(media.startSeconds - expectedStart) > 0.02) failures.push(`${label}: clip must begin exactly 5 seconds before the statement or at source start.`);
+    if (Math.abs(media.endSeconds - expectedEnd) > 0.02) failures.push(`${label}: clip must end exactly 5 seconds after the statement or at source end.`);
+    if (media.endSeconds - media.startSeconds > 45) failures.push(`${label}: clip exceeds 45 seconds.`);
   }
   const normalizedClaim = normalize(claim.claim);
   const normalizedSpoken = normalize(media.spokenText);
@@ -104,4 +104,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log("Validated 12 transcript-backed cases: 6 truth, 6 lie, 12 unique videos; every clip is centered ±15 seconds around the exact displayed statement.");
+console.log("Validated 12 transcript-backed cases: 6 truth, 6 lie, 12 unique videos; every clip is centered ±5 seconds around the exact displayed statement.");
