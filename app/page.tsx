@@ -2,38 +2,9 @@ import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { claims } from "@/lib/claims";
 
-const levels = [
-  {
-    name: "Easy",
-    value: "easy",
-    internal: "easy",
-    label: "Start here",
-    description: "Famous cases, recognizable faces, and clearer contradictions.",
-    note: "Fast instincts",
-  },
-  {
-    name: "Hard",
-    value: "hard",
-    internal: "medium",
-    label: "Read the room",
-    description: "Less familiar footage where context matters as much as the quote.",
-    note: "More context",
-  },
-  {
-    name: "Expert",
-    value: "expert",
-    internal: "hard",
-    label: "Trust nothing",
-    description: "Obscure interrogations, strange testimony, and unbelievable truths.",
-    note: "Deep cuts",
-  },
-] as const;
-
 export default function HomePage() {
   const featured = claims[0];
   const previews = claims.slice(1, 4);
-  const truthCount = claims.filter((claim) => claim.verdict === "truth").length;
-  const lieCount = claims.filter((claim) => claim.verdict === "lie").length;
 
   return (
     <main className="rebuild-home">
@@ -43,22 +14,22 @@ export default function HomePage() {
             <p className="rebuild-overline"><span /> The credibility game</p>
             <h1>Would you<br /><em>believe</em> them?</h1>
             <p className="rebuild-intro">
-              Watch real interviews, interrogations, and testimony. Call truth or lie—then see what the evidence actually says.
+              Watch documented false statements from the ranked Falsology source. Make the call, then see what the evidence actually says.
             </p>
             <div className="rebuild-hero-actions">
-              <Link href="/play?difficulty=easy" className="rebuild-primary">Play the easy deck <b>→</b></Link>
-              <Link href="/play" className="rebuild-secondary">Surprise me</Link>
+              <Link href="/play" className="rebuild-primary">Play the ranked deck <b>→</b></Link>
+              <Link href="/archive" className="rebuild-secondary">Browse the archive</Link>
             </div>
             <div className="rebuild-proof-row" aria-label="Game standards">
-              <span><strong>{claims.length}</strong> verified cases</span>
-              <span><strong>{truthCount}/{lieCount}</strong> truth / lie</span>
+              <span><strong>{claims.length}</strong> verified ranked clips</span>
+              <span><strong>One</strong> shuffled deck</span>
               <span><strong>Sources</strong> after every answer</span>
             </div>
           </div>
 
           <Link href={`/claim/${featured.slug}`} className="rebuild-featured-case" aria-label={`Play the featured case about ${featured.person}`}>
             <div className="rebuild-monitor-top">
-              <span>FEATURED CASE</span>
+              <span>FEATURED RANKED LIE</span>
               <span>REC ●</span>
             </div>
             <div className="rebuild-monitor-screen">
@@ -69,7 +40,7 @@ export default function HomePage() {
             </div>
             <div className="rebuild-monitor-bottom">
               <span><strong>{featured.person}</strong><small>{featured.personRole}</small></span>
-              <b>Make the call →</b>
+              <b>Open case →</b>
             </div>
           </Link>
         </div>
@@ -79,43 +50,38 @@ export default function HomePage() {
         <div>
           <span>REAL FOOTAGE</span><i />
           <span>EXACT STATEMENTS</span><i />
-          <span>TRUTH OR LIE</span><i />
+          <span>RANKED HISTORICAL LIES</span><i />
           <span>CHECK THE RECORD</span><i />
           <span>NO BODY-LANGUAGE GIMMICKS</span><i />
           <span>REAL FOOTAGE</span>
         </div>
       </section>
 
-      <section className="site-shell rebuild-levels" id="difficulty">
+      <section className="site-shell rebuild-levels" id="deck">
         <header className="rebuild-section-heading">
           <div>
-            <p className="rebuild-overline dark"><span /> Choose your difficulty</p>
-            <h2>How suspicious<br />are you feeling?</h2>
+            <p className="rebuild-overline dark"><span /> One unified deck</p>
+            <h2>No difficulty tiers.<br />No separate queues.</h2>
           </div>
-          <p>Each deck is shuffled. Truths and lies are balanced so a pattern cannot save you.</p>
+          <p>Every reviewed clip from the ranked source enters the same shuffled deck after the speaker, statement, timestamps, and evidence are verified.</p>
         </header>
 
         <div className="rebuild-level-grid">
-          {levels.map((level, index) => {
-            const levelClaims = claims.filter((claim) => claim.difficulty === level.internal);
-            return (
-              <Link href={`/play?difficulty=${level.value}`} className={`rebuild-level-card rebuild-level-${level.value}`} key={level.value}>
-                <div className="rebuild-level-top">
-                  <span>0{index + 1}</span>
-                  <small>{level.label}</small>
-                </div>
-                <h3>{level.name}</h3>
-                <p>{level.description}</p>
-                <div className="rebuild-level-footer">
-                  <span><strong>{levelClaims.length}</strong> playable now</span>
-                  <span>{level.note}</span>
-                  <b>Play →</b>
-                </div>
-              </Link>
-            );
-          })}
+          <Link href="/play" className="rebuild-level-card rebuild-level-expert">
+            <div className="rebuild-level-top">
+              <span>01</span>
+              <small>All reviewed ranks</small>
+            </div>
+            <h3>Ranked Lies</h3>
+            <p>One continuous deck containing every currently verified video from the 250-lie research source.</p>
+            <div className="rebuild-level-footer">
+              <span><strong>{claims.length}</strong> playable now</span>
+              <span>Shuffled together</span>
+              <b>Play →</b>
+            </div>
+          </Link>
         </div>
-        <p className="rebuild-review-note">New clips enter these decks only after the source, speaker, statement, timestamp, and verdict are reviewed.</p>
+        <p className="rebuild-review-note">A ranked item is not published merely because a related video exists. The actual statement and its context window must be timestamped and reviewed.</p>
       </section>
 
       <section className="site-shell rebuild-ad-band"><AdSlot placement="leaderboard" /></section>
@@ -139,7 +105,7 @@ export default function HomePage() {
                   <div><strong>{claim.person}</strong><small>{claim.category}</small></div>
                 </div>
                 <blockquote>“{claim.claim}”</blockquote>
-                <div className="rebuild-preview-footer"><span>Truth or lie?</span><b>Open case →</b></div>
+                <div className="rebuild-preview-footer"><span>Check the record</span><b>Open case →</b></div>
               </Link>
             ))}
           </div>
@@ -150,11 +116,11 @@ export default function HomePage() {
         <div className="rebuild-process-intro">
           <p className="rebuild-overline dark"><span /> The game</p>
           <h2>Watch.<br />Commit.<br />Find out.</h2>
-          <p>No confidence slider. No hedging. Make the call before the evidence appears.</p>
+          <p>No confidence slider. No body-language scoring. Make the call before the evidence appears.</p>
         </div>
         <div className="rebuild-process-steps">
-          <article><span>01</span><div><h3>Watch the exact moment</h3><p>Each clip is cut around the statement—not from the beginning of a long video.</p></div></article>
-          <article><span>02</span><div><h3>Choose yes or no</h3><p>Are they lying? Your answer locks before the verdict is revealed.</p></div></article>
+          <article><span>01</span><div><h3>Watch the exact moment</h3><p>Each clip begins ten seconds before the statement and ends ten seconds after it, limited only by the source boundaries.</p></div></article>
+          <article><span>02</span><div><h3>Make the call</h3><p>Your answer locks before the evidence and historical record are revealed.</p></div></article>
           <article><span>03</span><div><h3>Check what holds up</h3><p>See the timeline, corroborating records, missing context, and source links.</p></div></article>
         </div>
       </section>
@@ -174,10 +140,10 @@ export default function HomePage() {
       <section className="rebuild-final-cta">
         <div className="site-shell">
           <p>Think you can tell?</p>
-          <h2>There is only one way to find out.</h2>
+          <h2>Open the unified ranked deck.</h2>
           <div>
-            <Link href="/play?difficulty=easy" className="rebuild-primary">Start playing <b>→</b></Link>
-            <Link href="/play?difficulty=expert" className="rebuild-secondary light">Skip to expert</Link>
+            <Link href="/play" className="rebuild-primary">Start playing <b>→</b></Link>
+            <Link href="/archive" className="rebuild-secondary light">Browse cases</Link>
           </div>
         </div>
       </section>
