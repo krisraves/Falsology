@@ -45,27 +45,10 @@ function shuffle<T>(items: T[]) {
   return shuffled;
 }
 
-function balancedQueue(items: Claim[]) {
-  const truths = shuffle(items.filter((item) => item.verdict === "truth"));
-  const lies = shuffle(items.filter((item) => item.verdict === "lie"));
-  const queue: Claim[] = [];
-  let truthTurn = Math.random() >= 0.5;
-
-  while (truths.length || lies.length) {
-    const source = truthTurn ? truths : lies;
-    const fallback = truthTurn ? lies : truths;
-    const next = source.shift() ?? fallback.shift();
-    if (next) queue.push(next);
-    truthTurn = !truthTurn;
-  }
-
-  return queue;
-}
-
 export function GameClient({
   initialClaims,
   mode = "random",
-  levelLabel = "Mixed",
+  levelLabel = "Ranked lies",
 }: {
   initialClaims: Claim[];
   mode?: "random" | "daily" | "category";
@@ -86,7 +69,7 @@ export function GameClient({
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setPlayer(readState());
-      if (mode === "random") setQueue(balancedQueue(initialClaims));
+      if (mode === "random") setQueue(shuffle(initialClaims));
     }, 0);
     return () => window.clearTimeout(timer);
   }, [initialClaims, mode]);
@@ -156,7 +139,7 @@ export function GameClient({
   }
 
   function reshuffleDeck() {
-    setQueue(balancedQueue(initialClaims));
+    setQueue(shuffle(initialClaims));
     setIndex(0);
     setAnswer(null);
     setExpanded(false);
@@ -222,9 +205,9 @@ export function GameClient({
             <AdSlot placement="interstitial" label="Sponsored break" />
 
             <div className="section-break-actions">
-              <button className="detective-primary" onClick={continueDeck}>Continue current deck →</button>
-              <button className="detective-secondary" onClick={reshuffleDeck}>Reshuffle {levelLabel}</button>
-              <Link className="detective-secondary" href="/">Choose new difficulty</Link>
+              <button className="detective-primary" onClick={continueDeck}>Continue ranked deck →</button>
+              <button className="detective-secondary" onClick={reshuffleDeck}>Reshuffle deck</button>
+              <Link className="detective-secondary" href="/archive">Browse case archive</Link>
               <button className="detective-secondary" onClick={() => setReviewing(true)}>Leave a review</button>
             </div>
           </section>
@@ -271,7 +254,7 @@ export function GameClient({
                   <Link href={`/person/${claim.personSlug}`}>{claim.person}</Link>
                   <span>{claim.personRole}</span>
                 </div>
-                <span className="case-difficulty">{levelLabel}</span>
+                <span className="case-difficulty">Ranked source</span>
               </div>
 
               <p className="case-instruction">Watch. Decide. Check the evidence.</p>
@@ -292,7 +275,7 @@ export function GameClient({
               ) : (
                 <div className={`case-reveal ${correct ? "case-correct" : "case-wrong"}`} aria-live="polite">
                   <div className="reveal-verdict-row">
-                    <span className="reveal-stamp">{claim.verdict === "truth" ? "TRUE" : "LIE"}</span>
+                    <span className="reveal-stamp">LIE</span>
                     <div><p>{correct ? "Correct" : "Incorrect"}</p><h2>{claim.classification}</h2></div>
                   </div>
                   <p className="reveal-summary">{claim.shortExplanation}</p>
@@ -341,7 +324,7 @@ export function GameClient({
               <span>correct</span>
               <small>{player.score} points · Best streak {player.bestStreak}</small>
             </section>
-            <Link className="detective-secondary level-switch" href="/">Change difficulty</Link>
+            <Link className="detective-secondary level-switch" href="/">Deck home</Link>
           </aside>
         </div>
       </main>
