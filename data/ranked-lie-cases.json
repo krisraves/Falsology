@@ -1,0 +1,209 @@
+[
+  {
+    "id": "ranked-088",
+    "slug": "ranked-088-richard-nixon-im-not-a-crook",
+    "caseNumber": "R088",
+    "person": "Richard Nixon",
+    "personSlug": "richard-nixon",
+    "personRole": "President of the United States",
+    "category": "Political cover-up",
+    "categorySlug": "political-cover-up",
+    "setting": "Public press conference",
+    "date": "1973-11-17",
+    "claim": "I'm not a crook.",
+    "prompt": "Truth or lie?",
+    "verdict": "lie",
+    "classification": "False Watergate denial",
+    "difficulty": "easy",
+    "shortExplanation": "Nixon denied criminal wrongdoing while evidence of the White House Watergate cover-up and obstruction was emerging.",
+    "fullTruth": "White House recordings and prosecutions documented obstruction, hush money, and misuse of government power. Nixon resigned in 1974 after the Supreme Court ordered release of the tapes.",
+    "context": "Rank 88 in the 250-lie source. The excerpt begins ten seconds before the exact denial and ends at the end of the available source video.",
+    "transcript": "Well, I'm not a crook.",
+    "editorialBoundary": "The verdict applies to Nixon's denial of criminal wrongdoing in the documented Watergate context, not to every possible meaning of the word crook.",
+    "signals": [
+      "White House tapes",
+      "Obstruction evidence",
+      "Presidential resignation"
+    ],
+    "lesson": "A categorical denial should be checked against recordings, conduct, and independent records.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "sh163n1lJ4M",
+      "startSeconds": 20.16,
+      "endSeconds": 37,
+      "statementStartSeconds": 30.16,
+      "statementEndSeconds": 31.16,
+      "spokenText": "Well, I'm not a crook.",
+      "videoDurationSeconds": 37,
+      "url": "https://www.youtube.com/watch?v=sh163n1lJ4M&t=20.16s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-21",
+      "sourceKind": "public-statement",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Richard Nixon — ‘I'm not a crook’",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=sh163n1lJ4M",
+        "type": "primary",
+        "note": "Contains Nixon making the exact denial used in the playable excerpt."
+      },
+      {
+        "title": "Watergate scandal",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+        "type": "secondary",
+        "note": "Background evidence for the source-list claim that the Nixon White House denied its role in the cover-up."
+      }
+    ],
+    "tags": [
+      "ranked-source",
+      "rank-088",
+      "watergate",
+      "lie",
+      "exact-statement",
+      "ten-second-context"
+    ],
+    "reviewedAt": "2026-07-21"
+  },
+  {
+    "id": "ranked-141",
+    "slug": "ranked-141-lance-armstrong-i-have-never-doped",
+    "caseNumber": "R141",
+    "person": "Lance Armstrong",
+    "personSlug": "lance-armstrong",
+    "personRole": "Professional cyclist",
+    "category": "Sports deception",
+    "categorySlug": "sports-deception",
+    "setting": "Television interview",
+    "date": "2005-01-01",
+    "claim": "I have never doped.",
+    "prompt": "Truth or lie?",
+    "verdict": "lie",
+    "classification": "False doping denial",
+    "difficulty": "easy",
+    "shortExplanation": "Armstrong repeatedly denied doping before later admitting that he used performance-enhancing drugs throughout his cycling career.",
+    "fullTruth": "Armstrong was stripped of seven Tour de France titles after the U.S. Anti-Doping Agency documented a sustained doping program. In 2013 he admitted using banned substances during all seven victories.",
+    "context": "Rank 141 in the 250-lie source. The available source is only twelve seconds long, so the clip uses the full recording while preserving all available context before and after the denial.",
+    "transcript": "I've said it for longer than seven years. I have never doped.",
+    "editorialBoundary": "The verdict applies to the explicit denial that Armstrong had ever doped.",
+    "signals": [
+      "Later admission",
+      "Anti-doping investigation",
+      "Stripped titles"
+    ],
+    "lesson": "Repeated certainty does not outweigh records, witnesses, testing evidence, and a later admission.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "25ja7IAxQjY",
+      "startSeconds": 0,
+      "endSeconds": 12,
+      "statementStartSeconds": 2,
+      "statementEndSeconds": 8.24,
+      "spokenText": "I've said it for longer than seven years. I have never doped.",
+      "videoDurationSeconds": 12,
+      "url": "https://www.youtube.com/watch?v=25ja7IAxQjY&t=0s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-21",
+      "sourceKind": "archival-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Lance Armstrong — ‘I have never doped’",
+        "publisher": "YouTube source channel",
+        "url": "https://www.youtube.com/watch?v=25ja7IAxQjY",
+        "type": "primary",
+        "note": "Contains Armstrong making the exact denial used in the playable excerpt."
+      },
+      {
+        "title": "Lance Armstrong doping case",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Lance_Armstrong_doping_case",
+        "type": "secondary",
+        "note": "Background evidence for the denial, sanctions, and later admission."
+      }
+    ],
+    "tags": [
+      "ranked-source",
+      "rank-141",
+      "sports",
+      "lie",
+      "exact-statement",
+      "ten-second-context"
+    ],
+    "reviewedAt": "2026-07-21"
+  },
+  {
+    "id": "ranked-238",
+    "slug": "ranked-238-sean-spicer-largest-watched-inauguration-ever",
+    "caseNumber": "R238",
+    "person": "Sean Spicer",
+    "personSlug": "sean-spicer",
+    "personRole": "White House press secretary",
+    "category": "Political falsehood",
+    "categorySlug": "political-falsehood",
+    "setting": "Recorded interview",
+    "date": "2017-01-01",
+    "claim": "I don't think there's any question it was the largest watched inauguration ever.",
+    "prompt": "Truth or lie?",
+    "verdict": "lie",
+    "classification": "False inauguration-audience claim",
+    "difficulty": "easy",
+    "shortExplanation": "Spicer defended the claim that Donald Trump's inauguration had the largest audience ever, although photographs, audience measurements, and transit data contradicted the categorical assertion.",
+    "fullTruth": "The claim combined in-person attendance and global viewing into an unsupported superlative. Available crowd photographs, transit ridership, and television audience data did not establish the largest inauguration audience ever.",
+    "context": "Rank 238 in the 250-lie source. This excerpt begins ten seconds before the timestamped statement and ends ten seconds after it.",
+    "transcript": "I don't think there's any question it was the largest watched inauguration ever.",
+    "editorialBoundary": "The verdict applies to the categorical ‘largest ever’ audience claim, not to the fact that the inauguration was widely watched.",
+    "signals": [
+      "Crowd photographs",
+      "Transit ridership data",
+      "Television audience measurements"
+    ],
+    "lesson": "Superlatives such as largest ever require a defined metric and comparable evidence.",
+    "media": {
+      "type": "youtube",
+      "youtubeId": "Bpn8G6RfsWc",
+      "startSeconds": 110.6,
+      "endSeconds": 141.72,
+      "statementStartSeconds": 120.6,
+      "statementEndSeconds": 131.72,
+      "spokenText": "We have information on so far. I don't think there's any question it was the largest watched inauguration ever.",
+      "videoDurationSeconds": 151.52,
+      "url": "https://www.youtube.com/watch?v=Bpn8G6RfsWc&t=110.6s",
+      "label": "Open the complete source recording",
+      "verifiedAt": "2026-07-21",
+      "sourceKind": "direct-interview",
+      "directStatement": true,
+      "newsPackage": false
+    },
+    "sources": [
+      {
+        "title": "Sean Spicer defends claim about inauguration viewership",
+        "publisher": "Business Insider",
+        "url": "https://www.youtube.com/watch?v=Bpn8G6RfsWc",
+        "type": "primary",
+        "note": "Contains Spicer directly repeating and defending the audience claim."
+      },
+      {
+        "title": "Inauguration of Donald Trump",
+        "publisher": "Reference record",
+        "url": "https://en.wikipedia.org/wiki/Inauguration_of_Donald_Trump",
+        "type": "secondary",
+        "note": "Background evidence and audience comparisons relevant to the claim."
+      }
+    ],
+    "tags": [
+      "ranked-source",
+      "rank-238",
+      "politics",
+      "lie",
+      "exact-statement",
+      "ten-second-context"
+    ],
+    "reviewedAt": "2026-07-21"
+  }
+]
