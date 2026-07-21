@@ -1,10 +1,10 @@
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import { gunzipSync } from "node:zlib";
 
-const packedDirectory = resolve("data/packed");
+const seedDirectory = resolve("data/source-seeds");
+const manifestPath = resolve(seedDirectory, "manifest.json");
 const outputPath = resolve("data/all-500-cases.json");
-const prefix = "compact-500-seeds.json.gz.b64.part";
 const segmentSeconds = 32;
 const masterSeconds = 500 * segmentSeconds;
 const reelUrl = "https://github.com/krisraves/Falsology/releases/download/generated-500-deck/falsology-500-claim-reel.mp4";
@@ -26,14 +26,34 @@ function warningFor(category, claim) {
   return null;
 }
 
-const parts = readdirSync(packedDirectory).filter((name) => name.startsWith(prefix)).sort();
-if (!parts.length) throw new Error("No compact 500-case seed parts were found.");
-
-const encoded = parts.map((name) => readFileSync(resolve(packedDirectory, name), "utf8").trim()).join("");
-const seeds = JSON.parse(gunzipSync(Buffer.from(encoded, "base64")).toString("utf8"));
-if (!Array.isArray(seeds) || seeds.length !== 500) {
-  throw new Error(`Expected 500 compact seeds, found ${Array.isArray(seeds) ? seeds.length : "invalid JSON"}.`);
+function sha256(buffer) {
+  return createHash("sha256").update(buffer).digest("hex");
 }
+
+const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+if (!Array.isArray(manifest.chunks) || manifest.chunks.length !== 10 || manifest.totalEntries !== 500) {
+  throw new Error("The source-seed manifest must describe ten 50-entry chunks and 500 total entries.");
+}
+
+const seeds = [];
+for (const expected of manifest.chunks) {
+  const path = resolve(seedDirectory, expected.file);
+  const bytes = readFileSync(path);
+  const actualHash = sha256(bytes);
+  if (actualHash !== expected.sha256) {
+    throw new Error(`${expected.file}: SHA-256 mismatch; expected ${expected.sha256}, found ${actualHash}.`);
+  }
+  const chunk = JSON.parse(bytes.toString("utf8"));
+  if (!Array.isArray(chunk) || chunk.length !== expected.entries) {
+    throw new Error(`${expected.file}: expected ${expected.entries} entries, found ${Array.isArray(chunk) ? chunk.length : "invalid JSON"}.`);
+  }
+  seeds.push(...chunk);
+}
+
+if (seeds.length !== 500) throw new Error(`Expected 500 compact seeds, found ${seeds.length}.`);
+const truths = seeds.filter((seed) => seed[0] === "truth").length;
+const lies = seeds.filter((seed) => seed[0] === "lie").length;
+if (truths !== 250 || lies !== 250) throw new Error(`Expected 250 truths and 250 lies, found ${truths}/${lies}.`);
 
 const claims = seeds.map((seed, index) => {
   const [verdict, rank, claim, explanation, category, setting, subject, evidenceConfidence, officialUrl, supportingUrl, starterUrl] = seed;
@@ -44,11 +64,10 @@ const claims = seeds.map((seed, index) => {
   const secondaryUrl = [supportingUrl, officialUrl, starterUrl].map((value) => String(value || "").trim()).find((value) => value && value !== reliableUrl) || reliableUrl;
   const sourceLabel = verdict === "truth" ? "250 Most Unbelievable Truths" : "250 Most Important Lies";
   const sourceContext = String(subject || setting || category || sourceLabel);
-  const caseSlug = `${caseNumber.toLowerCase()}-${slugify(claim)}`;
 
   return {
     id: caseNumber.toLowerCase(),
-    slug: caseSlug,
+    slug: `${caseNumber.toLowerCase()}-${slugify(claim)}`,
     caseNumber,
     person: "Falsology Narrator",
     personSlug: "falsology-narrator",
@@ -118,4 +137,4 @@ const claims = seeds.map((seed, index) => {
 mkdirSync(dirname(outputPath), { recursive: true });
 const jsonText = `${JSON.stringify(claims, null, 2)}\n`;
 if (!existsSync(outputPath) || readFileSync(outputPath, "utf8") !== jsonText) writeFileSync(outputPath, jsonText);
-console.log(`Prepared ${claims.length} balanced cases from ${parts.length} compact seed parts.`);
+console.log(`Prepared ${claims.length} balanced cases from ${manifest.chunks.length} verified source chunks.`);
