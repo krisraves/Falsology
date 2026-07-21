@@ -1,0 +1,4 @@
+Render the balanced 500-case Falsology narration reel.
+Triggered: 2026-07-21
+Source catalog: 250 unbelievable truths + 250 important lies
+Segment format: 10 seconds setup + 12 seconds narration + 10 seconds decision time
