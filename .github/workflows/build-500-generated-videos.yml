@@ -1,0 +1,79 @@
+name: Build 500 generated claim videos
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/unified-ranked-lies
+    paths:
+      - video-deck-trigger.txt
+      - data/packed/**
+      - scripts/prepare-500-deck.mjs
+      - scripts/generate-500-claim-reel.py
+      - .github/workflows/build-500-generated-videos.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generated-500-claim-reel
+  cancel-in-progress: false
+
+jobs:
+  render-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install media tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
+
+      - name: Install application dependencies
+        run: npm ci
+
+      - name: Prepare and validate 500-case catalog
+        run: npm run validate:cases
+
+      - name: Render master claim reel
+        run: |
+          python scripts/generate-500-claim-reel.py \
+            --output dist/falsology-500-claim-reel.mp4 \
+            --manifest dist/falsology-500-claim-reel.json
+
+      - name: Publish release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view generated-500-deck --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload generated-500-deck \
+              dist/falsology-500-claim-reel.mp4 \
+              dist/falsology-500-claim-reel.json \
+              --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create generated-500-deck \
+              dist/falsology-500-claim-reel.mp4 \
+              dist/falsology-500-claim-reel.json \
+              --target "$GITHUB_SHA" \
+              --title "Falsology 500 Generated Claim Clips" \
+              --notes "One seekable master reel containing 500 original narrated claim segments: 250 truths and 250 lies. Every segment reserves ten seconds before and ten seconds after the spoken claim." \
+              --repo "$GITHUB_REPOSITORY"
+          fi
+
+      - name: Save generation manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: falsology-500-reel-manifest
+          path: dist/falsology-500-claim-reel.json
+          retention-days: 30
