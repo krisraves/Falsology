@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "validate:cases": "node scripts/validate-detective-cases.mjs",
+    "prepare:deck": "node scripts/prepare-500-deck.mjs",
+    "validate:cases": "npm run prepare:deck && node scripts/validate-detective-cases.mjs",
+    "predev": "npm run prepare:deck",
     "dev": "next dev",
     "prebuild": "npm run validate:cases",
     "build": "next build",
