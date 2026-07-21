@@ -1,51 +1,55 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const claims = JSON.parse(readFileSync(resolve("data/ranked-lie-cases.json"), "utf8"));
+const claims = JSON.parse(readFileSync(resolve("data/all-500-cases.json"), "utf8"));
 const failures = [];
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
 const unique = (values) => new Set(values).size === values.length;
 const normalize = (value) => String(value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-const allowedSourceKinds = new Set([
-  "raw-interview", "archival-public-appeal", "archival-interview", "police-interrogation",
-  "prison-interview", "archival-prison-interview", "direct-conference-interview", "direct-interview",
-  "direct-presentation", "public-statement", "corporate-statement", "public-speech", "press-briefing",
-  "congressional-testimony", "courtroom-evidence-playback", "courtroom-confession", "courtroom-statement",
-  "police-confession", "court-testimony", "raw-release-statement", "documentary-interview", "direct-confession",
-]);
+const SEGMENT_SECONDS = 32;
+const CONTEXT_SECONDS = 10;
+const STATEMENT_SECONDS = 12;
+const MASTER_SECONDS = 500 * SEGMENT_SECONDS;
 
-if (!Array.isArray(claims) || claims.length < 1) failures.push("The ranked-lies deck must contain at least one case.");
+if (!Array.isArray(claims) || claims.length !== 500) failures.push(`Expected 500 cases, found ${Array.isArray(claims) ? claims.length : "invalid data"}.`);
 if (!unique(claims.map((claim) => claim.id))) failures.push("Case IDs are not unique.");
 if (!unique(claims.map((claim) => claim.slug))) failures.push("Case slugs are not unique.");
 if (!unique(claims.map((claim) => claim.caseNumber))) failures.push("Case numbers are not unique.");
-if (!unique(claims.map((claim) => claim.media?.youtubeId))) failures.push("Every ranked case must use a different YouTube video.");
-if (claims.some((claim) => claim.verdict !== "lie")) failures.push("The unified ranked deck may contain only lie cases.");
+
+const truths = claims.filter((claim) => claim.verdict === "truth").length;
+const lies = claims.filter((claim) => claim.verdict === "lie").length;
+if (truths !== 250 || lies !== 250) failures.push(`Expected 250 truths and 250 lies, found ${truths}/${lies}.`);
 if (claims.some((claim) => !claim.tags?.includes("ranked-source"))) failures.push("Every case must be tagged ranked-source.");
 
-for (const claim of claims) {
-  const label = claim.caseNumber || claim.id || "unknown case";
+for (const [index, claim] of claims.entries()) {
+  const label = claim.caseNumber || claim.id || `case ${index + 1}`;
   const media = claim.media ?? {};
-  if (!/^R\d{3}$/.test(label)) failures.push(`${label}: ranked case number must use R### format.`);
-  if (media.type !== "youtube" || typeof media.youtubeId !== "string" || media.youtubeId.length !== 11) failures.push(`${label}: invalid YouTube source.`);
+  const expectedPrefix = claim.verdict === "truth" ? "T" : "L";
+  if (!new RegExp(`^${expectedPrefix}\\d{3}$`).test(label)) failures.push(`${label}: case number does not match its verdict.`);
+  if (media.type !== "generated" || typeof media.src !== "string" || !media.src.endsWith("falsology-500-claim-reel.mp4")) failures.push(`${label}: invalid generated media source.`);
+
+  const expectedStart = index * SEGMENT_SECONDS;
+  const expectedStatementStart = expectedStart + CONTEXT_SECONDS;
+  const expectedStatementEnd = expectedStatementStart + STATEMENT_SECONDS;
+  const expectedEnd = expectedStart + SEGMENT_SECONDS;
   const values = [media.startSeconds, media.endSeconds, media.statementStartSeconds, media.statementEndSeconds, media.videoDurationSeconds];
   if (!values.every(finite)) failures.push(`${label}: clip and statement times must be finite numbers.`);
   else {
-    const expectedStart = Math.max(0, media.statementStartSeconds - 10);
-    const expectedEnd = Math.min(media.videoDurationSeconds, media.statementEndSeconds + 10);
-    if (media.statementStartSeconds < 0 || media.statementEndSeconds <= media.statementStartSeconds) failures.push(`${label}: invalid statement range.`);
-    if (media.startSeconds < 0 || media.endSeconds <= media.startSeconds) failures.push(`${label}: invalid clip range.`);
-    if (media.endSeconds > media.videoDurationSeconds + 0.01) failures.push(`${label}: clip extends beyond source duration.`);
-    if (Math.abs(media.startSeconds - expectedStart) > 0.02) failures.push(`${label}: clip must begin exactly 10 seconds before the statement or at source start.`);
-    if (Math.abs(media.endSeconds - expectedEnd) > 0.02) failures.push(`${label}: clip must end exactly 10 seconds after the statement or at source end.`);
-    if (media.endSeconds - media.startSeconds > 60) failures.push(`${label}: clip exceeds 60 seconds.`);
+    if (media.startSeconds !== expectedStart) failures.push(`${label}: expected clip start ${expectedStart}, found ${media.startSeconds}.`);
+    if (media.statementStartSeconds !== expectedStatementStart) failures.push(`${label}: claim must begin exactly ten seconds into its segment.`);
+    if (media.statementEndSeconds !== expectedStatementEnd) failures.push(`${label}: generated claim slot must be twelve seconds.`);
+    if (media.endSeconds !== expectedEnd) failures.push(`${label}: claim segment must end exactly ten seconds after the spoken slot.`);
+    if (media.videoDurationSeconds !== MASTER_SECONDS) failures.push(`${label}: master reel duration must be ${MASTER_SECONDS} seconds.`);
   }
+
   const normalizedClaim = normalize(claim.claim);
   const normalizedSpoken = normalize(media.spokenText);
-  if (!normalizedClaim || !normalizedSpoken.includes(normalizedClaim)) failures.push(`${label}: displayed claim is not contained in the verified spoken text.`);
-  if (media.directStatement !== true) failures.push(`${label}: the named person must make or directly repeat the statement.`);
-  if (media.newsPackage !== false) failures.push(`${label}: playable segment cannot be a reporter package or commentary montage.`);
-  if (!allowedSourceKinds.has(media.sourceKind)) failures.push(`${label}: unapproved source kind ${media.sourceKind}.`);
-  if (media.verifiedAt !== "2026-07-21") failures.push(`${label}: verification date is missing or stale.`);
+  if (!normalizedClaim || normalizedSpoken !== normalizedClaim) failures.push(`${label}: generated narration text must exactly match the displayed claim.`);
+  if (media.directStatement !== true || media.newsPackage !== false) failures.push(`${label}: generated narration flags are invalid.`);
+  if (media.sourceKind !== "generated-narration") failures.push(`${label}: source kind must be generated-narration.`);
+  if (media.verifiedAt !== "2026-07-21") failures.push(`${label}: generation verification date is missing or stale.`);
+  if (claim.reviewStatus !== "research-seed") failures.push(`${label}: research status must remain explicit.`);
+  if (claim.publicationStatus !== "playable-research-deck") failures.push(`${label}: publication status is invalid.`);
   if (!Array.isArray(claim.signals) || claim.signals.length < 2) failures.push(`${label}: needs at least two evidence signals.`);
   if (!Array.isArray(claim.sources) || claim.sources.length < 2) failures.push(`${label}: needs at least two evidence sources.`);
   for (const field of ["person", "claim", "prompt", "shortExplanation", "fullTruth", "lesson", "editorialBoundary"]) {
@@ -54,8 +58,9 @@ for (const claim of claims) {
 }
 
 if (failures.length) {
-  console.error("Case validation failed:\n" + failures.map((failure) => `- ${failure}`).join("\n"));
+  console.error("Case validation failed:\n" + failures.slice(0, 100).map((failure) => `- ${failure}`).join("\n"));
+  if (failures.length > 100) console.error(`...and ${failures.length - 100} additional failures.`);
   process.exit(1);
 }
 
-console.log(`Validated ${claims.length} ranked lie cases with unique videos and exact ±10-second context windows.`);
+console.log("Validated 500 cases: 250 truths, 250 lies, fixed 32-second narrated segments, and exact ten-second context windows.");
