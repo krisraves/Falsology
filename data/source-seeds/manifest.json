@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "totalEntries": 500,
+  "chunks": [
+    {"file":"chunk01.json","sha256":"ceb1fe431393eb689c8d659c52a8d90436508ca71a5f657cf20e1ca687c49301","entries":50},
+    {"file":"chunk02.json","sha256":"14247744418b415768e166e628d171fe6f46a2dd29dcfc04774749d18a1ab139","entries":50},
+    {"file":"chunk03.json","sha256":"2349a0a43ae86a90b90979be323270a48705883827a2cd18996d13aaba2ac402","entries":50},
+    {"file":"chunk04.json","sha256":"462502be921525a70dc34b7d05e384e17c072d0ff6010e5279d13d25310e4c9e","entries":50},
+    {"file":"chunk05.json","sha256":"6c958e1723231404462d46474b6c2485ea8b4490bfd781c66be2ded93a6ed141","entries":50},
+    {"file":"chunk06.json","sha256":"927a4e686a534e40e8bc5c3f1cd5846248e5a11fac7015a9a3993d3cfc2ec819","entries":50},
+    {"file":"chunk07.json","sha256":"9ef05a3985c96fa0a79e9358f60def4cce34925ab88af06d31ac5472578fe21f","entries":50},
+    {"file":"chunk08.json","sha256":"437a68d7ff1ea58ec32c29d2bd040e9d40aa316de613d475e4e09747f31ea32d","entries":50},
+    {"file":"chunk09.json","sha256":"cb20ce41e16d19f4204867f7d5aab8c26537c7b953cb58cf2e5f3f40a5bba13f","entries":50},
+    {"file":"chunk10.json","sha256":"57b774d96b698aa6e43110e6cf0aa70a0a352f5a148ea4b30f4505db9fe58fb1","entries":50}
+  ]
+}
