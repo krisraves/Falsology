@@ -7,10 +7,6 @@ on:
       - agent/unified-ranked-lies
     paths:
       - video-deck-trigger.txt
-      - data/packed/**
-      - scripts/prepare-500-deck.mjs
-      - scripts/generate-500-claim-reel.py
-      - .github/workflows/build-500-generated-videos.yml
 
 permissions:
   contents: write
