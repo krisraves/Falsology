@@ -9,9 +9,7 @@ export type EvidenceSource = {
   note?: string;
 };
 
-export type ClaimMedia = {
-  type: "youtube";
-  youtubeId: string;
+type CommonClaimMedia = {
   startSeconds: number;
   endSeconds: number;
   statementStartSeconds: number;
@@ -25,6 +23,18 @@ export type ClaimMedia = {
   directStatement: true;
   newsPackage: false;
 };
+
+export type YouTubeClaimMedia = CommonClaimMedia & {
+  type: "youtube";
+  youtubeId: string;
+};
+
+export type GeneratedClaimMedia = CommonClaimMedia & {
+  type: "generated";
+  src: string;
+};
+
+export type ClaimMedia = YouTubeClaimMedia | GeneratedClaimMedia;
 
 export type Claim = {
   id: string;
@@ -52,8 +62,10 @@ export type Claim = {
   media: ClaimMedia;
   sources: EvidenceSource[];
   tags: string[];
-  contentWarning?: string;
+  contentWarning?: string | null;
   reviewedAt: string;
+  reviewStatus?: "research-seed" | "editor-reviewed";
+  publicationStatus?: "playable-research-deck" | "published";
 };
 
 export type GameAnswer = {
