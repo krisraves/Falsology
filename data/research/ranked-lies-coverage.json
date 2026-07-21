@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-07-21",
+  "sourceTitle": "250 Most Important Lies of the Past 250 Years",
+  "sourceScope": "1776-2026",
+  "sourceEntryCount": 250,
+  "deckMode": "single-unified-lie-deck",
+  "requiredContextSecondsBefore": 10,
+  "requiredContextSecondsAfter": 10,
+  "publishedCount": 3,
+  "publishedRanks": [88, 141, 238],
+  "publishedCases": [
+    {
+      "rank": 88,
+      "caseNumber": "R088",
+      "speaker": "Richard Nixon",
+      "videoId": "sh163n1lJ4M",
+      "statementStartSeconds": 30.16,
+      "statementEndSeconds": 31.16,
+      "clipStartSeconds": 20.16,
+      "clipEndSeconds": 37
+    },
+    {
+      "rank": 141,
+      "caseNumber": "R141",
+      "speaker": "Lance Armstrong",
+      "videoId": "25ja7IAxQjY",
+      "statementStartSeconds": 2,
+      "statementEndSeconds": 8.24,
+      "clipStartSeconds": 0,
+      "clipEndSeconds": 12
+    },
+    {
+      "rank": 238,
+      "caseNumber": "R238",
+      "speaker": "Sean Spicer",
+      "videoId": "Bpn8G6RfsWc",
+      "statementStartSeconds": 120.6,
+      "statementEndSeconds": 131.72,
+      "clipStartSeconds": 110.6,
+      "clipEndSeconds": 141.72
+    }
+  ],
+  "unpublishedCount": 247,
+  "unpublishedStatus": "not-yet-verified",
+  "publicationRule": "A source-list entry is not playable until the relevant spoken statement, speaker, source availability, exact timestamps, context window, and supporting evidence have been reviewed. A related documentary or commentary video alone is not sufficient.",
+  "editorialNote": "Many ranked entries predate recorded video or describe institutional propaganda rather than a single attributable sentence. Those entries require an archival spokesperson clip or a clearly attributed direct mention before publication."
+}
