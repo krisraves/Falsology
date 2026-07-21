@@ -10,7 +10,6 @@ import { ReviewDialog } from "@/components/ReviewDialog";
 import { lyingFacts } from "@/data/lying-facts";
 
 const SECTION_SIZE = 4;
-
 const EMPTY_STATE: PlayerState = {
   score: 0,
   streak: 0,
@@ -21,16 +20,12 @@ const EMPTY_STATE: PlayerState = {
   saved: [],
 };
 
-type SectionResult = {
-  correct: boolean;
-  points: number;
-};
+type SectionResult = { correct: boolean; points: number };
 
 function readState(): PlayerState {
   try {
     const raw = localStorage.getItem("falsology-detective");
-    if (!raw) return EMPTY_STATE;
-    return { ...EMPTY_STATE, ...(JSON.parse(raw) as Partial<PlayerState>) };
+    return raw ? { ...EMPTY_STATE, ...(JSON.parse(raw) as Partial<PlayerState>) } : EMPTY_STATE;
   } catch {
     return EMPTY_STATE;
   }
@@ -48,7 +43,7 @@ function shuffle<T>(items: T[]) {
 export function GameClient({
   initialClaims,
   mode = "random",
-  levelLabel = "Ranked lies",
+  levelLabel = "500 claims",
 }: {
   initialClaims: Claim[];
   mode?: "random" | "daily" | "category";
@@ -80,15 +75,13 @@ export function GameClient({
   const saved = player.saved.includes(claim.id);
   const sectionCorrect = sectionResults.filter((result) => result.correct).length;
   const sectionPoints = sectionResults.reduce((total, result) => total + result.points, 0);
-  const sectionAccuracy = sectionResults.length
-    ? Math.round((sectionCorrect / sectionResults.length) * 100)
-    : 0;
+  const sectionAccuracy = sectionResults.length ? Math.round((sectionCorrect / sectionResults.length) * 100) : 0;
   const fact = lyingFacts[factIndex % lyingFacts.length];
 
   const sessionLabel = useMemo(() => {
     if (mode === "daily") return `Daily case ${Math.min(index + 1, queue.length)} / ${queue.length}`;
     if (mode === "category") return `Case ${Math.min(index + 1, queue.length)} / ${queue.length}`;
-    return `${levelLabel} · Case ${String((index % queue.length) + 1).padStart(2, "0")} / ${queue.length}`;
+    return `${levelLabel} · Case ${String((index % queue.length) + 1).padStart(3, "0")} / ${queue.length}`;
   }, [index, levelLabel, mode, queue.length]);
 
   function persist(next: PlayerState) {
@@ -101,7 +94,7 @@ export function GameClient({
     const isCorrect = value === claim.verdict;
     const nextStreak = isCorrect ? player.streak + 1 : 0;
     const points = isCorrect ? 100 + Math.min(player.streak, 5) * 20 : 0;
-    const next: PlayerState = {
+    persist({
       ...player,
       score: player.score + points,
       streak: nextStreak,
@@ -112,8 +105,7 @@ export function GameClient({
         { claimId: claim.id, answer: value, correct: isCorrect, answeredAt: new Date().toISOString() },
         ...player.history,
       ].slice(0, 100),
-    };
-    persist(next);
+    });
     setSectionResults((current) => [...current, { correct: isCorrect, points }]);
     setAnswer(value);
   }
@@ -134,7 +126,7 @@ export function GameClient({
 
   function continueDeck() {
     setSectionResults([]);
-    setFactIndex((current) => (current + 1 + Math.floor(Math.random() * (lyingFacts.length - 1))) % lyingFacts.length);
+    setFactIndex((current) => (current + 1 + Math.floor(Math.random() * Math.max(1, lyingFacts.length - 1))) % lyingFacts.length);
     advance();
   }
 
@@ -157,14 +149,11 @@ export function GameClient({
     setAnswer(null);
     setExpanded(false);
     setAdBreak(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
     return true;
   }
 
   function toggleSaved() {
-    const nextSaved = saved
-      ? player.saved.filter((id) => id !== claim.id)
-      : [...player.saved, claim.id];
+    const nextSaved = saved ? player.saved.filter((id) => id !== claim.id) : [...player.saved, claim.id];
     persist({ ...player, saved: nextSaved });
   }
 
@@ -188,10 +177,7 @@ export function GameClient({
           <section className="case-break-card">
             <p className="case-kicker">Case break · History of deception</p>
             <h1>{fact.fact}</h1>
-            <a className="text-link" href={fact.sourceUrl} target="_blank" rel="noreferrer">
-              Source: {fact.sourceTitle} ↗
-            </a>
-
+            <a className="text-link" href={fact.sourceUrl} target="_blank" rel="noreferrer">Source: {fact.sourceTitle} ↗</a>
             <div className="section-scorecard" aria-label="Section scorecard">
               <p className="case-kicker">Section scorecard</p>
               <div className="section-score-grid">
@@ -201,25 +187,16 @@ export function GameClient({
                 <span><small>Best streak</small><strong>{player.bestStreak}</strong></span>
               </div>
             </div>
-
             <AdSlot placement="interstitial" label="Sponsored break" />
-
             <div className="section-break-actions">
-              <button className="detective-primary" onClick={continueDeck}>Continue ranked deck →</button>
-              <button className="detective-secondary" onClick={reshuffleDeck}>Reshuffle deck</button>
+              <button className="detective-primary" onClick={continueDeck}>Continue 500-case deck →</button>
+              <button className="detective-secondary" onClick={reshuffleDeck}>Reshuffle all cases</button>
               <Link className="detective-secondary" href="/archive">Browse case archive</Link>
               <button className="detective-secondary" onClick={() => setReviewing(true)}>Leave a review</button>
             </div>
           </section>
         </main>
-        {reviewing ? (
-          <ReviewDialog
-            levelLabel={levelLabel}
-            correct={sectionCorrect}
-            answered={sectionResults.length}
-            onClose={() => setReviewing(false)}
-          />
-        ) : null}
+        {reviewing ? <ReviewDialog levelLabel={levelLabel} correct={sectionCorrect} answered={sectionResults.length} onClose={() => setReviewing(false)} /> : null}
       </>
     );
   }
@@ -242,53 +219,47 @@ export function GameClient({
         <div className="site-shell detective-layout">
           <section className="case-file-card">
             <div className="case-video-shell">
-              <div className="case-tape-label">VIDEO EVIDENCE</div>
+              <div className="case-tape-label">ORIGINAL NARRATED CLAIM</div>
               <MediaPanel key={claim.id} claim={claim} onUnavailable={skipUnavailableClaim} />
               <button className="report-link" onClick={() => setReporting(true)}>⚑ Report</button>
             </div>
 
             <div className="case-file-body simple-case-body">
               <div className="case-person-row">
-                <div className="case-avatar" aria-hidden="true">{claim.person.split(" ").map((part) => part[0]).slice(0, 2).join("")}</div>
+                <div className="case-avatar" aria-hidden="true">{claim.verdict === "truth" ? "T" : "L"}</div>
                 <div>
                   <Link href={`/person/${claim.personSlug}`}>{claim.person}</Link>
                   <span>{claim.personRole}</span>
                 </div>
-                <span className="case-difficulty">Ranked source</span>
+                <span className="case-difficulty">Research deck</span>
               </div>
 
-              <p className="case-instruction">Watch. Decide. Check the evidence.</p>
+              {claim.contentWarning ? <p className="editorial-boundary">Content note: {claim.contentWarning}</p> : null}
+              <p className="case-instruction">Listen. Decide. Check the evidence.</p>
               <blockquote className="case-statement">“{claim.claim}”</blockquote>
 
               {!answer ? (
                 <>
                   <p className="case-instruction">Truth or lie?</p>
                   <div className="detective-actions simple-verdicts" aria-label="Choose truth or lie">
-                    <button className="verdict-button verdict-breaks" onClick={() => choose("lie")}>
-                      <span aria-hidden="true">L</span><strong>Lie</strong>
-                    </button>
-                    <button className="verdict-button verdict-holds" onClick={() => choose("truth")}>
-                      <span aria-hidden="true">T</span><strong>True</strong>
-                    </button>
+                    <button className="verdict-button verdict-breaks" onClick={() => choose("lie")}><span aria-hidden="true">L</span><strong>Lie</strong></button>
+                    <button className="verdict-button verdict-holds" onClick={() => choose("truth")}><span aria-hidden="true">T</span><strong>True</strong></button>
                   </div>
                 </>
               ) : (
                 <div className={`case-reveal ${correct ? "case-correct" : "case-wrong"}`} aria-live="polite">
                   <div className="reveal-verdict-row">
-                    <span className="reveal-stamp">LIE</span>
+                    <span className="reveal-stamp">{claim.verdict === "truth" ? "TRUE" : "LIE"}</span>
                     <div><p>{correct ? "Correct" : "Incorrect"}</p><h2>{claim.classification}</h2></div>
                   </div>
                   <p className="reveal-summary">{claim.shortExplanation}</p>
-
                   <div className="signal-grid">
                     {claim.signals.slice(0, 3).map((signal, signalIndex) => (
                       <div key={signal}><span>{String(signalIndex + 1).padStart(2, "0")}</span><strong>{signal}</strong></div>
                     ))}
                   </div>
-
                   <div className="discernment-note"><span>What to notice</span><p>{claim.lesson}</p></div>
                   <AdSlot placement="verdict" label="Advertisement" />
-
                   <button className="evidence-toggle" onClick={() => setExpanded((value) => !value)}>
                     {expanded ? "Hide evidence" : "Show evidence"}<span>{expanded ? "−" : "+"}</span>
                   </button>
@@ -297,15 +268,14 @@ export function GameClient({
                       <p>{claim.fullTruth}</p>
                       <p className="editorial-boundary">{claim.editorialBoundary}</p>
                       <div className="source-list">
-                        {claim.sources.map((source) => (
-                          <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
+                        {claim.sources.map((source, sourceIndex) => (
+                          <a href={source.url} target="_blank" rel="noreferrer" key={`${source.url}-${sourceIndex}`}>
                             <span><strong>{source.title}</strong><small>{source.publisher}</small></span><b>↗</b>
                           </a>
                         ))}
                       </div>
                     </div>
                   ) : null}
-
                   <div className="reveal-actions">
                     <button className="detective-primary" onClick={nextClaim}>Next →</button>
                     <button className="detective-secondary" onClick={toggleSaved}>{saved ? "Saved" : "Save"}</button>
