@@ -1,7 +1,7 @@
-import rawRankedLieCases from "@/data/ranked-lie-cases.json";
+import rawAllCases from "@/data/all-500-cases.json";
 import type { Claim } from "@/lib/types";
 
-export const claims = rawRankedLieCases as Claim[];
+export const claims = rawAllCases as Claim[];
 
 export function getClaim(slug: string) {
   return claims.find((claim) => claim.slug === slug);
