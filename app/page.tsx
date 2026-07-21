@@ -5,6 +5,8 @@ import { claims } from "@/lib/claims";
 export default function HomePage() {
   const featured = claims[0];
   const previews = claims.slice(1, 4);
+  const truthCount = claims.filter((claim) => claim.verdict === "truth").length;
+  const lieCount = claims.filter((claim) => claim.verdict === "lie").length;
 
   return (
     <main className="rebuild-home">
@@ -12,34 +14,31 @@ export default function HomePage() {
         <div className="site-shell rebuild-hero-grid">
           <div className="rebuild-hero-copy">
             <p className="rebuild-overline"><span /> The credibility game</p>
-            <h1>Would you<br /><em>believe</em> them?</h1>
+            <h1>Would you<br /><em>believe</em> it?</h1>
             <p className="rebuild-intro">
-              Watch documented false statements from the ranked Falsology source. Make the call, then see what the evidence actually says.
+              Hear 500 original narrated claims drawn from the ranked lists of important lies and unbelievable truths. Make the call, then check the evidence.
             </p>
             <div className="rebuild-hero-actions">
-              <Link href="/play" className="rebuild-primary">Play the ranked deck <b>→</b></Link>
+              <Link href="/play" className="rebuild-primary">Play all 500 <b>→</b></Link>
               <Link href="/archive" className="rebuild-secondary">Browse the archive</Link>
             </div>
             <div className="rebuild-proof-row" aria-label="Game standards">
-              <span><strong>{claims.length}</strong> verified ranked clips</span>
-              <span><strong>One</strong> shuffled deck</span>
+              <span><strong>{claims.length}</strong> narrated clips</span>
+              <span><strong>{truthCount}/{lieCount}</strong> truth / lie</span>
               <span><strong>Sources</strong> after every answer</span>
             </div>
           </div>
 
-          <Link href={`/claim/${featured.slug}`} className="rebuild-featured-case" aria-label={`Play the featured case about ${featured.person}`}>
-            <div className="rebuild-monitor-top">
-              <span>FEATURED RANKED LIE</span>
-              <span>REC ●</span>
-            </div>
+          <Link href={`/claim/${featured.slug}`} className="rebuild-featured-case" aria-label={`Play the featured claim: ${featured.claim}`}>
+            <div className="rebuild-monitor-top"><span>FEATURED CLAIM</span><span>REC ●</span></div>
             <div className="rebuild-monitor-screen">
               <div className="rebuild-scanlines" />
-              <div className="rebuild-person-stamp">{featured.person.split(" ").map((part) => part[0]).slice(0, 2).join("")}</div>
+              <div className="rebuild-person-stamp">?</div>
               <blockquote>“{featured.claim}”</blockquote>
               <div className="rebuild-play-orbit"><span>▶</span></div>
             </div>
             <div className="rebuild-monitor-bottom">
-              <span><strong>{featured.person}</strong><small>{featured.personRole}</small></span>
+              <span><strong>Truth or lie?</strong><small>{featured.category}</small></span>
               <b>Open case →</b>
             </div>
           </Link>
@@ -48,40 +47,37 @@ export default function HomePage() {
 
       <section className="rebuild-ticker" aria-label="How the game works">
         <div>
-          <span>REAL FOOTAGE</span><i />
-          <span>EXACT STATEMENTS</span><i />
-          <span>RANKED HISTORICAL LIES</span><i />
-          <span>CHECK THE RECORD</span><i />
-          <span>NO BODY-LANGUAGE GIMMICKS</span><i />
-          <span>REAL FOOTAGE</span>
+          <span>500 ORIGINAL CLIPS</span><i />
+          <span>250 TRUTHS</span><i />
+          <span>250 LIES</span><i />
+          <span>TEN-SECOND CONTEXT</span><i />
+          <span>CHECK THE SOURCES</span><i />
+          <span>500 ORIGINAL CLIPS</span>
         </div>
       </section>
 
       <section className="site-shell rebuild-levels" id="deck">
         <header className="rebuild-section-heading">
           <div>
-            <p className="rebuild-overline dark"><span /> One unified deck</p>
-            <h2>No difficulty tiers.<br />No separate queues.</h2>
+            <p className="rebuild-overline dark"><span /> One balanced deck</p>
+            <h2>All 500 claims.<br />One shuffled queue.</h2>
           </div>
-          <p>Every reviewed clip from the ranked source enters the same shuffled deck after the speaker, statement, timestamps, and evidence are verified.</p>
+          <p>The deck alternates source ranks during construction, then shuffles all 250 truths and 250 lies together for play.</p>
         </header>
 
         <div className="rebuild-level-grid">
           <Link href="/play" className="rebuild-level-card rebuild-level-expert">
-            <div className="rebuild-level-top">
-              <span>01</span>
-              <small>All reviewed ranks</small>
-            </div>
-            <h3>Ranked Lies</h3>
-            <p>One continuous deck containing every currently verified video from the 250-lie research source.</p>
+            <div className="rebuild-level-top"><span>500</span><small>Complete research deck</small></div>
+            <h3>Truth or Lie</h3>
+            <p>Original Falsology narration reads every ranked claim aloud with ten seconds before and after the statement.</p>
             <div className="rebuild-level-footer">
-              <span><strong>{claims.length}</strong> playable now</span>
-              <span>Shuffled together</span>
+              <span><strong>250 + 250</strong> balanced</span>
+              <span>Endless shuffle</span>
               <b>Play →</b>
             </div>
           </Link>
         </div>
-        <p className="rebuild-review-note">A ranked item is not published merely because a related video exists. The actual statement and its context window must be timestamped and reviewed.</p>
+        <p className="rebuild-review-note">This is a playable research deck. Generated narration preserves the exact seed wording; source quality, quantitative limits, and historical nuance remain open to reports and editorial correction.</p>
       </section>
 
       <section className="site-shell rebuild-ad-band"><AdSlot placement="leaderboard" /></section>
@@ -89,23 +85,18 @@ export default function HomePage() {
       <section className="rebuild-case-section">
         <div className="site-shell">
           <header className="rebuild-section-heading compact">
-            <div>
-              <p className="rebuild-overline"><span /> Cases on deck</p>
-              <h2>One sentence can change everything.</h2>
-            </div>
-            <Link href="/archive">Browse the case archive →</Link>
+            <div><p className="rebuild-overline"><span /> Cases on deck</p><h2>Some true claims sound impossible.</h2></div>
+            <Link href="/archive">Browse all 500 →</Link>
           </header>
-
           <div className="rebuild-case-grid">
             {previews.map((claim, index) => (
               <Link href={`/claim/${claim.slug}`} className="rebuild-case-preview" key={claim.id}>
-                <div className="rebuild-preview-index">0{index + 1}</div>
+                <div className="rebuild-preview-index">{String(index + 1).padStart(2, "0")}</div>
                 <div className="rebuild-preview-person">
-                  <span>{claim.person.split(" ").map((part) => part[0]).slice(0, 2).join("")}</span>
-                  <div><strong>{claim.person}</strong><small>{claim.category}</small></div>
+                  <span>?</span><div><strong>{claim.category}</strong><small>{claim.setting}</small></div>
                 </div>
                 <blockquote>“{claim.claim}”</blockquote>
-                <div className="rebuild-preview-footer"><span>Check the record</span><b>Open case →</b></div>
+                <div className="rebuild-preview-footer"><span>Truth or lie?</span><b>Open case →</b></div>
               </Link>
             ))}
           </div>
@@ -115,13 +106,13 @@ export default function HomePage() {
       <section className="site-shell rebuild-process">
         <div className="rebuild-process-intro">
           <p className="rebuild-overline dark"><span /> The game</p>
-          <h2>Watch.<br />Commit.<br />Find out.</h2>
+          <h2>Listen.<br />Commit.<br />Find out.</h2>
           <p>No confidence slider. No body-language scoring. Make the call before the evidence appears.</p>
         </div>
         <div className="rebuild-process-steps">
-          <article><span>01</span><div><h3>Watch the exact moment</h3><p>Each clip begins ten seconds before the statement and ends ten seconds after it, limited only by the source boundaries.</p></div></article>
-          <article><span>02</span><div><h3>Make the call</h3><p>Your answer locks before the evidence and historical record are revealed.</p></div></article>
-          <article><span>03</span><div><h3>Check what holds up</h3><p>See the timeline, corroborating records, missing context, and source links.</p></div></article>
+          <article><span>01</span><div><h3>Hear the claim</h3><p>Every generated clip reserves ten seconds before the narration, a twelve-second spoken slot, and ten seconds afterward.</p></div></article>
+          <article><span>02</span><div><h3>Choose truth or lie</h3><p>The queue contains exactly 250 of each, but the order is shuffled.</p></div></article>
+          <article><span>03</span><div><h3>Check what holds up</h3><p>Read the explanation, evidence confidence, and linked source records.</p></div></article>
         </div>
       </section>
 
@@ -130,8 +121,8 @@ export default function HomePage() {
           <div className="rebuild-standard-mark">F</div>
           <div>
             <p className="rebuild-overline"><span /> The rule</p>
-            <h2>Evidence beats vibes.</h2>
-            <p>Falsology does not score facial expressions, eye contact, nervousness, or “tells.” Verdicts are based on records, timelines, admissions, physical evidence, and corroboration.</p>
+            <h2>Evidence beats plausibility.</h2>
+            <p>The game is designed around claims that exploit intuition. A statement sounding ridiculous does not make it false, and sounding familiar does not make it true.</p>
           </div>
           <Link href="/methodology">Read the methodology <b>↗</b></Link>
         </div>
@@ -140,11 +131,8 @@ export default function HomePage() {
       <section className="rebuild-final-cta">
         <div className="site-shell">
           <p>Think you can tell?</p>
-          <h2>Open the unified ranked deck.</h2>
-          <div>
-            <Link href="/play" className="rebuild-primary">Start playing <b>→</b></Link>
-            <Link href="/archive" className="rebuild-secondary light">Browse cases</Link>
-          </div>
+          <h2>Five hundred chances to prove it.</h2>
+          <div><Link href="/play" className="rebuild-primary">Start playing <b>→</b></Link><Link href="/archive" className="rebuild-secondary light">Browse cases</Link></div>
         </div>
       </section>
     </main>
