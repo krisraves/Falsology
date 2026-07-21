@@ -66,6 +66,7 @@ export function GeneratedClipPlayer({
         <video
           ref={videoRef}
           className="generated-clip-video"
+          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", background: "#000" }}
           src={src}
           preload="metadata"
           playsInline
