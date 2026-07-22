@@ -1,1 +1,1 @@
-Run the next deck completion validation pass.
+Run the top-20 ranked sourcing pass: top 10 unbelievable truths and top 10 important lies. Preserve the current production interface and activate only direct, transcript-timestamped, embeddable real videos that pass validation.
