@@ -1,0 +1,5786 @@
+{
+  "generatedAt": "2026-07-19",
+  "status": "incomplete",
+  "target": {
+    "total": 120,
+    "perDifficulty": 40,
+    "perVerdictPerDifficulty": 20
+  },
+  "existingActiveCases": 12,
+  "newCasesSelected": 11,
+  "validation": {
+    "totalFinalCases": 23,
+    "uniqueVideoIds": true,
+    "counts": {
+      "easy": {
+        "truth": 2,
+        "lie": 13
+      },
+      "medium": {
+        "truth": 2,
+        "lie": 2
+      },
+      "hard": {
+        "truth": 2,
+        "lie": 2
+      }
+    },
+    "shortfalls": {
+      "easy:truth": {
+        "required": 18,
+        "selected": 0,
+        "availableOptions": 0
+      },
+      "easy:lie": {
+        "required": 18,
+        "selected": 11,
+        "availableOptions": 13
+      },
+      "medium:truth": {
+        "required": 18,
+        "selected": 0,
+        "availableOptions": 0
+      },
+      "medium:lie": {
+        "required": 18,
+        "selected": 0,
+        "availableOptions": 0
+      },
+      "hard:truth": {
+        "required": 18,
+        "selected": 0,
+        "availableOptions": 0
+      },
+      "hard:lie": {
+        "required": 18,
+        "selected": 0,
+        "availableOptions": 0
+      }
+    }
+  },
+  "seedResults": [
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Hillary Clinton",
+        "personRole": "U.S. senator",
+        "statementHints": [
+          "sniper fire",
+          "landed under"
+        ],
+        "factSummary": "Contemporaneous footage showed a routine arrival rather than landing under sniper fire.",
+        "evidenceQuery": "Hillary Clinton Bosnia sniper fire",
+        "category": "Campaign speech",
+        "seedId": "S004",
+        "searchQueries": [
+          "Hillary Clinton Bosnia sniper fire speech video",
+          "Hillary Clinton sniper fire full interview testimony"
+        ],
+        "categorySlug": "campaign-speech",
+        "setting": "Campaign speech"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "LyvLJX_7GAg",
+          "title": "Hillary Clinton in Bosnia:  We're taking sniper fire!  Get to the Choppa!",
+          "channel": "MikeTV",
+          "duration": 108.56,
+          "statement": {
+            "score": 25.0,
+            "text": "we recorded of the greeting ceremony when the plane landed compare that to senator clinton's account i remember landing under sniper fire",
+            "start": 41.76,
+            "end": 53.12,
+            "details": {
+              "hintTokens": [
+                "fire",
+                "landed",
+                "sniper",
+                "under"
+              ],
+              "overlap": [
+                "fire",
+                "landed",
+                "landing",
+                "sniper",
+                "under"
+              ],
+              "phraseHits": [
+                "sniper fire"
+              ],
+              "firstPerson": true,
+              "wordCount": 22,
+              "anchorHits": [
+                "plane"
+              ]
+            }
+          },
+          "clipStart": 36.76,
+          "clipEnd": 58.12,
+          "reference": {
+            "title": "Hillary Clinton 2008 presidential campaign",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Hillary_Clinton_2008_presidential_campaign",
+            "note": "Contemporaneous footage showed a routine arrival rather than landing under sniper fire."
+          },
+          "confidence": 29.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Sean Spicer",
+        "personRole": "White House press secretary",
+        "statementHints": [
+          "largest audience",
+          "inauguration period"
+        ],
+        "factSummary": "Photographs and transit data contradicted the claim that it was the largest inauguration audience ever.",
+        "evidenceQuery": "Sean Spicer inauguration crowd size",
+        "category": "Press briefing",
+        "seedId": "S005",
+        "searchQueries": [
+          "Sean Spicer largest audience inauguration period briefing",
+          "Sean Spicer largest audience full interview testimony"
+        ],
+        "categorySlug": "press-briefing",
+        "setting": "Press briefing"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "Bpn8G6RfsWc",
+          "title": "Sean Spicer defends claim about inauguration viewership",
+          "channel": "Business Insider",
+          "duration": 151.52,
+          "statement": {
+            "score": 11.0,
+            "text": "we have information on so far I don't think there's any question it was that that it was the largest watched inauguration ever more",
+            "start": 120.6,
+            "end": 131.72,
+            "details": {
+              "hintTokens": [
+                "audience",
+                "inauguration",
+                "largest",
+                "period"
+              ],
+              "overlap": [
+                "ever",
+                "inauguration",
+                "largest"
+              ],
+              "phraseHits": [],
+              "firstPerson": true,
+              "wordCount": 24,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 115.6,
+          "clipEnd": 136.72,
+          "reference": {
+            "title": "Sean Spicer",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Sean_Spicer",
+            "note": "Photographs and transit data contradicted the claim that it was the largest inauguration audience ever."
+          },
+          "confidence": 15.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Bill Clinton",
+        "personRole": "U.S. president",
+        "statementHints": [
+          "did not have sexual relations",
+          "Miss Lewinsky"
+        ],
+        "factSummary": "Clinton later acknowledged an improper intimate relationship with Monica Lewinsky.",
+        "evidenceQuery": "Clinton Lewinsky scandal",
+        "category": "Public statement",
+        "seedId": "S001",
+        "searchQueries": [
+          "Bill Clinton Monica Lewinsky denial statement full",
+          "Bill Clinton did not have sexual relations full interview testimony"
+        ],
+        "categorySlug": "public-statement",
+        "setting": "Public statement"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "_aGbdni7QNs",
+          "title": "This Day In History: Bill Clinton says \"I did not have sexual relations with that woman\"",
+          "channel": "CBS News",
+          "duration": 227.12,
+          "statement": {
+            "score": 27.0,
+            "text": "me I'm going to say this again I did not have sexual relations with that woman Miss",
+            "start": 66.4,
+            "end": 78.84,
+            "details": {
+              "hintTokens": [
+                "did",
+                "lewinsky",
+                "miss",
+                "not",
+                "relations",
+                "sexual"
+              ],
+              "overlap": [
+                "did",
+                "miss",
+                "not",
+                "relations",
+                "sexual"
+              ],
+              "phraseHits": [
+                "did not have sexual relations"
+              ],
+              "firstPerson": true,
+              "wordCount": 17,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 61.4,
+          "clipEnd": 83.84,
+          "reference": {
+            "title": "Clinton–Lewinsky scandal",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal",
+            "note": "Clinton later acknowledged an improper intimate relationship with Monica Lewinsky."
+          },
+          "confidence": 31.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Rafael Palmeiro",
+        "personRole": "Baseball player",
+        "statementHints": [
+          "never used steroids",
+          "period"
+        ],
+        "factSummary": "Palmeiro later tested positive for a banned steroid.",
+        "evidenceQuery": "Rafael Palmeiro steroid suspension",
+        "category": "Congressional testimony",
+        "seedId": "S010",
+        "searchQueries": [
+          "Rafael Palmeiro never used steroids period testimony",
+          "Rafael Palmeiro never used steroids full interview testimony"
+        ],
+        "categorySlug": "congressional-testimony",
+        "setting": "Congressional testimony"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "cOC7E5DscJU",
+          "title": "Steroids, Rafael Palmeiro, and Naming Names with Baseball Legend Jose Canseco",
+          "channel": "mouthpiecesports1",
+          "duration": 246.0,
+          "statement": {
+            "score": 19.0,
+            "text": "we saw the Congressional hearings Sammy Sosa couldn't speak English uh Ralph Al Paro I don't know how to tell you I've never used steroids",
+            "start": 53.24,
+            "end": 63.92,
+            "details": {
+              "hintTokens": [
+                "never",
+                "period",
+                "steroids",
+                "used"
+              ],
+              "overlap": [
+                "never",
+                "steroids",
+                "used"
+              ],
+              "phraseHits": [
+                "never used steroids"
+              ],
+              "firstPerson": true,
+              "wordCount": 25,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 48.24,
+          "clipEnd": 68.92,
+          "reference": {
+            "title": "Rafael Palmeiro",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Rafael_Palmeiro",
+            "note": "Palmeiro later tested positive for a banned steroid."
+          },
+          "confidence": 23.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Anthony Weiner",
+        "personRole": "U.S. representative",
+        "statementHints": [
+          "hacked",
+          "not my picture",
+          "account was hacked"
+        ],
+        "factSummary": "Weiner later admitted sending the image from his own account.",
+        "evidenceQuery": "Anthony Weiner sexting scandal",
+        "category": "Press conference",
+        "seedId": "S007",
+        "searchQueries": [
+          "Anthony Weiner hacked account denial press conference",
+          "Anthony Weiner hacked full interview testimony"
+        ],
+        "categorySlug": "press-conference",
+        "setting": "Press conference"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "L0z5k0mc5yk",
+          "title": "Rep. Anthony Weiner on Twitter Photo Scandal: 'I Was Pranked'",
+          "channel": "ABC News",
+          "duration": 294.76,
+          "statement": {
+            "score": 15.0,
+            "text": "I did not send that tweet it my system was hacked I was pranked it was a fairly",
+            "start": 81.8,
+            "end": 88.64,
+            "details": {
+              "hintTokens": [
+                "account",
+                "hacked",
+                "not",
+                "picture"
+              ],
+              "overlap": [
+                "hacked",
+                "not"
+              ],
+              "phraseHits": [
+                "hacked"
+              ],
+              "firstPerson": true,
+              "wordCount": 18,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 76.8,
+          "clipEnd": 93.64,
+          "reference": {
+            "title": "Anthony Weiner sexting scandals",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Anthony_Weiner_sexting_scandals",
+            "note": "Weiner later admitted sending the image from his own account."
+          },
+          "confidence": 19.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Brian Williams",
+        "personRole": "Television journalist",
+        "statementHints": [
+          "hit by an RPG",
+          "forced down",
+          "helicopter"
+        ],
+        "factSummary": "Crew members and records showed Williams was not aboard the helicopter struck by an RPG.",
+        "evidenceQuery": "Brian Williams Iraq helicopter story",
+        "category": "Television interview",
+        "seedId": "S011",
+        "searchQueries": [
+          "Brian Williams helicopter hit RPG Iraq interview",
+          "Brian Williams hit by an RPG full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "_90LqVNx_7A",
+          "title": "Brian Williams is sorry for misremembering",
+          "channel": "HLN",
+          "duration": 120.28,
+          "statement": {
+            "score": 18.0,
+            "text": "I said I was traveling in an aircraft that was hit by RPG fire. I was instead in a following aircraft. With the military newspaper Stars and Stripes says that Williams helicopter",
+            "start": 74.92,
+            "end": 90.52,
+            "details": {
+              "hintTokens": [
+                "down",
+                "forced",
+                "helicopter",
+                "hit",
+                "rpg"
+              ],
+              "overlap": [
+                "helicopter",
+                "hit",
+                "rpg",
+                "williams"
+              ],
+              "phraseHits": [
+                "helicopter"
+              ],
+              "firstPerson": true,
+              "wordCount": 32,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 69.92,
+          "clipEnd": 95.52,
+          "reference": {
+            "title": "Brian Williams",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Brian_Williams",
+            "note": "Crew members and records showed Williams was not aboard the helicopter struck by an RPG."
+          },
+          "confidence": 22.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Richard Nixon",
+        "personRole": "U.S. president",
+        "statementHints": [
+          "not a crook"
+        ],
+        "factSummary": "Watergate evidence and the White House tapes contradicted Nixon's denial of wrongdoing.",
+        "evidenceQuery": "Watergate scandal",
+        "category": "Press conference",
+        "seedId": "S002",
+        "searchQueries": [
+          "Richard Nixon I am not a crook full speech",
+          "Richard Nixon not a crook full interview testimony"
+        ],
+        "categorySlug": "press-conference",
+        "setting": "Press conference"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "sh163n1lJ4M",
+          "title": "Richard Nixon - \"I'm not a crook\"",
+          "channel": "Max Power",
+          "duration": 37.0,
+          "statement": {
+            "score": 16.0,
+            "text": "my years of public life, that I welcome this kind of examination because people have got to know whether or not their President's a crook. Well, I'm not a crook",
+            "start": 21.71,
+            "end": 31.16,
+            "details": {
+              "hintTokens": [
+                "crook",
+                "not"
+              ],
+              "overlap": [
+                "crook",
+                "not"
+              ],
+              "phraseHits": [
+                "not a crook"
+              ],
+              "firstPerson": true,
+              "wordCount": 30,
+              "anchorHits": [
+                "years"
+              ]
+            }
+          },
+          "clipStart": 16.71,
+          "clipEnd": 36.16,
+          "reference": {
+            "title": "Watergate scandal",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+            "note": "Watergate evidence and the White House tapes contradicted Nixon's denial of wrongdoing."
+          },
+          "confidence": 20.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Alex Jones",
+        "personRole": "Media host",
+        "statementHints": [
+          "completely fake",
+          "actors",
+          "Sandy Hook"
+        ],
+        "factSummary": "Courts found Jones's repeated Sandy Hook hoax claims false and defamatory.",
+        "evidenceQuery": "Alex Jones Sandy Hook litigation",
+        "category": "Broadcast",
+        "seedId": "S013",
+        "searchQueries": [
+          "Alex Jones Sandy Hook completely fake actors video",
+          "Alex Jones completely fake full interview testimony"
+        ],
+        "categorySlug": "broadcast",
+        "setting": "Broadcast"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "EdwfKrdUW1s",
+          "title": "Jury hears Alex Jones say Sandy Hook was 'fake with actors'",
+          "channel": "Raw Videos",
+          "duration": 162.32,
+          "statement": {
+            "score": 11.0,
+            "text": "i thought they killed some real kids and it just shows how bold they are that they clearly used actors i mean they even ended up",
+            "start": 102.48,
+            "end": 112.88,
+            "details": {
+              "hintTokens": [
+                "actors",
+                "completely",
+                "fake",
+                "hook",
+                "sandy"
+              ],
+              "overlap": [
+                "actors"
+              ],
+              "phraseHits": [
+                "actors"
+              ],
+              "firstPerson": true,
+              "wordCount": 26,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 97.48,
+          "clipEnd": 117.88,
+          "reference": {
+            "title": "Alex Jones",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Alex_Jones",
+            "note": "Courts found Jones's repeated Sandy Hook hoax claims false and defamatory."
+          },
+          "confidence": 15.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Trevor Milton",
+        "personRole": "Nikola founder",
+        "statementHints": [
+          "fully functioning",
+          "prototype",
+          "not a pusher"
+        ],
+        "factSummary": "Prosecutors showed Nikola staged demonstrations and Milton misrepresented the truck's capabilities.",
+        "evidenceQuery": "Trevor Milton fraud conviction",
+        "category": "Product presentation",
+        "seedId": "S015",
+        "searchQueries": [
+          "Trevor Milton Nikola One working prototype presentation",
+          "Trevor Milton fully functioning full interview testimony"
+        ],
+        "categorySlug": "product-presentation",
+        "setting": "Product presentation"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "B1NOofxXSAc",
+          "title": "Conviction or Conspiracy: The Trevor Milton Saga (Official Documentary)",
+          "channel": "Trevor Milton",
+          "duration": 6442.0,
+          "statement": {
+            "score": 22.0,
+            "text": "we show you, we can actually deliver on. And What can you tell us about what happened here? He said that it was not a pusher, which is industry parliament. So basically meaning a prototype that cannot operate",
+            "start": 2612.88,
+            "end": 2628.08,
+            "details": {
+              "hintTokens": [
+                "fully",
+                "functioning",
+                "not",
+                "prototype",
+                "pusher"
+              ],
+              "overlap": [
+                "not",
+                "prototype",
+                "pusher"
+              ],
+              "phraseHits": [
+                "prototype",
+                "not a pusher"
+              ],
+              "firstPerson": true,
+              "wordCount": 38,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 2607.88,
+          "clipEnd": 2633.08,
+          "reference": {
+            "title": "Nikola Corporation",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Nikola_Corporation",
+            "note": "Prosecutors showed Nikola staged demonstrations and Milton misrepresented the truck's capabilities."
+          },
+          "confidence": 26.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Rod Blagojevich",
+        "personRole": "Illinois governor",
+        "statementHints": [
+          "done nothing wrong"
+        ],
+        "factSummary": "Blagojevich was convicted on federal corruption charges.",
+        "evidenceQuery": "Rod Blagojevich corruption case",
+        "category": "Press conference",
+        "seedId": "S016",
+        "searchQueries": [
+          "Rod Blagojevich I have done nothing wrong press conference",
+          "Rod Blagojevich done nothing wrong full interview testimony"
+        ],
+        "categorySlug": "press-conference",
+        "setting": "Press conference"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "4t1T9TcMgrI",
+          "title": "Rod Blagojevich Press Conference",
+          "channel": "The Young Turks",
+          "duration": 221.0,
+          "statement": {
+            "score": 19.0,
+            "text": "i will fight i will fight i will fight until i think my last breath i have done nothing wrong",
+            "start": 39.76,
+            "end": 52.010000000000005,
+            "details": {
+              "hintTokens": [
+                "done",
+                "nothing",
+                "wrong"
+              ],
+              "overlap": [
+                "done",
+                "nothing",
+                "wrong"
+              ],
+              "phraseHits": [
+                "done nothing wrong"
+              ],
+              "firstPerson": true,
+              "wordCount": 20,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 34.76,
+          "clipEnd": 57.01,
+          "reference": {
+            "title": "Rod Blagojevich corruption charges",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Rod_Blagojevich_corruption_charges",
+            "note": "Blagojevich was convicted on federal corruption charges."
+          },
+          "confidence": 25.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Pete Rose",
+        "personRole": "Baseball player and manager",
+        "statementHints": [
+          "never bet on baseball",
+          "did not bet"
+        ],
+        "factSummary": "Rose later admitted betting on baseball while managing the Cincinnati Reds.",
+        "evidenceQuery": "Pete Rose betting on baseball",
+        "category": "Television interview",
+        "seedId": "S008",
+        "searchQueries": [
+          "Pete Rose never bet on baseball interview",
+          "Pete Rose never bet on baseball full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "Pete Rose never bet on baseball interview",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "5a_JrO_USjo",
+          "title": "Pete Rose Talks About Betting On Baseball | David Letterman",
+          "channel": "Letterman",
+          "duration": 645.0,
+          "statement": {
+            "score": 12.0,
+            "text": "I bet on baseball Pete Rose what was the story behind that well it's a pretty true statement",
+            "start": 234.12,
+            "end": 238.8,
+            "details": {
+              "hintTokens": [
+                "baseball",
+                "bet",
+                "did",
+                "never",
+                "not"
+              ],
+              "overlap": [
+                "baseball",
+                "bet",
+                "pete",
+                "rose"
+              ],
+              "phraseHits": [],
+              "firstPerson": true,
+              "wordCount": 18,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 229.12,
+          "clipEnd": 243.8,
+          "reference": {
+            "title": "Pete Rose",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Pete_Rose",
+            "note": "Rose later admitted betting on baseball while managing the Cincinnati Reds."
+          },
+          "confidence": 16.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Jodi Arias",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "two people",
+          "intruders",
+          "attacked us"
+        ],
+        "factSummary": "Arias later admitted killing Travis Alexander and was convicted of murder.",
+        "evidenceQuery": "Murder of Travis Alexander",
+        "category": "Television interview",
+        "seedId": "S020",
+        "searchQueries": [
+          "Jodi Arias intruders attacked us interview",
+          "Jodi Arias two people full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "source": "method-v5 cache"
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "xt4EHxymIlg",
+          "title": "Obsessed: Unraveling Jodi Arias  | True crime documentary",
+          "channel": "Arizona’s Family (3TV / CBS 5) ",
+          "duration": 3272.0,
+          "statement": {
+            "score": 18.0,
+            "text": "I witnessed um Travis being [music] attacked by two other individuals. >> Who >> I don't know who they were. I couldn't [music] pick them out in a police lineup. She had talked about the fact that uh there were some intruders that",
+            "start": 1549.84,
+            "end": 1566.1200000000001,
+            "details": {
+              "hintTokens": [
+                "attacked",
+                "intruders",
+                "people",
+                "two"
+              ],
+              "overlap": [
+                "attacked",
+                "intruders",
+                "travis",
+                "two"
+              ],
+              "phraseHits": [
+                "intruders"
+              ],
+              "firstPerson": true,
+              "wordCount": 41,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 1544.84,
+          "clipEnd": 1571.12,
+          "reference": {
+            "title": "Murder of Travis Alexander",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Murder_of_Travis_Alexander",
+            "note": "Arias later admitted killing Travis Alexander and was convicted of murder."
+          },
+          "confidence": 22.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Scott Peterson",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "nothing to do",
+          "Laci",
+          "disappearance"
+        ],
+        "factSummary": "Peterson was convicted of murdering Laci Peterson and their unborn son.",
+        "evidenceQuery": "Murder of Laci Peterson",
+        "category": "Television interview",
+        "seedId": "S018",
+        "searchQueries": [
+          "Scott Peterson nothing to do with Laci disappearance interview",
+          "Scott Peterson nothing to do full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "Scott Peterson nothing to do with Laci disappearance interview",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [
+        {
+          "videoId": "7yR6bDftT0E",
+          "title": "Scott Peterson | The True Story You Were Never Told | A Tale of Two Stories",
+          "channel": "Behind Criminal Minds",
+          "duration": 8119.0,
+          "statement": {
+            "score": 21.0,
+            "text": "I had absolutely nothing to do with her disappearance and and use the word murder and yeah I mean that is",
+            "start": 3404.64,
+            "end": 3417.7400000000002,
+            "details": {
+              "hintTokens": [
+                "disappearance",
+                "laci",
+                "nothing"
+              ],
+              "overlap": [
+                "disappearance",
+                "murder",
+                "nothing"
+              ],
+              "phraseHits": [
+                "nothing to do",
+                "disappearance"
+              ],
+              "firstPerson": true,
+              "wordCount": 21,
+              "anchorHits": []
+            }
+          },
+          "clipStart": 3399.64,
+          "clipEnd": 3422.74,
+          "reference": {
+            "title": "Murder of Laci Peterson",
+            "publisher": "Wikipedia reference record",
+            "url": "https://en.wikipedia.org/wiki/Murder_of_Laci_Peterson",
+            "note": "Peterson was convicted of murdering Laci Peterson and their unborn son."
+          },
+          "confidence": 25.0,
+          "subjectTitleConfidence": 1.0
+        }
+      ],
+      "checkedCandidates": 3
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "James Johnston",
+        "personRole": "Tobacco executive",
+        "statementHints": [
+          "nicotine is not addictive",
+          "not addictive"
+        ],
+        "factSummary": "Nicotine is addictive, contrary to the executives' testimony.",
+        "evidenceQuery": "1994 tobacco congressional hearing",
+        "category": "Congressional testimony",
+        "seedId": "S025",
+        "searchQueries": [
+          "tobacco CEO nicotine not addictive congressional testimony Johnston",
+          "James Johnston nicotine is not addictive full interview testimony"
+        ],
+        "categorySlug": "congressional-testimony",
+        "setting": "Congressional testimony"
+      },
+      "attempts": [
+        {
+          "query": "tobacco CEO nicotine not addictive congressional testimony Johnston",
+          "resultCount": 10
+        },
+        {
+          "query": "James Johnston nicotine is not addictive full interview testimony",
+          "resultCount": 6
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 11
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "John Edwards",
+        "personRole": "U.S. senator",
+        "statementHints": [
+          "story is false",
+          "completely untrue"
+        ],
+        "factSummary": "Edwards later admitted the affair he had publicly denied.",
+        "evidenceQuery": "John Edwards extramarital affair",
+        "category": "Public statement",
+        "seedId": "S006",
+        "searchQueries": [
+          "John Edwards affair denial statement false completely untrue",
+          "John Edwards story is false full interview testimony"
+        ],
+        "categorySlug": "public-statement",
+        "setting": "Public statement"
+      },
+      "attempts": [
+        {
+          "query": "John Edwards affair denial statement false completely untrue",
+          "resultCount": 12
+        },
+        {
+          "query": "John Edwards story is false full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Harrison Okene",
+        "personRole": "Ship cook",
+        "statementHints": [
+          "three days",
+          "underwater",
+          "air pocket"
+        ],
+        "factSummary": "Okene survived for about three days in an air pocket inside a sunken tugboat.",
+        "evidenceQuery": "Harrison Okene",
+        "category": "Survivor interview",
+        "seedId": "S027",
+        "searchQueries": [
+          "Harrison Okene trapped underwater three days interview",
+          "Harrison Okene three days full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Harrison Okene trapped underwater three days interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Harrison Okene three days full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Stephen McDaniel",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "don't know where she is",
+          "Lauren"
+        ],
+        "factSummary": "McDaniel later pleaded guilty to murdering Lauren Giddings.",
+        "evidenceQuery": "Murder of Lauren Giddings",
+        "category": "Television interview",
+        "seedId": "S023",
+        "searchQueries": [
+          "Stephen McDaniel we don't know where she is interview",
+          "Stephen McDaniel don't know where she is full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "Stephen McDaniel we don't know where she is interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Stephen McDaniel don't know where she is full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Diane Downs",
+        "personRole": "Mother and shooting suspect",
+        "statementHints": [
+          "bushy haired stranger",
+          "shot my children"
+        ],
+        "factSummary": "Downs was convicted after evidence and her surviving daughter's testimony contradicted her account.",
+        "evidenceQuery": "Diane Downs",
+        "category": "Television interview",
+        "seedId": "S022",
+        "searchQueries": [
+          "Diane Downs bushy haired stranger interview",
+          "Diane Downs bushy haired stranger full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "Diane Downs bushy haired stranger interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Diane Downs bushy haired stranger full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Lance Armstrong",
+        "personRole": "Professional cyclist",
+        "statementHints": [
+          "never doped",
+          "never used performance enhancing"
+        ],
+        "factSummary": "Armstrong later admitted using performance-enhancing drugs throughout his cycling career.",
+        "evidenceQuery": "Lance Armstrong doping case",
+        "category": "Television interview",
+        "seedId": "S003",
+        "searchQueries": [
+          "Lance Armstrong I have never doped interview",
+          "Lance Armstrong never doped full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "Lance Armstrong I have never doped interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Lance Armstrong never doped full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Elizabeth Holmes",
+        "personRole": "Theranos founder",
+        "statementHints": [
+          "tiny sample",
+          "hundreds of tests",
+          "single drop"
+        ],
+        "factSummary": "Theranos could not perform the broad range of reliable tests Holmes claimed from tiny samples.",
+        "evidenceQuery": "Theranos scandal",
+        "category": "Conference interview",
+        "seedId": "S014",
+        "searchQueries": [
+          "Elizabeth Holmes tiny sample hundreds tests interview",
+          "Elizabeth Holmes tiny sample full interview testimony"
+        ],
+        "categorySlug": "conference-interview",
+        "setting": "Conference interview"
+      },
+      "attempts": [
+        {
+          "query": "Elizabeth Holmes tiny sample hundreds tests interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Elizabeth Holmes tiny sample full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Casey Anthony",
+        "personRole": "Mother and suspect",
+        "statementHints": [
+          "Zanny",
+          "nanny",
+          "left her"
+        ],
+        "factSummary": "Anthony was convicted of providing false information to law enforcement, including claims about a nonexistent nanny.",
+        "evidenceQuery": "Death of Caylee Anthony",
+        "category": "Police interview",
+        "seedId": "S019",
+        "searchQueries": [
+          "Casey Anthony Zanny nanny police interview",
+          "Casey Anthony Zanny full interview testimony"
+        ],
+        "categorySlug": "police-interview",
+        "setting": "Police interview"
+      },
+      "attempts": [
+        {
+          "query": "Casey Anthony Zanny nanny police interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Casey Anthony Zanny full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "George Santos",
+        "personRole": "U.S. representative",
+        "statementHints": [
+          "Baruch",
+          "Citigroup",
+          "Goldman Sachs",
+          "graduated"
+        ],
+        "factSummary": "Records and Santos's later admissions contradicted major biographical claims he made.",
+        "evidenceQuery": "George Santos false biographical statements",
+        "category": "Television interview",
+        "seedId": "S024",
+        "searchQueries": [
+          "George Santos college employment claims interview",
+          "George Santos Baruch full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "George Santos college employment claims interview",
+          "resultCount": 12
+        },
+        {
+          "query": "George Santos Baruch full interview testimony",
+          "resultCount": 1
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 13
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Michael Packard",
+        "personRole": "Lobster diver",
+        "statementHints": [
+          "whale",
+          "mouth",
+          "swallowed"
+        ],
+        "factSummary": "Packard survived after a humpback whale briefly took him into its mouth.",
+        "evidenceQuery": "Michael Packard whale",
+        "category": "Survivor interview",
+        "seedId": "S028",
+        "searchQueries": [
+          "Michael Packard whale mouth interview",
+          "Michael Packard whale full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Michael Packard whale mouth interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Michael Packard whale full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Aron Ralston",
+        "personRole": "Mountaineer",
+        "statementHints": [
+          "cut off my arm",
+          "amputated",
+          "boulder"
+        ],
+        "factSummary": "Ralston amputated his own arm after being trapped by a boulder in a Utah canyon.",
+        "evidenceQuery": "Aron Ralston",
+        "category": "Survivor interview",
+        "seedId": "S026",
+        "searchQueries": [
+          "Aron Ralston cut off my arm interview",
+          "Aron Ralston cut off my arm full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Aron Ralston cut off my arm interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Aron Ralston cut off my arm full interview testimony",
+          "resultCount": 10
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "José Salvador Alvarenga",
+        "personRole": "Fisherman",
+        "statementHints": [
+          "438 days",
+          "at sea",
+          "adrift"
+        ],
+        "factSummary": "Alvarenga survived an extraordinarily long drift across the Pacific before reaching the Marshall Islands.",
+        "evidenceQuery": "José Salvador Alvarenga",
+        "category": "Survivor interview",
+        "seedId": "S036",
+        "searchQueries": [
+          "Jose Salvador Alvarenga 438 days at sea interview",
+          "José Salvador Alvarenga 438 days full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Jose Salvador Alvarenga 438 days at sea interview",
+          "resultCount": 12
+        },
+        {
+          "query": "José Salvador Alvarenga 438 days full interview testimony",
+          "resultCount": 8
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Paul Templer",
+        "personRole": "River guide",
+        "statementHints": [
+          "hippo",
+          "mouth",
+          "swallowed"
+        ],
+        "factSummary": "Templer survived repeated attacks after being taken into a hippopotamus's mouth.",
+        "evidenceQuery": "Paul Templer hippo",
+        "category": "Survivor interview",
+        "seedId": "S029",
+        "searchQueries": [
+          "Paul Templer swallowed by hippo interview",
+          "Paul Templer hippo full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Paul Templer swallowed by hippo interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Paul Templer hippo full interview testimony",
+          "resultCount": 3
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 14
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Chris Watts",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "no idea",
+          "where they went",
+          "inclination"
+        ],
+        "factSummary": "Watts later confessed to murdering his wife and daughters.",
+        "evidenceQuery": "Watts family murders",
+        "category": "Public appeal",
+        "seedId": "S021",
+        "searchQueries": [
+          "Chris Watts no idea where they went porch interview",
+          "Chris Watts no idea full interview testimony"
+        ],
+        "categorySlug": "public-appeal",
+        "setting": "Public appeal"
+      },
+      "attempts": [
+        {
+          "query": "Chris Watts no idea where they went porch interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Chris Watts no idea full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Steven Callahan",
+        "personRole": "Sailor",
+        "statementHints": [
+          "76 days",
+          "life raft",
+          "adrift"
+        ],
+        "factSummary": "Callahan survived seventy-six days adrift in an inflatable life raft.",
+        "evidenceQuery": "Steven Callahan",
+        "category": "Survivor interview",
+        "seedId": "S035",
+        "searchQueries": [
+          "Steven Callahan 76 days life raft interview",
+          "Steven Callahan 76 days full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Steven Callahan 76 days life raft interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Steven Callahan 76 days full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Susan Smith",
+        "personRole": "Mother and murder suspect",
+        "statementHints": [
+          "carjacked",
+          "took my children",
+          "bring my babies"
+        ],
+        "factSummary": "Smith confessed that she had driven the car carrying her sons into a lake.",
+        "evidenceQuery": "Susan Smith case",
+        "category": "Public appeal",
+        "seedId": "S017",
+        "searchQueries": [
+          "Susan Smith carjacking kidnapped children press conference",
+          "Susan Smith carjacked full interview testimony"
+        ],
+        "categorySlug": "public-appeal",
+        "setting": "Public appeal"
+      },
+      "attempts": [
+        {
+          "query": "Susan Smith carjacking kidnapped children press conference",
+          "resultCount": 12
+        },
+        {
+          "query": "Susan Smith carjacked full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Marion Jones",
+        "personRole": "Olympic sprinter",
+        "statementHints": [
+          "never used performance enhancing",
+          "never used steroids"
+        ],
+        "factSummary": "Jones later admitted using performance-enhancing drugs and pleaded guilty to lying to investigators.",
+        "evidenceQuery": "Marion Jones doping",
+        "category": "Press conference",
+        "seedId": "S009",
+        "searchQueries": [
+          "Marion Jones never used performance enhancing drugs statement",
+          "Marion Jones never used performance enhancing full interview testimony"
+        ],
+        "categorySlug": "press-conference",
+        "setting": "Press conference"
+      },
+      "attempts": [
+        {
+          "query": "Marion Jones never used performance enhancing drugs statement",
+          "resultCount": 12
+        },
+        {
+          "query": "Marion Jones never used performance enhancing full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Mary Vincent",
+        "personRole": "Crime survivor",
+        "statementHints": [
+          "arms",
+          "cut off",
+          "survived"
+        ],
+        "factSummary": "Vincent survived after an attacker severed both of her forearms and threw her from a cliff.",
+        "evidenceQuery": "Mary Vincent survivor",
+        "category": "Survivor interview",
+        "seedId": "S031",
+        "searchQueries": [
+          "Mary Vincent arms cut off survivor interview",
+          "Mary Vincent arms full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Mary Vincent arms cut off survivor interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Mary Vincent arms full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Ricky Megee",
+        "personRole": "Outback survivor",
+        "statementHints": [
+          "71 days",
+          "outback",
+          "survived"
+        ],
+        "factSummary": "Megee survived more than two months stranded in the Australian outback.",
+        "evidenceQuery": "Ricky Megee",
+        "category": "Survivor interview",
+        "seedId": "S030",
+        "searchQueries": [
+          "Ricky Megee survived 71 days outback interview",
+          "Ricky Megee 71 days full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Ricky Megee survived 71 days outback interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ricky Megee 71 days full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Vesna Vulović",
+        "personRole": "Flight attendant",
+        "statementHints": [
+          "fall",
+          "plane",
+          "survived"
+        ],
+        "factSummary": "Vulović survived the breakup of an airliner at high altitude.",
+        "evidenceQuery": "Vesna Vulović",
+        "category": "Survivor interview",
+        "seedId": "S038",
+        "searchQueries": [
+          "Vesna Vulovic survived plane fall interview",
+          "Vesna Vulović fall full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Vesna Vulovic survived plane fall interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Vesna Vulović fall full interview testimony",
+          "resultCount": 8
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Juliane Koepcke",
+        "personRole": "Plane-crash survivor",
+        "statementHints": [
+          "fell",
+          "plane",
+          "survived",
+          "jungle"
+        ],
+        "factSummary": "Koepcke survived a fall from a disintegrating airliner and then walked through the Amazon rainforest.",
+        "evidenceQuery": "Juliane Koepcke",
+        "category": "Survivor interview",
+        "seedId": "S037",
+        "searchQueries": [
+          "Juliane Koepcke fell from plane survived interview",
+          "Juliane Koepcke fell full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Juliane Koepcke fell from plane survived interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Juliane Koepcke fell full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 15
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Natascha Kampusch",
+        "personRole": "Kidnapping survivor",
+        "statementHints": [
+          "eight years",
+          "captivity",
+          "kidnapped"
+        ],
+        "factSummary": "Kampusch was abducted at age ten and escaped after more than eight years.",
+        "evidenceQuery": "Natascha Kampusch",
+        "category": "Survivor interview",
+        "seedId": "S034",
+        "searchQueries": [
+          "Natascha Kampusch held captive eight years interview",
+          "Natascha Kampusch eight years full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Natascha Kampusch held captive eight years interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Natascha Kampusch eight years full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Anthony Ray Hinton",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "30 years",
+          "death row",
+          "innocent"
+        ],
+        "factSummary": "Hinton spent nearly thirty years on Alabama's death row before his conviction was overturned.",
+        "evidenceQuery": "Anthony Ray Hinton",
+        "category": "Exoneration interview",
+        "seedId": "S039",
+        "searchQueries": [
+          "Anthony Ray Hinton 30 years death row interview",
+          "Anthony Ray Hinton 30 years full interview testimony"
+        ],
+        "categorySlug": "exoneration-interview",
+        "setting": "Exoneration interview"
+      },
+      "attempts": [
+        {
+          "query": "Anthony Ray Hinton 30 years death row interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Anthony Ray Hinton 30 years full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "lie",
+        "person": "Ryan Lochte",
+        "personRole": "Olympic swimmer",
+        "statementHints": [
+          "gun",
+          "forehead",
+          "robbed"
+        ],
+        "factSummary": "Brazilian investigators concluded the account of an armed roadside robbery was false.",
+        "evidenceQuery": "Ryan Lochte Rio incident",
+        "category": "Television interview",
+        "seedId": "S012",
+        "searchQueries": [
+          "Ryan Lochte gun forehead Rio robbery interview",
+          "Ryan Lochte gun full interview testimony"
+        ],
+        "categorySlug": "television-interview",
+        "setting": "Television interview"
+      },
+      "attempts": [
+        {
+          "query": "Ryan Lochte gun forehead Rio robbery interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ryan Lochte gun full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Kirk Bloodsworth",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "death row",
+          "exonerated"
+        ],
+        "factSummary": "Bloodsworth became the first American on death row exonerated by DNA evidence.",
+        "evidenceQuery": "Kirk Bloodsworth",
+        "category": "Exoneration interview",
+        "seedId": "S040",
+        "searchQueries": [
+          "Kirk Bloodsworth DNA exonerated death row interview",
+          "Kirk Bloodsworth DNA full interview testimony"
+        ],
+        "categorySlug": "exoneration-interview",
+        "setting": "Exoneration interview"
+      },
+      "attempts": [
+        {
+          "query": "Kirk Bloodsworth DNA exonerated death row interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Kirk Bloodsworth DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Elizabeth Smart",
+        "personRole": "Kidnapping survivor",
+        "statementHints": [
+          "nine months",
+          "kidnapped",
+          "held captive"
+        ],
+        "factSummary": "Smart was abducted at age fourteen and rescued nine months later.",
+        "evidenceQuery": "Kidnapping of Elizabeth Smart",
+        "category": "Survivor interview",
+        "seedId": "S032",
+        "searchQueries": [
+          "Elizabeth Smart kidnapped nine months interview",
+          "Elizabeth Smart nine months full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Elizabeth Smart kidnapped nine months interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Elizabeth Smart nine months full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Jaycee Dugard",
+        "personRole": "Kidnapping survivor",
+        "statementHints": [
+          "18 years",
+          "held captive",
+          "kidnapped"
+        ],
+        "factSummary": "Dugard was abducted at age eleven and held captive for eighteen years.",
+        "evidenceQuery": "Kidnapping of Jaycee Dugard",
+        "category": "Survivor interview",
+        "seedId": "S033",
+        "searchQueries": [
+          "Jaycee Dugard held captive 18 years interview",
+          "Jaycee Dugard 18 years full interview testimony"
+        ],
+        "categorySlug": "survivor-interview",
+        "setting": "Survivor interview"
+      },
+      "attempts": [
+        {
+          "query": "Jaycee Dugard held captive 18 years interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Jaycee Dugard 18 years full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Jim Lovell",
+        "personRole": "Apollo 13 commander",
+        "statementHints": [
+          "oxygen tank",
+          "exploded",
+          "Apollo 13"
+        ],
+        "factSummary": "An oxygen tank explosion crippled Apollo 13, forcing the crew to abort the moon landing.",
+        "evidenceQuery": "Apollo 13",
+        "category": "Astronaut interview",
+        "seedId": "S044",
+        "searchQueries": [
+          "Jim Lovell oxygen tank exploded Apollo 13 interview",
+          "Jim Lovell oxygen tank full interview testimony"
+        ],
+        "categorySlug": "astronaut-interview",
+        "setting": "Astronaut interview"
+      },
+      "attempts": [
+        {
+          "query": "Jim Lovell oxygen tank exploded Apollo 13 interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Jim Lovell oxygen tank full interview testimony",
+          "resultCount": 3
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 14
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Michael Morton",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "exonerated",
+          "25 years"
+        ],
+        "factSummary": "DNA evidence exonerated Morton after he spent nearly twenty-five years imprisoned for his wife's murder.",
+        "evidenceQuery": "Michael Morton exoneration",
+        "category": "Exoneration interview",
+        "seedId": "S041",
+        "searchQueries": [
+          "Michael Morton exonerated DNA interview",
+          "Michael Morton DNA full interview testimony"
+        ],
+        "categorySlug": "exoneration-interview",
+        "setting": "Exoneration interview"
+      },
+      "attempts": [
+        {
+          "query": "Michael Morton exonerated DNA interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Michael Morton DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Chesley Sullenberger",
+        "personRole": "Airline captain",
+        "statementHints": [
+          "landed",
+          "Hudson",
+          "airplane"
+        ],
+        "factSummary": "Sullenberger safely landed US Airways Flight 1549 on the Hudson River after bird strikes disabled both engines.",
+        "evidenceQuery": "US Airways Flight 1549",
+        "category": "Pilot interview",
+        "seedId": "S050",
+        "searchQueries": [
+          "Sully landed Hudson River interview",
+          "Chesley Sullenberger landed full interview testimony"
+        ],
+        "categorySlug": "pilot-interview",
+        "setting": "Pilot interview"
+      },
+      "attempts": [
+        {
+          "query": "Sully landed Hudson River interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Chesley Sullenberger landed full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Colin Powell",
+        "personRole": "U.S. secretary of state",
+        "statementHints": [
+          "mobile biological",
+          "weapons labs",
+          "Iraq"
+        ],
+        "factSummary": "Post-invasion investigations did not find the mobile biological weapons labs described to the United Nations.",
+        "evidenceQuery": "Colin Powell UN presentation Iraq",
+        "category": "Archival statement or testimony",
+        "seedId": "S102",
+        "searchQueries": [
+          "Colin Powell mobile biological weapons labs UN speech",
+          "Colin Powell mobile biological full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Colin Powell mobile biological weapons labs UN speech",
+          "resultCount": 12
+        },
+        {
+          "query": "Colin Powell mobile biological full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Alan Shepard",
+        "personRole": "Astronaut",
+        "statementHints": [
+          "golf",
+          "moon",
+          "six iron"
+        ],
+        "factSummary": "Shepard hit two golf balls on the Moon during Apollo 14.",
+        "evidenceQuery": "Alan Shepard golf on Moon",
+        "category": "Astronaut interview",
+        "seedId": "S046",
+        "searchQueries": [
+          "Alan Shepard golf ball moon interview",
+          "Alan Shepard golf full interview testimony"
+        ],
+        "categorySlug": "astronaut-interview",
+        "setting": "Astronaut interview"
+      },
+      "attempts": [
+        {
+          "query": "Alan Shepard golf ball moon interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Alan Shepard golf full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Richard Jewell",
+        "personRole": "Security guard",
+        "statementHints": [
+          "cleared",
+          "bomb",
+          "suspect"
+        ],
+        "factSummary": "Jewell discovered the Olympic Park bomb and was later formally cleared as a suspect.",
+        "evidenceQuery": "Richard Jewell",
+        "category": "News interview",
+        "seedId": "S042",
+        "searchQueries": [
+          "Richard Jewell cleared Olympic bombing interview",
+          "Richard Jewell cleared full interview testimony"
+        ],
+        "categorySlug": "news-interview",
+        "setting": "News interview"
+      },
+      "attempts": [
+        {
+          "query": "Richard Jewell cleared Olympic bombing interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Richard Jewell cleared full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Kenneth Lay",
+        "personRole": "Enron chairman",
+        "statementHints": [
+          "strong condition",
+          "Enron",
+          "stock"
+        ],
+        "factSummary": "Enron was concealing severe financial problems when Lay reassured employees.",
+        "evidenceQuery": "Enron scandal",
+        "category": "Archival statement or testimony",
+        "seedId": "S107",
+        "searchQueries": [
+          "Kenneth Lay Enron strong condition employee meeting video",
+          "Kenneth Lay strong condition full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Kenneth Lay Enron strong condition employee meeting video",
+          "resultCount": 3
+        },
+        {
+          "query": "Kenneth Lay strong condition full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 15
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Yusef Salaam",
+        "personRole": "Exonerated defendant",
+        "statementHints": [
+          "exonerated",
+          "Central Park",
+          "DNA"
+        ],
+        "factSummary": "Salaam and the other Central Park Five defendants were exonerated after the actual attacker confessed and DNA evidence supported him.",
+        "evidenceQuery": "Central Park jogger case",
+        "category": "Exoneration interview",
+        "seedId": "S043",
+        "searchQueries": [
+          "Yusef Salaam Central Park Five exonerated interview",
+          "Yusef Salaam exonerated full interview testimony"
+        ],
+        "categorySlug": "exoneration-interview",
+        "setting": "Exoneration interview"
+      },
+      "attempts": [
+        {
+          "query": "Yusef Salaam Central Park Five exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Yusef Salaam exonerated full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Chris Hadfield",
+        "personRole": "Astronaut",
+        "statementHints": [
+          "blind",
+          "spacewalk",
+          "couldn't see"
+        ],
+        "factSummary": "Hadfield temporarily lost his sight during a spacewalk after fluid irritated his eyes.",
+        "evidenceQuery": "Chris Hadfield spacewalk blindness",
+        "category": "Astronaut interview",
+        "seedId": "S045",
+        "searchQueries": [
+          "Chris Hadfield went blind spacewalk interview",
+          "Chris Hadfield blind full interview testimony"
+        ],
+        "categorySlug": "astronaut-interview",
+        "setting": "Astronaut interview"
+      },
+      "attempts": [
+        {
+          "query": "Chris Hadfield went blind spacewalk interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Chris Hadfield blind full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Richard Fuld",
+        "personRole": "Lehman Brothers CEO",
+        "statementHints": [
+          "strong capital",
+          "capital position",
+          "Lehman"
+        ],
+        "factSummary": "Lehman Brothers collapsed amid hidden leverage and accounting practices that obscured risk.",
+        "evidenceQuery": "Bankruptcy of Lehman Brothers",
+        "category": "Archival statement or testimony",
+        "seedId": "S109",
+        "searchQueries": [
+          "Richard Fuld Lehman strong capital position testimony",
+          "Richard Fuld strong capital full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Richard Fuld Lehman strong capital position testimony",
+          "resultCount": 12
+        },
+        {
+          "query": "Richard Fuld strong capital full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Buzz Aldrin",
+        "personRole": "Astronaut",
+        "statementHints": [
+          "communion",
+          "moon",
+          "bread and wine"
+        ],
+        "factSummary": "Aldrin privately took communion in the lunar module after landing on the Moon.",
+        "evidenceQuery": "Buzz Aldrin communion Moon",
+        "category": "Astronaut interview",
+        "seedId": "S047",
+        "searchQueries": [
+          "Buzz Aldrin communion moon interview",
+          "Buzz Aldrin communion full interview testimony"
+        ],
+        "categorySlug": "astronaut-interview",
+        "setting": "Astronaut interview"
+      },
+      "attempts": [
+        {
+          "query": "Buzz Aldrin communion moon interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Buzz Aldrin communion full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Thomas Sandefur",
+        "personRole": "Tobacco executive",
+        "statementHints": [
+          "nicotine is not addictive",
+          "not addictive"
+        ],
+        "factSummary": "Nicotine is addictive, contrary to the tobacco executives' testimony.",
+        "evidenceQuery": "1994 tobacco congressional hearing",
+        "category": "Archival statement or testimony",
+        "seedId": "S113",
+        "searchQueries": [
+          "tobacco CEO nicotine not addictive testimony Sandefur",
+          "Thomas Sandefur nicotine is not addictive full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "tobacco CEO nicotine not addictive testimony Sandefur",
+          "resultCount": 2
+        },
+        {
+          "query": "Thomas Sandefur nicotine is not addictive full interview testimony",
+          "resultCount": 2
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 2
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Daniel Ellsberg",
+        "personRole": "Whistleblower",
+        "statementHints": [
+          "copied",
+          "Pentagon Papers",
+          "documents"
+        ],
+        "factSummary": "Ellsberg copied and disclosed the classified Pentagon Papers.",
+        "evidenceQuery": "Daniel Ellsberg",
+        "category": "Interview",
+        "seedId": "S048",
+        "searchQueries": [
+          "Daniel Ellsberg copied Pentagon Papers interview",
+          "Daniel Ellsberg copied full interview testimony"
+        ],
+        "categorySlug": "interview",
+        "setting": "Interview"
+      },
+      "attempts": [
+        {
+          "query": "Daniel Ellsberg copied Pentagon Papers interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Daniel Ellsberg copied full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Lyndon B. Johnson",
+        "personRole": "U.S. president",
+        "statementHints": [
+          "open aggression",
+          "Tonkin",
+          "attacks"
+        ],
+        "factSummary": "Later evidence showed the reported second Gulf of Tonkin attack did not occur as described.",
+        "evidenceQuery": "Gulf of Tonkin incident",
+        "category": "Archival statement or testimony",
+        "seedId": "S105",
+        "searchQueries": [
+          "Lyndon Johnson Gulf of Tonkin aggression speech",
+          "Lyndon B. Johnson open aggression full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Lyndon Johnson Gulf of Tonkin aggression speech",
+          "resultCount": 12
+        },
+        {
+          "query": "Lyndon B. Johnson open aggression full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Jeffrey Skilling",
+        "personRole": "Enron CEO",
+        "statementHints": [
+          "financial condition",
+          "Enron",
+          "healthy"
+        ],
+        "factSummary": "Skilling was convicted for fraud related to Enron's concealed financial condition.",
+        "evidenceQuery": "Jeffrey Skilling",
+        "category": "Archival statement or testimony",
+        "seedId": "S108",
+        "searchQueries": [
+          "Jeffrey Skilling Enron financial condition testimony video",
+          "Jeffrey Skilling financial condition full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Jeffrey Skilling Enron financial condition testimony video",
+          "resultCount": 12
+        },
+        {
+          "query": "Jeffrey Skilling financial condition full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Joseph McCarthy",
+        "personRole": "U.S. senator",
+        "statementHints": [
+          "list",
+          "communists",
+          "State Department"
+        ],
+        "factSummary": "McCarthy repeatedly changed his numbers and failed to substantiate his sweeping claims.",
+        "evidenceQuery": "Joseph McCarthy Wheeling speech",
+        "category": "Archival statement or testimony",
+        "seedId": "S106",
+        "searchQueries": [
+          "Joseph McCarthy list communists State Department speech footage",
+          "Joseph McCarthy list full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Joseph McCarthy list communists State Department speech footage",
+          "resultCount": 12
+        },
+        {
+          "query": "Joseph McCarthy list full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "easy",
+        "verdict": "truth",
+        "person": "Edward Snowden",
+        "personRole": "Whistleblower",
+        "statementHints": [
+          "copied",
+          "NSA",
+          "documents"
+        ],
+        "factSummary": "Snowden copied and disclosed classified NSA documents about surveillance programs.",
+        "evidenceQuery": "Edward Snowden",
+        "category": "Interview",
+        "seedId": "S049",
+        "searchQueries": [
+          "Edward Snowden copied NSA documents interview",
+          "Edward Snowden copied full interview testimony"
+        ],
+        "categorySlug": "interview",
+        "setting": "Interview"
+      },
+      "attempts": [
+        {
+          "query": "Edward Snowden copied NSA documents interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Edward Snowden copied full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Flint official",
+        "personRole": "Government official",
+        "statementHints": [
+          "water is safe",
+          "safe to drink"
+        ],
+        "factSummary": "Flint's water exposed residents to lead and other hazards despite official assurances.",
+        "evidenceQuery": "Flint water crisis",
+        "category": "Archival statement or testimony",
+        "seedId": "S112",
+        "searchQueries": [
+          "Flint water is safe press conference statement",
+          "Flint official water is safe full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Flint water is safe press conference statement",
+          "resultCount": 12
+        },
+        {
+          "query": "Flint official water is safe full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Allen Stanford",
+        "personRole": "Financier",
+        "statementHints": [
+          "safe",
+          "sound",
+          "bank"
+        ],
+        "factSummary": "Stanford was convicted of running a multibillion-dollar investment fraud.",
+        "evidenceQuery": "Allen Stanford",
+        "category": "Archival statement or testimony",
+        "seedId": "S120",
+        "searchQueries": [
+          "Allen Stanford bank safe sound interview",
+          "Allen Stanford safe full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Allen Stanford bank safe sound interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Allen Stanford safe full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "George W. Bush",
+        "personRole": "U.S. president",
+        "statementHints": [
+          "we found the weapons",
+          "mass destruction"
+        ],
+        "factSummary": "No active Iraqi WMD stockpiles matching the claim were found.",
+        "evidenceQuery": "Iraq weapons of mass destruction",
+        "category": "Archival statement or testimony",
+        "seedId": "S104",
+        "searchQueries": [
+          "George Bush we found the weapons of mass destruction interview",
+          "George W. Bush we found the weapons full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "George Bush we found the weapons of mass destruction interview",
+          "resultCount": 12
+        },
+        {
+          "query": "George W. Bush we found the weapons full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Donald Rumsfeld",
+        "personRole": "U.S. defense secretary",
+        "statementHints": [
+          "we know where they are",
+          "weapons of mass destruction"
+        ],
+        "factSummary": "The weapons stockpiles Rumsfeld described were not found.",
+        "evidenceQuery": "Iraq weapons of mass destruction",
+        "category": "Archival statement or testimony",
+        "seedId": "S103",
+        "searchQueries": [
+          "Donald Rumsfeld we know where weapons of mass destruction are interview",
+          "Donald Rumsfeld we know where they are full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Donald Rumsfeld we know where weapons of mass destruction are interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Donald Rumsfeld we know where they are full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Alexander Nix",
+        "personRole": "Cambridge Analytica CEO",
+        "statementHints": [
+          "no data",
+          "Facebook",
+          "did not use"
+        ],
+        "factSummary": "Investigations established that Cambridge Analytica obtained data from tens of millions of Facebook users.",
+        "evidenceQuery": "Facebook–Cambridge Analytica data scandal",
+        "category": "Archival statement or testimony",
+        "seedId": "S114",
+        "searchQueries": [
+          "Alexander Nix Cambridge Analytica no Facebook data denial testimony",
+          "Alexander Nix no data full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Alexander Nix Cambridge Analytica no Facebook data denial testimony",
+          "resultCount": 4
+        },
+        {
+          "query": "Alexander Nix no data full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "James Clapper",
+        "personRole": "U.S. intelligence official",
+        "statementHints": [
+          "not wittingly",
+          "collect any type of data"
+        ],
+        "factSummary": "Snowden disclosures showed the NSA was collecting Americans' phone metadata, making Clapper's answer misleading.",
+        "evidenceQuery": "James Clapper congressional testimony",
+        "category": "Archival statement or testimony",
+        "seedId": "S101",
+        "searchQueries": [
+          "James Clapper not wittingly NSA collect data testimony",
+          "James Clapper not wittingly full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "James Clapper not wittingly NSA collect data testimony",
+          "resultCount": 12
+        },
+        {
+          "query": "James Clapper not wittingly full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Richard Nixon",
+        "personRole": "U.S. president",
+        "statementHints": [
+          "Cambodia",
+          "no bombing",
+          "neutral country"
+        ],
+        "factSummary": "The United States secretly bombed Cambodia during Nixon's presidency.",
+        "evidenceQuery": "Operation Menu",
+        "category": "Archival statement or testimony",
+        "seedId": "S117",
+        "searchQueries": [
+          "Richard Nixon no bombing Cambodia statement footage",
+          "Richard Nixon Cambodia full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Richard Nixon no bombing Cambodia statement footage",
+          "resultCount": 12
+        },
+        {
+          "query": "Richard Nixon Cambodia full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Tony Hayward",
+        "personRole": "BP CEO",
+        "statementHints": [
+          "environmental impact",
+          "very modest"
+        ],
+        "factSummary": "The Deepwater Horizon spill caused extensive and long-lasting environmental damage.",
+        "evidenceQuery": "Deepwater Horizon oil spill",
+        "category": "Archival statement or testimony",
+        "seedId": "S111",
+        "searchQueries": [
+          "Tony Hayward environmental impact very modest oil spill interview",
+          "Tony Hayward environmental impact full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Tony Hayward environmental impact very modest oil spill interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Tony Hayward environmental impact full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Trevor Milton",
+        "personRole": "Nikola founder",
+        "statementHints": [
+          "drives",
+          "prototype",
+          "fully functional"
+        ],
+        "factSummary": "Milton was convicted of fraud for misrepresenting Nikola's products and technology.",
+        "evidenceQuery": "Trevor Milton",
+        "category": "Archival statement or testimony",
+        "seedId": "S122",
+        "searchQueries": [
+          "Trevor Milton Nikola truck drives itself presentation",
+          "Trevor Milton drives full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Trevor Milton Nikola truck drives itself presentation",
+          "resultCount": 12
+        },
+        {
+          "query": "Trevor Milton drives full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "John DeLorean",
+        "personRole": "Automaker",
+        "statementHints": [
+          "no drug deal",
+          "set up",
+          "innocent"
+        ],
+        "factSummary": "DeLorean was acquitted on entrapment grounds, so a simple lie verdict is not secure.",
+        "evidenceQuery": "John DeLorean trial",
+        "category": "Archival statement or testimony",
+        "seedId": "S123",
+        "searchQueries": [
+          "John DeLorean no drugs deal interview denial",
+          "John DeLorean no drug deal full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "John DeLorean no drugs deal interview denial",
+          "resultCount": 12
+        },
+        {
+          "query": "John DeLorean no drug deal full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Walter Ulbricht",
+        "personRole": "East German leader",
+        "statementHints": [
+          "nobody has the intention",
+          "build a wall"
+        ],
+        "factSummary": "The Berlin Wall was constructed less than two months after Ulbricht's statement.",
+        "evidenceQuery": "Walter Ulbricht Berlin Wall statement",
+        "category": "Archival statement or testimony",
+        "seedId": "S118",
+        "searchQueries": [
+          "Walter Ulbricht nobody intends to build a wall speech",
+          "Walter Ulbricht nobody has the intention full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Walter Ulbricht nobody intends to build a wall speech",
+          "resultCount": 12
+        },
+        {
+          "query": "Walter Ulbricht nobody has the intention full interview testimony",
+          "resultCount": 0
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 12
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Anatoli Bugorski",
+        "personRole": "Physicist",
+        "statementHints": [
+          "particle accelerator",
+          "beam",
+          "head"
+        ],
+        "factSummary": "Bugorski survived after a high-energy proton beam passed through his head.",
+        "evidenceQuery": "Anatoli Bugorski",
+        "category": "Obscure interview or testimony",
+        "seedId": "S126",
+        "searchQueries": [
+          "Anatoli Bugorski particle accelerator beam interview",
+          "Anatoli Bugorski particle accelerator full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Anatoli Bugorski particle accelerator beam interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Anatoli Bugorski particle accelerator full interview testimony",
+          "resultCount": 1
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 12
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "John Stumpf",
+        "personRole": "Wells Fargo CEO",
+        "statementHints": [
+          "cross sell",
+          "accounts",
+          "customers wanted"
+        ],
+        "factSummary": "Wells Fargo employees opened millions of unauthorized accounts under aggressive sales pressure.",
+        "evidenceQuery": "Wells Fargo account fraud scandal",
+        "category": "Archival statement or testimony",
+        "seedId": "S110",
+        "searchQueries": [
+          "John Stumpf cross selling accounts testimony",
+          "John Stumpf cross sell full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "John Stumpf cross selling accounts testimony",
+          "resultCount": 12
+        },
+        {
+          "query": "John Stumpf cross sell full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Bernie Madoff",
+        "personRole": "Investment manager",
+        "statementHints": [
+          "impossible",
+          "Ponzi",
+          "regulators"
+        ],
+        "factSummary": "Madoff was operating the largest known Ponzi scheme in history.",
+        "evidenceQuery": "Bernie Madoff",
+        "category": "Archival statement or testimony",
+        "seedId": "S119",
+        "searchQueries": [
+          "Bernie Madoff impossible Ponzi scheme interview",
+          "Bernie Madoff impossible full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Bernie Madoff impossible Ponzi scheme interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Bernie Madoff impossible full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Anna Bågenholm",
+        "personRole": "Radiologist and survivor",
+        "statementHints": [
+          "13.7",
+          "hypothermia",
+          "ice"
+        ],
+        "factSummary": "Bågenholm survived an extreme accidental hypothermia event after being trapped under ice.",
+        "evidenceQuery": "Anna Bågenholm",
+        "category": "Obscure interview or testimony",
+        "seedId": "S131",
+        "searchQueries": [
+          "Anna Bagenholm hypothermia 13.7 degrees interview",
+          "Anna Bågenholm 13.7 full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Anna Bagenholm hypothermia 13.7 degrees interview",
+          "resultCount": 0
+        },
+        {
+          "query": "Anna Bågenholm 13.7 full interview testimony",
+          "resultCount": 1
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 1
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Oliver North",
+        "personRole": "National Security Council staff",
+        "statementHints": [
+          "did not know",
+          "contra",
+          "funds"
+        ],
+        "factSummary": "Iran-Contra investigations documented North's central role in the covert operations.",
+        "evidenceQuery": "Iran–Contra affair",
+        "category": "Archival statement or testimony",
+        "seedId": "S116",
+        "searchQueries": [
+          "Oliver North Iran Contra did not know testimony",
+          "Oliver North did not know full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Oliver North Iran Contra did not know testimony",
+          "resultCount": 12
+        },
+        {
+          "query": "Oliver North did not know full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Mark Zuckerberg",
+        "personRole": "Meta CEO",
+        "statementHints": [
+          "complete control",
+          "data",
+          "users"
+        ],
+        "factSummary": "Facebook's privacy practices and unauthorized data access contradicted broad claims of complete user control.",
+        "evidenceQuery": "Facebook privacy controversies",
+        "category": "Archival statement or testimony",
+        "seedId": "S115",
+        "searchQueries": [
+          "Mark Zuckerberg users have complete control privacy testimony",
+          "Mark Zuckerberg complete control full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Mark Zuckerberg users have complete control privacy testimony",
+          "resultCount": 12
+        },
+        {
+          "query": "Mark Zuckerberg complete control full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Joan Murray",
+        "personRole": "Skydiver",
+        "statementHints": [
+          "fire ants",
+          "parachute",
+          "survived"
+        ],
+        "factSummary": "Murray survived a high-speed parachuting impact and was stung by fire ants at the landing site.",
+        "evidenceQuery": "Joan Murray skydiver",
+        "category": "Obscure interview or testimony",
+        "seedId": "S128",
+        "searchQueries": [
+          "Joan Murray skydiving fire ants survived interview",
+          "Joan Murray fire ants full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Joan Murray skydiving fire ants survived interview",
+          "resultCount": 6
+        },
+        {
+          "query": "Joan Murray fire ants full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Raphael Rowe",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "M25 Three",
+          "wrongfully convicted",
+          "released"
+        ],
+        "factSummary": "Rowe's conviction was quashed after he spent years imprisoned for a crime he maintained he did not commit.",
+        "evidenceQuery": "M25 Three",
+        "category": "Obscure interview or testimony",
+        "seedId": "S137",
+        "searchQueries": [
+          "Raphael Rowe exonerated M25 Three interview",
+          "Raphael Rowe M25 Three full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Raphael Rowe exonerated M25 Three interview",
+          "resultCount": 0
+        },
+        {
+          "query": "Raphael Rowe M25 Three full interview testimony",
+          "resultCount": 0
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 0
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Roy Sullivan",
+        "personRole": "Park ranger",
+        "statementHints": [
+          "seven times",
+          "lightning",
+          "struck"
+        ],
+        "factSummary": "Sullivan survived seven documented lightning strikes.",
+        "evidenceQuery": "Roy Sullivan",
+        "category": "Obscure interview or testimony",
+        "seedId": "S127",
+        "searchQueries": [
+          "Roy Sullivan struck by lightning seven times interview",
+          "Roy Sullivan seven times full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Roy Sullivan struck by lightning seven times interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Roy Sullivan seven times full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Mario Sepúlveda",
+        "personRole": "Miner",
+        "statementHints": [
+          "69 days",
+          "mine",
+          "trapped"
+        ],
+        "factSummary": "Sepúlveda was one of thirty-three Chilean miners rescued after sixty-nine days underground.",
+        "evidenceQuery": "2010 Copiapó mining accident",
+        "category": "Obscure interview or testimony",
+        "seedId": "S132",
+        "searchQueries": [
+          "Mario Sepulveda Chilean miners 69 days interview",
+          "Mario Sepúlveda 69 days full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Mario Sepulveda Chilean miners 69 days interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Mario Sepúlveda 69 days full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Charles Fain",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "exonerated",
+          "death row"
+        ],
+        "factSummary": "DNA evidence exonerated Fain after eighteen years in prison.",
+        "evidenceQuery": "Charles Fain",
+        "category": "Obscure interview or testimony",
+        "seedId": "S140",
+        "searchQueries": [
+          "Charles Fain DNA exonerated interview",
+          "Charles Fain DNA full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Charles Fain DNA exonerated interview",
+          "resultCount": 4
+        },
+        {
+          "query": "Charles Fain DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 15
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Barry Gibbs",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "exonerated",
+          "19 years",
+          "innocent"
+        ],
+        "factSummary": "Gibbs's conviction was overturned after evidence of police corruption and misconduct emerged.",
+        "evidenceQuery": "Barry Gibbs",
+        "category": "Obscure interview or testimony",
+        "seedId": "S141",
+        "searchQueries": [
+          "Barry Gibbs exonerated NYPD interview",
+          "Barry Gibbs exonerated full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Barry Gibbs exonerated NYPD interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Barry Gibbs exonerated full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Nicholas White",
+        "personRole": "Office worker",
+        "statementHints": [
+          "41 hours",
+          "elevator",
+          "trapped"
+        ],
+        "factSummary": "White was trapped alone in a New York elevator for forty-one hours.",
+        "evidenceQuery": "Nicholas White elevator",
+        "category": "Obscure interview or testimony",
+        "seedId": "S135",
+        "searchQueries": [
+          "Nicholas White trapped elevator 41 hours interview",
+          "Nicholas White 41 hours full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Nicholas White trapped elevator 41 hours interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Nicholas White 41 hours full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Tsutomu Yamaguchi",
+        "personRole": "Atomic-bomb survivor",
+        "statementHints": [
+          "Hiroshima",
+          "Nagasaki",
+          "both"
+        ],
+        "factSummary": "Yamaguchi survived both the Hiroshima and Nagasaki atomic bombings.",
+        "evidenceQuery": "Tsutomu Yamaguchi",
+        "category": "Obscure interview or testimony",
+        "seedId": "S134",
+        "searchQueries": [
+          "Tsutomu Yamaguchi survived Hiroshima Nagasaki interview",
+          "Tsutomu Yamaguchi Hiroshima full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Tsutomu Yamaguchi survived Hiroshima Nagasaki interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Tsutomu Yamaguchi Hiroshima full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Ferdinand Marcos",
+        "personRole": "Philippine president",
+        "statementHints": [
+          "wealth",
+          "earned",
+          "honest"
+        ],
+        "factSummary": "Courts and investigations recovered billions in assets linked to corruption and unexplained wealth.",
+        "evidenceQuery": "Unexplained wealth of the Marcos family",
+        "category": "Archival statement or testimony",
+        "seedId": "S125",
+        "searchQueries": [
+          "Ferdinand Marcos wealth honestly earned interview",
+          "Ferdinand Marcos wealth full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Ferdinand Marcos wealth honestly earned interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ferdinand Marcos wealth full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Robert Maxwell",
+        "personRole": "Media proprietor",
+        "statementHints": [
+          "pension",
+          "safe",
+          "funds"
+        ],
+        "factSummary": "After Maxwell's death, investigators discovered massive misuse of employee pension funds.",
+        "evidenceQuery": "Robert Maxwell",
+        "category": "Archival statement or testimony",
+        "seedId": "S124",
+        "searchQueries": [
+          "Robert Maxwell pension funds safe interview",
+          "Robert Maxwell pension full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Robert Maxwell pension funds safe interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Robert Maxwell pension full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "lie",
+        "person": "Elizabeth Holmes",
+        "personRole": "Theranos founder",
+        "statementHints": [
+          "all the tests",
+          "tiny sample",
+          "accurate"
+        ],
+        "factSummary": "Theranos's technology did not perform the broad range of reliable tests Holmes promoted.",
+        "evidenceQuery": "Theranos",
+        "category": "Archival statement or testimony",
+        "seedId": "S121",
+        "searchQueries": [
+          "Elizabeth Holmes all tests tiny sample conference interview",
+          "Elizabeth Holmes all the tests full interview testimony"
+        ],
+        "categorySlug": "archival-statement-or-testimony",
+        "setting": "Archival statement or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Elizabeth Holmes all tests tiny sample conference interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Elizabeth Holmes all the tests full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Mauro Prosperi",
+        "personRole": "Ultramarathon runner",
+        "statementHints": [
+          "Sahara",
+          "nine days",
+          "lost"
+        ],
+        "factSummary": "Prosperi survived after becoming lost for days during the Marathon des Sables.",
+        "evidenceQuery": "Mauro Prosperi",
+        "category": "Obscure interview or testimony",
+        "seedId": "S129",
+        "searchQueries": [
+          "Mauro Prosperi lost Sahara nine days interview",
+          "Mauro Prosperi Sahara full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Mauro Prosperi lost Sahara nine days interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Mauro Prosperi Sahara full interview testimony",
+          "resultCount": 0
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 12
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Ghost Army veteran",
+        "personRole": "U.S. Army veteran",
+        "statementHints": [
+          "inflatable tanks",
+          "Ghost Army",
+          "deception"
+        ],
+        "factSummary": "The Ghost Army used visual, radio, and sonic deception to mislead German forces in World War II.",
+        "evidenceQuery": "Ghost Army",
+        "category": "Obscure interview or testimony",
+        "seedId": "S148",
+        "searchQueries": [
+          "Ghost Army veteran inflatable tanks deception interview",
+          "Ghost Army veteran inflatable tanks full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Ghost Army veteran inflatable tanks deception interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ghost Army veteran inflatable tanks full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Operation Mincemeat veteran",
+        "personRole": "Intelligence veteran",
+        "statementHints": [
+          "forged documents",
+          "corpse",
+          "Mincemeat"
+        ],
+        "factSummary": "Operation Mincemeat used forged documents on a corpse to mislead Axis planners.",
+        "evidenceQuery": "Operation Mincemeat",
+        "category": "Obscure interview or testimony",
+        "seedId": "S149",
+        "searchQueries": [
+          "Operation Mincemeat forged documents corpse interview",
+          "Operation Mincemeat veteran forged documents full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Operation Mincemeat forged documents corpse interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Operation Mincemeat veteran forged documents full interview testimony",
+          "resultCount": 3
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 15
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Joe Simpson",
+        "personRole": "Mountaineer",
+        "statementHints": [
+          "crevasse",
+          "cut the rope",
+          "survived"
+        ],
+        "factSummary": "Simpson survived a broken leg, a fall into a crevasse, and a crawl back to camp in the Peruvian Andes.",
+        "evidenceQuery": "Joe Simpson mountaineer",
+        "category": "Obscure interview or testimony",
+        "seedId": "S133",
+        "searchQueries": [
+          "Joe Simpson Touching the Void crevasse interview",
+          "Joe Simpson crevasse full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Joe Simpson Touching the Void crevasse interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Joe Simpson crevasse full interview testimony",
+          "resultCount": 3
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 15
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Andrew Malkinson",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "exonerated",
+          "17 years"
+        ],
+        "factSummary": "DNA evidence and reinvestigation led to Malkinson's rape conviction being quashed after seventeen years.",
+        "evidenceQuery": "Andrew Malkinson",
+        "category": "Obscure interview or testimony",
+        "seedId": "S136",
+        "searchQueries": [
+          "Andrew Malkinson exonerated DNA interview",
+          "Andrew Malkinson DNA full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Andrew Malkinson exonerated DNA interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Andrew Malkinson DNA full interview testimony",
+          "resultCount": 10
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Sunny Jacobs",
+        "personRole": "Exonerated death-row prisoner",
+        "statementHints": [
+          "death row",
+          "exonerated",
+          "innocent"
+        ],
+        "factSummary": "Jacobs's conviction was overturned after years on death row.",
+        "evidenceQuery": "Sunny Jacobs",
+        "category": "Obscure interview or testimony",
+        "seedId": "S138",
+        "searchQueries": [
+          "Sunny Jacobs death row exonerated interview",
+          "Sunny Jacobs death row full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Sunny Jacobs death row exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Sunny Jacobs death row full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Nando Parrado",
+        "personRole": "Andes crash survivor",
+        "statementHints": [
+          "72 days",
+          "Andes",
+          "survived"
+        ],
+        "factSummary": "Parrado survived the Andes flight disaster and crossed the mountains to seek rescue.",
+        "evidenceQuery": "Uruguayan Air Force Flight 571",
+        "category": "Obscure interview or testimony",
+        "seedId": "S150",
+        "searchQueries": [
+          "Nando Parrado Andes crash 72 days interview",
+          "Nando Parrado 72 days full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Nando Parrado Andes crash 72 days interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Nando Parrado 72 days full interview testimony",
+          "resultCount": 8
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Nick Yarris",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "death row",
+          "exonerated"
+        ],
+        "factSummary": "DNA evidence exonerated Yarris after more than two decades on death row.",
+        "evidenceQuery": "Nicholas Yarris",
+        "category": "Obscure interview or testimony",
+        "seedId": "S139",
+        "searchQueries": [
+          "Nick Yarris DNA exonerated death row interview",
+          "Nick Yarris DNA full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Nick Yarris DNA exonerated death row interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Nick Yarris DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Hillsborough survivor",
+        "personRole": "Football supporter",
+        "statementHints": [
+          "Hillsborough",
+          "police",
+          "survivor"
+        ],
+        "factSummary": "Inquests found the ninety-seven victims were unlawfully killed and rejected claims blaming supporters.",
+        "evidenceQuery": "Hillsborough disaster",
+        "category": "Obscure interview or testimony",
+        "seedId": "S146",
+        "searchQueries": [
+          "Hillsborough survivor testimony police blame interview",
+          "Hillsborough survivor Hillsborough full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Hillsborough survivor testimony police blame interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Hillsborough survivor Hillsborough full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Yossi Ghinsberg",
+        "personRole": "Jungle survivor",
+        "statementHints": [
+          "Amazon",
+          "three weeks",
+          "survived"
+        ],
+        "factSummary": "Ghinsberg survived alone for about three weeks in the Bolivian Amazon.",
+        "evidenceQuery": "Yossi Ghinsberg",
+        "category": "Obscure interview or testimony",
+        "seedId": "S130",
+        "searchQueries": [
+          "Yossi Ghinsberg Amazon three weeks survival interview",
+          "Yossi Ghinsberg Amazon full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Yossi Ghinsberg Amazon three weeks survival interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Yossi Ghinsberg Amazon full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Fernando Bermudez",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "exonerated",
+          "18 years",
+          "innocent"
+        ],
+        "factSummary": "A judge dismissed Bermudez's conviction after finding he had demonstrated actual innocence.",
+        "evidenceQuery": "Fernando Bermudez",
+        "category": "Obscure interview or testimony",
+        "seedId": "S142",
+        "searchQueries": [
+          "Fernando Bermudez exonerated interview",
+          "Fernando Bermudez exonerated full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Fernando Bermudez exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Fernando Bermudez exonerated full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Alan Bates",
+        "personRole": "Former subpostmaster",
+        "statementHints": [
+          "Horizon",
+          "Post Office",
+          "subpostmasters"
+        ],
+        "factSummary": "Bates accurately warned that Horizon data was unreliable and helped expose a major miscarriage of justice.",
+        "evidenceQuery": "Alan Bates Post Office",
+        "category": "Obscure interview or testimony",
+        "seedId": "S145",
+        "searchQueries": [
+          "Alan Bates Post Office Horizon inquiry testimony full",
+          "Alan Bates Horizon full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Alan Bates Post Office Horizon inquiry testimony full",
+          "resultCount": 12
+        },
+        {
+          "query": "Alan Bates Horizon full interview testimony",
+          "resultCount": 9
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "David Milgaard",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "wrongfully convicted",
+          "exonerated"
+        ],
+        "factSummary": "Milgaard was exonerated after decades of wrongful conviction and DNA evidence implicated another man.",
+        "evidenceQuery": "David Milgaard",
+        "category": "Obscure interview or testimony",
+        "seedId": "S144",
+        "searchQueries": [
+          "David Milgaard exonerated DNA interview",
+          "David Milgaard DNA full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "David Milgaard exonerated DNA interview",
+          "resultCount": 12
+        },
+        {
+          "query": "David Milgaard DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Chernobyl liquidator",
+        "personRole": "Nuclear-cleanup worker",
+        "statementHints": [
+          "Chernobyl",
+          "radiation",
+          "liquidator"
+        ],
+        "factSummary": "Hundreds of thousands of liquidators participated in containment and cleanup after the Chernobyl disaster.",
+        "evidenceQuery": "Chernobyl liquidators",
+        "category": "Obscure interview or testimony",
+        "seedId": "S147",
+        "searchQueries": [
+          "Chernobyl liquidator interview radiation cleanup",
+          "Chernobyl liquidator Chernobyl full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Chernobyl liquidator interview radiation cleanup",
+          "resultCount": 12
+        },
+        {
+          "query": "Chernobyl liquidator Chernobyl full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "hard",
+        "verdict": "truth",
+        "person": "Jeffrey Deskovic",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "exonerated",
+          "false confession"
+        ],
+        "factSummary": "DNA evidence and identification of the actual perpetrator exonerated Deskovic.",
+        "evidenceQuery": "Jeffrey Deskovic",
+        "category": "Obscure interview or testimony",
+        "seedId": "S143",
+        "searchQueries": [
+          "Jeffrey Deskovic DNA exonerated interview",
+          "Jeffrey Deskovic DNA full interview testimony"
+        ],
+        "categorySlug": "obscure-interview-or-testimony",
+        "setting": "Obscure interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Jeffrey Deskovic DNA exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Jeffrey Deskovic DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Russell Williams",
+        "personRole": "Military officer and murderer",
+        "statementHints": [
+          "never been",
+          "didn't do",
+          "not involved"
+        ],
+        "factSummary": "Williams confessed during the interrogation and was convicted of murder and sexual assaults.",
+        "evidenceQuery": "Russell Williams",
+        "category": "Interrogation or testimony",
+        "seedId": "S055",
+        "searchQueries": [
+          "Russell Williams interrogation denial full",
+          "Russell Williams never been full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Russell Williams interrogation denial full",
+          "resultCount": 12
+        },
+        {
+          "query": "Russell Williams never been full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Stephanie Lazarus",
+        "personRole": "Police detective",
+        "statementHints": [
+          "Sherri",
+          "didn't know",
+          "don't remember"
+        ],
+        "factSummary": "Lazarus was convicted of murdering Sherri Rasmussen after DNA evidence linked her to the crime.",
+        "evidenceQuery": "Murder of Sherri Rasmussen",
+        "category": "Interrogation or testimony",
+        "seedId": "S051",
+        "searchQueries": [
+          "Stephanie Lazarus interrogation Sherri Rasmussen denial",
+          "Stephanie Lazarus Sherri full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Stephanie Lazarus interrogation Sherri Rasmussen denial",
+          "resultCount": 12
+        },
+        {
+          "query": "Stephanie Lazarus Sherri full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Jennifer Pan",
+        "personRole": "Murder conspirator",
+        "statementHints": [
+          "home invasion",
+          "men came in",
+          "tied me"
+        ],
+        "factSummary": "Pan was convicted of arranging the attack that killed her mother and wounded her father.",
+        "evidenceQuery": "Jennifer Pan",
+        "category": "Interrogation or testimony",
+        "seedId": "S052",
+        "searchQueries": [
+          "Jennifer Pan interrogation home invasion story",
+          "Jennifer Pan home invasion full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Jennifer Pan interrogation home invasion story",
+          "resultCount": 12
+        },
+        {
+          "query": "Jennifer Pan home invasion full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Chandler Halderson",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "parents",
+          "missing",
+          "cabin"
+        ],
+        "factSummary": "Halderson was convicted of murdering and dismembering both of his parents.",
+        "evidenceQuery": "Chandler Halderson",
+        "category": "Interrogation or testimony",
+        "seedId": "S053",
+        "searchQueries": [
+          "Chandler Halderson police interview parents missing",
+          "Chandler Halderson parents full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Chandler Halderson police interview parents missing",
+          "resultCount": 12
+        },
+        {
+          "query": "Chandler Halderson parents full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Diane Downs",
+        "personRole": "Murderer",
+        "statementHints": [
+          "stranger",
+          "shot my children",
+          "bushy"
+        ],
+        "factSummary": "Downs was convicted after evidence and witness testimony disproved her stranger story.",
+        "evidenceQuery": "Diane Downs",
+        "category": "Interrogation or testimony",
+        "seedId": "S061",
+        "searchQueries": [
+          "Diane Downs stranger shot children interview",
+          "Diane Downs stranger full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Diane Downs stranger shot children interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Diane Downs stranger full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Casey Anthony",
+        "personRole": "Mother and suspect",
+        "statementHints": [
+          "Zenaida",
+          "nanny",
+          "left Caylee"
+        ],
+        "factSummary": "Investigators found that the nanny story was fabricated, and Anthony was convicted of lying to police.",
+        "evidenceQuery": "Death of Caylee Anthony",
+        "category": "Interrogation or testimony",
+        "seedId": "S058",
+        "searchQueries": [
+          "Casey Anthony police interview Zenaida nanny",
+          "Casey Anthony Zenaida full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Casey Anthony police interview Zenaida nanny",
+          "resultCount": 12
+        },
+        {
+          "query": "Casey Anthony Zenaida full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Sarah Boone",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "hide and seek",
+          "suitcase",
+          "accident"
+        ],
+        "factSummary": "Boone was convicted after video evidence contradicted her account of an accidental suitcase death.",
+        "evidenceQuery": "Sarah Boone suitcase case",
+        "category": "Interrogation or testimony",
+        "seedId": "S054",
+        "searchQueries": [
+          "Sarah Boone interrogation hide and seek suitcase",
+          "Sarah Boone hide and seek full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Sarah Boone interrogation hide and seek suitcase",
+          "resultCount": 12
+        },
+        {
+          "query": "Sarah Boone hide and seek full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Jodi Arias",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "intruders",
+          "ninjas",
+          "two people"
+        ],
+        "factSummary": "Arias later admitted killing Travis Alexander and was convicted of murder.",
+        "evidenceQuery": "Murder of Travis Alexander",
+        "category": "Interrogation or testimony",
+        "seedId": "S059",
+        "searchQueries": [
+          "Jodi Arias ninja intruders police interview",
+          "Jodi Arias intruders full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Jodi Arias ninja intruders police interview",
+          "resultCount": 6
+        },
+        {
+          "query": "Jodi Arias intruders full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Mark Twitchell",
+        "personRole": "Murderer",
+        "statementHints": [
+          "didn't kill",
+          "not involved",
+          "Johnny"
+        ],
+        "factSummary": "Twitchell was convicted of murdering Johnny Altinger after evidence exposed his account.",
+        "evidenceQuery": "Mark Twitchell",
+        "category": "Interrogation or testimony",
+        "seedId": "S064",
+        "searchQueries": [
+          "Mark Twitchell police interrogation denial",
+          "Mark Twitchell didn't kill full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Mark Twitchell police interrogation denial",
+          "resultCount": 12
+        },
+        {
+          "query": "Mark Twitchell didn't kill full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Susan Smith",
+        "personRole": "Murderer",
+        "statementHints": [
+          "carjacked",
+          "black man",
+          "children"
+        ],
+        "factSummary": "Smith confessed to drowning her sons after inventing a carjacking story.",
+        "evidenceQuery": "Susan Smith",
+        "category": "Interrogation or testimony",
+        "seedId": "S060",
+        "searchQueries": [
+          "Susan Smith black man carjacked children interview",
+          "Susan Smith carjacked full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Susan Smith black man carjacked children interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Susan Smith carjacked full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Alex Murdaugh",
+        "personRole": "Attorney and murder defendant",
+        "statementHints": [
+          "wasn't there",
+          "kennels",
+          "not at"
+        ],
+        "factSummary": "Video from his son's phone proved Murdaugh was at the kennels shortly before the murders, contrary to his earlier statements.",
+        "evidenceQuery": "Trial of Alex Murdaugh",
+        "category": "Interrogation or testimony",
+        "seedId": "S057",
+        "searchQueries": [
+          "Alex Murdaugh kennel alibi testimony video",
+          "Alex Murdaugh wasn't there full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Alex Murdaugh kennel alibi testimony video",
+          "resultCount": 12
+        },
+        {
+          "query": "Alex Murdaugh wasn't there full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Grant Amato",
+        "personRole": "Murder defendant",
+        "statementHints": [
+          "didn't shoot",
+          "family",
+          "not me"
+        ],
+        "factSummary": "Amato was convicted of murdering his parents and brother.",
+        "evidenceQuery": "Grant Amato",
+        "category": "Interrogation or testimony",
+        "seedId": "S065",
+        "searchQueries": [
+          "Grant Amato interrogation family murder denial",
+          "Grant Amato didn't shoot full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Grant Amato interrogation family murder denial",
+          "resultCount": 12
+        },
+        {
+          "query": "Grant Amato didn't shoot full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Chris Watts",
+        "personRole": "Murder suspect",
+        "statementHints": [
+          "didn't hurt",
+          "not involved",
+          "wife"
+        ],
+        "factSummary": "Watts confessed after failing a polygraph and later pleaded guilty to murdering his family.",
+        "evidenceQuery": "Watts family murders",
+        "category": "Interrogation or testimony",
+        "seedId": "S056",
+        "searchQueries": [
+          "Chris Watts interrogation denial polygraph",
+          "Chris Watts didn't hurt full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Chris Watts interrogation denial polygraph",
+          "resultCount": 12
+        },
+        {
+          "query": "Chris Watts didn't hurt full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "John List",
+        "personRole": "Family murderer",
+        "statementHints": [
+          "vacation",
+          "family",
+          "not dead"
+        ],
+        "factSummary": "List murdered his family and fled under a new identity.",
+        "evidenceQuery": "John List",
+        "category": "Interrogation or testimony",
+        "seedId": "S067",
+        "searchQueries": [
+          "John List interview family vacation story",
+          "John List vacation full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "John List interview family vacation story",
+          "resultCount": 12
+        },
+        {
+          "query": "John List vacation full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Richard Heene",
+        "personRole": "Balloon Boy father",
+        "statementHints": [
+          "not a hoax",
+          "balloon",
+          "Falcon"
+        ],
+        "factSummary": "Heene pleaded guilty after authorities concluded the balloon incident was staged.",
+        "evidenceQuery": "Balloon boy hoax",
+        "category": "Interrogation or testimony",
+        "seedId": "S074",
+        "searchQueries": [
+          "Richard Heene balloon boy not a hoax interview",
+          "Richard Heene not a hoax full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Richard Heene balloon boy not a hoax interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Richard Heene not a hoax full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Scott Peterson",
+        "personRole": "Murder defendant",
+        "statementHints": [
+          "nothing to do",
+          "Laci",
+          "innocent"
+        ],
+        "factSummary": "Peterson was convicted of murdering Laci Peterson and their unborn son.",
+        "evidenceQuery": "Murder of Laci Peterson",
+        "category": "Interrogation or testimony",
+        "seedId": "S062",
+        "searchQueries": [
+          "Scott Peterson interview no involvement Laci",
+          "Scott Peterson nothing to do full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Scott Peterson interview no involvement Laci",
+          "resultCount": 12
+        },
+        {
+          "query": "Scott Peterson nothing to do full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Michael Peterson",
+        "personRole": "Murder defendant",
+        "statementHints": [
+          "fell down stairs",
+          "accident",
+          "didn't kill"
+        ],
+        "factSummary": "Peterson entered an Alford plea to voluntary manslaughter after his murder conviction was vacated.",
+        "evidenceQuery": "Michael Peterson trial",
+        "category": "Interrogation or testimony",
+        "seedId": "S071",
+        "searchQueries": [
+          "Michael Peterson accidental fall interview",
+          "Michael Peterson fell down stairs full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Michael Peterson accidental fall interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Michael Peterson fell down stairs full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Juan Catalan",
+        "personRole": "Exonerated defendant",
+        "statementHints": [
+          "Curb Your Enthusiasm",
+          "Dodger game",
+          "exonerated"
+        ],
+        "factSummary": "Television footage from a baseball game helped prove Catalan was elsewhere when the crime occurred.",
+        "evidenceQuery": "Juan Catalan",
+        "category": "Interview or testimony",
+        "seedId": "S077",
+        "searchQueries": [
+          "Juan Catalan Curb Your Enthusiasm exonerated interview",
+          "Juan Catalan Curb Your Enthusiasm full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Juan Catalan Curb Your Enthusiasm exonerated interview",
+          "resultCount": 9
+        },
+        {
+          "query": "Juan Catalan Curb Your Enthusiasm full interview testimony",
+          "resultCount": 4
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 12
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Pam Hupp",
+        "personRole": "Murderer",
+        "statementHints": [
+          "Betsy",
+          "dropped her off",
+          "last person"
+        ],
+        "factSummary": "Hupp was later charged in Betsy Faria's murder and convicted in a separate staged-kidnapping murder.",
+        "evidenceQuery": "Pam Hupp",
+        "category": "Interrogation or testimony",
+        "seedId": "S063",
+        "searchQueries": [
+          "Pam Hupp police interview Betsy Faria story",
+          "Pam Hupp Betsy full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Pam Hupp police interview Betsy Faria story",
+          "resultCount": 12
+        },
+        {
+          "query": "Pam Hupp Betsy full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Henry Lee Lucas",
+        "personRole": "False confessor",
+        "statementHints": [
+          "hundreds",
+          "killed",
+          "murders"
+        ],
+        "factSummary": "Investigations established that many of Lucas's confessions were false and impossible.",
+        "evidenceQuery": "Henry Lee Lucas",
+        "category": "Interrogation or testimony",
+        "seedId": "S075",
+        "searchQueries": [
+          "Henry Lee Lucas killed hundreds confession interview",
+          "Henry Lee Lucas hundreds full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Henry Lee Lucas killed hundreds confession interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Henry Lee Lucas hundreds full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Dennis Rader",
+        "personRole": "Serial killer",
+        "statementHints": [
+          "not BTK",
+          "didn't kill",
+          "no"
+        ],
+        "factSummary": "Rader later confessed in court to the BTK murders.",
+        "evidenceQuery": "Dennis Rader",
+        "category": "Interrogation or testimony",
+        "seedId": "S068",
+        "searchQueries": [
+          "Dennis Rader BTK denial interview before confession",
+          "Dennis Rader not BTK full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Dennis Rader BTK denial interview before confession",
+          "resultCount": 12
+        },
+        {
+          "query": "Dennis Rader not BTK full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Archie Williams",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "fingerprints",
+          "exonerated",
+          "36 years"
+        ],
+        "factSummary": "Fingerprint evidence excluded Williams and identified another man after decades in prison.",
+        "evidenceQuery": "Archie Williams",
+        "category": "Interview or testimony",
+        "seedId": "S079",
+        "searchQueries": [
+          "Archie Williams fingerprints exonerated interview",
+          "Archie Williams fingerprints full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Archie Williams fingerprints exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Archie Williams fingerprints full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Ronald Cotton",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "exonerated",
+          "innocent"
+        ],
+        "factSummary": "DNA evidence exonerated Cotton after he was wrongly convicted based on eyewitness identification.",
+        "evidenceQuery": "Ronald Cotton",
+        "category": "Interview or testimony",
+        "seedId": "S076",
+        "searchQueries": [
+          "Ronald Cotton DNA exoneration interview",
+          "Ronald Cotton DNA full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Ronald Cotton DNA exoneration interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ronald Cotton DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Brian Banks",
+        "personRole": "Exonerated football player",
+        "statementHints": [
+          "recanted",
+          "exonerated",
+          "innocent"
+        ],
+        "factSummary": "Banks's conviction was dismissed after his accuser recanted and evidence supported his innocence.",
+        "evidenceQuery": "Brian Banks",
+        "category": "Interview or testimony",
+        "seedId": "S078",
+        "searchQueries": [
+          "Brian Banks exonerated accuser recanted interview",
+          "Brian Banks recanted full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Brian Banks exonerated accuser recanted interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Brian Banks recanted full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Dewey Bozella",
+        "personRole": "Exonerated boxer",
+        "statementHints": [
+          "exonerated",
+          "26 years",
+          "innocent"
+        ],
+        "factSummary": "Bozella's conviction was vacated after withheld evidence and credibility problems were uncovered.",
+        "evidenceQuery": "Dewey Bozella",
+        "category": "Interview or testimony",
+        "seedId": "S083",
+        "searchQueries": [
+          "Dewey Bozella exonerated interview",
+          "Dewey Bozella exonerated full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Dewey Bozella exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Dewey Bozella exonerated full interview testimony",
+          "resultCount": 1
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 13
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Malcolm Alexander",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "38 years",
+          "exonerated"
+        ],
+        "factSummary": "DNA testing exonerated Alexander after thirty-eight years in prison.",
+        "evidenceQuery": "Malcolm Alexander exoneration",
+        "category": "Interview or testimony",
+        "seedId": "S084",
+        "searchQueries": [
+          "Malcolm Alexander DNA exonerated 38 years interview",
+          "Malcolm Alexander DNA full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Malcolm Alexander DNA exonerated 38 years interview",
+          "resultCount": 6
+        },
+        {
+          "query": "Malcolm Alexander DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 15
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Robert Durst",
+        "personRole": "Real-estate heir and murderer",
+        "statementHints": [
+          "cadaver",
+          "note",
+          "did not write"
+        ],
+        "factSummary": "Durst admitted at trial that he wrote the cadaver note after years of denying it.",
+        "evidenceQuery": "Robert Durst",
+        "category": "Interrogation or testimony",
+        "seedId": "S066",
+        "searchQueries": [
+          "Robert Durst cadaver note interview denial",
+          "Robert Durst cadaver full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Robert Durst cadaver note interview denial",
+          "resultCount": 12
+        },
+        {
+          "query": "Robert Durst cadaver full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Eric Wilson",
+        "personRole": "Norfolk Four defendant",
+        "statementHints": [
+          "Norfolk Four",
+          "false confession",
+          "pardoned"
+        ],
+        "factSummary": "The Norfolk Four cases involved false confessions and later pardons or exonerations.",
+        "evidenceQuery": "Norfolk Four",
+        "category": "Interview or testimony",
+        "seedId": "S089",
+        "searchQueries": [
+          "Norfolk Four exonerated interview",
+          "Eric Wilson Norfolk Four full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Norfolk Four exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Eric Wilson Norfolk Four full interview testimony",
+          "resultCount": 4
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Cornelius Dupree",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "30 years",
+          "exonerated"
+        ],
+        "factSummary": "DNA evidence exonerated Dupree after three decades in prison.",
+        "evidenceQuery": "Cornelius Dupree",
+        "category": "Interview or testimony",
+        "seedId": "S088",
+        "searchQueries": [
+          "Cornelius Dupree DNA exonerated interview",
+          "Cornelius Dupree DNA full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Cornelius Dupree DNA exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Cornelius Dupree DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Ray Krone",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "DNA",
+          "death row",
+          "exonerated"
+        ],
+        "factSummary": "DNA evidence exonerated Krone and identified another man.",
+        "evidenceQuery": "Ray Krone",
+        "category": "Interview or testimony",
+        "seedId": "S082",
+        "searchQueries": [
+          "Ray Krone DNA exonerated interview",
+          "Ray Krone DNA full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Ray Krone DNA exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ray Krone DNA full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Glenn Ford",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "death row",
+          "exonerated",
+          "innocent"
+        ],
+        "factSummary": "Ford was released after nearly thirty years when prosecutors acknowledged evidence showing he was not the killer.",
+        "evidenceQuery": "Glenn Ford Louisiana",
+        "category": "Interview or testimony",
+        "seedId": "S081",
+        "searchQueries": [
+          "Glenn Ford death row exonerated interview",
+          "Glenn Ford death row full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Glenn Ford death row exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Glenn Ford death row full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Aileen Wuornos",
+        "personRole": "Serial killer",
+        "statementHints": [
+          "self defense",
+          "raped me",
+          "all of them"
+        ],
+        "factSummary": "Wuornos was convicted of multiple murders; her accounts changed over time and were rejected by juries.",
+        "evidenceQuery": "Aileen Wuornos",
+        "category": "Interrogation or testimony",
+        "seedId": "S069",
+        "searchQueries": [
+          "Aileen Wuornos self defense interview all killings",
+          "Aileen Wuornos self defense full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Aileen Wuornos self defense interview all killings",
+          "resultCount": 12
+        },
+        {
+          "query": "Aileen Wuornos self defense full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Tuskegee study survivor",
+        "personRole": "Medical research participant",
+        "statementHints": [
+          "treatment",
+          "not told",
+          "syphilis"
+        ],
+        "factSummary": "Participants in the Tuskegee study were deceived and denied effective treatment.",
+        "evidenceQuery": "Tuskegee Syphilis Study",
+        "category": "Interview or testimony",
+        "seedId": "S093",
+        "searchQueries": [
+          "Tuskegee study survivor interview untreated syphilis",
+          "Tuskegee study survivor treatment full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Tuskegee study survivor interview untreated syphilis",
+          "resultCount": 12
+        },
+        {
+          "query": "Tuskegee study survivor treatment full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Darlie Routier",
+        "personRole": "Murder defendant",
+        "statementHints": [
+          "intruder",
+          "stabbed me",
+          "boys"
+        ],
+        "factSummary": "Routier was convicted of murdering one of her sons, though she continues to maintain innocence.",
+        "evidenceQuery": "Darlie Routier",
+        "category": "Interrogation or testimony",
+        "seedId": "S070",
+        "searchQueries": [
+          "Darlie Routier intruder attack interview",
+          "Darlie Routier intruder full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Darlie Routier intruder attack interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Darlie Routier intruder full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 20
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Damon Thibodeaux",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "death row",
+          "DNA",
+          "false confession"
+        ],
+        "factSummary": "Thibodeaux was exonerated after DNA testing and reinvestigation discredited his confession.",
+        "evidenceQuery": "Damon Thibodeaux",
+        "category": "Interview or testimony",
+        "seedId": "S085",
+        "searchQueries": [
+          "Damon Thibodeaux death row exonerated interview",
+          "Damon Thibodeaux death row full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Damon Thibodeaux death row exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Damon Thibodeaux death row full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "O. J. Simpson",
+        "personRole": "Football player and civil defendant",
+        "statementHints": [
+          "not guilty",
+          "didn't do it",
+          "nothing to do"
+        ],
+        "factSummary": "A civil jury found Simpson liable for the wrongful deaths of Nicole Brown Simpson and Ronald Goldman.",
+        "evidenceQuery": "O. J. Simpson civil trial",
+        "category": "Interrogation or testimony",
+        "seedId": "S072",
+        "searchQueries": [
+          "OJ Simpson absolutely one hundred percent not guilty interview",
+          "O. J. Simpson not guilty full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "OJ Simpson absolutely one hundred percent not guilty interview",
+          "resultCount": 12
+        },
+        {
+          "query": "O. J. Simpson not guilty full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 24
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Kwame Ajamu",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "exonerated",
+          "wrongfully convicted",
+          "innocent"
+        ],
+        "factSummary": "Ajamu's conviction was vacated after the sole eyewitness recanted.",
+        "evidenceQuery": "Kwame Ajamu",
+        "category": "Interview or testimony",
+        "seedId": "S087",
+        "searchQueries": [
+          "Kwame Ajamu exonerated interview",
+          "Kwame Ajamu exonerated full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Kwame Ajamu exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Kwame Ajamu exonerated full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Ricky Jackson",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "39 years",
+          "exonerated",
+          "innocent"
+        ],
+        "factSummary": "Jackson was released after the key witness recanted and prosecutors dismissed the case.",
+        "evidenceQuery": "Ricky Jackson",
+        "category": "Interview or testimony",
+        "seedId": "S080",
+        "searchQueries": [
+          "Ricky Jackson 39 years exonerated interview",
+          "Ricky Jackson 39 years full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Ricky Jackson 39 years exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Ricky Jackson 39 years full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "lie",
+        "person": "Sherri Papini",
+        "personRole": "Kidnapping hoax perpetrator",
+        "statementHints": [
+          "kidnapped",
+          "two women",
+          "held me"
+        ],
+        "factSummary": "Papini pleaded guilty to lying about being kidnapped.",
+        "evidenceQuery": "Sherri Papini kidnapping hoax",
+        "category": "Interrogation or testimony",
+        "seedId": "S073",
+        "searchQueries": [
+          "Sherri Papini kidnapping account police interview",
+          "Sherri Papini kidnapped full interview testimony"
+        ],
+        "categorySlug": "interrogation-or-testimony",
+        "setting": "Interrogation or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Sherri Papini kidnapping account police interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Sherri Papini kidnapped full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Agent Orange veteran",
+        "personRole": "Military veteran",
+        "statementHints": [
+          "Agent Orange",
+          "exposed",
+          "Vietnam"
+        ],
+        "factSummary": "U.S. veterans were exposed to Agent Orange, which is associated with multiple illnesses.",
+        "evidenceQuery": "Agent Orange",
+        "category": "Interview or testimony",
+        "seedId": "S094",
+        "searchQueries": [
+          "Agent Orange veteran testimony exposure illness",
+          "Agent Orange veteran Agent Orange full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Agent Orange veteran testimony exposure illness",
+          "resultCount": 12
+        },
+        {
+          "query": "Agent Orange veteran Agent Orange full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 23
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Roger Boisjoly",
+        "personRole": "Aerospace engineer",
+        "statementHints": [
+          "O-ring",
+          "warned",
+          "launch"
+        ],
+        "factSummary": "Boisjoly warned that cold temperatures endangered the shuttle's O-ring seals before the Challenger disaster.",
+        "evidenceQuery": "Roger Boisjoly",
+        "category": "Interview or testimony",
+        "seedId": "S095",
+        "searchQueries": [
+          "Roger Boisjoly warned O rings Challenger interview",
+          "Roger Boisjoly O-ring full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Roger Boisjoly warned O rings Challenger interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Roger Boisjoly O-ring full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Paddy Hill",
+        "personRole": "Birmingham Six defendant",
+        "statementHints": [
+          "Birmingham Six",
+          "released",
+          "innocent"
+        ],
+        "factSummary": "The Birmingham Six convictions were quashed after evidence of police misconduct and unreliable forensics.",
+        "evidenceQuery": "Birmingham Six",
+        "category": "Interview or testimony",
+        "seedId": "S091",
+        "searchQueries": [
+          "Paddy Hill Birmingham Six release interview",
+          "Paddy Hill Birmingham Six full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Paddy Hill Birmingham Six release interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Paddy Hill Birmingham Six full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Stanislav Petrov",
+        "personRole": "Soviet officer",
+        "statementHints": [
+          "false alarm",
+          "missiles",
+          "did not report"
+        ],
+        "factSummary": "Petrov judged a Soviet early-warning alarm to be false and avoided escalating the incident.",
+        "evidenceQuery": "Stanislav Petrov",
+        "category": "Interview or testimony",
+        "seedId": "S096",
+        "searchQueries": [
+          "Stanislav Petrov false nuclear alarm interview",
+          "Stanislav Petrov false alarm full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Stanislav Petrov false nuclear alarm interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Stanislav Petrov false alarm full interview testimony",
+          "resultCount": 9
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Alan Bates",
+        "personRole": "Former subpostmaster",
+        "statementHints": [
+          "Horizon",
+          "subpostmasters",
+          "wrong"
+        ],
+        "factSummary": "Faulty Horizon accounting data contributed to wrongful prosecutions of subpostmasters.",
+        "evidenceQuery": "British Post Office scandal",
+        "category": "Interview or testimony",
+        "seedId": "S092",
+        "searchQueries": [
+          "Alan Bates Horizon inquiry testimony",
+          "Alan Bates Horizon full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Alan Bates Horizon inquiry testimony",
+          "resultCount": 12
+        },
+        {
+          "query": "Alan Bates Horizon full interview testimony",
+          "resultCount": 9
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 18
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Oleg Gordievsky",
+        "personRole": "Former KGB officer",
+        "statementHints": [
+          "escaped",
+          "car boot",
+          "KGB"
+        ],
+        "factSummary": "Gordievsky escaped the Soviet Union while hidden in a car after spying for Britain.",
+        "evidenceQuery": "Oleg Gordievsky",
+        "category": "Interview or testimony",
+        "seedId": "S097",
+        "searchQueries": [
+          "Oleg Gordievsky escaped Soviet Union car boot interview",
+          "Oleg Gordievsky escaped full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Oleg Gordievsky escaped Soviet Union car boot interview",
+          "resultCount": 7
+        },
+        {
+          "query": "Oleg Gordievsky escaped full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 16
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Beck Weathers",
+        "personRole": "Mountaineer",
+        "statementHints": [
+          "left for dead",
+          "Everest",
+          "survived"
+        ],
+        "factSummary": "Weathers survived after being left for dead during the 1996 Everest disaster.",
+        "evidenceQuery": "Beck Weathers",
+        "category": "Interview or testimony",
+        "seedId": "S099",
+        "searchQueries": [
+          "Beck Weathers left for dead Everest interview",
+          "Beck Weathers left for dead full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Beck Weathers left for dead Everest interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Beck Weathers left for dead full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Gerry Conlon",
+        "personRole": "Guildford Four defendant",
+        "statementHints": [
+          "Guildford Four",
+          "released",
+          "innocent"
+        ],
+        "factSummary": "The Guildford Four convictions were quashed after serious police misconduct was exposed.",
+        "evidenceQuery": "Guildford Four",
+        "category": "Interview or testimony",
+        "seedId": "S090",
+        "searchQueries": [
+          "Gerry Conlon Guildford Four release interview",
+          "Gerry Conlon Guildford Four full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Gerry Conlon Guildford Four release interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Gerry Conlon Guildford Four full interview testimony",
+          "resultCount": 5
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 17
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Lincoln Hall",
+        "personRole": "Mountaineer",
+        "statementHints": [
+          "left for dead",
+          "Everest",
+          "alive"
+        ],
+        "factSummary": "Hall survived a night high on Everest after being mistakenly declared dead.",
+        "evidenceQuery": "Lincoln Hall climber",
+        "category": "Interview or testimony",
+        "seedId": "S100",
+        "searchQueries": [
+          "Lincoln Hall left for dead Everest interview",
+          "Lincoln Hall left for dead full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Lincoln Hall left for dead Everest interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Lincoln Hall left for dead full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 22
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Anthony Graves",
+        "personRole": "Exonerated prisoner",
+        "statementHints": [
+          "death row",
+          "exonerated",
+          "innocent"
+        ],
+        "factSummary": "Graves was exonerated after prosecutors found misconduct and false testimony in his case.",
+        "evidenceQuery": "Anthony Graves",
+        "category": "Interview or testimony",
+        "seedId": "S086",
+        "searchQueries": [
+          "Anthony Graves death row exonerated interview",
+          "Anthony Graves death row full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Anthony Graves death row exonerated interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Anthony Graves death row full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 19
+    },
+    {
+      "seed": {
+        "difficulty": "medium",
+        "verdict": "truth",
+        "person": "Alison Botha",
+        "personRole": "Crime survivor",
+        "statementHints": [
+          "survived",
+          "throat",
+          "disembowelled"
+        ],
+        "factSummary": "Botha survived an exceptionally brutal attack and identified her attackers.",
+        "evidenceQuery": "Alison Botha",
+        "category": "Interview or testimony",
+        "seedId": "S098",
+        "searchQueries": [
+          "Alison Botha survived attack interview",
+          "Alison Botha survived full interview testimony"
+        ],
+        "categorySlug": "interview-or-testimony",
+        "setting": "Interview or testimony"
+      },
+      "attempts": [
+        {
+          "query": "Alison Botha survived attack interview",
+          "resultCount": 12
+        },
+        {
+          "query": "Alison Botha survived full interview testimony",
+          "resultCount": 12
+        }
+      ],
+      "candidates": [],
+      "checkedCandidates": 21
+    }
+  ],
+  "methodVersion": 6,
+  "transcriptProvider": "Confirmed YouTube2Text POST {url} timed segments",
+  "strategy": "Revalidate method-v5 sources, isolate first-person quote, then search up to 12 results for missing seeds"
+}

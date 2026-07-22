@@ -1,0 +1,1 @@
+Run the top-20 ranked real-video verification build using the updated easy-truth and easy-lie seed files. Do not activate placeholders. Preserve the production interface and existing 12 verified cases.
