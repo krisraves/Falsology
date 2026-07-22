@@ -1,0 +1,97 @@
+{
+  "updatedAt": "2026-07-22",
+  "branch": "agent/verified-content-expansion",
+  "status": "partial",
+  "rule": "Record only real videos with identifiable spoken support. Do not activate until exact timestamps, embed availability, unique video ID, and evidence validation pass.",
+  "located": [
+    {
+      "case": "truth-001",
+      "rank": 1,
+      "claim": "Octopuses have three hearts and blue blood.",
+      "platform": "YouTube",
+      "videoId": "qeP2uWZt3fg",
+      "title": "8 Mind-Boggling Facts About the Octopus",
+      "publisher": "Smithsonian Magazine",
+      "url": "https://www.youtube.com/watch?v=qeP2uWZt3fg",
+      "spokenSupport": "The Smithsonian video description explicitly states that octopuses have three hearts and blue blood.",
+      "verificationStatus": "real-video-found-needs-exact-timestamp"
+    },
+    {
+      "case": "truth-006",
+      "rank": 6,
+      "claim": "Fungi are evolutionarily closer to animals than to plants.",
+      "platform": "YouTube",
+      "videoId": "mPqWstVnRjQ",
+      "title": "Joe Rogan Experience #1035 - Paul Stamets",
+      "publisher": "PowerfulJRE",
+      "url": "https://www.youtube.com/watch?v=mPqWstVnRjQ&t=417s",
+      "statementStartSeconds": 437,
+      "statementEndSeconds": 440,
+      "spokenText": "And fungi are closer to animals than they are to plants.",
+      "verificationStatus": "strong-timestamped-candidate"
+    },
+    {
+      "case": "truth-008",
+      "rank": 8,
+      "claim": "Most of an octopus's neurons are in its arms rather than its central brain.",
+      "platform": "PBS",
+      "videoId": "octopus-sfc89v",
+      "title": "Octopus Brains",
+      "publisher": "Oregon Field Guide / OPB / PBS",
+      "url": "https://www.pbs.org/video/octopus-sfc89v/",
+      "spokenSupport": "PBS identifies the clip as closed-captioned and states that the majority of octopus neurons are in the arms and suckers. The transcript states 350 million of 500 million neurons are beyond the brain in the arms and suckers.",
+      "verificationStatus": "real-embeddable-video-needs-timestamp-and-player-support"
+    },
+    {
+      "case": "truth-009",
+      "rank": 9,
+      "claim": "Oxford teaching predates the Aztec Empire.",
+      "platform": "Dailymotion",
+      "videoId": "xa1l1rk",
+      "title": "OXFORD plus vieux qu’un TEMPLE ??",
+      "publisher": "Alex Golo",
+      "url": "https://www.dailymotion.com/video/xa1l1rk",
+      "statementStartSeconds": 0,
+      "statementEndSeconds": 16,
+      "spokenText": "L'université d'Oxford est plus ancienne que l'Empire Aztèque... on enseignait bel et bien à Oxford avant la naissance de l'Empire Aztèque.",
+      "verificationStatus": "timestamped-non-english-candidate-needs-platform-support"
+    },
+    {
+      "case": "truth-010",
+      "rank": 10,
+      "claim": "Venus is hotter than Mercury even though Mercury is closer to the Sun.",
+      "platform": "NASA video",
+      "title": "Why is Venus So Hot? We Asked a NASA Scientist: Episode 39",
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/general/why-is-venus-so-hot-we-asked-a-nasa-scientist-episode-39/",
+      "spokenSupport": "NASA supplies the full video transcript explaining Venus's 870°F average surface temperature and massive greenhouse effect. The exact Mercury comparison is supported by NASA's Venus facts page, but the video still needs an exact spoken comparison timestamp.",
+      "verificationStatus": "authoritative-video-found-needs-youtube-id-and-exact-claim-timestamp"
+    },
+    {
+      "case": "lie-006",
+      "rank": 6,
+      "claim": "Nicotine is not addictive.",
+      "platform": "Congressional hearing video",
+      "title": "1994 Tobacco CEO Testimony",
+      "publisher": "U.S. House hearing / PBS FRONTLINE archive",
+      "url": "https://www.pbs.org/wgbh/frontline/wgbh/pages/frontline/shows/settlement/timelines/april942.html",
+      "spokenText": "I believe nicotine is not addictive.",
+      "spokenSupport": "Multiple tobacco executives directly state under oath that nicotine is not addictive.",
+      "verificationStatus": "strong-direct-footage-candidate-needs-current-video-id-and-timestamps"
+    },
+    {
+      "case": "lie-007",
+      "rank": 7,
+      "claim": "There was no scientific consensus that human activity was warming the climate.",
+      "platform": "Television interview",
+      "title": "Bill Nye and Marsha Blackburn debate climate change",
+      "publisher": "NBC Meet the Press",
+      "spokenSupport": "Marsha Blackburn disputes agreement around the cause of warming during the televised debate.",
+      "verificationStatus": "direct-statement-candidate-needs-source-video-id-and-timestamp"
+    }
+  ],
+  "unresolvedRanks": {
+    "truths": [2, 3, 4, 5, 7],
+    "lies": [1, 2, 3, 4, 5, 8, 9, 10]
+  }
+}
